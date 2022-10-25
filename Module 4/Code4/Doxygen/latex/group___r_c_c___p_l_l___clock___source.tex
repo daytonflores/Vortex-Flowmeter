@@ -1,0 +1,49 @@
+\hypertarget{group___r_c_c___p_l_l___clock___source}{}\doxysection{RCC\+\_\+\+PLL\+\_\+\+Clock\+\_\+\+Source}
+\label{group___r_c_c___p_l_l___clock___source}\index{RCC\_PLL\_Clock\_Source@{RCC\_PLL\_Clock\_Source}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_ga0e07703f1ccb3d60f8a47a2dc631c218}\label{group___r_c_c___p_l_l___clock___source_ga0e07703f1ccb3d60f8a47a2dc631c218}} 
+\#define {\bfseries RCC\+\_\+\+PLLSOURCE\+\_\+\+HSI}~RCC\+\_\+\+PLLCFGR\+\_\+\+PLLSRC\+\_\+\+HSI
+\item 
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_ga197cea7fe5c2db26fe7fcdb0f99dd4d7}\label{group___r_c_c___p_l_l___clock___source_ga197cea7fe5c2db26fe7fcdb0f99dd4d7}} 
+\#define {\bfseries RCC\+\_\+\+PLLSOURCE\+\_\+\+HSE}~RCC\+\_\+\+PLLCFGR\+\_\+\+PLLSRC\+\_\+\+HSE
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___p_l_l___clock___source_gae1aef66aae2c0374be3c7c62d389282f}{IS\+\_\+\+RCC\+\_\+\+PLLSOURCE}}(SOURCE)
+\item 
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_ga8db327c085e20aeb673a9784f8508597}\label{group___r_c_c___p_l_l___clock___source_ga8db327c085e20aeb673a9784f8508597}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+VALUE}(VALUE)~((VALUE) $<$= 63)
+\item 
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_ga12835741fbedd278ad1e91abebe00837}\label{group___r_c_c___p_l_l___clock___source_ga12835741fbedd278ad1e91abebe00837}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLN\+\_\+\+VALUE}(VALUE)~((192 $<$= (VALUE)) \&\& ((VALUE) $<$= 432))
+\item 
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_gad808f83505f4e802e5bafab7831f0235}\label{group___r_c_c___p_l_l___clock___source_gad808f83505f4e802e5bafab7831f0235}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+VALUE}(VALUE)~(((VALUE) == 2) $\vert$$\vert$ ((VALUE) == 4) $\vert$$\vert$ ((VALUE) == 6) $\vert$$\vert$ ((VALUE) == 8))
+\item 
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_gad66dbe75bf8ab2b64b200e796281a851}\label{group___r_c_c___p_l_l___clock___source_gad66dbe75bf8ab2b64b200e796281a851}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+VALUE}(VALUE)~((4 $<$= (VALUE)) \&\& ((VALUE) $<$= 15))
+\item 
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_gac30fb7f6fe9f22a7d6c5585909db5c3c}\label{group___r_c_c___p_l_l___clock___source_gac30fb7f6fe9f22a7d6c5585909db5c3c}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLI2\+SN\+\_\+\+VALUE}(VALUE)~((192 $<$= (VALUE)) \&\& ((VALUE) $<$= 432))
+\item 
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_gaa2fece4b24f6219b423e1b092b7705c8}\label{group___r_c_c___p_l_l___clock___source_gaa2fece4b24f6219b423e1b092b7705c8}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLI2\+SR\+\_\+\+VALUE}(VALUE)~((2 $<$= (VALUE)) \&\& ((VALUE) $<$= 7))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c___p_l_l___clock___source_gae1aef66aae2c0374be3c7c62d389282f}\label{group___r_c_c___p_l_l___clock___source_gae1aef66aae2c0374be3c7c62d389282f}} 
+\index{RCC\_PLL\_Clock\_Source@{RCC\_PLL\_Clock\_Source}!IS\_RCC\_PLLSOURCE@{IS\_RCC\_PLLSOURCE}}
+\index{IS\_RCC\_PLLSOURCE@{IS\_RCC\_PLLSOURCE}!RCC\_PLL\_Clock\_Source@{RCC\_PLL\_Clock\_Source}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_PLLSOURCE}{IS\_RCC\_PLLSOURCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+PLLSOURCE(\begin{DoxyParamCaption}\item[{}]{SOURCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                  (((SOURCE) == RCC\_PLLSOURCE\_HSI) || \(\backslash\)}
+\DoxyCodeLine{                                  ((SOURCE) == RCC\_PLLSOURCE\_HSE))}
+
+\end{DoxyCode}

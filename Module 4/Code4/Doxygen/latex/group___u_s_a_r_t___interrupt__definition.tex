@@ -1,0 +1,42 @@
+\hypertarget{group___u_s_a_r_t___interrupt__definition}{}\doxysection{USART\+\_\+\+Interrupt\+\_\+definition}
+\label{group___u_s_a_r_t___interrupt__definition}\index{USART\_Interrupt\_definition@{USART\_Interrupt\_definition}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___interrupt__definition_gae607c28a462c224c575b7541dc4f7067}\label{group___u_s_a_r_t___interrupt__definition_gae607c28a462c224c575b7541dc4f7067}} 
+\#define {\bfseries USART\+\_\+\+IT\+\_\+\+PE}~((uint32\+\_\+t)0x10000100)
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___interrupt__definition_gab18d0fe889204a4c34f6d5817fb5147d}\label{group___u_s_a_r_t___interrupt__definition_gab18d0fe889204a4c34f6d5817fb5147d}} 
+\#define {\bfseries USART\+\_\+\+IT\+\_\+\+TXE}~((uint32\+\_\+t)0x10000080)
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___interrupt__definition_ga748e86162cc110513330079982821c39}\label{group___u_s_a_r_t___interrupt__definition_ga748e86162cc110513330079982821c39}} 
+\#define {\bfseries USART\+\_\+\+IT\+\_\+\+TC}~((uint32\+\_\+t)0x10000040)
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___interrupt__definition_gacdd49b93072655a21a63a35e6431f8ae}\label{group___u_s_a_r_t___interrupt__definition_gacdd49b93072655a21a63a35e6431f8ae}} 
+\#define {\bfseries USART\+\_\+\+IT\+\_\+\+RXNE}~((uint32\+\_\+t)0x10000020)
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___interrupt__definition_ga5d85aab24b7b2dfddb61ba2a49fa6185}\label{group___u_s_a_r_t___interrupt__definition_ga5d85aab24b7b2dfddb61ba2a49fa6185}} 
+\#define {\bfseries USART\+\_\+\+IT\+\_\+\+IDLE}~((uint32\+\_\+t)0x10000010)
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___interrupt__definition_ga063628e16cdda199b07d380421afc4a5}\label{group___u_s_a_r_t___interrupt__definition_ga063628e16cdda199b07d380421afc4a5}} 
+\#define {\bfseries USART\+\_\+\+IT\+\_\+\+LBD}~((uint32\+\_\+t)0x20000040)
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___interrupt__definition_gab49efbefaca2921e8cbe8f5146e99dbd}\label{group___u_s_a_r_t___interrupt__definition_gab49efbefaca2921e8cbe8f5146e99dbd}} 
+\#define {\bfseries USART\+\_\+\+IT\+\_\+\+CTS}~((uint32\+\_\+t)0x30000400)
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___interrupt__definition_ga631e83efd4c4789128d80a9539faf78a}\label{group___u_s_a_r_t___interrupt__definition_ga631e83efd4c4789128d80a9539faf78a}} 
+\#define {\bfseries USART\+\_\+\+IT\+\_\+\+ERR}~((uint32\+\_\+t)0x30000001)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Elements values convention\+: 0x\+Y000\+XXXX
+\begin{DoxyItemize}
+\item XXXX \+: Interrupt mask in the XX register
+\item Y \+: Interrupt source register (2bits)
+\begin{DoxyItemize}
+\item 01\+: CR1 register
+\item 10\+: CR2 register
+\item 11\+: CR3 register 
+\end{DoxyItemize}
+\end{DoxyItemize}

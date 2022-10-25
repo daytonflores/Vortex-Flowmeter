@@ -1,0 +1,70 @@
+\hypertarget{_file_handle_8h_source}{}\doxysection{File\+Handle.\+h}
+\label{_file_handle_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/FileHandle.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/FileHandle.h}}
+\mbox{\hyperlink{_file_handle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_FILEHANDLE\_H}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_FILEHANDLE\_H}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00019}\mbox{\hyperlink{_file_handle_8h_ae3c686f9cfb2c0113bc42a8c3f7f26b6}{00019}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{_file_handle_8h_ae3c686f9cfb2c0113bc42a8c3f7f26b6}{FILEHANDLE}};}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00023}00023 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) || defined(\_\_ICCARM\_\_)}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00024}00024 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} ssize\_t;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00025}00025 \textcolor{keyword}{typedef} \textcolor{keywordtype}{long} off\_t;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00027}00027 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00028}00028 \textcolor{preprocessor}{\#   include <sys/types.h>}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00029}00029 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00031}00031 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00042}\mbox{\hyperlink{classmbed_1_1_file_handle}{00042}} \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_file_handle}{FileHandle}} \{}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00044}00044 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00053}\mbox{\hyperlink{classmbed_1_1_file_handle_afb4f34ce3f921a252f8244f34bc41adf}{00053}}     \textcolor{keyword}{virtual} ssize\_t \mbox{\hyperlink{classmbed_1_1_file_handle_afb4f34ce3f921a252f8244f34bc41adf}{write}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length) = 0;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00060}\mbox{\hyperlink{classmbed_1_1_file_handle_ac81e2718528549c8b1eed01c4d303546}{00060}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_handle_ac81e2718528549c8b1eed01c4d303546}{close}}() = 0;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00071}\mbox{\hyperlink{classmbed_1_1_file_handle_a46a09dc9739d9e3838c3d5786377b14a}{00071}}     \textcolor{keyword}{virtual} ssize\_t \mbox{\hyperlink{classmbed_1_1_file_handle_a46a09dc9739d9e3838c3d5786377b14a}{read}}(\textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length) = 0;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00080}\mbox{\hyperlink{classmbed_1_1_file_handle_af8b1bceee5dae7fff7626bd575c309ad}{00080}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_handle_af8b1bceee5dae7fff7626bd575c309ad}{isatty}}() = 0;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00092}\mbox{\hyperlink{classmbed_1_1_file_handle_ac5c73beb78fc91ecbdbe4cf4a6b4faec}{00092}}     \textcolor{keyword}{virtual} off\_t \mbox{\hyperlink{classmbed_1_1_file_handle_ac5c73beb78fc91ecbdbe4cf4a6b4faec}{lseek}}(off\_t offset, \textcolor{keywordtype}{int} whence) = 0;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00101}\mbox{\hyperlink{classmbed_1_1_file_handle_aba403acd4d983123d864c1d74f833422}{00101}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_handle_aba403acd4d983123d864c1d74f833422}{fsync}}() = 0;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00103}\mbox{\hyperlink{classmbed_1_1_file_handle_a3c8b116df2f335a817f94dab6dc55221}{00103}}     \textcolor{keyword}{virtual} off\_t \mbox{\hyperlink{classmbed_1_1_file_handle_a3c8b116df2f335a817f94dab6dc55221}{flen}}() \{}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00104}00104         \textcolor{comment}{/* remember our current position */}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00105}00105         off\_t pos = \mbox{\hyperlink{classmbed_1_1_file_handle_ac5c73beb78fc91ecbdbe4cf4a6b4faec}{lseek}}(0, SEEK\_CUR);}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00106}00106         \textcolor{keywordflow}{if}(pos == -\/1) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00107}00107         \textcolor{comment}{/* seek to the end to get the file length */}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00108}00108         off\_t res = \mbox{\hyperlink{classmbed_1_1_file_handle_ac5c73beb78fc91ecbdbe4cf4a6b4faec}{lseek}}(0, SEEK\_END);}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00109}00109         \textcolor{comment}{/* return to our old position */}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00110}00110         \mbox{\hyperlink{classmbed_1_1_file_handle_ac5c73beb78fc91ecbdbe4cf4a6b4faec}{lseek}}(pos, SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00111}00111         \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00114}\mbox{\hyperlink{classmbed_1_1_file_handle_a41402663bfeb9097cb46749b0e652e15}{00114}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_file_handle_a41402663bfeb9097cb46749b0e652e15}{\string~FileHandle}}();}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00115}00115 \};}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00117}00117 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_file_handle_8h_source_l00119}00119 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

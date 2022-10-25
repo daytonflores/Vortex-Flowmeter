@@ -1,0 +1,877 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___s_m_a_r_t_c_a_r_d" xml:lang="en-US">
+<title>SMARTCARD</title>
+<indexterm><primary>SMARTCARD</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___s_m_a_r_t_c_a_r_d___exported___constants">SMARTCARD_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def">SMARTCARD_InitTypeDef</link></para>
+
+<para>SMARTCARD Init Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link></para>
+
+<para>SMARTCARD handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga080b197f190ae36b8db1745a4db94bf4">__HAL_SMARTCARD_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea3bb178c89408959b462cf8bc607034cb">HAL_SMARTCARD_STATE_RESET</link>)</para>
+
+<para>Reset SMARTCARD handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga942e652bb57d4f12e7273f4e97035ff4">__HAL_SMARTCARD_FLUSH_DRREGISTER</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;DR)</para>
+
+<para>Flushs the Smartcard DR register. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga38f995afc135ddbaafc0c68e12c31f11">__HAL_SMARTCARD_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Checks whether the specified Smartcard flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gab40a9ea5252be0340f074b1cab9c2264">__HAL_SMARTCARD_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</para>
+
+<para>Clears the specified Smartcard pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>   ((uint32_t)0x0000FFFF)</para>
+
+<para>Enables or disables the specified SmartCard interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gac28ac71a5048913946c0b2cb43869606">__SMARTCARD_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gafb2e783e25efa42568e587d88a32dbc4">__SMARTCARD_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga8bae0fc7f068414790697698adafc4f2">__HAL_SMARTCARD_GET_IT_SOURCE</link>(__HANDLE__,  __IT__)   (((((__IT__) &gt;&gt; 28) == 1)? (__HANDLE__)-&gt;Instance-&gt;CR1: (__HANDLE__)-&gt;Instance-&gt;CR3) &amp; (((uint32_t)(__IT__)) &amp; <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>))</para>
+
+<para>Checks whether the specified SmartCard interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga41d6f263ca49881a482e053cdb452278">__SMARTCARD_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+
+<para>Macros to enable or disable the SmartCard interface. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga93fe2e3f814dd564f485ab67b7f757c9">__SMARTCARD_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga5266d13bd56e0c5eada58c461ea5c22d">__SMARTCARD_DMA_REQUEST_ENABLE</link>(__HANDLE__,  __REQUEST__)   ((__HANDLE__)-&gt;Instance-&gt;CR3 |=  (__REQUEST__))</para>
+
+<para>Macros to enable or disable the SmartCard DMA request. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2ede2a184afa4076809092b357c96853">__SMARTCARD_DMA_REQUEST_DISABLE</link>(__HANDLE__,  __REQUEST__)   ((__HANDLE__)-&gt;Instance-&gt;CR3 &amp;=  ~(__REQUEST__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>(_PCLK_,  _BAUD_)   (((_PCLK_)*25)/(4*(_BAUD_)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>(_PCLK_,  _BAUD_)   (<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_))/100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>(_PCLK_,  _BAUD_)   (((<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_)) - (<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) * 100)) * 16 + 50) / 100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gafe466e58e1f1d8c87e0677e604709cc8">__SMARTCARD_BRR</link>(_PCLK_,  _BAUD_)   ((<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) &lt;&lt; 4)|(<link linkend="_group___u_s_a_r_t_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>((_PCLK_), (_BAUD_)) &amp; 0x0F))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga8af8fc5fa79cca4a3bf1bce5d051e371">IS_SMARTCARD_BAUDRATE</link>(BAUDRATE)   ((BAUDRATE) &lt; 10500001)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga79d6a3b95636861dcfd70913746e087e">HAL_SMARTCARD_StateTypeDef</link> { 
+<link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea3bb178c89408959b462cf8bc607034cb">HAL_SMARTCARD_STATE_RESET</link> = 0x00
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea574c38a9650163fcf757974c7a6c4a44">HAL_SMARTCARD_STATE_READY</link> = 0x01
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea2cb929aaef6e779ed7cd6b3909ddd9dc">HAL_SMARTCARD_STATE_BUSY</link> = 0x02
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eae782bca07469b811467a60454fd3789d">HAL_SMARTCARD_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eaebf962d48014d5c46f262a1e7c6fe5a3">HAL_SMARTCARD_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eadce24f292ca00c111d393cbc11a823bf">HAL_SMARTCARD_STATE_BUSY_TX_RX</link> = 0x32
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eac871d68a9fe445e9cdcef0d3eb374a1c">HAL_SMARTCARD_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eabd76a0e440c55bb7d040626f2134afee">HAL_SMARTCARD_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_m_a_r_t_c_a_r_d_1gae3ce190c726f8059f7280e4e7b091651">HAL_SMARTCARD_ErrorTypeDef</link> { 
+<link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a319651c709199001748835687ca790d4">HAL_SMARTCARD_ERROR_NONE</link> = 0x00
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a50cbf86dd5395fd9a328f153a86adba9">HAL_SMARTCARD_ERROR_PE</link> = 0x01
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a8aca04ab3abf42b68d93c9ffa2827e07">HAL_SMARTCARD_ERROR_NE</link> = 0x02
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651ad181472c6486cbc8c8f126144817a06c">HAL_SMARTCARD_ERROR_FE</link> = 0x04
+, 
+<link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651ad292f9248d5ee9036ba769c4e36adfae">HAL_SMARTCARD_ERROR_ORE</link> = 0x08
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651add9e313d077e62b0c93150876e965e03">HAL_SMARTCARD_ERROR_DMA</link> = 0x10
+ }</para>
+
+<para>HAL SMARTCARD Error Code structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga95235c14cb192c26cf72bf44ddaaf551">HAL_SMARTCARD_Init</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga1701fcf5d66117782a06569af1e40077">HAL_SMARTCARD_ReInit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga4b54b33c61b5284adbb7c98760425c2e">HAL_SMARTCARD_DeInit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga13e9aae9f5dd3b332fc8e431596793dc">HAL_SMARTCARD_MspInit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1gaf8e8fa8ca8058656fdd091880424565a">HAL_SMARTCARD_MspDeInit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga4dd0a7c6916ca2423c50f432a38a7328">HAL_SMARTCARD_Transmit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga82240fa2bcafd64a28ffbb1b01893e84">HAL_SMARTCARD_Receive</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1gab671c1bdba9ed83fb08142c4c38caee8">HAL_SMARTCARD_Transmit_IT</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga52b04b11f8793a859f2105fd748d75cd">HAL_SMARTCARD_Receive_IT</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1gab39a7dd50e44fd5c6cfc6af60bf8a4f5">HAL_SMARTCARD_Transmit_DMA</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1gaa8506576688d14e1f10f99d8c3f104fa">HAL_SMARTCARD_Receive_DMA</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga5c09daa91f4d5f44c9b4c927a1c50b3e">HAL_SMARTCARD_IRQHandler</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1gafb56eef6e839e909823cc16bf96c845b">HAL_SMARTCARD_TxCpltCallback</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga955fe3e5402e8a2797af8b605701dde4">HAL_SMARTCARD_RxCpltCallback</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga6a5255ea10c1c5c0d3b037ce61d5dc91">HAL_SMARTCARD_ErrorCallback</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_m_a_r_t_c_a_r_d_1ga79d6a3b95636861dcfd70913746e087e">HAL_SMARTCARD_StateTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga0edb69af10195dfde9b0451943990ad0">HAL_SMARTCARD_GetState</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_m_a_r_t_c_a_r_d_1gaf42409d25813eeca7cca2df14a6f7b7a">HAL_SMARTCARD_GetError</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gafbb1fab320969bc5f2f726523765efd9"/><section>
+    <title>__DIV</title>
+<indexterm><primary>__DIV</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__DIV</secondary></indexterm>
+<para><computeroutput>#define __DIV( _PCLK_,  _BAUD_)   (((_PCLK_)*25)/(4*(_BAUD_)))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00408">408</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga093009531672e6074b05430492830c24"/><section>
+    <title>__DIVFRAQ</title>
+<indexterm><primary>__DIVFRAQ</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__DIVFRAQ</secondary></indexterm>
+<para><computeroutput>#define __DIVFRAQ( _PCLK_,  _BAUD_)   (((<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_)) - (<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) * 100)) * 16 + 50) / 100)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00410">410</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gab53df89950c58100a4f14842b43877f0"/><section>
+    <title>__DIVMANT</title>
+<indexterm><primary>__DIVMANT</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__DIVMANT</secondary></indexterm>
+<para><computeroutput>#define __DIVMANT( _PCLK_,  _BAUD_)   (<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_))/100)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00409">409</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gab40a9ea5252be0340f074b1cab9c2264"/><section>
+    <title>__HAL_SMARTCARD_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_SMARTCARD_CLEAR_FLAG</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__HAL_SMARTCARD_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_SMARTCARD_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</computeroutput></para><para>
+
+<para>Clears the specified Smartcard pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SMARTCARD Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>SMARTCARD_FLAG_TC: Transmission Complete flag. </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_FLAG_RXNE: Receive data register not empty flag.</para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>PE (Parity error), FE (Framing error), NE (Noise error) and ORE (OverRun error) flags are cleared by software sequence: a read operation to USART_SR register followed by a read operation to USART_DR register. </para>
+
+<para>RXNE flag can be also cleared by a read to the USART_DR register. </para>
+
+<para>TC flag can be also cleared by software sequence: a read operation to USART_SR register followed by a write operation to USART_DR register. </para>
+
+<para>TXE flag is cleared only by a write to the USART_DR register. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00359">359</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga942e652bb57d4f12e7273f4e97035ff4"/><section>
+    <title>__HAL_SMARTCARD_FLUSH_DRREGISTER</title>
+<indexterm><primary>__HAL_SMARTCARD_FLUSH_DRREGISTER</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__HAL_SMARTCARD_FLUSH_DRREGISTER</secondary></indexterm>
+<para><computeroutput>#define __HAL_SMARTCARD_FLUSH_DRREGISTER( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;DR)</computeroutput></para><para>
+
+<para>Flushs the Smartcard DR register. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SMARTCARD Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00326">326</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga38f995afc135ddbaafc0c68e12c31f11"/><section>
+    <title>__HAL_SMARTCARD_GET_FLAG</title>
+<indexterm><primary>__HAL_SMARTCARD_GET_FLAG</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__HAL_SMARTCARD_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_SMARTCARD_GET_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Checks whether the specified Smartcard flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SMARTCARD Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>SMARTCARD_FLAG_TXE: Transmit data register empty flag </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_FLAG_TC: Transmission Complete flag </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_FLAG_RXNE: Receive data register not empty flag </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_FLAG_IDLE: Idle Line detection flag </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_FLAG_ORE: OverRun Error flag </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_FLAG_NE: Noise Error flag </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_FLAG_FE: Framing Error flag </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_FLAG_PE: Parity Error flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00342">342</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga8bae0fc7f068414790697698adafc4f2"/><section>
+    <title>__HAL_SMARTCARD_GET_IT_SOURCE</title>
+<indexterm><primary>__HAL_SMARTCARD_GET_IT_SOURCE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__HAL_SMARTCARD_GET_IT_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_SMARTCARD_GET_IT_SOURCE( __HANDLE__,  __IT__)   (((((__IT__) &gt;&gt; 28) == 1)? (__HANDLE__)-&gt;Instance-&gt;CR1: (__HANDLE__)-&gt;Instance-&gt;CR3) &amp; (((uint32_t)(__IT__)) &amp; <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>))</computeroutput></para><para>
+
+<para>Checks whether the specified SmartCard interrupt has occurred or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SmartCard Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__IT__</entry><entry>
+<para>specifies the SMARTCARD interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>SMARTCARD_IT_TXE: Transmit Data Register empty interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_TC: Transmission complete interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_RXNE: Receive Data register not empty interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_IDLE: Idle line detection interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_ERR: Error interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_PE: Parity Error interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">IT</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00390">390</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga080b197f190ae36b8db1745a4db94bf4"/><section>
+    <title>__HAL_SMARTCARD_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_SMARTCARD_RESET_HANDLE_STATE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__HAL_SMARTCARD_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_SMARTCARD_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea3bb178c89408959b462cf8bc607034cb">HAL_SMARTCARD_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset SMARTCARD handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SMARTCARD Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00321">321</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gafe466e58e1f1d8c87e0677e604709cc8"/><section>
+    <title>__SMARTCARD_BRR</title>
+<indexterm><primary>__SMARTCARD_BRR</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__SMARTCARD_BRR</secondary></indexterm>
+<para><computeroutput>#define __SMARTCARD_BRR( _PCLK_,  _BAUD_)   ((<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) &lt;&lt; 4)|(<link linkend="_group___u_s_a_r_t_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>((_PCLK_), (_BAUD_)) &amp; 0x0F))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00411">411</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga93fe2e3f814dd564f485ab67b7f757c9"/><section>
+    <title>__SMARTCARD_DISABLE</title>
+<indexterm><primary>__SMARTCARD_DISABLE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__SMARTCARD_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __SMARTCARD_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00396">396</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gafb2e783e25efa42568e587d88a32dbc4"/><section>
+    <title>__SMARTCARD_DISABLE_IT</title>
+<indexterm><primary>__SMARTCARD_DISABLE_IT</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__SMARTCARD_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __SMARTCARD_DISABLE_IT( __HANDLE__,  __INTERRUPT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((__INTERRUPT__)&#32;&gt;&gt;&#32;28)&#32;==&#32;1)?&#32;((__HANDLE__)-&gt;Instance-&gt;CR1&#32;&amp;=&#32;~((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>)):&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CR3&#32;&amp;=&#32;~&#32;((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>)))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00375">375</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga2ede2a184afa4076809092b357c96853"/><section>
+    <title>__SMARTCARD_DMA_REQUEST_DISABLE</title>
+<indexterm><primary>__SMARTCARD_DMA_REQUEST_DISABLE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__SMARTCARD_DMA_REQUEST_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __SMARTCARD_DMA_REQUEST_DISABLE( __HANDLE__,  __REQUEST__)   ((__HANDLE__)-&gt;Instance-&gt;CR3 &amp;=  ~(__REQUEST__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00406">406</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga5266d13bd56e0c5eada58c461ea5c22d"/><section>
+    <title>__SMARTCARD_DMA_REQUEST_ENABLE</title>
+<indexterm><primary>__SMARTCARD_DMA_REQUEST_ENABLE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__SMARTCARD_DMA_REQUEST_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __SMARTCARD_DMA_REQUEST_ENABLE( __HANDLE__,  __REQUEST__)   ((__HANDLE__)-&gt;Instance-&gt;CR3 |=  (__REQUEST__))</computeroutput></para><para>
+
+<para>Macros to enable or disable the SmartCard DMA request. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SmartCard Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__REQUEST__</entry><entry>
+<para>specifies the SmartCard DMA request. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>SMARTCARD_DMAREQ_TX: SmartCard DMA transmit request </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_DMAREQ_RX: SmartCard DMA receive request </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00405">405</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga41d6f263ca49881a482e053cdb452278"/><section>
+    <title>__SMARTCARD_ENABLE</title>
+<indexterm><primary>__SMARTCARD_ENABLE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__SMARTCARD_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __SMARTCARD_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</computeroutput></para><para>
+
+<para>Macros to enable or disable the SmartCard interface. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SmartCard Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00395">395</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gac28ac71a5048913946c0b2cb43869606"/><section>
+    <title>__SMARTCARD_ENABLE_IT</title>
+<indexterm><primary>__SMARTCARD_ENABLE_IT</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>__SMARTCARD_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __SMARTCARD_ENABLE_IT( __HANDLE__,  __INTERRUPT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((__INTERRUPT__)&#32;&gt;&gt;&#32;28)&#32;==&#32;1)?&#32;((__HANDLE__)-&gt;Instance-&gt;CR1&#32;|=&#32;((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>)):&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CR3&#32;|=&#32;((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>)))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00373">373</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga8af8fc5fa79cca4a3bf1bce5d051e371"/><section>
+    <title>IS_SMARTCARD_BAUDRATE</title>
+<indexterm><primary>IS_SMARTCARD_BAUDRATE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>IS_SMARTCARD_BAUDRATE</secondary></indexterm>
+<para><computeroutput>#define IS_SMARTCARD_BAUDRATE( BAUDRATE)   ((BAUDRATE) &lt; 10500001)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00413">413</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5"/><section>
+    <title>SMARTCARD_IT_MASK</title>
+<indexterm><primary>SMARTCARD_IT_MASK</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>SMARTCARD_IT_MASK</secondary></indexterm>
+<para><computeroutput>#define SMARTCARD_IT_MASK   ((uint32_t)0x0000FFFF)</computeroutput></para><para>
+
+<para>Enables or disables the specified SmartCard interrupts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SMARTCARD Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the SMARTCARD interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>SMARTCARD_IT_TXE: Transmit Data Register empty interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_TC: Transmission complete interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_RXNE: Receive Data register not empty interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_IDLE: Idle line detection interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_PE: Parity Error interrupt </para>
+</listitem>
+<listitem>
+<para>SMARTCARD_IT_ERR: Error interrupt(Frame error, noise error, overrun error) </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00372">372</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gae3ce190c726f8059f7280e4e7b091651"/><section>
+    <title>HAL_SMARTCARD_ErrorTypeDef</title>
+<indexterm><primary>HAL_SMARTCARD_ErrorTypeDef</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ErrorTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___s_m_a_r_t_c_a_r_d_1gae3ce190c726f8059f7280e4e7b091651">HAL_SMARTCARD_ErrorTypeDef</link></computeroutput></para><para>
+
+<para>HAL SMARTCARD Error Code structure definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_SMARTCARD_ERROR_NONE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ERROR_NONE</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a319651c709199001748835687ca790d4"/>HAL_SMARTCARD_ERROR_NONE</entry><entry>
+<para>No error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_ERROR_PE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ERROR_PE</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a50cbf86dd5395fd9a328f153a86adba9"/>HAL_SMARTCARD_ERROR_PE</entry><entry>
+<para>Parity error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_ERROR_NE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ERROR_NE</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a8aca04ab3abf42b68d93c9ffa2827e07"/>HAL_SMARTCARD_ERROR_NE</entry><entry>
+<para>Noise error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_ERROR_FE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ERROR_FE</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651ad181472c6486cbc8c8f126144817a06c"/>HAL_SMARTCARD_ERROR_FE</entry><entry>
+<para>frame error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_ERROR_ORE</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ERROR_ORE</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651ad292f9248d5ee9036ba769c4e36adfae"/>HAL_SMARTCARD_ERROR_ORE</entry><entry>
+<para>Overrun error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_ERROR_DMA</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ERROR_DMA</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651add9e313d077e62b0c93150876e965e03"/>HAL_SMARTCARD_ERROR_DMA</entry><entry>
+<para>DMA transfer error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00122">122</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga79d6a3b95636861dcfd70913746e087e"/><section>
+    <title>HAL_SMARTCARD_StateTypeDef</title>
+<indexterm><primary>HAL_SMARTCARD_StateTypeDef</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga79d6a3b95636861dcfd70913746e087e">HAL_SMARTCARD_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL State structures definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_SMARTCARD_STATE_RESET</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea3bb178c89408959b462cf8bc607034cb"/>HAL_SMARTCARD_STATE_RESET</entry><entry>
+<para>Peripheral is not yet Initialized 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_STATE_READY</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea574c38a9650163fcf757974c7a6c4a44"/>HAL_SMARTCARD_STATE_READY</entry><entry>
+<para>Peripheral Initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_STATE_BUSY</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea2cb929aaef6e779ed7cd6b3909ddd9dc"/>HAL_SMARTCARD_STATE_BUSY</entry><entry>
+<para>an internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_STATE_BUSY_TX</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_STATE_BUSY_TX</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eae782bca07469b811467a60454fd3789d"/>HAL_SMARTCARD_STATE_BUSY_TX</entry><entry>
+<para>Data Transmission process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_STATE_BUSY_RX</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_STATE_BUSY_RX</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eaebf962d48014d5c46f262a1e7c6fe5a3"/>HAL_SMARTCARD_STATE_BUSY_RX</entry><entry>
+<para>Data Reception process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_STATE_BUSY_TX_RX</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_STATE_BUSY_TX_RX</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eadce24f292ca00c111d393cbc11a823bf"/>HAL_SMARTCARD_STATE_BUSY_TX_RX</entry><entry>
+<para>Data Transmission and Reception process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_STATE_TIMEOUT</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eac871d68a9fe445e9cdcef0d3eb374a1c"/>HAL_SMARTCARD_STATE_TIMEOUT</entry><entry>
+<para>Timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SMARTCARD_STATE_ERROR</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eabd76a0e440c55bb7d040626f2134afee"/>HAL_SMARTCARD_STATE_ERROR</entry><entry>
+<para>Error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00107">107</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga4b54b33c61b5284adbb7c98760425c2e"/><section>
+    <title>HAL_SMARTCARD_DeInit()</title>
+<indexterm><primary>HAL_SMARTCARD_DeInit</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_DeInit (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga6a5255ea10c1c5c0d3b037ce61d5dc91"/><section>
+    <title>HAL_SMARTCARD_ErrorCallback()</title>
+<indexterm><primary>HAL_SMARTCARD_ErrorCallback</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SMARTCARD_ErrorCallback (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gaf42409d25813eeca7cca2df14a6f7b7a"/><section>
+    <title>HAL_SMARTCARD_GetError()</title>
+<indexterm><primary>HAL_SMARTCARD_GetError</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_GetError</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_SMARTCARD_GetError (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga0edb69af10195dfde9b0451943990ad0"/><section>
+    <title>HAL_SMARTCARD_GetState()</title>
+<indexterm><primary>HAL_SMARTCARD_GetState</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_m_a_r_t_c_a_r_d_1ga79d6a3b95636861dcfd70913746e087e">HAL_SMARTCARD_StateTypeDef</link> HAL_SMARTCARD_GetState (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga95235c14cb192c26cf72bf44ddaaf551"/><section>
+    <title>HAL_SMARTCARD_Init()</title>
+<indexterm><primary>HAL_SMARTCARD_Init</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_Init (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga5c09daa91f4d5f44c9b4c927a1c50b3e"/><section>
+    <title>HAL_SMARTCARD_IRQHandler()</title>
+<indexterm><primary>HAL_SMARTCARD_IRQHandler</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_SMARTCARD_IRQHandler (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gaf8e8fa8ca8058656fdd091880424565a"/><section>
+    <title>HAL_SMARTCARD_MspDeInit()</title>
+<indexterm><primary>HAL_SMARTCARD_MspDeInit</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_SMARTCARD_MspDeInit (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga13e9aae9f5dd3b332fc8e431596793dc"/><section>
+    <title>HAL_SMARTCARD_MspInit()</title>
+<indexterm><primary>HAL_SMARTCARD_MspInit</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_SMARTCARD_MspInit (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga82240fa2bcafd64a28ffbb1b01893e84"/><section>
+    <title>HAL_SMARTCARD_Receive()</title>
+<indexterm><primary>HAL_SMARTCARD_Receive</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_Receive</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_Receive (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gaa8506576688d14e1f10f99d8c3f104fa"/><section>
+    <title>HAL_SMARTCARD_Receive_DMA()</title>
+<indexterm><primary>HAL_SMARTCARD_Receive_DMA</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_Receive_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_Receive_DMA (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga52b04b11f8793a859f2105fd748d75cd"/><section>
+    <title>HAL_SMARTCARD_Receive_IT()</title>
+<indexterm><primary>HAL_SMARTCARD_Receive_IT</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_Receive_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_Receive_IT (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga1701fcf5d66117782a06569af1e40077"/><section>
+    <title>HAL_SMARTCARD_ReInit()</title>
+<indexterm><primary>HAL_SMARTCARD_ReInit</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_ReInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_ReInit (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga955fe3e5402e8a2797af8b605701dde4"/><section>
+    <title>HAL_SMARTCARD_RxCpltCallback()</title>
+<indexterm><primary>HAL_SMARTCARD_RxCpltCallback</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_RxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SMARTCARD_RxCpltCallback (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1ga4dd0a7c6916ca2423c50f432a38a7328"/><section>
+    <title>HAL_SMARTCARD_Transmit()</title>
+<indexterm><primary>HAL_SMARTCARD_Transmit</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_Transmit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_Transmit (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gab39a7dd50e44fd5c6cfc6af60bf8a4f5"/><section>
+    <title>HAL_SMARTCARD_Transmit_DMA()</title>
+<indexterm><primary>HAL_SMARTCARD_Transmit_DMA</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_Transmit_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_Transmit_DMA (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gab671c1bdba9ed83fb08142c4c38caee8"/><section>
+    <title>HAL_SMARTCARD_Transmit_IT()</title>
+<indexterm><primary>HAL_SMARTCARD_Transmit_IT</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_Transmit_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SMARTCARD_Transmit_IT (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d_1gafb56eef6e839e909823cc16bf96c845b"/><section>
+    <title>HAL_SMARTCARD_TxCpltCallback()</title>
+<indexterm><primary>HAL_SMARTCARD_TxCpltCallback</primary><secondary>SMARTCARD</secondary></indexterm>
+<indexterm><primary>SMARTCARD</primary><secondary>HAL_SMARTCARD_TxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SMARTCARD_TxCpltCallback (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> * hsc)</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacembed" xml:lang="en-US">
+<title>mbed Namespace Reference</title>
+<indexterm><primary>mbed</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classmbed_1_1_bus_in">BusIn</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_bus_in_out">BusInOut</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_bus_out">BusOut</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_call_chain">CallChain</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_digital_in">DigitalIn</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_digital_in_out">DigitalInOut</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_digital_out">DigitalOut</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_dir_handle">DirHandle</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_file_base">FileBase</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_file_handle">FileHandle</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_file_like">FileLike</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_file_path">FilePath</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_file_system_like">FileSystemLike</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_stream">Stream</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_ticker">Ticker</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_timeout">Timeout</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_timer">Timer</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmbed_1_1_timer_event">TimerEvent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link> * <link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link></para>
+</listitem>
+            <listitem><para>typedef void(* <link linkend="_namespacembed_1ac5088ada4e4cb0210a2560087fd7387a">pvoidf_t</link>) (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespacembed_1ae093c9a96eda0463cdd2501ba83f10c3">PathType</link> { <link linkend="_namespacembed_1ae093c9a96eda0463cdd2501ba83f10c3ac72ec0315dfe0bc41a4e41f003f1670d">FilePathType</link>
+, <link linkend="_namespacembed_1ae093c9a96eda0463cdd2501ba83f10c3af359b3ca7c5542cce8a207e27b2a923e">FileSystemPathType</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505"/><section>
+    <title>pFunctionPointer_t</title>
+<indexterm><primary>pFunctionPointer_t</primary><secondary>mbed</secondary></indexterm>
+<indexterm><primary>mbed</primary><secondary>pFunctionPointer_t</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link>* <link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link></computeroutput></para>
+<para>Group one or more functions in an instance of a <link linkend="_classmbed_1_1_call_chain">CallChain</link>, then call them in sequence using <link linkend="_classmbed_1_1_call_chain_1aba7af6b502e464074d3c31ff9236a22c">CallChain::call()</link>. Used mostly by the interrupt chaining code, but can be used for other purposes.</para>
+
+<para>Example: <literallayout><computeroutput><emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed_8h">mbed.h</link>&quot;</emphasis>
+
+<link linkend="_classmbed_1_1_call_chain">CallChain</link>&#32;chain;
+
+<emphasis role="keywordtype">void</emphasis>&#32;first(<emphasis role="keywordtype">void</emphasis>)&#32;{
+&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;&apos;first&apos;&#32;function.\n&quot;</emphasis>);
+}
+
+<emphasis role="keywordtype">void</emphasis>&#32;second(<emphasis role="keywordtype">void</emphasis>)&#32;{
+&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;&apos;second&apos;&#32;function.\n&quot;</emphasis>);
+}
+
+<emphasis role="keyword">class&#32;</emphasis>Test&#32;{
+<emphasis role="keyword">public</emphasis>:
+&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;f(<emphasis role="keywordtype">void</emphasis>)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;A::f&#32;(class&#32;member).\n&quot;</emphasis>);
+&#32;&#32;&#32;&#32;}
+};
+
+<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>()&#32;{
+&#32;&#32;&#32;&#32;Test&#32;test;
+
+&#32;&#32;&#32;&#32;chain.<link linkend="_classmbed_1_1_call_chain_1a472ea4d4bff102206dabec6d29df9c6a">add</link>(second);
+&#32;&#32;&#32;&#32;chain.<link linkend="_classmbed_1_1_call_chain_1a5e0dd730be3640cee8e482663d9025d7">add_front</link>(first);
+&#32;&#32;&#32;&#32;chain.<link linkend="_classmbed_1_1_call_chain_1a472ea4d4bff102206dabec6d29df9c6a">add</link>(&amp;test,&#32;&amp;Test::f);
+&#32;&#32;&#32;&#32;chain.<link linkend="_classmbed_1_1_call_chain_1aba7af6b502e464074d3c31ff9236a22c">call</link>();
+}
+</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__call_chain_8h_source_1l00060">60</link> of file <link linkend="__call_chain_8h_source">CallChain.h</link>.</para>
+</section>
+<anchor xml:id="_namespacembed_1ac5088ada4e4cb0210a2560087fd7387a"/><section>
+    <title>pvoidf_t</title>
+<indexterm><primary>pvoidf_t</primary><secondary>mbed</secondary></indexterm>
+<indexterm><primary>mbed</primary><secondary>pvoidf_t</secondary></indexterm>
+<para><computeroutput>typedef void(* pvoidf_t) (void)</computeroutput></para><para>
+Definition at line <link linkend="__function_pointer_8h_source_1l00023">23</link> of file <link linkend="__function_pointer_8h_source">FunctionPointer.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespacembed_1ae093c9a96eda0463cdd2501ba83f10c3"/><section>
+    <title>PathType</title>
+<indexterm><primary>PathType</primary><secondary>mbed</secondary></indexterm>
+<indexterm><primary>mbed</primary><secondary>PathType</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespacembed_1ae093c9a96eda0463cdd2501ba83f10c3">PathType</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>FilePathType</primary><secondary>mbed</secondary></indexterm>
+<indexterm><primary>mbed</primary><secondary>FilePathType</secondary></indexterm>
+<anchor xml:id="_namespacembed_1ae093c9a96eda0463cdd2501ba83f10c3ac72ec0315dfe0bc41a4e41f003f1670d"/>FilePathType</entry><entry></entry></row><row><entry><indexterm><primary>FileSystemPathType</primary><secondary>mbed</secondary></indexterm>
+<indexterm><primary>mbed</primary><secondary>FileSystemPathType</secondary></indexterm>
+<anchor xml:id="_namespacembed_1ae093c9a96eda0463cdd2501ba83f10c3af359b3ca7c5542cce8a207e27b2a923e"/>FileSystemPathType</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="__file_base_8h_source_1l00047">47</link> of file <link linkend="__file_base_8h_source">FileBase.h</link>.</para>
+</section>
+</section>
+</section>

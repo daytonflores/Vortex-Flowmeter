@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__ltdc_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_ltdc.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_ltdc.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_LTDC_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_LTDC_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#if&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00047"/>00047 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00048"/>00048 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00049"/>00049 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00050"/>00050 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00059"/>00059 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00060"/>00060 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00061"/>00061 <emphasis role="preprocessor">#define&#32;MAX_LAYER&#32;&#32;2</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00062"/>00062 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00066"/>00066 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00067"/>00067 {
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00068"/>00068 &#32;&#32;uint8_t&#32;Blue;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00071"/>00071 &#32;&#32;uint8_t&#32;Green;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00074"/>00074 &#32;&#32;uint8_t&#32;Red;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00077"/>00077 &#32;&#32;uint8_t&#32;Reserved;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00078"/>00078 }&#32;LTDC_ColorTypeDef;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00079"/>00079 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00083"/>00083 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00084"/>00084 {
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00085"/>00085 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HSPolarity;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00088"/>00088 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;VSPolarity;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00091"/>00091 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEPolarity;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00094"/>00094 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PCPolarity;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00097"/>00097 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HorizontalSync;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00100"/>00100 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;VerticalSync;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00103"/>00103 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AccumulatedHBP;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00106"/>00106 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AccumulatedVBP;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00109"/>00109 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AccumulatedActiveW;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00112"/>00112 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AccumulatedActiveH;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00115"/>00115 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TotalWidth;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00118"/>00118 &#32;&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TotalHeigh;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00121"/>00121 &#32;&#32;LTDC_ColorTypeDef&#32;&#32;&#32;Backcolor;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00122"/>00122 }&#32;LTDC_InitTypeDef;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00123"/>00123 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00124"/>00124 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00128"/>00128 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00129"/>00129 {
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00130"/>00130 &#32;&#32;uint32_t&#32;WindowX0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00133"/>00133 &#32;&#32;uint32_t&#32;WindowX1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00136"/>00136 &#32;&#32;uint32_t&#32;WindowY0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00139"/>00139 &#32;&#32;uint32_t&#32;WindowY1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00142"/>00142 &#32;&#32;uint32_t&#32;PixelFormat;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00145"/>00145 &#32;&#32;uint32_t&#32;Alpha;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00148"/>00148 &#32;&#32;uint32_t&#32;Alpha0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00151"/>00151 &#32;&#32;uint32_t&#32;BlendingFactor1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00154"/>00154 &#32;&#32;uint32_t&#32;BlendingFactor2;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00157"/>00157 &#32;&#32;uint32_t&#32;FBStartAdress;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00159"/>00159 &#32;&#32;uint32_t&#32;ImageWidth;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00162"/>00162 &#32;&#32;uint32_t&#32;ImageHeight;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00165"/>00165 &#32;&#32;LTDC_ColorTypeDef&#32;&#32;&#32;Backcolor;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00166"/>00166 }&#32;LTDC_LayerCfgTypeDef;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00167"/>00167 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00171"/>00171 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00172"/>00172 {
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00173"/>00173 &#32;&#32;HAL_LTDC_STATE_RESET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00174"/>00174 &#32;&#32;HAL_LTDC_STATE_READY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00175"/>00175 &#32;&#32;HAL_LTDC_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00176"/>00176 &#32;&#32;HAL_LTDC_STATE_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x03,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00177"/>00177 &#32;&#32;HAL_LTDC_STATE_ERROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x04&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00178"/>00178 }HAL_LTDC_StateTypeDef;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00179"/>00179 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00183"/>00183 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00184"/>00184 {
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00185"/>00185 &#32;&#32;LTDC_TypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*Instance;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00187"/>00187 &#32;&#32;LTDC_InitTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Init;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00189"/>00189 &#32;&#32;LTDC_LayerCfgTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LayerCfg[MAX_LAYER];&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00191"/>00191 &#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00193"/>00193 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;HAL_LTDC_StateTypeDef&#32;&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00195"/>00195 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ErrorCode;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00197"/>00197 }&#32;LTDC_HandleTypeDef;
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00198"/>00198 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00199"/>00199 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00207"/>00207 <emphasis role="preprocessor">#define&#32;IS_LTDC_LAYER(LAYER)&#32;((LAYER)&#32;&lt;=&#32;MAX_LAYER)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00215"/>00215 <emphasis role="preprocessor">#define&#32;HAL_LTDC_ERROR_NONE&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00216"/>00216 <emphasis role="preprocessor">#define&#32;HAL_LTDC_ERROR_TE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000001)&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00217"/>00217 <emphasis role="preprocessor">#define&#32;HAL_LTDC_ERROR_FU&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000002)&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00218"/>00218 <emphasis role="preprocessor">#define&#32;HAL_LTDC_ERROR_TIMEOUT&#32;&#32;&#32;((uint32_t)0x00000020)&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00227"/>00227 <emphasis role="preprocessor">#define&#32;LTDC_HSPOLARITY_AL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00228"/>00228 <emphasis role="preprocessor">#define&#32;LTDC_HSPOLARITY_AH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_GCR_HSPOL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00230"/>00230 <emphasis role="preprocessor">#define&#32;IS_LTDC_HSPOL(HSPOL)&#32;(((HSPOL)&#32;==&#32;LTDC_HSPOLARITY_AL)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00231"/>00231 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((HSPOL)&#32;==&#32;LTDC_HSPOLARITY_AH))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00239"/>00239 <emphasis role="preprocessor">#define&#32;LTDC_VSPOLARITY_AL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00240"/>00240 <emphasis role="preprocessor">#define&#32;LTDC_VSPOLARITY_AH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_GCR_VSPOL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00242"/>00242 <emphasis role="preprocessor">#define&#32;IS_LTDC_VSPOL(VSPOL)&#32;(((VSPOL)&#32;==&#32;LTDC_VSPOLARITY_AL)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00243"/>00243 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((VSPOL)&#32;==&#32;LTDC_VSPOLARITY_AH))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00251"/>00251 <emphasis role="preprocessor">#define&#32;LTDC_DEPOLARITY_AL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00252"/>00252 <emphasis role="preprocessor">#define&#32;LTDC_DEPOLARITY_AH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_GCR_DEPOL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00254"/>00254 <emphasis role="preprocessor">#define&#32;IS_LTDC_DEPOL(DEPOL)&#32;(((DEPOL)&#32;==&#32;&#32;LTDC_DEPOLARITY_AL)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00255"/>00255 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DEPOL)&#32;==&#32;&#32;LTDC_DEPOLARITY_AH))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00263"/>00263 <emphasis role="preprocessor">#define&#32;LTDC_PCPOLARITY_IPC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00264"/>00264 <emphasis role="preprocessor">#define&#32;LTDC_PCPOLARITY_IIPC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_GCR_PCPOL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00266"/>00266 <emphasis role="preprocessor">#define&#32;IS_LTDC_PCPOL(PCPOL)&#32;(((PCPOL)&#32;==&#32;&#32;LTDC_PCPOLARITY_IPC)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00267"/>00267 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((PCPOL)&#32;==&#32;&#32;LTDC_PCPOLARITY_IIPC))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00275"/>00275 <emphasis role="preprocessor">#define&#32;LTDC_HORIZONTALSYNC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(LTDC_SSCR_HSW&#32;&gt;&gt;&#32;16)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00276"/>00276 <emphasis role="preprocessor">#define&#32;LTDC_VERTICALSYNC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_SSCR_VSH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00278"/>00278 <emphasis role="preprocessor">#define&#32;IS_LTDC_HSYNC(HSYNC)&#32;&#32;&#32;((HSYNC)&#32;&#32;&lt;=&#32;LTDC_HORIZONTALSYNC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00279"/>00279 <emphasis role="preprocessor">#define&#32;IS_LTDC_VSYNC(VSYNC)&#32;&#32;&#32;((VSYNC)&#32;&#32;&lt;=&#32;LTDC_VERTICALSYNC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00280"/>00280 <emphasis role="preprocessor">#define&#32;IS_LTDC_AHBP(AHBP)&#32;&#32;&#32;&#32;&#32;((AHBP)&#32;&#32;&#32;&lt;=&#32;LTDC_HORIZONTALSYNC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00281"/>00281 <emphasis role="preprocessor">#define&#32;IS_LTDC_AVBP(AVBP)&#32;&#32;&#32;&#32;&#32;((AVBP)&#32;&#32;&#32;&lt;=&#32;LTDC_VERTICALSYNC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00282"/>00282 <emphasis role="preprocessor">#define&#32;IS_LTDC_AAW(AAW)&#32;&#32;&#32;&#32;&#32;&#32;&#32;((AAW)&#32;&#32;&#32;&#32;&lt;=&#32;LTDC_HORIZONTALSYNC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00283"/>00283 <emphasis role="preprocessor">#define&#32;IS_LTDC_AAH(AAH)&#32;&#32;&#32;&#32;&#32;&#32;&#32;((AAH)&#32;&#32;&#32;&#32;&lt;=&#32;LTDC_VERTICALSYNC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00284"/>00284 <emphasis role="preprocessor">#define&#32;IS_LTDC_TOTALW(TOTALW)&#32;((TOTALW)&#32;&lt;=&#32;LTDC_HORIZONTALSYNC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00285"/>00285 <emphasis role="preprocessor">#define&#32;IS_LTDC_TOTALH(TOTALH)&#32;((TOTALH)&#32;&lt;=&#32;LTDC_VERTICALSYNC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00293"/>00293 <emphasis role="preprocessor">#define&#32;LTDC_COLOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x000000FF)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00295"/>00295 <emphasis role="preprocessor">#define&#32;IS_LTDC_BLUEVALUE(BBLUE)&#32;&#32;&#32;&#32;((BBLUE)&#32;&#32;&lt;=&#32;LTDC_COLOR)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00296"/>00296 <emphasis role="preprocessor">#define&#32;IS_LTDC_GREENVALUE(BGREEN)&#32;&#32;((BGREEN)&#32;&lt;=&#32;LTDC_COLOR)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00297"/>00297 <emphasis role="preprocessor">#define&#32;IS_LTDC_REDVALUE(BRED)&#32;&#32;&#32;&#32;&#32;&#32;((BRED)&#32;&#32;&#32;&lt;=&#32;LTDC_COLOR)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00305"/>00305 <emphasis role="preprocessor">#define&#32;LTDC_BLENDING_FACTOR1_CA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000400)&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00306"/>00306 <emphasis role="preprocessor">#define&#32;LTDC_BLENDING_FACTOR1_PAxCA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000600)&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00308"/>00308 <emphasis role="preprocessor">#define&#32;IS_LTDC_BLENDING_FACTOR1(BlendingFactor1)&#32;(((BlendingFactor1)&#32;==&#32;LTDC_BLENDING_FACTOR1_CA)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00309"/>00309 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((BlendingFactor1)&#32;==&#32;LTDC_BLENDING_FACTOR1_PAxCA))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00317"/>00317 <emphasis role="preprocessor">#define&#32;LTDC_BLENDING_FACTOR2_CA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000005)&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00318"/>00318 <emphasis role="preprocessor">#define&#32;LTDC_BLENDING_FACTOR2_PAxCA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000007)&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00320"/>00320 <emphasis role="preprocessor">#define&#32;IS_LTDC_BLENDING_FACTOR2(BlendingFactor2)&#32;(((BlendingFactor2)&#32;==&#32;LTDC_BLENDING_FACTOR2_CA)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00321"/>00321 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((BlendingFactor2)&#32;==&#32;LTDC_BLENDING_FACTOR2_PAxCA))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00329"/>00329 <emphasis role="preprocessor">#define&#32;LTDC_PIXEL_FORMAT_ARGB8888&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00330"/>00330 <emphasis role="preprocessor">#define&#32;LTDC_PIXEL_FORMAT_RGB888&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000001)&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00331"/>00331 <emphasis role="preprocessor">#define&#32;LTDC_PIXEL_FORMAT_RGB565&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000002)&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00332"/>00332 <emphasis role="preprocessor">#define&#32;LTDC_PIXEL_FORMAT_ARGB1555&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000003)&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00333"/>00333 <emphasis role="preprocessor">#define&#32;LTDC_PIXEL_FORMAT_ARGB4444&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000004)&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00334"/>00334 <emphasis role="preprocessor">#define&#32;LTDC_PIXEL_FORMAT_L8&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000005)&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00335"/>00335 <emphasis role="preprocessor">#define&#32;LTDC_PIXEL_FORMAT_AL44&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000006)&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00336"/>00336 <emphasis role="preprocessor">#define&#32;LTDC_PIXEL_FORMAT_AL88&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000007)&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00338"/>00338 <emphasis role="preprocessor">#define&#32;IS_LTDC_PIXEL_FORMAT(Pixelformat)&#32;(((Pixelformat)&#32;==&#32;LTDC_PIXEL_FORMAT_ARGB8888)&#32;||&#32;((Pixelformat)&#32;==&#32;LTDC_PIXEL_FORMAT_RGB888)&#32;&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00339"/>00339 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((Pixelformat)&#32;==&#32;LTDC_PIXEL_FORMAT_RGB565)&#32;&#32;&#32;||&#32;((Pixelformat)&#32;==&#32;LTDC_PIXEL_FORMAT_ARGB1555)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00340"/>00340 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((Pixelformat)&#32;==&#32;LTDC_PIXEL_FORMAT_ARGB4444)&#32;||&#32;((Pixelformat)&#32;==&#32;LTDC_PIXEL_FORMAT_L8)&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00341"/>00341 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((Pixelformat)&#32;==&#32;LTDC_PIXEL_FORMAT_AL44)&#32;&#32;&#32;&#32;&#32;||&#32;((Pixelformat)&#32;==&#32;LTDC_PIXEL_FORMAT_AL88))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00349"/>00349 <emphasis role="preprocessor">#define&#32;LTDC_ALPHA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_LxCACR_CONSTA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00351"/>00351 <emphasis role="preprocessor">#define&#32;IS_LTDC_ALPHA(ALPHA)&#32;((ALPHA)&#32;&lt;=&#32;LTDC_ALPHA)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00359"/>00359 <emphasis role="preprocessor">#define&#32;LTDC_STOPPOSITION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(LTDC_LxWHPCR_WHSPPOS&#32;&gt;&gt;&#32;16)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00360"/>00360 <emphasis role="preprocessor">#define&#32;LTDC_STARTPOSITION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_LxWHPCR_WHSTPOS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00362"/>00362 <emphasis role="preprocessor">#define&#32;LTDC_COLOR_FRAME_BUFFER&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_LxCFBLR_CFBLL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00363"/>00363 <emphasis role="preprocessor">#define&#32;LTDC_LINE_NUMBER&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_LxCFBLNR_CFBLNBR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00365"/>00365 <emphasis role="preprocessor">#define&#32;IS_LTDC_HCONFIGST(HCONFIGST)&#32;((HCONFIGST)&#32;&lt;=&#32;LTDC_STARTPOSITION)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00366"/>00366 <emphasis role="preprocessor">#define&#32;IS_LTDC_HCONFIGSP(HCONFIGSP)&#32;((HCONFIGSP)&#32;&lt;=&#32;LTDC_STOPPOSITION)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00367"/>00367 <emphasis role="preprocessor">#define&#32;IS_LTDC_VCONFIGST(VCONFIGST)&#32;&#32;((VCONFIGST)&#32;&lt;=&#32;LTDC_STARTPOSITION)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00368"/>00368 <emphasis role="preprocessor">#define&#32;IS_LTDC_VCONFIGSP(VCONFIGSP)&#32;((VCONFIGSP)&#32;&lt;=&#32;LTDC_STOPPOSITION)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00369"/>00369 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00370"/>00370 <emphasis role="preprocessor">#define&#32;IS_LTDC_CFBP(CFBP)&#32;((CFBP)&#32;&lt;=&#32;LTDC_COLOR_FRAME_BUFFER)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00371"/>00371 <emphasis role="preprocessor">#define&#32;IS_LTDC_CFBLL(CFBLL)&#32;((CFBLL)&#32;&lt;=&#32;LTDC_COLOR_FRAME_BUFFER)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00372"/>00372 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00373"/>00373 <emphasis role="preprocessor">#define&#32;IS_LTDC_CFBLNBR(CFBLNBR)&#32;((CFBLNBR)&#32;&lt;=&#32;LTDC_LINE_NUMBER)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00381"/>00381 <emphasis role="preprocessor">#define&#32;IS_LTDC_LIPOS(LIPOS)&#32;((LIPOS)&#32;&lt;=&#32;0x7FF)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00389"/>00389 <emphasis role="preprocessor">#define&#32;LTDC_IT_LI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_IER_LIE</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00390"/>00390 <emphasis role="preprocessor">#define&#32;LTDC_IT_FU&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_IER_FUIE</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00391"/>00391 <emphasis role="preprocessor">#define&#32;LTDC_IT_TE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_IER_TERRIE</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00392"/>00392 <emphasis role="preprocessor">#define&#32;LTDC_IT_RR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_IER_RRIE</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00393"/>00393 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00394"/>00394 <emphasis role="preprocessor">#define&#32;IS_LTDC_IT(IT)&#32;((((IT)&#32;&amp;&#32;(uint32_t)0xFFFFFFF0)&#32;==&#32;0x00)&#32;&amp;&amp;&#32;((IT)&#32;!=&#32;0x00))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00402"/>00402 <emphasis role="preprocessor">#define&#32;LTDC_FLAG_LI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_ISR_LIF</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00403"/>00403 <emphasis role="preprocessor">#define&#32;LTDC_FLAG_FU&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_ISR_FUIF</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00404"/>00404 <emphasis role="preprocessor">#define&#32;LTDC_FLAG_TE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_ISR_TERRIF</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00405"/>00405 <emphasis role="preprocessor">#define&#32;LTDC_FLAG_RR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LTDC_ISR_RRIF</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00406"/>00406 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00407"/>00407 <emphasis role="preprocessor">#define&#32;IS_LTDC_FLAG(FLAG)&#32;(((FLAG)&#32;==&#32;LTDC_FLAG_LI)&#32;||&#32;((FLAG)&#32;==&#32;LTDC_FLAG_FU)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00408"/>00408 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;LTDC_FLAG_TERR)&#32;||&#32;((FLAG)&#32;==&#32;LTDC_FLAG_RR))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00417"/>00417 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00418"/>00418 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00423"/>00423 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_LTDC_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00424"/>00424 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00430"/>00430 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_ENABLE(__HANDLE__)&#32;&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;GCR&#32;|=&#32;LTDC_GCR_LTDCEN)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00431"/>00431 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00437"/>00437 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_DISABLE(__HANDLE__)&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;GCR&#32;&amp;=&#32;~(LTDC_GCR_LTDCEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00438"/>00438 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00446"/>00446 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_LAYER(__HANDLE__,&#32;__LAYER__)&#32;&#32;&#32;((LTDC_Layer_TypeDef&#32;*)(((uint32_t)((__HANDLE__)-&gt;Instance))&#32;+&#32;0x84&#32;+&#32;(0x80*(__LAYER__))))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00447"/>00447 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00448"/>00448 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_LAYER_ENABLE(__HANDLE__,&#32;__LAYER__)&#32;&#32;((__HAL_LTDC_LAYER((__HANDLE__),&#32;(__LAYER__)))-&gt;CR&#32;|=&#32;(uint32_t)LTDC_LxCR_LEN)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00449"/>00449 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00457"/>00457 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_LAYER_DISABLE(__HANDLE__,&#32;__LAYER__)&#32;((__HAL_LTDC_LAYER((__HANDLE__),&#32;(__LAYER__)))-&gt;CR&#32;&amp;=&#32;~(uint32_t)LTDC_LxCR_LEN)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00458"/>00458 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00464"/>00464 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_RELOAD_CONFIG(__HANDLE__)&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;SRCR&#32;|=&#32;LTDC_SRCR_IMR)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00465"/>00465 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00466"/>00466 <emphasis role="comment">/*&#32;Interrupt&#32;&amp;&#32;Flag&#32;management&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00478"/>00478 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_GET_FLAG(__HANDLE__,&#32;__FLAG__)&#32;((__HANDLE__)-&gt;Instance-&gt;ISR&#32;&amp;&#32;(__FLAG__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00479"/>00479 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00491"/>00491 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_CLEAR_FLAG(__HANDLE__,&#32;__FLAG__)&#32;((__HANDLE__)-&gt;Instance-&gt;ICR&#32;|=&#32;(__FLAG__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00492"/>00492 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00504"/>00504 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_ENABLE_IT(__HANDLE__,&#32;__INTERRUPT__)&#32;((__HANDLE__)-&gt;Instance-&gt;IER&#32;|=&#32;(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00505"/>00505 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00517"/>00517 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_DISABLE_IT(__HANDLE__,&#32;__INTERRUPT__)&#32;((__HANDLE__)-&gt;Instance-&gt;IER&#32;&amp;=&#32;~(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00518"/>00518 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00530"/>00530 <emphasis role="preprocessor">#define&#32;__HAL_LTDC_GET_IT_SOURCE(__HANDLE__,&#32;__INTERRUPT__)&#32;((__HANDLE__)-&gt;Instance-&gt;ISR&#32;&amp;&#32;(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00531"/>00531 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00532"/>00532 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00533"/>00533 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00534"/>00534 <emphasis role="comment">/*&#32;Initialization&#32;and&#32;de-initialization&#32;functions&#32;*****************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00535"/>00535 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_Init(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00536"/>00536 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_DeInit(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00537"/>00537 <emphasis role="keywordtype">void</emphasis>&#32;HAL_LTDC_MspInit(LTDC_HandleTypeDef*&#32;hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00538"/>00538 <emphasis role="keywordtype">void</emphasis>&#32;HAL_LTDC_MspDeInit(LTDC_HandleTypeDef*&#32;hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00539"/>00539 <emphasis role="keywordtype">void</emphasis>&#32;HAL_LTDC_ErrorCallback(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00540"/>00540 <emphasis role="keywordtype">void</emphasis>&#32;HAL_LTDC_LineEvenCallback(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00541"/>00541 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00542"/>00542 <emphasis role="comment">/*&#32;IO&#32;operation&#32;functions&#32;*****************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00543"/>00543 <emphasis role="keywordtype">void</emphasis>&#32;&#32;HAL_LTDC_IRQHandler(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00544"/>00544 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00545"/>00545 <emphasis role="comment">/*&#32;Peripheral&#32;Control&#32;functions&#32;***********************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00546"/>00546 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_ConfigLayer(LTDC_HandleTypeDef&#32;*hltdc,&#32;LTDC_LayerCfgTypeDef&#32;*pLayerCfg,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00547"/>00547 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_SetWindowSize(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;XSize,&#32;uint32_t&#32;YSize,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00548"/>00548 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_SetWindowPosition(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;X0,&#32;uint32_t&#32;Y0,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00549"/>00549 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_SetPixelFormat(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;Pixelformat,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00550"/>00550 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_SetAlpha(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;Alpha,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00551"/>00551 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_SetAddress(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;Address,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00552"/>00552 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_ConfigColorKeying(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;RGBValue,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00553"/>00553 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_ConfigCLUT(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;*pCLUT,&#32;uint32_t&#32;CLUTSize,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00554"/>00554 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_EnableColorKeying(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00555"/>00555 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_DisableColorKeying(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00556"/>00556 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_EnableCLUT(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00557"/>00557 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_DisableCLUT(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;LayerIdx);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00558"/>00558 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_ProgramLineEvent(LTDC_HandleTypeDef&#32;*hltdc,&#32;uint32_t&#32;Line);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00559"/>00559 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_EnableDither(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00560"/>00560 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_LTDC_DisableDither(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00561"/>00561 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00562"/>00562 <emphasis role="comment">/*&#32;Peripheral&#32;State&#32;functions&#32;*************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00563"/>00563 HAL_LTDC_StateTypeDef&#32;HAL_LTDC_GetState(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00564"/>00564 uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_LTDC_GetError(LTDC_HandleTypeDef&#32;*hltdc);
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00565"/>00565 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00566"/>00566 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00567"/>00567 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00576"/>00576 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00577"/>00577 }
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00578"/>00578 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00579"/>00579 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00580"/>00580 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_LTDC_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00581"/>00581 
+<anchor xml:id="_stm32f4xx__hal__ltdc_8h_source_1l00582"/>00582 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

@@ -1,0 +1,166 @@
+\hypertarget{stm32f4xx__hal__hash_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+hash.\+h}
+\label{stm32f4xx__hal__hash_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_hash.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_hash.h}}
+\mbox{\hyperlink{stm32f4xx__hal__hash_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_HASH\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_HASH\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#if defined(STM32F415xx) || defined(STM32F417xx) || defined(STM32F437xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{59 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{64 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66   uint32\_t DataType;  }
+\DoxyCodeLine{69   uint32\_t KeySize;   }
+\DoxyCodeLine{71   uint8\_t* pKey;      }
+\DoxyCodeLine{72 \}HASH\_InitTypeDef;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{77 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{78 \{}
+\DoxyCodeLine{79   HAL\_HASH\_STATE\_RESET     = 0x00,  }
+\DoxyCodeLine{80   HAL\_HASH\_STATE\_READY     = 0x01,  }
+\DoxyCodeLine{81   HAL\_HASH\_STATE\_BUSY      = 0x02,  }
+\DoxyCodeLine{82   HAL\_HASH\_STATE\_TIMEOUT   = 0x03,  }
+\DoxyCodeLine{83   HAL\_HASH\_STATE\_ERROR     = 0x04   }
+\DoxyCodeLine{84 \}HAL\_HASH\_STATETypeDef;}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{89 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{90 \{}
+\DoxyCodeLine{91   HAL\_HASH\_PHASE\_READY     = 0x01,  }
+\DoxyCodeLine{92   HAL\_HASH\_PHASE\_PROCESS   = 0x02,  }
+\DoxyCodeLine{93 \}HAL\_HASHPhaseTypeDef;}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{99 \{}
+\DoxyCodeLine{100       HASH\_InitTypeDef           Init;              }
+\DoxyCodeLine{102       uint8\_t                    *pHashInBuffPtr;   }
+\DoxyCodeLine{104       uint8\_t                    *pHashOutBuffPtr;  }
+\DoxyCodeLine{106      \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               HashBuffSize;      }
+\DoxyCodeLine{108      \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               HashInCount;       }
+\DoxyCodeLine{110      \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               HashITCounter;     }
+\DoxyCodeLine{112       \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}          Status;            }
+\DoxyCodeLine{114       HAL\_HASHPhaseTypeDef       Phase;             }
+\DoxyCodeLine{116       \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}          *hdmain;           }
+\DoxyCodeLine{118       \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}            Lock;              }
+\DoxyCodeLine{120      \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_HASH\_STATETypeDef  State;             }
+\DoxyCodeLine{121 \} HASH\_HandleTypeDef;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define HASH\_AlgoSelection\_SHA1      ((uint32\_t)0x0000)  }}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define HASH\_AlgoSelection\_SHA224    HASH\_CR\_ALGO\_1      }}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define HASH\_AlgoSelection\_SHA256    HASH\_CR\_ALGO        }}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define HASH\_AlgoSelection\_MD5       HASH\_CR\_ALGO\_0      }}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define IS\_HASH\_ALGOSELECTION(ALGOSELECTION) (((ALGOSELECTION) == HASH\_AlgoSelection\_SHA1)   || \(\backslash\)}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{                                              ((ALGOSELECTION) == HASH\_AlgoSelection\_SHA224) || \(\backslash\)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{                                              ((ALGOSELECTION) == HASH\_AlgoSelection\_SHA256) || \(\backslash\)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{                                              ((ALGOSELECTION) == HASH\_AlgoSelection\_MD5))}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define HASH\_AlgoMode\_HASH         ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define HASH\_AlgoMode\_HMAC         HASH\_CR\_MODE            }}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define IS\_HASH\_ALGOMODE(ALGOMODE) (((ALGOMODE) == HASH\_AlgoMode\_HASH) || \(\backslash\)}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{                                    ((ALGOMODE) == HASH\_AlgoMode\_HMAC))}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define HASH\_DATATYPE\_32B          ((uint32\_t)0x0000) }}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define HASH\_DATATYPE\_16B          HASH\_CR\_DATATYPE\_0 }}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define HASH\_DATATYPE\_8B           HASH\_CR\_DATATYPE\_1 }}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define HASH\_DATATYPE\_1B           HASH\_CR\_DATATYPE   }}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define IS\_HASH\_DATATYPE(DATATYPE) (((DATATYPE) == HASH\_DATATYPE\_32B)|| \(\backslash\)}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{                                    ((DATATYPE) == HASH\_DATATYPE\_16B)|| \(\backslash\)}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{                                    ((DATATYPE) == HASH\_DATATYPE\_8B) || \(\backslash\)}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{                                    ((DATATYPE) == HASH\_DATATYPE\_1B))}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define HASH\_HMACKeyType\_ShortKey      ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define HASH\_HMACKeyType\_LongKey       HASH\_CR\_LKEY            }}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define IS\_HASH\_HMAC\_KEYTYPE(KEYTYPE) (((KEYTYPE) == HASH\_HMACKeyType\_ShortKey) || \(\backslash\)}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{                                       ((KEYTYPE) == HASH\_HMACKeyType\_LongKey))}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define HASH\_FLAG\_DINIS            HASH\_SR\_DINIS  }}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define HASH\_FLAG\_DCIS             HASH\_SR\_DCIS   }}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define HASH\_FLAG\_DMAS             HASH\_SR\_DMAS   }}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define HASH\_FLAG\_BUSY             HASH\_SR\_BUSY   }}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define HASH\_FLAG\_DINNE            HASH\_CR\_DINNE  }}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define HASH\_IT\_DINI               HASH\_IMR\_DINIM  }}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define HASH\_IT\_DCI                HASH\_IMR\_DCIM   }}
+\DoxyCodeLine{210 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define \_\_HAL\_HASH\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_HASH\_STATE\_RESET)}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#define \_\_HAL\_HASH\_GET\_FLAG(\_\_FLAG\_\_) ((HASH-\/>SR \& (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define HAL\_HMAC\_MD5\_Finish          HAL\_HASH\_MD5\_Finish}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define HAL\_HMAC\_SHA1\_Finish         HAL\_HASH\_SHA1\_Finish}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define HAL\_HMAC\_SHA224\_Finish       HAL\_HASH\_SHA224\_Finish}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define HAL\_HMAC\_SHA256\_Finish       HAL\_HASH\_SHA256\_Finish}}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define \_\_HAL\_HASH\_SET\_MDMAT()          HASH-\/>CR |= HASH\_CR\_MDMAT}}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#define \_\_HAL\_HASH\_RESET\_MDMAT()        HASH-\/>CR \&= (uint32\_t)(\string~HASH\_CR\_MDMAT)}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#define \_\_HAL\_HASH\_START\_DIGEST()       HASH-\/>STR |= HASH\_STR\_DCAL}}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#define \_\_HAL\_HASH\_SET\_NBVALIDBITS(SIZE) do\{HASH-\/>STR \&= \string~(HASH\_STR\_NBW);\(\backslash\)}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{                                            HASH-\/>STR |= 8 * ((SIZE) \% 4);\(\backslash\)}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{                                           \}while(0)}}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{271 \textcolor{comment}{/* Include HASH HAL Extension module */}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__hash__ex_8h}{stm32f4xx\_hal\_hash\_ex.h}}"{}}}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276 \textcolor{comment}{/* Initialization and de-\/initialization functions  **********************************/}}
+\DoxyCodeLine{277 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_Init(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{278 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_DeInit(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280 \textcolor{comment}{/* HASH processing using polling  *********************************************/}}
+\DoxyCodeLine{281 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_SHA1\_Start(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size, uint8\_t* pOutBuffer, uint32\_t Timeout);}
+\DoxyCodeLine{282 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_MD5\_Start(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size, uint8\_t* pOutBuffer, uint32\_t Timeout);}
+\DoxyCodeLine{283 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_MD5\_Accumulate(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size);}
+\DoxyCodeLine{284 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_SHA1\_Accumulate(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size);}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286 \textcolor{comment}{/* HASH-\/MAC processing using polling  *****************************************/}}
+\DoxyCodeLine{287 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HMAC\_SHA1\_Start(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size, uint8\_t* pOutBuffer, uint32\_t Timeout);}
+\DoxyCodeLine{288 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HMAC\_MD5\_Start(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size, uint8\_t* pOutBuffer, uint32\_t Timeout);}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{290 \textcolor{comment}{/* HASH processing using interrupt  *******************************************/}}
+\DoxyCodeLine{291 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_SHA1\_Start\_IT(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size, uint8\_t* pOutBuffer);}
+\DoxyCodeLine{292 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_MD5\_Start\_IT(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size, uint8\_t* pOutBuffer);}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294 \textcolor{comment}{/* HASH processing using DMA  *************************************************/}}
+\DoxyCodeLine{295 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_SHA1\_Start\_DMA(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size);}
+\DoxyCodeLine{296 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_SHA1\_Finish(HASH\_HandleTypeDef *hhash, uint8\_t* pOutBuffer, uint32\_t Timeout);}
+\DoxyCodeLine{297 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_MD5\_Start\_DMA(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size);}
+\DoxyCodeLine{298 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HASH\_MD5\_Finish(HASH\_HandleTypeDef *hhash, uint8\_t* pOutBuffer, uint32\_t Timeout);}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \textcolor{comment}{/* HASH-\/HMAC processing using DMA  ********************************************/}}
+\DoxyCodeLine{301 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HMAC\_SHA1\_Start\_DMA(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size);}
+\DoxyCodeLine{302 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HMAC\_MD5\_Start\_DMA(HASH\_HandleTypeDef *hhash, uint8\_t *pInBuffer, uint32\_t Size);}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304 \textcolor{comment}{/* Processing functions  ******************************************************/}}
+\DoxyCodeLine{305 \textcolor{keywordtype}{void} HAL\_HASH\_IRQHandler(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307 \textcolor{comment}{/* Peripheral State functions  ************************************************/}}
+\DoxyCodeLine{308 HAL\_HASH\_STATETypeDef HAL\_HASH\_GetState(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{309 \textcolor{keywordtype}{void} HAL\_HASH\_MspInit(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{310 \textcolor{keywordtype}{void} HAL\_HASH\_MspDeInit(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{311 \textcolor{keywordtype}{void} HAL\_HASH\_InCpltCallback(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{312 \textcolor{keywordtype}{void} HAL\_HASH\_DgstCpltCallback(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{313 \textcolor{keywordtype}{void} HAL\_HASH\_ErrorCallback(HASH\_HandleTypeDef *hhash);}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{315 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F415xx || STM32F417xx || STM32F437xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{325 \}}
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_HASH\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___i_w_d_g" xml:lang="en-US">
+<title>IWDG</title>
+<indexterm><primary>IWDG</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___i_w_d_g___exported___constants">IWDG_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_i_w_d_g___init_type_def">IWDG_InitTypeDef</link></para>
+
+<para>IWDG Init structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link></para>
+
+<para>IWDG handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga9990235f5c32f26ed6455a30bc14ee65">__HAL_IWDG_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5afc0696c27fdaa4f7dbe7f08a9b5d6030">HAL_IWDG_STATE_RESET</link>)</para>
+
+<para>Reset IWDG handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga5914aff5b85e3151bb75377a32d83d6a">__HAL_IWDG_START</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;KR |=  <link linkend="_group___i_w_d_g___registers___bit_mask_1gaeaa0dd2da3f9d0cce0d708cfff1df545">KR_KEY_ENABLE</link>)</para>
+
+<para>Enables the IWDG peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1gac0eaf381e60a654d6b51c43f645e088f">__HAL_IWDG_RELOAD_COUNTER</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1ga830a9a1bad16c7043c86545f4c159a50">KR_KEY_RELOAD</link>)</para>
+
+<para>Reloads IWDG counter with value defined in the reload register (write access to IWDG_PR and IWDG_RLR registers disabled). </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga425b3021a67a13ce98cf58dd277b5d5b">__HAL_IWDG_ENABLE_WRITE_ACCESS</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1gadf1ad39b6aa3d426f6e7fbf29d088aa5">KR_KEY_EWA</link>)</para>
+
+<para>Enables write access to IWDG_PR and IWDG_RLR registers. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga03e0f29f0f6f15c2615b471d67d80a44">__HAL_IWDG_DISABLE_WRITE_ACCESS</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1gae9cf62ac0d5eda2dd2417c280237e446">KR_KEY_DWA</link>)</para>
+
+<para>Disables write access to IWDG_PR and IWDG_RLR registers. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1gae13d68bc29e7d7798cecf9360ac79fed">__HAL_IWDG_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Gets the selected IWDG&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga6e4e701321ad8037d4e2feab85d49a8b">__HAL_IWDG_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</para>
+
+<para>Clears the IWDG&apos;s pending flags. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___i_w_d_g_1ga61699dc6f24a3edecddd16018560d0e5">HAL_IWDG_StateTypeDef</link> { 
+<link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5afc0696c27fdaa4f7dbe7f08a9b5d6030">HAL_IWDG_STATE_RESET</link> = 0x00
+, <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a8aad8fa61ebdbad5411e17f7fdd35803">HAL_IWDG_STATE_READY</link> = 0x01
+, <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a4ba9c9db0e319b41d19d5ad7e5b51c77">HAL_IWDG_STATE_BUSY</link> = 0x02
+, <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a415081e774deff4c59801adf358e2683">HAL_IWDG_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a79340b932fb1f3b536fd37ebdf7b6fb6">HAL_IWDG_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>IWDG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_w_d_g_1ga2e1669e60f2dc298fecaed919e7ae810">HAL_IWDG_Init</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_w_d_g_1gaf26b08d1a805d1dd515cafd0278c240c">HAL_IWDG_MspInit</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_w_d_g_1gaaa540681b7a6a4f7cc6b0b5497e6de46">HAL_IWDG_Start</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_w_d_g_1ga7e86236aea6d2f3638397fdf90333e4a">HAL_IWDG_Refresh</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i_w_d_g_1ga61699dc6f24a3edecddd16018560d0e5">HAL_IWDG_StateTypeDef</link> <link linkend="_group___i_w_d_g_1ga4b2f32b043612fdd1b68f806115d8de4">HAL_IWDG_GetState</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___i_w_d_g_1ga6e4e701321ad8037d4e2feab85d49a8b"/><section>
+    <title>__HAL_IWDG_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_IWDG_CLEAR_FLAG</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>__HAL_IWDG_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_IWDG_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</computeroutput></para><para>
+
+<para>Clears the IWDG&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>IWDG handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to clear. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>IWDG_FLAG_PVU: Watchdog counter reload value update flag </para>
+</listitem>
+<listitem>
+<para>IWDG_FLAG_RVU: Watchdog counter prescaler value flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__iwdg_8h_source_1l00225">225</link> of file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_w_d_g_1ga03e0f29f0f6f15c2615b471d67d80a44"/><section>
+    <title>__HAL_IWDG_DISABLE_WRITE_ACCESS</title>
+<indexterm><primary>__HAL_IWDG_DISABLE_WRITE_ACCESS</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>__HAL_IWDG_DISABLE_WRITE_ACCESS</secondary></indexterm>
+<para><computeroutput>#define __HAL_IWDG_DISABLE_WRITE_ACCESS( __HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1gae9cf62ac0d5eda2dd2417c280237e446">KR_KEY_DWA</link>)</computeroutput></para><para>
+
+<para>Disables write access to IWDG_PR and IWDG_RLR registers. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>IWDG handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__iwdg_8h_source_1l00203">203</link> of file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_w_d_g_1ga425b3021a67a13ce98cf58dd277b5d5b"/><section>
+    <title>__HAL_IWDG_ENABLE_WRITE_ACCESS</title>
+<indexterm><primary>__HAL_IWDG_ENABLE_WRITE_ACCESS</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>__HAL_IWDG_ENABLE_WRITE_ACCESS</secondary></indexterm>
+<para><computeroutput>#define __HAL_IWDG_ENABLE_WRITE_ACCESS( __HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1gadf1ad39b6aa3d426f6e7fbf29d088aa5">KR_KEY_EWA</link>)</computeroutput></para><para>
+
+<para>Enables write access to IWDG_PR and IWDG_RLR registers. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>IWDG handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__iwdg_8h_source_1l00196">196</link> of file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_w_d_g_1gae13d68bc29e7d7798cecf9360ac79fed"/><section>
+    <title>__HAL_IWDG_GET_FLAG</title>
+<indexterm><primary>__HAL_IWDG_GET_FLAG</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>__HAL_IWDG_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_IWDG_GET_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Gets the selected IWDG&apos;s flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>IWDG handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>IWDG_FLAG_PVU: Watchdog counter reload value update flag </para>
+</listitem>
+<listitem>
+<para>IWDG_FLAG_RVU: Watchdog counter prescaler value flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__iwdg_8h_source_1l00214">214</link> of file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_w_d_g_1gac0eaf381e60a654d6b51c43f645e088f"/><section>
+    <title>__HAL_IWDG_RELOAD_COUNTER</title>
+<indexterm><primary>__HAL_IWDG_RELOAD_COUNTER</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>__HAL_IWDG_RELOAD_COUNTER</secondary></indexterm>
+<para><computeroutput>#define __HAL_IWDG_RELOAD_COUNTER( __HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1ga830a9a1bad16c7043c86545f4c159a50">KR_KEY_RELOAD</link>)</computeroutput></para><para>
+
+<para>Reloads IWDG counter with value defined in the reload register (write access to IWDG_PR and IWDG_RLR registers disabled). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>IWDG handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__iwdg_8h_source_1l00189">189</link> of file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_w_d_g_1ga9990235f5c32f26ed6455a30bc14ee65"/><section>
+    <title>__HAL_IWDG_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_IWDG_RESET_HANDLE_STATE</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>__HAL_IWDG_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_IWDG_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5afc0696c27fdaa4f7dbe7f08a9b5d6030">HAL_IWDG_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset IWDG handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>IWDG handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__iwdg_8h_source_1l00174">174</link> of file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_w_d_g_1ga5914aff5b85e3151bb75377a32d83d6a"/><section>
+    <title>__HAL_IWDG_START</title>
+<indexterm><primary>__HAL_IWDG_START</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>__HAL_IWDG_START</secondary></indexterm>
+<para><computeroutput>#define __HAL_IWDG_START( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;KR |=  <link linkend="_group___i_w_d_g___registers___bit_mask_1gaeaa0dd2da3f9d0cce0d708cfff1df545">KR_KEY_ENABLE</link>)</computeroutput></para><para>
+
+<para>Enables the IWDG peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>IWDG handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__iwdg_8h_source_1l00181">181</link> of file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___i_w_d_g_1ga61699dc6f24a3edecddd16018560d0e5"/><section>
+    <title>HAL_IWDG_StateTypeDef</title>
+<indexterm><primary>HAL_IWDG_StateTypeDef</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___i_w_d_g_1ga61699dc6f24a3edecddd16018560d0e5">HAL_IWDG_StateTypeDef</link></computeroutput></para><para>
+
+<para>IWDG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_IWDG_STATE_RESET</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5afc0696c27fdaa4f7dbe7f08a9b5d6030"/>HAL_IWDG_STATE_RESET</entry><entry>
+<para>IWDG not yet initialized or disabled </para>
+</entry></row><row><entry><indexterm><primary>HAL_IWDG_STATE_READY</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a8aad8fa61ebdbad5411e17f7fdd35803"/>HAL_IWDG_STATE_READY</entry><entry>
+<para>IWDG initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_IWDG_STATE_BUSY</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a4ba9c9db0e319b41d19d5ad7e5b51c77"/>HAL_IWDG_STATE_BUSY</entry><entry>
+<para>IWDG internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_IWDG_STATE_TIMEOUT</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a415081e774deff4c59801adf358e2683"/>HAL_IWDG_STATE_TIMEOUT</entry><entry>
+<para>IWDG timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_IWDG_STATE_ERROR</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a79340b932fb1f3b536fd37ebdf7b6fb6"/>HAL_IWDG_STATE_ERROR</entry><entry>
+<para>IWDG error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__iwdg_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___i_w_d_g_1ga4b2f32b043612fdd1b68f806115d8de4"/><section>
+    <title>HAL_IWDG_GetState()</title>
+<indexterm><primary>HAL_IWDG_GetState</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___i_w_d_g_1ga61699dc6f24a3edecddd16018560d0e5">HAL_IWDG_StateTypeDef</link> HAL_IWDG_GetState (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> * hiwdg)</computeroutput></para></section>
+<anchor xml:id="_group___i_w_d_g_1ga2e1669e60f2dc298fecaed919e7ae810"/><section>
+    <title>HAL_IWDG_Init()</title>
+<indexterm><primary>HAL_IWDG_Init</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IWDG_Init (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> * hiwdg)</computeroutput></para></section>
+<anchor xml:id="_group___i_w_d_g_1gaf26b08d1a805d1dd515cafd0278c240c"/><section>
+    <title>HAL_IWDG_MspInit()</title>
+<indexterm><primary>HAL_IWDG_MspInit</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_IWDG_MspInit (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> * hiwdg)</computeroutput></para></section>
+<anchor xml:id="_group___i_w_d_g_1ga7e86236aea6d2f3638397fdf90333e4a"/><section>
+    <title>HAL_IWDG_Refresh()</title>
+<indexterm><primary>HAL_IWDG_Refresh</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_Refresh</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IWDG_Refresh (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> * hiwdg)</computeroutput></para></section>
+<anchor xml:id="_group___i_w_d_g_1gaaa540681b7a6a4f7cc6b0b5497e6de46"/><section>
+    <title>HAL_IWDG_Start()</title>
+<indexterm><primary>HAL_IWDG_Start</primary><secondary>IWDG</secondary></indexterm>
+<indexterm><primary>IWDG</primary><secondary>HAL_IWDG_Start</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IWDG_Start (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> * hiwdg)</computeroutput></para></section>
+</section>
+</section>

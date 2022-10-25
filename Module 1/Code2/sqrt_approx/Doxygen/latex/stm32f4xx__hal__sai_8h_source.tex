@@ -1,0 +1,360 @@
+\hypertarget{stm32f4xx__hal__sai_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+sai.\+h}
+\label{stm32f4xx__hal__sai_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_sai.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_sai.h}}
+\mbox{\hyperlink{stm32f4xx__hal__sai_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00038}00038 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_SAI\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00040}00040 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_SAI\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00046}00046 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00048}00048 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00049}00049 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00059}00059 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00064}00064 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00065}00065 \{                                    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00066}00066   uint32\_t Protocol;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00069}00069   uint32\_t AudioMode;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00072}00072   uint32\_t DataSize;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00075}00075   uint32\_t FirstBit;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00078}00078   uint32\_t ClockStrobing;   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00081}00081   uint32\_t Synchro;         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00084}00084   uint32\_t OutputDrive;     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00089}00089   uint32\_t NoDivider;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00098}00098   uint32\_t FIFOThreshold;   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00101}00101   uint32\_t ClockSource;     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00106}00106   uint32\_t AudioFrequency;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00109}00109 \}SAI\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00115}00115 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00116}00116 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00118}00118   uint32\_t FrameLength;         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00124}00124   uint32\_t ActiveFrameLength;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00129}00129   uint32\_t FSDefinition;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00132}00132   uint32\_t FSPolarity;         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00135}00135   uint32\_t FSOffset;           }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00138}00138 \}SAI\_FrameInitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00144}00144 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00145}00145 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00146}00146   uint32\_t FirstBitOffset;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00149}00149   uint32\_t SlotSize;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00152}00152   uint32\_t SlotNumber;      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00155}00155   uint32\_t SlotActive;      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00157}00157 \}SAI\_SlotInitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00162}00162 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00163}00163 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00164}00164   HAL\_SAI\_STATE\_RESET      = 0x00,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00165}00165   HAL\_SAI\_STATE\_READY      = 0x01,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00166}00166   HAL\_SAI\_STATE\_BUSY       = 0x02,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00167}00167   HAL\_SAI\_STATE\_BUSY\_TX    = 0x12,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00168}00168   HAL\_SAI\_STATE\_BUSY\_RX    = 0x22,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00169}00169   HAL\_SAI\_STATE\_TIMEOUT    = 0x03,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00170}00170   HAL\_SAI\_STATE\_ERROR      = 0x04   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00172}00172 \}HAL\_SAI\_StateTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00177}00177 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00178}00178 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00179}00179   SAI\_Block\_TypeDef         *Instance;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00181}00181   SAI\_InitTypeDef           Init;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00183}00183   SAI\_FrameInitTypeDef      FrameInit;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00185}00185   SAI\_SlotInitTypeDef       SlotInit;   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00187}00187   uint16\_t                  *pTxBuffPtr; }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00189}00189   uint16\_t                  TxXferSize;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00191}00191   uint16\_t                  TxXferCount; }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00193}00193   uint16\_t                  *pRxBuffPtr; }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00195}00195   uint16\_t                  RxXferSize;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00197}00197   uint16\_t                  RxXferCount; }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00199}00199   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}         *hdmatx;     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00201}00201   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}         *hdmarx;     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00203}00203   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}           Lock;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00205}00205   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_SAI\_StateTypeDef State;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00207}00207   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t             ErrorCode;   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00208}00208 \}SAI\_HandleTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00209}00209 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00210}00210 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00211}00211 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00218}00218 \textcolor{preprocessor}{\#define HAL\_SAI\_ERROR\_NONE      ((uint32\_t)0x00000000)     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00219}00219 \textcolor{preprocessor}{\#define HAL\_SAI\_ERROR\_OVR       ((uint32\_t)0x00000001)     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00220}00220 \textcolor{preprocessor}{\#define HAL\_SAI\_ERROR\_UDR       ((uint32\_t)0x00000002)     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00221}00221 \textcolor{preprocessor}{\#define HAL\_SAI\_ERROR\_TIMEOUT   ((uint32\_t)0x00000020)     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00229}00229 \textcolor{preprocessor}{\#define SAI\_CLKSOURCE\_PLLSAI             ((uint32\_t)RCC\_SAIACLKSOURCE\_PLLSAI)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00230}00230 \textcolor{preprocessor}{\#define SAI\_CLKSOURCE\_PLLI2S             ((uint32\_t)RCC\_SAIACLKSOURCE\_PLLI2S)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00231}00231 \textcolor{preprocessor}{\#define SAI\_CLKSOURCE\_EXT                ((uint32\_t)RCC\_SAIACLKSOURCE\_EXT)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00233}00233 \textcolor{preprocessor}{\#define IS\_SAI\_CLK\_SOURCE(SOURCE) (((SOURCE) == SAI\_CLKSOURCE\_PLLSAI) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00234}00234 \textcolor{preprocessor}{                                   ((SOURCE) == SAI\_CLKSOURCE\_PLLI2S) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00235}00235 \textcolor{preprocessor}{                                   ((SOURCE) == SAI\_CLKSOURCE\_EXT))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00243}00243 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_192K          ((uint32\_t)192000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00244}00244 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_96K           ((uint32\_t)96000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00245}00245 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_48K           ((uint32\_t)48000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00246}00246 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_44K           ((uint32\_t)44100)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00247}00247 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_32K           ((uint32\_t)32000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00248}00248 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_22K           ((uint32\_t)22050)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00249}00249 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_16K           ((uint32\_t)16000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00250}00250 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_11K           ((uint32\_t)11025)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00251}00251 \textcolor{preprocessor}{\#define SAI\_AUDIO\_FREQUENCY\_8K            ((uint32\_t)8000)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00253}00253 \textcolor{preprocessor}{\#define IS\_SAI\_AUDIO\_FREQUENCY(AUDIO) (((AUDIO) == SAI\_AUDIO\_FREQUENCY\_192K) || ((AUDIO) == SAI\_AUDIO\_FREQUENCY\_96K) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00254}00254 \textcolor{preprocessor}{                                       ((AUDIO) == SAI\_AUDIO\_FREQUENCY\_48K)  || ((AUDIO) == SAI\_AUDIO\_FREQUENCY\_44K) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00255}00255 \textcolor{preprocessor}{                                       ((AUDIO) == SAI\_AUDIO\_FREQUENCY\_32K)  || ((AUDIO) == SAI\_AUDIO\_FREQUENCY\_22K) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00256}00256 \textcolor{preprocessor}{                                       ((AUDIO) == SAI\_AUDIO\_FREQUENCY\_16K)  || ((AUDIO) == SAI\_AUDIO\_FREQUENCY\_11K) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00257}00257 \textcolor{preprocessor}{                                       ((AUDIO) == SAI\_AUDIO\_FREQUENCY\_8K))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00265}00265 \textcolor{preprocessor}{\#define SAI\_MODEMASTER\_TX         ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00266}00266 \textcolor{preprocessor}{\#define SAI\_MODEMASTER\_RX         ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00267}00267 \textcolor{preprocessor}{\#define SAI\_MODESLAVE\_TX          ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00268}00268 \textcolor{preprocessor}{\#define SAI\_MODESLAVE\_RX          ((uint32\_t)0x00000003)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00269}00269 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_MODE(MODE)    (((MODE) == SAI\_MODEMASTER\_TX) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00270}00270 \textcolor{preprocessor}{                                    ((MODE) == SAI\_MODEMASTER\_RX) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00271}00271 \textcolor{preprocessor}{                                    ((MODE) == SAI\_MODESLAVE\_TX)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00272}00272 \textcolor{preprocessor}{                                    ((MODE) == SAI\_MODESLAVE\_RX))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00281}00281 \textcolor{preprocessor}{\#define SAI\_FREE\_PROTOCOL                 ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00282}00282 \textcolor{preprocessor}{\#define SAI\_AC97\_PROTOCOL                 ((uint32\_t)SAI\_xCR1\_PRTCFG\_1)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00283}00283 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00284}00284 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_PROTOCOL(PROTOCOL) (((PROTOCOL) == SAI\_FREE\_PROTOCOL)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00285}00285 \textcolor{preprocessor}{                                         ((PROTOCOL) == SAI\_AC97\_PROTOCOL))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00293}00293 \textcolor{preprocessor}{\#define SAI\_DATASIZE\_8                   ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00294}00294 \textcolor{preprocessor}{\#define SAI\_DATASIZE\_10                  ((uint32\_t)0x00000060)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00295}00295 \textcolor{preprocessor}{\#define SAI\_DATASIZE\_16                  ((uint32\_t)0x00000080)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00296}00296 \textcolor{preprocessor}{\#define SAI\_DATASIZE\_20                  ((uint32\_t)0x000000A0)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00297}00297 \textcolor{preprocessor}{\#define SAI\_DATASIZE\_24                  ((uint32\_t)0x000000C0)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00298}00298 \textcolor{preprocessor}{\#define SAI\_DATASIZE\_32                  ((uint32\_t)0x000000E0)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00300}00300 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_DATASIZE(DATASIZE) (((DATASIZE) == SAI\_DATASIZE\_8)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00301}00301 \textcolor{preprocessor}{                                         ((DATASIZE) == SAI\_DATASIZE\_10) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00302}00302 \textcolor{preprocessor}{                                         ((DATASIZE) == SAI\_DATASIZE\_16) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00303}00303 \textcolor{preprocessor}{                                         ((DATASIZE) == SAI\_DATASIZE\_20) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00304}00304 \textcolor{preprocessor}{                                         ((DATASIZE) == SAI\_DATASIZE\_24) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00305}00305 \textcolor{preprocessor}{                                         ((DATASIZE) == SAI\_DATASIZE\_32))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00314}00314 \textcolor{preprocessor}{\#define SAI\_FIRSTBIT\_MSB                  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00315}00315 \textcolor{preprocessor}{\#define SAI\_FIRSTBIT\_LSB                  ((uint32\_t)SAI\_xCR1\_LSBFIRST)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00316}00316 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00317}00317 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_FIRST\_BIT(BIT) (((BIT) == SAI\_FIRSTBIT\_MSB) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00318}00318 \textcolor{preprocessor}{                                     ((BIT) == SAI\_FIRSTBIT\_LSB))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00326}00326 \textcolor{preprocessor}{\#define SAI\_CLOCKSTROBING\_FALLINGEDGE     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00327}00327 \textcolor{preprocessor}{\#define SAI\_CLOCKSTROBING\_RISINGEDGE      ((uint32\_t)SAI\_xCR1\_CKSTR)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00328}00328 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00329}00329 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_CLOCK\_STROBING(CLOCK) (((CLOCK) == SAI\_CLOCKSTROBING\_FALLINGEDGE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00330}00330 \textcolor{preprocessor}{                                            ((CLOCK) == SAI\_CLOCKSTROBING\_RISINGEDGE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00338}00338 \textcolor{preprocessor}{\#define SAI\_ASYNCHRONOUS                  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00339}00339 \textcolor{preprocessor}{\#define SAI\_SYNCHRONOUS                   ((uint32\_t)SAI\_xCR1\_SYNCEN\_0)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00340}00340 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00341}00341 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_SYNCHRO(SYNCHRO) (((SYNCHRO) == SAI\_ASYNCHRONOUS) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00342}00342 \textcolor{preprocessor}{                                       ((SYNCHRO) == SAI\_SYNCHRONOUS))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00350}00350 \textcolor{preprocessor}{\#define SAI\_OUTPUTDRIVE\_DISABLED          ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00351}00351 \textcolor{preprocessor}{\#define SAI\_OUTPUTDRIVE\_ENABLED           ((uint32\_t)SAI\_xCR1\_OUTDRIV)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00352}00352 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00353}00353 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_OUTPUT\_DRIVE(DRIVE) (((DRIVE) == SAI\_OUTPUTDRIVE\_DISABLED) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00354}00354 \textcolor{preprocessor}{                                          ((DRIVE) == SAI\_OUTPUTDRIVE\_ENABLED))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00362}00362 \textcolor{preprocessor}{\#define SAI\_MASTERDIVIDER\_ENABLED         ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00363}00363 \textcolor{preprocessor}{\#define SAI\_MASTERDIVIDER\_DISABLED        ((uint32\_t)SAI\_xCR1\_NODIV)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00364}00364 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00365}00365 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_NODIVIDER(NODIVIDER) (((NODIVIDER) == SAI\_MASTERDIVIDER\_ENABLED) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00366}00366 \textcolor{preprocessor}{                                           ((NODIVIDER) == SAI\_MASTERDIVIDER\_DISABLED))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00374}00374 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_MASTER\_DIVIDER(DIVIDER) ((DIVIDER) <= 15)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00382}00382 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_FRAME\_LENGTH(LENGTH) ((8 <= (LENGTH)) \&\& ((LENGTH) <= 256))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00390}00390 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_ACTIVE\_FRAME(LENGTH) ((1 <= (LENGTH)) \&\& ((LENGTH) <= 128))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00398}00398 \textcolor{preprocessor}{\#define SAI\_FS\_STARTFRAME                 ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00399}00399 \textcolor{preprocessor}{\#define SAI\_FS\_CHANNEL\_IDENTIFICATION     ((uint32\_t)SAI\_xFRCR\_FSDEF)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00400}00400 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00401}00401 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_FS\_DEFINITION(DEFINITION) (((DEFINITION) == SAI\_FS\_STARTFRAME) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00402}00402 \textcolor{preprocessor}{                                                ((DEFINITION) == SAI\_FS\_CHANNEL\_IDENTIFICATION))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00410}00410 \textcolor{preprocessor}{\#define SAI\_FS\_ACTIVE\_LOW                  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00411}00411 \textcolor{preprocessor}{\#define SAI\_FS\_ACTIVE\_HIGH                 ((uint32\_t)SAI\_xFRCR\_FSPO)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00412}00412 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00413}00413 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_FS\_POLARITY(POLARITY) (((POLARITY) == SAI\_FS\_ACTIVE\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00414}00414 \textcolor{preprocessor}{                                            ((POLARITY) == SAI\_FS\_ACTIVE\_HIGH))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00422}00422 \textcolor{preprocessor}{\#define SAI\_FS\_FIRSTBIT                   ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00423}00423 \textcolor{preprocessor}{\#define SAI\_FS\_BEFOREFIRSTBIT             ((uint32\_t)SAI\_xFRCR\_FSOFF)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00424}00424 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00425}00425 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_FS\_OFFSET(OFFSET) (((OFFSET) == SAI\_FS\_FIRSTBIT) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00426}00426 \textcolor{preprocessor}{                                        ((OFFSET) == SAI\_FS\_BEFOREFIRSTBIT))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00434}00434 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_FIRSTBIT\_OFFSET(OFFSET) ((OFFSET) <= 24)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00442}00442 \textcolor{preprocessor}{\#define SAI\_SLOTSIZE\_DATASIZE             ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00443}00443 \textcolor{preprocessor}{\#define SAI\_SLOTSIZE\_16B                  ((uint32\_t)SAI\_xSLOTR\_SLOTSZ\_0)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00444}00444 \textcolor{preprocessor}{\#define SAI\_SLOTSIZE\_32B                  ((uint32\_t)SAI\_xSLOTR\_SLOTSZ\_1)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00445}00445 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00446}00446 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_SLOT\_SIZE(SIZE) (((SIZE) == SAI\_SLOTSIZE\_DATASIZE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00447}00447 \textcolor{preprocessor}{                                      ((SIZE) == SAI\_SLOTSIZE\_16B)      || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00448}00448 \textcolor{preprocessor}{                                      ((SIZE) == SAI\_SLOTSIZE\_32B))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00456}00456 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_SLOT\_NUMBER(NUMBER) ((1 <= (NUMBER)) \&\& ((NUMBER) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00464}00464 \textcolor{preprocessor}{\#define SAI\_SLOT\_NOTACTIVE           ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00465}00465 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_0             ((uint32\_t)0x00010000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00466}00466 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_1             ((uint32\_t)0x00020000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00467}00467 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_2             ((uint32\_t)0x00040000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00468}00468 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_3             ((uint32\_t)0x00080000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00469}00469 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_4             ((uint32\_t)0x00100000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00470}00470 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_5             ((uint32\_t)0x00200000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00471}00471 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_6             ((uint32\_t)0x00400000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00472}00472 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_7             ((uint32\_t)0x00800000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00473}00473 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_8             ((uint32\_t)0x01000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00474}00474 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_9             ((uint32\_t)0x02000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00475}00475 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_10            ((uint32\_t)0x04000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00476}00476 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_11            ((uint32\_t)0x08000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00477}00477 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_12            ((uint32\_t)0x10000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00478}00478 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_13            ((uint32\_t)0x20000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00479}00479 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_14            ((uint32\_t)0x40000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00480}00480 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_15            ((uint32\_t)0x80000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00481}00481 \textcolor{preprocessor}{\#define SAI\_SLOTACTIVE\_ALL           ((uint32\_t)0xFFFF0000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00482}00482 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00483}00483 \textcolor{preprocessor}{\#define IS\_SAI\_SLOT\_ACTIVE(ACTIVE) ((ACTIVE) != 0)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00484}00484 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00492}00492 \textcolor{preprocessor}{\#define SAI\_MONOMODE                      ((uint32\_t)SAI\_xCR1\_MONO)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00493}00493 \textcolor{preprocessor}{\#define SAI\_STREOMODE                     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00494}00494 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00495}00495 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_MONO\_STREO\_MODE(MODE) (((MODE) == SAI\_MONOMODE) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00496}00496 \textcolor{preprocessor}{                                            ((MODE) == SAI\_STREOMODE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00504}00504 \textcolor{preprocessor}{\#define SAI\_OUTPUT\_NOTRELEASED              ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00505}00505 \textcolor{preprocessor}{\#define SAI\_OUTPUT\_RELEASED                 ((uint32\_t)SAI\_xCR2\_TRIS)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00506}00506 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00507}00507 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_TRISTATE\_MANAGEMENT(STATE) (((STATE) == SAI\_OUTPUT\_NOTRELEASED) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00508}00508 \textcolor{preprocessor}{                                                 ((STATE) == SAI\_OUTPUT\_RELEASED))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00516}00516 \textcolor{preprocessor}{\#define SAI\_FIFOTHRESHOLD\_EMPTY  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00517}00517 \textcolor{preprocessor}{\#define SAI\_FIFOTHRESHOLD\_1QF    ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00518}00518 \textcolor{preprocessor}{\#define SAI\_FIFOTHRESHOLD\_HF     ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00519}00519 \textcolor{preprocessor}{\#define SAI\_FIFOTHRESHOLD\_3QF    ((uint32\_t)0x00000003)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00520}00520 \textcolor{preprocessor}{\#define SAI\_FIFOTHRESHOLD\_FULL   ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00521}00521 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00522}00522 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_FIFO\_THRESHOLD(THRESHOLD) (((THRESHOLD) == SAI\_FIFOTHRESHOLD\_EMPTY)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00523}00523 \textcolor{preprocessor}{                                                ((THRESHOLD) == SAI\_FIFOTHRESHOLD\_1QF)     || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00524}00524 \textcolor{preprocessor}{                                                ((THRESHOLD) == SAI\_FIFOTHRESHOLD\_HF)      || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00525}00525 \textcolor{preprocessor}{                                                ((THRESHOLD) == SAI\_FIFOTHRESHOLD\_3QF)     || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00526}00526 \textcolor{preprocessor}{                                                ((THRESHOLD) == SAI\_FIFOTHRESHOLD\_FULL))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00534}00534 \textcolor{preprocessor}{\#define SAI\_NOCOMPANDING                  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00535}00535 \textcolor{preprocessor}{\#define SAI\_ULAW\_1CPL\_COMPANDING          ((uint32\_t)0x00008000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00536}00536 \textcolor{preprocessor}{\#define SAI\_ALAW\_1CPL\_COMPANDING          ((uint32\_t)0x0000C000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00537}00537 \textcolor{preprocessor}{\#define SAI\_ULAW\_2CPL\_COMPANDING          ((uint32\_t)0x0000A000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00538}00538 \textcolor{preprocessor}{\#define SAI\_ALAW\_2CPL\_COMPANDING          ((uint32\_t)0x0000E000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00539}00539 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00540}00540 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_COMPANDING\_MODE(MODE)    (((MODE) == SAI\_NOCOMPANDING)         || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00541}00541 \textcolor{preprocessor}{                                               ((MODE) == SAI\_ULAW\_1CPL\_COMPANDING) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00542}00542 \textcolor{preprocessor}{                                               ((MODE) == SAI\_ALAW\_1CPL\_COMPANDING) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00543}00543 \textcolor{preprocessor}{                                               ((MODE) == SAI\_ULAW\_2CPL\_COMPANDING) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00544}00544 \textcolor{preprocessor}{                                               ((MODE) == SAI\_ALAW\_2CPL\_COMPANDING))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00552}00552 \textcolor{preprocessor}{\#define SAI\_ZERO\_VALUE                     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00553}00553 \textcolor{preprocessor}{\#define SAI\_LAST\_SENT\_VALUE                 ((uint32\_t)SAI\_xCR2\_MUTEVAL)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00554}00554 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00555}00555 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_MUTE\_VALUE(VALUE)    (((VALUE) == SAI\_ZERO\_VALUE)     || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00556}00556 \textcolor{preprocessor}{                                           ((VALUE) == SAI\_LAST\_SENT\_VALUE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00564}00564 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_MUTE\_COUNTER(COUNTER) ((COUNTER) <= 63)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00572}00572 \textcolor{preprocessor}{\#define SAI\_IT\_OVRUDR                     ((uint32\_t)SAI\_xIMR\_OVRUDRIE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00573}00573 \textcolor{preprocessor}{\#define SAI\_IT\_MUTEDET                    ((uint32\_t)SAI\_xIMR\_MUTEDETIE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00574}00574 \textcolor{preprocessor}{\#define SAI\_IT\_WCKCFG                     ((uint32\_t)SAI\_xIMR\_WCKCFGIE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00575}00575 \textcolor{preprocessor}{\#define SAI\_IT\_FREQ                       ((uint32\_t)SAI\_xIMR\_FREQIE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00576}00576 \textcolor{preprocessor}{\#define SAI\_IT\_CNRDY                      ((uint32\_t)SAI\_xIMR\_CNRDYIE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00577}00577 \textcolor{preprocessor}{\#define SAI\_IT\_AFSDET                     ((uint32\_t)SAI\_xIMR\_AFSDETIE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00578}00578 \textcolor{preprocessor}{\#define SAI\_IT\_LFSDET                     ((uint32\_t)SAI\_xIMR\_LFSDETIE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00579}00579 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00580}00580 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_CONFIG\_IT(IT) (((IT) == SAI\_IT\_OVRUDR)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00581}00581 \textcolor{preprocessor}{                                    ((IT) == SAI\_IT\_MUTEDET) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00582}00582 \textcolor{preprocessor}{                                    ((IT) == SAI\_IT\_WCKCFG)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00583}00583 \textcolor{preprocessor}{                                    ((IT) == SAI\_IT\_FREQ)    || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00584}00584 \textcolor{preprocessor}{                                    ((IT) == SAI\_IT\_CNRDY)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00585}00585 \textcolor{preprocessor}{                                    ((IT) == SAI\_IT\_AFSDET)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00586}00586 \textcolor{preprocessor}{                                    ((IT) == SAI\_IT\_LFSDET))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00594}00594 \textcolor{preprocessor}{\#define SAI\_FLAG\_OVRUDR                   ((uint32\_t)SAI\_xSR\_OVRUDR)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00595}00595 \textcolor{preprocessor}{\#define SAI\_FLAG\_MUTEDET                  ((uint32\_t)SAI\_xSR\_MUTEDET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00596}00596 \textcolor{preprocessor}{\#define SAI\_FLAG\_WCKCFG                   ((uint32\_t)SAI\_xSR\_WCKCFG)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00597}00597 \textcolor{preprocessor}{\#define SAI\_FLAG\_FREQ                     ((uint32\_t)SAI\_xSR\_FREQ)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00598}00598 \textcolor{preprocessor}{\#define SAI\_FLAG\_CNRDY                    ((uint32\_t)SAI\_xSR\_CNRDY)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00599}00599 \textcolor{preprocessor}{\#define SAI\_FLAG\_AFSDET                   ((uint32\_t)SAI\_xSR\_AFSDET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00600}00600 \textcolor{preprocessor}{\#define SAI\_FLAG\_LFSDET                   ((uint32\_t)SAI\_xSR\_LFSDET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00601}00601 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00602}00602 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_GET\_FLAG(FLAG) (((FLAG) == SAI\_FLAG\_OVRUDR)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00603}00603 \textcolor{preprocessor}{                                    ((FLAG) == SAI\_FLAG\_MUTEDET)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00604}00604 \textcolor{preprocessor}{                                    ((FLAG) == SAI\_FLAG\_WCKCFG)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00605}00605 \textcolor{preprocessor}{                                    ((FLAG) == SAI\_FLAG\_FREQ)     || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00606}00606 \textcolor{preprocessor}{                                    ((FLAG) == SAI\_FLAG\_CNRDY)    || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00607}00607 \textcolor{preprocessor}{                                    ((FLAG) == SAI\_FLAG\_AFSDET)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00608}00608 \textcolor{preprocessor}{                                    ((FLAG) == SAI\_FLAG\_LFSDET))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00609}00609                                    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00610}00610 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_CLEAR\_FLAG(FLAG) (((FLAG) == SAI\_FLAG\_OVRUDR)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00611}00611 \textcolor{preprocessor}{                                       ((FLAG) == SAI\_FLAG\_MUTEDET) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00612}00612 \textcolor{preprocessor}{                                       ((FLAG) == SAI\_FLAG\_WCKCFG)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00613}00613 \textcolor{preprocessor}{                                       ((FLAG) == SAI\_FLAG\_FREQ)    || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00614}00614 \textcolor{preprocessor}{                                       ((FLAG) == SAI\_FLAG\_CNRDY)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00615}00615 \textcolor{preprocessor}{                                       ((FLAG) == SAI\_FLAG\_AFSDET)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00616}00616 \textcolor{preprocessor}{                                       ((FLAG) == SAI\_FLAG\_LFSDET))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00624}00624 \textcolor{preprocessor}{\#define SAI\_FIFOStatus\_Empty              ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00625}00625 \textcolor{preprocessor}{\#define SAI\_FIFOStatus\_Less1QuarterFull   ((uint32\_t)0x00010000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00626}00626 \textcolor{preprocessor}{\#define SAI\_FIFOStatus\_1QuarterFull       ((uint32\_t)0x00020000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00627}00627 \textcolor{preprocessor}{\#define SAI\_FIFOStatus\_HalfFull           ((uint32\_t)0x00030000) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00628}00628 \textcolor{preprocessor}{\#define SAI\_FIFOStatus\_3QuartersFull      ((uint32\_t)0x00040000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00629}00629 \textcolor{preprocessor}{\#define SAI\_FIFOStatus\_Full               ((uint32\_t)0x00050000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00630}00630 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00631}00631 \textcolor{preprocessor}{\#define IS\_SAI\_BLOCK\_FIFO\_STATUS(STATUS) (((STATUS) == SAI\_FIFOStatus\_Less1QuarterFull ) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00632}00632 \textcolor{preprocessor}{                                          ((STATUS) == SAI\_FIFOStatus\_HalfFull)          || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00633}00633 \textcolor{preprocessor}{                                          ((STATUS) == SAI\_FIFOStatus\_1QuarterFull)      || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00634}00634 \textcolor{preprocessor}{                                          ((STATUS) == SAI\_FIFOStatus\_3QuartersFull)     || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00635}00635 \textcolor{preprocessor}{                                          ((STATUS) == SAI\_FIFOStatus\_Full)              || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00636}00636 \textcolor{preprocessor}{                                          ((STATUS) == SAI\_FIFOStatus\_Empty)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00646}00646 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00651}00651 \textcolor{preprocessor}{\#define \_\_HAL\_SAI\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_SAI\_STATE\_RESET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00652}00652 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00667}00667 \textcolor{preprocessor}{\#define \_\_HAL\_SAI\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)   ((\_\_HANDLE\_\_)-\/>Instance-\/>IMR |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00668}00668 \textcolor{preprocessor}{\#define \_\_HAL\_SAI\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)  ((\_\_HANDLE\_\_)-\/>Instance-\/>IMR \&= (\string~(\_\_INTERRUPT\_\_)))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00669}00669  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00680}00680 \textcolor{preprocessor}{\#define \_\_HAL\_SAI\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((((\_\_HANDLE\_\_)-\/>Instance-\/>IMR \& (\_\_INTERRUPT\_\_)) == (\_\_INTERRUPT\_\_)) ? SET : RESET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00681}00681 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00695}00695 \textcolor{preprocessor}{\#define \_\_HAL\_SAI\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((((\_\_HANDLE\_\_)-\/>Instance-\/>SR) \& (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00696}00696 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00711}00711 \textcolor{preprocessor}{\#define \_\_HAL\_SAI\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CLRFR |= (\_\_FLAG\_\_))                                        }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00712}00712 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00713}00713 \textcolor{preprocessor}{\#define \_\_HAL\_SAI\_ENABLE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |=  SAI\_xCR1\_SAIEN)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00714}00714 \textcolor{preprocessor}{\#define \_\_HAL\_SAI\_DISABLE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&=  \string~SAI\_xCR1\_SAIEN)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00715}00715                                                                                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00716}00716 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00717}00717 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00718}00718 \textcolor{comment}{/* Initialization/de-\/initialization functions  **********************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00719}00719 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_Init(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00720}00720 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_DeInit (SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00721}00721 \textcolor{keywordtype}{void} HAL\_SAI\_MspInit(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00722}00722 \textcolor{keywordtype}{void} HAL\_SAI\_MspDeInit(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00723}00723 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00724}00724 \textcolor{comment}{/* I/O operation functions  *****************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00725}00725 \textcolor{comment}{/* Blocking mode: Polling */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00726}00726 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_Transmit(SAI\_HandleTypeDef *hsai, uint16\_t *pData, uint16\_t Size, uint32\_t Timeout);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00727}00727 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_Receive(SAI\_HandleTypeDef *hsai, uint16\_t *pData, uint16\_t Size, uint32\_t Timeout);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00728}00728 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00729}00729 \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00730}00730 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_Transmit\_IT(SAI\_HandleTypeDef *hsai, uint16\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00731}00731 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_Receive\_IT(SAI\_HandleTypeDef *hsai, uint16\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00732}00732 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00733}00733 \textcolor{comment}{/* Non-\/Blocking mode: DMA */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00734}00734 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_Transmit\_DMA(SAI\_HandleTypeDef *hsai, uint16\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00735}00735 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_Receive\_DMA(SAI\_HandleTypeDef *hsai, uint16\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00736}00736 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_DMAPause(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00737}00737 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_DMAResume(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00738}00738 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SAI\_DMAStop(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00739}00739 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00740}00740 \textcolor{comment}{/* SAI IRQHandler and Callbacks used in non blocking modes (Interrupt and DMA) */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00741}00741 \textcolor{keywordtype}{void} HAL\_SAI\_IRQHandler(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00742}00742 \textcolor{keywordtype}{void} HAL\_SAI\_TxHalfCpltCallback(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00743}00743 \textcolor{keywordtype}{void} HAL\_SAI\_TxCpltCallback(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00744}00744 \textcolor{keywordtype}{void} HAL\_SAI\_RxHalfCpltCallback(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00745}00745 \textcolor{keywordtype}{void} HAL\_SAI\_RxCpltCallback(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00746}00746 \textcolor{keywordtype}{void} HAL\_SAI\_ErrorCallback(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00747}00747 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00748}00748 \textcolor{comment}{/* Peripheral State functions  **************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00749}00749 HAL\_SAI\_StateTypeDef HAL\_SAI\_GetState(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00750}00750 uint32\_t HAL\_SAI\_GetError(SAI\_HandleTypeDef *hsai);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00751}00751 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00752}00752 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00761}00761 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00762}00762 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00763}00763 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00764}00764 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00765}00765 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_SAI\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00766}00766 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sai_8h_source_l00767}00767 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

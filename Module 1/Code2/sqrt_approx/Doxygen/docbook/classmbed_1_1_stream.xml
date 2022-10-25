@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_stream" xml:lang="en-US">
+<title>Stream Class Reference</title>
+<indexterm><primary>Stream</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Stream.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Stream:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmbed_1_1_stream.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmbed_1_1_stream_1a9f77f4d38b49fed7a43a57c643291433">Stream</link> (const char *name=NULL)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classmbed_1_1_stream_1a15237b41305f4268e1576c81766cd6d9">~Stream</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_stream_1ab2682874a0ea4865b2bfe6ac2599a301">putc</link> (int c)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_stream_1ad41876f99f190c7488e64ef39c50a23f">puts</link> (const char *s)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_stream_1a12fe8585ae3714e7d4a71cae12fbb110">getc</link> ()</para>
+</listitem>
+            <listitem><para>char * <link linkend="_classmbed_1_1_stream_1a17dde7bc71ab2af9d437c3f7c4263667">gets</link> (char *s, int size)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_stream_1a98631211a4a8aee62f572375d5b637be">printf</link> (const char *format,...)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_stream_1a5c48433db9c04031772d5b36e6c4411d">scanf</link> (const char *format,...)</para>
+</listitem>
+            <listitem><para><link linkend="_classmbed_1_1_stream_1a03416d8cfe698d41c0a82c8bbf7e5b43">operator std::FILE *</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_stream_1a2bc5dcba0e89b4a820b62a4cb183d702">close</link> ()</para>
+</listitem>
+            <listitem><para>virtual ssize_t <link linkend="_classmbed_1_1_stream_1a2b295c28246c7c03393a40050313d4c2">write</link> (const void *buffer, size_t length)</para>
+</listitem>
+            <listitem><para>virtual ssize_t <link linkend="_classmbed_1_1_stream_1a48b616ed2c59a14b39c6d0afe91cf195">read</link> (void *buffer, size_t length)</para>
+</listitem>
+            <listitem><para>virtual off_t <link linkend="_classmbed_1_1_stream_1aebc39cb3a78f1f8ec2aaa46ca6d8ae4c">lseek</link> (off_t offset, int whence)</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_stream_1a67cbbfec09edb77cf2d60ab3e2b79a66">isatty</link> ()</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_stream_1afbe9d4b6859e1410f88f6546f1f6d41e">fsync</link> ()</para>
+</listitem>
+            <listitem><para>virtual off_t <link linkend="_classmbed_1_1_stream_1a3c8b116df2f335a817f94dab6dc55221">flen</link> ()</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_stream_1a5685cd6d13b8c19bcee0594db991c72a">_putc</link> (int c)=0</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_stream_1a701ba406b4c8427c0c3d86e647e12aeb">_getc</link> ()=0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::FILE * <link linkend="_classmbed_1_1_stream_1a8f546dfaaf4b0a4a13704892e831ba94">_file</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__stream_8h_source_1l00024">24</link> of file <link linkend="__stream_8h_source">Stream.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmbed_1_1_stream_1a9f77f4d38b49fed7a43a57c643291433"/><section>
+    <title>Stream()</title>
+<indexterm><primary>Stream</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>Stream</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_stream">Stream</link> (const char * name = <computeroutput>NULL</computeroutput>
+)</computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1a15237b41305f4268e1576c81766cd6d9"/><section>
+    <title>~Stream()</title>
+<indexterm><primary>~Stream</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>~Stream</secondary></indexterm>
+<para><computeroutput>virtual ~<link linkend="_classmbed_1_1_stream">Stream</link> ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_stream_1a701ba406b4c8427c0c3d86e647e12aeb"/><section>
+    <title>_getc()</title>
+<indexterm><primary>_getc</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>_getc</secondary></indexterm>
+<para><computeroutput>virtual int _getc ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1a5685cd6d13b8c19bcee0594db991c72a"/><section>
+    <title>_putc()</title>
+<indexterm><primary>_putc</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>_putc</secondary></indexterm>
+<para><computeroutput>virtual int _putc (int c)<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1a2bc5dcba0e89b4a820b62a4cb183d702"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>close</secondary></indexterm>
+<para><computeroutput>virtual int close ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Close the file</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero on success, -1 on error. </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_classmbed_1_1_file_handle_1ac81e2718528549c8b1eed01c4d303546">FileHandle</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_stream_1a3c8b116df2f335a817f94dab6dc55221"/><section>
+    <title>flen()</title>
+<indexterm><primary>flen</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>flen</secondary></indexterm>
+<para><computeroutput>virtual off_t flen ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_classmbed_1_1_file_handle_1a3c8b116df2f335a817f94dab6dc55221">FileHandle</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_stream_1afbe9d4b6859e1410f88f6546f1f6d41e"/><section>
+    <title>fsync()</title>
+<indexterm><primary>fsync</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>fsync</secondary></indexterm>
+<para><computeroutput>virtual int fsync ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Flush any buffers associated with the <link linkend="_classmbed_1_1_file_handle">FileHandle</link>, ensuring it is up to date on disk</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>0 on success or un-needed, -1 on error </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_classmbed_1_1_file_handle_1aba403acd4d983123d864c1d74f833422">FileHandle</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_stream_1a12fe8585ae3714e7d4a71cae12fbb110"/><section>
+    <title>getc()</title>
+<indexterm><primary>getc</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>getc</secondary></indexterm>
+<para><computeroutput>int getc ( )</computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1a17dde7bc71ab2af9d437c3f7c4263667"/><section>
+    <title>gets()</title>
+<indexterm><primary>gets</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>gets</secondary></indexterm>
+<para><computeroutput>char * gets (char * s, int size)</computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1a67cbbfec09edb77cf2d60ab3e2b79a66"/><section>
+    <title>isatty()</title>
+<indexterm><primary>isatty</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>isatty</secondary></indexterm>
+<para><computeroutput>virtual int isatty ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Check if the handle is for a interactive terminal device. If so, line buffered behaviour is used by default</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>1 if it is a terminal, 0 otherwise </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_classmbed_1_1_file_handle_1af8b1bceee5dae7fff7626bd575c309ad">FileHandle</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_stream_1aebc39cb3a78f1f8ec2aaa46ca6d8ae4c"/><section>
+    <title>lseek()</title>
+<indexterm><primary>lseek</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>lseek</secondary></indexterm>
+<para><computeroutput>virtual off_t lseek (off_t offset, int whence)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Move the file position to a given offset from a given location.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>offset</entry><entry>
+<para>The offset from whence to move to </para>
+</entry>
+                            </row>
+                            <row>
+<entry>whence</entry><entry>
+<para>SEEK_SET for the start of the file, SEEK_CUR for the current file position, or SEEK_END for the end of the file.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>new file position on success, -1 on failure or unsupported </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_classmbed_1_1_file_handle_1ac5c73beb78fc91ecbdbe4cf4a6b4faec">FileHandle</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_stream_1a03416d8cfe698d41c0a82c8bbf7e5b43"/><section>
+    <title>operator std::FILE *()</title>
+<indexterm><primary>operator std::FILE *</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>operator std::FILE *</secondary></indexterm>
+<para><computeroutput>operator std::FILE * ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__stream_8h_source_1l00037">37</link> of file <link linkend="__stream_8h_source">Stream.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_stream_1a98631211a4a8aee62f572375d5b637be"/><section>
+    <title>printf()</title>
+<indexterm><primary>printf</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>printf</secondary></indexterm>
+<para><computeroutput>int printf (const char * format,  ...)</computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1ab2682874a0ea4865b2bfe6ac2599a301"/><section>
+    <title>putc()</title>
+<indexterm><primary>putc</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>putc</secondary></indexterm>
+<para><computeroutput>int putc (int c)</computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1ad41876f99f190c7488e64ef39c50a23f"/><section>
+    <title>puts()</title>
+<indexterm><primary>puts</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>puts</secondary></indexterm>
+<para><computeroutput>int puts (const char * s)</computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1a48b616ed2c59a14b39c6d0afe91cf195"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>virtual ssize_t read (void * buffer, size_t length)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Function read Reads the contents of the file into a buffer</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>the buffer to read in to </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>the number of characters to read</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of characters read (zero at end of file) on success, -1 on error. </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_classmbed_1_1_file_handle_1a46a09dc9739d9e3838c3d5786377b14a">FileHandle</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_stream_1a5c48433db9c04031772d5b36e6c4411d"/><section>
+    <title>scanf()</title>
+<indexterm><primary>scanf</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>scanf</secondary></indexterm>
+<para><computeroutput>int scanf (const char * format,  ...)</computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_stream_1a2b295c28246c7c03393a40050313d4c2"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>virtual ssize_t write (const void * buffer, size_t length)<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Write the contents of a buffer to the file</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>the buffer to write from </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>the number of characters to write</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of characters written (possibly 0) on success, -1 on error. </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_classmbed_1_1_file_handle_1afb4f34ce3f921a252f8244f34bc41adf">FileHandle</link>.</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classmbed_1_1_stream_1a8f546dfaaf4b0a4a13704892e831ba94"/><section>
+    <title>_file</title>
+<indexterm><primary>_file</primary><secondary>Stream</secondary></indexterm>
+<indexterm><primary>Stream</primary><secondary>_file</secondary></indexterm>
+<para><computeroutput>std::FILE* _file<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__stream_8h_source_1l00051">51</link> of file <link linkend="__stream_8h_source">Stream.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__stream_8h">Stream.h</link></section>
+</section>

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gpio__object_8h_source" xml:lang="en-US">
+<title>gpio_object.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE/gpio_object.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_gpio__object_8h_source_1l00001"/>00001 <emphasis role="comment">/*&#32;mbed&#32;Microcontroller&#32;Library</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*******************************************************************************</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*&#32;Copyright&#32;(c)&#32;2014,&#32;STMicroelectronics</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00006"/>00006 <emphasis role="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00007"/>00007 <emphasis role="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions&#32;are&#32;met:</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00008"/>00008 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00009"/>00009 <emphasis role="comment">&#32;*&#32;1.&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright&#32;notice,</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00010"/>00010 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00011"/>00011 <emphasis role="comment">&#32;*&#32;2.&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above&#32;copyright&#32;notice,</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer&#32;in&#32;the&#32;documentation</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;and/or&#32;other&#32;materials&#32;provided&#32;with&#32;the&#32;distribution.</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;*&#32;3.&#32;Neither&#32;the&#32;name&#32;of&#32;STMicroelectronics&#32;nor&#32;the&#32;names&#32;of&#32;its&#32;contributors</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived&#32;from&#32;this&#32;software</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00016"/>00016 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00017"/>00017 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00018"/>00018 <emphasis role="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS&#32;&quot;AS&#32;IS&quot;</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00019"/>00019 <emphasis role="comment">&#32;*&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;THE</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00020"/>00020 <emphasis role="comment">&#32;*&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00021"/>00021 <emphasis role="comment">&#32;*&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE&#32;COPYRIGHT&#32;HOLDER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00022"/>00022 <emphasis role="comment">&#32;*&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00023"/>00023 <emphasis role="comment">&#32;*&#32;DAMAGES&#32;(INCLUDING,&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00024"/>00024 <emphasis role="comment">&#32;*&#32;SERVICES;&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00025"/>00025 <emphasis role="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT&#32;LIABILITY,</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00026"/>00026 <emphasis role="comment">&#32;*&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00027"/>00027 <emphasis role="comment">&#32;*&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00028"/>00028 <emphasis role="comment">&#32;*******************************************************************************</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00029"/>00029 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00030"/>00030 <emphasis role="preprocessor">#ifndef&#32;MBED_GPIO_OBJECT_H</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00031"/>00031 <emphasis role="preprocessor">#define&#32;MBED_GPIO_OBJECT_H</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00032"/>00032 
+<anchor xml:id="_gpio__object_8h_source_1l00033"/>00033 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed__assert_8h">mbed_assert.h</link>&quot;</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00034"/>00034 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cmsis_8h">cmsis.h</link>&quot;</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00035"/>00035 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__port_names_8h">PortNames.h</link>&quot;</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00036"/>00036 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__peripheral_names_8h">PeripheralNames.h</link>&quot;</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00037"/>00037 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__pin_names_8h">PinNames.h</link>&quot;</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00038"/>00038 
+<anchor xml:id="_gpio__object_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00040"/>00040 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_gpio__object_8h_source_1l00041"/>00041 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00042"/>00042 
+<anchor xml:id="_gpio__object_8h_source_1l00043"/><link linkend="_structgpio__t">00043</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+<anchor xml:id="_gpio__object_8h_source_1l00044"/><link linkend="_structgpio__t_1a1f46a3d0fd63bcb5591dc1db407300aa">00044</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;&#32;<link linkend="_structgpio__t_1a1f46a3d0fd63bcb5591dc1db407300aa">pin</link>;
+<anchor xml:id="_gpio__object_8h_source_1l00045"/><link linkend="_structgpio__t_1ad3bee21df6875eeccd25d3c577e0600a">00045</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structgpio__t_1ad3bee21df6875eeccd25d3c577e0600a">mask</link>;
+<anchor xml:id="_gpio__object_8h_source_1l00046"/><link linkend="_structgpio__t_1afec2bad3c83f4575253f573be7e7434a">00046</link> &#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;*<link linkend="_structgpio__t_1afec2bad3c83f4575253f573be7e7434a">reg_in</link>;
+<anchor xml:id="_gpio__object_8h_source_1l00047"/><link linkend="_structgpio__t_1a5be324dec7ca5caa993b6afb473065c5">00047</link> &#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint16_t&#32;*<link linkend="_structgpio__t_1a5be324dec7ca5caa993b6afb473065c5">reg_set</link>;
+<anchor xml:id="_gpio__object_8h_source_1l00048"/><link linkend="_structgpio__t_1afb3bd7533a6f54d7fac47e44741a00e6">00048</link> &#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint16_t&#32;*<link linkend="_structgpio__t_1afb3bd7533a6f54d7fac47e44741a00e6">reg_clr</link>;
+<anchor xml:id="_gpio__object_8h_source_1l00049"/>00049 }&#32;<link linkend="_structgpio__t">gpio_t</link>;
+<anchor xml:id="_gpio__object_8h_source_1l00050"/>00050 
+<anchor xml:id="_gpio__object_8h_source_1l00051"/>00051 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_gpio__api_8h_1aedd478762e37aeafcf9ade8e255718b0">gpio_write</link>(<link linkend="_structgpio__t">gpio_t</link>&#32;*obj,&#32;<emphasis role="keywordtype">int</emphasis>&#32;value)&#32;{
+<anchor xml:id="_gpio__object_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<link linkend="_mbed__assert_8h_1a2fb68573313abfce1681c990c68fb089">MBED_ASSERT</link>(obj-&gt;<link linkend="_structgpio__t_1a1f46a3d0fd63bcb5591dc1db407300aa">pin</link>&#32;!=&#32;(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>)<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>);
+<anchor xml:id="_gpio__object_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(value)&#32;{
+<anchor xml:id="_gpio__object_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*obj-&gt;<link linkend="_structgpio__t_1a5be324dec7ca5caa993b6afb473065c5">reg_set</link>&#32;=&#32;obj-&gt;<link linkend="_structgpio__t_1ad3bee21df6875eeccd25d3c577e0600a">mask</link>;
+<anchor xml:id="_gpio__object_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_gpio__object_8h_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*obj-&gt;<link linkend="_structgpio__t_1afb3bd7533a6f54d7fac47e44741a00e6">reg_clr</link>&#32;=&#32;obj-&gt;<link linkend="_structgpio__t_1ad3bee21df6875eeccd25d3c577e0600a">mask</link>;
+<anchor xml:id="_gpio__object_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gpio__object_8h_source_1l00058"/>00058 }
+<anchor xml:id="_gpio__object_8h_source_1l00059"/>00059 
+<anchor xml:id="_gpio__object_8h_source_1l00060"/>00060 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_gpio__api_8h_1abb97298a1eb6f6c11b6290abe7a1823b">gpio_read</link>(<link linkend="_structgpio__t">gpio_t</link>&#32;*obj)&#32;{
+<anchor xml:id="_gpio__object_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<link linkend="_mbed__assert_8h_1a2fb68573313abfce1681c990c68fb089">MBED_ASSERT</link>(obj-&gt;<link linkend="_structgpio__t_1a1f46a3d0fd63bcb5591dc1db407300aa">pin</link>&#32;!=&#32;(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>)<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>);
+<anchor xml:id="_gpio__object_8h_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;((*obj-&gt;<link linkend="_structgpio__t_1afec2bad3c83f4575253f573be7e7434a">reg_in</link>&#32;&amp;&#32;obj-&gt;<link linkend="_structgpio__t_1ad3bee21df6875eeccd25d3c577e0600a">mask</link>)&#32;?&#32;1&#32;:&#32;0);
+<anchor xml:id="_gpio__object_8h_source_1l00063"/>00063 }
+<anchor xml:id="_gpio__object_8h_source_1l00064"/>00064 
+<anchor xml:id="_gpio__object_8h_source_1l00065"/>00065 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00066"/>00066 }
+<anchor xml:id="_gpio__object_8h_source_1l00067"/>00067 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_gpio__object_8h_source_1l00068"/>00068 
+<anchor xml:id="_gpio__object_8h_source_1l00069"/>00069 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

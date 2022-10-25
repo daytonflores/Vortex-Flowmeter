@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__adc__ex_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_adc_ex.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_adc_ex.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_a_d_c___injection_conf_type_def">ADC_InjectionConfTypeDef</link></para>
+
+<para>ADC Configuration injected Channel structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_a_d_c___multi_mode_type_def">ADC_MultiModeTypeDef</link></para>
+
+<para>ADC Configuration multi-mode structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1gaac07297889e931df4083427a99211638">ADC_MODE_INDEPENDENT</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1gac3ad57b1150ca7862fcc932cf19b2fb0">ADC_DUALMODE_REGSIMULT_INJECSIMULT</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga2667b75f8acb086aa6ab723466bb3f40">ADC_DUALMODE_REGSIMULT_ALTERTRIG</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga8e81364b24ed3c089bb6993b48a020e9">ADC_DUALMODE_INJECSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga5318d363b48a4244335cdafaed0d179c">ADC_DUALMODE_REGSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga29697d148e4ed75c3d2adaef0f3e1385">ADC_DUALMODE_INTERL</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga45e63dd5e2f36e62fa1b2cb9eff891ed">ADC_DUALMODE_ALTERTRIG</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae55be7b911b4c0272543f98a0dba5f20">ADC_CCR_MULTI_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1gaf035650c27a3a4655c2ee42e96a277dd">ADC_TRIPLEMODE_REGSIMULT_INJECSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga0aea7119339e4474cfdb7f3084c6dce5">ADC_TRIPLEMODE_REGSIMULT_AlterTrig</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga9d5e9c416713570aeecff01f6c006b35">ADC_TRIPLEMODE_INJECSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1gaa111c2e1827ffebceb3f22deefd951db">ADC_TRIPLEMODE_REGSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga7c1e457e958e4002726bb9187a5ffe22">ADC_TRIPLEMODE_INTERL</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga5ad65e0e5b27f2f72d4856b3651f0b8b">ADC_TRIPLEMODE_ALTERTRIG</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae55be7b911b4c0272543f98a0dba5f20">ADC_CCR_MULTI_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga4abf4c7de28a42d7b124c9e403a6e537">IS_ADC_MODE</link>(MODE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___direct__memory__access__mode__for__multi__mode_1ga59163da6d23f587f951ce21d74542795">ADC_DMAACCESSMODE_DISABLED</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___direct__memory__access__mode__for__multi__mode_1gadb55bb780e7c0a58878287f205f88e33">ADC_DMAACCESSMODE_1</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga3a42ee6ec5115244aef8f60d35abcc47">ADC_CCR_DMA_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___direct__memory__access__mode__for__multi__mode_1ga33b7e654725c8de70c9ca5a1e1b3d139">ADC_DMAACCESSMODE_2</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gacdc9d29cafdd54e5c0dd752c358e1bc8">ADC_CCR_DMA_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___direct__memory__access__mode__for__multi__mode_1ga2613348408ee2a5685f1d06f6f7780dc">ADC_DMAACCESSMODE_3</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga9e346b21afcaeced784e6c80b3aa1fb4">ADC_CCR_DMA</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___direct__memory__access__mode__for__multi__mode_1gacc017b6a9b3ae942307fa95242cc4aa1">IS_ADC_DMA_ACCESS_MODE</link>(MODE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1gaf809f893a5fb22f6003d7248e484a991">ADC_TWOSAMPLINGDELAY_5CYCLES</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga3d731370a25ed30d8c1dae716d14b8bf">ADC_TWOSAMPLINGDELAY_6CYCLES</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga22b71e9df8b1fca93802ad602341eb0b">ADC_CCR_DELAY_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga630f7e758937ff7d1705ef4894227f08">ADC_TWOSAMPLINGDELAY_7CYCLES</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga6d0d5785cb6c75e700517e88af188573">ADC_CCR_DELAY_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga4a36c5233614aa76e4d911677c26067b">ADC_TWOSAMPLINGDELAY_8CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga6d0d5785cb6c75e700517e88af188573">ADC_CCR_DELAY_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga22b71e9df8b1fca93802ad602341eb0b">ADC_CCR_DELAY_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga504d458d630d8517836cc71e759af58f">ADC_TWOSAMPLINGDELAY_9CYCLES</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga17f85cbda5dcf9a392a29befb73c6ceb">ADC_CCR_DELAY_2</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1gad92dea71b0ad43af8ac0cee79ca9c6ec">ADC_TWOSAMPLINGDELAY_10CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga17f85cbda5dcf9a392a29befb73c6ceb">ADC_CCR_DELAY_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga22b71e9df8b1fca93802ad602341eb0b">ADC_CCR_DELAY_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1gaac0a9a4fb75f8f22f4c9f6c637f78d37">ADC_TWOSAMPLINGDELAY_11CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga17f85cbda5dcf9a392a29befb73c6ceb">ADC_CCR_DELAY_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga6d0d5785cb6c75e700517e88af188573">ADC_CCR_DELAY_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga2d6ed6a9d98c79f4160fe7005fbb9eba">ADC_TWOSAMPLINGDELAY_12CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga17f85cbda5dcf9a392a29befb73c6ceb">ADC_CCR_DELAY_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga6d0d5785cb6c75e700517e88af188573">ADC_CCR_DELAY_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga22b71e9df8b1fca93802ad602341eb0b">ADC_CCR_DELAY_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1gae9dc984b6264e89f3291e9422d7030a6">ADC_TWOSAMPLINGDELAY_13CYCLES</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gae0216de7d6fcfa507c9aa1400972d862">ADC_CCR_DELAY_3</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1gaf1c28381b7c3640ade9b16a4418996c4">ADC_TWOSAMPLINGDELAY_14CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae0216de7d6fcfa507c9aa1400972d862">ADC_CCR_DELAY_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga22b71e9df8b1fca93802ad602341eb0b">ADC_CCR_DELAY_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga168494ac34dad42ee342aebcdfd1808c">ADC_TWOSAMPLINGDELAY_15CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae0216de7d6fcfa507c9aa1400972d862">ADC_CCR_DELAY_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga6d0d5785cb6c75e700517e88af188573">ADC_CCR_DELAY_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1gaf994387c40bf4b9ee52be8c785bd221f">ADC_TWOSAMPLINGDELAY_16CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae0216de7d6fcfa507c9aa1400972d862">ADC_CCR_DELAY_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga6d0d5785cb6c75e700517e88af188573">ADC_CCR_DELAY_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga22b71e9df8b1fca93802ad602341eb0b">ADC_CCR_DELAY_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1gaba99083f97b9869ad8397a04601ad1cb">ADC_TWOSAMPLINGDELAY_17CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae0216de7d6fcfa507c9aa1400972d862">ADC_CCR_DELAY_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga17f85cbda5dcf9a392a29befb73c6ceb">ADC_CCR_DELAY_2</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga3d4626768769515ca85ead5834564dd4">ADC_TWOSAMPLINGDELAY_18CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae0216de7d6fcfa507c9aa1400972d862">ADC_CCR_DELAY_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga17f85cbda5dcf9a392a29befb73c6ceb">ADC_CCR_DELAY_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga22b71e9df8b1fca93802ad602341eb0b">ADC_CCR_DELAY_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga261b9cf07c6e2c6afd7327a629854408">ADC_TWOSAMPLINGDELAY_19CYCLES</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae0216de7d6fcfa507c9aa1400972d862">ADC_CCR_DELAY_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga17f85cbda5dcf9a392a29befb73c6ceb">ADC_CCR_DELAY_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga6d0d5785cb6c75e700517e88af188573">ADC_CCR_DELAY_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga1a15072ba873631146f76de174ec66ab">ADC_TWOSAMPLINGDELAY_20CYCLES</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga9c13aa04949ed520cf92613d3a619198">ADC_CCR_DELAY</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__delay__between__2__sampling__phases_1ga4dc0ff663bd4283cf1032d7901175c8d">IS_ADC_SAMPLING_DELAY</link>(DELAY)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger__edge___injected_1gaedb012452f83496891fcf1992130a0de">ADC_EXTERNALTRIGINJECCONVEDGE_NONE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger__edge___injected_1gaf5561fa00f50245c3e497ed5bd70d25e">ADC_EXTERNALTRIGINJECCONVEDGE_RISING</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga0b3c99510de210ff3137ff8de328889b">ADC_CR2_JEXTEN_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger__edge___injected_1ga517972cd277a53e20ff2e44b3e07afa6">ADC_EXTERNALTRIGINJECCONVEDGE_FALLING</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga949c70fdf36a32a6afcbf44fec123832">ADC_CR2_JEXTEN_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger__edge___injected_1ga874e33f936d9cfc440a46919bf132b22">ADC_EXTERNALTRIGINJECCONVEDGE_RISINGFALLING</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga07330f702208792faca3a563dc4fd9c6">ADC_CR2_JEXTEN</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger__edge___injected_1ga1071d8b9c241b032c87c0f858d8de517">IS_ADC_EXT_INJEC_TRIG_EDGE</link>(EDGE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga50c7351afe9cf0960de8f2ae831d8a0b">ADC_EXTERNALTRIGINJECCONV_T1_CC4</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga577c4e4b766688d873ab518fa4e8cef0">ADC_EXTERNALTRIGINJECCONV_T1_TRGO</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaa70c1f30e2101e2177ce564440203ba3">ADC_CR2_JEXTSEL_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1gaadc7ecf196e883d7375e299dde80a8fa">ADC_EXTERNALTRIGINJECCONV_T2_CC1</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga99fa4a240d34ce231d6d0543bac7fd9b">ADC_CR2_JEXTSEL_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga5408c05ebc9a0a16c08b0be0e79506dc">ADC_EXTERNALTRIGINJECCONV_T2_TRGO</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga99fa4a240d34ce231d6d0543bac7fd9b">ADC_CR2_JEXTSEL_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa70c1f30e2101e2177ce564440203ba3">ADC_CR2_JEXTSEL_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga7ec1ab73d4628e01460e8db3a00a94c3">ADC_EXTERNALTRIGINJECCONV_T3_CC2</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga571bb97f950181fedbc0d4756482713d">ADC_CR2_JEXTSEL_2</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga826c3989c8fe4861729fdb966ff07c2d">ADC_EXTERNALTRIGINJECCONV_T3_CC4</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga571bb97f950181fedbc0d4756482713d">ADC_CR2_JEXTSEL_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa70c1f30e2101e2177ce564440203ba3">ADC_CR2_JEXTSEL_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1gac8c79cb920a15b5bcb36ec499a18a8a1">ADC_EXTERNALTRIGINJECCONV_T4_CC1</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga571bb97f950181fedbc0d4756482713d">ADC_CR2_JEXTSEL_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga99fa4a240d34ce231d6d0543bac7fd9b">ADC_CR2_JEXTSEL_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga134659fcece2d4ef1902545b3a950712">ADC_EXTERNALTRIGINJECCONV_T4_CC2</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga571bb97f950181fedbc0d4756482713d">ADC_CR2_JEXTSEL_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga99fa4a240d34ce231d6d0543bac7fd9b">ADC_CR2_JEXTSEL_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa70c1f30e2101e2177ce564440203ba3">ADC_CR2_JEXTSEL_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga80d91502e0ca3757db39eeb8a637da4d">ADC_EXTERNALTRIGINJECCONV_T4_CC3</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gae34f5dda7a153ffd927c9cd38999f822">ADC_CR2_JEXTSEL_3</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga87a5534698643b2c3872efb7d17d4f44">ADC_EXTERNALTRIGINJECCONV_T4_TRGO</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae34f5dda7a153ffd927c9cd38999f822">ADC_CR2_JEXTSEL_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa70c1f30e2101e2177ce564440203ba3">ADC_CR2_JEXTSEL_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga1a9f1ae40bcb3f91616f139171e6586d">ADC_EXTERNALTRIGINJECCONV_T5_CC4</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae34f5dda7a153ffd927c9cd38999f822">ADC_CR2_JEXTSEL_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga99fa4a240d34ce231d6d0543bac7fd9b">ADC_CR2_JEXTSEL_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga2c4d03267638efab16142f50927584d4">ADC_EXTERNALTRIGINJECCONV_T5_TRGO</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae34f5dda7a153ffd927c9cd38999f822">ADC_CR2_JEXTSEL_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga99fa4a240d34ce231d6d0543bac7fd9b">ADC_CR2_JEXTSEL_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa70c1f30e2101e2177ce564440203ba3">ADC_CR2_JEXTSEL_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1gae1ad0e7fbae062c05cbaa3f3dacdd700">ADC_EXTERNALTRIGINJECCONV_T8_CC2</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae34f5dda7a153ffd927c9cd38999f822">ADC_CR2_JEXTSEL_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga571bb97f950181fedbc0d4756482713d">ADC_CR2_JEXTSEL_2</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1gaf72c9cf97a056209ec542cbf8b44e034">ADC_EXTERNALTRIGINJECCONV_T8_CC3</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae34f5dda7a153ffd927c9cd38999f822">ADC_CR2_JEXTSEL_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga571bb97f950181fedbc0d4756482713d">ADC_CR2_JEXTSEL_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa70c1f30e2101e2177ce564440203ba3">ADC_CR2_JEXTSEL_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga762d1f0453208046c4c93dbd392c0e2e">ADC_EXTERNALTRIGINJECCONV_T8_CC4</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae34f5dda7a153ffd927c9cd38999f822">ADC_CR2_JEXTSEL_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga571bb97f950181fedbc0d4756482713d">ADC_CR2_JEXTSEL_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga99fa4a240d34ce231d6d0543bac7fd9b">ADC_CR2_JEXTSEL_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga364de9670181999642dcd159f22815c8">ADC_EXTERNALTRIGINJECCONV_EXT_IT15</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaab3aa5d0e2a4b77960ec8f3b425a3eac">ADC_CR2_JEXTSEL</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___external__trigger___source___injected_1ga3cb8cadbff46e432b5e000c3a7489a0b">IS_ADC_EXT_INJEC_TRIG</link>(INJTRIG)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__injected__channel__selection_1gabe6252325fda6b22c794ea7b0e974ee3">ADC_INJECTED_RANK_1</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__injected__channel__selection_1gaf065faf92e099a1667694233384d187e">ADC_INJECTED_RANK_2</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__injected__channel__selection_1ga5fa8c3014caccae280220fd3df5d7f23">ADC_INJECTED_RANK_3</link>   ((uint32_t)0x00000003)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__injected__channel__selection_1gaffe7c5042c696b39ef23fba9af5a88b9">ADC_INJECTED_RANK_4</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__injected__length_1gaecdddab7424a697722683296ca70e176">IS_ADC_INJECTED_LENGTH</link>(LENGTH)   (((LENGTH) &gt;= ((uint32_t)1)) &amp;&amp; ((LENGTH) &lt;= ((uint32_t)4)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex__injected__rank_1ga63f95f9a45f4d718aabc9e429d860e9d">IS_ADC_INJECTED_RANK</link>(RANK)   (((RANK) &gt;= ((uint32_t)1)) &amp;&amp; ((RANK) &lt;= ((uint32_t)4)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex_1ga3b38fee3316d47ec7918248e0aada0ca">__HAL_ADC_JSQR</link>(_CHANNELNB_,  _RANKNB_,  _JSQR_JL_)   ((_CHANNELNB_) &lt;&lt; (5 * (uint8_t)(((_RANKNB_) + 3) - (_JSQR_JL_))))</para>
+
+<para>Set the selected injected Channel rank. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1ga91f6c85ae910e9baaf578a346c30c7c1">HAL_ADCEx_InjectedStop</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1ga5e11b306be79f36c71a73f2e465ad613">HAL_ADCEx_InjectedPollForConversion</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gae032f41136f4dc4b3f3c2476b96a21f5">HAL_ADCEx_InjectedStop_IT</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gaa666882ff772df8a5140090422825ed6">HAL_ADCEx_InjectedStart</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gaf55cd28b1394a0564f99e1f5069c0ed1">HAL_ADCEx_InjectedStart_IT</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___a_d_c_ex_1ga7996668b61263f91c76d5f55551f3a07">HAL_ADCEx_InjectedGetValue</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t InjectedRank)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gab36a3508a06430d7c7d0def79ec61b08">HAL_ADCEx_MultiModeStart_DMA</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t *pData, uint32_t Length)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1ga6a114ff60985be225d621a5c3be8ddf2">HAL_ADCEx_MultiModeStop_DMA</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___a_d_c_ex_1ga5ab7c06d2f0b5f9de1f86de5713d68d2">HAL_ADCEx_MultiModeGetValue</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_ex_1gaed7815e8b636ff1c1f456ecbaffe1942">HAL_ADCEx_InjectedConvCpltCallback</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1ga5736a78398eb51ddeb09dd83d1243045">HAL_ADCEx_InjectedConfigChannel</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, <link linkend="_struct_a_d_c___injection_conf_type_def">ADC_InjectionConfTypeDef</link> *sConfigInjected)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gabfe8b04f9cfda94bc8aad912470122f5">HAL_ADCEx_MultiModeConfigChannel</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, <link linkend="_struct_a_d_c___multi_mode_type_def">ADC_MultiModeTypeDef</link> *multimode)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,1821 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_t_c_ex" xml:lang="en-US">
+<title>RTCEx</title>
+<indexterm><primary>RTCEx</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___r_t_c_ex___exported___constants">RTCEx_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_t_c___tamper_type_def">RTC_TamperTypeDef</link></para>
+
+<para>RTC Tamper structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga9b3ce87851ab95b1ab508b524a1055c8">__HAL_RTC_WAKEUPTIMER_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga061be0d3cdea721e5cb695cda0699bc3">RTC_CR_WUTE</link>))</para>
+
+<para>Enable the RTC WakeUp Timer peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gad8400feb7b3dae2c552f2f4a7556bc6d">__HAL_RTC_TIMESTAMP_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga94fa98ca8cac9078b9bb82c89593d3c0">RTC_CR_TSE</link>))</para>
+
+<para>Enable the RTC TimeStamp peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga18822c018d0b07be72ca315220bb02df">__HAL_RTC_WAKEUPTIMER_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga061be0d3cdea721e5cb695cda0699bc3">RTC_CR_WUTE</link>))</para>
+
+<para>Disable the RTC WakeUp Timer peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga7281d85b199bee5eb74cc135208051fa">__HAL_RTC_TIMESTAMP_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga94fa98ca8cac9078b9bb82c89593d3c0">RTC_CR_TSE</link>))</para>
+
+<para>Disable the RTC TimeStamp peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gab252ef767ddb79ab1d5c394074c308d5">__HAL_RTC_COARSE_CALIB_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga4ce7cb8b575142e125863d61ea4765ba">RTC_CR_DCE</link>))</para>
+
+<para>Enable the Coarse calibration process. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga98f6fa00897ae97bfec781e7f37290ae">__HAL_RTC_COARSE_CALIB_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga4ce7cb8b575142e125863d61ea4765ba">RTC_CR_DCE</link>))</para>
+
+<para>Disable the Coarse calibration process. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga28ea614bae2c8b94cd3407535644e7a6">__HAL_RTC_CALIBRATION_OUTPUT_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga3cdfa862acfa6068b7ba847f77269d60">RTC_CR_COE</link>))</para>
+
+<para>Enable the RTC calibration output. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gab5c03b27e1117cf17be5df483b1211b8">__HAL_RTC_CALIBRATION_OUTPUT_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga3cdfa862acfa6068b7ba847f77269d60">RTC_CR_COE</link>))</para>
+
+<para>Disable the calibration output. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga3fcacefb24751dcb772582e59e50de5e">__HAL_RTC_CLOCKREF_DETECTION_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga646ef1071cacc2d30bbef5597c817021">RTC_CR_REFCKON</link>))</para>
+
+<para>Enable the clock reference detection. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga8e989c42c1f4139cc1e021c42638d86b">__HAL_RTC_CLOCKREF_DETECTION_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga646ef1071cacc2d30bbef5597c817021">RTC_CR_REFCKON</link>))</para>
+
+<para>Disable the clock reference detection. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga054429581f55a80d922bb5c1e982c06f">__HAL_RTC_TIMESTAMP_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (__INTERRUPT__))</para>
+
+<para>Enable the RTC TimeStamp interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gab02dbd4cbdcd1c544a5e45b37fad276b">__HAL_RTC_WAKEUPTIMER_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (__INTERRUPT__))</para>
+
+<para>Enable the RTC WakeUpTimer interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gab455d21f8afb5b3d49f2c25e34ce90c2">__HAL_RTC_TIMESTAMP_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(__INTERRUPT__))</para>
+
+<para>Disable the RTC TimeStamp interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga702b63d21958eab45856264c19ee6004">__HAL_RTC_WAKEUPTIMER_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(__INTERRUPT__))</para>
+
+<para>Disable the RTC WakeUpTimer interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga4eb0c0b3f367b2ee81854f91ba89435e">__HAL_RTC_TAMPER_GET_IT</link>(__HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; ((__FLAG__)&gt;&gt; 4)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Check whether the specified RTC Tamper interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gaad236b2444806e88eecbfec918adbeb4">__HAL_RTC_WAKEUPTIMER_GET_IT</link>(__HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; ((__FLAG__)&gt;&gt; 4)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Check whether the specified RTC WakeUpTimer interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga8fd5dcdd9876039bda9dcdbee87c967d">__HAL_RTC_TIMESTAMP_GET_IT</link>(__HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; ((__FLAG__)&gt;&gt; 4)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Check whether the specified RTC TimeStamp interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga72799940c34e70df0d33eca772794813">__HAL_RTC_TIMESTAMP_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Get the selected RTC TimeStamp&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga217666f5b1e27e24441e2e9a3b51f28e">__HAL_RTC_WAKEUPTIMER_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Get the selected RTC WakeUpTimer&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gafc2d73770375bd10cf6e4faa11adc7b1">__HAL_RTC_TAMPER_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Get the selected RTC Tamper&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1ga5e1482310c213248d8416b24a5e6b3f3">__HAL_RTC_SHIFT_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Get the selected RTC shift operation&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gac9d386e61a572b0c9d0e58a04e1819ef">__HAL_RTC_TIMESTAMP_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;ISR) = (~(((__FLAG__) | <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>)&amp; 0x0000FFFF)|((__HANDLE__)-&gt;Instance-&gt;ISR &amp; <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>))</para>
+
+<para>Clear the RTC Time Stamp&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gade364b4cf1214d66463c9fa4ce667095">__HAL_RTC_TAMPER_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;ISR) = (~(((__FLAG__) | <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>)&amp; 0x0000FFFF)|((__HANDLE__)-&gt;Instance-&gt;ISR &amp; <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>))</para>
+
+<para>Clear the RTC Tamper&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex_1gabb56cd29b62b414c5da34e2fc1cabf16">__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;ISR) = (~(((__FLAG__) | <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>)&amp; 0x0000FFFF)|((__HANDLE__)-&gt;Instance-&gt;ISR &amp; <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>))</para>
+
+<para>Clear the RTC Wake Up timer&apos;s pending flags. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga750db6ed8e6afde87530736826554019">HAL_RTCEx_SetTimeStamp</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t TimeStampEdge, uint32_t RTC_TimeStampPin)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga96faf756e9e07d06ff1d7b696c21a6a4">HAL_RTCEx_SetTimeStamp_IT</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t TimeStampEdge, uint32_t RTC_TimeStampPin)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga1d7152fccc39480de86c555c94e222a0">HAL_RTCEx_DeactivateTimeStamp</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga68d83277bafa5fcebd10f1bd83ef059e">HAL_RTCEx_GetTimeStamp</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___time_type_def">RTC_TimeTypeDef</link> *sTimeStamp, <link linkend="_struct_r_t_c___date_type_def">RTC_DateTypeDef</link> *sTimeStampDate, uint32_t Format)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga4b819431e03c521285cf3e275d930707">HAL_RTCEx_SetTamper</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___tamper_type_def">RTC_TamperTypeDef</link> *sTamper)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga4984cf38a5bbdf1f607cc94cfdf3797f">HAL_RTCEx_SetTamper_IT</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___tamper_type_def">RTC_TamperTypeDef</link> *sTamper)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1gaf0c1b98177dbd9d20c460d6130dbad7e">HAL_RTCEx_DeactivateTamper</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t Tamper)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_ex_1ga710f2cd8bab31242d496b020c182fef3">HAL_RTCEx_TamperTimeStampIRQHandler</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_ex_1gad849caf1e7b4774af56388a13636ba73">HAL_RTCEx_Tamper1EventCallback</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_ex_1ga14086326964355aaf3793ad3157ea7c3">HAL_RTCEx_Tamper2EventCallback</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_ex_1gac9ef67f1f1698e9560a5ecd5e8c9a330">HAL_RTCEx_TimeStampEventCallback</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1gaff8adc3d27b9c84c69b64ffa6ad43457">HAL_RTCEx_PollForTimeStampEvent</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1gadea47894c36fc74044106654c081070b">HAL_RTCEx_PollForTamper1Event</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga974cfcdcbc9a6fc70effcf1c701ba535">HAL_RTCEx_PollForTamper2Event</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1gab22373ae0d2eeb1322569c44c42ee9db">HAL_RTCEx_SetWakeUpTimer</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga92f7781781a2fd96991ca932377418da">HAL_RTCEx_SetWakeUpTimer_IT</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___r_t_c_ex_1ga48a0ebb678effede4fca4436e20b18f0">HAL_RTCEx_DeactivateWakeUpTimer</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___r_t_c_ex_1gae2aa87c6544a982c4e7657d649e7a797">HAL_RTCEx_GetWakeUpTimer</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_ex_1ga5e391424483012fe09827739dc53885f">HAL_RTCEx_WakeUpTimerIRQHandler</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_ex_1gac9ed5d6224b5c86f2845a9c1af7d94de">HAL_RTCEx_WakeUpTimerEventCallback</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga13cdc56c03d2d606ef8c635dcc25f555">HAL_RTCEx_PollForWakeUpTimerEvent</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_ex_1gafb908a2f254ccff959c31ac70e957de4">HAL_RTCEx_BKUPWrite</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t BackupRegister, uint32_t Data)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___r_t_c_ex_1ga37ba612da141a2b443bf64210f981513">HAL_RTCEx_BKUPRead</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t BackupRegister)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga0f77700814ccfaa7a10969012ad92968">HAL_RTCEx_SetCoarseCalib</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t CalibSign, uint32_t Value)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga7803f69ddb68e220dd2b263e523bcdce">HAL_RTCEx_DeactivateCoarseCalib</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga394b6624dbda05ef3e375d83884ba00b">HAL_RTCEx_SetSmoothCalib</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t SmoothCalibPeriod, uint32_t SmoothCalibPlusPulses, uint32_t SmouthCalibMinusPulsesValue)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga07344e3d0f7e9f569ec02d4a75d158dc">HAL_RTCEx_SetSynchroShift</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t ShiftAdd1S, uint32_t ShiftSubFS)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1gafee5f33f43d10ae0b64aa073412de17e">HAL_RTCEx_SetCalibrationOutPut</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t CalibOutput)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga4cba173360f2993cafdd2c77fc51b7a9">HAL_RTCEx_DeactivateCalibrationOutPut</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1gad3759b90bbf48597b2797411c72632dc">HAL_RTCEx_SetRefClock</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga86ca6b8e7b4ea0fede8e1aceef36fdbe">HAL_RTCEx_DeactivateRefClock</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1ga77d4058fefb7d89481ca1af3b87a8a32">HAL_RTCEx_EnableBypassShadow</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1gaabaf6726dca239445ea362554e0f8ce2">HAL_RTCEx_DisableBypassShadow</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_ex_1ga9da295aecbc4566dabc161437d1b95f2">HAL_RTCEx_AlarmBEventCallback</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_ex_1gaec42cd894d63744c4914ec6a65510cae">HAL_RTCEx_PollForAlarmBEvent</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t Timeout)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_t_c_ex_1gab5c03b27e1117cf17be5df483b1211b8"/><section>
+    <title>__HAL_RTC_CALIBRATION_OUTPUT_DISABLE</title>
+<indexterm><primary>__HAL_RTC_CALIBRATION_OUTPUT_DISABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_CALIBRATION_OUTPUT_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_CALIBRATION_OUTPUT_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga3cdfa862acfa6068b7ba847f77269d60">RTC_CR_COE</link>))</computeroutput></para><para>
+
+<para>Disable the calibration output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00470">470</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga28ea614bae2c8b94cd3407535644e7a6"/><section>
+    <title>__HAL_RTC_CALIBRATION_OUTPUT_ENABLE</title>
+<indexterm><primary>__HAL_RTC_CALIBRATION_OUTPUT_ENABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_CALIBRATION_OUTPUT_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_CALIBRATION_OUTPUT_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga3cdfa862acfa6068b7ba847f77269d60">RTC_CR_COE</link>))</computeroutput></para><para>
+
+<para>Enable the RTC calibration output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00463">463</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga8e989c42c1f4139cc1e021c42638d86b"/><section>
+    <title>__HAL_RTC_CLOCKREF_DETECTION_DISABLE</title>
+<indexterm><primary>__HAL_RTC_CLOCKREF_DETECTION_DISABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_CLOCKREF_DETECTION_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_CLOCKREF_DETECTION_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga646ef1071cacc2d30bbef5597c817021">RTC_CR_REFCKON</link>))</computeroutput></para><para>
+
+<para>Disable the clock reference detection. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00484">484</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga3fcacefb24751dcb772582e59e50de5e"/><section>
+    <title>__HAL_RTC_CLOCKREF_DETECTION_ENABLE</title>
+<indexterm><primary>__HAL_RTC_CLOCKREF_DETECTION_ENABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_CLOCKREF_DETECTION_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_CLOCKREF_DETECTION_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga646ef1071cacc2d30bbef5597c817021">RTC_CR_REFCKON</link>))</computeroutput></para><para>
+
+<para>Enable the clock reference detection. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00477">477</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga98f6fa00897ae97bfec781e7f37290ae"/><section>
+    <title>__HAL_RTC_COARSE_CALIB_DISABLE</title>
+<indexterm><primary>__HAL_RTC_COARSE_CALIB_DISABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_COARSE_CALIB_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_COARSE_CALIB_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga4ce7cb8b575142e125863d61ea4765ba">RTC_CR_DCE</link>))</computeroutput></para><para>
+
+<para>Disable the Coarse calibration process. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00456">456</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gab252ef767ddb79ab1d5c394074c308d5"/><section>
+    <title>__HAL_RTC_COARSE_CALIB_ENABLE</title>
+<indexterm><primary>__HAL_RTC_COARSE_CALIB_ENABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_COARSE_CALIB_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_COARSE_CALIB_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga4ce7cb8b575142e125863d61ea4765ba">RTC_CR_DCE</link>))</computeroutput></para><para>
+
+<para>Enable the Coarse calibration process. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00449">449</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga5e1482310c213248d8416b24a5e6b3f3"/><section>
+    <title>__HAL_RTC_SHIFT_GET_FLAG</title>
+<indexterm><primary>__HAL_RTC_SHIFT_GET_FLAG</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_SHIFT_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_SHIFT_GET_FLAG( __HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Get the selected RTC shift operation&apos;s flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC shift operation Flag is pending or not. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_FLAG_SHPF 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00596">596</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gade364b4cf1214d66463c9fa4ce667095"/><section>
+    <title>__HAL_RTC_TAMPER_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_RTC_TAMPER_CLEAR_FLAG</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TAMPER_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TAMPER_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;ISR) = (~(((__FLAG__) | <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>)&amp; 0x0000FFFF)|((__HANDLE__)-&gt;Instance-&gt;ISR &amp; <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>))</computeroutput></para><para>
+
+<para>Clear the RTC Tamper&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC Tamper Flag sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_FLAG_TAMP1F 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00616">616</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gafc2d73770375bd10cf6e4faa11adc7b1"/><section>
+    <title>__HAL_RTC_TAMPER_GET_FLAG</title>
+<indexterm><primary>__HAL_RTC_TAMPER_GET_FLAG</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TAMPER_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TAMPER_GET_FLAG( __HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Get the selected RTC Tamper&apos;s flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC Tamper Flag sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_FLAG_TAMP1F 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00586">586</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga4eb0c0b3f367b2ee81854f91ba89435e"/><section>
+    <title>__HAL_RTC_TAMPER_GET_IT</title>
+<indexterm><primary>__HAL_RTC_TAMPER_GET_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TAMPER_GET_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TAMPER_GET_IT( __HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; ((__FLAG__)&gt;&gt; 4)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Check whether the specified RTC Tamper interrupt has occurred or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC Tamper interrupt sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_IT_TAMP1 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00534">534</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gac9d386e61a572b0c9d0e58a04e1819ef"/><section>
+    <title>__HAL_RTC_TIMESTAMP_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_RTC_TIMESTAMP_CLEAR_FLAG</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TIMESTAMP_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TIMESTAMP_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;ISR) = (~(((__FLAG__) | <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>)&amp; 0x0000FFFF)|((__HANDLE__)-&gt;Instance-&gt;ISR &amp; <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>))</computeroutput></para><para>
+
+<para>Clear the RTC Time Stamp&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC Alarm Flag sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_FLAG_TSF 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00606">606</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga7281d85b199bee5eb74cc135208051fa"/><section>
+    <title>__HAL_RTC_TIMESTAMP_DISABLE</title>
+<indexterm><primary>__HAL_RTC_TIMESTAMP_DISABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TIMESTAMP_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TIMESTAMP_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga94fa98ca8cac9078b9bb82c89593d3c0">RTC_CR_TSE</link>))</computeroutput></para><para>
+
+<para>Disable the RTC TimeStamp peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00442">442</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gab455d21f8afb5b3d49f2c25e34ce90c2"/><section>
+    <title>__HAL_RTC_TIMESTAMP_DISABLE_IT</title>
+<indexterm><primary>__HAL_RTC_TIMESTAMP_DISABLE_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TIMESTAMP_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TIMESTAMP_DISABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(__INTERRUPT__))</computeroutput></para><para>
+
+<para>Disable the RTC TimeStamp interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the RTC TimeStamp interrupt sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_IT_TS: TimeStamp interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00514">514</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gad8400feb7b3dae2c552f2f4a7556bc6d"/><section>
+    <title>__HAL_RTC_TIMESTAMP_ENABLE</title>
+<indexterm><primary>__HAL_RTC_TIMESTAMP_ENABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TIMESTAMP_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TIMESTAMP_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga94fa98ca8cac9078b9bb82c89593d3c0">RTC_CR_TSE</link>))</computeroutput></para><para>
+
+<para>Enable the RTC TimeStamp peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00428">428</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga054429581f55a80d922bb5c1e982c06f"/><section>
+    <title>__HAL_RTC_TIMESTAMP_ENABLE_IT</title>
+<indexterm><primary>__HAL_RTC_TIMESTAMP_ENABLE_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TIMESTAMP_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TIMESTAMP_ENABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enable the RTC TimeStamp interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the RTC TimeStamp interrupt sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_IT_TS: TimeStamp interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00494">494</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga72799940c34e70df0d33eca772794813"/><section>
+    <title>__HAL_RTC_TIMESTAMP_GET_FLAG</title>
+<indexterm><primary>__HAL_RTC_TIMESTAMP_GET_FLAG</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TIMESTAMP_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TIMESTAMP_GET_FLAG( __HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Get the selected RTC TimeStamp&apos;s flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC TimeStamp Flag sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_FLAG_TSF 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+<listitem>
+<para>RTC_FLAG_TSOVF 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00565">565</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga8fd5dcdd9876039bda9dcdbee87c967d"/><section>
+    <title>__HAL_RTC_TIMESTAMP_GET_IT</title>
+<indexterm><primary>__HAL_RTC_TIMESTAMP_GET_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_TIMESTAMP_GET_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_TIMESTAMP_GET_IT( __HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; ((__FLAG__)&gt;&gt; 4)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Check whether the specified RTC TimeStamp interrupt has occurred or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC TimeStamp interrupt sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_IT_TS: TimeStamp interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00554">554</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gabb56cd29b62b414c5da34e2fc1cabf16"/><section>
+    <title>__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_WAKEUPTIMER_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;ISR) = (~(((__FLAG__) | <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>)&amp; 0x0000FFFF)|((__HANDLE__)-&gt;Instance-&gt;ISR &amp; <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>))</computeroutput></para><para>
+
+<para>Clear the RTC Wake Up timer&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC Tamper Flag sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_FLAG_WUTF 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00626">626</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga18822c018d0b07be72ca315220bb02df"/><section>
+    <title>__HAL_RTC_WAKEUPTIMER_DISABLE</title>
+<indexterm><primary>__HAL_RTC_WAKEUPTIMER_DISABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_WAKEUPTIMER_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_WAKEUPTIMER_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga061be0d3cdea721e5cb695cda0699bc3">RTC_CR_WUTE</link>))</computeroutput></para><para>
+
+<para>Disable the RTC WakeUp Timer peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00435">435</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga702b63d21958eab45856264c19ee6004"/><section>
+    <title>__HAL_RTC_WAKEUPTIMER_DISABLE_IT</title>
+<indexterm><primary>__HAL_RTC_WAKEUPTIMER_DISABLE_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_WAKEUPTIMER_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_WAKEUPTIMER_DISABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(__INTERRUPT__))</computeroutput></para><para>
+
+<para>Disable the RTC WakeUpTimer interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the RTC WakeUpTimer interrupt sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_IT_WUT: WakeUpTimer A interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00524">524</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga9b3ce87851ab95b1ab508b524a1055c8"/><section>
+    <title>__HAL_RTC_WAKEUPTIMER_ENABLE</title>
+<indexterm><primary>__HAL_RTC_WAKEUPTIMER_ENABLE</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_WAKEUPTIMER_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_WAKEUPTIMER_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga061be0d3cdea721e5cb695cda0699bc3">RTC_CR_WUTE</link>))</computeroutput></para><para>
+
+<para>Enable the RTC WakeUp Timer peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00421">421</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gab02dbd4cbdcd1c544a5e45b37fad276b"/><section>
+    <title>__HAL_RTC_WAKEUPTIMER_ENABLE_IT</title>
+<indexterm><primary>__HAL_RTC_WAKEUPTIMER_ENABLE_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_WAKEUPTIMER_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_WAKEUPTIMER_ENABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enable the RTC WakeUpTimer interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the RTC WakeUpTimer interrupt sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_IT_WUT: WakeUpTimer A interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00504">504</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1ga217666f5b1e27e24441e2e9a3b51f28e"/><section>
+    <title>__HAL_RTC_WAKEUPTIMER_GET_FLAG</title>
+<indexterm><primary>__HAL_RTC_WAKEUPTIMER_GET_FLAG</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_WAKEUPTIMER_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_WAKEUPTIMER_GET_FLAG( __HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Get the selected RTC WakeUpTimer&apos;s flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC WakeUpTimer Flag sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_FLAG_WUTF 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+<listitem>
+<para>RTC_FLAG_WUTWF 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00576">576</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex_1gaad236b2444806e88eecbfec918adbeb4"/><section>
+    <title>__HAL_RTC_WAKEUPTIMER_GET_IT</title>
+<indexterm><primary>__HAL_RTC_WAKEUPTIMER_GET_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>__HAL_RTC_WAKEUPTIMER_GET_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RTC_WAKEUPTIMER_GET_IT( __HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; ((__FLAG__)&gt;&gt; 4)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Check whether the specified RTC WakeUpTimer interrupt has occurred or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the RTC handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the RTC WakeUpTimer interrupt sources to be enabled or disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>RTC_IT_WUT: WakeUpTimer A interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00544">544</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___r_t_c_ex_1ga9da295aecbc4566dabc161437d1b95f2"/><section>
+    <title>HAL_RTCEx_AlarmBEventCallback()</title>
+<indexterm><primary>HAL_RTCEx_AlarmBEventCallback</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_AlarmBEventCallback</secondary></indexterm>
+<para><computeroutput>void HAL_RTCEx_AlarmBEventCallback (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga37ba612da141a2b443bf64210f981513"/><section>
+    <title>HAL_RTCEx_BKUPRead()</title>
+<indexterm><primary>HAL_RTCEx_BKUPRead</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_BKUPRead</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_RTCEx_BKUPRead (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t BackupRegister)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gafb908a2f254ccff959c31ac70e957de4"/><section>
+    <title>HAL_RTCEx_BKUPWrite()</title>
+<indexterm><primary>HAL_RTCEx_BKUPWrite</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_BKUPWrite</secondary></indexterm>
+<para><computeroutput>void HAL_RTCEx_BKUPWrite (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t BackupRegister, uint32_t Data)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga4cba173360f2993cafdd2c77fc51b7a9"/><section>
+    <title>HAL_RTCEx_DeactivateCalibrationOutPut()</title>
+<indexterm><primary>HAL_RTCEx_DeactivateCalibrationOutPut</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_DeactivateCalibrationOutPut</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_DeactivateCalibrationOutPut (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga7803f69ddb68e220dd2b263e523bcdce"/><section>
+    <title>HAL_RTCEx_DeactivateCoarseCalib()</title>
+<indexterm><primary>HAL_RTCEx_DeactivateCoarseCalib</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_DeactivateCoarseCalib</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_DeactivateCoarseCalib (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga86ca6b8e7b4ea0fede8e1aceef36fdbe"/><section>
+    <title>HAL_RTCEx_DeactivateRefClock()</title>
+<indexterm><primary>HAL_RTCEx_DeactivateRefClock</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_DeactivateRefClock</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_DeactivateRefClock (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gaf0c1b98177dbd9d20c460d6130dbad7e"/><section>
+    <title>HAL_RTCEx_DeactivateTamper()</title>
+<indexterm><primary>HAL_RTCEx_DeactivateTamper</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_DeactivateTamper</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_DeactivateTamper (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t Tamper)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga1d7152fccc39480de86c555c94e222a0"/><section>
+    <title>HAL_RTCEx_DeactivateTimeStamp()</title>
+<indexterm><primary>HAL_RTCEx_DeactivateTimeStamp</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_DeactivateTimeStamp</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_DeactivateTimeStamp (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga48a0ebb678effede4fca4436e20b18f0"/><section>
+    <title>HAL_RTCEx_DeactivateWakeUpTimer()</title>
+<indexterm><primary>HAL_RTCEx_DeactivateWakeUpTimer</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_DeactivateWakeUpTimer</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_RTCEx_DeactivateWakeUpTimer (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gaabaf6726dca239445ea362554e0f8ce2"/><section>
+    <title>HAL_RTCEx_DisableBypassShadow()</title>
+<indexterm><primary>HAL_RTCEx_DisableBypassShadow</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_DisableBypassShadow</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_DisableBypassShadow (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga77d4058fefb7d89481ca1af3b87a8a32"/><section>
+    <title>HAL_RTCEx_EnableBypassShadow()</title>
+<indexterm><primary>HAL_RTCEx_EnableBypassShadow</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_EnableBypassShadow</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_EnableBypassShadow (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga68d83277bafa5fcebd10f1bd83ef059e"/><section>
+    <title>HAL_RTCEx_GetTimeStamp()</title>
+<indexterm><primary>HAL_RTCEx_GetTimeStamp</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_GetTimeStamp</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_GetTimeStamp (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, <link linkend="_struct_r_t_c___time_type_def">RTC_TimeTypeDef</link> * sTimeStamp, <link linkend="_struct_r_t_c___date_type_def">RTC_DateTypeDef</link> * sTimeStampDate, uint32_t Format)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gae2aa87c6544a982c4e7657d649e7a797"/><section>
+    <title>HAL_RTCEx_GetWakeUpTimer()</title>
+<indexterm><primary>HAL_RTCEx_GetWakeUpTimer</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_GetWakeUpTimer</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_RTCEx_GetWakeUpTimer (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gaec42cd894d63744c4914ec6a65510cae"/><section>
+    <title>HAL_RTCEx_PollForAlarmBEvent()</title>
+<indexterm><primary>HAL_RTCEx_PollForAlarmBEvent</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_PollForAlarmBEvent</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_PollForAlarmBEvent (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gadea47894c36fc74044106654c081070b"/><section>
+    <title>HAL_RTCEx_PollForTamper1Event()</title>
+<indexterm><primary>HAL_RTCEx_PollForTamper1Event</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_PollForTamper1Event</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_PollForTamper1Event (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga974cfcdcbc9a6fc70effcf1c701ba535"/><section>
+    <title>HAL_RTCEx_PollForTamper2Event()</title>
+<indexterm><primary>HAL_RTCEx_PollForTamper2Event</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_PollForTamper2Event</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_PollForTamper2Event (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gaff8adc3d27b9c84c69b64ffa6ad43457"/><section>
+    <title>HAL_RTCEx_PollForTimeStampEvent()</title>
+<indexterm><primary>HAL_RTCEx_PollForTimeStampEvent</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_PollForTimeStampEvent</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_PollForTimeStampEvent (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga13cdc56c03d2d606ef8c635dcc25f555"/><section>
+    <title>HAL_RTCEx_PollForWakeUpTimerEvent()</title>
+<indexterm><primary>HAL_RTCEx_PollForWakeUpTimerEvent</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_PollForWakeUpTimerEvent</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_PollForWakeUpTimerEvent (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gafee5f33f43d10ae0b64aa073412de17e"/><section>
+    <title>HAL_RTCEx_SetCalibrationOutPut()</title>
+<indexterm><primary>HAL_RTCEx_SetCalibrationOutPut</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetCalibrationOutPut</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetCalibrationOutPut (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t CalibOutput)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga0f77700814ccfaa7a10969012ad92968"/><section>
+    <title>HAL_RTCEx_SetCoarseCalib()</title>
+<indexterm><primary>HAL_RTCEx_SetCoarseCalib</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetCoarseCalib</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetCoarseCalib (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t CalibSign, uint32_t Value)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gad3759b90bbf48597b2797411c72632dc"/><section>
+    <title>HAL_RTCEx_SetRefClock()</title>
+<indexterm><primary>HAL_RTCEx_SetRefClock</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetRefClock</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetRefClock (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga394b6624dbda05ef3e375d83884ba00b"/><section>
+    <title>HAL_RTCEx_SetSmoothCalib()</title>
+<indexterm><primary>HAL_RTCEx_SetSmoothCalib</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetSmoothCalib</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetSmoothCalib (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t SmoothCalibPeriod, uint32_t SmoothCalibPlusPulses, uint32_t SmouthCalibMinusPulsesValue)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga07344e3d0f7e9f569ec02d4a75d158dc"/><section>
+    <title>HAL_RTCEx_SetSynchroShift()</title>
+<indexterm><primary>HAL_RTCEx_SetSynchroShift</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetSynchroShift</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetSynchroShift (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t ShiftAdd1S, uint32_t ShiftSubFS)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga4b819431e03c521285cf3e275d930707"/><section>
+    <title>HAL_RTCEx_SetTamper()</title>
+<indexterm><primary>HAL_RTCEx_SetTamper</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetTamper</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetTamper (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, <link linkend="_struct_r_t_c___tamper_type_def">RTC_TamperTypeDef</link> * sTamper)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga4984cf38a5bbdf1f607cc94cfdf3797f"/><section>
+    <title>HAL_RTCEx_SetTamper_IT()</title>
+<indexterm><primary>HAL_RTCEx_SetTamper_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetTamper_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetTamper_IT (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, <link linkend="_struct_r_t_c___tamper_type_def">RTC_TamperTypeDef</link> * sTamper)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga750db6ed8e6afde87530736826554019"/><section>
+    <title>HAL_RTCEx_SetTimeStamp()</title>
+<indexterm><primary>HAL_RTCEx_SetTimeStamp</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetTimeStamp</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetTimeStamp (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t TimeStampEdge, uint32_t RTC_TimeStampPin)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga96faf756e9e07d06ff1d7b696c21a6a4"/><section>
+    <title>HAL_RTCEx_SetTimeStamp_IT()</title>
+<indexterm><primary>HAL_RTCEx_SetTimeStamp_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetTimeStamp_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetTimeStamp_IT (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t TimeStampEdge, uint32_t RTC_TimeStampPin)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gab22373ae0d2eeb1322569c44c42ee9db"/><section>
+    <title>HAL_RTCEx_SetWakeUpTimer()</title>
+<indexterm><primary>HAL_RTCEx_SetWakeUpTimer</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetWakeUpTimer</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetWakeUpTimer (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga92f7781781a2fd96991ca932377418da"/><section>
+    <title>HAL_RTCEx_SetWakeUpTimer_IT()</title>
+<indexterm><primary>HAL_RTCEx_SetWakeUpTimer_IT</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_SetWakeUpTimer_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RTCEx_SetWakeUpTimer_IT (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gad849caf1e7b4774af56388a13636ba73"/><section>
+    <title>HAL_RTCEx_Tamper1EventCallback()</title>
+<indexterm><primary>HAL_RTCEx_Tamper1EventCallback</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_Tamper1EventCallback</secondary></indexterm>
+<para><computeroutput>void HAL_RTCEx_Tamper1EventCallback (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga14086326964355aaf3793ad3157ea7c3"/><section>
+    <title>HAL_RTCEx_Tamper2EventCallback()</title>
+<indexterm><primary>HAL_RTCEx_Tamper2EventCallback</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_Tamper2EventCallback</secondary></indexterm>
+<para><computeroutput>void HAL_RTCEx_Tamper2EventCallback (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga710f2cd8bab31242d496b020c182fef3"/><section>
+    <title>HAL_RTCEx_TamperTimeStampIRQHandler()</title>
+<indexterm><primary>HAL_RTCEx_TamperTimeStampIRQHandler</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_TamperTimeStampIRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_RTCEx_TamperTimeStampIRQHandler (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gac9ef67f1f1698e9560a5ecd5e8c9a330"/><section>
+    <title>HAL_RTCEx_TimeStampEventCallback()</title>
+<indexterm><primary>HAL_RTCEx_TimeStampEventCallback</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_TimeStampEventCallback</secondary></indexterm>
+<para><computeroutput>void HAL_RTCEx_TimeStampEventCallback (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1gac9ed5d6224b5c86f2845a9c1af7d94de"/><section>
+    <title>HAL_RTCEx_WakeUpTimerEventCallback()</title>
+<indexterm><primary>HAL_RTCEx_WakeUpTimerEventCallback</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_WakeUpTimerEventCallback</secondary></indexterm>
+<para><computeroutput>void HAL_RTCEx_WakeUpTimerEventCallback (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+<anchor xml:id="_group___r_t_c_ex_1ga5e391424483012fe09827739dc53885f"/><section>
+    <title>HAL_RTCEx_WakeUpTimerIRQHandler()</title>
+<indexterm><primary>HAL_RTCEx_WakeUpTimerIRQHandler</primary><secondary>RTCEx</secondary></indexterm>
+<indexterm><primary>RTCEx</primary><secondary>HAL_RTCEx_WakeUpTimerIRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_RTCEx_WakeUpTimerIRQHandler (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> * hrtc)</computeroutput></para></section>
+</section>
+</section>

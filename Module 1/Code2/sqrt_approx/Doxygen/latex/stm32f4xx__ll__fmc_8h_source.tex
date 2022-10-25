@@ -1,0 +1,485 @@
+\hypertarget{stm32f4xx__ll__fmc_8h_source}{}\doxysection{stm32f4xx\+\_\+ll\+\_\+fmc.\+h}
+\label{stm32f4xx__ll__fmc_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_ll\_fmc.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_ll\_fmc.h}}
+\mbox{\hyperlink{stm32f4xx__ll__fmc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00038}00038 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_LL\_FMC\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00040}00040 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_LL\_FMC\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00046}00046 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00048}00048 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00049}00049 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00059}00059 \textcolor{comment}{/* Exported typedef -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00060}00060 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_TypeDef            FMC\_Bank1\_TypeDef}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00061}00061 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_EXTENDED\_TypeDef   FMC\_Bank1E\_TypeDef}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00062}00062 \textcolor{preprocessor}{\#define FMC\_NAND\_TypeDef               FMC\_Bank2\_3\_TypeDef}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00063}00063 \textcolor{preprocessor}{\#define FMC\_PCCARD\_TypeDef             FMC\_Bank4\_TypeDef}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00064}00064 \textcolor{preprocessor}{\#define FMC\_SDRAM\_TypeDef              FMC\_Bank5\_6\_TypeDef}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00066}00066 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_DEVICE             FMC\_Bank1}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00067}00067 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_EXTENDED\_DEVICE    FMC\_Bank1E}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00068}00068 \textcolor{preprocessor}{\#define FMC\_NAND\_DEVICE                FMC\_Bank2\_3}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00069}00069 \textcolor{preprocessor}{\#define FMC\_PCCARD\_DEVICE              FMC\_Bank4}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00070}00070 \textcolor{preprocessor}{\#define FMC\_SDRAM\_DEVICE               FMC\_Bank5\_6}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00075}00075 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00076}00076 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00077}00077   uint32\_t NSBank;                       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00080}00080   uint32\_t DataAddressMux;               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00084}00084   uint32\_t MemoryType;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00088}00088   uint32\_t MemoryDataWidth;              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00091}00091   uint32\_t BurstAccessMode;              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00095}00095   uint32\_t WaitSignalPolarity;           }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00099}00099   uint32\_t WrapMode;                     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00103}00103   uint32\_t WaitSignalActive;             }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00108}00108   uint32\_t WriteOperation;               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00111}00111   uint32\_t WaitSignal;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00115}00115   uint32\_t ExtendedMode;                 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00118}00118   uint32\_t AsynchronousWait;             }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00122}00122   uint32\_t WriteBurst;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00125}00125   uint32\_t ContinuousClock;              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00130}00130 \}FMC\_NORSRAM\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00135}00135 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00136}00136 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00137}00137   uint32\_t AddressSetupTime;             }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00142}00142   uint32\_t AddressHoldTime;              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00147}00147   uint32\_t DataSetupTime;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00153}00153   uint32\_t BusTurnAroundDuration;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00158}00158   uint32\_t CLKDivision;                  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00163}00163   uint32\_t DataLatency;                  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00171}00171   uint32\_t AccessMode;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00173}00173 \}FMC\_NORSRAM\_TimingTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00178}00178 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00179}00179 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00180}00180   uint32\_t NandBank;               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00183}00183   uint32\_t Waitfeature;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00186}00186   uint32\_t MemoryDataWidth;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00189}00189   uint32\_t EccComputation;         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00192}00192   uint32\_t ECCPageSize;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00195}00195   uint32\_t TCLRSetupTime;          }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00199}00199   uint32\_t TARSetupTime;           }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00202}00202 \}FMC\_NAND\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00207}00207 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00208}00208 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00209}00209   uint32\_t SetupTime;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00215}00215   uint32\_t WaitSetupTime;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00221}00221   uint32\_t HoldSetupTime;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00228}00228   uint32\_t HiZSetupTime;         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00233}00233 \}FMC\_NAND\_PCC\_TimingTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00234}00234 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00238}00238 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00239}00239 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00240}00240   uint32\_t Waitfeature;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00243}00243   uint32\_t TCLRSetupTime;          }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00247}00247   uint32\_t TARSetupTime;           }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00250}00250 \}FMC\_PCCARD\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00251}00251 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00255}00255 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00256}00256 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00257}00257   uint32\_t SDBank;                      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00260}00260   uint32\_t ColumnBitsNumber;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00263}00263   uint32\_t RowBitsNumber;               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00266}00266   uint32\_t MemoryDataWidth;             }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00269}00269   uint32\_t InternalBankNumber;          }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00272}00272   uint32\_t CASLatency;                  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00275}00275   uint32\_t WriteProtection;             }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00278}00278   uint32\_t SDClockPeriod;               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00282}00282   uint32\_t ReadBurst;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00286}00286   uint32\_t ReadPipeDelay;               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00288}00288 \}FMC\_SDRAM\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00289}00289 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00293}00293 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00294}00294 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00295}00295   uint32\_t LoadToActiveDelay;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00299}00299   uint32\_t ExitSelfRefreshDelay;         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00303}00303   uint32\_t SelfRefreshTime;              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00307}00307   uint32\_t RowCycleDelay;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00312}00312   uint32\_t WriteRecoveryTime;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00315}00315   uint32\_t RPDelay;                      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00319}00319   uint32\_t RCDDelay;                     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00322}00322 \}FMC\_SDRAM\_TimingTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00323}00323 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00327}00327 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00328}00328 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00329}00329   uint32\_t CommandMode;                  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00332}00332   uint32\_t CommandTarget;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00335}00335   uint32\_t AutoRefreshNumber;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00338}00338   uint32\_t ModeRegisterDefinition;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00339}00339 \}FMC\_SDRAM\_CommandTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00340}00340 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00341}00341 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00342}00342 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00350}00350 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_BANK1                       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00351}00351 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_BANK2                       ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00352}00352 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_BANK3                       ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00353}00353 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_BANK4                       ((uint32\_t)0x00000006)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00354}00354 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00355}00355 \textcolor{preprocessor}{\#define IS\_FMC\_NORSRAM\_BANK(BANK) (((BANK) == FMC\_NORSRAM\_BANK1) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00356}00356 \textcolor{preprocessor}{                                   ((BANK) == FMC\_NORSRAM\_BANK2) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00357}00357 \textcolor{preprocessor}{                                   ((BANK) == FMC\_NORSRAM\_BANK3) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00358}00358 \textcolor{preprocessor}{                                   ((BANK) == FMC\_NORSRAM\_BANK4))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00366}00366 \textcolor{preprocessor}{\#define FMC\_DATA\_ADDRESS\_MUX\_DISABLE            ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00367}00367 \textcolor{preprocessor}{\#define FMC\_DATA\_ADDRESS\_MUX\_ENABLE             ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00368}00368 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00369}00369 \textcolor{preprocessor}{\#define IS\_FMC\_MUX(MUX) (((MUX) == FMC\_DATA\_ADDRESS\_MUX\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00370}00370 \textcolor{preprocessor}{                         ((MUX) == FMC\_DATA\_ADDRESS\_MUX\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00378}00378 \textcolor{preprocessor}{\#define FMC\_MEMORY\_TYPE\_SRAM                    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00379}00379 \textcolor{preprocessor}{\#define FMC\_MEMORY\_TYPE\_PSRAM                   ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00380}00380 \textcolor{preprocessor}{\#define FMC\_MEMORY\_TYPE\_NOR                     ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00381}00381 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00382}00382 \textcolor{preprocessor}{\#define IS\_FMC\_MEMORY(MEMORY) (((MEMORY) == FMC\_MEMORY\_TYPE\_SRAM) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00383}00383 \textcolor{preprocessor}{                               ((MEMORY) == FMC\_MEMORY\_TYPE\_PSRAM)|| \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00384}00384 \textcolor{preprocessor}{                               ((MEMORY) == FMC\_MEMORY\_TYPE\_NOR))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00392}00392 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_MEM\_BUS\_WIDTH\_8             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00393}00393 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_MEM\_BUS\_WIDTH\_16            ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00394}00394 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_MEM\_BUS\_WIDTH\_32            ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00395}00395 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00396}00396 \textcolor{preprocessor}{\#define IS\_FMC\_NORSRAM\_MEMORY\_WIDTH(WIDTH) (((WIDTH) == FMC\_NORSRAM\_MEM\_BUS\_WIDTH\_8)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00397}00397 \textcolor{preprocessor}{                                            ((WIDTH) == FMC\_NORSRAM\_MEM\_BUS\_WIDTH\_16) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00398}00398 \textcolor{preprocessor}{                                            ((WIDTH) == FMC\_NORSRAM\_MEM\_BUS\_WIDTH\_32))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00406}00406 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_FLASH\_ACCESS\_ENABLE         ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00407}00407 \textcolor{preprocessor}{\#define FMC\_NORSRAM\_FLASH\_ACCESS\_DISABLE        ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00415}00415 \textcolor{preprocessor}{\#define FMC\_BURST\_ACCESS\_MODE\_DISABLE           ((uint32\_t)0x00000000) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00416}00416 \textcolor{preprocessor}{\#define FMC\_BURST\_ACCESS\_MODE\_ENABLE            ((uint32\_t)0x00000100)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00417}00417 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00418}00418 \textcolor{preprocessor}{\#define IS\_FMC\_BURSTMODE(STATE) (((STATE) == FMC\_BURST\_ACCESS\_MODE\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00419}00419 \textcolor{preprocessor}{                                 ((STATE) == FMC\_BURST\_ACCESS\_MODE\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00428}00428 \textcolor{preprocessor}{\#define FMC\_WAIT\_SIGNAL\_POLARITY\_LOW            ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00429}00429 \textcolor{preprocessor}{\#define FMC\_WAIT\_SIGNAL\_POLARITY\_HIGH           ((uint32\_t)0x00000200)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00430}00430 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00431}00431 \textcolor{preprocessor}{\#define IS\_FMC\_WAIT\_POLARITY(POLARITY) (((POLARITY) == FMC\_WAIT\_SIGNAL\_POLARITY\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00432}00432 \textcolor{preprocessor}{                                        ((POLARITY) == FMC\_WAIT\_SIGNAL\_POLARITY\_HIGH))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00440}00440 \textcolor{preprocessor}{\#define FMC\_WRAP\_MODE\_DISABLE                   ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00441}00441 \textcolor{preprocessor}{\#define FMC\_WRAP\_MODE\_ENABLE                    ((uint32\_t)0x00000400)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00442}00442 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00443}00443 \textcolor{preprocessor}{\#define IS\_FMC\_WRAP\_MODE(MODE) (((MODE) == FMC\_WRAP\_MODE\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00444}00444 \textcolor{preprocessor}{                                ((MODE) == FMC\_WRAP\_MODE\_ENABLE)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00452}00452 \textcolor{preprocessor}{\#define FMC\_WAIT\_TIMING\_BEFORE\_WS               ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00453}00453 \textcolor{preprocessor}{\#define FMC\_WAIT\_TIMING\_DURING\_WS               ((uint32\_t)0x00000800)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00454}00454 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00455}00455 \textcolor{preprocessor}{\#define IS\_FMC\_WAIT\_SIGNAL\_ACTIVE(ACTIVE) (((ACTIVE) == FMC\_WAIT\_TIMING\_BEFORE\_WS) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00456}00456 \textcolor{preprocessor}{                                           ((ACTIVE) == FMC\_WAIT\_TIMING\_DURING\_WS)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00464}00464 \textcolor{preprocessor}{\#define FMC\_WRITE\_OPERATION\_DISABLE             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00465}00465 \textcolor{preprocessor}{\#define FMC\_WRITE\_OPERATION\_ENABLE              ((uint32\_t)0x00001000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00466}00466 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00467}00467 \textcolor{preprocessor}{\#define IS\_FMC\_WRITE\_OPERATION(OPERATION) (((OPERATION) == FMC\_WRITE\_OPERATION\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00468}00468 \textcolor{preprocessor}{                                           ((OPERATION) == FMC\_WRITE\_OPERATION\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00476}00476 \textcolor{preprocessor}{\#define FMC\_WAIT\_SIGNAL\_DISABLE                 ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00477}00477 \textcolor{preprocessor}{\#define FMC\_WAIT\_SIGNAL\_ENABLE                  ((uint32\_t)0x00002000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00478}00478 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00479}00479 \textcolor{preprocessor}{\#define IS\_FMC\_WAITE\_SIGNAL(SIGNAL) (((SIGNAL) == FMC\_WAIT\_SIGNAL\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00480}00480 \textcolor{preprocessor}{                                     ((SIGNAL) == FMC\_WAIT\_SIGNAL\_ENABLE)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00488}00488 \textcolor{preprocessor}{\#define FMC\_EXTENDED\_MODE\_DISABLE               ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00489}00489 \textcolor{preprocessor}{\#define FMC\_EXTENDED\_MODE\_ENABLE                ((uint32\_t)0x00004000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00490}00490 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00491}00491 \textcolor{preprocessor}{\#define IS\_FMC\_EXTENDED\_MODE(MODE) (((MODE) == FMC\_EXTENDED\_MODE\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00492}00492 \textcolor{preprocessor}{                                    ((MODE) == FMC\_EXTENDED\_MODE\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00500}00500 \textcolor{preprocessor}{\#define FMC\_ASYNCHRONOUS\_WAIT\_DISABLE           ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00501}00501 \textcolor{preprocessor}{\#define FMC\_ASYNCHRONOUS\_WAIT\_ENABLE            ((uint32\_t)0x00008000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00502}00502 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00503}00503 \textcolor{preprocessor}{\#define IS\_FMC\_ASYNWAIT(STATE) (((STATE) == FMC\_ASYNCHRONOUS\_WAIT\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00504}00504 \textcolor{preprocessor}{                                ((STATE) == FMC\_ASYNCHRONOUS\_WAIT\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00512}00512 \textcolor{preprocessor}{\#define FMC\_WRITE\_BURST\_DISABLE                 ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00513}00513 \textcolor{preprocessor}{\#define FMC\_WRITE\_BURST\_ENABLE                  ((uint32\_t)0x00080000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00514}00514 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00515}00515 \textcolor{preprocessor}{\#define IS\_FMC\_WRITE\_BURST(BURST) (((BURST) == FMC\_WRITE\_BURST\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00516}00516 \textcolor{preprocessor}{                                   ((BURST) == FMC\_WRITE\_BURST\_ENABLE)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00524}00524 \textcolor{preprocessor}{\#define FMC\_CONTINUOUS\_CLOCK\_SYNC\_ONLY          ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00525}00525 \textcolor{preprocessor}{\#define FMC\_CONTINUOUS\_CLOCK\_SYNC\_ASYNC         ((uint32\_t)0x00100000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00526}00526 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00527}00527 \textcolor{preprocessor}{\#define IS\_FMC\_CONTINOUS\_CLOCK(CCLOCK) (((CCLOCK) == FMC\_CONTINUOUS\_CLOCK\_SYNC\_ONLY) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00528}00528 \textcolor{preprocessor}{                                        ((CCLOCK) == FMC\_CONTINUOUS\_CLOCK\_SYNC\_ASYNC)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00536}00536 \textcolor{preprocessor}{\#define IS\_FMC\_ADDRESS\_SETUP\_TIME(TIME) ((TIME) <= 15)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00544}00544 \textcolor{preprocessor}{\#define IS\_FMC\_ADDRESS\_HOLD\_TIME(TIME) (((TIME) > 0) \&\& ((TIME) <= 15))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00552}00552 \textcolor{preprocessor}{\#define IS\_FMC\_DATASETUP\_TIME(TIME) (((TIME) > 0) \&\& ((TIME) <= 255))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00560}00560 \textcolor{preprocessor}{\#define IS\_FMC\_TURNAROUND\_TIME(TIME) ((TIME) <= 15)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00568}00568 \textcolor{preprocessor}{\#define IS\_FMC\_CLK\_DIV(DIV) (((DIV) > 1) \&\& ((DIV) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00576}00576 \textcolor{preprocessor}{\#define IS\_FMC\_DATA\_LATENCY(LATENCY) (((LATENCY) > 1) \&\& ((LATENCY) <= 17))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00584}00584 \textcolor{preprocessor}{\#define FMC\_ACCESS\_MODE\_A                        ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00585}00585 \textcolor{preprocessor}{\#define FMC\_ACCESS\_MODE\_B                        ((uint32\_t)0x10000000) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00586}00586 \textcolor{preprocessor}{\#define FMC\_ACCESS\_MODE\_C                        ((uint32\_t)0x20000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00587}00587 \textcolor{preprocessor}{\#define FMC\_ACCESS\_MODE\_D                        ((uint32\_t)0x30000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00588}00588 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00589}00589 \textcolor{preprocessor}{\#define IS\_FMC\_ACCESS\_MODE(MODE) (((MODE) == FMC\_ACCESS\_MODE\_A) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00590}00590 \textcolor{preprocessor}{                                  ((MODE) == FMC\_ACCESS\_MODE\_B) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00591}00591 \textcolor{preprocessor}{                                  ((MODE) == FMC\_ACCESS\_MODE\_C) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00592}00592 \textcolor{preprocessor}{                                  ((MODE) == FMC\_ACCESS\_MODE\_D))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00608}00608 \textcolor{preprocessor}{\#define FMC\_NAND\_BANK2                          ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00609}00609 \textcolor{preprocessor}{\#define FMC\_NAND\_BANK3                          ((uint32\_t)0x00000100)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00610}00610 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00611}00611 \textcolor{preprocessor}{\#define IS\_FMC\_NAND\_BANK(BANK) (((BANK) == FMC\_NAND\_BANK2) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00612}00612 \textcolor{preprocessor}{                                ((BANK) == FMC\_NAND\_BANK3))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00620}00620 \textcolor{preprocessor}{\#define FMC\_NAND\_PCC\_WAIT\_FEATURE\_DISABLE           ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00621}00621 \textcolor{preprocessor}{\#define FMC\_NAND\_PCC\_WAIT\_FEATURE\_ENABLE            ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00622}00622 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00623}00623 \textcolor{preprocessor}{\#define IS\_FMC\_WAIT\_FEATURE(FEATURE) (((FEATURE) == FMC\_NAND\_PCC\_WAIT\_FEATURE\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00624}00624 \textcolor{preprocessor}{                                      ((FEATURE) == FMC\_NAND\_PCC\_WAIT\_FEATURE\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00632}00632 \textcolor{preprocessor}{\#define FMC\_PCR\_MEMORY\_TYPE\_PCCARD        ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00633}00633 \textcolor{preprocessor}{\#define FMC\_PCR\_MEMORY\_TYPE\_NAND          ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00641}00641 \textcolor{preprocessor}{\#define FMC\_NAND\_PCC\_MEM\_BUS\_WIDTH\_8                ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00642}00642 \textcolor{preprocessor}{\#define FMC\_NAND\_PCC\_MEM\_BUS\_WIDTH\_16               ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00643}00643 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00644}00644 \textcolor{preprocessor}{\#define IS\_FMC\_NAND\_MEMORY\_WIDTH(WIDTH) (((WIDTH) == FMC\_NAND\_PCC\_MEM\_BUS\_WIDTH\_8) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00645}00645 \textcolor{preprocessor}{                                         ((WIDTH) == FMC\_NAND\_PCC\_MEM\_BUS\_WIDTH\_16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00653}00653 \textcolor{preprocessor}{\#define FMC\_NAND\_ECC\_DISABLE                    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00654}00654 \textcolor{preprocessor}{\#define FMC\_NAND\_ECC\_ENABLE                     ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00655}00655 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00656}00656 \textcolor{preprocessor}{\#define IS\_FMC\_ECC\_STATE(STATE) (((STATE) == FMC\_NAND\_ECC\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00657}00657 \textcolor{preprocessor}{                                 ((STATE) == FMC\_NAND\_ECC\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00665}00665 \textcolor{preprocessor}{\#define FMC\_NAND\_ECC\_PAGE\_SIZE\_256BYTE          ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00666}00666 \textcolor{preprocessor}{\#define FMC\_NAND\_ECC\_PAGE\_SIZE\_512BYTE          ((uint32\_t)0x00020000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00667}00667 \textcolor{preprocessor}{\#define FMC\_NAND\_ECC\_PAGE\_SIZE\_1024BYTE         ((uint32\_t)0x00040000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00668}00668 \textcolor{preprocessor}{\#define FMC\_NAND\_ECC\_PAGE\_SIZE\_2048BYTE         ((uint32\_t)0x00060000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00669}00669 \textcolor{preprocessor}{\#define FMC\_NAND\_ECC\_PAGE\_SIZE\_4096BYTE         ((uint32\_t)0x00080000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00670}00670 \textcolor{preprocessor}{\#define FMC\_NAND\_ECC\_PAGE\_SIZE\_8192BYTE         ((uint32\_t)0x000A0000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00671}00671 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00672}00672 \textcolor{preprocessor}{\#define IS\_FMC\_ECCPAGE\_SIZE(SIZE) (((SIZE) == FMC\_NAND\_ECC\_PAGE\_SIZE\_256BYTE)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00673}00673 \textcolor{preprocessor}{                                   ((SIZE) == FMC\_NAND\_ECC\_PAGE\_SIZE\_512BYTE)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00674}00674 \textcolor{preprocessor}{                                   ((SIZE) == FMC\_NAND\_ECC\_PAGE\_SIZE\_1024BYTE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00675}00675 \textcolor{preprocessor}{                                   ((SIZE) == FMC\_NAND\_ECC\_PAGE\_SIZE\_2048BYTE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00676}00676 \textcolor{preprocessor}{                                   ((SIZE) == FMC\_NAND\_ECC\_PAGE\_SIZE\_4096BYTE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00677}00677 \textcolor{preprocessor}{                                   ((SIZE) == FMC\_NAND\_ECC\_PAGE\_SIZE\_8192BYTE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00685}00685 \textcolor{preprocessor}{\#define IS\_FMC\_TCLR\_TIME(TIME) ((TIME) <= 255)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00693}00693 \textcolor{preprocessor}{\#define IS\_FMC\_TAR\_TIME(TIME) ((TIME) <= 255)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00701}00701 \textcolor{preprocessor}{\#define IS\_FMC\_SETUP\_TIME(TIME) ((TIME) <= 255)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00709}00709 \textcolor{preprocessor}{\#define IS\_FMC\_WAIT\_TIME(TIME) ((TIME) <= 255)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00717}00717 \textcolor{preprocessor}{\#define IS\_FMC\_HOLD\_TIME(TIME) ((TIME) <= 255)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00725}00725 \textcolor{preprocessor}{\#define IS\_FMC\_HIZ\_TIME(TIME) ((TIME) <= 255)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00741}00741 \textcolor{preprocessor}{\#define FMC\_SDRAM\_BANK1                       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00742}00742 \textcolor{preprocessor}{\#define FMC\_SDRAM\_BANK2                       ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00743}00743 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00744}00744 \textcolor{preprocessor}{\#define IS\_FMC\_SDRAM\_BANK(BANK) (((BANK) == FMC\_SDRAM\_BANK1) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00745}00745 \textcolor{preprocessor}{                                 ((BANK) == FMC\_SDRAM\_BANK2))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00753}00753 \textcolor{preprocessor}{\#define FMC\_SDRAM\_COLUMN\_BITS\_NUM\_8           ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00754}00754 \textcolor{preprocessor}{\#define FMC\_SDRAM\_COLUMN\_BITS\_NUM\_9           ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00755}00755 \textcolor{preprocessor}{\#define FMC\_SDRAM\_COLUMN\_BITS\_NUM\_10          ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00756}00756 \textcolor{preprocessor}{\#define FMC\_SDRAM\_COLUMN\_BITS\_NUM\_11          ((uint32\_t)0x00000003)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00757}00757 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00758}00758 \textcolor{preprocessor}{\#define IS\_FMC\_COLUMNBITS\_NUMBER(COLUMN) (((COLUMN) == FMC\_SDRAM\_COLUMN\_BITS\_NUM\_8)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00759}00759 \textcolor{preprocessor}{                                          ((COLUMN) == FMC\_SDRAM\_COLUMN\_BITS\_NUM\_9)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00760}00760 \textcolor{preprocessor}{                                          ((COLUMN) == FMC\_SDRAM\_COLUMN\_BITS\_NUM\_10) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00761}00761 \textcolor{preprocessor}{                                          ((COLUMN) == FMC\_SDRAM\_COLUMN\_BITS\_NUM\_11))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00769}00769 \textcolor{preprocessor}{\#define FMC\_SDRAM\_ROW\_BITS\_NUM\_11             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00770}00770 \textcolor{preprocessor}{\#define FMC\_SDRAM\_ROW\_BITS\_NUM\_12             ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00771}00771 \textcolor{preprocessor}{\#define FMC\_SDRAM\_ROW\_BITS\_NUM\_13             ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00772}00772 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00773}00773 \textcolor{preprocessor}{\#define IS\_FMC\_ROWBITS\_NUMBER(ROW) (((ROW) == FMC\_SDRAM\_ROW\_BITS\_NUM\_11) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00774}00774 \textcolor{preprocessor}{                                    ((ROW) == FMC\_SDRAM\_ROW\_BITS\_NUM\_12) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00775}00775 \textcolor{preprocessor}{                                    ((ROW) == FMC\_SDRAM\_ROW\_BITS\_NUM\_13))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00783}00783 \textcolor{preprocessor}{\#define FMC\_SDRAM\_MEM\_BUS\_WIDTH\_8             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00784}00784 \textcolor{preprocessor}{\#define FMC\_SDRAM\_MEM\_BUS\_WIDTH\_16            ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00785}00785 \textcolor{preprocessor}{\#define FMC\_SDRAM\_MEM\_BUS\_WIDTH\_32            ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00786}00786 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00787}00787 \textcolor{preprocessor}{\#define IS\_FMC\_SDMEMORY\_WIDTH(WIDTH) (((WIDTH) == FMC\_SDRAM\_MEM\_BUS\_WIDTH\_8)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00788}00788 \textcolor{preprocessor}{                                      ((WIDTH) == FMC\_SDRAM\_MEM\_BUS\_WIDTH\_16) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00789}00789 \textcolor{preprocessor}{                                      ((WIDTH) == FMC\_SDRAM\_MEM\_BUS\_WIDTH\_32))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00797}00797 \textcolor{preprocessor}{\#define FMC\_SDRAM\_INTERN\_BANKS\_NUM\_2          ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00798}00798 \textcolor{preprocessor}{\#define FMC\_SDRAM\_INTERN\_BANKS\_NUM\_4          ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00799}00799 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00800}00800 \textcolor{preprocessor}{\#define IS\_FMC\_INTERNALBANK\_NUMBER(NUMBER) (((NUMBER) == FMC\_SDRAM\_INTERN\_BANKS\_NUM\_2) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00801}00801 \textcolor{preprocessor}{                                            ((NUMBER) == FMC\_SDRAM\_INTERN\_BANKS\_NUM\_4))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00809}00809 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CAS\_LATENCY\_1               ((uint32\_t)0x00000080)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00810}00810 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CAS\_LATENCY\_2               ((uint32\_t)0x00000100)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00811}00811 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CAS\_LATENCY\_3               ((uint32\_t)0x00000180)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00812}00812 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00813}00813 \textcolor{preprocessor}{\#define IS\_FMC\_CAS\_LATENCY(LATENCY) (((LATENCY) == FMC\_SDRAM\_CAS\_LATENCY\_1) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00814}00814 \textcolor{preprocessor}{                                     ((LATENCY) == FMC\_SDRAM\_CAS\_LATENCY\_2) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00815}00815 \textcolor{preprocessor}{                                     ((LATENCY) == FMC\_SDRAM\_CAS\_LATENCY\_3))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00823}00823 \textcolor{preprocessor}{\#define FMC\_SDRAM\_WRITE\_PROTECTION\_DISABLE    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00824}00824 \textcolor{preprocessor}{\#define FMC\_SDRAM\_WRITE\_PROTECTION\_ENABLE     ((uint32\_t)0x00000200)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00825}00825 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00826}00826 \textcolor{preprocessor}{\#define IS\_FMC\_WRITE\_PROTECTION(WRITE) (((WRITE) == FMC\_SDRAM\_WRITE\_PROTECTION\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00827}00827 \textcolor{preprocessor}{                                        ((WRITE) == FMC\_SDRAM\_WRITE\_PROTECTION\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00835}00835 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CLOCK\_DISABLE               ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00836}00836 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CLOCK\_PERIOD\_2              ((uint32\_t)0x00000800)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00837}00837 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CLOCK\_PERIOD\_3              ((uint32\_t)0x00000C00)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00838}00838 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00839}00839 \textcolor{preprocessor}{\#define IS\_FMC\_SDCLOCK\_PERIOD(PERIOD) (((PERIOD) == FMC\_SDRAM\_CLOCK\_DISABLE)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00840}00840 \textcolor{preprocessor}{                                       ((PERIOD) == FMC\_SDRAM\_CLOCK\_PERIOD\_2) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00841}00841 \textcolor{preprocessor}{                                       ((PERIOD) == FMC\_SDRAM\_CLOCK\_PERIOD\_3))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00849}00849 \textcolor{preprocessor}{\#define FMC\_SDRAM\_RBURST\_DISABLE              ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00850}00850 \textcolor{preprocessor}{\#define FMC\_SDRAM\_RBURST\_ENABLE               ((uint32\_t)0x00001000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00851}00851 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00852}00852 \textcolor{preprocessor}{\#define IS\_FMC\_READ\_BURST(RBURST) (((RBURST) == FMC\_SDRAM\_RBURST\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00853}00853 \textcolor{preprocessor}{                                   ((RBURST) == FMC\_SDRAM\_RBURST\_ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00861}00861 \textcolor{preprocessor}{\#define FMC\_SDRAM\_RPIPE\_DELAY\_0               ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00862}00862 \textcolor{preprocessor}{\#define FMC\_SDRAM\_RPIPE\_DELAY\_1               ((uint32\_t)0x00002000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00863}00863 \textcolor{preprocessor}{\#define FMC\_SDRAM\_RPIPE\_DELAY\_2               ((uint32\_t)0x00004000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00864}00864 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00865}00865 \textcolor{preprocessor}{\#define IS\_FMC\_READPIPE\_DELAY(DELAY) (((DELAY) == FMC\_SDRAM\_RPIPE\_DELAY\_0) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00866}00866 \textcolor{preprocessor}{                                      ((DELAY) == FMC\_SDRAM\_RPIPE\_DELAY\_1) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00867}00867 \textcolor{preprocessor}{                                      ((DELAY) == FMC\_SDRAM\_RPIPE\_DELAY\_2))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00875}00875 \textcolor{preprocessor}{\#define IS\_FMC\_LOADTOACTIVE\_DELAY(DELAY) (((DELAY) > 0) \&\& ((DELAY) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00883}00883 \textcolor{preprocessor}{\#define IS\_FMC\_EXITSELFREFRESH\_DELAY(DELAY) (((DELAY) > 0) \&\& ((DELAY) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00891}00891 \textcolor{preprocessor}{\#define IS\_FMC\_SELFREFRESH\_TIME(TIME) (((TIME) > 0) \&\& ((TIME) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00899}00899 \textcolor{preprocessor}{\#define IS\_FMC\_ROWCYCLE\_DELAY(DELAY) (((DELAY) > 0) \&\& ((DELAY) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00907}00907 \textcolor{preprocessor}{\#define IS\_FMC\_WRITE\_RECOVERY\_TIME(TIME) (((TIME) > 0) \&\& ((TIME) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00915}00915 \textcolor{preprocessor}{\#define IS\_FMC\_RP\_DELAY(DELAY) (((DELAY) > 0) \&\& ((DELAY) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00923}00923 \textcolor{preprocessor}{\#define IS\_FMC\_RCD\_DELAY(DELAY) (((DELAY) > 0) \&\& ((DELAY) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00924}00924 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00932}00932 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_NORMAL\_MODE             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00933}00933 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_CLK\_ENABLE              ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00934}00934 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_PALL                    ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00935}00935 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_AUTOREFRESH\_MODE        ((uint32\_t)0x00000003)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00936}00936 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_LOAD\_MODE               ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00937}00937 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_SELFREFRESH\_MODE        ((uint32\_t)0x00000005)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00938}00938 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_POWERDOWN\_MODE          ((uint32\_t)0x00000006)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00939}00939 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00940}00940 \textcolor{preprocessor}{\#define IS\_FMC\_COMMAND\_MODE(COMMAND) (((COMMAND) == FMC\_SDRAM\_CMD\_NORMAL\_MODE)      || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00941}00941 \textcolor{preprocessor}{                                      ((COMMAND) == FMC\_SDRAM\_CMD\_CLK\_ENABLE)       || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00942}00942 \textcolor{preprocessor}{                                      ((COMMAND) == FMC\_SDRAM\_CMD\_PALL)             || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00943}00943 \textcolor{preprocessor}{                                      ((COMMAND) == FMC\_SDRAM\_CMD\_AUTOREFRESH\_MODE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00944}00944 \textcolor{preprocessor}{                                      ((COMMAND) == FMC\_SDRAM\_CMD\_LOAD\_MODE)        || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00945}00945 \textcolor{preprocessor}{                                      ((COMMAND) == FMC\_SDRAM\_CMD\_SELFREFRESH\_MODE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00946}00946 \textcolor{preprocessor}{                                      ((COMMAND) == FMC\_SDRAM\_CMD\_POWERDOWN\_MODE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00954}00954 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_TARGET\_BANK2            FMC\_SDCMR\_CTB2}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00955}00955 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_TARGET\_BANK1            FMC\_SDCMR\_CTB1}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00956}00956 \textcolor{preprocessor}{\#define FMC\_SDRAM\_CMD\_TARGET\_BANK1\_2          ((uint32\_t)0x00000018)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00957}00957 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00958}00958 \textcolor{preprocessor}{\#define IS\_FMC\_COMMAND\_TARGET(TARGET) (((TARGET) == FMC\_SDRAM\_CMD\_TARGET\_BANK1) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00959}00959 \textcolor{preprocessor}{                                       ((TARGET) == FMC\_SDRAM\_CMD\_TARGET\_BANK2) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00960}00960 \textcolor{preprocessor}{                                       ((TARGET) == FMC\_SDRAM\_CMD\_TARGET\_BANK1\_2)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00968}00968 \textcolor{preprocessor}{\#define IS\_FMC\_AUTOREFRESH\_NUMBER(NUMBER) (((NUMBER) > 0) \&\& ((NUMBER) <= 16))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00976}00976 \textcolor{preprocessor}{\#define IS\_FMC\_MODE\_REGISTER(CONTENT) ((CONTENT) <= 8191)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00984}00984 \textcolor{preprocessor}{\#define IS\_FMC\_REFRESH\_RATE(RATE) ((RATE) <= 8191)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00992}00992 \textcolor{preprocessor}{\#define FMC\_SDRAM\_NORMAL\_MODE                     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00993}00993 \textcolor{preprocessor}{\#define FMC\_SDRAM\_SELF\_REFRESH\_MODE               FMC\_SDSR\_MODES1\_0}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l00994}00994 \textcolor{preprocessor}{\#define FMC\_SDRAM\_POWER\_DOWN\_MODE                 FMC\_SDSR\_MODES1\_1}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01002}01002 \textcolor{preprocessor}{\#define IS\_FMC\_NORSRAM\_DEVICE(INSTANCE) ((INSTANCE) == FMC\_NORSRAM\_DEVICE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01010}01010 \textcolor{preprocessor}{\#define IS\_FMC\_NORSRAM\_EXTENDED\_DEVICE(INSTANCE) ((INSTANCE) == FMC\_NORSRAM\_EXTENDED\_DEVICE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01018}01018 \textcolor{preprocessor}{\#define IS\_FMC\_NAND\_DEVICE(INSTANCE) ((INSTANCE) == FMC\_NAND\_DEVICE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01026}01026 \textcolor{preprocessor}{\#define IS\_FMC\_PCCARD\_DEVICE(INSTANCE) ((INSTANCE) == FMC\_PCCARD\_DEVICE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01034}01034 \textcolor{preprocessor}{\#define IS\_FMC\_SDRAM\_DEVICE(INSTANCE) ((INSTANCE) == FMC\_SDRAM\_DEVICE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01047}01047 \textcolor{preprocessor}{\#define FMC\_IT\_RISING\_EDGE                ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01048}01048 \textcolor{preprocessor}{\#define FMC\_IT\_LEVEL                      ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01049}01049 \textcolor{preprocessor}{\#define FMC\_IT\_FALLING\_EDGE               ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01050}01050 \textcolor{preprocessor}{\#define FMC\_IT\_REFRESH\_ERROR              ((uint32\_t)0x00004000)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01051}01051 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01052}01052 \textcolor{preprocessor}{\#define IS\_FMC\_IT(IT) ((((IT) \& (uint32\_t)0xFFFFBFC7) == 0x00000000) \&\& ((IT) != 0x00000000))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01053}01053 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01054}01054 \textcolor{preprocessor}{\#define IS\_FMC\_GET\_IT(IT) (((IT) == FMC\_IT\_RISING\_EDGE)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01055}01055 \textcolor{preprocessor}{                           ((IT) == FMC\_IT\_LEVEL)         || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01056}01056 \textcolor{preprocessor}{                           ((IT) == FMC\_IT\_FALLING\_EDGE)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01057}01057 \textcolor{preprocessor}{                           ((IT) == FMC\_IT\_REFRESH\_ERROR)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01066}01066 \textcolor{preprocessor}{\#define FMC\_FLAG\_RISING\_EDGE                    ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01067}01067 \textcolor{preprocessor}{\#define FMC\_FLAG\_LEVEL                          ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01068}01068 \textcolor{preprocessor}{\#define FMC\_FLAG\_FALLING\_EDGE                   ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01069}01069 \textcolor{preprocessor}{\#define FMC\_FLAG\_FEMPT                          ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01070}01070 \textcolor{preprocessor}{\#define FMC\_SDRAM\_FLAG\_REFRESH\_IT               FMC\_SDSR\_RE}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01071}01071 \textcolor{preprocessor}{\#define FMC\_SDRAM\_FLAG\_BUSY                     FMC\_SDSR\_BUSY}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01072}01072 \textcolor{preprocessor}{\#define FMC\_SDRAM\_FLAG\_REFRESH\_ERROR            FMC\_SDRTR\_CRE}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01073}01073 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01074}01074 \textcolor{preprocessor}{\#define IS\_FMC\_GET\_FLAG(FLAG) (((FLAG) == FMC\_FLAG\_RISING\_EDGE)      || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01075}01075 \textcolor{preprocessor}{                               ((FLAG) == FMC\_FLAG\_LEVEL)            || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01076}01076 \textcolor{preprocessor}{                               ((FLAG) == FMC\_FLAG\_FALLING\_EDGE)     || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01077}01077 \textcolor{preprocessor}{                               ((FLAG) == FMC\_FLAG\_FEMPT)            || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01078}01078 \textcolor{preprocessor}{                               ((FLAG) == FMC\_SDRAM\_FLAG\_REFRESH\_IT) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01079}01079 \textcolor{preprocessor}{                               ((FLAG) == FMC\_SDRAM\_FLAG\_BUSY))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01080}01080 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01081}01081 \textcolor{preprocessor}{\#define IS\_FMC\_CLEAR\_FLAG(FLAG) ((((FLAG) \& (uint32\_t)0xFFFFFFF8) == 0x00000000) \&\& ((FLAG) != 0x00000000))                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01086}01086 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01087}01087 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01099}01099 \textcolor{preprocessor}{\#define \_\_FMC\_NORSRAM\_ENABLE(\_\_INSTANCE\_\_, \_\_BANK\_\_)  ((\_\_INSTANCE\_\_)-\/>BTCR[(\_\_BANK\_\_)] |= FMC\_BCR1\_MBKEN)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01100}01100 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01107}01107 \textcolor{preprocessor}{\#define \_\_FMC\_NORSRAM\_DISABLE(\_\_INSTANCE\_\_, \_\_BANK\_\_) ((\_\_INSTANCE\_\_)-\/>BTCR[(\_\_BANK\_\_)] \&= \string~FMC\_BCR1\_MBKEN)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01108}01108 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01124}01124 \textcolor{preprocessor}{\#define \_\_FMC\_NAND\_ENABLE(\_\_INSTANCE\_\_, \_\_BANK\_\_)  (((\_\_BANK\_\_) == FMC\_NAND\_BANK2)? ((\_\_INSTANCE\_\_)-\/>PCR2 |= FMC\_PCR2\_PBKEN): \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01125}01125 \textcolor{preprocessor}{                                                    ((\_\_INSTANCE\_\_)-\/>PCR3 |= FMC\_PCR3\_PBKEN))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01126}01126 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01133}01133 \textcolor{preprocessor}{\#define \_\_FMC\_NAND\_DISABLE(\_\_INSTANCE\_\_, \_\_BANK\_\_) (((\_\_BANK\_\_) == FMC\_NAND\_BANK2)? ((\_\_INSTANCE\_\_)-\/>PCR2 \&= \string~FMC\_PCR2\_PBKEN): \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01134}01134 \textcolor{preprocessor}{                                                   ((\_\_INSTANCE\_\_)-\/>PCR3 \&= \string~FMC\_PCR3\_PBKEN))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01149}01149 \textcolor{preprocessor}{\#define \_\_FMC\_PCCARD\_ENABLE(\_\_INSTANCE\_\_)  ((\_\_INSTANCE\_\_)-\/>PCR4 |= FMC\_PCR4\_PBKEN)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01150}01150 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01156}01156 \textcolor{preprocessor}{\#define \_\_FMC\_PCCARD\_DISABLE(\_\_INSTANCE\_\_) ((\_\_INSTANCE\_\_)-\/>PCR4 \&= \string~FMC\_PCR4\_PBKEN)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01177}01177 \textcolor{preprocessor}{\#define \_\_FMC\_NAND\_ENABLE\_IT(\_\_INSTANCE\_\_, \_\_BANK\_\_, \_\_INTERRUPT\_\_)  (((\_\_BANK\_\_) == FMC\_NAND\_BANK2)? ((\_\_INSTANCE\_\_)-\/>SR2 |= (\_\_INTERRUPT\_\_)): \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01178}01178 \textcolor{preprocessor}{                                                                                                      ((\_\_INSTANCE\_\_)-\/>SR3 |= (\_\_INTERRUPT\_\_)))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01179}01179 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01191}01191 \textcolor{preprocessor}{\#define \_\_FMC\_NAND\_DISABLE\_IT(\_\_INSTANCE\_\_, \_\_BANK\_\_, \_\_INTERRUPT\_\_)  (((\_\_BANK\_\_) == FMC\_NAND\_BANK2)? ((\_\_INSTANCE\_\_)-\/>SR2 \&= \string~(\_\_INTERRUPT\_\_)): \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01192}01192 \textcolor{preprocessor}{                                                                                                      ((\_\_INSTANCE\_\_)-\/>SR3 \&= \string~(\_\_INTERRUPT\_\_))) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01193}01193                                                                                                                              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01206}01206 \textcolor{preprocessor}{\#define \_\_FMC\_NAND\_GET\_FLAG(\_\_INSTANCE\_\_, \_\_BANK\_\_, \_\_FLAG\_\_)  (((\_\_BANK\_\_) == FMC\_NAND\_BANK2)? (((\_\_INSTANCE\_\_)-\/>SR2 \&(\_\_FLAG\_\_)) == (\_\_FLAG\_\_)): \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01207}01207 \textcolor{preprocessor}{                                                                                                (((\_\_INSTANCE\_\_)-\/>SR3 \&(\_\_FLAG\_\_)) == (\_\_FLAG\_\_)))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01220}01220 \textcolor{preprocessor}{\#define \_\_FMC\_NAND\_CLEAR\_FLAG(\_\_INSTANCE\_\_, \_\_BANK\_\_, \_\_FLAG\_\_)  (((\_\_BANK\_\_) == FMC\_NAND\_BANK2)? ((\_\_INSTANCE\_\_)-\/>SR2 \&= \string~(\_\_FLAG\_\_)): \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01221}01221 \textcolor{preprocessor}{                                                                                                  ((\_\_INSTANCE\_\_)-\/>SR3 \&= \string~(\_\_FLAG\_\_))) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01232}01232 \textcolor{preprocessor}{\#define \_\_FMC\_PCCARD\_ENABLE\_IT(\_\_INSTANCE\_\_, \_\_INTERRUPT\_\_)  ((\_\_INSTANCE\_\_)-\/>SR4 |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01233}01233 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01244}01244 \textcolor{preprocessor}{\#define \_\_FMC\_PCCARD\_DISABLE\_IT(\_\_INSTANCE\_\_, \_\_INTERRUPT\_\_)  ((\_\_INSTANCE\_\_)-\/>SR4 \&= \string~(\_\_INTERRUPT\_\_)) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01245}01245 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01257}01257 \textcolor{preprocessor}{\#define \_\_FMC\_PCCARD\_GET\_FLAG(\_\_INSTANCE\_\_, \_\_FLAG\_\_)  (((\_\_INSTANCE\_\_)-\/>SR4 \&(\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01258}01258 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01270}01270 \textcolor{preprocessor}{\#define \_\_FMC\_PCCARD\_CLEAR\_FLAG(\_\_INSTANCE\_\_, \_\_FLAG\_\_)  ((\_\_INSTANCE\_\_)-\/>SR4 \&= \string~(\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01271}01271  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01280}01280 \textcolor{preprocessor}{\#define \_\_FMC\_SDRAM\_ENABLE\_IT(\_\_INSTANCE\_\_, \_\_INTERRUPT\_\_)  ((\_\_INSTANCE\_\_)-\/>SDRTR |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01281}01281 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01290}01290 \textcolor{preprocessor}{\#define \_\_FMC\_SDRAM\_DISABLE\_IT(\_\_INSTANCE\_\_, \_\_INTERRUPT\_\_)  ((\_\_INSTANCE\_\_)-\/>SDRTR \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01291}01291 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01302}01302 \textcolor{preprocessor}{\#define \_\_FMC\_SDRAM\_GET\_FLAG(\_\_INSTANCE\_\_, \_\_FLAG\_\_)  (((\_\_INSTANCE\_\_)-\/>SDSR \&(\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01303}01303 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01312}01312 \textcolor{preprocessor}{\#define \_\_FMC\_SDRAM\_CLEAR\_FLAG(\_\_INSTANCE\_\_, \_\_FLAG\_\_)  ((\_\_INSTANCE\_\_)-\/>SDRTR |= (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01317}01317 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01318}01318 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01319}01319 \textcolor{comment}{/* FMC\_NORSRAM Controller functions *******************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01320}01320 \textcolor{comment}{/* Initialization/de-\/initialization functions */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01321}01321 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NORSRAM\_Init(FMC\_NORSRAM\_TypeDef *Device, FMC\_NORSRAM\_InitTypeDef *Init);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01322}01322 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NORSRAM\_Timing\_Init(FMC\_NORSRAM\_TypeDef *Device, FMC\_NORSRAM\_TimingTypeDef *Timing, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01323}01323 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NORSRAM\_Extended\_Timing\_Init(FMC\_NORSRAM\_EXTENDED\_TypeDef *Device, FMC\_NORSRAM\_TimingTypeDef *Timing, uint32\_t Bank, uint32\_t ExtendedMode);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01324}01324 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NORSRAM\_DeInit(FMC\_NORSRAM\_TypeDef *Device, FMC\_NORSRAM\_EXTENDED\_TypeDef *ExDevice, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01325}01325 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01326}01326 \textcolor{comment}{/* FMC\_NORSRAM Control functions */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01327}01327 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NORSRAM\_WriteOperation\_Enable(FMC\_NORSRAM\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01328}01328 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NORSRAM\_WriteOperation\_Disable(FMC\_NORSRAM\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01329}01329 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01330}01330 \textcolor{comment}{/* FMC\_NAND Controller functions **********************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01331}01331 \textcolor{comment}{/* Initialization/de-\/initialization functions */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01332}01332 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NAND\_Init(FMC\_NAND\_TypeDef *Device, FMC\_NAND\_InitTypeDef *Init);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01333}01333 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NAND\_CommonSpace\_Timing\_Init(FMC\_NAND\_TypeDef *Device, FMC\_NAND\_PCC\_TimingTypeDef *Timing, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01334}01334 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NAND\_AttributeSpace\_Timing\_Init(FMC\_NAND\_TypeDef *Device, FMC\_NAND\_PCC\_TimingTypeDef *Timing, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01335}01335 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NAND\_DeInit(FMC\_NAND\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01336}01336 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01337}01337 \textcolor{comment}{/* FMC\_NAND Control functions */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01338}01338 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NAND\_ECC\_Enable(FMC\_NAND\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01339}01339 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NAND\_ECC\_Disable(FMC\_NAND\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01340}01340 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_NAND\_GetECC(FMC\_NAND\_TypeDef *Device, uint32\_t *ECCval, uint32\_t Bank, uint32\_t Timeout);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01341}01341 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01342}01342 \textcolor{comment}{/* FMC\_PCCARD Controller functions ********************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01343}01343 \textcolor{comment}{/* Initialization/de-\/initialization functions */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01344}01344 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_PCCARD\_Init(FMC\_PCCARD\_TypeDef *Device, FMC\_PCCARD\_InitTypeDef *Init);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01345}01345 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_PCCARD\_CommonSpace\_Timing\_Init(FMC\_PCCARD\_TypeDef *Device, FMC\_NAND\_PCC\_TimingTypeDef *Timing);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01346}01346 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_PCCARD\_AttributeSpace\_Timing\_Init(FMC\_PCCARD\_TypeDef *Device, FMC\_NAND\_PCC\_TimingTypeDef *Timing);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01347}01347 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_PCCARD\_IOSpace\_Timing\_Init(FMC\_PCCARD\_TypeDef *Device, FMC\_NAND\_PCC\_TimingTypeDef *Timing); }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01348}01348 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_PCCARD\_DeInit(FMC\_PCCARD\_TypeDef *Device);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01349}01349 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01350}01350 \textcolor{comment}{/* FMC\_SDRAM Controller functions *********************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01351}01351 \textcolor{comment}{/* Initialization/de-\/initialization functions */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01352}01352 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_SDRAM\_Init(FMC\_SDRAM\_TypeDef *Device, FMC\_SDRAM\_InitTypeDef *Init);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01353}01353 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_SDRAM\_Timing\_Init(FMC\_SDRAM\_TypeDef *Device, FMC\_SDRAM\_TimingTypeDef *Timing, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01354}01354 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_SDRAM\_DeInit(FMC\_SDRAM\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01355}01355 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01356}01356 \textcolor{comment}{/* FMC\_SDRAM Control functions */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01357}01357 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_SDRAM\_WriteProtection\_Enable(FMC\_SDRAM\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01358}01358 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_SDRAM\_WriteProtection\_Disable(FMC\_SDRAM\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01359}01359 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_SDRAM\_SendCommand(FMC\_SDRAM\_TypeDef *Device, FMC\_SDRAM\_CommandTypeDef *Command, uint32\_t Timeout);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01360}01360 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_SDRAM\_ProgramRefreshRate(FMC\_SDRAM\_TypeDef *Device, uint32\_t RefreshRate);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01361}01361 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FMC\_SDRAM\_SetAutoRefreshNumber(FMC\_SDRAM\_TypeDef *Device, uint32\_t AutoRefreshNumber);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01362}01362 uint32\_t           FMC\_SDRAM\_GetModeStatus(FMC\_SDRAM\_TypeDef *Device, uint32\_t Bank);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01363}01363 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01364}01364 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01373}01373 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01374}01374 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01375}01375 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01376}01376 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01377}01377 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_LL\_FMC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01378}01378 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__ll__fmc_8h_source_l01379}01379 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

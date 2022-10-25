@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__sd_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sd.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sd.h</primary></indexterm>
+<para>
+
+<para>Header file of SD HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_ll_sdmmc.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link></para>
+
+<para>SDIO Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_a_l___s_d___c_s_d_typedef">HAL_SD_CSDTypedef</link></para>
+
+<para>Card Specific Data: CSD Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_a_l___s_d___c_i_d_typedef">HAL_SD_CIDTypedef</link></para>
+
+<para>Card Identification Data: CID Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_a_l___s_d___card_status_typedef">HAL_SD_CardStatusTypedef</link></para>
+
+<para>SD Card Status returned by ACMD13 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_a_l___s_d___card_info_typedef">HAL_SD_CardInfoTypedef</link></para>
+
+<para>SD Card information structure. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_d_1ga0e053bc407d4d1001b3f3125f17340f7">SD_InitTypeDef</link>   <link linkend="_struct_s_d_i_o___init_type_def">SDIO_InitTypeDef</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_1gaba823a712a2920fb20f03f74651d0beb">SD_TypeDef</link>   <link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga9d34df51b7f169e0be94fea97d0c1639">SD_CMD_GO_IDLE_STATE</link>   ((uint8_t)0)</para>
+
+<para>SD Commands Index. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga74eabc4acadc80ad0242d52942c8d76a">SD_CMD_SEND_OP_COND</link>   ((uint8_t)1)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga3d9d3a1da54a30d81e1d2a9c6a2d9b4f">SD_CMD_ALL_SEND_CID</link>   ((uint8_t)2)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gaa7e0f4e84001656eac62b41179376a25">SD_CMD_SET_REL_ADDR</link>   ((uint8_t)3)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga89e890726a09716bb1a5c6ef6d0d3d90">SD_CMD_SET_DSR</link>   ((uint8_t)4)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga5f4e5909200ef9eb61ac2252f4099360">SD_CMD_SDIO_SEN_OP_COND</link>   ((uint8_t)5)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga88fb9fd3b2c9fea10b79da9a569d4471">SD_CMD_HS_SWITCH</link>   ((uint8_t)6)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gaf049767ff08cf35fcddef8f413964050">SD_CMD_SEL_DESEL_CARD</link>   ((uint8_t)7)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gaeea3a373a0065cab0080a56395bc5a19">SD_CMD_HS_SEND_EXT_CSD</link>   ((uint8_t)8)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gaffe6f096eefb62711d4ba298c4598e2e">SD_CMD_SEND_CSD</link>   ((uint8_t)9)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gad0df99cd4f523813b603109db94f07c6">SD_CMD_SEND_CID</link>   ((uint8_t)10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gacf2a1a56e95b0b5ebeca09a38c9538e7">SD_CMD_READ_DAT_UNTIL_STOP</link>   ((uint8_t)11)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga45a924a12fc702bebac386ed429a60ff">SD_CMD_STOP_TRANSMISSION</link>   ((uint8_t)12)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga4d58ed74fb20e34fb557fa97c1935fe3">SD_CMD_SEND_STATUS</link>   ((uint8_t)13)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga4dbc2cc034c8f582602063be358ad160">SD_CMD_HS_BUSTEST_READ</link>   ((uint8_t)14)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gab8adaf3188d195b83ba32a9e72863072">SD_CMD_GO_INACTIVE_STATE</link>   ((uint8_t)15)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga77edc6b67b0921f4473adc7b95039de3">SD_CMD_SET_BLOCKLEN</link>   ((uint8_t)16)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga8a0361bd4864fe9368ba54bc9b2bda24">SD_CMD_READ_SINGLE_BLOCK</link>   ((uint8_t)17)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gafedc6b182681752a4299dffdd1ce74da">SD_CMD_READ_MULT_BLOCK</link>   ((uint8_t)18)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga2bc9f60a2cc409365a49862d8551349e">SD_CMD_HS_BUSTEST_WRITE</link>   ((uint8_t)19)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga6478634540db1fa3fcd044315d1238b5">SD_CMD_WRITE_DAT_UNTIL_STOP</link>   ((uint8_t)20)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga5dd52de3e95163402a5cd995620d4d01">SD_CMD_SET_BLOCK_COUNT</link>   ((uint8_t)23)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga20a1c8427ec19835fe2782ec8febd5ca">SD_CMD_WRITE_SINGLE_BLOCK</link>   ((uint8_t)24)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gafe82a884b2692654c9862bb25b8706ce">SD_CMD_WRITE_MULT_BLOCK</link>   ((uint8_t)25)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gae4c3d35575ecc87fb571f2bfb80f3847">SD_CMD_PROG_CID</link>   ((uint8_t)26)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gaf911e3c602583e43e3bc16def5feebfc">SD_CMD_PROG_CSD</link>   ((uint8_t)27)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga7a35e2c3f9d6237bf7a3577225d077d8">SD_CMD_SET_WRITE_PROT</link>   ((uint8_t)28)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gac1c159cda7e89dfc085ac66e90790a56">SD_CMD_CLR_WRITE_PROT</link>   ((uint8_t)29)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gabeb680262be8cc173543ae8b1874c83d">SD_CMD_SEND_WRITE_PROT</link>   ((uint8_t)30)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga34496e2b57973936b853bb1d20dc277d">SD_CMD_SD_ERASE_GRP_START</link>   ((uint8_t)32)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gae3118ae546ea7ba60735b866552047ac">SD_CMD_SD_ERASE_GRP_END</link>   ((uint8_t)33)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gae91f1c058f4b0aace233e0e4866fa1d3">SD_CMD_ERASE_GRP_START</link>   ((uint8_t)35)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gabd1685e886f2b4cdeed5813d430a9bf3">SD_CMD_ERASE_GRP_END</link>   ((uint8_t)36)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga16f4d3918ba7fb538f8d1f3fb8bb0bd1">SD_CMD_ERASE</link>   ((uint8_t)38)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gac8319cdb71748237d00c937f0fa47fda">SD_CMD_FAST_IO</link>   ((uint8_t)39)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gac71656d887c8fad884e95ec525a0a8af">SD_CMD_GO_IRQ_STATE</link>   ((uint8_t)40)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gac89f6043b27673973f4a2b7e106a5f63">SD_CMD_LOCK_UNLOCK</link>   ((uint8_t)42)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga389f949c4ceace711f57dd00f71a8760">SD_CMD_APP_CMD</link>   ((uint8_t)55)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga201db10c31dd8f6e30d99ca58dd291e6">SD_CMD_GEN_CMD</link>   ((uint8_t)56)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gab88d7dbeaf38955b1c7d2806f6b446c2">SD_CMD_NO_CMD</link>   ((uint8_t)64)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga1b28ab176d0d05d7f971809aeb07b758">SD_CMD_APP_SD_SET_BUSWIDTH</link>   ((uint8_t)6)</para>
+
+<para>Following commands are SD Card Specific commands. SDIO_APP_CMD should be sent before sending these commands. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga2984265566ee729869324cf5b842a601">SD_CMD_SD_APP_STAUS</link>   ((uint8_t)13)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gae38cb2fd8f0e7cb42c76e3b11055c424">SD_CMD_SD_APP_SEND_NUM_WRITE_BLOCKS</link>   ((uint8_t)22)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga980954ae3a961028fd59f67a1a30a7de">SD_CMD_SD_APP_OP_COND</link>   ((uint8_t)41)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga713f0d9a7c99b7becea80f232c024b59">SD_CMD_SD_APP_SET_CLR_CARD_DETECT</link>   ((uint8_t)42)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga11c23db52041ccaca4a2dbcafca62c88">SD_CMD_SD_APP_SEND_SCR</link>   ((uint8_t)51)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga09d3d2d61d003d6bf75c3fb128e86dbb">SD_CMD_SDIO_RW_DIRECT</link>   ((uint8_t)52)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gaf40f42039cf756a3805800b48e2790ed">SD_CMD_SDIO_RW_EXTENDED</link>   ((uint8_t)53)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga4f8828be53bb69d6436c03c9c2f427c6">SD_CMD_SD_APP_GET_MKB</link>   ((uint8_t)43)</para>
+
+<para>Following commands are SD Card Specific security commands. SD_CMD_APP_CMD should be sent before sending these commands. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gaf2e3bf3ef0ee9a3cbb20d43700521ea7">SD_CMD_SD_APP_GET_MID</link>   ((uint8_t)44)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga120a1adc8c10961c831b197f0fd51f76">SD_CMD_SD_APP_SET_CER_RN1</link>   ((uint8_t)45)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gab8fbec70c55b91b2227dd592b7257eae">SD_CMD_SD_APP_GET_CER_RN2</link>   ((uint8_t)46)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga6775fd69fe0e739c7464951bd6aacdf1">SD_CMD_SD_APP_SET_CER_RES2</link>   ((uint8_t)47)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga0f39072d4c981331dfc1956c09d8a72c">SD_CMD_SD_APP_GET_CER_RES1</link>   ((uint8_t)48)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga7f4041b0d212f2d5d3f725b0beb97f0e">SD_CMD_SD_APP_SECURE_READ_MULTIPLE_BLOCK</link>   ((uint8_t)18)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga97cfaea6d5d8646eda4e40b5e0bcbf94">SD_CMD_SD_APP_SECURE_WRITE_MULTIPLE_BLOCK</link>   ((uint8_t)25)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga60d30f8255fe89e8d1c4aaabb4f3a60f">SD_CMD_SD_APP_SECURE_ERASE</link>   ((uint8_t)38)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga15e57ba63b8da2bf43d0205efd532b89">SD_CMD_SD_APP_CHANGE_SECURE_AREA</link>   ((uint8_t)49)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga025052e51318ae13855774c1acf04ee2">SD_CMD_SD_APP_SECURE_WRITE_MKB</link>   ((uint8_t)48)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga17ac25bb857f597f7d116204dba680fe">STD_CAPACITY_SD_CARD_V1_1</link>   ((uint32_t)0x00000000)</para>
+
+<para>Supported SD Memory Cards. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gaf601977dbd0ccffc168a727e3683ac9a">STD_CAPACITY_SD_CARD_V2_0</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga6cf1a896d3ea30557f42ca012ecc751a">HIGH_CAPACITY_SD_CARD</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gac0d14af60bcf9077942270e3d135c897">MULTIMEDIA_CARD</link>   ((uint32_t)0x00000003)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga56d085c2c9101ddbdca82e783a5c0380">SECURE_DIGITAL_IO_CARD</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1ga7213c9d2659184149734fa83fe78979f">HIGH_SPEED_MULTIMEDIA_CARD</link>   ((uint32_t)0x00000005)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gadee0691ba1aec81ee1893ae06e92f24d">SECURE_DIGITAL_IO_COMBO_CARD</link>   ((uint32_t)0x00000006)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___exported___constants_1gafd9c159c07436c4f30e30489b6080a04">HIGH_CAPACITY_MMC_CARD</link>   ((uint32_t)0x00000007)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1gaca97372661f1ab537a0ed454b389c06b">__HAL_SD_SDIO_ENABLE</link>()   <link linkend="_group___s_d_i_o___interrupt___clock_1ga25d754a9f19a69345b6af096f1f5b2a2">__SDIO_ENABLE</link>()</para>
+
+<para>Enable the SD device. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1ga7d931ef97a1d0bab3a3d728d9bed3926">__HAL_SD_SDIO_DISABLE</link>()   <link linkend="_group___s_d_i_o___interrupt___clock_1gad3078138e51a29cf0f1c69c078347d80">__SDIO_DISABLE</link>()</para>
+
+<para>Disable the SD device. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1gacf5fc4b08829cb26ec2b9c5fed4afcd6">__HAL_SD_SDIO_DMA_ENABLE</link>()   <link linkend="_group___s_d_i_o___interrupt___clock_1ga6bda6c5413d3924024b84c98547233fa">__SDIO_DMA_ENABLE</link>()</para>
+
+<para>Enable the SDIO DMA transfer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1ga7dbd11343ec4b6263a0854e83be00d0b">__HAL_SD_SDIO_DMA_DISABLE</link>()   <link linkend="_group___s_d_i_o___interrupt___clock_1ga001ffe6053dc5141eb08980da3851c42">__SDIO_DMA_DISABLE</link>()</para>
+
+<para>Disable the SDIO DMA transfer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1ga192ad14cc7d38dbfa47d0ad1b89eaff9">__HAL_SD_SDIO_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   <link linkend="_group___s_d_i_o___interrupt___clock_1gaa9e3afaf168e4ca1e0db3384ec19e1b2">__SDIO_ENABLE_IT</link>((__HANDLE__)-&gt;Instance, (__INTERRUPT__))</para>
+
+<para>Enable the SD device interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1ga986859ee429e8886115834c96d6a2fa8">__HAL_SD_SDIO_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   <link linkend="_group___s_d_i_o___interrupt___clock_1gaaf2ed87824de8d4506734a5d1676cc9a">__SDIO_DISABLE_IT</link>((__HANDLE__)-&gt;Instance, (__INTERRUPT__))</para>
+
+<para>Disable the SD device interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1ga7f2b889e698546e552a3017152343c8e">__HAL_SD_SDIO_GET_FLAG</link>(__HANDLE__,  __FLAG__)   <link linkend="_group___s_d_i_o___interrupt___clock_1gad758b5b751fca4580841ee7a790fcce7">__SDIO_GET_FLAG</link>((__HANDLE__)-&gt;Instance, (__FLAG__))</para>
+
+<para>Check whether the specified SD flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1ga24f2e83637a26ee62a6cbcd5ce94dada">__HAL_SD_SDIO_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   <link linkend="_group___s_d_i_o___interrupt___clock_1ga087683825553ad90ae5a84912fb2596f">__SDIO_CLEAR_FLAG</link>((__HANDLE__)-&gt;Instance, (__FLAG__))</para>
+
+<para>Clear the SD&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1ga33e5a8825cf2b66e514aa2dad6e627f2">__HAL_SD_SDIO_GET_IT</link>   (__HANDLE__, __INTERRUPT__) <link linkend="_group___s_d_i_o___interrupt___clock_1ga813e28dac36317a9b302ddf3ce59d36c">__SDIO_GET_IT</link>  ((__HANDLE__)-&gt;Instance, __INTERRUPT__)</para>
+
+<para>Check whether the specified SD interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d___interrupt___clock_1gae99d933fdb0a2e1818ba2716c02e2101">__HAL_SD_SDIO_CLEAR_IT</link>(__HANDLE__,  __INTERRUPT__)   <link linkend="_group___s_d_i_o___interrupt___clock_1gad93c671a251adeeeaabbc30ed9c49fe4">__SDIO_CLEAR_IT</link>((__HANDLE__)-&gt;Instance, (__INTERRUPT__))</para>
+
+<para>Clear the SD&apos;s interrupt pending bits. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> { 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa6dfaca7c6ace1889e0294f4ec3ec535c">SD_CMD_CRC_FAIL</link> = (1)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aad99fcef385ca3270d3bce97ed972ff1c">SD_DATA_CRC_FAIL</link> = (2)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae1c1b2d0962bd3f40490b15aed01c8ff">SD_CMD_RSP_TIMEOUT</link> = (3)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac5f321853ccd7c8aaa571afab467dddd">SD_DATA_TIMEOUT</link> = (4)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa7b3c2c028697b45c7e4ab738dfb32732">SD_TX_UNDERRUN</link> = (5)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa8536106ed9ebb00c16d0f42d78f31e37">SD_RX_OVERRUN</link> = (6)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aacc0291fc528b2bb330ca1487a8a3f3cd">SD_START_BIT_ERR</link> = (7)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa2435ce658dcb58fc0970c9750fecbf10">SD_CMD_OUT_OF_RANGE</link> = (8)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac862cc999fa6648eeb631ea82a07a51e">SD_ADDR_MISALIGNED</link> = (9)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aadd08e6cdc391423ee7c1ba246faf42c3">SD_BLOCK_LEN_ERR</link> = (10)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae83866c46e2c68646ce05ff3707b042e">SD_ERASE_SEQ_ERR</link> = (11)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac52c7addfcb59055f5701898c3484d06">SD_BAD_ERASE_PARAM</link> = (12)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa4e295d82b6481694f927367f35aa182d">SD_WRITE_PROT_VIOLATION</link> = (13)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa093949ff310e17d6596e686804cd0e1e">SD_LOCK_UNLOCK_FAILED</link> = (14)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa01a35bd6664353a1af3b9ac093acdf94">SD_COM_CRC_FAILED</link> = (15)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa7fefea39264d07dd179b12be8bf2e51c">SD_ILLEGAL_CMD</link> = (16)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa283091b73f40d5c229c2c3f3d0f4cb74">SD_CARD_ECC_FAILED</link> = (17)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa2c6401e2495de3d9fd3b41c273fda150">SD_CC_ERROR</link> = (18)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa46c693b1502d9e2137ead7857cfe5f9b">SD_GENERAL_UNKNOWN_ERROR</link> = (19)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aaadb3266a9761e9e3d82c1b2512ef6668">SD_STREAM_READ_UNDERRUN</link> = (20)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa3847c922ab4b7f94469768c63084af6b">SD_STREAM_WRITE_OVERRUN</link> = (21)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aadc80e2b4a985f211d85fae68e15fd136">SD_CID_CSD_OVERWRITE</link> = (22)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa07b0cc4f75330bdc7efb59f3b3492a3f">SD_WP_ERASE_SKIP</link> = (23)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa4db59f403f83442543a1f1bef242efbd">SD_CARD_ECC_DISABLED</link> = (24)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa59f8949439bd7871cb2cf3238c6282c5">SD_ERASE_RESET</link> = (25)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aafbcf7369094d1a0fa1932c552ab45382">SD_AKE_SEQ_ERROR</link> = (26)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa97d498fc349b05a8945156a9f3ccdff5">SD_INVALID_VOLTRANGE</link> = (27)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa82b0b9ba6052f6f2bd0bee7e79cf8ef3">SD_ADDR_OUT_OF_RANGE</link> = (28)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa9566932cb0ad8fe80d5610da9d11fb55">SD_SWITCH_ERROR</link> = (29)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa9e97f8897dab543749255331f57ae1a7">SD_SDIO_DISABLED</link> = (30)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae4e66b4e0f2a5f5a49b3c785d9905e8b">SD_SDIO_FUNCTION_BUSY</link> = (31)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aaab75aa11f151a11569079c41d019ef3c">SD_SDIO_FUNCTION_FAILED</link> = (32)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa544f7094c7417e8e3be527d83c65d024">SD_SDIO_UNKNOWN_FUNCTION</link> = (33)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa3edc8995af0f0ca919abd400d01d235d">SD_INTERNAL_ERROR</link> = (34)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aad2334607a2604507143ebbd5fcc82876">SD_NOT_CONFIGURED</link> = (35)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa48c30b9e7fbd21a2e3dc134b9d0c8bff">SD_REQUEST_PENDING</link> = (36)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aada6e80166445f5ee6b7e808a4e7aff23">SD_REQUEST_NOT_APPLICABLE</link> = (37)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa1111de40fd22949b14d492954755a70c">SD_INVALID_PARAMETER</link> = (38)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa788dcef7dd77feb8a8ba97d84813a8fb">SD_UNSUPPORTED_FEATURE</link> = (39)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa280d7d545d73078027a223ff35a2b696">SD_UNSUPPORTED_HW</link> = (40)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa0002d0c8feceb0fb4cd7d9fc96066c3d">SD_ERROR</link> = (41)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae7d9e30a15fd1bc4b2cd8f10208e76a6">SD_OK</link> = (0)
+ }</para>
+
+<para>SD Error status enumeration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_d_1gaeac2ceb9473e8e4ea9cd587642d9cbca">HAL_SD_TransferStateTypedef</link> { <link linkend="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaa52c1686845d340ee5d8c0bc0325f9af3">SD_TRANSFER_OK</link> = 0
+, <link linkend="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaaef1a870ef1c17e160d57d732328b042e">SD_TRANSFER_BUSY</link> = 1
+, <link linkend="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaa1c06f1ea5cd5d5f2ecb715654384b047">SD_TRANSFER_ERROR</link> = 2
+ }</para>
+
+<para>SD Transfer state enumeration structure. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_d_1ga0e6f2367262980fc7e531981bab32df4">HAL_SD_CardStateTypedef</link> { 
+<link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a7105d3ddde877b8d09471eb482fb5520">SD_CARD_READY</link> = ((uint32_t)0x00000001)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a18689e3260641d154376eba9a1e3da47">SD_CARD_IDENTIFICATION</link> = ((uint32_t)0x00000002)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a6e24b45fe387177e2383bac672525f1a">SD_CARD_STANDBY</link> = ((uint32_t)0x00000003)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a090f585cfc114861ad07114914a3ad1d">SD_CARD_TRANSFER</link> = ((uint32_t)0x00000004)
+, 
+<link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a23dec93b22009b39f7b7311f22a7c396">SD_CARD_SENDING</link> = ((uint32_t)0x00000005)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a467165b416761a4858546d616c8dac12">SD_CARD_RECEIVING</link> = ((uint32_t)0x00000006)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4aa72e3de9b7ac3217b05862ec2412c6cc">SD_CARD_PROGRAMMING</link> = ((uint32_t)0x00000007)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4ac5dd213f085b94ecd3735f15d6a257ec">SD_CARD_DISCONNECTED</link> = ((uint32_t)0x00000008)
+, 
+<link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4aed9c89d9fc0101e995ae957f132af14c">SD_CARD_ERROR</link> = ((uint32_t)0x000000FF)
+ }</para>
+
+<para>SD Card State enumeration structure. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_d_1ga82fe633c4b9fa45bede0890e9e23d4c1">HAL_SD_OperationTypedef</link> { <link linkend="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1a99c20a704cce28fee37b9b0f14b2ff15">SD_READ_SINGLE_BLOCK</link> = 0
+, <link linkend="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1aa58b1d9f75b639dc1b28163988bc8aa3">SD_READ_MULTIPLE_BLOCK</link> = 1
+, <link linkend="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1adca664fbf5ff0b4d174ca21641e01004">SD_WRITE_SINGLE_BLOCK</link> = 2
+, <link linkend="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1a9cd6e9c88c3989531a71015147496895">SD_WRITE_MULTIPLE_BLOCK</link> = 3
+ }</para>
+
+<para>SD Operation enumeration structure 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga55004d6b817f7e431bd97101ad2d0b62">HAL_SD_Init</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, <link linkend="_struct_h_a_l___s_d___card_info_typedef">HAL_SD_CardInfoTypedef</link> *SDCardInfo)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_1ga6bba9fce639c7d476dbd443b8c9e3117">HAL_SD_DeInit</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga11b692d44079cb65eb037202d627ae96">HAL_SD_MspInit</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1gaad3ad0f8145fca4a29dbe8beef5db085">HAL_SD_MspDeInit</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1gad0d930e6695258d4227f3cc85690b35e">HAL_SD_ReadBlocks</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pReadBuffer, uint64_t ReadAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga879dae58b5e4f8514be2d3fac5d99f2b">HAL_SD_WriteBlocks</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pWriteBuffer, uint64_t WriteAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga49d1d5c7f592addea7b36c7cf49faba4">HAL_SD_Erase</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint64_t startaddr, uint64_t endaddr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga78f4def85126ae50eba783a6b237ec0f">HAL_SD_IRQHandler</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga57b3c755c8430777cfe821c8a12e794e">HAL_SD_DMA_RxCpltCallback</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga66cb9701bb00d0bb363ea06312ea4446">HAL_SD_DMA_RxErrorCallback</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga98f37b0096e2d3dec374321524015a1f">HAL_SD_DMA_TxCpltCallback</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga45c840786fabc5ef29d887b119b01442">HAL_SD_DMA_TxErrorCallback</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga4d1214c3d3e6c1e5dd587592e7618177">HAL_SD_XferCpltCallback</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1gad7d953cc31fbb7e875aef443027b3e5c">HAL_SD_XferErrorCallback</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga445d2fb6f83f1680ca2295ebc8fb591e">HAL_SD_ReadBlocks_DMA</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pReadBuffer, uint64_t ReadAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga4e9138ffd8d54c138b21cc95e2b5955c">HAL_SD_WriteBlocks_DMA</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pWriteBuffer, uint64_t WriteAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga1e823fda07f8246994c13fe9397e38ae">HAL_SD_CheckWriteOperation</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga91b0db763b2d9360f10cc959b1c8547e">HAL_SD_CheckReadOperation</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga757649bfd6987928fc7f968a881767b4">HAL_SD_Get_CardInfo</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, <link linkend="_struct_h_a_l___s_d___card_info_typedef">HAL_SD_CardInfoTypedef</link> *pCardInfo)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga55e5d39a7a3b67b4b236e014c429e4fd">HAL_SD_WideBusOperation_Config</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t WideMode)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga28d4283c9c7caafe6b0f65c15d805e16">HAL_SD_StopTransfer</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga5c1fb71046436127d873a16511b40777">HAL_SD_HighSpeed</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga0f6201bbcab5c9a4fbb059d3659a2d56">HAL_SD_SendSDStatus</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pSDstatus)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1gaa21f427748a4d59b41b45fff21342e3f">HAL_SD_GetCardStatus</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, <link linkend="_struct_h_a_l___s_d___card_status_typedef">HAL_SD_CardStatusTypedef</link> *pCardStatus)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gaeac2ceb9473e8e4ea9cd587642d9cbca">HAL_SD_TransferStateTypedef</link> <link linkend="_group___s_d_1ga7e359042aa28a3ceab37d70885af3051">HAL_SD_GetStatus</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of SD HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__sd_8h_source">stm32f4xx_hal_sd.h</link>.</para>
+</section>
+</section>

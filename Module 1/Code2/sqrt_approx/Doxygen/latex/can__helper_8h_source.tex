@@ -1,0 +1,59 @@
+\hypertarget{can__helper_8h_source}{}\doxysection{can\+\_\+helper.\+h}
+\label{can__helper_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/can\_helper.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/can\_helper.h}}
+\mbox{\hyperlink{can__helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_CAN\_HELPER\_H}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_CAN\_HELPER\_H}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00019}00019 \textcolor{preprocessor}{\#if DEVICE\_CAN}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00021}00021 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00022}00022 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00023}00023 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00025}00025 \textcolor{keyword}{enum} CANFormat \{}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00026}00026     CANStandard = 0,}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00027}00027     CANExtended = 1,}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00028}00028     CANAny = 2}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00029}00029 \};}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00030}00030 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} CANFormat CANFormat;}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00032}00032 \textcolor{keyword}{enum} CANType \{}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00033}00033     CANData   = 0,}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00034}00034     CANRemote = 1}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00035}00035 \};}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00036}00036 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} CANType CANType;}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00038}00038 \textcolor{keyword}{struct }CAN\_Message \{}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00039}00039     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}   id;                 \textcolor{comment}{// 29 bit identifier}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00040}00040     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}  data[8];            \textcolor{comment}{// Data field}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00041}00041     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}  len;                \textcolor{comment}{// Length of data field in bytes}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00042}00042     CANFormat      format;             \textcolor{comment}{// 0 -\/ STANDARD, 1-\/ EXTENDED IDENTIFIER}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00043}00043     CANType        type;               \textcolor{comment}{// 0 -\/ DATA FRAME, 1 -\/ REMOTE FRAME}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00044}00044 \};}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00045}00045 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }CAN\_Message CAN\_Message;}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00047}00047 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00048}00048 \};}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00049}00049 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00051}00051 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{can__helper_8h_source_l00053}00053 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MBED\_CAN\_HELPER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,89 @@
+\hypertarget{stm32f4xx__hal__sram_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+sram.\+h}
+\label{stm32f4xx__hal__sram_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_sram.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_sram.h}}
+\mbox{\hyperlink{stm32f4xx__hal__sram_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00038}00038 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_SRAM\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00040}00040 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_SRAM\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00046}00046 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00047}00047 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00048}00048 \textcolor{preprocessor}{  \#include "{}\mbox{\hyperlink{stm32f4xx__ll__fsmc_8h}{stm32f4xx\_ll\_fsmc.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00049}00049 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00051}00051 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00052}00052 \textcolor{preprocessor}{  \#include "{}\mbox{\hyperlink{stm32f4xx__ll__fmc_8h}{stm32f4xx\_ll\_fmc.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00053}00053 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00064}00064 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00066}00066 \textcolor{comment}{/* Exported typedef -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00071}00071 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00072}00072 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00073}00073   HAL\_SRAM\_STATE\_RESET     = 0x00,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00074}00074   HAL\_SRAM\_STATE\_READY     = 0x01,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00075}00075   HAL\_SRAM\_STATE\_BUSY      = 0x02,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00076}00076   HAL\_SRAM\_STATE\_ERROR     = 0x03,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00077}00077   HAL\_SRAM\_STATE\_PROTECTED = 0x04   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00079}00079 \}HAL\_SRAM\_StateTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00084}00084 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00085}00085 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00086}00086   FMC\_NORSRAM\_TypeDef           *Instance;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00088}00088   FMC\_NORSRAM\_EXTENDED\_TypeDef  *Extended;  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00090}00090   FMC\_NORSRAM\_InitTypeDef       Init;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00092}00092   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}               Lock;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00094}00094   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_SRAM\_StateTypeDef    State;      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00096}00096   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}             *hdma;      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00098}00098 \}SRAM\_HandleTypeDef; }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00100}00100 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00101}00101 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00107}00107 \textcolor{preprocessor}{\#define \_\_HAL\_SRAM\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_SRAM\_STATE\_RESET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00109}00109 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00111}00111 \textcolor{comment}{/* Initialization/de-\/initialization functions  **********************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00112}00112 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Init(SRAM\_HandleTypeDef *hsram, FMC\_NORSRAM\_TimingTypeDef *Timing, FMC\_NORSRAM\_TimingTypeDef *ExtTiming);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00113}00113 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_DeInit(SRAM\_HandleTypeDef *hsram);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00114}00114 \textcolor{keywordtype}{void} HAL\_SRAM\_MspInit(SRAM\_HandleTypeDef *hsram);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00115}00115 \textcolor{keywordtype}{void} HAL\_SRAM\_MspDeInit(SRAM\_HandleTypeDef *hsram);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00117}00117 \textcolor{comment}{/* I/O operation functions  *****************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00118}00118 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Read\_8b(SRAM\_HandleTypeDef *hsram, uint32\_t *pAddress, uint8\_t *pDstBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00119}00119 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Write\_8b(SRAM\_HandleTypeDef *hsram, uint32\_t *pAddress, uint8\_t *pSrcBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00120}00120 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Read\_16b(SRAM\_HandleTypeDef *hsram, uint32\_t *pAddress, uint16\_t *pDstBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00121}00121 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Write\_16b(SRAM\_HandleTypeDef *hsram, uint32\_t *pAddress, uint16\_t *pSrcBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00122}00122 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Read\_32b(SRAM\_HandleTypeDef *hsram, uint32\_t *pAddress, uint32\_t *pDstBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00123}00123 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Write\_32b(SRAM\_HandleTypeDef *hsram, uint32\_t *pAddress, uint32\_t *pSrcBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00124}00124 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Read\_DMA(SRAM\_HandleTypeDef *hsram, uint32\_t *pAddress, uint32\_t *pDstBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00125}00125 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_Write\_DMA(SRAM\_HandleTypeDef *hsram, uint32\_t *pAddress, uint32\_t *pSrcBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00127}00127 \textcolor{keywordtype}{void} HAL\_SRAM\_DMA\_XferCpltCallback(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00128}00128 \textcolor{keywordtype}{void} HAL\_SRAM\_DMA\_XferErrorCallback(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00130}00130 \textcolor{comment}{/* SRAM Control functions  ******************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00131}00131 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_WriteOperation\_Enable(SRAM\_HandleTypeDef *hsram);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00132}00132 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SRAM\_WriteOperation\_Disable(SRAM\_HandleTypeDef *hsram);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00134}00134 \textcolor{comment}{/* SRAM State functions *********************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00135}00135 HAL\_SRAM\_StateTypeDef HAL\_SRAM\_GetState(SRAM\_HandleTypeDef *hsram);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00137}00137 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00146}00146 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00147}00147 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00148}00148 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00150}00150 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_SRAM\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__sram_8h_source_l00152}00152 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

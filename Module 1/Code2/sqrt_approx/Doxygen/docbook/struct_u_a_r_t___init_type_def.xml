@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_u_a_r_t___init_type_def" xml:lang="en-US">
+<title>UART_InitTypeDef Struct Reference</title>
+<indexterm><primary>UART_InitTypeDef</primary></indexterm>
+<para>
+
+<para>UART Init Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f4xx_hal_uart.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_u_a_r_t___init_type_def_1aaad609733f3fd8146c8745e953a91b2a">BaudRate</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_u_a_r_t___init_type_def_1ae5e60b9a021fe0009588fc86c7584a5a">WordLength</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_u_a_r_t___init_type_def_1a8394ba239444e3e5fe1ada1c37cb1019">StopBits</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_u_a_r_t___init_type_def_1a1d60a99b8f3965f01ab23444b154ba79">Parity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_u_a_r_t___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839">Mode</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_u_a_r_t___init_type_def_1a0a933d213b17470c582c8fec23a24d09">HwFlowCtl</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_u_a_r_t___init_type_def_1a35770b237370fda7fd0fabad22898490">OverSampling</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>UART Init Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_u_a_r_t___init_type_def_1aaad609733f3fd8146c8745e953a91b2a"/><section>
+    <title>BaudRate</title>
+<indexterm><primary>BaudRate</primary><secondary>UART_InitTypeDef</secondary></indexterm>
+<indexterm><primary>UART_InitTypeDef</primary><secondary>BaudRate</secondary></indexterm>
+<para><computeroutput>uint32_t BaudRate</computeroutput></para>
+<para>This member configures the UART communication baud rate. The baud rate is computed using the following formula:<itemizedlist>
+<listitem>
+<para>IntegerDivider = ((PCLKx) / (8 * (OVR8+1) * (huart-&gt;Init.BaudRate)))</para>
+</listitem><listitem>
+<para>FractionalDivider = ((IntegerDivider - ((uint32_t) IntegerDivider)) * 8 * (OVR8+1)) + 0.5 Where OVR8 is the &quot;oversampling by 8 mode&quot; configuration bit in the CR1 register. </para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00064">64</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_struct_u_a_r_t___init_type_def_1a0a933d213b17470c582c8fec23a24d09"/><section>
+    <title>HwFlowCtl</title>
+<indexterm><primary>HwFlowCtl</primary><secondary>UART_InitTypeDef</secondary></indexterm>
+<indexterm><primary>UART_InitTypeDef</primary><secondary>HwFlowCtl</secondary></indexterm>
+<para><computeroutput>uint32_t HwFlowCtl</computeroutput></para>
+<para>Specifies wether the hardware flow control mode is enabled or disabled. This parameter can be a value of <link linkend="_group___u_a_r_t___hardware___flow___control">UART_Hardware_Flow_Control</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00086">86</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_struct_u_a_r_t___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839"/><section>
+    <title>Mode</title>
+<indexterm><primary>Mode</primary><secondary>UART_InitTypeDef</secondary></indexterm>
+<indexterm><primary>UART_InitTypeDef</primary><secondary>Mode</secondary></indexterm>
+<para><computeroutput>uint32_t Mode</computeroutput></para>
+<para>Specifies wether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of <link linkend="_group___u_a_r_t___mode">UART_Mode</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00083">83</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_struct_u_a_r_t___init_type_def_1a35770b237370fda7fd0fabad22898490"/><section>
+    <title>OverSampling</title>
+<indexterm><primary>OverSampling</primary><secondary>UART_InitTypeDef</secondary></indexterm>
+<indexterm><primary>UART_InitTypeDef</primary><secondary>OverSampling</secondary></indexterm>
+<para><computeroutput>uint32_t OverSampling</computeroutput></para>
+<para>Specifies wether the Over sampling 8 is enabled or disabled, to achieve higher speed (up to fPCLK/8). This parameter can be a value of <link linkend="_group___u_a_r_t___over___sampling">UART_Over_Sampling</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00090">90</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_struct_u_a_r_t___init_type_def_1a1d60a99b8f3965f01ab23444b154ba79"/><section>
+    <title>Parity</title>
+<indexterm><primary>Parity</primary><secondary>UART_InitTypeDef</secondary></indexterm>
+<indexterm><primary>UART_InitTypeDef</primary><secondary>Parity</secondary></indexterm>
+<para><computeroutput>uint32_t Parity</computeroutput></para>
+<para>Specifies the parity mode. This parameter can be a value of <link linkend="_group___u_a_r_t___parity">UART_Parity</link> <note><title>Note</title>
+
+<para>When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits). </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00076">76</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_struct_u_a_r_t___init_type_def_1a8394ba239444e3e5fe1ada1c37cb1019"/><section>
+    <title>StopBits</title>
+<indexterm><primary>StopBits</primary><secondary>UART_InitTypeDef</secondary></indexterm>
+<indexterm><primary>UART_InitTypeDef</primary><secondary>StopBits</secondary></indexterm>
+<para><computeroutput>uint32_t StopBits</computeroutput></para>
+<para>Specifies the number of stop bits transmitted. This parameter can be a value of <link linkend="_group___u_a_r_t___stop___bits">UART_Stop_Bits</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00073">73</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_struct_u_a_r_t___init_type_def_1ae5e60b9a021fe0009588fc86c7584a5a"/><section>
+    <title>WordLength</title>
+<indexterm><primary>WordLength</primary><secondary>UART_InitTypeDef</secondary></indexterm>
+<indexterm><primary>UART_InitTypeDef</primary><secondary>WordLength</secondary></indexterm>
+<para><computeroutput>uint32_t WordLength</computeroutput></para>
+<para>Specifies the number of data bits transmitted or received in a frame. This parameter can be a value of <link linkend="_group___u_a_r_t___word___length">UART_Word_Length</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00070">70</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/<link linkend="_stm32f4xx__hal__uart_8h">stm32f4xx_hal_uart.h</link></section>
+</section>

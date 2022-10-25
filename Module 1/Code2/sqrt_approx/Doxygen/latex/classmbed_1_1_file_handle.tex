@@ -1,0 +1,184 @@
+\hypertarget{classmbed_1_1_file_handle}{}\doxysection{File\+Handle Class Reference}
+\label{classmbed_1_1_file_handle}\index{FileHandle@{FileHandle}}
+
+
+{\ttfamily \#include $<$File\+Handle.\+h$>$}
+
+Inheritance diagram for File\+Handle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmbed_1_1_file_handle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual ssize\+\_\+t \mbox{\hyperlink{classmbed_1_1_file_handle_afb4f34ce3f921a252f8244f34bc41adf}{write}} (const void $\ast$buffer, size\+\_\+t length)=0
+\item 
+virtual int \mbox{\hyperlink{classmbed_1_1_file_handle_ac81e2718528549c8b1eed01c4d303546}{close}} ()=0
+\item 
+virtual ssize\+\_\+t \mbox{\hyperlink{classmbed_1_1_file_handle_a46a09dc9739d9e3838c3d5786377b14a}{read}} (void $\ast$buffer, size\+\_\+t length)=0
+\item 
+virtual int \mbox{\hyperlink{classmbed_1_1_file_handle_af8b1bceee5dae7fff7626bd575c309ad}{isatty}} ()=0
+\item 
+virtual off\+\_\+t \mbox{\hyperlink{classmbed_1_1_file_handle_ac5c73beb78fc91ecbdbe4cf4a6b4faec}{lseek}} (off\+\_\+t offset, int whence)=0
+\item 
+virtual int \mbox{\hyperlink{classmbed_1_1_file_handle_aba403acd4d983123d864c1d74f833422}{fsync}} ()=0
+\item 
+virtual off\+\_\+t \mbox{\hyperlink{classmbed_1_1_file_handle_a3c8b116df2f335a817f94dab6dc55221}{flen}} ()
+\item 
+virtual \mbox{\hyperlink{classmbed_1_1_file_handle_a41402663bfeb9097cb46749b0e652e15}{$\sim$\+File\+Handle}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An OO equivalent of the internal FILEHANDLE variable and associated {\itshape sys}$\ast$ functions.
+
+\mbox{\hyperlink{classmbed_1_1_file_handle}{File\+Handle}} is an abstract class, needing at least sys\+\_\+write and sys\+\_\+read to be implmented for a simple interactive device.
+
+No one ever directly tals to/instanciates a \mbox{\hyperlink{classmbed_1_1_file_handle}{File\+Handle}} -\/ it gets created by File\+System, and wrapped up by stdio. 
+
+Definition at line \mbox{\hyperlink{_file_handle_8h_source_l00042}{42}} of file \mbox{\hyperlink{_file_handle_8h_source}{File\+Handle.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmbed_1_1_file_handle_a41402663bfeb9097cb46749b0e652e15}\label{classmbed_1_1_file_handle_a41402663bfeb9097cb46749b0e652e15}} 
+\index{FileHandle@{FileHandle}!````~FileHandle@{$\sim$FileHandle}}
+\index{````~FileHandle@{$\sim$FileHandle}!FileHandle@{FileHandle}}
+\doxysubsubsection{\texorpdfstring{$\sim$FileHandle()}{~FileHandle()}}
+{\footnotesize\ttfamily virtual $\sim$\mbox{\hyperlink{classmbed_1_1_file_handle}{File\+Handle}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_file_handle_ac81e2718528549c8b1eed01c4d303546}\label{classmbed_1_1_file_handle_ac81e2718528549c8b1eed01c4d303546}} 
+\index{FileHandle@{FileHandle}!close@{close}}
+\index{close@{close}!FileHandle@{FileHandle}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual int close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Close the file
+
+\begin{DoxyReturn}{Returns}
+Zero on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmbed_1_1_stream_a2bc5dcba0e89b4a820b62a4cb183d702}{Stream}}.
+
+\mbox{\Hypertarget{classmbed_1_1_file_handle_a3c8b116df2f335a817f94dab6dc55221}\label{classmbed_1_1_file_handle_a3c8b116df2f335a817f94dab6dc55221}} 
+\index{FileHandle@{FileHandle}!flen@{flen}}
+\index{flen@{flen}!FileHandle@{FileHandle}}
+\doxysubsubsection{\texorpdfstring{flen()}{flen()}}
+{\footnotesize\ttfamily virtual off\+\_\+t flen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classmbed_1_1_stream_a3c8b116df2f335a817f94dab6dc55221}{Stream}}.
+
+
+
+Definition at line \mbox{\hyperlink{_file_handle_8h_source_l00103}{103}} of file \mbox{\hyperlink{_file_handle_8h_source}{File\+Handle.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_file_handle_aba403acd4d983123d864c1d74f833422}\label{classmbed_1_1_file_handle_aba403acd4d983123d864c1d74f833422}} 
+\index{FileHandle@{FileHandle}!fsync@{fsync}}
+\index{fsync@{fsync}!FileHandle@{FileHandle}}
+\doxysubsubsection{\texorpdfstring{fsync()}{fsync()}}
+{\footnotesize\ttfamily virtual int fsync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Flush any buffers associated with the \mbox{\hyperlink{classmbed_1_1_file_handle}{File\+Handle}}, ensuring it is up to date on disk
+
+\begin{DoxyReturn}{Returns}
+0 on success or un-\/needed, -\/1 on error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmbed_1_1_stream_afbe9d4b6859e1410f88f6546f1f6d41e}{Stream}}.
+
+\mbox{\Hypertarget{classmbed_1_1_file_handle_af8b1bceee5dae7fff7626bd575c309ad}\label{classmbed_1_1_file_handle_af8b1bceee5dae7fff7626bd575c309ad}} 
+\index{FileHandle@{FileHandle}!isatty@{isatty}}
+\index{isatty@{isatty}!FileHandle@{FileHandle}}
+\doxysubsubsection{\texorpdfstring{isatty()}{isatty()}}
+{\footnotesize\ttfamily virtual int isatty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Check if the handle is for a interactive terminal device. If so, line buffered behaviour is used by default
+
+\begin{DoxyReturn}{Returns}
+1 if it is a terminal, 0 otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmbed_1_1_stream_a67cbbfec09edb77cf2d60ab3e2b79a66}{Stream}}.
+
+\mbox{\Hypertarget{classmbed_1_1_file_handle_ac5c73beb78fc91ecbdbe4cf4a6b4faec}\label{classmbed_1_1_file_handle_ac5c73beb78fc91ecbdbe4cf4a6b4faec}} 
+\index{FileHandle@{FileHandle}!lseek@{lseek}}
+\index{lseek@{lseek}!FileHandle@{FileHandle}}
+\doxysubsubsection{\texorpdfstring{lseek()}{lseek()}}
+{\footnotesize\ttfamily virtual off\+\_\+t lseek (\begin{DoxyParamCaption}\item[{off\+\_\+t}]{offset,  }\item[{int}]{whence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Move the file position to a given offset from a given location.
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The offset from whence to move to \\
+\hline
+{\em whence} & SEEK\+\_\+\+SET for the start of the file, SEEK\+\_\+\+CUR for the current file position, or SEEK\+\_\+\+END for the end of the file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new file position on success, -\/1 on failure or unsupported 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmbed_1_1_stream_aebc39cb3a78f1f8ec2aaa46ca6d8ae4c}{Stream}}.
+
+\mbox{\Hypertarget{classmbed_1_1_file_handle_a46a09dc9739d9e3838c3d5786377b14a}\label{classmbed_1_1_file_handle_a46a09dc9739d9e3838c3d5786377b14a}} 
+\index{FileHandle@{FileHandle}!read@{read}}
+\index{read@{read}!FileHandle@{FileHandle}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual ssize\+\_\+t read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Function read Reads the contents of the file into a buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the buffer to read in to \\
+\hline
+{\em length} & the number of characters to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters read (zero at end of file) on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmbed_1_1_stream_a48b616ed2c59a14b39c6d0afe91cf195}{Stream}}.
+
+\mbox{\Hypertarget{classmbed_1_1_file_handle_afb4f34ce3f921a252f8244f34bc41adf}\label{classmbed_1_1_file_handle_afb4f34ce3f921a252f8244f34bc41adf}} 
+\index{FileHandle@{FileHandle}!write@{write}}
+\index{write@{write}!FileHandle@{FileHandle}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual ssize\+\_\+t write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Write the contents of a buffer to the file
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the buffer to write from \\
+\hline
+{\em length} & the number of characters to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters written (possibly 0) on success, -\/1 on error. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmbed_1_1_stream_a2b295c28246c7c03393a40050313d4c2}{Stream}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\mbox{\hyperlink{_file_handle_8h}{File\+Handle.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,220 @@
+\hypertarget{stm32f4xx__hal__cryp_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+cryp.\+h}
+\label{stm32f4xx__hal__cryp_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_cryp.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_cryp.h}}
+\mbox{\hyperlink{stm32f4xx__hal__cryp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_CRYP\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_CRYP\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#if defined(STM32F415xx) || defined(STM32F417xx) || defined(STM32F437xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{58 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65   uint32\_t DataType;    }
+\DoxyCodeLine{68   uint32\_t KeySize;     }
+\DoxyCodeLine{71   uint8\_t* pKey;        }
+\DoxyCodeLine{73   uint8\_t* pInitVect;   }
+\DoxyCodeLine{76   uint8\_t IVSize;       }
+\DoxyCodeLine{80   uint8\_t TagSize;      }
+\DoxyCodeLine{84   uint8\_t* Header;      }
+\DoxyCodeLine{86   uint16\_t HeaderSize;  }
+\DoxyCodeLine{88   uint8\_t* pScratch;    }
+\DoxyCodeLine{90 \}CRYP\_InitTypeDef;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{95 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{96 \{}
+\DoxyCodeLine{97   HAL\_CRYP\_STATE\_RESET             = 0x00,  }
+\DoxyCodeLine{98   HAL\_CRYP\_STATE\_READY             = 0x01,  }
+\DoxyCodeLine{99   HAL\_CRYP\_STATE\_BUSY              = 0x02,  }
+\DoxyCodeLine{100   HAL\_CRYP\_STATE\_TIMEOUT           = 0x03,  }
+\DoxyCodeLine{101   HAL\_CRYP\_STATE\_ERROR             = 0x04   }
+\DoxyCodeLine{102 \}HAL\_CRYP\_STATETypeDef;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{107 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{108 \{}
+\DoxyCodeLine{109   HAL\_CRYP\_PHASE\_READY             = 0x01,    }
+\DoxyCodeLine{110   HAL\_CRYP\_PHASE\_PROCESS           = 0x02,    }
+\DoxyCodeLine{111   HAL\_CRYP\_PHASE\_FINAL             = 0x03     }
+\DoxyCodeLine{113 \}HAL\_PhaseTypeDef;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{118 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120       CRYP\_InitTypeDef         Init;             }
+\DoxyCodeLine{122       uint8\_t                  *pCrypInBuffPtr;  }
+\DoxyCodeLine{124       uint8\_t                  *pCrypOutBuffPtr; }
+\DoxyCodeLine{126       \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint16\_t            CrypInCount;      }
+\DoxyCodeLine{128       \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint16\_t            CrypOutCount;     }
+\DoxyCodeLine{130       \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}        Status;           }
+\DoxyCodeLine{132       HAL\_PhaseTypeDef         Phase;            }
+\DoxyCodeLine{134       \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}        *hdmain;          }
+\DoxyCodeLine{136       \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}        *hdmaout;         }
+\DoxyCodeLine{138       \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}          Lock;             }
+\DoxyCodeLine{140    \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}}  HAL\_CRYP\_STATETypeDef State;            }
+\DoxyCodeLine{141 \}CRYP\_HandleTypeDef;}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define CRYP\_KEYSIZE\_128B         ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define CRYP\_KEYSIZE\_192B         CRYP\_CR\_KEYSIZE\_0}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define CRYP\_KEYSIZE\_256B         CRYP\_CR\_KEYSIZE\_1}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define IS\_CRYP\_KEYSIZE(KEYSIZE)  (((KEYSIZE) == CRYP\_KEYSIZE\_128B)  || \(\backslash\)}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{                                   ((KEYSIZE) == CRYP\_KEYSIZE\_192B)  || \(\backslash\)}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{                                   ((KEYSIZE) == CRYP\_KEYSIZE\_256B))}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define CRYP\_DATATYPE\_32B         ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define CRYP\_DATATYPE\_16B         CRYP\_CR\_DATATYPE\_0}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define CRYP\_DATATYPE\_8B          CRYP\_CR\_DATATYPE\_1}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define CRYP\_DATATYPE\_1B          CRYP\_CR\_DATATYPE}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define IS\_CRYP\_DATATYPE(DATATYPE) (((DATATYPE) == CRYP\_DATATYPE\_32B) || \(\backslash\)}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{                                    ((DATATYPE) == CRYP\_DATATYPE\_16B) || \(\backslash\)}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{                                    ((DATATYPE) == CRYP\_DATATYPE\_8B)  || \(\backslash\)}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{                                    ((DATATYPE) == CRYP\_DATATYPE\_1B))  }}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_DIRECTION         ((uint32\_t)0x0008003C)}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_TDES\_ECB\_ENCRYPT  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_TDES\_ECB\_DECRYPT  ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_TDES\_CBC\_ENCRYPT  ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_TDES\_CBC\_DECRYPT  ((uint32\_t)0x0000000C)}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_DES\_ECB\_ENCRYPT   ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_DES\_ECB\_DECRYPT   ((uint32\_t)0x00000014)}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_DES\_CBC\_ENCRYPT   ((uint32\_t)0x00000018)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_DES\_CBC\_DECRYPT   ((uint32\_t)0x0000001C)}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_AES\_ECB\_ENCRYPT   ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_AES\_ECB\_DECRYPT   ((uint32\_t)0x00000024)}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_AES\_CBC\_ENCRYPT   ((uint32\_t)0x00000028)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_AES\_CBC\_DECRYPT   ((uint32\_t)0x0000002C)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_AES\_CTR\_ENCRYPT   ((uint32\_t)0x00000030)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#define CRYP\_CR\_ALGOMODE\_AES\_CTR\_DECRYPT   ((uint32\_t)0x00000034)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define CRYP\_IT\_INI               ((uint32\_t)CRYP\_IMSCR\_INIM)   }}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define CRYP\_IT\_OUTI              ((uint32\_t)CRYP\_IMSCR\_OUTIM)  }}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#define CRYP\_FLAG\_BUSY   ((uint32\_t)0x00000010)  }}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define CRYP\_FLAG\_IFEM   ((uint32\_t)0x00000001)  }}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define CRYP\_FLAG\_IFNF   ((uint32\_t)0x00000002)  }}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define CRYP\_FLAG\_OFNE   ((uint32\_t)0x00000004)  }}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define CRYP\_FLAG\_OFFU   ((uint32\_t)0x00000008)  }}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define CRYP\_FLAG\_OUTRIS ((uint32\_t)0x01000002)  }}
+\DoxyCodeLine{224 \textcolor{preprocessor}{\#define CRYP\_FLAG\_INRIS  ((uint32\_t)0x01000001)  }}
+\DoxyCodeLine{234 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_CRYP\_STATE\_RESET)}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_ENABLE()  (CRYP-\/>CR |=  CRYP\_CR\_CRYPEN)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_DISABLE() (CRYP-\/>CR \&=  \string~CRYP\_CR\_CRYPEN)}}
+\DoxyCodeLine{249 }
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_FIFO\_FLUSH() (CRYP-\/>CR |=  CRYP\_CR\_FFLUSH)}}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_SET\_MODE(MODE)  CRYP-\/>CR |= (uint32\_t)(MODE)}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define CRYP\_FLAG\_MASK  ((uint32\_t)0x0000001F)}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_GET\_FLAG(\_\_FLAG\_\_) ((((uint8\_t)((\_\_FLAG\_\_) >> 24)) == 0x01)?(((CRYP-\/>RISR) \& ((\_\_FLAG\_\_) \& CRYP\_FLAG\_MASK)) == ((\_\_FLAG\_\_) \& CRYP\_FLAG\_MASK)): \(\backslash\)}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{                                                 (((CRYP-\/>RISR) \& ((\_\_FLAG\_\_) \& CRYP\_FLAG\_MASK)) == ((\_\_FLAG\_\_) \& CRYP\_FLAG\_MASK)))}}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_GET\_IT(\_\_INTERRUPT\_\_) ((CRYP-\/>MISR \& (\_\_INTERRUPT\_\_)) == (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_ENABLE\_IT(\_\_INTERRUPT\_\_) ((CRYP-\/>IMSCR) |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#define \_\_HAL\_CRYP\_DISABLE\_IT(\_\_INTERRUPT\_\_) ((CRYP-\/>IMSCR) \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304 \textcolor{comment}{/* Include CRYP HAL Extension module */}}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__cryp__ex_8h}{stm32f4xx\_hal\_cryp\_ex.h}}"{}}}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{308 \textcolor{comment}{/* Initialization/de-\/initialization functions  ********************************/}}
+\DoxyCodeLine{309 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_Init(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{310 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DeInit(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312 \textcolor{comment}{/* AES encryption/decryption using polling  ***********************************/}}
+\DoxyCodeLine{313 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESECB\_Encrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{314 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESECB\_Decrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData, uint32\_t Timeout);}
+\DoxyCodeLine{315 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCBC\_Encrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{316 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCBC\_Decrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData, uint32\_t Timeout);}
+\DoxyCodeLine{317 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCTR\_Encrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{318 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCTR\_Decrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData, uint32\_t Timeout);}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320 \textcolor{comment}{/* AES encryption/decryption using interrupt  *********************************/}}
+\DoxyCodeLine{321 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESECB\_Encrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{322 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCBC\_Encrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{323 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCTR\_Encrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{324 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESECB\_Decrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{325 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCTR\_Decrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{326 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCBC\_Decrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328 \textcolor{comment}{/* AES encryption/decryption using DMA  ***************************************/}}
+\DoxyCodeLine{329 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESECB\_Encrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{330 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESECB\_Decrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{331 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCBC\_Encrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{332 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCBC\_Decrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{333 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCTR\_Encrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{334 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_AESCTR\_Decrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{335 }
+\DoxyCodeLine{336 \textcolor{comment}{/* DES encryption/decryption using polling  ***********************************/}}
+\DoxyCodeLine{337 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESECB\_Encrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{338 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESCBC\_Encrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{339 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESECB\_Decrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{340 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESCBC\_Decrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{342 \textcolor{comment}{/* DES encryption/decryption using interrupt  *********************************/}}
+\DoxyCodeLine{343 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESECB\_Encrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{344 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESECB\_Decrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{345 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESCBC\_Encrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{346 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESCBC\_Decrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348 \textcolor{comment}{/* DES encryption/decryption using DMA  ***************************************/}}
+\DoxyCodeLine{349 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESECB\_Encrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{350 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESECB\_Decrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{351 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESCBC\_Encrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{352 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_DESCBC\_Decrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{354 \textcolor{comment}{/* TDES encryption/decryption using polling  **********************************/}}
+\DoxyCodeLine{355 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESECB\_Encrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{356 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESCBC\_Encrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData, uint32\_t Timeout);}
+\DoxyCodeLine{357 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESECB\_Decrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData, uint32\_t Timeout);}
+\DoxyCodeLine{358 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESCBC\_Decrypt(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData, uint32\_t Timeout);}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360 \textcolor{comment}{/* TDES encryption/decryption using interrupt  ********************************/}}
+\DoxyCodeLine{361 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESECB\_Encrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{362 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESECB\_Decrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{363 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESCBC\_Encrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{364 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESCBC\_Decrypt\_IT(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{366 \textcolor{comment}{/* TDES encryption/decryption using DMA  **************************************/}}
+\DoxyCodeLine{367 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESECB\_Encrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{368 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESECB\_Decrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{369 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESCBC\_Encrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pPlainData, uint16\_t Size, uint8\_t *pCypherData);}
+\DoxyCodeLine{370 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CRYP\_TDESCBC\_Decrypt\_DMA(CRYP\_HandleTypeDef *hcryp, uint8\_t *pCypherData, uint16\_t Size, uint8\_t *pPlainData);}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372 \textcolor{comment}{/* Processing functions  ******************************************************/}}
+\DoxyCodeLine{373 \textcolor{keywordtype}{void} HAL\_CRYP\_IRQHandler(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{374 }
+\DoxyCodeLine{375 \textcolor{comment}{/* Peripheral State functions  ************************************************/}}
+\DoxyCodeLine{376 HAL\_CRYP\_STATETypeDef HAL\_CRYP\_GetState(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378 \textcolor{comment}{/* MSP functions  *************************************************************/}}
+\DoxyCodeLine{379 \textcolor{keywordtype}{void} HAL\_CRYP\_MspInit(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{380 \textcolor{keywordtype}{void} HAL\_CRYP\_MspDeInit(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{381 }
+\DoxyCodeLine{382 \textcolor{comment}{/* CallBack functions  ********************************************************/}}
+\DoxyCodeLine{383 \textcolor{keywordtype}{void} HAL\_CRYP\_InCpltCallback(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{384 \textcolor{keywordtype}{void} HAL\_CRYP\_OutCpltCallback(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{385 \textcolor{keywordtype}{void} HAL\_CRYP\_ErrorCallback(CRYP\_HandleTypeDef *hcryp);}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F415xx || STM32F417xx || STM32F437xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{388 }
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{398 \}}
+\DoxyCodeLine{399 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{400 }
+\DoxyCodeLine{401 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_CRYP\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{402 }
+\DoxyCodeLine{403 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__smartcard_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_smartcard.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_smartcard.h</primary></indexterm>
+<para>
+
+<para>Header file of SMARTCARD HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def">SMARTCARD_InitTypeDef</link></para>
+
+<para>SMARTCARD Init Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link></para>
+
+<para>SMARTCARD handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___word___length_1ga36d8236ce7c45ba2bf01ba4b28561861">SMARTCARD_WORDLENGTH_8B</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___word___length_1ga22f73d114cf13ee0041537303faef14b">SMARTCARD_WORDLENGTH_9B</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga95f0288b9c6aaeca7cb6550a2e6833e2">USART_CR1_M</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___word___length_1ga963c514e557b58c5c11bb60ab2660259">IS_SMARTCARD_WORD_LENGTH</link>(LENGTH)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gaad1a5a08d00d268990232301b9f2c828">SMARTCARD_STOPBITS_1</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gacb1f23b1dd63c60d9823d1ec65475ae0">SMARTCARD_STOPBITS_0_5</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaee6ee01c6e5325b378b2209ef20d0a61">USART_CR2_STOP_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gab777f0e142c5d29e7b83e4b1a18bdecc">SMARTCARD_STOPBITS_2</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga2b24d14f0e5d1c76c878b08aad44d02b">USART_CR2_STOP_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1ga60cf2b59a8e70d1039e8ce1dcdb7c97b">SMARTCARD_STOPBITS_1_5</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gaee6ee01c6e5325b378b2209ef20d0a61">USART_CR2_STOP_0</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2b24d14f0e5d1c76c878b08aad44d02b">USART_CR2_STOP_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1ga55a0c0a41cc21f1c11d34457bf45b97b">IS_SMARTCARD_STOPBITS</link>(STOPBITS)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___parity_1gabdf3059c7a116ab8a104954a1a4ec5b6">SMARTCARD_PARITY_NONE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___parity_1ga94ae871b29c18b59dab9a045443d11c8">SMARTCARD_PARITY_EVEN</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___parity_1gaef2239030beeb07577e43965b013f65d">SMARTCARD_PARITY_ODD</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2e159d36ab2c93a2c1942df60e9eebbe">USART_CR1_PS</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___parity_1ga958995a8f043b3057cee33a8098ca095">IS_SMARTCARD_PARITY</link>(PARITY)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___mode_1ga88cae88197abe0d85a82c6335454ab84">SMARTCARD_MODE_RX</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gada0d5d407a22264de847bc1b40a17aeb">USART_CR1_RE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___mode_1ga32859d392982097d1c2c95cd7332bcf7">SMARTCARD_MODE_TX</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gade7f090b04fd78b755b43357ecaa9622">USART_CR1_TE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___mode_1gac481921bcb3a053264f1ddc92164bda6">SMARTCARD_MODE_TX_RX</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gade7f090b04fd78b755b43357ecaa9622">USART_CR1_TE</link> |<link linkend="_group___peripheral___registers___bits___definition_1gada0d5d407a22264de847bc1b40a17aeb">USART_CR1_RE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___mode_1ga2dc06686d0651b6a8504ccffd028d2c4">IS_SMARTCARD_MODE</link>(MODE)   ((((MODE) &amp; (uint32_t)0x0000FFF3) == 0x00) &amp;&amp; ((MODE) != (uint32_t)0x000000))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___polarity_1ga07e246426d125fbc19f8e363f09b21e5">SMARTCARD_POLARITY_LOW</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___polarity_1ga69e81ca7759a40f9e13c4051fe44a95f">SMARTCARD_POLARITY_HIGH</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gafbb4336ac93d94d4e78f9fb7b3a0dc68">USART_CR2_CPOL</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___polarity_1gab728caa9af7ecfe085a67603df18e567">IS_SMARTCARD_POLARITY</link>(CPOL)   (((CPOL) == <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___polarity_1ga07e246426d125fbc19f8e363f09b21e5">SMARTCARD_POLARITY_LOW</link>) || ((CPOL) == <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___polarity_1ga69e81ca7759a40f9e13c4051fe44a95f">SMARTCARD_POLARITY_HIGH</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___phase_1ga6b5dfd540b22b8a6cbd956688d17cfce">SMARTCARD_PHASE_1EDGE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___phase_1ga744e424283994e4c92a4db8b247582d6">SMARTCARD_PHASE_2EDGE</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga362976ce813e58310399d113d2cf09cb">USART_CR2_CPHA</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___phase_1gad4f2566348232722026dc4861ed76125">IS_SMARTCARD_PHASE</link>(CPHA)   (((CPHA) == <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___phase_1ga6b5dfd540b22b8a6cbd956688d17cfce">SMARTCARD_PHASE_1EDGE</link>) || ((CPHA) == <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___phase_1ga744e424283994e4c92a4db8b247582d6">SMARTCARD_PHASE_2EDGE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___last___bit_1ga8ce0dd5ed70e0ce9799c9b056363e884">SMARTCARD_LASTBIT_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___last___bit_1ga11edb8d6ed3ba95eade9a1a6d35a2468">SMARTCARD_LASTBIT_ENABLE</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga4a62e93ae7864e89622bdd92508b615e">USART_CR2_LBCL</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___last___bit_1ga77540ed09a99dfb4b1283b4d4560733f">IS_SMARTCARD_LASTBIT</link>(LASTBIT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___n_a_c_k___state_1gacfa3faf135d8fb291f6b1db598e29110">SMARTCARD_NACK_ENABLED</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga3f3b70b2ee9ff0b59e952fd7ab04373c">USART_CR3_NACK</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___n_a_c_k___state_1gae04c68df21068299eac9bf3590b68986">SMARTCARD_NACK_DISABLED</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___n_a_c_k___state_1ga2ee3e5dd705563b63d6551497b514fe1">IS_SMARTCARD_NACK_STATE</link>(NACK)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___d_m_a___requests_1gafc7f43a4fd2402ac26d5ca9f7e398471">SMARTCARD_DMAREQ_TX</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga5bb515d3814d448f84e2c98bf44f3993">USART_CR3_DMAT</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___d_m_a___requests_1ga6b694a965ea96e1e33646a538ea10d87">SMARTCARD_DMAREQ_RX</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaff130f15493c765353ec2fd605667c5a">USART_CR3_DMAR</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___flags_1ga5ac591d03dcadd10c53f6d586a0e485c">SMARTCARD_FLAG_TXE</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___flags_1ga778899c7c536fcbbcf3d6cc00b4139fb">SMARTCARD_FLAG_TC</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___flags_1ga1f617725b179572983789cbc7da1a955">SMARTCARD_FLAG_RXNE</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___flags_1ga5576e74148257291b05dcc410f501e8a">SMARTCARD_FLAG_IDLE</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___flags_1ga48dfe32b52249f43c0e4396a29c07a85">SMARTCARD_FLAG_ORE</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___flags_1ga14a7b77b47b2e83a4cf4ef6f8e8ee23b">SMARTCARD_FLAG_NE</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___flags_1gaa85318d22a73dbbf1498363545999bf3">SMARTCARD_FLAG_FE</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___flags_1ga19dfcc02f14bb270f559601cca5f433d">SMARTCARD_FLAG_PE</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___interrupt__definition_1gac56e07a71ab82a23930ad58e9a8dc806">SMARTCARD_IT_PE</link>   ((uint32_t)0x10000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___interrupt__definition_1ga758561a96d28254dc3504cb5325dad1f">SMARTCARD_IT_TXE</link>   ((uint32_t)0x10000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___interrupt__definition_1ga808ee7d7c209374af004e8bf1d2ca492">SMARTCARD_IT_TC</link>   ((uint32_t)0x10000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___interrupt__definition_1ga75b6c6e283a114afa1130f6f1bc98da6">SMARTCARD_IT_RXNE</link>   ((uint32_t)0x10000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___interrupt__definition_1ga0b1a5f7e611a976c71168a5b9e3a1f0e">SMARTCARD_IT_IDLE</link>   ((uint32_t)0x10000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___smart_card___interrupt__definition_1ga751761f820948ee230b30a244ca85725">SMARTCARD_IT_ERR</link>   ((uint32_t)0x20000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga080b197f190ae36b8db1745a4db94bf4">__HAL_SMARTCARD_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea3bb178c89408959b462cf8bc607034cb">HAL_SMARTCARD_STATE_RESET</link>)</para>
+
+<para>Reset SMARTCARD handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga942e652bb57d4f12e7273f4e97035ff4">__HAL_SMARTCARD_FLUSH_DRREGISTER</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;DR)</para>
+
+<para>Flushs the Smartcard DR register. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga38f995afc135ddbaafc0c68e12c31f11">__HAL_SMARTCARD_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Checks whether the specified Smartcard flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gab40a9ea5252be0340f074b1cab9c2264">__HAL_SMARTCARD_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</para>
+
+<para>Clears the specified Smartcard pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>   ((uint32_t)0x0000FFFF)</para>
+
+<para>Enables or disables the specified SmartCard interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gac28ac71a5048913946c0b2cb43869606">__SMARTCARD_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gafb2e783e25efa42568e587d88a32dbc4">__SMARTCARD_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga8bae0fc7f068414790697698adafc4f2">__HAL_SMARTCARD_GET_IT_SOURCE</link>(__HANDLE__,  __IT__)   (((((__IT__) &gt;&gt; 28) == 1)? (__HANDLE__)-&gt;Instance-&gt;CR1: (__HANDLE__)-&gt;Instance-&gt;CR3) &amp; (((uint32_t)(__IT__)) &amp; <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2d4be8e0259fd370f82c53579c96ede5">SMARTCARD_IT_MASK</link>))</para>
+
+<para>Checks whether the specified SmartCard interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga41d6f263ca49881a482e053cdb452278">__SMARTCARD_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+
+<para>Macros to enable or disable the SmartCard interface. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga93fe2e3f814dd564f485ab67b7f757c9">__SMARTCARD_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga5266d13bd56e0c5eada58c461ea5c22d">__SMARTCARD_DMA_REQUEST_ENABLE</link>(__HANDLE__,  __REQUEST__)   ((__HANDLE__)-&gt;Instance-&gt;CR3 |=  (__REQUEST__))</para>
+
+<para>Macros to enable or disable the SmartCard DMA request. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga2ede2a184afa4076809092b357c96853">__SMARTCARD_DMA_REQUEST_DISABLE</link>(__HANDLE__,  __REQUEST__)   ((__HANDLE__)-&gt;Instance-&gt;CR3 &amp;=  ~(__REQUEST__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>(_PCLK_,  _BAUD_)   (((_PCLK_)*25)/(4*(_BAUD_)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>(_PCLK_,  _BAUD_)   (<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_))/100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>(_PCLK_,  _BAUD_)   (((<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_)) - (<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) * 100)) * 16 + 50) / 100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1gafe466e58e1f1d8c87e0677e604709cc8">__SMARTCARD_BRR</link>(_PCLK_,  _BAUD_)   ((<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) &lt;&lt; 4)|(<link linkend="_group___u_s_a_r_t_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>((_PCLK_), (_BAUD_)) &amp; 0x0F))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga8af8fc5fa79cca4a3bf1bce5d051e371">IS_SMARTCARD_BAUDRATE</link>(BAUDRATE)   ((BAUDRATE) &lt; 10500001)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga79d6a3b95636861dcfd70913746e087e">HAL_SMARTCARD_StateTypeDef</link> { 
+<link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea3bb178c89408959b462cf8bc607034cb">HAL_SMARTCARD_STATE_RESET</link> = 0x00
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea574c38a9650163fcf757974c7a6c4a44">HAL_SMARTCARD_STATE_READY</link> = 0x01
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087ea2cb929aaef6e779ed7cd6b3909ddd9dc">HAL_SMARTCARD_STATE_BUSY</link> = 0x02
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eae782bca07469b811467a60454fd3789d">HAL_SMARTCARD_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eaebf962d48014d5c46f262a1e7c6fe5a3">HAL_SMARTCARD_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eadce24f292ca00c111d393cbc11a823bf">HAL_SMARTCARD_STATE_BUSY_TX_RX</link> = 0x32
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eac871d68a9fe445e9cdcef0d3eb374a1c">HAL_SMARTCARD_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1gga79d6a3b95636861dcfd70913746e087eabd76a0e440c55bb7d040626f2134afee">HAL_SMARTCARD_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_m_a_r_t_c_a_r_d_1gae3ce190c726f8059f7280e4e7b091651">HAL_SMARTCARD_ErrorTypeDef</link> { 
+<link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a319651c709199001748835687ca790d4">HAL_SMARTCARD_ERROR_NONE</link> = 0x00
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a50cbf86dd5395fd9a328f153a86adba9">HAL_SMARTCARD_ERROR_PE</link> = 0x01
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651a8aca04ab3abf42b68d93c9ffa2827e07">HAL_SMARTCARD_ERROR_NE</link> = 0x02
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651ad181472c6486cbc8c8f126144817a06c">HAL_SMARTCARD_ERROR_FE</link> = 0x04
+, 
+<link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651ad292f9248d5ee9036ba769c4e36adfae">HAL_SMARTCARD_ERROR_ORE</link> = 0x08
+, <link linkend="_group___s_m_a_r_t_c_a_r_d_1ggae3ce190c726f8059f7280e4e7b091651add9e313d077e62b0c93150876e965e03">HAL_SMARTCARD_ERROR_DMA</link> = 0x10
+ }</para>
+
+<para>HAL SMARTCARD Error Code structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga95235c14cb192c26cf72bf44ddaaf551">HAL_SMARTCARD_Init</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga1701fcf5d66117782a06569af1e40077">HAL_SMARTCARD_ReInit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga4b54b33c61b5284adbb7c98760425c2e">HAL_SMARTCARD_DeInit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga13e9aae9f5dd3b332fc8e431596793dc">HAL_SMARTCARD_MspInit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1gaf8e8fa8ca8058656fdd091880424565a">HAL_SMARTCARD_MspDeInit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga4dd0a7c6916ca2423c50f432a38a7328">HAL_SMARTCARD_Transmit</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga82240fa2bcafd64a28ffbb1b01893e84">HAL_SMARTCARD_Receive</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1gab671c1bdba9ed83fb08142c4c38caee8">HAL_SMARTCARD_Transmit_IT</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga52b04b11f8793a859f2105fd748d75cd">HAL_SMARTCARD_Receive_IT</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1gab39a7dd50e44fd5c6cfc6af60bf8a4f5">HAL_SMARTCARD_Transmit_DMA</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1gaa8506576688d14e1f10f99d8c3f104fa">HAL_SMARTCARD_Receive_DMA</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga5c09daa91f4d5f44c9b4c927a1c50b3e">HAL_SMARTCARD_IRQHandler</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1gafb56eef6e839e909823cc16bf96c845b">HAL_SMARTCARD_TxCpltCallback</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga955fe3e5402e8a2797af8b605701dde4">HAL_SMARTCARD_RxCpltCallback</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga6a5255ea10c1c5c0d3b037ce61d5dc91">HAL_SMARTCARD_ErrorCallback</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_m_a_r_t_c_a_r_d_1ga79d6a3b95636861dcfd70913746e087e">HAL_SMARTCARD_StateTypeDef</link> <link linkend="_group___s_m_a_r_t_c_a_r_d_1ga0edb69af10195dfde9b0451943990ad0">HAL_SMARTCARD_GetState</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_m_a_r_t_c_a_r_d_1gaf42409d25813eeca7cca2df14a6f7b7a">HAL_SMARTCARD_GetError</link> (<link linkend="_struct_s_m_a_r_t_c_a_r_d___handle_type_def">SMARTCARD_HandleTypeDef</link> *hsc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of SMARTCARD HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+</section>

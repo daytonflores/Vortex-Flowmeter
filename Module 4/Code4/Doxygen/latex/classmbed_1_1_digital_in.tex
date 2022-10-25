@@ -1,0 +1,118 @@
+\hypertarget{classmbed_1_1_digital_in}{}\doxysection{mbed\+::Digital\+In Class Reference}
+\label{classmbed_1_1_digital_in}\index{mbed::DigitalIn@{mbed::DigitalIn}}
+
+
+{\ttfamily \#include $<$Digital\+In.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmbed_1_1_digital_in_a6593a15bcecfd3666c49bba83c81ee9b}{Digital\+In}} (Pin\+Name pin)
+\item 
+\mbox{\hyperlink{classmbed_1_1_digital_in_a4f07c90ffec20a9724ef42a61f7d21eb}{Digital\+In}} (Pin\+Name pin, Pin\+Mode \mbox{\hyperlink{classmbed_1_1_digital_in_a9f3e23f670999a3f0ecb5ad959d1667a}{mode}})
+\item 
+int \mbox{\hyperlink{classmbed_1_1_digital_in_aa19e2bc687842e7a1414ec5599f4f0e9}{read}} ()
+\item 
+void \mbox{\hyperlink{classmbed_1_1_digital_in_a9f3e23f670999a3f0ecb5ad959d1667a}{mode}} (Pin\+Mode pull)
+\item 
+\mbox{\hyperlink{classmbed_1_1_digital_in_add1742ff230f5a6ba35f26056d11b4f6}{operator int}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmbed_1_1_digital_in_a6cbb51f8b90fc874a7f720f8e5c70e9e}\label{classmbed_1_1_digital_in_a6cbb51f8b90fc874a7f720f8e5c70e9e}} 
+\mbox{\hyperlink{structgpio__t}{gpio\+\_\+t}} {\bfseries gpio}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A digital input, used for reading the state of a pin
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Flash an LED while a DigitalIn is true}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}mbed.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classmbed_1_1_digital_in_a6593a15bcecfd3666c49bba83c81ee9b}{DigitalIn}} enable(p5);}
+\DoxyCodeLine{DigitalOut led(LED1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(1) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if}(enable) \{}
+\DoxyCodeLine{            led = !led;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        wait(0.25);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmbed_1_1_digital_in_a6593a15bcecfd3666c49bba83c81ee9b}\label{classmbed_1_1_digital_in_a6593a15bcecfd3666c49bba83c81ee9b}} 
+\index{mbed::DigitalIn@{mbed::DigitalIn}!DigitalIn@{DigitalIn}}
+\index{DigitalIn@{DigitalIn}!mbed::DigitalIn@{mbed::DigitalIn}}
+\doxysubsubsection{\texorpdfstring{DigitalIn()}{DigitalIn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mbed\+::\+Digital\+In\+::\+Digital\+In (\begin{DoxyParamCaption}\item[{Pin\+Name}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a \mbox{\hyperlink{classmbed_1_1_digital_in}{Digital\+In}} connected to the specified pin
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \mbox{\hyperlink{classmbed_1_1_digital_in}{Digital\+In}} pin to connect to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmbed_1_1_digital_in_a4f07c90ffec20a9724ef42a61f7d21eb}\label{classmbed_1_1_digital_in_a4f07c90ffec20a9724ef42a61f7d21eb}} 
+\index{mbed::DigitalIn@{mbed::DigitalIn}!DigitalIn@{DigitalIn}}
+\index{DigitalIn@{DigitalIn}!mbed::DigitalIn@{mbed::DigitalIn}}
+\doxysubsubsection{\texorpdfstring{DigitalIn()}{DigitalIn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mbed\+::\+Digital\+In\+::\+Digital\+In (\begin{DoxyParamCaption}\item[{Pin\+Name}]{pin,  }\item[{Pin\+Mode}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a \mbox{\hyperlink{classmbed_1_1_digital_in}{Digital\+In}} connected to the specified pin
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \mbox{\hyperlink{classmbed_1_1_digital_in}{Digital\+In}} pin to connect to \\
+\hline
+{\em mode} & the initial mode of the pin \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_digital_in_a9f3e23f670999a3f0ecb5ad959d1667a}\label{classmbed_1_1_digital_in_a9f3e23f670999a3f0ecb5ad959d1667a}} 
+\index{mbed::DigitalIn@{mbed::DigitalIn}!mode@{mode}}
+\index{mode@{mode}!mbed::DigitalIn@{mbed::DigitalIn}}
+\doxysubsubsection{\texorpdfstring{mode()}{mode()}}
+{\footnotesize\ttfamily void mbed\+::\+Digital\+In\+::mode (\begin{DoxyParamCaption}\item[{Pin\+Mode}]{pull }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the input pin mode
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Pull\+Up, Pull\+Down, Pull\+None, Open\+Drain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmbed_1_1_digital_in_add1742ff230f5a6ba35f26056d11b4f6}\label{classmbed_1_1_digital_in_add1742ff230f5a6ba35f26056d11b4f6}} 
+\index{mbed::DigitalIn@{mbed::DigitalIn}!operator int@{operator int}}
+\index{operator int@{operator int}!mbed::DigitalIn@{mbed::DigitalIn}}
+\doxysubsubsection{\texorpdfstring{operator int()}{operator int()}}
+{\footnotesize\ttfamily mbed\+::\+Digital\+In\+::operator int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+An operator shorthand for \mbox{\hyperlink{classmbed_1_1_digital_in_aa19e2bc687842e7a1414ec5599f4f0e9}{read()}} \mbox{\Hypertarget{classmbed_1_1_digital_in_aa19e2bc687842e7a1414ec5599f4f0e9}\label{classmbed_1_1_digital_in_aa19e2bc687842e7a1414ec5599f4f0e9}} 
+\index{mbed::DigitalIn@{mbed::DigitalIn}!read@{read}}
+\index{read@{read}!mbed::DigitalIn@{mbed::DigitalIn}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int mbed\+::\+Digital\+In\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Read the input, represented as 0 or 1 (int)
+
+\begin{DoxyReturn}{Returns}
+An integer representing the state of the input pin, 0 for logical 0, 1 for logical 1 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/Digital\+In.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_timeout" xml:lang="en-US">
+<title>Timeout Class Reference</title>
+<indexterm><primary>Timeout</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Timeout.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Timeout:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmbed_1_1_timeout.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_classmbed_1_1_timeout_1a10a5ab629c238472e20543206af37ce3">handler</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A <link linkend="_classmbed_1_1_timeout">Timeout</link> is used to call a function at a point in the future</para>
+
+<para>You can use as many seperate <link linkend="_classmbed_1_1_timeout">Timeout</link> objects as you require.</para>
+
+<para>Example: <literallayout><computeroutput><emphasis role="comment">//&#32;Blink&#32;until&#32;timeout.</emphasis>
+
+<emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed_8h">mbed.h</link>&quot;</emphasis>
+
+Timeout&#32;timeout;
+DigitalOut&#32;led(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1adac6477842247cab1a8c02c65f431b44">LED1</link>);
+
+<emphasis role="keywordtype">int</emphasis>&#32;on&#32;=&#32;1;
+
+<emphasis role="keywordtype">void</emphasis>&#32;attimeout()&#32;{
+&#32;&#32;&#32;&#32;on&#32;=&#32;0;
+}
+
+<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>()&#32;{
+&#32;&#32;&#32;&#32;timeout.attach(&amp;attimeout,&#32;5);
+&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(on)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;led&#32;=&#32;!led;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(0.2);
+&#32;&#32;&#32;&#32;}
+}
+</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__timeout_8h_source_1l00051">51</link> of file <link linkend="__timeout_8h_source">Timeout.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_timeout_1a10a5ab629c238472e20543206af37ce3"/><section>
+    <title>handler()</title>
+<indexterm><primary>handler</primary><secondary>Timeout</secondary></indexterm>
+<indexterm><primary>Timeout</primary><secondary>handler</secondary></indexterm>
+<para><computeroutput>virtual void handler ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_classmbed_1_1_ticker_1a10a5ab629c238472e20543206af37ce3">Ticker</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__timeout_8h">Timeout.h</link></section>
+</section>

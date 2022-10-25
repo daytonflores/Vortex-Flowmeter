@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__file_system_like_8h_source" xml:lang="en-US">
+<title>FileSystemLike.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/FileSystemLike.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__file_system_like_8h_source_1l00001"/>00001 <emphasis role="comment">/*&#32;mbed&#32;Microcontroller&#32;Library</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*&#32;Copyright&#32;(c)&#32;2006-2013&#32;ARM&#32;Limited</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;Licensed&#32;under&#32;the&#32;Apache&#32;License,&#32;Version&#32;2.0&#32;(the&#32;&quot;License&quot;);</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*&#32;you&#32;may&#32;not&#32;use&#32;this&#32;file&#32;except&#32;in&#32;compliance&#32;with&#32;the&#32;License.</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00006"/>00006 <emphasis role="comment">&#32;*&#32;You&#32;may&#32;obtain&#32;a&#32;copy&#32;of&#32;the&#32;License&#32;at</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00007"/>00007 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00008"/>00008 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;&#32;http://www.apache.org/licenses/LICENSE-2.0</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00009"/>00009 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00010"/>00010 <emphasis role="comment">&#32;*&#32;Unless&#32;required&#32;by&#32;applicable&#32;law&#32;or&#32;agreed&#32;to&#32;in&#32;writing,&#32;software</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00011"/>00011 <emphasis role="comment">&#32;*&#32;distributed&#32;under&#32;the&#32;License&#32;is&#32;distributed&#32;on&#32;an&#32;&quot;AS&#32;IS&quot;&#32;BASIS,</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;*&#32;WITHOUT&#32;WARRANTIES&#32;OR&#32;CONDITIONS&#32;OF&#32;ANY&#32;KIND,&#32;either&#32;express&#32;or&#32;implied.</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;*&#32;See&#32;the&#32;License&#32;for&#32;the&#32;specific&#32;language&#32;governing&#32;permissions&#32;and</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;*&#32;limitations&#32;under&#32;the&#32;License.</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#ifndef&#32;MBED_FILESYSTEMLIKE_H</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#define&#32;MBED_FILESYSTEMLIKE_H</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00018"/>00018 
+<anchor xml:id="__file_system_like_8h_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_platform_8h">platform.h</link>&quot;</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00020"/>00020 
+<anchor xml:id="__file_system_like_8h_source_1l00021"/>00021 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__file_base_8h">FileBase.h</link>&quot;</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00022"/>00022 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__file_handle_8h">FileHandle.h</link>&quot;</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00023"/>00023 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__dir_handle_8h">DirHandle.h</link>&quot;</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00024"/>00024 
+<anchor xml:id="__file_system_like_8h_source_1l00025"/>00025 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacembed">mbed</link>&#32;{
+<anchor xml:id="__file_system_like_8h_source_1l00026"/>00026 
+<anchor xml:id="__file_system_like_8h_source_1l00033"/><link linkend="_classmbed_1_1_file_system_like">00033</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classmbed_1_1_file_system_like">FileSystemLike</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classmbed_1_1_file_base">FileBase</link>&#32;{
+<anchor xml:id="__file_system_like_8h_source_1l00034"/>00034 
+<anchor xml:id="__file_system_like_8h_source_1l00035"/>00035 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__file_system_like_8h_source_1l00040"/><link linkend="_classmbed_1_1_file_system_like_1acf63f803d6edb01c09d558ded9645e13">00040</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_file_system_like_1acf63f803d6edb01c09d558ded9645e13">FileSystemLike</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*name);
+<anchor xml:id="__file_system_like_8h_source_1l00041"/>00041 
+<anchor xml:id="__file_system_like_8h_source_1l00042"/><link linkend="_classmbed_1_1_file_system_like_1a998fa00b85f628216af6969469d27037">00042</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classmbed_1_1_file_system_like_1a998fa00b85f628216af6969469d27037">~FileSystemLike</link>();
+<anchor xml:id="__file_system_like_8h_source_1l00043"/>00043 
+<anchor xml:id="__file_system_like_8h_source_1l00044"/><link linkend="_classmbed_1_1_file_system_like_1aa3f0c6a5c375704a0ea188a7dba80195">00044</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_classmbed_1_1_dir_handle">DirHandle</link>&#32;*<link linkend="_classmbed_1_1_file_system_like_1aa3f0c6a5c375704a0ea188a7dba80195">opendir</link>();
+<anchor xml:id="__file_system_like_8h_source_1l00045"/><link linkend="_classmbed_1_1_file_system_like_1a675ca106d6ffb5f78d71d004be2166b4">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classmbed_1_1_file_system_like_1a675ca106d6ffb5f78d71d004be2166b4">BaseDirHandle</link>;
+<anchor xml:id="__file_system_like_8h_source_1l00046"/>00046 
+<anchor xml:id="__file_system_like_8h_source_1l00057"/><link linkend="_classmbed_1_1_file_system_like_1ad5f09da4a20de0e563cac31448b00612">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classmbed_1_1_file_handle">FileHandle</link>&#32;*<link linkend="_classmbed_1_1_file_system_like_1ad5f09da4a20de0e563cac31448b00612">open</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*filename,&#32;<emphasis role="keywordtype">int</emphasis>&#32;flags)&#32;=&#32;0;
+<anchor xml:id="__file_system_like_8h_source_1l00058"/>00058 
+<anchor xml:id="__file_system_like_8h_source_1l00064"/><link linkend="_classmbed_1_1_file_system_like_1ac9e759c8eaf958266b21465878e1abfe">00064</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classmbed_1_1_file_system_like_1ac9e759c8eaf958266b21465878e1abfe">remove</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*filename)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;&#32;};
+<anchor xml:id="__file_system_like_8h_source_1l00065"/>00065 
+<anchor xml:id="__file_system_like_8h_source_1l00075"/><link linkend="_classmbed_1_1_file_system_like_1afc47638d317c3a569f94698ac84751b8">00075</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classmbed_1_1_file_system_like_1afc47638d317c3a569f94698ac84751b8">rename</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*oldname,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*newname)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;&#32;};
+<anchor xml:id="__file_system_like_8h_source_1l00076"/>00076 
+<anchor xml:id="__file_system_like_8h_source_1l00086"/><link linkend="_classmbed_1_1_file_system_like_1a73c97910e2be90f1075a3c36f2d56a2c">00086</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classmbed_1_1_dir_handle">DirHandle</link>&#32;*<link linkend="_classmbed_1_1_file_system_like_1a73c97910e2be90f1075a3c36f2d56a2c">opendir</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*name)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;&#32;};
+<anchor xml:id="__file_system_like_8h_source_1l00087"/>00087 
+<anchor xml:id="__file_system_like_8h_source_1l00097"/><link linkend="_classmbed_1_1_file_system_like_1aa91c4d57960654fe7c518e2b51499617">00097</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classmbed_1_1_file_system_like_1aa91c4d57960654fe7c518e2b51499617">mkdir</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*name,&#32;mode_t&#32;mode)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;&#32;}
+<anchor xml:id="__file_system_like_8h_source_1l00098"/>00098 
+<anchor xml:id="__file_system_like_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO&#32;other&#32;filesystem&#32;functions&#32;(mkdir,&#32;rm,&#32;rn,&#32;ls&#32;etc)</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00100"/>00100 };
+<anchor xml:id="__file_system_like_8h_source_1l00101"/>00101 
+<anchor xml:id="__file_system_like_8h_source_1l00102"/>00102 }&#32;<emphasis role="comment">//&#32;namespace&#32;mbed</emphasis>
+<anchor xml:id="__file_system_like_8h_source_1l00103"/>00103 
+<anchor xml:id="__file_system_like_8h_source_1l00104"/>00104 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

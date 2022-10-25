@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_interrupt_manager" xml:lang="en-US">
+<title>InterruptManager Class Reference</title>
+<indexterm><primary>InterruptManager</primary></indexterm>
+<para>
+<computeroutput>#include &lt;InterruptManager.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_interrupt_manager_1a352607247d5c0532ecf602d1cf60169e">add_handler</link> (void(*function)(void), <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_interrupt_manager_1a1db579c8908fa8aa0815d41f6840fd68">add_handler_front</link> (void(*function)(void), <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_interrupt_manager_1a64fd0e2a456c655832e4fe83fe62762b">add_handler</link> (T *tptr, void(T::*mptr)(void), <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_interrupt_manager_1a750dc4a22734ace4595e1710d3454275">add_handler_front</link> (T *tptr, void(T::*mptr)(void), <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmbed_1_1_interrupt_manager_1a2eb949920e99f46b2f7a4c3e4c75df7a">remove_handler</link> (<link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> handler, <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link> * <link linkend="_classmbed_1_1_interrupt_manager_1a629b18584b99e4ab63ab7031eaf6ba18">get</link> ()</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classmbed_1_1_interrupt_manager_1a112a068c3a6f373ec6c12fdf0b48987b">destroy</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Use this singleton if you need to chain interrupt handlers.</para>
+
+<para>Example (for LPC1768): <literallayout><computeroutput><emphasis role="preprocessor">#include&#32;&quot;<link linkend="__interrupt_manager_8h">InterruptManager.h</link>&quot;</emphasis>
+<emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed_8h">mbed.h</link>&quot;</emphasis>
+
+Ticker&#32;flipper;
+DigitalOut&#32;led1(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1adac6477842247cab1a8c02c65f431b44">LED1</link>);
+DigitalOut&#32;led2(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a8379bbaa96d151e6adac488b2a147b7a">LED2</link>);
+
+<emphasis role="keywordtype">void</emphasis>&#32;flip(<emphasis role="keywordtype">void</emphasis>)&#32;{
+&#32;&#32;&#32;&#32;led1&#32;=&#32;!led1;
+}
+
+<emphasis role="keywordtype">void</emphasis>&#32;handler(<emphasis role="keywordtype">void</emphasis>)&#32;{
+&#32;&#32;&#32;&#32;led2&#32;=&#32;!led1;
+}
+
+<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>()&#32;{
+&#32;&#32;&#32;&#32;led1&#32;=&#32;led2&#32;=&#32;0;
+&#32;&#32;&#32;&#32;flipper.attach(&amp;flip,&#32;1.0);
+&#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_interrupt_manager_1a629b18584b99e4ab63ab7031eaf6ba18">InterruptManager::get</link>()-&gt;<link linkend="_classmbed_1_1_interrupt_manager_1a352607247d5c0532ecf602d1cf60169e">add_handler</link>(handler,&#32;TIMER3_IRQn);
+}
+</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__interrupt_manager_8h_source_1l00036">36</link> of file <link linkend="__interrupt_manager_8h_source">InterruptManager.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_interrupt_manager_1a64fd0e2a456c655832e4fe83fe62762b"/><section>
+    <title>add_handler()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>add_handler</primary><secondary>InterruptManager</secondary></indexterm>
+<indexterm><primary>InterruptManager</primary><secondary>add_handler</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> add_handler (T * tptr, void(T::*)(void) mptr, <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Add a handler for an interrupt at the end of the handler list</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tptr</entry><entry>
+<para>pointer to the object that has the handler function </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mptr</entry><entry>
+<para>pointer to the actual handler function </para>
+</entry>
+                            </row>
+                            <row>
+<entry>irq</entry><entry>
+<para>interrupt number</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object created for &apos;tptr&apos; and &apos;mptr&apos; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__interrupt_manager_8h_source_1l00080">80</link> of file <link linkend="__interrupt_manager_8h_source">InterruptManager.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_interrupt_manager_1a352607247d5c0532ecf602d1cf60169e"/><section>
+    <title>add_handler()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>add_handler</primary><secondary>InterruptManager</secondary></indexterm>
+<indexterm><primary>InterruptManager</primary><secondary>add_handler</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> add_handler (void(*)(void) function, <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Add a handler for an interrupt at the end of the handler list</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>function</entry><entry>
+<para>the handler to add </para>
+</entry>
+                            </row>
+                            <row>
+<entry>irq</entry><entry>
+<para>interrupt number</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object created for &apos;function&apos; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__interrupt_manager_8h_source_1l00054">54</link> of file <link linkend="__interrupt_manager_8h_source">InterruptManager.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_interrupt_manager_1a750dc4a22734ace4595e1710d3454275"/><section>
+    <title>add_handler_front()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>add_handler_front</primary><secondary>InterruptManager</secondary></indexterm>
+<indexterm><primary>InterruptManager</primary><secondary>add_handler_front</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> add_handler_front (T * tptr, void(T::*)(void) mptr, <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Add a handler for an interrupt at the beginning of the handler list</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tptr</entry><entry>
+<para>pointer to the object that has the handler function </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mptr</entry><entry>
+<para>pointer to the actual handler function </para>
+</entry>
+                            </row>
+                            <row>
+<entry>irq</entry><entry>
+<para>interrupt number</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object created for &apos;tptr&apos; and &apos;mptr&apos; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__interrupt_manager_8h_source_1l00094">94</link> of file <link linkend="__interrupt_manager_8h_source">InterruptManager.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_interrupt_manager_1a1db579c8908fa8aa0815d41f6840fd68"/><section>
+    <title>add_handler_front()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>add_handler_front</primary><secondary>InterruptManager</secondary></indexterm>
+<indexterm><primary>InterruptManager</primary><secondary>add_handler_front</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> add_handler_front (void(*)(void) function, <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Add a handler for an interrupt at the beginning of the handler list</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>function</entry><entry>
+<para>the handler to add </para>
+</entry>
+                            </row>
+                            <row>
+<entry>irq</entry><entry>
+<para>interrupt number</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object created for &apos;function&apos; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__interrupt_manager_8h_source_1l00066">66</link> of file <link linkend="__interrupt_manager_8h_source">InterruptManager.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_interrupt_manager_1a112a068c3a6f373ec6c12fdf0b48987b"/><section>
+    <title>destroy()</title>
+<indexterm><primary>destroy</primary><secondary>InterruptManager</secondary></indexterm>
+<indexterm><primary>InterruptManager</primary><secondary>destroy</secondary></indexterm>
+<para><computeroutput>static void destroy ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Destroy the current instance of the interrupt manager </para>
+</section>
+<anchor xml:id="_classmbed_1_1_interrupt_manager_1a629b18584b99e4ab63ab7031eaf6ba18"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>InterruptManager</secondary></indexterm>
+<indexterm><primary>InterruptManager</primary><secondary>get</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link> * get ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Return the only instance of this class </para>
+</section>
+<anchor xml:id="_classmbed_1_1_interrupt_manager_1a2eb949920e99f46b2f7a4c3e4c75df7a"/><section>
+    <title>remove_handler()</title>
+<indexterm><primary>remove_handler</primary><secondary>InterruptManager</secondary></indexterm>
+<indexterm><primary>InterruptManager</primary><secondary>remove_handler</secondary></indexterm>
+<para><computeroutput>bool remove_handler (<link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> handler, <link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> irq)</computeroutput></para>
+<para>Remove a handler from an interrupt</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>handler</entry><entry>
+<para>the function object for the handler to remove </para>
+</entry>
+                            </row>
+                            <row>
+<entry>irq</entry><entry>
+<para>the interrupt number</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if the handler was found and removed, false otherwise </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__interrupt_manager_8h">InterruptManager.h</link></section>
+</section>

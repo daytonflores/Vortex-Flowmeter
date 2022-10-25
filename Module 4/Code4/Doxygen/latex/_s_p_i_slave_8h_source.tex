@@ -1,0 +1,61 @@
+\hypertarget{_s_p_i_slave_8h_source}{}\doxysection{SPISlave.\+h}
+\label{_s_p_i_slave_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/SPISlave.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/SPISlave.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_SPISLAVE\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_SPISLAVE\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#if DEVICE\_SPISLAVE}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}spi\_api.h"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{51 \textcolor{keyword}{class }SPISlave \{}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keyword}{public}:}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{68     SPISlave(PinName mosi, PinName miso, PinName sclk, PinName ssel);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} format(\textcolor{keywordtype}{int} bits, \textcolor{keywordtype}{int} mode = 0);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} frequency(\textcolor{keywordtype}{int} hz = 1000000);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{int} receive(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{int} read(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{void} reply(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{115     spi\_t \_spi;}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} \_bits;}
+\DoxyCodeLine{118     \textcolor{keywordtype}{int} \_mode;}
+\DoxyCodeLine{119     \textcolor{keywordtype}{int} \_hz;}
+\DoxyCodeLine{120 \};}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

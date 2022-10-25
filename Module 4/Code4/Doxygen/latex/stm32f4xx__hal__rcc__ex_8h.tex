@@ -1,0 +1,60 @@
+\hypertarget{stm32f4xx__hal__rcc__ex_8h}{}\doxysection{C\+:/\+Users/dayton.flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/\+TARGET\+\_\+\+NUCLEO\+\_\+\+F401\+RE/stm32f4xx\+\_\+hal\+\_\+rcc\+\_\+ex.h File Reference}
+\label{stm32f4xx__hal__rcc__ex_8h}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_rcc\_ex.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_rcc\_ex.h}}
+
+
+Header file of RCC HAL Extension module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_r_c_c___p_l_l_i2_s_init_type_def}{RCC\+\_\+\+PLLI2\+SInit\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em PLLI2S Clock structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\+\_\+\+Periph\+CLKInit\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em RCC extended clocks structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries RCC\+\_\+\+PERIPHCLK\+\_\+\+I2S}~((uint32\+\_\+t)0x00000001)
+\item 
+\#define {\bfseries RCC\+\_\+\+PERIPHCLK\+\_\+\+RTC}~((uint32\+\_\+t)0x00000002)
+\item 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PERIPHCLOCK}(SELECTION)~((1 $<$= (SELECTION)) \&\& ((SELECTION) $<$= 0x00000003))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___r_c_c_ex_ga0c0f61a1e2f47cc81bc43d83ba3e0d95}{HAL\+\_\+\+RCCEx\+\_\+\+Periph\+CLKConfig}} (\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\+\_\+\+Periph\+CLKInit\+Type\+Def}} $\ast$Periph\+Clk\+Init)
+\begin{DoxyCompactList}\small\item\em Enables or disables the AHB1 peripheral clock. \end{DoxyCompactList}\item 
+void {\bfseries HAL\+\_\+\+RCCEx\+\_\+\+Get\+Periph\+CLKConfig} (\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\+\_\+\+Periph\+CLKInit\+Type\+Def}} $\ast$Periph\+Clk\+Init)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of RCC HAL Extension module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0\+RC2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/May-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

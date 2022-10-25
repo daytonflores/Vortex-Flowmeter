@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_digital_in" xml:lang="en-US">
+<title>DigitalIn Class Reference</title>
+<indexterm><primary>DigitalIn</primary></indexterm>
+<para>
+<computeroutput>#include &lt;DigitalIn.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmbed_1_1_digital_in_1a98e5245aa5e717c5a561fba636b8282c">DigitalIn</link> (<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link> pin)</para>
+</listitem>
+            <listitem><para><link linkend="_classmbed_1_1_digital_in_1aa902382affc1b7bae1b4632cc3d6409a">DigitalIn</link> (<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link> pin, <link linkend="__pin_names_8h_1a15c0c34a3baec6b9d2390a426bd3ba96">PinMode</link> <link linkend="_classmbed_1_1_digital_in_1a12ffae4af877bdcd41ad2fc6a0a444ad">mode</link>)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_digital_in_1aaab5dab5b969a87f538242e524431637">read</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_digital_in_1a12ffae4af877bdcd41ad2fc6a0a444ad">mode</link> (<link linkend="__pin_names_8h_1a15c0c34a3baec6b9d2390a426bd3ba96">PinMode</link> pull)</para>
+</listitem>
+            <listitem><para><link linkend="_classmbed_1_1_digital_in_1a4f4ea421e40bda08a2deca657f640fea">operator int</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structgpio__t">gpio_t</link> <link linkend="_classmbed_1_1_digital_in_1a18315be473e254aa585988e1ce74e512">gpio</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A digital input, used for reading the state of a pin</para>
+
+<para>Example: <literallayout><computeroutput><emphasis role="comment">//&#32;Flash&#32;an&#32;LED&#32;while&#32;a&#32;DigitalIn&#32;is&#32;true</emphasis>
+
+<emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed_8h">mbed.h</link>&quot;</emphasis>
+
+<link linkend="_classmbed_1_1_digital_in_1a98e5245aa5e717c5a561fba636b8282c">DigitalIn</link>&#32;enable(p5);
+DigitalOut&#32;led(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1adac6477842247cab1a8c02c65f431b44">LED1</link>);
+
+<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>()&#32;{
+&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(1)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(enable)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;led&#32;=&#32;!led;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(0.25);
+&#32;&#32;&#32;&#32;}
+}
+</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__digital_in_8h_source_1l00046">46</link> of file <link linkend="__digital_in_8h_source">DigitalIn.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmbed_1_1_digital_in_1a98e5245aa5e717c5a561fba636b8282c"/><section>
+    <title>DigitalIn()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>DigitalIn</primary><secondary>DigitalIn</secondary></indexterm>
+<indexterm><primary>DigitalIn</primary><secondary>DigitalIn</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_digital_in">DigitalIn</link> (<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link> pin)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Create a <link linkend="_classmbed_1_1_digital_in">DigitalIn</link> connected to the specified pin</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pin</entry><entry>
+<para><link linkend="_classmbed_1_1_digital_in">DigitalIn</link> pin to connect to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__digital_in_8h_source_1l00053">53</link> of file <link linkend="__digital_in_8h_source">DigitalIn.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_digital_in_1aa902382affc1b7bae1b4632cc3d6409a"/><section>
+    <title>DigitalIn()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>DigitalIn</primary><secondary>DigitalIn</secondary></indexterm>
+<indexterm><primary>DigitalIn</primary><secondary>DigitalIn</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_digital_in">DigitalIn</link> (<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link> pin, <link linkend="__pin_names_8h_1a15c0c34a3baec6b9d2390a426bd3ba96">PinMode</link> mode)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Create a <link linkend="_classmbed_1_1_digital_in">DigitalIn</link> connected to the specified pin</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pin</entry><entry>
+<para><link linkend="_classmbed_1_1_digital_in">DigitalIn</link> pin to connect to </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mode</entry><entry>
+<para>the initial mode of the pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__digital_in_8h_source_1l00062">62</link> of file <link linkend="__digital_in_8h_source">DigitalIn.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_digital_in_1a12ffae4af877bdcd41ad2fc6a0a444ad"/><section>
+    <title>mode()</title>
+<indexterm><primary>mode</primary><secondary>DigitalIn</secondary></indexterm>
+<indexterm><primary>DigitalIn</primary><secondary>mode</secondary></indexterm>
+<para><computeroutput>void mode (<link linkend="__pin_names_8h_1a15c0c34a3baec6b9d2390a426bd3ba96">PinMode</link> pull)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Set the input pin mode</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>mode</entry><entry>
+<para>PullUp, PullDown, PullNone, OpenDrain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__digital_in_8h_source_1l00079">79</link> of file <link linkend="__digital_in_8h_source">DigitalIn.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_digital_in_1a4f4ea421e40bda08a2deca657f640fea"/><section>
+    <title>operator int()</title>
+<indexterm><primary>operator int</primary><secondary>DigitalIn</secondary></indexterm>
+<indexterm><primary>DigitalIn</primary><secondary>operator int</secondary></indexterm>
+<para><computeroutput>operator int ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>An operator shorthand for <link linkend="_classmbed_1_1_digital_in_1aaab5dab5b969a87f538242e524431637">read()</link> </para>
+<para>
+Definition at line <link linkend="__digital_in_8h_source_1l00086">86</link> of file <link linkend="__digital_in_8h_source">DigitalIn.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_digital_in_1aaab5dab5b969a87f538242e524431637"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>DigitalIn</secondary></indexterm>
+<indexterm><primary>DigitalIn</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>int read ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Read the input, represented as 0 or 1 (int)</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>An integer representing the state of the input pin, 0 for logical 0, 1 for logical 1 </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__digital_in_8h_source_1l00071">71</link> of file <link linkend="__digital_in_8h_source">DigitalIn.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classmbed_1_1_digital_in_1a18315be473e254aa585988e1ce74e512"/><section>
+    <title>gpio</title>
+<indexterm><primary>gpio</primary><secondary>DigitalIn</secondary></indexterm>
+<indexterm><primary>DigitalIn</primary><secondary>gpio</secondary></indexterm>
+<para><computeroutput><link linkend="_structgpio__t">gpio_t</link> gpio<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__digital_in_8h_source_1l00092">92</link> of file <link linkend="__digital_in_8h_source">DigitalIn.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__digital_in_8h">DigitalIn.h</link></section>
+</section>

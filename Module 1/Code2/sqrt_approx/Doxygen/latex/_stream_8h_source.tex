@@ -1,0 +1,67 @@
+\hypertarget{_stream_8h_source}{}\doxysection{Stream.\+h}
+\label{_stream_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/Stream.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/Stream.h}}
+\mbox{\hyperlink{_stream_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_STREAM\_H}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_STREAM\_H}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{platform_8h}{platform.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00020}00020 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_like_8h}{FileLike.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00022}00022 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00024}\mbox{\hyperlink{classmbed_1_1_stream}{00024}} \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_stream}{Stream}} : \textcolor{keyword}{public} \mbox{\hyperlink{classmbed_1_1_file_like}{FileLike}} \{}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00026}00026 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00027}\mbox{\hyperlink{classmbed_1_1_stream_a9f77f4d38b49fed7a43a57c643291433}{00027}}     \mbox{\hyperlink{classmbed_1_1_stream_a9f77f4d38b49fed7a43a57c643291433}{Stream}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name=NULL);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00028}\mbox{\hyperlink{classmbed_1_1_stream_a15237b41305f4268e1576c81766cd6d9}{00028}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_stream_a15237b41305f4268e1576c81766cd6d9}{\string~Stream}}();}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00030}\mbox{\hyperlink{classmbed_1_1_stream_ab2682874a0ea4865b2bfe6ac2599a301}{00030}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_ab2682874a0ea4865b2bfe6ac2599a301}{putc}}(\textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00031}\mbox{\hyperlink{classmbed_1_1_stream_ad41876f99f190c7488e64ef39c50a23f}{00031}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_ad41876f99f190c7488e64ef39c50a23f}{puts}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00032}\mbox{\hyperlink{classmbed_1_1_stream_a12fe8585ae3714e7d4a71cae12fbb110}{00032}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a12fe8585ae3714e7d4a71cae12fbb110}{getc}}();}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00033}\mbox{\hyperlink{classmbed_1_1_stream_a17dde7bc71ab2af9d437c3f7c4263667}{00033}}     \textcolor{keywordtype}{char} *\mbox{\hyperlink{classmbed_1_1_stream_a17dde7bc71ab2af9d437c3f7c4263667}{gets}}(\textcolor{keywordtype}{char} *s, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00034}\mbox{\hyperlink{classmbed_1_1_stream_a98631211a4a8aee62f572375d5b637be}{00034}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a98631211a4a8aee62f572375d5b637be}{printf}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* format, ...);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00035}\mbox{\hyperlink{classmbed_1_1_stream_a5c48433db9c04031772d5b36e6c4411d}{00035}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a5c48433db9c04031772d5b36e6c4411d}{scanf}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* format, ...);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00037}\mbox{\hyperlink{classmbed_1_1_stream_a03416d8cfe698d41c0a82c8bbf7e5b43}{00037}}     \textcolor{keyword}{operator} std::FILE*() \{\textcolor{keywordflow}{return} \mbox{\hyperlink{classmbed_1_1_stream_a8f546dfaaf4b0a4a13704892e831ba94}{\_file}};\}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00039}00039 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00040}\mbox{\hyperlink{classmbed_1_1_stream_a2bc5dcba0e89b4a820b62a4cb183d702}{00040}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a2bc5dcba0e89b4a820b62a4cb183d702}{close}}();}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00041}\mbox{\hyperlink{classmbed_1_1_stream_a2b295c28246c7c03393a40050313d4c2}{00041}}     \textcolor{keyword}{virtual} ssize\_t \mbox{\hyperlink{classmbed_1_1_stream_a2b295c28246c7c03393a40050313d4c2}{write}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00042}\mbox{\hyperlink{classmbed_1_1_stream_a48b616ed2c59a14b39c6d0afe91cf195}{00042}}     \textcolor{keyword}{virtual} ssize\_t \mbox{\hyperlink{classmbed_1_1_stream_a48b616ed2c59a14b39c6d0afe91cf195}{read}}(\textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00043}\mbox{\hyperlink{classmbed_1_1_stream_aebc39cb3a78f1f8ec2aaa46ca6d8ae4c}{00043}}     \textcolor{keyword}{virtual} off\_t \mbox{\hyperlink{classmbed_1_1_stream_aebc39cb3a78f1f8ec2aaa46ca6d8ae4c}{lseek}}(off\_t offset, \textcolor{keywordtype}{int} whence);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00044}\mbox{\hyperlink{classmbed_1_1_stream_a67cbbfec09edb77cf2d60ab3e2b79a66}{00044}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a67cbbfec09edb77cf2d60ab3e2b79a66}{isatty}}();}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00045}\mbox{\hyperlink{classmbed_1_1_stream_afbe9d4b6859e1410f88f6546f1f6d41e}{00045}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_afbe9d4b6859e1410f88f6546f1f6d41e}{fsync}}();}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00046}\mbox{\hyperlink{classmbed_1_1_stream_a3c8b116df2f335a817f94dab6dc55221}{00046}}     \textcolor{keyword}{virtual} off\_t \mbox{\hyperlink{classmbed_1_1_stream_a3c8b116df2f335a817f94dab6dc55221}{flen}}();}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00048}\mbox{\hyperlink{classmbed_1_1_stream_a5685cd6d13b8c19bcee0594db991c72a}{00048}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a5685cd6d13b8c19bcee0594db991c72a}{\_putc}}(\textcolor{keywordtype}{int} c) = 0;}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00049}\mbox{\hyperlink{classmbed_1_1_stream_a701ba406b4c8427c0c3d86e647e12aeb}{00049}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a701ba406b4c8427c0c3d86e647e12aeb}{\_getc}}() = 0;}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00051}\mbox{\hyperlink{classmbed_1_1_stream_a8f546dfaaf4b0a4a13704892e831ba94}{00051}}     std::FILE *\mbox{\hyperlink{classmbed_1_1_stream_a8f546dfaaf4b0a4a13704892e831ba94}{\_file}};}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00053}00053     \textcolor{comment}{/* disallow copy constructor and assignment operators */}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00054}00054 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00055}00055     \mbox{\hyperlink{classmbed_1_1_stream_a9f77f4d38b49fed7a43a57c643291433}{Stream}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_stream}{Stream}}\&);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00056}00056     \mbox{\hyperlink{classmbed_1_1_stream}{Stream}} \& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_stream}{Stream}}\&);}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00057}00057 \};}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00059}00059 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_stream_8h_source_l00061}00061 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

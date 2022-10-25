@@ -1,0 +1,209 @@
+\hypertarget{classmbed_1_1_call_chain}{}\doxysection{Call\+Chain Class Reference}
+\label{classmbed_1_1_call_chain}\index{CallChain@{CallChain}}
+
+
+{\ttfamily \#include $<$Call\+Chain.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmbed_1_1_call_chain_ac0599301f7b8cbcbb337969b4f70c391}{Call\+Chain}} (int \mbox{\hyperlink{classmbed_1_1_call_chain_af9593d4a5ff4274efaf429cb4f9e57cc}{size}}=4)
+\item 
+virtual \mbox{\hyperlink{classmbed_1_1_call_chain_ad37d5d627222cf2e0193bf80b906b399}{$\sim$\+Call\+Chain}} ()
+\item 
+\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} \mbox{\hyperlink{classmbed_1_1_call_chain_a472ea4d4bff102206dabec6d29df9c6a}{add}} (void($\ast$function)(void))
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} \mbox{\hyperlink{classmbed_1_1_call_chain_a0b74c7fd71ee928c1f5d0b2aafd59781}{add}} (T $\ast$tptr, void(T\+::$\ast$mptr)(void))
+\item 
+\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} \mbox{\hyperlink{classmbed_1_1_call_chain_a5e0dd730be3640cee8e482663d9025d7}{add\+\_\+front}} (void($\ast$function)(void))
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} \mbox{\hyperlink{classmbed_1_1_call_chain_a6bb4f38b3d8d3d3cd561e3da41b18c14}{add\+\_\+front}} (T $\ast$tptr, void(T\+::$\ast$mptr)(void))
+\item 
+int \mbox{\hyperlink{classmbed_1_1_call_chain_af9593d4a5ff4274efaf429cb4f9e57cc}{size}} () const
+\item 
+\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} \mbox{\hyperlink{classmbed_1_1_call_chain_ac9801b42474ea68068b460184dcd670b}{get}} (int i) const
+\item 
+int \mbox{\hyperlink{classmbed_1_1_call_chain_aaa4d81409a7ee87f9bf267fbbb2cb222}{find}} (\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} f) const
+\item 
+void \mbox{\hyperlink{classmbed_1_1_call_chain_ac8bb3912a3ce86b15842e79d0b421204}{clear}} ()
+\item 
+bool \mbox{\hyperlink{classmbed_1_1_call_chain_a8f9752e9cf068d97962af45b726c2158}{remove}} (\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} f)
+\item 
+void \mbox{\hyperlink{classmbed_1_1_call_chain_aba7af6b502e464074d3c31ff9236a22c}{call}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_call_chain_8h_source_l00062}{62}} of file \mbox{\hyperlink{_call_chain_8h_source}{Call\+Chain.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmbed_1_1_call_chain_ac0599301f7b8cbcbb337969b4f70c391}\label{classmbed_1_1_call_chain_ac0599301f7b8cbcbb337969b4f70c391}} 
+\index{CallChain@{CallChain}!CallChain@{CallChain}}
+\index{CallChain@{CallChain}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{CallChain()}{CallChain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmbed_1_1_call_chain}{Call\+Chain}} (\begin{DoxyParamCaption}\item[{int}]{size = {\ttfamily 4} }\end{DoxyParamCaption})}
+
+Create an empty chain
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & (optional) Initial size of the chain \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmbed_1_1_call_chain_ad37d5d627222cf2e0193bf80b906b399}\label{classmbed_1_1_call_chain_ad37d5d627222cf2e0193bf80b906b399}} 
+\index{CallChain@{CallChain}!````~CallChain@{$\sim$CallChain}}
+\index{````~CallChain@{$\sim$CallChain}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{$\sim$CallChain()}{~CallChain()}}
+{\footnotesize\ttfamily virtual $\sim$\mbox{\hyperlink{classmbed_1_1_call_chain}{Call\+Chain}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_call_chain_a0b74c7fd71ee928c1f5d0b2aafd59781}\label{classmbed_1_1_call_chain_a0b74c7fd71ee928c1f5d0b2aafd59781}} 
+\index{CallChain@{CallChain}!add@{add}}
+\index{add@{add}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} add (\begin{DoxyParamCaption}\item[{T $\ast$}]{tptr,  }\item[{void(T\+::$\ast$)(void)}]{mptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a function at the end of the chain
+
+
+\begin{DoxyParams}{Parameters}
+{\em tptr} & pointer to the object to call the member function on \\
+\hline
+{\em mptr} & pointer to the member function to be called\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function object created for \textquotesingle{}tptr\textquotesingle{} and \textquotesingle{}mptr\textquotesingle{} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_call_chain_8h_source_l00089}{89}} of file \mbox{\hyperlink{_call_chain_8h_source}{Call\+Chain.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_call_chain_a472ea4d4bff102206dabec6d29df9c6a}\label{classmbed_1_1_call_chain_a472ea4d4bff102206dabec6d29df9c6a}} 
+\index{CallChain@{CallChain}!add@{add}}
+\index{add@{add}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} add (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{function }\end{DoxyParamCaption})}
+
+Add a function at the end of the chain
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & A pointer to a void function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function object created for \textquotesingle{}function\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmbed_1_1_call_chain_a6bb4f38b3d8d3d3cd561e3da41b18c14}\label{classmbed_1_1_call_chain_a6bb4f38b3d8d3d3cd561e3da41b18c14}} 
+\index{CallChain@{CallChain}!add\_front@{add\_front}}
+\index{add\_front@{add\_front}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{add\_front()}{add\_front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} add\+\_\+front (\begin{DoxyParamCaption}\item[{T $\ast$}]{tptr,  }\item[{void(T\+::$\ast$)(void)}]{mptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a function at the beginning of the chain
+
+
+\begin{DoxyParams}{Parameters}
+{\em tptr} & pointer to the object to call the member function on \\
+\hline
+{\em mptr} & pointer to the member function to be called\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function object created for \textquotesingle{}tptr\textquotesingle{} and \textquotesingle{}mptr\textquotesingle{} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_call_chain_8h_source_l00111}{111}} of file \mbox{\hyperlink{_call_chain_8h_source}{Call\+Chain.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_call_chain_a5e0dd730be3640cee8e482663d9025d7}\label{classmbed_1_1_call_chain_a5e0dd730be3640cee8e482663d9025d7}} 
+\index{CallChain@{CallChain}!add\_front@{add\_front}}
+\index{add\_front@{add\_front}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{add\_front()}{add\_front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} add\+\_\+front (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{function }\end{DoxyParamCaption})}
+
+Add a function at the beginning of the chain
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & A pointer to a void function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function object created for \textquotesingle{}function\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmbed_1_1_call_chain_aba7af6b502e464074d3c31ff9236a22c}\label{classmbed_1_1_call_chain_aba7af6b502e464074d3c31ff9236a22c}} 
+\index{CallChain@{CallChain}!call@{call}}
+\index{call@{call}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily void call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Call all the functions in the chain in sequence \mbox{\Hypertarget{classmbed_1_1_call_chain_ac8bb3912a3ce86b15842e79d0b421204}\label{classmbed_1_1_call_chain_ac8bb3912a3ce86b15842e79d0b421204}} 
+\index{CallChain@{CallChain}!clear@{clear}}
+\index{clear@{clear}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the call chain (remove all functions in the chain). \mbox{\Hypertarget{classmbed_1_1_call_chain_aaa4d81409a7ee87f9bf267fbbb2cb222}\label{classmbed_1_1_call_chain_aaa4d81409a7ee87f9bf267fbbb2cb222}} 
+\index{CallChain@{CallChain}!find@{find}}
+\index{find@{find}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily int find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}}}]{f }\end{DoxyParamCaption}) const}
+
+Look for a function object in the call chain
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & the function object to search\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the function object if found, -\/1 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmbed_1_1_call_chain_ac9801b42474ea68068b460184dcd670b}\label{classmbed_1_1_call_chain_ac9801b42474ea68068b460184dcd670b}} 
+\index{CallChain@{CallChain}!get@{get}}
+\index{get@{get}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}} get (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+Get a function object from the chain
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & function object index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The function object at position \textquotesingle{}i\textquotesingle{} in the chain 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmbed_1_1_call_chain_a8f9752e9cf068d97962af45b726c2158}\label{classmbed_1_1_call_chain_a8f9752e9cf068d97962af45b726c2158}} 
+\index{CallChain@{CallChain}!remove@{remove}}
+\index{remove@{remove}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}}}]{f }\end{DoxyParamCaption})}
+
+Remove a function object from the chain
+
+\begin{DoxyItemize}
+\item f the function object to remove\end{DoxyItemize}
+\begin{DoxyReturn}{Returns}
+true if the function object was found and removed, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmbed_1_1_call_chain_af9593d4a5ff4274efaf429cb4f9e57cc}\label{classmbed_1_1_call_chain_af9593d4a5ff4274efaf429cb4f9e57cc}} 
+\index{CallChain@{CallChain}!size@{size}}
+\index{size@{size}!CallChain@{CallChain}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of functions in the chain 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\mbox{\hyperlink{_call_chain_8h}{Call\+Chain.\+h}}\end{DoxyCompactItemize}

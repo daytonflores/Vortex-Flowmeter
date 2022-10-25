@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_o_r_t_e_x___preemption___priority___group" xml:lang="en-US">
+<title>CORTEX_Preemption_Priority_Group</title>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1ga5e97dcff77680602c86e44f23f5ffa1a">NVIC_PRIORITYGROUP_0</link>   ((uint32_t)0x00000007)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1ga702227137b010421c3a3b6434005a132">NVIC_PRIORITYGROUP_1</link>   ((uint32_t)0x00000006)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1gaa43a3fd37850c120ce567ab2743d11b4">NVIC_PRIORITYGROUP_2</link>   ((uint32_t)0x00000005)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1ga8ddb24962e6f0fc3273139d45d374b09">NVIC_PRIORITYGROUP_3</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1gae6eab9140204bc938255aa148e597c45">NVIC_PRIORITYGROUP_4</link>   ((uint32_t)0x00000003)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1ga6569304a39fe4f91bd59b6a586c8ede9">IS_NVIC_PRIORITY_GROUP</link>(GROUP)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1gaf30fd8f5960c2e28a772d8f16bb156dd">IS_NVIC_PREEMPTION_PRIORITY</link>(PRIORITY)   ((PRIORITY) &lt; 0x10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1ga010705bc997dcff935b965b372cba61d">IS_NVIC_SUB_PRIORITY</link>(PRIORITY)   ((PRIORITY) &lt; 0x10)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___c_o_r_t_e_x___preemption___priority___group_1gaf30fd8f5960c2e28a772d8f16bb156dd"/><section>
+    <title>IS_NVIC_PREEMPTION_PRIORITY</title>
+<indexterm><primary>IS_NVIC_PREEMPTION_PRIORITY</primary><secondary>CORTEX_Preemption_Priority_Group</secondary></indexterm>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary><secondary>IS_NVIC_PREEMPTION_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define IS_NVIC_PREEMPTION_PRIORITY( PRIORITY)   ((PRIORITY) &lt; 0x10)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__cortex_8h_source_1l00085">85</link> of file <link linkend="_stm32f4xx__hal__cortex_8h_source">stm32f4xx_hal_cortex.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_o_r_t_e_x___preemption___priority___group_1ga6569304a39fe4f91bd59b6a586c8ede9"/><section>
+    <title>IS_NVIC_PRIORITY_GROUP</title>
+<indexterm><primary>IS_NVIC_PRIORITY_GROUP</primary><secondary>CORTEX_Preemption_Priority_Group</secondary></indexterm>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary><secondary>IS_NVIC_PRIORITY_GROUP</secondary></indexterm>
+<para><computeroutput>#define IS_NVIC_PRIORITY_GROUP( GROUP)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((GROUP)&#32;==&#32;<link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1ga5e97dcff77680602c86e44f23f5ffa1a">NVIC_PRIORITYGROUP_0</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((GROUP)&#32;==&#32;<link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1ga702227137b010421c3a3b6434005a132">NVIC_PRIORITYGROUP_1</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((GROUP)&#32;==&#32;<link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1gaa43a3fd37850c120ce567ab2743d11b4">NVIC_PRIORITYGROUP_2</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((GROUP)&#32;==&#32;<link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1ga8ddb24962e6f0fc3273139d45d374b09">NVIC_PRIORITYGROUP_3</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((GROUP)&#32;==&#32;<link linkend="_group___c_o_r_t_e_x___preemption___priority___group_1gae6eab9140204bc938255aa148e597c45">NVIC_PRIORITYGROUP_4</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__cortex_8h_source_1l00079">79</link> of file <link linkend="_stm32f4xx__hal__cortex_8h_source">stm32f4xx_hal_cortex.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_o_r_t_e_x___preemption___priority___group_1ga010705bc997dcff935b965b372cba61d"/><section>
+    <title>IS_NVIC_SUB_PRIORITY</title>
+<indexterm><primary>IS_NVIC_SUB_PRIORITY</primary><secondary>CORTEX_Preemption_Priority_Group</secondary></indexterm>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary><secondary>IS_NVIC_SUB_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define IS_NVIC_SUB_PRIORITY( PRIORITY)   ((PRIORITY) &lt; 0x10)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__cortex_8h_source_1l00087">87</link> of file <link linkend="_stm32f4xx__hal__cortex_8h_source">stm32f4xx_hal_cortex.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_o_r_t_e_x___preemption___priority___group_1ga5e97dcff77680602c86e44f23f5ffa1a"/><section>
+    <title>NVIC_PRIORITYGROUP_0</title>
+<indexterm><primary>NVIC_PRIORITYGROUP_0</primary><secondary>CORTEX_Preemption_Priority_Group</secondary></indexterm>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary><secondary>NVIC_PRIORITYGROUP_0</secondary></indexterm>
+<para><computeroutput>#define NVIC_PRIORITYGROUP_0   ((uint32_t)0x00000007)</computeroutput></para>
+<para>0 bits for pre-emption priority 4 bits for subpriority </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__cortex_8h_source_1l00069">69</link> of file <link linkend="_stm32f4xx__hal__cortex_8h_source">stm32f4xx_hal_cortex.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_o_r_t_e_x___preemption___priority___group_1ga702227137b010421c3a3b6434005a132"/><section>
+    <title>NVIC_PRIORITYGROUP_1</title>
+<indexterm><primary>NVIC_PRIORITYGROUP_1</primary><secondary>CORTEX_Preemption_Priority_Group</secondary></indexterm>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary><secondary>NVIC_PRIORITYGROUP_1</secondary></indexterm>
+<para><computeroutput>#define NVIC_PRIORITYGROUP_1   ((uint32_t)0x00000006)</computeroutput></para>
+<para>1 bits for pre-emption priority 3 bits for subpriority </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__cortex_8h_source_1l00071">71</link> of file <link linkend="_stm32f4xx__hal__cortex_8h_source">stm32f4xx_hal_cortex.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_o_r_t_e_x___preemption___priority___group_1gaa43a3fd37850c120ce567ab2743d11b4"/><section>
+    <title>NVIC_PRIORITYGROUP_2</title>
+<indexterm><primary>NVIC_PRIORITYGROUP_2</primary><secondary>CORTEX_Preemption_Priority_Group</secondary></indexterm>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary><secondary>NVIC_PRIORITYGROUP_2</secondary></indexterm>
+<para><computeroutput>#define NVIC_PRIORITYGROUP_2   ((uint32_t)0x00000005)</computeroutput></para>
+<para>2 bits for pre-emption priority 2 bits for subpriority </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__cortex_8h_source_1l00073">73</link> of file <link linkend="_stm32f4xx__hal__cortex_8h_source">stm32f4xx_hal_cortex.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_o_r_t_e_x___preemption___priority___group_1ga8ddb24962e6f0fc3273139d45d374b09"/><section>
+    <title>NVIC_PRIORITYGROUP_3</title>
+<indexterm><primary>NVIC_PRIORITYGROUP_3</primary><secondary>CORTEX_Preemption_Priority_Group</secondary></indexterm>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary><secondary>NVIC_PRIORITYGROUP_3</secondary></indexterm>
+<para><computeroutput>#define NVIC_PRIORITYGROUP_3   ((uint32_t)0x00000004)</computeroutput></para>
+<para>3 bits for pre-emption priority 1 bits for subpriority </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__cortex_8h_source_1l00075">75</link> of file <link linkend="_stm32f4xx__hal__cortex_8h_source">stm32f4xx_hal_cortex.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_o_r_t_e_x___preemption___priority___group_1gae6eab9140204bc938255aa148e597c45"/><section>
+    <title>NVIC_PRIORITYGROUP_4</title>
+<indexterm><primary>NVIC_PRIORITYGROUP_4</primary><secondary>CORTEX_Preemption_Priority_Group</secondary></indexterm>
+<indexterm><primary>CORTEX_Preemption_Priority_Group</primary><secondary>NVIC_PRIORITYGROUP_4</secondary></indexterm>
+<para><computeroutput>#define NVIC_PRIORITYGROUP_4   ((uint32_t)0x00000003)</computeroutput></para>
+<para>4 bits for pre-emption priority 0 bits for subpriority </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__cortex_8h_source_1l00077">77</link> of file <link linkend="_stm32f4xx__hal__cortex_8h_source">stm32f4xx_hal_cortex.h</link>.</para>
+</section>
+</section>
+</section>

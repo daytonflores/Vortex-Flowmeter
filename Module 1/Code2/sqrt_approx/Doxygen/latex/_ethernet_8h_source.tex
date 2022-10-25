@@ -1,0 +1,66 @@
+\hypertarget{_ethernet_8h_source}{}\doxysection{Ethernet.\+h}
+\label{_ethernet_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/Ethernet.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/Ethernet.h}}
+\mbox{\hyperlink{_ethernet_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_ETHERNET\_H}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_ETHERNET\_H}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{platform_8h}{platform.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00021}00021 \textcolor{preprocessor}{\#if DEVICE\_ETHERNET}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00023}00023 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00053}00053 \textcolor{keyword}{class }Ethernet \{}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00055}00055 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00059}00059     Ethernet();}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00063}00063     \textcolor{keyword}{virtual} \string~Ethernet();}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00065}00065     \textcolor{keyword}{enum} Mode \{}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00066}00066         AutoNegotiate,}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00067}00067         HalfDuplex10,}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00068}00068         FullDuplex10,}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00069}00069         HalfDuplex100,}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00070}00070         FullDuplex100}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00071}00071     \};}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00083}00083     \textcolor{keywordtype}{int} write(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00094}00094     \textcolor{keywordtype}{int} send();}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00106}00106     \textcolor{keywordtype}{int} receive();}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00120}00120     \textcolor{keywordtype}{int} read(\textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00126}00126     \textcolor{keywordtype}{void} address(\textcolor{keywordtype}{char} *mac);}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00151}00151     \textcolor{keywordtype}{int} link();}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00163}00163     \textcolor{keywordtype}{void} set\_link(Mode mode);}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00164}00164 \};}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00166}00166 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00168}00168 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{_ethernet_8h_source_l00170}00170 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

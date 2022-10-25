@@ -1,0 +1,81 @@
+\hypertarget{stm32f4xx__hal__cortex_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+cortex.\+h}
+\label{stm32f4xx__hal__cortex_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_cortex.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_cortex.h}}
+\mbox{\hyperlink{stm32f4xx__hal__cortex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_CORTEX\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_CORTEX\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{56 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{57 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_0         ((uint32\_t)0x00000007) }}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_1         ((uint32\_t)0x00000006) }}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_2         ((uint32\_t)0x00000005) }}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_3         ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define NVIC\_PRIORITYGROUP\_4         ((uint32\_t)0x00000003) }}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define IS\_NVIC\_PRIORITY\_GROUP(GROUP) (((GROUP) == NVIC\_PRIORITYGROUP\_0) || \(\backslash\)}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{                                       ((GROUP) == NVIC\_PRIORITYGROUP\_1) || \(\backslash\)}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{                                       ((GROUP) == NVIC\_PRIORITYGROUP\_2) || \(\backslash\)}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{                                       ((GROUP) == NVIC\_PRIORITYGROUP\_3) || \(\backslash\)}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{                                       ((GROUP) == NVIC\_PRIORITYGROUP\_4))}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define IS\_NVIC\_PREEMPTION\_PRIORITY(PRIORITY)  ((PRIORITY) < 0x10)}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define IS\_NVIC\_SUB\_PRIORITY(PRIORITY)  ((PRIORITY) < 0x10)}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define SYSTICK\_CLKSOURCE\_HCLK\_DIV8    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define SYSTICK\_CLKSOURCE\_HCLK         ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define IS\_SYSTICK\_CLK\_SOURCE(SOURCE) (((SOURCE) == SYSTICK\_CLKSOURCE\_HCLK) || \(\backslash\)}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{                                       ((SOURCE) == SYSTICK\_CLKSOURCE\_HCLK\_DIV8))}}
+\DoxyCodeLine{104 \textcolor{comment}{/* Exported Macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define \_\_HAL\_CORTEX\_SYSTICKCLK\_CONFIG(\_\_CLKSRC\_\_)                             \(\backslash\)}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{                            do \{                                               \(\backslash\)}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{                                 if ((\_\_CLKSRC\_\_) == SYSTICK\_CLKSOURCE\_HCLK)   \(\backslash\)}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{                                  \{                                            \(\backslash\)}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{                                    SysTick-\/>CTRL |= SYSTICK\_CLKSOURCE\_HCLK;   \(\backslash\)}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{                                  \}                                            \(\backslash\)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{                                 else                                          \(\backslash\)}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{                                    SysTick-\/>CTRL \&= \string~SYSTICK\_CLKSOURCE\_HCLK;  \(\backslash\)}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{                                \} while(0)}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{127 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{128 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{129 \textcolor{comment}{/* Initialization and de-\/initialization functions *******************************/}}
+\DoxyCodeLine{130 \textcolor{keywordtype}{void} HAL\_NVIC\_SetPriorityGrouping(uint32\_t PriorityGroup);}
+\DoxyCodeLine{131 \textcolor{keywordtype}{void} HAL\_NVIC\_SetPriority(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn, uint32\_t PreemptPriority, uint32\_t SubPriority);}
+\DoxyCodeLine{132 \textcolor{keywordtype}{void} HAL\_NVIC\_EnableIRQ(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{133 \textcolor{keywordtype}{void} HAL\_NVIC\_DisableIRQ(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{134 \textcolor{keywordtype}{void} HAL\_NVIC\_SystemReset(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{135 uint32\_t HAL\_SYSTICK\_Config(uint32\_t TicksNumb);}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{comment}{/* Peripheral Control functions *************************************************/}}
+\DoxyCodeLine{138 uint32\_t HAL\_NVIC\_GetPriorityGrouping(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{139 \textcolor{keywordtype}{void} HAL\_NVIC\_GetPriority(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn, uint32\_t PriorityGroup, uint32\_t* pPreemptPriority, uint32\_t* pSubPriority);}
+\DoxyCodeLine{140 uint32\_t HAL\_NVIC\_GetPendingIRQ(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{141 \textcolor{keywordtype}{void} HAL\_NVIC\_SetPendingIRQ(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{142 \textcolor{keywordtype}{void} HAL\_NVIC\_ClearPendingIRQ(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{143 uint32\_t HAL\_NVIC\_GetActive(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn);}
+\DoxyCodeLine{144 \textcolor{keywordtype}{void} HAL\_SYSTICK\_CLKSourceConfig(uint32\_t CLKSource);}
+\DoxyCodeLine{145 \textcolor{keywordtype}{void} HAL\_SYSTICK\_IRQHandler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{146 \textcolor{keywordtype}{void} HAL\_SYSTICK\_Callback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{157 \}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_CORTEX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{161  }
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

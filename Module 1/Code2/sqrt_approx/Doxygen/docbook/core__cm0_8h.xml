@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_core__cm0_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/core_cm0.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/core_cm0.h</primary></indexterm>
+<para>
+
+<para>CMSIS Cortex-M0 Core Peripheral Access Layer Header File. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdint.h&gt;
+#include &lt;core_cmInstr.h&gt;
+#include &lt;core_cmFunc.h&gt;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>union <link linkend="_union_a_p_s_r___type">APSR_Type</link></para>
+
+<para>Union type to access the Application Program Status Register (APSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_union_i_p_s_r___type">IPSR_Type</link></para>
+
+<para>Union type to access the Interrupt Program Status Register (IPSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_unionx_p_s_r___type">xPSR_Type</link></para>
+
+<para>Union type to access the Special-Purpose Program Status Registers (xPSR). </para>
+</listitem>
+            <listitem><para>union <link linkend="_union_c_o_n_t_r_o_l___type">CONTROL_Type</link></para>
+
+<para>Union type to access the Control Registers (CONTROL). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_n_v_i_c___type">NVIC_Type</link></para>
+
+<para>Structure type to access the Nested Vectored Interrupt Controller (NVIC). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_c_b___type">SCB_Type</link></para>
+
+<para>Structure type to access the System Control Block (SCB). </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_sys_tick___type">SysTick_Type</link></para>
+
+<para>Structure type to access the System Timer (SysTick). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1a1c7b83f58ef7b4d6b5f50ec1e294b34e">__CORE_CM0_H_GENERIC</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1acd01bf0a654a7f15f606593aa636bc72">__CM0_CMSIS_VERSION_MAIN</link>   (0x03)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1ab6a85b0d3b2fbcfb62003006ece175cc">__CM0_CMSIS_VERSION_SUB</link>   (0x20)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1af233a7b7b2818cc6194e7a9386faccd8">__CM0_CMSIS_VERSION</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1a63ea62503c88acab19fcf3d5743009e3">__CORTEX_M</link>   (0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1aa167d0f532a7c2b2e3a6395db2fa0776">__FPU_USED</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1ac1e2acb34ba7f2543bcb2249bead4aee">__CORE_CM0_H_DEPENDANT</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link>   volatile const</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link>   volatile</para>
+</listitem>
+            <listitem><para>#define <link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>   volatile</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga58686b88f94f789d4e6f429fe1ff58cf">SCB_CPUID_IMPLEMENTER_Pos</link>   24</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga0932b31faafd47656a03ced75a31d99b">SCB_CPUID_IMPLEMENTER_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga58686b88f94f789d4e6f429fe1ff58cf">SCB_CPUID_IMPLEMENTER_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga104462bd0815391b4044a70bd15d3a71">SCB_CPUID_VARIANT_Pos</link>   20</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad358dfbd04300afc1824329d128b99e8">SCB_CPUID_VARIANT_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga104462bd0815391b4044a70bd15d3a71">SCB_CPUID_VARIANT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaf8b3236b08fb8e840efb682645fb0e98">SCB_CPUID_ARCHITECTURE_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafae4a1f27a927338ae9dc51a0e146213">SCB_CPUID_ARCHITECTURE_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaf8b3236b08fb8e840efb682645fb0e98">SCB_CPUID_ARCHITECTURE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga705f68eaa9afb042ca2407dc4e4629ac">SCB_CPUID_PARTNO_Pos</link>   4</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga98e581423ca016680c238c469aba546d">SCB_CPUID_PARTNO_Msk</link>   (0xFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga705f68eaa9afb042ca2407dc4e4629ac">SCB_CPUID_PARTNO_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3c3d9071e574de11fb27ba57034838b1">SCB_CPUID_REVISION_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2ec0448b6483f77e7f5d08b4b81d85df">SCB_CPUID_REVISION_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3c3d9071e574de11fb27ba57034838b1">SCB_CPUID_REVISION_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga750d4b52624a46d71356db4ea769573b">SCB_ICSR_NMIPENDSET_Pos</link>   31</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga340e3f79e9c3607dee9f2c048b6b22e8">SCB_ICSR_NMIPENDSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga750d4b52624a46d71356db4ea769573b">SCB_ICSR_NMIPENDSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab5ded23d2ab1d5ff7cc7ce746205e9fe">SCB_ICSR_PENDSVSET_Pos</link>   28</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga1e40d93efb402763c8c00ddcc56724ff">SCB_ICSR_PENDSVSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gab5ded23d2ab1d5ff7cc7ce746205e9fe">SCB_ICSR_PENDSVSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae218d9022288f89faf57187c4d542ecd">SCB_ICSR_PENDSVCLR_Pos</link>   27</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga4a901ace381d3c1c74ac82b22fae2e1e">SCB_ICSR_PENDSVCLR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae218d9022288f89faf57187c4d542ecd">SCB_ICSR_PENDSVCLR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga9dbb3358c6167c9c3f85661b90fb2794">SCB_ICSR_PENDSTSET_Pos</link>   26</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga7325b61ea0ec323ef2d5c893b112e546">SCB_ICSR_PENDSTSET_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga9dbb3358c6167c9c3f85661b90fb2794">SCB_ICSR_PENDSTSET_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gadbe25e4b333ece1341beb1a740168fdc">SCB_ICSR_PENDSTCLR_Pos</link>   25</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab241827d2a793269d8cd99b9b28c2157">SCB_ICSR_PENDSTCLR_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gadbe25e4b333ece1341beb1a740168fdc">SCB_ICSR_PENDSTCLR_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga11cb5b1f9ce167b81f31787a77e575df">SCB_ICSR_ISRPREEMPT_Pos</link>   23</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa966600396290808d596fe96e92ca2b5">SCB_ICSR_ISRPREEMPT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga11cb5b1f9ce167b81f31787a77e575df">SCB_ICSR_ISRPREEMPT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga10749d92b9b744094b845c2eb46d4319">SCB_ICSR_ISRPENDING_Pos</link>   22</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga056d74fd538e5d36d3be1f28d399c877">SCB_ICSR_ISRPENDING_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga10749d92b9b744094b845c2eb46d4319">SCB_ICSR_ISRPENDING_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gada60c92bf88d6fd21a8f49efa4a127b8">SCB_ICSR_VECTPENDING_Pos</link>   12</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gacb6992e7c7ddc27a370f62878a21ef72">SCB_ICSR_VECTPENDING_Msk</link>   (0x1FFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gada60c92bf88d6fd21a8f49efa4a127b8">SCB_ICSR_VECTPENDING_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gae4f602c7c5c895d5fb687b71b0979fc3">SCB_ICSR_VECTACTIVE_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga5533791a4ecf1b9301c883047b3e8396">SCB_ICSR_VECTACTIVE_Msk</link>   (0x1FFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gae4f602c7c5c895d5fb687b71b0979fc3">SCB_ICSR_VECTACTIVE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaaa27c0ba600bf82c3da08c748845b640">SCB_AIRCR_VECTKEY_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga90c7cf0c490e7ae55f9503a7fda1dd22">SCB_AIRCR_VECTKEY_Msk</link>   (0xFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaaa27c0ba600bf82c3da08c748845b640">SCB_AIRCR_VECTKEY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaec404750ff5ca07f499a3c06b62051ef">SCB_AIRCR_VECTKEYSTAT_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gabacedaefeefc73d666bbe59ece904493">SCB_AIRCR_VECTKEYSTAT_Msk</link>   (0xFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaec404750ff5ca07f499a3c06b62051ef">SCB_AIRCR_VECTKEYSTAT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gad31dec98fbc0d33ace63cb1f1a927923">SCB_AIRCR_ENDIANESS_Pos</link>   15</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f571f93d3d4a6eac9a3040756d3d951">SCB_AIRCR_ENDIANESS_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gad31dec98fbc0d33ace63cb1f1a927923">SCB_AIRCR_ENDIANESS_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaffb2737eca1eac0fc1c282a76a40953c">SCB_AIRCR_SYSRESETREQ_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaae1181119559a5bd36e62afa373fa720">SCB_AIRCR_SYSRESETREQ_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaffb2737eca1eac0fc1c282a76a40953c">SCB_AIRCR_SYSRESETREQ_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gaa30a12e892bb696e61626d71359a9029">SCB_AIRCR_VECTCLRACTIVE_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga212c5ab1c1c82c807d30d2307aa8d218">SCB_AIRCR_VECTCLRACTIVE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gaa30a12e892bb696e61626d71359a9029">SCB_AIRCR_VECTCLRACTIVE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3bddcec40aeaf3d3a998446100fa0e44">SCB_SCR_SEVONPEND_Pos</link>   4</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gafb98656644a14342e467505f69a997c9">SCB_SCR_SEVONPEND_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3bddcec40aeaf3d3a998446100fa0e44">SCB_SCR_SEVONPEND_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gab304f6258ec03bd9a6e7a360515c3cfe">SCB_SCR_SLEEPDEEP_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga77c06a69c63f4b3f6ec1032e911e18e7">SCB_SCR_SLEEPDEEP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gab304f6258ec03bd9a6e7a360515c3cfe">SCB_SCR_SLEEPDEEP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga3680a15114d7fdc1e25043b881308fe9">SCB_SCR_SLEEPONEXIT_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga50a243e317b9a70781b02758d45b05ee">SCB_SCR_SLEEPONEXIT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga3680a15114d7fdc1e25043b881308fe9">SCB_SCR_SLEEPONEXIT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac2d20a250960a432cc74da59d20e2f86">SCB_CCR_STKALIGN_Pos</link>   9</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga33cf22d3d46af158a03aad25ddea1bcb">SCB_CCR_STKALIGN_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac2d20a250960a432cc74da59d20e2f86">SCB_CCR_STKALIGN_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1gac4e4928b864ea10fc24dbbc57d976229">SCB_CCR_UNALIGN_TRP_Pos</link>   3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga68c96ad594af70c007923979085c99e0">SCB_CCR_UNALIGN_TRP_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1gac4e4928b864ea10fc24dbbc57d976229">SCB_CCR_UNALIGN_TRP_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f93ec9b243f94cdd3e94b8f0bf43641">SCB_SHCSR_SVCALLPENDED_Pos</link>   15</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___s_c_b_1ga6095a7acfbad66f52822b1392be88652">SCB_SHCSR_SVCALLPENDED_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___s_c_b_1ga2f93ec9b243f94cdd3e94b8f0bf43641">SCB_SHCSR_SVCALLPENDED_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c">SysTick_CTRL_COUNTFLAG_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373">SysTick_CTRL_CLKSOURCE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027">SysTick_CTRL_TICKINT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f">SysTick_CTRL_ENABLE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1">SysTick_LOAD_RELOAD_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45">SysTick_VAL_CURRENT_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>   31</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6">SysTick_CALIB_NOREF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>   30</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431">SysTick_CALIB_SKEW_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e">SysTick_CALIB_TENMS_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link>   (0xE000E000UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1ga58effaac0b93006b756d33209e814646">SysTick_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0010UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gaa0288691785a5f868238e0468b39523d">NVIC_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0100UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gad55a7ddb8d4b2398b0c1cfec76c0d9fd">SCB_BASE</link>   (<link linkend="_group___c_m_s_i_s__core__base_1ga3c14ed93192c8d9143322bbf77ebf770">SCS_BASE</link> +  0x0D00UL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gaaaf6477c2bde2f00f99e3c2fd1060b01">SCB</link>   ((<link linkend="_struct_s_c_b___type">SCB_Type</link>       *)     <link linkend="_group___c_m_s_i_s__core__base_1gad55a7ddb8d4b2398b0c1cfec76c0d9fd">SCB_BASE</link>      )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gacd96c53beeaff8f603fcda425eb295de">SysTick</link>   ((<link linkend="_struct_sys_tick___type">SysTick_Type</link>   *)     <link linkend="_group___c_m_s_i_s__core__base_1ga58effaac0b93006b756d33209e814646">SysTick_BASE</link>  )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core__base_1gac8e97e8ce56ae9f57da1363a937f8a17">NVIC</link>   ((<link linkend="_struct_n_v_i_c___type">NVIC_Type</link>      *)     <link linkend="_group___c_m_s_i_s__core__base_1gaa0288691785a5f868238e0468b39523d">NVIC_BASE</link>     )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga53c75b28823441c6153269f0ecbed878">_BIT_SHIFT</link>(IRQn)   (  (((uint32_t)(IRQn)       )    &amp;  0x03) * 8 )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaee4f7eb5d7e770ad51489dbceabb1755">_SHP_IDX</link>(IRQn)   ( ((((uint32_t)(IRQn) &amp; 0x0F)-8) &gt;&gt;    2)     )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga370ec4b1751a6a889d849747df3763a9">_IP_IDX</link>(IRQn)   (   ((uint32_t)(IRQn)            &gt;&gt;    2)     )</para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga3349f2e3580d7ce22d6530b7294e5921">NVIC_EnableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Enable External Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga260fba04ac8346855c57f091d4ee1e71">NVIC_DisableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Disable External Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gafec8042db64c0f8ed432b6c8386a05d8">NVIC_GetPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga3ecf446519da33e1690deffbf5be505f">NVIC_SetPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Set Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga332e10ef9605dc6eb10b9e14511930f8">NVIC_ClearPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Clear Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga2305cbd44aaad792e3a4e538bdaf14f9">NVIC_SetPriority</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn, uint32_t priority)</para>
+
+<para>Set Interrupt Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga1cbaf8e6abd4aa4885828e7f24fcfeb4">NVIC_GetPriority</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Interrupt Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga1143dec48d60a3d6f238c4798a87759c">NVIC_SystemReset</link> (void)</para>
+
+<para>System Reset. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gae4e8f0238527c69f522029b93c8e5b78">SysTick_Config</link> (uint32_t ticks)</para>
+
+<para>System Tick Configuration. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>CMSIS Cortex-M0 Core Peripheral Access Layer Header File. </para>
+
+<para><formalpara><title>Version</title>
+
+<para>V3.20 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>25. February 2013</para>
+</formalpara>
+<note><title>Note</title>
+
+<para></para>
+</note>
+</para>
+<para>
+Definition in file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_core__cm0_8h_1af233a7b7b2818cc6194e7a9386faccd8"/><section>
+    <title>__CM0_CMSIS_VERSION</title>
+<indexterm><primary>__CM0_CMSIS_VERSION</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__CM0_CMSIS_VERSION</secondary></indexterm>
+<para><computeroutput>#define __CM0_CMSIS_VERSION</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((<link linkend="_core__cm0_8h_1acd01bf0a654a7f15f606593aa636bc72">__CM0_CMSIS_VERSION_MAIN</link>&#32;&lt;&lt;&#32;16)&#32;|&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1ab6a85b0d3b2fbcfb62003006ece175cc">__CM0_CMSIS_VERSION_SUB</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+</programlisting>
+<para>CMSIS HAL version number 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00074">74</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1acd01bf0a654a7f15f606593aa636bc72"/><section>
+    <title>__CM0_CMSIS_VERSION_MAIN</title>
+<indexterm><primary>__CM0_CMSIS_VERSION_MAIN</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__CM0_CMSIS_VERSION_MAIN</secondary></indexterm>
+<para><computeroutput>#define __CM0_CMSIS_VERSION_MAIN   (0x03)</computeroutput></para>
+<para>[31:16] CMSIS HAL main version 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00071">71</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1ab6a85b0d3b2fbcfb62003006ece175cc"/><section>
+    <title>__CM0_CMSIS_VERSION_SUB</title>
+<indexterm><primary>__CM0_CMSIS_VERSION_SUB</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__CM0_CMSIS_VERSION_SUB</secondary></indexterm>
+<para><computeroutput>#define __CM0_CMSIS_VERSION_SUB   (0x20)</computeroutput></para>
+<para>[15:0] CMSIS HAL sub version 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00072">72</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1ac1e2acb34ba7f2543bcb2249bead4aee"/><section>
+    <title>__CORE_CM0_H_DEPENDANT</title>
+<indexterm><primary>__CORE_CM0_H_DEPENDANT</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__CORE_CM0_H_DEPENDANT</secondary></indexterm>
+<para><computeroutput>#define __CORE_CM0_H_DEPENDANT</computeroutput></para><para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00135">135</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1a1c7b83f58ef7b4d6b5f50ec1e294b34e"/><section>
+    <title>__CORE_CM0_H_GENERIC</title>
+<indexterm><primary>__CORE_CM0_H_GENERIC</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__CORE_CM0_H_GENERIC</secondary></indexterm>
+<para><computeroutput>#define __CORE_CM0_H_GENERIC</computeroutput></para><para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00047">47</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1a63ea62503c88acab19fcf3d5743009e3"/><section>
+    <title>__CORTEX_M</title>
+<indexterm><primary>__CORTEX_M</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__CORTEX_M</secondary></indexterm>
+<para><computeroutput>#define __CORTEX_M   (0x00)</computeroutput></para>
+<para>Cortex-M Core 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00076">76</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1aa167d0f532a7c2b2e3a6395db2fa0776"/><section>
+    <title>__FPU_USED</title>
+<indexterm><primary>__FPU_USED</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__FPU_USED</secondary></indexterm>
+<para><computeroutput>#define __FPU_USED   0</computeroutput></para>
+<para>__FPU_USED indicates whether an FPU is used or not. This core does not support an FPU at all </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00103">103</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1af63697ed9952cc71e1225efe205f6cd3"/><section>
+    <title>__I</title>
+<indexterm><primary>__I</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__I</secondary></indexterm>
+<para><computeroutput>#define __I   volatile const</computeroutput></para>
+<para>Defines &apos;read only&apos; permissions 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00166">166</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be"/><section>
+    <title>__IO</title>
+<indexterm><primary>__IO</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__IO</secondary></indexterm>
+<para><computeroutput>#define __IO   volatile</computeroutput></para>
+<para>Defines &apos;read / write&apos; permissions 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00169">169</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_core__cm0_8h_1a7e25d9380f9ef903923964322e71f2f6"/><section>
+    <title>__O</title>
+<indexterm><primary>__O</primary><secondary>core_cm0.h</secondary></indexterm>
+<indexterm><primary>core_cm0.h</primary><secondary>__O</secondary></indexterm>
+<para><computeroutput>#define __O   volatile</computeroutput></para>
+<para>Defines &apos;write only&apos; permissions 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00168">168</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+</section>
+</section>

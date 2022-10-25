@@ -1,0 +1,57 @@
+\hypertarget{gpio__api_8h_source}{}\doxysection{gpio\+\_\+api.\+h}
+\label{gpio__api_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/gpio\_api.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/gpio\_api.h}}
+\mbox{\hyperlink{gpio__api_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_GPIO\_API\_H}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_GPIO\_API\_H}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{device_8h}{device.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00021}00021 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00022}00022 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00023}00023 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00025}00025 \textcolor{comment}{/* Set the given pin as GPIO}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00026}00026 \textcolor{comment}{ * @param pin The pin to be set as GPIO}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00027}00027 \textcolor{comment}{ * @return The GPIO port mask for this pin}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00028}00028 \textcolor{comment}{ **/}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00029}\mbox{\hyperlink{gpio__api_8h_ae7303f79f43bab40cf7fdb0e7f596d5b}{00029}} uint32\_t \mbox{\hyperlink{gpio__api_8h_ae7303f79f43bab40cf7fdb0e7f596d5b}{gpio\_set}}(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00031}00031 \textcolor{comment}{/* GPIO object */}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00032}\mbox{\hyperlink{gpio__api_8h_a80305b9e955f6ce5e555096932e76d8c}{00032}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_a80305b9e955f6ce5e555096932e76d8c}{gpio\_init}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00034}\mbox{\hyperlink{gpio__api_8h_a980b8f8055986ffc177267488a4bd19d}{00034}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_a980b8f8055986ffc177267488a4bd19d}{gpio\_mode}} (\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, \mbox{\hyperlink{_pin_names_8h_a15c0c34a3baec6b9d2390a426bd3ba96}{PinMode}} mode);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00035}\mbox{\hyperlink{gpio__api_8h_a5a6594d03628bb652d45bdd5bf266348}{00035}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_a5a6594d03628bb652d45bdd5bf266348}{gpio\_dir}}  (\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, \mbox{\hyperlink{_pin_names_8h_a8ff912d511000d542e6ad34966166f38}{PinDirection}} direction);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00037}\mbox{\hyperlink{gpio__api_8h_aedd478762e37aeafcf9ade8e255718b0}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_aedd478762e37aeafcf9ade8e255718b0}{gpio\_write}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00038}\mbox{\hyperlink{gpio__api_8h_abb97298a1eb6f6c11b6290abe7a1823b}{00038}} \textcolor{keywordtype}{int}  \mbox{\hyperlink{gpio__api_8h_abb97298a1eb6f6c11b6290abe7a1823b}{gpio\_read}} (\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00040}00040 \textcolor{comment}{// the following set of functions are generic and are implemented in the common gpio.c file}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00041}\mbox{\hyperlink{gpio__api_8h_a673e8a1c56bae84724ba155f3c99e959}{00041}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_a673e8a1c56bae84724ba155f3c99e959}{gpio\_init\_in}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00042}\mbox{\hyperlink{gpio__api_8h_ad5c80e0949e35a2b2180387bae5bec27}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_ad5c80e0949e35a2b2180387bae5bec27}{gpio\_init\_in\_ex}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin, \mbox{\hyperlink{_pin_names_8h_a15c0c34a3baec6b9d2390a426bd3ba96}{PinMode}} mode);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00043}\mbox{\hyperlink{gpio__api_8h_a5f5c43c977d7e2b7d242b7827036e32d}{00043}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_a5f5c43c977d7e2b7d242b7827036e32d}{gpio\_init\_out}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00044}\mbox{\hyperlink{gpio__api_8h_af00a2b6d3827ce1ed52950d8a8bc5c72}{00044}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_af00a2b6d3827ce1ed52950d8a8bc5c72}{gpio\_init\_out\_ex}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00045}\mbox{\hyperlink{gpio__api_8h_ada71c18e8fe139d522d63f2a7f9f2f3e}{00045}} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_ada71c18e8fe139d522d63f2a7f9f2f3e}{gpio\_init\_inout}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin, \mbox{\hyperlink{_pin_names_8h_a8ff912d511000d542e6ad34966166f38}{PinDirection}} direction, \mbox{\hyperlink{_pin_names_8h_a15c0c34a3baec6b9d2390a426bd3ba96}{PinMode}} mode, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00047}00047 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00048}00048 \}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00049}00049 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{gpio__api_8h_source_l00051}00051 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

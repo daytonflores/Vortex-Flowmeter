@@ -1,0 +1,427 @@
+\hypertarget{shared_8h}{}\doxysection{src/shared.h File Reference}
+\label{shared_8h}\index{src/shared.h@{src/shared.h}}
+{\ttfamily \#include \char`\"{}mbed.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{shared_8h_a29e413f6725b2ba32d165ffaa35b01e5}\label{shared_8h_a29e413f6725b2ba32d165ffaa35b01e5}} 
+\#define {\bfseries OFF}~0                       /$\ast$ used for readability $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_ad76d1750a6cdeebd506bfcd6752554d2}\label{shared_8h_ad76d1750a6cdeebd506bfcd6752554d2}} 
+\#define {\bfseries ON}~1                        /$\ast$ used for readability $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_a996bde01ecac342918f0a2c4e7ce7bd5}\label{shared_8h_a996bde01ecac342918f0a2c4e7ce7bd5}} 
+\#define {\bfseries NO}~0                        /$\ast$ used for readability $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_a7ebc9a785e5ab85457c98595aac81589}\label{shared_8h_a7ebc9a785e5ab85457c98595aac81589}} 
+\#define {\bfseries YES}~1                       /$\ast$ used for readability $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_aabc53aa7e6353d8f58b8ae93fd015fab}\label{shared_8h_aabc53aa7e6353d8f58b8ae93fd015fab}} 
+\#define {\bfseries TEN}~10
+\item 
+\mbox{\Hypertarget{shared_8h_af1b746ba5ab7d0ab657156ebda0f290c}\label{shared_8h_af1b746ba5ab7d0ab657156ebda0f290c}} 
+\#define {\bfseries TIMER0}~TMR0
+\item 
+\mbox{\Hypertarget{shared_8h_a8bc5e463885769f21393880576c25f6b}\label{shared_8h_a8bc5e463885769f21393880576c25f6b}} 
+\#define {\bfseries SEC}~10000           /$\ast$ 10000 timer0 interrupts per second (100 usec.) $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_a50185000f9f8cd56899b001eec0036ec}\label{shared_8h_a50185000f9f8cd56899b001eec0036ec}} 
+\#define {\bfseries T100\+MS}~0.\+1$\ast$SEC
+\item 
+\mbox{\Hypertarget{shared_8h_af11a22d509a41e50981459e4fada2387}\label{shared_8h_af11a22d509a41e50981459e4fada2387}} 
+\#define {\bfseries T2S}~2$\ast$SEC
+\item 
+\mbox{\Hypertarget{shared_8h_acf08b26e9b85646a7f06ec2d27899084}\label{shared_8h_acf08b26e9b85646a7f06ec2d27899084}} 
+\#define {\bfseries LED\+\_\+\+FLASH\+\_\+\+PERIOD}~.\+5   /$\ast$ in seconds $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_a6bc22498d145079b08743c8e15950a62}\label{shared_8h_a6bc22498d145079b08743c8e15950a62}} 
+\#define {\bfseries SMP\+\_\+\+CNT}~1000
+\item 
+\mbox{\Hypertarget{shared_8h_a3be42af9535e8271a6472f25a081b5d2}\label{shared_8h_a3be42af9535e8271a6472f25a081b5d2}} 
+\#define {\bfseries PID\+\_\+\+IN}~2.\+9
+\item 
+\mbox{\Hypertarget{shared_8h_a83a2c4d4e81ac1b418e684685e6106ed}\label{shared_8h_a83a2c4d4e81ac1b418e684685e6106ed}} 
+\#define {\bfseries BLUFF\+\_\+\+BODY\+\_\+\+IN}~0.\+5
+\item 
+\mbox{\Hypertarget{shared_8h_a2fa8ceb387e6f891d34c165bab636c08}\label{shared_8h_a2fa8ceb387e6f891d34c165bab636c08}} 
+\#define {\bfseries CLOCK\+\_\+\+FREQUENCY\+\_\+\+MHZ}~8
+\item 
+\mbox{\Hypertarget{shared_8h_ad5003733db85e9d2720dd83336f77e23}\label{shared_8h_ad5003733db85e9d2720dd83336f77e23}} 
+\#define {\bfseries CODE\+\_\+\+VERSION}~\char`\"{}2.\+1 07/08/22\char`\"{}   /$\ast$   YYYY/MM/DD  $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_a6247bc79b0a606bddbf5a90fc3a03194}\label{shared_8h_a6247bc79b0a606bddbf5a90fc3a03194}} 
+\#define {\bfseries COPYRIGHT}~\char`\"{}Copyright (c) University of Colorado\char`\"{}
+\item 
+\mbox{\Hypertarget{shared_8h_a690f985c933da2ce6fe62b6c61dfa662}\label{shared_8h_a690f985c933da2ce6fe62b6c61dfa662}} 
+\#define {\bfseries RX\+\_\+\+BUF\+\_\+\+SIZE}~10            /$\ast$ size of receive buffer in bytes $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_a5d3fb1970e1e98050006978a14b3d95e}\label{shared_8h_a5d3fb1970e1e98050006978a14b3d95e}} 
+\#define {\bfseries TX\+\_\+\+BUF\+\_\+\+SIZE}~40           /$\ast$ size of transmit buffer in bytes $\ast$/
+\item 
+\mbox{\Hypertarget{shared_8h_a8b8af8bedcac87c0d3c68634448b94a7}\label{shared_8h_a8b8af8bedcac87c0d3c68634448b94a7}} 
+\#define {\bfseries MSG\+\_\+\+BUF\+\_\+\+SIZE}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{shared_8h_a25bb6cbe28fb5332625d1d0cd9d65ab1}\label{shared_8h_a25bb6cbe28fb5332625d1d0cd9d65ab1}} 
+typedef unsigned char {\bfseries uchar8\+\_\+t}
+\item 
+\mbox{\Hypertarget{shared_8h_a789d352559efaa396a258805d44f4289}\label{shared_8h_a789d352559efaa396a258805d44f4289}} 
+typedef unsigned char {\bfseries bit}
+\item 
+\mbox{\Hypertarget{shared_8h_a435d1572bf3f880d55459d9805097f62}\label{shared_8h_a435d1572bf3f880d55459d9805097f62}} 
+typedef unsigned int {\bfseries uint32\+\_\+t}
+\item 
+\mbox{\Hypertarget{shared_8h_a273cf69d639a59973b6019625df33e30}\label{shared_8h_a273cf69d639a59973b6019625df33e30}} 
+typedef unsigned short {\bfseries uint16\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{shared_8h_a7c6368b321bd9acd0149b030bb8275ed}\label{shared_8h_a7c6368b321bd9acd0149b030bb8275ed}} 
+enum \mbox{\hyperlink{shared_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}} \{ {\bfseries FALSE}
+, {\bfseries TRUE}
+ \}
+\begin{DoxyCompactList}\small\item\em ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6}\label{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6}} 
+enum {\bfseries dmode} \{ \newline
+{\bfseries QUIET}
+, {\bfseries NORMAL}
+, {\bfseries DEBUG}
+, {\bfseries VERSION}
+, \newline
+{\bfseries REG\+\_\+\+VIEW}
+, {\bfseries MEM\+\_\+\+VIEW}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{shared_8h_a59a4a0c8721f73a8c9d9db5a4cdc6e88}{monitor}} (void)
+\item 
+\mbox{\Hypertarget{shared_8h_a2143aff1e880c3dc51e02ba9120825ea}\label{shared_8h_a2143aff1e880c3dc51e02ba9120825ea}} 
+void {\bfseries timer0} (void)
+\item 
+void \mbox{\hyperlink{shared_8h_a44becc30285e88213a624428b2b46cdf}{serial}} (void)
+\item 
+\mbox{\Hypertarget{shared_8h_adc2d50697b8eeb68bbeb103cbf3057da}\label{shared_8h_adc2d50697b8eeb68bbeb103cbf3057da}} 
+void {\bfseries UART\+\_\+put} (uchar8\+\_\+t)
+\item 
+\mbox{\Hypertarget{shared_8h_a33768775b7fa0439bc8b61c984cc6045}\label{shared_8h_a33768775b7fa0439bc8b61c984cc6045}} 
+uchar8\+\_\+t {\bfseries UART\+\_\+get} (void)
+\item 
+\mbox{\Hypertarget{shared_8h_a1b2774203b8f10ef7aebd8fdd032ee8a}\label{shared_8h_a1b2774203b8f10ef7aebd8fdd032ee8a}} 
+uchar8\+\_\+t {\bfseries UART\+\_\+input} (void)
+\item 
+\mbox{\Hypertarget{shared_8h_a4037414d6697571ef8f41e908e6aa539}\label{shared_8h_a4037414d6697571ef8f41e908e6aa539}} 
+void {\bfseries UART\+\_\+direct\+\_\+msg\+\_\+put} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{shared_8h_aff5c8c647b366f30a42c0c7193c82328}\label{shared_8h_aff5c8c647b366f30a42c0c7193c82328}} 
+void {\bfseries UART\+\_\+msg\+\_\+put} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{shared_8h_a70399dcd5e9548471204bea07c81f329}\label{shared_8h_a70399dcd5e9548471204bea07c81f329}} 
+void {\bfseries UART\+\_\+direct\+\_\+hex\+\_\+put} (uchar8\+\_\+t)
+\item 
+\mbox{\Hypertarget{shared_8h_a966020ff4b098d721feb23345a38fd93}\label{shared_8h_a966020ff4b098d721feb23345a38fd93}} 
+void {\bfseries UART\+\_\+direct\+\_\+put} (uchar8\+\_\+t)
+\item 
+\mbox{\Hypertarget{shared_8h_a3c206b2fe3b1fdb07178914b32846bbd}\label{shared_8h_a3c206b2fe3b1fdb07178914b32846bbd}} 
+void {\bfseries UART\+\_\+hex\+\_\+put} (uchar8\+\_\+t)
+\item 
+\mbox{\Hypertarget{shared_8h_a5f6c0e92045d249165734ff23a2c8915}\label{shared_8h_a5f6c0e92045d249165734ff23a2c8915}} 
+void {\bfseries UART\+\_\+low\+\_\+nibble\+\_\+put} (uchar8\+\_\+t)
+\item 
+\mbox{\Hypertarget{shared_8h_a90a9cc9e3a4ad03acd737d0dd5725f67}\label{shared_8h_a90a9cc9e3a4ad03acd737d0dd5725f67}} 
+void {\bfseries UART\+\_\+high\+\_\+nibble\+\_\+put} (uchar8\+\_\+t)
+\item 
+\mbox{\Hypertarget{shared_8h_a29be7c30b6929c50ebb985b228fc1be2}\label{shared_8h_a29be7c30b6929c50ebb985b228fc1be2}} 
+void {\bfseries chk\+\_\+\+UART\+\_\+msg} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item fills a message buffer until return is encountered, then calls message processing 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{shared_8h_a826db354ae1d910792a0330f8d4eb91a}{UART\+\_\+msg\+\_\+process}} (void)
+\item 
+\mbox{\Hypertarget{shared_8h_ad6e5f59640709c2b2e22f5df6b1b5a65}\label{shared_8h_ad6e5f59640709c2b2e22f5df6b1b5a65}} 
+void {\bfseries status\+\_\+report} (void)
+\item 
+\mbox{\Hypertarget{shared_8h_acd5157b5f415f4ca9be9b2a23943440c}\label{shared_8h_acd5157b5f415f4ca9be9b2a23943440c}} 
+void {\bfseries set\+\_\+display\+\_\+mode} (void)
+\item 
+\mbox{\Hypertarget{shared_8h_a851c58009a8609df2b051c3513dd99f2}\label{shared_8h_a851c58009a8609df2b051c3513dd99f2}} 
+void {\bfseries blink\+LED} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item inverts onboard LED output 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{shared_8h_ac0e14d5137523221ce65514297cb5a5e}{get\+\_\+\+Freq}} (uint16\+\_\+t $\ast$samples)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates frequency from 1000 samples using peak detection ~\newline
+ the difference between 2 samples is evaluated for +/-\/ positive = moving down the curve, i.\+e. sample1 is \texorpdfstring{$>$}{>} sample2 negative = moving up the curve, i.\+e. sample1 is \texorpdfstring{$<$}{<} sample2 when a difference in dir is found, we have crossed a peak / trough when the peak is found, the index (sample \#) is stored difference between the two peaks sample \# is the taken as the period divide period by sample rate to get signal frequency 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{shared_8h_a4c94a90ff5bbc8e169cab9939e54bc4d}{get\+\_\+\+Viscosity}} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates viscosity using measured temperature 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{shared_8h_a8f62d23aded5d8f18560d378add4ac5d}{get\+\_\+\+Density}} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates density using measured temperature 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{shared_8h_a4874ec56ef3166eaf28463652d9d6f5c}{get\+\_\+\+St}} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates St number using the calulated Reynolds Number ~\newline
+ 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{shared_8h_a7d6334bf3e43dc14a0d3bbabafe74f61}{get\+\_\+\+Re}} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates Re number using the calulated Density and Viscosity 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{shared_8h_a264f65447b0f8fe9fb490b42eff03f67}{get\+\_\+\+Vel}} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates velocity from calculated frequency and St number equation is iterative requires $\sim$3 runs for velocity to converge 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{shared_8h_a765ac62eecfcdb1ab1f32bbb88c35fec}\label{shared_8h_a765ac62eecfcdb1ab1f32bbb88c35fec}} 
+void {\bfseries get\+\_\+temp} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item reads temp from I2C sensor, sets global temp variable 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{shared_8h_a7fede77d874d832638fcdfb4692b49d8}{get\+\_\+\+Flow}} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates flow using calculated velocity 
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{shared_8h_a3a055bd8f39421ff541e8f42bf186ca1}\label{shared_8h_a3a055bd8f39421ff541e8f42bf186ca1}} 
+unsigned char {\bfseries Error\+\_\+status}
+\item 
+\mbox{\Hypertarget{shared_8h_aa86621c08308c22f33cbb7e5ef6cac1d}\label{shared_8h_aa86621c08308c22f33cbb7e5ef6cac1d}} 
+uchar8\+\_\+t {\bfseries display\+\_\+timer}
+\item 
+\mbox{\Hypertarget{shared_8h_a549da6ca918b08c442877aac53c2c8cd}\label{shared_8h_a549da6ca918b08c442877aac53c2c8cd}} 
+uchar8\+\_\+t {\bfseries display\+\_\+flag}
+\item 
+\mbox{\Hypertarget{shared_8h_aba040ff99a99da731e063bc76dce09d4}\label{shared_8h_aba040ff99a99da731e063bc76dce09d4}} 
+uchar8\+\_\+t {\bfseries tx\+\_\+in\+\_\+progress}
+\item 
+\mbox{\Hypertarget{shared_8h_ab12a4058a0d03f4d5015439873548f1e}\label{shared_8h_ab12a4058a0d03f4d5015439873548f1e}} 
+uchar8\+\_\+t $\ast$ {\bfseries rx\+\_\+in\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{shared_8h_a2ae6b659fbdaaf56342c00b70e127172}\label{shared_8h_a2ae6b659fbdaaf56342c00b70e127172}} 
+uchar8\+\_\+t $\ast$ {\bfseries rx\+\_\+out\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{shared_8h_a0dbf3f8face8858f570fa6680d031143}\label{shared_8h_a0dbf3f8face8858f570fa6680d031143}} 
+uchar8\+\_\+t $\ast$ {\bfseries tx\+\_\+in\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{shared_8h_ab46aab0583a236f29d17100dda0435fa}\label{shared_8h_ab46aab0583a236f29d17100dda0435fa}} 
+uchar8\+\_\+t $\ast$ {\bfseries tx\+\_\+out\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{shared_8h_a3591e2fcec5782f674080d76012caf1c}\label{shared_8h_a3591e2fcec5782f674080d76012caf1c}} 
+volatile uchar8\+\_\+t {\bfseries swtimer0}
+\item 
+\mbox{\Hypertarget{shared_8h_a5e9cb685cd7b4f985e2b0c6bc39472d8}\label{shared_8h_a5e9cb685cd7b4f985e2b0c6bc39472d8}} 
+volatile uchar8\+\_\+t {\bfseries swtimer1}
+\item 
+\mbox{\Hypertarget{shared_8h_a3407372d2e60426487dee32524a7ebfb}\label{shared_8h_a3407372d2e60426487dee32524a7ebfb}} 
+volatile uchar8\+\_\+t {\bfseries swtimer2}
+\item 
+\mbox{\Hypertarget{shared_8h_acaad6ff331841ea97337be5c006cb463}\label{shared_8h_acaad6ff331841ea97337be5c006cb463}} 
+volatile uchar8\+\_\+t {\bfseries swtimer3}
+\item 
+\mbox{\Hypertarget{shared_8h_a1fb728447906b6c9b9ee3f854ed5d998}\label{shared_8h_a1fb728447906b6c9b9ee3f854ed5d998}} 
+volatile uchar8\+\_\+t {\bfseries swtimer4}
+\item 
+\mbox{\Hypertarget{shared_8h_a59ae86f9818b5ddff6828e037a2d6447}\label{shared_8h_a59ae86f9818b5ddff6828e037a2d6447}} 
+volatile uchar8\+\_\+t {\bfseries swtimer5}
+\item 
+\mbox{\Hypertarget{shared_8h_a7c62df53730e4de2996944b82146ab4b}\label{shared_8h_a7c62df53730e4de2996944b82146ab4b}} 
+volatile uchar8\+\_\+t {\bfseries swtimer6}
+\item 
+\mbox{\Hypertarget{shared_8h_a2c9a6a73d8930dea78d823660d65be44}\label{shared_8h_a2c9a6a73d8930dea78d823660d65be44}} 
+volatile uchar8\+\_\+t {\bfseries swtimer7}
+\item 
+\mbox{\Hypertarget{shared_8h_a585c7efb04241bafa73026dd85db75c0}\label{shared_8h_a585c7efb04241bafa73026dd85db75c0}} 
+uchar8\+\_\+t {\bfseries serial\+\_\+flag}
+\item 
+\mbox{\Hypertarget{shared_8h_a0f999d5d275d3149a605333813bb889d}\label{shared_8h_a0f999d5d275d3149a605333813bb889d}} 
+enum dmode {\bfseries display\+\_\+mode}
+\item 
+\mbox{\Hypertarget{shared_8h_aa969d20975922ea763530e4e9d4b851b}\label{shared_8h_aa969d20975922ea763530e4e9d4b851b}} 
+uchar8\+\_\+t {\bfseries rx\+\_\+buf} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{shared_8h_a6f8967a4f807ca352a590c2e59181c02}\label{shared_8h_a6f8967a4f807ca352a590c2e59181c02}} 
+uchar8\+\_\+t {\bfseries tx\+\_\+buf} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{shared_8h_aba8f2c25e1b131518be3427ec7ff9898}\label{shared_8h_aba8f2c25e1b131518be3427ec7ff9898}} 
+uchar8\+\_\+t {\bfseries msg\+\_\+buf} \mbox{[}MSG\+\_\+\+BUF\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{shared_8h_ab429473c00b4c6b483dec76f22256f25}\label{shared_8h_ab429473c00b4c6b483dec76f22256f25}} 
+uchar8\+\_\+t {\bfseries msg\+\_\+buf\+\_\+idx}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+
+
+\DoxyHorRuler{0}
+ -- ECEN 5803 Mastering Embedded System Architecture -- -- Project 1 Module 5 -- -- Microcontroller Firmware -- -- \mbox{\hyperlink{shared_8h}{shared.\+h}} -- \hypertarget{shared_8h_autotoc_md12}{}\doxysubsubsection{–                                                                           –}\label{shared_8h_autotoc_md12}
+-- \hypertarget{shared_8h_autotoc_md13}{}\doxysubsubsection{–  Designed for\+:  University of Colorado at Boulder}\label{shared_8h_autotoc_md13}
+-- ~\newline
+ -- Designed by\+: Tim Scherr \hypertarget{shared_8h_autotoc_md14}{}\doxysubsubsection{–  Revised by\+:  Mark Sherman}\label{shared_8h_autotoc_md14}
+-- Version\+: 3.\+0 -- Date of current revision\+: 2022-\/07-\/09 ~\newline
+ -- Target Microcontroller\+: ST STM32\+F401\+RE -- Tools used\+: ARM mbed compiler -- ARM mbed SDK \hypertarget{shared_8h_autotoc_md15}{}\doxysubsubsection{–              ST Nucleo STM32\+F401\+RE Board}\label{shared_8h_autotoc_md15}
+-- \hypertarget{shared_8h_autotoc_md16}{}\doxysubsubsection{– Functional Description\+:  Header file for all globals}\label{shared_8h_autotoc_md16}
+\hypertarget{shared_8h_autotoc_md17}{}\doxysubsubsection{–      Copyright (c) 2015, 2022 Tim Scherr  All rights reserved.}\label{shared_8h_autotoc_md17}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{shared_8h_a8f62d23aded5d8f18560d378add4ac5d}\label{shared_8h_a8f62d23aded5d8f18560d378add4ac5d}} 
+\index{shared.h@{shared.h}!get\_Density@{get\_Density}}
+\index{get\_Density@{get\_Density}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{get\_Density()}{get\_Density()}}
+{\footnotesize\ttfamily double get\+\_\+\+Density (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates density using measured temperature 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, density, in kg/(m$^\wedge$3) ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shared_8h_a7fede77d874d832638fcdfb4692b49d8}\label{shared_8h_a7fede77d874d832638fcdfb4692b49d8}} 
+\index{shared.h@{shared.h}!get\_Flow@{get\_Flow}}
+\index{get\_Flow@{get\_Flow}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{get\_Flow()}{get\_Flow()}}
+{\footnotesize\ttfamily double get\+\_\+\+Flow (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates flow using calculated velocity 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, flow rate in gallons/min 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shared_8h_ac0e14d5137523221ce65514297cb5a5e}\label{shared_8h_ac0e14d5137523221ce65514297cb5a5e}} 
+\index{shared.h@{shared.h}!get\_Freq@{get\_Freq}}
+\index{get\_Freq@{get\_Freq}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{get\_Freq()}{get\_Freq()}}
+{\footnotesize\ttfamily double get\+\_\+\+Freq (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{samples }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates frequency from 1000 samples using peak detection ~\newline
+ the difference between 2 samples is evaluated for +/-\/ positive = moving down the curve, i.\+e. sample1 is \texorpdfstring{$>$}{>} sample2 negative = moving up the curve, i.\+e. sample1 is \texorpdfstring{$<$}{<} sample2 when a difference in dir is found, we have crossed a peak / trough when the peak is found, the index (sample \#) is stored difference between the two peaks sample \# is the taken as the period divide period by sample rate to get signal frequency 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint16\+\_\+t$\ast$} & samples -\/ pointer to array of samples \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ double, calculated frequency in Hz 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shared_8h_a7d6334bf3e43dc14a0d3bbabafe74f61}\label{shared_8h_a7d6334bf3e43dc14a0d3bbabafe74f61}} 
+\index{shared.h@{shared.h}!get\_Re@{get\_Re}}
+\index{get\_Re@{get\_Re}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{get\_Re()}{get\_Re()}}
+{\footnotesize\ttfamily double get\+\_\+\+Re (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates Re number using the calulated Density and Viscosity 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, Reynolds number, unitless 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shared_8h_a4874ec56ef3166eaf28463652d9d6f5c}\label{shared_8h_a4874ec56ef3166eaf28463652d9d6f5c}} 
+\index{shared.h@{shared.h}!get\_St@{get\_St}}
+\index{get\_St@{get\_St}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{get\_St()}{get\_St()}}
+{\footnotesize\ttfamily double get\+\_\+\+St (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates St number using the calulated Reynolds Number ~\newline
+ 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, St number, unitless 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shared_8h_a264f65447b0f8fe9fb490b42eff03f67}\label{shared_8h_a264f65447b0f8fe9fb490b42eff03f67}} 
+\index{shared.h@{shared.h}!get\_Vel@{get\_Vel}}
+\index{get\_Vel@{get\_Vel}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{get\_Vel()}{get\_Vel()}}
+{\footnotesize\ttfamily void get\+\_\+\+Vel (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates velocity from calculated frequency and St number equation is iterative requires $\sim$3 runs for velocity to converge 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, velocity in in/s 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shared_8h_a4c94a90ff5bbc8e169cab9939e54bc4d}\label{shared_8h_a4c94a90ff5bbc8e169cab9939e54bc4d}} 
+\index{shared.h@{shared.h}!get\_Viscosity@{get\_Viscosity}}
+\index{get\_Viscosity@{get\_Viscosity}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{get\_Viscosity()}{get\_Viscosity()}}
+{\footnotesize\ttfamily double get\+\_\+\+Viscosity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates viscosity using measured temperature 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+double -\/ viscosity in kg/(m$^\wedge$3) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{shared_8h_a59a4a0c8721f73a8c9d9db5a4cdc6e88}\label{shared_8h_a59a4a0c8721f73a8c9d9db5a4cdc6e88}} 
+\index{shared.h@{shared.h}!monitor@{monitor}}
+\index{monitor@{monitor}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{monitor()}{monitor()}}
+{\footnotesize\ttfamily void monitor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+/ ARM Register View / Reads value from Registers 0-\/15 and outputs the 2 LSB via pc.\+printf;\mbox{\Hypertarget{shared_8h_a44becc30285e88213a624428b2b46cdf}\label{shared_8h_a44becc30285e88213a624428b2b46cdf}} 
+\index{shared.h@{shared.h}!serial@{serial}}
+\index{serial@{serial}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{serial()}{serial()}}
+{\footnotesize\ttfamily void serial (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+function polls the serial port for Rx or Tx data \mbox{\Hypertarget{shared_8h_a826db354ae1d910792a0330f8d4eb91a}\label{shared_8h_a826db354ae1d910792a0330f8d4eb91a}} 
+\index{shared.h@{shared.h}!UART\_msg\_process@{UART\_msg\_process}}
+\index{UART\_msg\_process@{UART\_msg\_process}!shared.h@{shared.h}}
+\doxysubsubsection{\texorpdfstring{UART\_msg\_process()}{UART\_msg\_process()}}
+{\footnotesize\ttfamily void UART\+\_\+msg\+\_\+process (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+UART Input Message Processing 

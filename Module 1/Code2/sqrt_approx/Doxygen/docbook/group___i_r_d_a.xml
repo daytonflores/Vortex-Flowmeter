@@ -1,0 +1,830 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___i_r_d_a" xml:lang="en-US">
+<title>IRDA</title>
+<indexterm><primary>IRDA</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___i_r_d_a___exported___constants">IRDA_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_i_r_d_a___init_type_def">IRDA_InitTypeDef</link></para>
+
+<para>IRDA Init Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link></para>
+
+<para>IRDA handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga3cdb66f911dce4c8544139adbb314faa">__HAL_IRDA_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaa004e82e1ca1d36b3dc84cf9441954dd">HAL_IRDA_STATE_RESET</link>)</para>
+
+<para>Reset IRDA handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga0c097de13209ede853a30d511cf5a00e">__HAL_IRDA_FLUSH_DRREGISTER</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;DR)</para>
+
+<para>Flushs the IRDA DR register. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga032a53fbbc65bfd0fff2b4a26c52e790">__HAL_IRDA_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Checks whether the specified IRDA flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga4ebf474ecfd858f9320bef9bc67c0bce">__HAL_IRDA_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</para>
+
+<para>Clears the specified IRDA pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>   ((uint32_t)0x0000FFFF)</para>
+
+<para>Enables or disables the specified IRDA interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1gae9ccdc86c1bcb8ed3857474d8c3823fa">__HAL_IRDA_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga8c3dd373ded6fa0790e65f54ac1f548d">__HAL_IRDA_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga1c50dd0407d6e4159f90c9bc74545925">__HAL_IRDA_GET_IT_SOURCE</link>(__HANDLE__,  __IT__)</para>
+
+<para>Checks whether the specified IRDA interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga5807a6868cde535b5d088925d43e6012">__IRDA_ENABLE</link>(__HANDLE__)   ( (__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga3bf368a8e0643c1b9186700ab47ceec5">__IRDA_DISABLE</link>(__HANDLE__)   ( (__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>(_PCLK_,  _BAUD_)   (((_PCLK_)*25)/(4*(_BAUD_)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>(_PCLK_,  _BAUD_)   (<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_))/100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>(_PCLK_,  _BAUD_)   (((<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_)) - (<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) * 100)) * 16 + 50) / 100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1gaa8c15c5873d5665cbafe6d4191a72c4d">__IRDA_BRR</link>(_PCLK_,  _BAUD_)   ((<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) &lt;&lt; 4)|(<link linkend="_group___u_s_a_r_t_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>((_PCLK_), (_BAUD_)) &amp; 0x0F))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga5816332e344ead2dcd06a1f0ed59ae27">IS_IRDA_BAUDRATE</link>(BAUDRATE)   ((BAUDRATE) &lt; 115201)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___i_r_d_a_1gab3e65b75c9d4ae39bc50a31222509e1e">HAL_IRDA_StateTypeDef</link> { 
+<link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaa004e82e1ca1d36b3dc84cf9441954dd">HAL_IRDA_STATE_RESET</link> = 0x00
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea9bf218291b1a5ffe624b5a8f891f6244">HAL_IRDA_STATE_READY</link> = 0x01
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea637e8c6b87e1a3a02616c02a68d781f1">HAL_IRDA_STATE_BUSY</link> = 0x02
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea3d8ec588510a501071df3e3d332f9536">HAL_IRDA_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea1df28c166fea4a3a0cab0f1b9fc4dfbc">HAL_IRDA_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaad510b2da75a1fa39f5ed1d33472a634">HAL_IRDA_STATE_BUSY_TX_RX</link> = 0x32
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea91524b40055b5b8d642867e4034cfa2f">HAL_IRDA_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eae2e4e8686446bed256ead393fdb34d67">HAL_IRDA_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___i_r_d_a_1ga52e4f73e14681655efa6d421e74811dd">HAL_IRDA_ErrorTypeDef</link> { 
+<link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddad49559d0016f21f91e3521d8be2be340">HAL_IRDA_ERROR_NONE</link> = 0x00
+, <link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda53fa93b38ed5d3783d62e98353b4f3a4">HAL_IRDA_ERROR_PE</link> = 0x01
+, <link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda1eac21823ef37759e52497f63343b658">HAL_IRDA_ERROR_NE</link> = 0x02
+, <link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddaabd88543e045746413469b98f0df0841">HAL_IRDA_ERROR_FE</link> = 0x04
+, 
+<link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddac62bd262d8dd1697e418b918c76dcc18">HAL_IRDA_ERROR_ORE</link> = 0x08
+, <link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda920280b5d10a48abf1614aa590201452">HAL_IRDA_ERROR_DMA</link> = 0x10
+ }</para>
+
+<para>HAL IRDA Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga4a41c32a70503a33c238511e3a402aa6">HAL_IRDA_Init</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga2fc5f408dc349561f0a685144813ea77">HAL_IRDA_DeInit</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1ga76075c1def7959ef153a0cdeb564ee0d">HAL_IRDA_MspInit</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1ga1f75d9b05cc84c2ca82a5f453942ab7f">HAL_IRDA_MspDeInit</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga8581077ae166780a2bd0c8d9b38c1ab2">HAL_IRDA_Transmit</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga4148e8cd07056a07a827c537f2f7823c">HAL_IRDA_Receive</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1gac6ea111f9cf4b8a89059708e2e8f1b81">HAL_IRDA_Transmit_IT</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga0ea98454afb5ec16a39ba1b5b8142005">HAL_IRDA_Receive_IT</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga18d0f0c044c27c41223b2f0361fe3ae3">HAL_IRDA_Transmit_DMA</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1gac62331245b03bde69283075bcfd8533c">HAL_IRDA_Receive_DMA</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1ga816a681851f93d038e7bda5193b9d933">HAL_IRDA_IRQHandler</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1gaafb45ea63d8cd87e6856c320135b78dd">HAL_IRDA_TxCpltCallback</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1gafbebae7dda1e7b54dc664c95802127c6">HAL_IRDA_RxCpltCallback</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1ga85ffb4337deb42820d49f3882a728f7f">HAL_IRDA_ErrorCallback</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i_r_d_a_1gab3e65b75c9d4ae39bc50a31222509e1e">HAL_IRDA_StateTypeDef</link> <link linkend="_group___i_r_d_a_1ga66ac92837c0eb309ae8c9513b83f5fe0">HAL_IRDA_GetState</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___i_r_d_a_1ga5401e767569d4996aa48c0a81b645b44">HAL_IRDA_GetError</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___i_r_d_a_1gafbb1fab320969bc5f2f726523765efd9"/><section>
+    <title>__DIV</title>
+<indexterm><primary>__DIV</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__DIV</secondary></indexterm>
+<para><computeroutput>#define __DIV( _PCLK_,  _BAUD_)   (((_PCLK_)*25)/(4*(_BAUD_)))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00350">350</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga093009531672e6074b05430492830c24"/><section>
+    <title>__DIVFRAQ</title>
+<indexterm><primary>__DIVFRAQ</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__DIVFRAQ</secondary></indexterm>
+<para><computeroutput>#define __DIVFRAQ( _PCLK_,  _BAUD_)   (((<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_)) - (<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) * 100)) * 16 + 50) / 100)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00352">352</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1gab53df89950c58100a4f14842b43877f0"/><section>
+    <title>__DIVMANT</title>
+<indexterm><primary>__DIVMANT</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__DIVMANT</secondary></indexterm>
+<para><computeroutput>#define __DIVMANT( _PCLK_,  _BAUD_)   (<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_))/100)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00351">351</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga4ebf474ecfd858f9320bef9bc67c0bce"/><section>
+    <title>__HAL_IRDA_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_IRDA_CLEAR_FLAG</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__HAL_IRDA_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_IRDA_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</computeroutput></para><para>
+
+<para>Clears the specified IRDA pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the USART Handle. This parameter can be USARTx where x: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or UART peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>IRDA_FLAG_TC: Transmission Complete flag. </para>
+</listitem>
+<listitem>
+<para>IRDA_FLAG_RXNE: Receive data register not empty flag.</para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>PE (Parity error), FE (Framing error), NE (Noise error), ORE (OverRun error) and IDLE (Idle line detected) flags are cleared by software sequence: a read operation to USART_SR register followed by a read operation to USART_DR register. </para>
+
+<para>RXNE flag can be also cleared by a read to the USART_DR register. </para>
+
+<para>TC flag can be also cleared by software sequence: a read operation to USART_SR register followed by a write operation to USART_DR register. </para>
+
+<para>TXE flag is cleared only by a write to the USART_DR register.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00301">301</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga8c3dd373ded6fa0790e65f54ac1f548d"/><section>
+    <title>__HAL_IRDA_DISABLE_IT</title>
+<indexterm><primary>__HAL_IRDA_DISABLE_IT</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__HAL_IRDA_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_IRDA_DISABLE_IT( __HANDLE__,  __INTERRUPT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((__INTERRUPT__)&#32;&gt;&gt;&#32;28)&#32;==&#32;1)?&#32;((__HANDLE__)-&gt;Instance-&gt;CR1&#32;&amp;=&#32;~((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>)):&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__INTERRUPT__)&#32;&gt;&gt;&#32;28)&#32;==&#32;2)?&#32;((__HANDLE__)-&gt;Instance-&gt;CR2&#32;&amp;=&#32;~((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>)):&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CR3&#32;&amp;=&#32;~&#32;((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>)))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00324">324</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1gae9ccdc86c1bcb8ed3857474d8c3823fa"/><section>
+    <title>__HAL_IRDA_ENABLE_IT</title>
+<indexterm><primary>__HAL_IRDA_ENABLE_IT</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__HAL_IRDA_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_IRDA_ENABLE_IT( __HANDLE__,  __INTERRUPT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((__INTERRUPT__)&#32;&gt;&gt;&#32;28)&#32;==&#32;1)?&#32;((__HANDLE__)-&gt;Instance-&gt;CR1&#32;|=&#32;((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>)):&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__INTERRUPT__)&#32;&gt;&gt;&#32;28)&#32;==&#32;2)?&#32;((__HANDLE__)-&gt;Instance-&gt;CR2&#32;|=&#32;&#32;((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>)):&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CR3&#32;|=&#32;((__INTERRUPT__)&#32;&amp;&#32;<link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>)))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00321">321</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga0c097de13209ede853a30d511cf5a00e"/><section>
+    <title>__HAL_IRDA_FLUSH_DRREGISTER</title>
+<indexterm><primary>__HAL_IRDA_FLUSH_DRREGISTER</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__HAL_IRDA_FLUSH_DRREGISTER</secondary></indexterm>
+<para><computeroutput>#define __HAL_IRDA_FLUSH_DRREGISTER( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;DR)</computeroutput></para><para>
+
+<para>Flushs the IRDA DR register. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the IRDA Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00261">261</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga032a53fbbc65bfd0fff2b4a26c52e790"/><section>
+    <title>__HAL_IRDA_GET_FLAG</title>
+<indexterm><primary>__HAL_IRDA_GET_FLAG</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__HAL_IRDA_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_IRDA_GET_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Checks whether the specified IRDA flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the USART Handle. This parameter can be USARTx where x: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or UART peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>IRDA_FLAG_TXE: Transmit data register empty flag </para>
+</listitem>
+<listitem>
+<para>IRDA_FLAG_TC: Transmission Complete flag </para>
+</listitem>
+<listitem>
+<para>IRDA_FLAG_RXNE: Receive data register not empty flag </para>
+</listitem>
+<listitem>
+<para>IRDA_FLAG_IDLE: Idle Line detection flag </para>
+</listitem>
+<listitem>
+<para>IRDA_FLAG_ORE: OverRun Error flag </para>
+</listitem>
+<listitem>
+<para>IRDA_FLAG_NE: Noise Error flag </para>
+</listitem>
+<listitem>
+<para>IRDA_FLAG_FE: Framing Error flag </para>
+</listitem>
+<listitem>
+<para>IRDA_FLAG_PE: Parity Error flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00279">279</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga1c50dd0407d6e4159f90c9bc74545925"/><section>
+    <title>__HAL_IRDA_GET_IT_SOURCE</title>
+<indexterm><primary>__HAL_IRDA_GET_IT_SOURCE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__HAL_IRDA_GET_IT_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_IRDA_GET_IT_SOURCE( __HANDLE__,  __IT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((((__IT__)&#32;&gt;&gt;&#32;28)&#32;==&#32;1)?&#32;(__HANDLE__)-&gt;Instance-&gt;CR1:(((((uint32_t)(__IT__))&#32;&gt;&gt;&#32;28)&#32;==&#32;2)?&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR2&#32;:&#32;(__HANDLE__)-&gt;Instance-&gt;CR3))&#32;&amp;&#32;(((uint32_t)(__IT__))&#32;&amp;&#32;<link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>))
+</programlisting><para>
+
+<para>Checks whether the specified IRDA interrupt has occurred or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the USART Handle. This parameter can be USARTx where x: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or UART peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__IT__</entry><entry>
+<para>specifies the IRDA interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>IRDA_IT_TXE: Transmit Data Register empty interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_TC: Transmission complete interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_RXNE: Receive Data register not empty interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_IDLE: Idle line detection interrupt </para>
+</listitem>
+<listitem>
+<para>USART_IT_ERR: Error interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_PE: Parity Error interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">IT</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00342">342</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga3cdb66f911dce4c8544139adbb314faa"/><section>
+    <title>__HAL_IRDA_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_IRDA_RESET_HANDLE_STATE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__HAL_IRDA_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_IRDA_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaa004e82e1ca1d36b3dc84cf9441954dd">HAL_IRDA_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset IRDA handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the IRDA Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00256">256</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1gaa8c15c5873d5665cbafe6d4191a72c4d"/><section>
+    <title>__IRDA_BRR</title>
+<indexterm><primary>__IRDA_BRR</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__IRDA_BRR</secondary></indexterm>
+<para><computeroutput>#define __IRDA_BRR( _PCLK_,  _BAUD_)   ((<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) &lt;&lt; 4)|(<link linkend="_group___u_s_a_r_t_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>((_PCLK_), (_BAUD_)) &amp; 0x0F))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00353">353</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga3bf368a8e0643c1b9186700ab47ceec5"/><section>
+    <title>__IRDA_DISABLE</title>
+<indexterm><primary>__IRDA_DISABLE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__IRDA_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __IRDA_DISABLE( __HANDLE__)   ( (__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00348">348</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga5807a6868cde535b5d088925d43e6012"/><section>
+    <title>__IRDA_ENABLE</title>
+<indexterm><primary>__IRDA_ENABLE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>__IRDA_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __IRDA_ENABLE( __HANDLE__)   ( (__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00347">347</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6"/><section>
+    <title>IRDA_IT_MASK</title>
+<indexterm><primary>IRDA_IT_MASK</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>IRDA_IT_MASK</secondary></indexterm>
+<para><computeroutput>#define IRDA_IT_MASK   ((uint32_t)0x0000FFFF)</computeroutput></para><para>
+
+<para>Enables or disables the specified IRDA interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the USART Handle. This parameter can be USARTx where x: 1, 2, 3, 4, 5, 6, 7 or 8 to select the USART or UART peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the IRDA interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>IRDA_IT_TXE: Transmit Data Register empty interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_TC: Transmission complete interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_RXNE: Receive Data register not empty interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_IDLE: Idle line detection interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_PE: Parity Error interrupt </para>
+</listitem>
+<listitem>
+<para>IRDA_IT_ERR: Error interrupt(Frame error, noise error, overrun error) </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                            <row>
+<entry>NewState</entry><entry>
+<para>new state of the specified IRDA interrupt. This parameter can be: ENABLE or DISABLE. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00320">320</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1ga5816332e344ead2dcd06a1f0ed59ae27"/><section>
+    <title>IS_IRDA_BAUDRATE</title>
+<indexterm><primary>IS_IRDA_BAUDRATE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>IS_IRDA_BAUDRATE</secondary></indexterm>
+<para><computeroutput>#define IS_IRDA_BAUDRATE( BAUDRATE)   ((BAUDRATE) &lt; 115201)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00355">355</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___i_r_d_a_1ga52e4f73e14681655efa6d421e74811dd"/><section>
+    <title>HAL_IRDA_ErrorTypeDef</title>
+<indexterm><primary>HAL_IRDA_ErrorTypeDef</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_ErrorTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___i_r_d_a_1ga52e4f73e14681655efa6d421e74811dd">HAL_IRDA_ErrorTypeDef</link></computeroutput></para><para>
+
+<para>HAL IRDA Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_IRDA_ERROR_NONE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_ERROR_NONE</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddad49559d0016f21f91e3521d8be2be340"/>HAL_IRDA_ERROR_NONE</entry><entry>
+<para>No error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_ERROR_PE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_ERROR_PE</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda53fa93b38ed5d3783d62e98353b4f3a4"/>HAL_IRDA_ERROR_PE</entry><entry>
+<para>Parity error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_ERROR_NE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_ERROR_NE</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda1eac21823ef37759e52497f63343b658"/>HAL_IRDA_ERROR_NE</entry><entry>
+<para>Noise error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_ERROR_FE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_ERROR_FE</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddaabd88543e045746413469b98f0df0841"/>HAL_IRDA_ERROR_FE</entry><entry>
+<para>frame error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_ERROR_ORE</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_ERROR_ORE</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddac62bd262d8dd1697e418b918c76dcc18"/>HAL_IRDA_ERROR_ORE</entry><entry>
+<para>Overrun error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_ERROR_DMA</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_ERROR_DMA</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda920280b5d10a48abf1614aa590201452"/>HAL_IRDA_ERROR_DMA</entry><entry>
+<para>DMA transfer error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00107">107</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_group___i_r_d_a_1gab3e65b75c9d4ae39bc50a31222509e1e"/><section>
+    <title>HAL_IRDA_StateTypeDef</title>
+<indexterm><primary>HAL_IRDA_StateTypeDef</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___i_r_d_a_1gab3e65b75c9d4ae39bc50a31222509e1e">HAL_IRDA_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_IRDA_STATE_RESET</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaa004e82e1ca1d36b3dc84cf9441954dd"/>HAL_IRDA_STATE_RESET</entry><entry>
+<para>Peripheral is not yet Initialized </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_STATE_READY</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea9bf218291b1a5ffe624b5a8f891f6244"/>HAL_IRDA_STATE_READY</entry><entry>
+<para>Peripheral Initialized and ready for use </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_STATE_BUSY</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea637e8c6b87e1a3a02616c02a68d781f1"/>HAL_IRDA_STATE_BUSY</entry><entry>
+<para>an internal process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_STATE_BUSY_TX</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_STATE_BUSY_TX</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea3d8ec588510a501071df3e3d332f9536"/>HAL_IRDA_STATE_BUSY_TX</entry><entry>
+<para>Data Transmission process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_STATE_BUSY_RX</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_STATE_BUSY_RX</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea1df28c166fea4a3a0cab0f1b9fc4dfbc"/>HAL_IRDA_STATE_BUSY_RX</entry><entry>
+<para>Data Reception process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_STATE_BUSY_TX_RX</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_STATE_BUSY_TX_RX</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaad510b2da75a1fa39f5ed1d33472a634"/>HAL_IRDA_STATE_BUSY_TX_RX</entry><entry>
+<para>Data Transmission and Reception process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_STATE_TIMEOUT</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea91524b40055b5b8d642867e4034cfa2f"/>HAL_IRDA_STATE_TIMEOUT</entry><entry>
+<para>Timeout state </para>
+</entry></row><row><entry><indexterm><primary>HAL_IRDA_STATE_ERROR</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eae2e4e8686446bed256ead393fdb34d67"/>HAL_IRDA_STATE_ERROR</entry><entry>
+<para>Error </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00092">92</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___i_r_d_a_1ga2fc5f408dc349561f0a685144813ea77"/><section>
+    <title>HAL_IRDA_DeInit()</title>
+<indexterm><primary>HAL_IRDA_DeInit</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IRDA_DeInit (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga85ffb4337deb42820d49f3882a728f7f"/><section>
+    <title>HAL_IRDA_ErrorCallback()</title>
+<indexterm><primary>HAL_IRDA_ErrorCallback</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_ErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_IRDA_ErrorCallback (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga5401e767569d4996aa48c0a81b645b44"/><section>
+    <title>HAL_IRDA_GetError()</title>
+<indexterm><primary>HAL_IRDA_GetError</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_GetError</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_IRDA_GetError (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga66ac92837c0eb309ae8c9513b83f5fe0"/><section>
+    <title>HAL_IRDA_GetState()</title>
+<indexterm><primary>HAL_IRDA_GetState</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___i_r_d_a_1gab3e65b75c9d4ae39bc50a31222509e1e">HAL_IRDA_StateTypeDef</link> HAL_IRDA_GetState (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga4a41c32a70503a33c238511e3a402aa6"/><section>
+    <title>HAL_IRDA_Init()</title>
+<indexterm><primary>HAL_IRDA_Init</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IRDA_Init (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga816a681851f93d038e7bda5193b9d933"/><section>
+    <title>HAL_IRDA_IRQHandler()</title>
+<indexterm><primary>HAL_IRDA_IRQHandler</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_IRDA_IRQHandler (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga1f75d9b05cc84c2ca82a5f453942ab7f"/><section>
+    <title>HAL_IRDA_MspDeInit()</title>
+<indexterm><primary>HAL_IRDA_MspDeInit</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_IRDA_MspDeInit (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga76075c1def7959ef153a0cdeb564ee0d"/><section>
+    <title>HAL_IRDA_MspInit()</title>
+<indexterm><primary>HAL_IRDA_MspInit</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_IRDA_MspInit (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga4148e8cd07056a07a827c537f2f7823c"/><section>
+    <title>HAL_IRDA_Receive()</title>
+<indexterm><primary>HAL_IRDA_Receive</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_Receive</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IRDA_Receive (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1gac62331245b03bde69283075bcfd8533c"/><section>
+    <title>HAL_IRDA_Receive_DMA()</title>
+<indexterm><primary>HAL_IRDA_Receive_DMA</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_Receive_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IRDA_Receive_DMA (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga0ea98454afb5ec16a39ba1b5b8142005"/><section>
+    <title>HAL_IRDA_Receive_IT()</title>
+<indexterm><primary>HAL_IRDA_Receive_IT</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_Receive_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IRDA_Receive_IT (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1gafbebae7dda1e7b54dc664c95802127c6"/><section>
+    <title>HAL_IRDA_RxCpltCallback()</title>
+<indexterm><primary>HAL_IRDA_RxCpltCallback</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_RxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_IRDA_RxCpltCallback (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga8581077ae166780a2bd0c8d9b38c1ab2"/><section>
+    <title>HAL_IRDA_Transmit()</title>
+<indexterm><primary>HAL_IRDA_Transmit</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_Transmit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IRDA_Transmit (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1ga18d0f0c044c27c41223b2f0361fe3ae3"/><section>
+    <title>HAL_IRDA_Transmit_DMA()</title>
+<indexterm><primary>HAL_IRDA_Transmit_DMA</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_Transmit_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IRDA_Transmit_DMA (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1gac6ea111f9cf4b8a89059708e2e8f1b81"/><section>
+    <title>HAL_IRDA_Transmit_IT()</title>
+<indexterm><primary>HAL_IRDA_Transmit_IT</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_Transmit_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_IRDA_Transmit_IT (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i_r_d_a_1gaafb45ea63d8cd87e6856c320135b78dd"/><section>
+    <title>HAL_IRDA_TxCpltCallback()</title>
+<indexterm><primary>HAL_IRDA_TxCpltCallback</primary><secondary>IRDA</secondary></indexterm>
+<indexterm><primary>IRDA</primary><secondary>HAL_IRDA_TxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_IRDA_TxCpltCallback (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> * hirda)</computeroutput></para></section>
+</section>
+</section>

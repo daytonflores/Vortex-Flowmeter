@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_c_c_ex" xml:lang="en-US">
+<title>RCCEx</title>
+<indexterm><primary>RCCEx</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___r_c_c_ex___exported___constants">RCCEx_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def">RCC_PLLI2SInitTypeDef</link></para>
+
+<para>PLLI2S Clock structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link></para>
+
+<para>RCC extended clocks structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_c_c_ex_1ga0c0f61a1e2f47cc81bc43d83ba3e0d95">HAL_RCCEx_PeriphCLKConfig</link> (<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link> *PeriphClkInit)</para>
+
+<para>Enables or disables the AHB1 peripheral clock. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_c_c_ex_1ga754fc5136c63ad52b7c459aafc8a3927">HAL_RCCEx_GetPeriphCLKConfig</link> (<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link> *PeriphClkInit)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___r_c_c_ex_1ga754fc5136c63ad52b7c459aafc8a3927"/><section>
+    <title>HAL_RCCEx_GetPeriphCLKConfig()</title>
+<indexterm><primary>HAL_RCCEx_GetPeriphCLKConfig</primary><secondary>RCCEx</secondary></indexterm>
+<indexterm><primary>RCCEx</primary><secondary>HAL_RCCEx_GetPeriphCLKConfig</secondary></indexterm>
+<para><computeroutput>void HAL_RCCEx_GetPeriphCLKConfig (<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link> * PeriphClkInit)</computeroutput></para></section>
+<anchor xml:id="_group___r_c_c_ex_1ga0c0f61a1e2f47cc81bc43d83ba3e0d95"/><section>
+    <title>HAL_RCCEx_PeriphCLKConfig()</title>
+<indexterm><primary>HAL_RCCEx_PeriphCLKConfig</primary><secondary>RCCEx</secondary></indexterm>
+<indexterm><primary>RCCEx</primary><secondary>HAL_RCCEx_PeriphCLKConfig</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RCCEx_PeriphCLKConfig (<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link> * PeriphClkInit)</computeroutput></para><para>
+
+<para>Enables or disables the AHB1 peripheral clock. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it.</para>
+</note>
+Enable or disable the AHB2 peripheral clock. <note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it.</para>
+</note>
+Enables or disables the AHB3 peripheral clock. <note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it.</para>
+</note>
+Enable or disable the Low Speed APB (APB1) peripheral clock. <note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it.</para>
+</note>
+Enable or disable the High Speed APB (APB2) peripheral clock. <note><title>Note</title>
+
+<para>After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it.</para>
+</note>
+Force or release AHB1 peripheral reset.</para>
+
+<para>Force or release AHB2 peripheral reset.</para>
+
+<para>Force or release AHB3 peripheral reset</para>
+
+<para>Force or release APB1 peripheral reset.</para>
+
+<para>Force or release APB2 peripheral reset.</para>
+
+<para>Enable or disable the AHB1 peripheral clock during Low Power (Sleep) mode. <note><title>Note</title>
+
+<para>Peripheral clock gating in SLEEP mode can be used to further reduce power consumption. </para>
+
+<para>After wakeup from SLEEP mode, the peripheral clock is enabled again. </para>
+
+<para>By default, all peripheral clocks are enabled during SLEEP mode.</para>
+</note>
+Enable or disable the AHB2 peripheral clock during Low Power (Sleep) mode. <note><title>Note</title>
+
+<para>Peripheral clock gating in SLEEP mode can be used to further reduce power consumption. </para>
+
+<para>After wakeup from SLEEP mode, the peripheral clock is enabled again. </para>
+
+<para>By default, all peripheral clocks are enabled during SLEEP mode.</para>
+</note>
+Enable or disable the AHB3 peripheral clock during Low Power (Sleep) mode. <note><title>Note</title>
+
+<para>Peripheral clock gating in SLEEP mode can be used to further reduce power consumption. </para>
+
+<para>After wakeup from SLEEP mode, the peripheral clock is enabled again. </para>
+
+<para>By default, all peripheral clocks are enabled during SLEEP mode.</para>
+</note>
+Enable or disable the APB1 peripheral clock during Low Power (Sleep) mode. <note><title>Note</title>
+
+<para>Peripheral clock gating in SLEEP mode can be used to further reduce power consumption. </para>
+
+<para>After wakeup from SLEEP mode, the peripheral clock is enabled again. </para>
+
+<para>By default, all peripheral clocks are enabled during SLEEP mode.</para>
+</note>
+Enable or disable the APB2 peripheral clock during Low Power (Sleep) mode. <note><title>Note</title>
+
+<para>Peripheral clock gating in SLEEP mode can be used to further reduce power consumption. </para>
+
+<para>After wakeup from SLEEP mode, the peripheral clock is enabled again. </para>
+
+<para>By default, all peripheral clocks are enabled during SLEEP mode. </para>
+</note>
+</para>
+</section>
+</section>
+</section>

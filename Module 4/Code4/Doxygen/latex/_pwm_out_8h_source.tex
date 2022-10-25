@@ -1,0 +1,96 @@
+\hypertarget{_pwm_out_8h_source}{}\doxysection{Pwm\+Out.\+h}
+\label{_pwm_out_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/PwmOut.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/PwmOut.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_PWMOUT\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_PWMOUT\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#if DEVICE\_PWMOUT}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}pwmout\_api.h"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{53 \textcolor{keyword}{class }PwmOut \{}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61     PwmOut(PinName pin) \{}
+\DoxyCodeLine{62         pwmout\_init(\&\_pwm, pin);}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} write(\textcolor{keywordtype}{float} value) \{}
+\DoxyCodeLine{73         pwmout\_write(\&\_pwm, value);}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{float} read() \{}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return} pwmout\_read(\&\_pwm);}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} period(\textcolor{keywordtype}{float} seconds) \{}
+\DoxyCodeLine{97         pwmout\_period(\&\_pwm, seconds);}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} period\_ms(\textcolor{keywordtype}{int} ms) \{}
+\DoxyCodeLine{103         pwmout\_period\_ms(\&\_pwm, ms);}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} period\_us(\textcolor{keywordtype}{int} us) \{}
+\DoxyCodeLine{109         pwmout\_period\_us(\&\_pwm, us);}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{114     \textcolor{keywordtype}{void} pulsewidth(\textcolor{keywordtype}{float} seconds) \{}
+\DoxyCodeLine{115         pwmout\_pulsewidth(\&\_pwm, seconds);}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{void} pulsewidth\_ms(\textcolor{keywordtype}{int} ms) \{}
+\DoxyCodeLine{121         pwmout\_pulsewidth\_ms(\&\_pwm, ms);}
+\DoxyCodeLine{122     \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} pulsewidth\_us(\textcolor{keywordtype}{int} us) \{}
+\DoxyCodeLine{127         pwmout\_pulsewidth\_us(\&\_pwm, us);}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{133     PwmOut\& operator= (\textcolor{keywordtype}{float} value) \{}
+\DoxyCodeLine{134         write(value);}
+\DoxyCodeLine{135         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{136     \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     PwmOut\& operator= (PwmOut\& rhs) \{}
+\DoxyCodeLine{139         write(rhs.read());}
+\DoxyCodeLine{140         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{141     \}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{145     \textcolor{keyword}{operator} float() \{}
+\DoxyCodeLine{146         \textcolor{keywordflow}{return} read();}
+\DoxyCodeLine{147     \}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{151     pwmout\_t \_pwm;}
+\DoxyCodeLine{152 \};}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

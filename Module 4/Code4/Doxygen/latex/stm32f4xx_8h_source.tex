@@ -1,0 +1,122 @@
+\hypertarget{stm32f4xx_8h_source}{}\doxysection{stm32f4xx.\+h}
+\label{stm32f4xx_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx.h}}
+\mbox{\hyperlink{stm32f4xx_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_H}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_H}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{60  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_cplusplus */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{62    }
+\DoxyCodeLine{67 \textcolor{comment}{/* Uncomment the line below according to the target STM32 device used in your}}
+\DoxyCodeLine{68 \textcolor{comment}{   application }}
+\DoxyCodeLine{69 \textcolor{comment}{  */}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#if !defined (STM32F405xx) \&\& !defined (STM32F415xx) \&\& !defined (STM32F407xx) \&\& !defined (STM32F417xx) \&\& \(\backslash\)}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{    !defined (STM32F427xx) \&\& !defined (STM32F437xx) \&\& !defined (STM32F429xx) \&\& !defined (STM32F439xx) \&\& \(\backslash\)}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{    !defined (STM32F401xC) \&\& !defined (STM32F401xE) \&\& !defined (STM32F411xE)}}
+\DoxyCodeLine{74   \textcolor{comment}{/* \#define STM32F405xx */}   }
+\DoxyCodeLine{75   \textcolor{comment}{/* \#define STM32F415xx */}   }
+\DoxyCodeLine{76   \textcolor{comment}{/* \#define STM32F407xx */}   }
+\DoxyCodeLine{77   \textcolor{comment}{/* \#define STM32F417xx */}   }
+\DoxyCodeLine{78   \textcolor{comment}{/* \#define STM32F427xx */}   }
+\DoxyCodeLine{79   \textcolor{comment}{/* \#define STM32F437xx */}   }
+\DoxyCodeLine{80   \textcolor{comment}{/* \#define STM32F429xx */}   }
+\DoxyCodeLine{82   \textcolor{comment}{/* \#define STM32F439xx */}   }
+\DoxyCodeLine{84   \textcolor{comment}{/* \#define STM32F401xC */}   }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define STM32F401xE           }}
+\DoxyCodeLine{86   \textcolor{comment}{/* \#define STM32F411xE */}   }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{88    }
+\DoxyCodeLine{89 \textcolor{comment}{/*  Tip: To avoid modifying this file each time you need to switch between these}}
+\DoxyCodeLine{90 \textcolor{comment}{        devices, you can define the device in your toolchain compiler preprocessor.}}
+\DoxyCodeLine{91 \textcolor{comment}{  */}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#if !defined  (USE\_HAL\_DRIVER)}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define USE\_HAL\_DRIVER}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION\_MAIN   (0x02) }}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION\_SUB1   (0x01) }}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION\_SUB2   (0x00) }}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION\_RC     (0x02) }}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION        ((\_\_CMSIS\_DEVICE\_VERSION\_MAIN     << 24)\(\backslash\)}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{                                      |(\_\_CMSIS\_DEVICE\_HAL\_VERSION\_SUB1 << 16)\(\backslash\)}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{                                      |(\_\_CMSIS\_DEVICE\_HAL\_VERSION\_SUB2 << 8 )\(\backslash\)}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{                                      |(\_\_CMSIS\_DEVICE\_HAL\_VERSION\_RC))}}
+\DoxyCodeLine{112                                              }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#if defined(STM32F405xx)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{  \#include "{}stm32f405xx.h"{}}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#elif defined(STM32F415xx)}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{  \#include "{}stm32f415xx.h"{}}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#elif defined(STM32F407xx)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{  \#include "{}stm32f407xx.h"{}}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#elif defined(STM32F417xx)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{  \#include "{}stm32f417xx.h"{}}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#elif defined(STM32F427xx)}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{  \#include "{}stm32f427xx.h"{}}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#elif defined(STM32F437xx)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{  \#include "{}stm32f437xx.h"{}}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#elif defined(STM32F429xx)}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{  \#include "{}stm32f429xx.h"{}}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#elif defined(STM32F439xx)}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{  \#include "{}stm32f439xx.h"{}}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#elif defined(STM32F401xC)}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{  \#include "{}stm32f401xc.h"{}}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#elif defined(STM32F401xE)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{  \#include "{}\mbox{\hyperlink{stm32f401xe_8h}{stm32f401xe.h}}"{}}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#elif defined(STM32F411xE)}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{  \#include "{}stm32f411xe.h"{}}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{ \#error "{}Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"{}}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{154 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{155 \{}
+\DoxyCodeLine{156   RESET = 0, }
+\DoxyCodeLine{157   SET = !RESET}
+\DoxyCodeLine{158 \} FlagStatus, ITStatus;}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{161 \{}
+\DoxyCodeLine{162   DISABLE = 0, }
+\DoxyCodeLine{163   ENABLE = !DISABLE}
+\DoxyCodeLine{164 \} FunctionalState;}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define IS\_FUNCTIONAL\_STATE(STATE) (((STATE) == DISABLE) || ((STATE) == ENABLE))}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{168 \{}
+\DoxyCodeLine{169   ERROR = 0, }
+\DoxyCodeLine{170   SUCCESS = !ERROR}
+\DoxyCodeLine{171 \} ErrorStatus;}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define SET\_BIT(REG, BIT)     ((REG) |= (BIT))}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define CLEAR\_BIT(REG, BIT)   ((REG) \&= \string~(BIT))}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define READ\_BIT(REG, BIT)    ((REG) \& (BIT))}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define CLEAR\_REG(REG)        ((REG) = (0x0))}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define WRITE\_REG(REG, VAL)   ((REG) = (VAL))}}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define READ\_REG(REG)         ((REG))}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define MODIFY\_REG(REG, CLEARMASK, SETMASK)  WRITE\_REG((REG), (((READ\_REG(REG)) \& (\string~(CLEARMASK))) | (SETMASK)))}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define POSITION\_VAL(VAL)     (\_\_CLZ(\_\_RBIT(VAL))) }}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 }
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#if defined (USE\_HAL\_DRIVER)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{ \#include "{}\mbox{\hyperlink{stm32f4xx__hal_8h}{stm32f4xx\_hal.h}}"{}}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{207 \}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_cplusplus */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{222 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

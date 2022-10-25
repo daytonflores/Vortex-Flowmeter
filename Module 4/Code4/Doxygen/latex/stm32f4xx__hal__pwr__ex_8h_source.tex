@@ -1,0 +1,73 @@
+\hypertarget{stm32f4xx__hal__pwr__ex_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h}
+\label{stm32f4xx__hal__pwr__ex_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_pwr\_ex.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_pwr\_ex.h}}
+\mbox{\hyperlink{stm32f4xx__hal__pwr__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_PWR\_EX\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_PWR\_EX\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{60 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{61 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ PWR registers bit address in the alias region -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{62 \textcolor{comment}{/* -\/-\/-\/ CR Register -\/-\/-\/*/}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{comment}{/* Alias word address of ODEN bit   */}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define ODEN\_BitNumber           0x10}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define CR\_ODEN\_BB               (PERIPH\_BB\_BASE + (CR\_OFFSET * 32) + (ODEN\_BitNumber * 4))}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{comment}{/* Alias word address of ODSWEN bit */}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define ODSWEN\_BitNumber         0x11}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define CR\_ODSWEN\_BB             (PERIPH\_BB\_BASE + (CR\_OFFSET * 32) + (ODSWEN\_BitNumber * 4))}}
+\DoxyCodeLine{71     }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define PWR\_FLAG\_ODRDY                  PWR\_CSR\_ODRDY}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define PWR\_FLAG\_ODSWRDY                PWR\_CSR\_ODSWRDY}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define PWR\_FLAG\_UDRDY                  PWR\_CSR\_UDSWRDY}}
+\DoxyCodeLine{87 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{88   }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_OVERDRIVE\_ENABLE() (*(\_\_IO uint32\_t *) CR\_ODEN\_BB = ENABLE)}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_OVERDRIVE\_DISABLE() (*(\_\_IO uint32\_t *) CR\_ODEN\_BB = DISABLE)}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_OVERDRIVESWITCHING\_ENABLE() (*(\_\_IO uint32\_t *) CR\_ODSWEN\_BB = ENABLE)}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_OVERDRIVESWITCHING\_DISABLE() (*(\_\_IO uint32\_t *) CR\_ODSWEN\_BB = DISABLE)}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_UNDERDRIVE\_ENABLE() (PWR-\/>CR |= (uint32\_t)PWR\_CR\_UDEN)}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_UNDERDRIVE\_DISABLE() (PWR-\/>CR \&= (uint32\_t)(\string~PWR\_CR\_UDEN))}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_GET\_ODRUDR\_FLAG(\_\_FLAG\_\_) ((PWR-\/>CSR \& (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_CLEAR\_ODRUDR\_FLAG() (PWR-\/>CSR |= PWR\_FLAG\_UDRDY)}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{136 \textcolor{keywordtype}{void}              HAL\_PWREx\_EnableFlashPowerDown(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{137 \textcolor{keywordtype}{void}              HAL\_PWREx\_DisableFlashPowerDown(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{138 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_EnableBkUpReg(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{139 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_DisableBkUpReg(\textcolor{keywordtype}{void}); }
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{142 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_ActivateOverDrive(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{143 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_DeactivateOverDrive(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{155 \}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_PWR\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

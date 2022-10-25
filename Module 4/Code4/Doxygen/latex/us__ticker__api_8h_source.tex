@@ -1,0 +1,55 @@
+\hypertarget{us__ticker__api_8h_source}{}\doxysection{us\+\_\+ticker\+\_\+api.\+h}
+\label{us__ticker__api_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/us\_ticker\_api.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/us\_ticker\_api.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_US\_TICKER\_API\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_US\_TICKER\_API\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{22 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 uint32\_t us\_ticker\_read(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{typedef} void (*ticker\_event\_handler)(uint32\_t id);}
+\DoxyCodeLine{28 \textcolor{keywordtype}{void} us\_ticker\_set\_handler(ticker\_event\_handler handler);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structticker__event__s}{ticker\_event\_s}} \{}
+\DoxyCodeLine{31     uint32\_t timestamp;}
+\DoxyCodeLine{32     uint32\_t id;}
+\DoxyCodeLine{33     \textcolor{keyword}{struct }\mbox{\hyperlink{structticker__event__s}{ticker\_event\_s}} *next;}
+\DoxyCodeLine{34 \} \mbox{\hyperlink{structticker__event__s}{ticker\_event\_t}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keywordtype}{void} us\_ticker\_init(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} us\_ticker\_set\_interrupt(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} timestamp);}
+\DoxyCodeLine{38 \textcolor{keywordtype}{void} us\_ticker\_disable\_interrupt(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{39 \textcolor{keywordtype}{void} us\_ticker\_clear\_interrupt(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{40 \textcolor{keywordtype}{void} us\_ticker\_irq\_handler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keywordtype}{void} us\_ticker\_insert\_event(\mbox{\hyperlink{structticker__event__s}{ticker\_event\_t}} *obj, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} timestamp, uint32\_t \textcolor{keywordtype}{id});}
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} us\_ticker\_remove\_event(\mbox{\hyperlink{structticker__event__s}{ticker\_event\_t}} *obj);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{46 \}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

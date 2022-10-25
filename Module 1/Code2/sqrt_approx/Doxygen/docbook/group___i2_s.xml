@@ -1,0 +1,881 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___i2_s" xml:lang="en-US">
+<title>I2S</title>
+<indexterm><primary>I2S</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___i2_s___exported___constants">I2S_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_i2_s___init_type_def">I2S_InitTypeDef</link></para>
+
+<para>I2S Init structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link></para>
+
+<para>I2S handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___i2_s_1ga6c4a9d76f38d834137575776a5b7f60f">__HAL_I2S_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a2b69279eb021ef38d711edcdc5c95054">HAL_I2S_STATE_RESET</link>)</para>
+
+<para>Reset I2S handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1ga4b5ca1e0e5bf616c99d38b8f0c5bdded">__HAL_I2S_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;I2SCFGR |= <link linkend="_group___peripheral___registers___bits___definition_1ga30d76c7552c91bbd5cbac70d9c56ebb3">SPI_I2SCFGR_I2SE</link>)</para>
+
+<para>Enable or disable the specified SPI peripheral (in I2S mode). </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gac4f398db7f68fb8354bff61a9a6372b9">__HAL_I2S_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;I2SCFGR &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga30d76c7552c91bbd5cbac70d9c56ebb3">SPI_I2SCFGR_I2SE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gad6f90125be5ad17065e5378c7580708a">__HAL_I2S_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |= (__INTERRUPT__))</para>
+
+<para>Enable or disable the specified I2S interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gaa78db4341e43a5fb30c815b22137a9e7">__HAL_I2S_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;= ~(__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1ga722512f6ff5e3bc5c6ef34ae2ab93f4e">__HAL_I2S_GET_IT_SOURCE</link>(__HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR2 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Checks if the specified I2S interrupt source is enabled or disabled. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gab4dcaccc00ab76a11c23a49e973df009">__HAL_I2S_GET_FLAG</link>(__HANDLE__,  __FLAG__)   ((((__HANDLE__)-&gt;Instance-&gt;SR) &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Checks whether the specified I2S flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gabe5bab581b9d997faeb0132672376444">__HAL_I2S_CLEAR_OVRFLAG</link>(__HANDLE__)</para>
+
+<para>Clears the I2S OVR pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gafc275594559c5c1e26c23f3246260937">__HAL_I2S_CLEAR_UDRFLAG</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;SR)</para>
+
+<para>Clears the I2S UDR pending flag. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___i2_s_1ga2588a0c71baf7cd6d2c1b9b11120bef0">HAL_I2S_StateTypeDef</link> { 
+<link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a2b69279eb021ef38d711edcdc5c95054">HAL_I2S_STATE_RESET</link> = 0x00
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0afb3efb92ef3bcfce6f4d34570b31a602">HAL_I2S_STATE_READY</link> = 0x01
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a0d9faadcd5b6010c6071905345a282e7">HAL_I2S_STATE_BUSY</link> = 0x02
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0ab8386636ae24469508b8312e7bfbc4b3">HAL_I2S_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a641d635762b2ebb2e8e16917efc13162">HAL_I2S_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a4135585ed147654154c0b7be15f3807e">HAL_I2S_STATE_BUSY_TX_RX</link> = 0x32
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a95d3eabfe7ff5d52af473e7fc96f9536">HAL_I2S_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a011e8568b5b81c7074f2cbfa38b8a2d8">HAL_I2S_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___i2_s_1ga4edd8d1e0ae70e8eaf7235b74f159c1c">HAL_I2S_ErrorTypeDef</link> { 
+<link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1cae1841841d09bac859ee229c88c5a7c66">HAL_I2S_ERROR_NONE</link> = 0x00
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1cab2d5b6e490f69ea8d54249a13b72d9fc">HAL_I2S_ERROR_UDR</link> = 0x01
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1caf2aca8edd9e7b144cc0551fad11a651d">HAL_I2S_ERROR_OVR</link> = 0x02
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca9d350f371086ae93b82921308ab53a23">HAL_I2SEX_ERROR_UDR</link> = 0x04
+, 
+<link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca7524a96d7131a2fd4b33455d0f4051e3">HAL_I2SEX_ERROR_OVR</link> = 0x08
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca53cb4e77eadd45cfae55b024703c4361">HAL_I2S_ERROR_FRE</link> = 0x10
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca511a7f86226ae6ae893f8e716fcf6eb8">HAL_I2S_ERROR_DMA</link> = 0x20
+ }</para>
+
+<para>HAL I2S Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga605f23b9dc1f0979f4b59702fb8d058d">HAL_I2S_Init</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga9119fe0f644a9f011415afaf8661232a">HAL_I2S_DeInit</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga5033142a7bf0de4513782bbee1823a97">HAL_I2S_MspInit</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga7ef92677a8ff770f754d4dfc2aceb39b">HAL_I2S_MspDeInit</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gad53c7444525547c934ee322ca1197dfb">HAL_I2S_Transmit</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga41a95495dff412204cd4c5b631c061ea">HAL_I2S_Receive</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga476c3a3540e53c0905e80bfb5d309db2">HAL_I2S_Transmit_IT</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga0018752e02b7221625aca82b532b5864">HAL_I2S_Receive_IT</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1gad5fe9157152a3c5baac47b877d534f4e">HAL_I2S_IRQHandler</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga97fa0c086e3980597e1e3962b2dfc322">HAL_I2S_Transmit_DMA</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gaadf898fd8ef5c8349c3a61c2e3e7720e">HAL_I2S_Receive_DMA</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga374ecf3a61ff460938af93e9b788f09b">HAL_I2S_DMAPause</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gaa86501283bd6988e4106af51cda75945">HAL_I2S_DMAResume</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gae8d79cd1625530f161cd6651ef5135a3">HAL_I2S_DMAStop</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i2_s_1ga2588a0c71baf7cd6d2c1b9b11120bef0">HAL_I2S_StateTypeDef</link> <link linkend="_group___i2_s_1ga575e5ecf94a8a288b8a07e034dcb18c8">HAL_I2S_GetState</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i2_s_1ga4edd8d1e0ae70e8eaf7235b74f159c1c">HAL_I2S_ErrorTypeDef</link> <link linkend="_group___i2_s_1ga1b0d52620b1b93914d9ef7cad845fc68">HAL_I2S_GetError</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga5bef3c73683b81e822368c9029e495bc">HAL_I2S_TxHalfCpltCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga1ef4021384eddbd41ca60454a2483bf3">HAL_I2S_TxCpltCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga6c4cd3b18c42c6de0c3f4fe7068a5b12">HAL_I2S_RxHalfCpltCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga18c33b2d429b06674ec30e5b2b81862c">HAL_I2S_RxCpltCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga8ca0ebeda8edc26d4201fe8657be294e">HAL_I2S_ErrorCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga716b431b25e7fd7c359dcc0ed9ffb6e2">I2S_DMATxCplt</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1gaf2d811c698cf13db91942c5b7e0c4a85">I2S_DMATxHalfCplt</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga8d2bf0ca3ff0f11da49d3e8616c75d36">I2S_DMARxCplt</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga21556bd3ebfc035450de4628b5b029d8">I2S_DMARxHalfCplt</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1gaba9556ceca0ad8bffa4946c2bb2598ae">I2S_DMAError</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gab49e7928ef4021ca00931059b0cc3545">I2S_WaitFlagStateUntilTimeout</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint32_t Flag, uint32_t Status, uint32_t Timeout)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___i2_s_1gabe5bab581b9d997faeb0132672376444"/><section>
+    <title>__HAL_I2S_CLEAR_OVRFLAG</title>
+<indexterm><primary>__HAL_I2S_CLEAR_OVRFLAG</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_CLEAR_OVRFLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_CLEAR_OVRFLAG( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{(__HANDLE__)-&gt;Instance-&gt;DR;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;SR;}<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Clears the I2S OVR pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2S Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00375">375</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1gafc275594559c5c1e26c23f3246260937"/><section>
+    <title>__HAL_I2S_CLEAR_UDRFLAG</title>
+<indexterm><primary>__HAL_I2S_CLEAR_UDRFLAG</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_CLEAR_UDRFLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_CLEAR_UDRFLAG( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;SR)</computeroutput></para><para>
+
+<para>Clears the I2S UDR pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2S Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00381">381</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1gac4f398db7f68fb8354bff61a9a6372b9"/><section>
+    <title>__HAL_I2S_DISABLE</title>
+<indexterm><primary>__HAL_I2S_DISABLE</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;I2SCFGR &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga30d76c7552c91bbd5cbac70d9c56ebb3">SPI_I2SCFGR_I2SE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00330">330</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1gaa78db4341e43a5fb30c815b22137a9e7"/><section>
+    <title>__HAL_I2S_DISABLE_IT</title>
+<indexterm><primary>__HAL_I2S_DISABLE_IT</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_DISABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;= ~(__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00342">342</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1ga4b5ca1e0e5bf616c99d38b8f0c5bdded"/><section>
+    <title>__HAL_I2S_ENABLE</title>
+<indexterm><primary>__HAL_I2S_ENABLE</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;I2SCFGR |= <link linkend="_group___peripheral___registers___bits___definition_1ga30d76c7552c91bbd5cbac70d9c56ebb3">SPI_I2SCFGR_I2SE</link>)</computeroutput></para><para>
+
+<para>Enable or disable the specified SPI peripheral (in I2S mode). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2S Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00329">329</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1gad6f90125be5ad17065e5378c7580708a"/><section>
+    <title>__HAL_I2S_ENABLE_IT</title>
+<indexterm><primary>__HAL_I2S_ENABLE_IT</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_ENABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enable or disable the specified I2S interrupts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2S Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the interrupt source to enable or disable. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>I2S_IT_TXE: Tx buffer empty interrupt enable </para>
+</listitem>
+<listitem>
+<para>I2S_IT_RXNE: RX buffer not empty interrupt enable </para>
+</listitem>
+<listitem>
+<para>I2S_IT_ERR: Error interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00341">341</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1gab4dcaccc00ab76a11c23a49e973df009"/><section>
+    <title>__HAL_I2S_GET_FLAG</title>
+<indexterm><primary>__HAL_I2S_GET_FLAG</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_GET_FLAG( __HANDLE__,  __FLAG__)   ((((__HANDLE__)-&gt;Instance-&gt;SR) &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Checks whether the specified I2S flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2S Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>I2S_FLAG_RXNE: Receive buffer not empty flag </para>
+</listitem>
+<listitem>
+<para>I2S_FLAG_TXE: Transmit buffer empty flag </para>
+</listitem>
+<listitem>
+<para>I2S_FLAG_UDR: Underrun flag </para>
+</listitem>
+<listitem>
+<para>I2S_FLAG_OVR: Overrun flag </para>
+</listitem>
+<listitem>
+<para>I2S_FLAG_FRE: Frame error flag </para>
+</listitem>
+<listitem>
+<para>I2S_FLAG_CHSIDE: Channel Side flag </para>
+</listitem>
+<listitem>
+<para>I2S_FLAG_BSY: Busy flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00369">369</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1ga722512f6ff5e3bc5c6ef34ae2ab93f4e"/><section>
+    <title>__HAL_I2S_GET_IT_SOURCE</title>
+<indexterm><primary>__HAL_I2S_GET_IT_SOURCE</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_GET_IT_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_GET_IT_SOURCE( __HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR2 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Checks if the specified I2S interrupt source is enabled or disabled. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2S Handle. This parameter can be I2S where x: 1, 2, or 3 to select the I2S peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the I2S interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>I2S_IT_TXE: Tx buffer empty interrupt enable </para>
+</listitem>
+<listitem>
+<para>I2S_IT_RXNE: RX buffer not empty interrupt enable </para>
+</listitem>
+<listitem>
+<para>I2S_IT_ERR: Error interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">IT</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00354">354</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1ga6c4a9d76f38d834137575776a5b7f60f"/><section>
+    <title>__HAL_I2S_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_I2S_RESET_HANDLE_STATE</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>__HAL_I2S_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2S_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a2b69279eb021ef38d711edcdc5c95054">HAL_I2S_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset I2S handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2S Handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00323">323</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___i2_s_1ga4edd8d1e0ae70e8eaf7235b74f159c1c"/><section>
+    <title>HAL_I2S_ErrorTypeDef</title>
+<indexterm><primary>HAL_I2S_ErrorTypeDef</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_ErrorTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___i2_s_1ga4edd8d1e0ae70e8eaf7235b74f159c1c">HAL_I2S_ErrorTypeDef</link></computeroutput></para><para>
+
+<para>HAL I2S Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_I2S_ERROR_NONE</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_ERROR_NONE</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1cae1841841d09bac859ee229c88c5a7c66"/>HAL_I2S_ERROR_NONE</entry><entry>
+<para>No error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_ERROR_UDR</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_ERROR_UDR</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1cab2d5b6e490f69ea8d54249a13b72d9fc"/>HAL_I2S_ERROR_UDR</entry><entry>
+<para>I2S Underrun error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_ERROR_OVR</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_ERROR_OVR</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1caf2aca8edd9e7b144cc0551fad11a651d"/>HAL_I2S_ERROR_OVR</entry><entry>
+<para>I2S Overrun error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2SEX_ERROR_UDR</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2SEX_ERROR_UDR</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca9d350f371086ae93b82921308ab53a23"/>HAL_I2SEX_ERROR_UDR</entry><entry>
+<para>I2S extended Underrun error </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2SEX_ERROR_OVR</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2SEX_ERROR_OVR</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca7524a96d7131a2fd4b33455d0f4051e3"/>HAL_I2SEX_ERROR_OVR</entry><entry>
+<para>I2S extended Overrun error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_ERROR_FRE</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_ERROR_FRE</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca53cb4e77eadd45cfae55b024703c4361"/>HAL_I2S_ERROR_FRE</entry><entry>
+<para>I2S Frame format error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_ERROR_DMA</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_ERROR_DMA</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca511a7f86226ae6ae893f8e716fcf6eb8"/>HAL_I2S_ERROR_DMA</entry><entry>
+<para>DMA transfer error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00108">108</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_s_1ga2588a0c71baf7cd6d2c1b9b11120bef0"/><section>
+    <title>HAL_I2S_StateTypeDef</title>
+<indexterm><primary>HAL_I2S_StateTypeDef</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___i2_s_1ga2588a0c71baf7cd6d2c1b9b11120bef0">HAL_I2S_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL State structures definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_I2S_STATE_RESET</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a2b69279eb021ef38d711edcdc5c95054"/>HAL_I2S_STATE_RESET</entry><entry>
+<para>I2S not yet initialized or disabled 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_STATE_READY</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0afb3efb92ef3bcfce6f4d34570b31a602"/>HAL_I2S_STATE_READY</entry><entry>
+<para>I2S initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_STATE_BUSY</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a0d9faadcd5b6010c6071905345a282e7"/>HAL_I2S_STATE_BUSY</entry><entry>
+<para>I2S internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_STATE_BUSY_TX</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_STATE_BUSY_TX</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0ab8386636ae24469508b8312e7bfbc4b3"/>HAL_I2S_STATE_BUSY_TX</entry><entry>
+<para>Data Transmission process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_STATE_BUSY_RX</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_STATE_BUSY_RX</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a641d635762b2ebb2e8e16917efc13162"/>HAL_I2S_STATE_BUSY_RX</entry><entry>
+<para>Data Reception process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_STATE_BUSY_TX_RX</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_STATE_BUSY_TX_RX</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a4135585ed147654154c0b7be15f3807e"/>HAL_I2S_STATE_BUSY_TX_RX</entry><entry>
+<para>Data Transmission and Reception process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_STATE_TIMEOUT</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a95d3eabfe7ff5d52af473e7fc96f9536"/>HAL_I2S_STATE_TIMEOUT</entry><entry>
+<para>I2S timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2S_STATE_ERROR</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a011e8568b5b81c7074f2cbfa38b8a2d8"/>HAL_I2S_STATE_ERROR</entry><entry>
+<para>I2S error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2s_8h_source_1l00092">92</link> of file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___i2_s_1ga9119fe0f644a9f011415afaf8661232a"/><section>
+    <title>HAL_I2S_DeInit()</title>
+<indexterm><primary>HAL_I2S_DeInit</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_DeInit (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga374ecf3a61ff460938af93e9b788f09b"/><section>
+    <title>HAL_I2S_DMAPause()</title>
+<indexterm><primary>HAL_I2S_DMAPause</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_DMAPause</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_DMAPause (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1gaa86501283bd6988e4106af51cda75945"/><section>
+    <title>HAL_I2S_DMAResume()</title>
+<indexterm><primary>HAL_I2S_DMAResume</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_DMAResume</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_DMAResume (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1gae8d79cd1625530f161cd6651ef5135a3"/><section>
+    <title>HAL_I2S_DMAStop()</title>
+<indexterm><primary>HAL_I2S_DMAStop</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_DMAStop</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_DMAStop (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga8ca0ebeda8edc26d4201fe8657be294e"/><section>
+    <title>HAL_I2S_ErrorCallback()</title>
+<indexterm><primary>HAL_I2S_ErrorCallback</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_ErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2S_ErrorCallback (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga1b0d52620b1b93914d9ef7cad845fc68"/><section>
+    <title>HAL_I2S_GetError()</title>
+<indexterm><primary>HAL_I2S_GetError</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_GetError</secondary></indexterm>
+<para><computeroutput><link linkend="_group___i2_s_1ga4edd8d1e0ae70e8eaf7235b74f159c1c">HAL_I2S_ErrorTypeDef</link> HAL_I2S_GetError (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga575e5ecf94a8a288b8a07e034dcb18c8"/><section>
+    <title>HAL_I2S_GetState()</title>
+<indexterm><primary>HAL_I2S_GetState</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___i2_s_1ga2588a0c71baf7cd6d2c1b9b11120bef0">HAL_I2S_StateTypeDef</link> HAL_I2S_GetState (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga605f23b9dc1f0979f4b59702fb8d058d"/><section>
+    <title>HAL_I2S_Init()</title>
+<indexterm><primary>HAL_I2S_Init</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_Init (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1gad5fe9157152a3c5baac47b877d534f4e"/><section>
+    <title>HAL_I2S_IRQHandler()</title>
+<indexterm><primary>HAL_I2S_IRQHandler</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_I2S_IRQHandler (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga7ef92677a8ff770f754d4dfc2aceb39b"/><section>
+    <title>HAL_I2S_MspDeInit()</title>
+<indexterm><primary>HAL_I2S_MspDeInit</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_I2S_MspDeInit (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga5033142a7bf0de4513782bbee1823a97"/><section>
+    <title>HAL_I2S_MspInit()</title>
+<indexterm><primary>HAL_I2S_MspInit</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_I2S_MspInit (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga41a95495dff412204cd4c5b631c061ea"/><section>
+    <title>HAL_I2S_Receive()</title>
+<indexterm><primary>HAL_I2S_Receive</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_Receive</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_Receive (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s, uint16_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1gaadf898fd8ef5c8349c3a61c2e3e7720e"/><section>
+    <title>HAL_I2S_Receive_DMA()</title>
+<indexterm><primary>HAL_I2S_Receive_DMA</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_Receive_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_Receive_DMA (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s, uint16_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga0018752e02b7221625aca82b532b5864"/><section>
+    <title>HAL_I2S_Receive_IT()</title>
+<indexterm><primary>HAL_I2S_Receive_IT</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_Receive_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_Receive_IT (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s, uint16_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga18c33b2d429b06674ec30e5b2b81862c"/><section>
+    <title>HAL_I2S_RxCpltCallback()</title>
+<indexterm><primary>HAL_I2S_RxCpltCallback</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_RxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2S_RxCpltCallback (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga6c4cd3b18c42c6de0c3f4fe7068a5b12"/><section>
+    <title>HAL_I2S_RxHalfCpltCallback()</title>
+<indexterm><primary>HAL_I2S_RxHalfCpltCallback</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_RxHalfCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2S_RxHalfCpltCallback (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1gad53c7444525547c934ee322ca1197dfb"/><section>
+    <title>HAL_I2S_Transmit()</title>
+<indexterm><primary>HAL_I2S_Transmit</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_Transmit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_Transmit (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s, uint16_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga97fa0c086e3980597e1e3962b2dfc322"/><section>
+    <title>HAL_I2S_Transmit_DMA()</title>
+<indexterm><primary>HAL_I2S_Transmit_DMA</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_Transmit_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_Transmit_DMA (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s, uint16_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga476c3a3540e53c0905e80bfb5d309db2"/><section>
+    <title>HAL_I2S_Transmit_IT()</title>
+<indexterm><primary>HAL_I2S_Transmit_IT</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_Transmit_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2S_Transmit_IT (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s, uint16_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga1ef4021384eddbd41ca60454a2483bf3"/><section>
+    <title>HAL_I2S_TxCpltCallback()</title>
+<indexterm><primary>HAL_I2S_TxCpltCallback</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_TxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2S_TxCpltCallback (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga5bef3c73683b81e822368c9029e495bc"/><section>
+    <title>HAL_I2S_TxHalfCpltCallback()</title>
+<indexterm><primary>HAL_I2S_TxHalfCpltCallback</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>HAL_I2S_TxHalfCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2S_TxHalfCpltCallback (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1gaba9556ceca0ad8bffa4946c2bb2598ae"/><section>
+    <title>I2S_DMAError()</title>
+<indexterm><primary>I2S_DMAError</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>I2S_DMAError</secondary></indexterm>
+<para><computeroutput>void I2S_DMAError (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga8d2bf0ca3ff0f11da49d3e8616c75d36"/><section>
+    <title>I2S_DMARxCplt()</title>
+<indexterm><primary>I2S_DMARxCplt</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>I2S_DMARxCplt</secondary></indexterm>
+<para><computeroutput>void I2S_DMARxCplt (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga21556bd3ebfc035450de4628b5b029d8"/><section>
+    <title>I2S_DMARxHalfCplt()</title>
+<indexterm><primary>I2S_DMARxHalfCplt</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>I2S_DMARxHalfCplt</secondary></indexterm>
+<para><computeroutput>void I2S_DMARxHalfCplt (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1ga716b431b25e7fd7c359dcc0ed9ffb6e2"/><section>
+    <title>I2S_DMATxCplt()</title>
+<indexterm><primary>I2S_DMATxCplt</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>I2S_DMATxCplt</secondary></indexterm>
+<para><computeroutput>void I2S_DMATxCplt (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1gaf2d811c698cf13db91942c5b7e0c4a85"/><section>
+    <title>I2S_DMATxHalfCplt()</title>
+<indexterm><primary>I2S_DMATxHalfCplt</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>I2S_DMATxHalfCplt</secondary></indexterm>
+<para><computeroutput>void I2S_DMATxHalfCplt (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___i2_s_1gab49e7928ef4021ca00931059b0cc3545"/><section>
+    <title>I2S_WaitFlagStateUntilTimeout()</title>
+<indexterm><primary>I2S_WaitFlagStateUntilTimeout</primary><secondary>I2S</secondary></indexterm>
+<indexterm><primary>I2S</primary><secondary>I2S_WaitFlagStateUntilTimeout</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> I2S_WaitFlagStateUntilTimeout (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> * hi2s, uint32_t Flag, uint32_t Status, uint32_t Timeout)</computeroutput></para></section>
+</section>
+</section>

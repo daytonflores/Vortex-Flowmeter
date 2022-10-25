@@ -1,0 +1,435 @@
+\hypertarget{core__cm0_8h_source}{}\doxysection{core\+\_\+cm0.\+h}
+\label{core__cm0_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/core\_cm0.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/core\_cm0.h}}
+\mbox{\hyperlink{core__cm0_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00001}00001 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00010}00010 \textcolor{comment}{/* Copyright (c) 2009 -\/ 2013 ARM LIMITED}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00011}00011 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00012}00012 \textcolor{comment}{   All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00013}00013 \textcolor{comment}{   Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00014}00014 \textcolor{comment}{   modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00015}00015 \textcolor{comment}{   -\/ Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00016}00016 \textcolor{comment}{     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00017}00017 \textcolor{comment}{   -\/ Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00018}00018 \textcolor{comment}{     notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00019}00019 \textcolor{comment}{     documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00020}00020 \textcolor{comment}{   -\/ Neither the name of ARM nor the names of its contributors may be used}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00021}00021 \textcolor{comment}{     to endorse or promote products derived from this software without}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00022}00022 \textcolor{comment}{     specific prior written permission.}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00023}00023 \textcolor{comment}{   *}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00024}00024 \textcolor{comment}{   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00025}00025 \textcolor{comment}{   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00026}00026 \textcolor{comment}{   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00027}00027 \textcolor{comment}{   ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00028}00028 \textcolor{comment}{   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00029}00029 \textcolor{comment}{   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00030}00030 \textcolor{comment}{   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00031}00031 \textcolor{comment}{   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00032}00032 \textcolor{comment}{   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00033}00033 \textcolor{comment}{   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00034}00034 \textcolor{comment}{   POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00035}00035 \textcolor{comment}{   -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00038}00038 \textcolor{preprocessor}{\#if defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00039}00039 \textcolor{preprocessor}{ \#pragma system\_include  }\textcolor{comment}{/* treat file as system include file for MISRA check */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00040}00040 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00046}00046 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CM0\_H\_GENERIC}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00047}\mbox{\hyperlink{core__cm0_8h_a1c7b83f58ef7b4d6b5f50ec1e294b34e}{00047}} \textcolor{preprocessor}{\#define \_\_CORE\_CM0\_H\_GENERIC}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00063}00063 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00064}00064 \textcolor{comment}{ *                 CMSIS definitions}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00065}00065 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00070}00070 \textcolor{comment}{/*  CMSIS CM0 definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00071}\mbox{\hyperlink{core__cm0_8h_acd01bf0a654a7f15f606593aa636bc72}{00071}} \textcolor{preprocessor}{\#define \_\_CM0\_CMSIS\_VERSION\_MAIN  (0x03)                                   }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00072}\mbox{\hyperlink{core__cm0_8h_ab6a85b0d3b2fbcfb62003006ece175cc}{00072}} \textcolor{preprocessor}{\#define \_\_CM0\_CMSIS\_VERSION\_SUB   (0x20)                                   }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00073}00073 \textcolor{preprocessor}{\#define \_\_CM0\_CMSIS\_VERSION       ((\_\_CM0\_CMSIS\_VERSION\_MAIN << 16) | \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00074}\mbox{\hyperlink{core__cm0_8h_af233a7b7b2818cc6194e7a9386faccd8}{00074}} \textcolor{preprocessor}{                                    \_\_CM0\_CMSIS\_VERSION\_SUB          )     }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00076}\mbox{\hyperlink{core__cm0_8h_a63ea62503c88acab19fcf3d5743009e3}{00076}} \textcolor{preprocessor}{\#define \_\_CORTEX\_M                (0x00)                                   }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00079}00079 \textcolor{preprocessor}{\#if   defined ( \_\_CC\_ARM )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00080}00080 \textcolor{preprocessor}{  \#define \_\_ASM            \_\_asm                                      }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00081}00081 \textcolor{preprocessor}{  \#define \_\_INLINE         \_\_inline                                   }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00082}00082 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE  static \_\_inline}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00084}00084 \textcolor{preprocessor}{\#elif defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00085}00085 \textcolor{preprocessor}{  \#define \_\_ASM            \_\_asm                                      }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00086}00086 \textcolor{preprocessor}{  \#define \_\_INLINE         inline                                     }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00087}00087 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE  static inline}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00089}00089 \textcolor{preprocessor}{\#elif defined ( \_\_GNUC\_\_ )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00090}00090 \textcolor{preprocessor}{  \#define \_\_ASM            \_\_asm                                      }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00091}00091 \textcolor{preprocessor}{  \#define \_\_INLINE         inline                                     }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00092}00092 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE  static inline}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00094}00094 \textcolor{preprocessor}{\#elif defined ( \_\_TASKING\_\_ )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00095}00095 \textcolor{preprocessor}{  \#define \_\_ASM            \_\_asm                                      }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00096}00096 \textcolor{preprocessor}{  \#define \_\_INLINE         inline                                     }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00097}00097 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE  static inline}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00099}00099 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00103}\mbox{\hyperlink{core__cm0_8h_aa167d0f532a7c2b2e3a6395db2fa0776}{00103}} \textcolor{preprocessor}{\#define \_\_FPU\_USED       0}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00105}00105 \textcolor{preprocessor}{\#if defined ( \_\_CC\_ARM )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00106}00106 \textcolor{preprocessor}{  \#if defined \_\_TARGET\_FPU\_VFP}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00107}00107 \textcolor{preprocessor}{    \#warning "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00108}00108 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00110}00110 \textcolor{preprocessor}{\#elif defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00111}00111 \textcolor{preprocessor}{  \#if defined \_\_ARMVFP\_\_}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00112}00112 \textcolor{preprocessor}{    \#warning "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00113}00113 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00115}00115 \textcolor{preprocessor}{\#elif defined ( \_\_GNUC\_\_ )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00116}00116 \textcolor{preprocessor}{  \#if defined (\_\_VFP\_FP\_\_) \&\& !defined(\_\_SOFTFP\_\_)}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00117}00117 \textcolor{preprocessor}{    \#warning "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00118}00118 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00120}00120 \textcolor{preprocessor}{\#elif defined ( \_\_TASKING\_\_ )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00121}00121 \textcolor{preprocessor}{  \#if defined \_\_FPU\_VFP\_\_}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00122}00122 \textcolor{preprocessor}{    \#error "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00123}00123 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00124}00124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00126}00126 \textcolor{preprocessor}{\#include <stdint.h>}                      \textcolor{comment}{/* standard types definitions                      */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00127}00127 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{core__cm_instr_8h}{core\_cmInstr.h}}>}                \textcolor{comment}{/* Core Instruction Access                         */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00128}00128 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{core__cm_func_8h}{core\_cmFunc.h}}>}                 \textcolor{comment}{/* Core Function Access                            */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00130}00130 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CM0\_H\_GENERIC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00132}00132 \textcolor{preprocessor}{\#ifndef \_\_CMSIS\_GENERIC}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00134}00134 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CM0\_H\_DEPENDANT}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00135}\mbox{\hyperlink{core__cm0_8h_ac1e2acb34ba7f2543bcb2249bead4aee}{00135}} \textcolor{preprocessor}{\#define \_\_CORE\_CM0\_H\_DEPENDANT}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00137}00137 \textcolor{comment}{/* check device defines and use defaults */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00138}00138 \textcolor{preprocessor}{\#if defined \_\_CHECK\_DEVICE\_DEFINES}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00139}00139 \textcolor{preprocessor}{  \#ifndef \_\_CM0\_REV}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00140}00140 \textcolor{preprocessor}{    \#define \_\_CM0\_REV               0x0000}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00141}00141 \textcolor{preprocessor}{    \#warning "{}\_\_CM0\_REV not defined in device header file; using default!"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00142}00142 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00144}00144 \textcolor{preprocessor}{  \#ifndef \_\_NVIC\_PRIO\_BITS}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00145}00145 \textcolor{preprocessor}{    \#define \_\_NVIC\_PRIO\_BITS          2}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00146}00146 \textcolor{preprocessor}{    \#warning "{}\_\_NVIC\_PRIO\_BITS not defined in device header file; using default!"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00147}00147 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00149}00149 \textcolor{preprocessor}{  \#ifndef \_\_Vendor\_SysTickConfig}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00150}00150 \textcolor{preprocessor}{    \#define \_\_Vendor\_SysTickConfig    0}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00151}00151 \textcolor{preprocessor}{    \#warning "{}\_\_Vendor\_SysTickConfig not defined in device header file; using default!"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00152}00152 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00153}00153 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00155}00155 \textcolor{comment}{/* IO definitions (access restrictions to peripheral registers) */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00163}00163 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00164}00164 \textcolor{preprocessor}{  \#define   \_\_I     volatile             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00165}00165 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00166}\mbox{\hyperlink{core__cm0_8h_af63697ed9952cc71e1225efe205f6cd3}{00166}} \textcolor{preprocessor}{  \#define   \_\_I     volatile const       }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00167}00167 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00168}\mbox{\hyperlink{core__cm0_8h_a7e25d9380f9ef903923964322e71f2f6}{00168}} \textcolor{preprocessor}{\#define     \_\_O     volatile             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00169}\mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{00169}} \textcolor{preprocessor}{\#define     \_\_IO    volatile             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00175}00175 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00176}00176 \textcolor{comment}{ *                 Register Abstraction}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00177}00177 \textcolor{comment}{  Core Register contain:}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00178}00178 \textcolor{comment}{  -\/ Core Register}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00179}00179 \textcolor{comment}{  -\/ Core NVIC Register}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00180}00180 \textcolor{comment}{  -\/ Core SCB Register}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00181}00181 \textcolor{comment}{  -\/ Core SysTick Register}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00182}00182 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00195}\mbox{\hyperlink{union_a_p_s_r___type}{00195}} \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00196}00196 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00197}00197   \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00198}00198   \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00199}00199 \textcolor{preprocessor}{\#if (\_\_CORTEX\_M != 0x04)}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00200}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{00200}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:27;              }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00201}00201 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00202}00202     uint32\_t \_reserved0:16;              }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00203}00203     uint32\_t GE:4;                       }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00204}00204     uint32\_t \_reserved1:7;               }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00205}00205 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00206}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{00206}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00207}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gacd4a2b64faee91e4a9eef300667fa222}{00207}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00208}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{00208}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00209}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{00209}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00210}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gabae0610bc2a97bbf7f689e953e0b451f}{00210}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00211}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga84de5f534817cdbf8bd9064080effca2}{00211}}   \} b;                                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00212}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{00212}}   uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{w}};                            }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00213}00213 \} \mbox{\hyperlink{union_a_p_s_r___type}{APSR\_Type}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00214}00214 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00218}\mbox{\hyperlink{union_i_p_s_r___type}{00218}} \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00219}00219 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00220}00220   \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00221}00221   \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00222}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad502ba7dbb2aab5f87c782b28f02622d}{00222}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad502ba7dbb2aab5f87c782b28f02622d}{ISR}}:9;                      }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00223}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{00223}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:23;              }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00224}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga6e920e9d2e9a2738f8face0863888c0e}{00224}}   \} b;                                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00225}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{00225}}   uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{w}};                            }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00226}00226 \} \mbox{\hyperlink{union_i_p_s_r___type}{IPSR\_Type}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00228}00228 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00231}\mbox{\hyperlink{unionx_p_s_r___type}{00231}} \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00232}00232 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00233}00233   \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00234}00234   \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00235}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad502ba7dbb2aab5f87c782b28f02622d}{00235}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad502ba7dbb2aab5f87c782b28f02622d}{ISR}}:9;                      }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00236}00236 \textcolor{preprocessor}{\#if (\_\_CORTEX\_M != 0x04)}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00237}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{00237}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:15;              }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00238}00238 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00239}00239     uint32\_t \_reserved0:7;               }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00240}00240     uint32\_t GE:4;                       }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00241}00241     uint32\_t \_reserved1:4;               }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00242}00242 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00243}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga6e1cf12e53a20224f6f62c001d9be972}{00243}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga6e1cf12e53a20224f6f62c001d9be972}{T}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00244}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga76485660fe8ad98cdc71ddd7cb0ed777}{00244}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga76485660fe8ad98cdc71ddd7cb0ed777}{IT}}:2;                       }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00245}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{00245}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga65f27ddc4f7e09c14ce7c5211b2e000a}{Q}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00246}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gacd4a2b64faee91e4a9eef300667fa222}{00246}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gacd4a2b64faee91e4a9eef300667fa222}{V}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00247}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{00247}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7a1caf92f32fe9ebd8d1fe89b06c7776}{C}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00248}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{00248}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga5ae954cbd9986cd64625d7fa00943c8e}{Z}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00249}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gabae0610bc2a97bbf7f689e953e0b451f}{00249}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gabae0610bc2a97bbf7f689e953e0b451f}{N}}:1;                        }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00250}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga61873807b9abee3dfa090c036e580d2e}{00250}}   \} b;                                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00251}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{00251}}   uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{w}};                            }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00252}00252 \} \mbox{\hyperlink{unionx_p_s_r___type}{xPSR\_Type}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00253}00253 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00257}\mbox{\hyperlink{union_c_o_n_t_r_o_l___type}{00257}} \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00258}00258 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00259}00259   \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00260}00260   \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00261}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga2a6e513e8a6bf4e58db169e312172332}{00261}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga2a6e513e8a6bf4e58db169e312172332}{nPRIV}}:1;                    }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00262}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gae185aac93686ffc78e998a9daf41415b}{00262}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gae185aac93686ffc78e998a9daf41415b}{SPSEL}}:1;                    }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00263}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga2518558c090f60161ba4e718a54ee468}{00263}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga2518558c090f60161ba4e718a54ee468}{FPCA}}:1;                     }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00264}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{00264}}     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac8a6a13838a897c8d0b8bc991bbaf7c1}{\_reserved0}}:29;              }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00265}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga5d690aa9e65fccaa320e1b8613f502c9}{00265}}   \} b;                                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00266}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{00266}}   uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad0fb62e7a08e70fc5e0a76b67809f84b}{w}};                            }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00267}00267 \} \mbox{\hyperlink{union_c_o_n_t_r_o_l___type}{CONTROL\_Type}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00268}00268 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00280}\mbox{\hyperlink{struct_n_v_i_c___type}{00280}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00281}00281 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00282}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga95686b1da7037feece357d91ba5f5325}{00282}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t ISER[1];                 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00283}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga148e6e212dc15628998e8f4239290665}{00283}}        uint32\_t RESERVED0[31];}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00284}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga5524644c804c18c22addd691d4da53e4}{00284}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t ICER[1];                 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00285}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga62ae13b33cd85ec43b6f84d85b7ea9c6}{00285}}        uint32\_t RSERVED1[31];}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00286}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gae3434eff1b1db4ce857c73a4ef1af273}{00286}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t ISPR[1];                 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00287}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga6e578ce633e8b80c70bc612a1bf8a965}{00287}}        uint32\_t RESERVED2[31];}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00288}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga281c819da5f0f4265f5b88d269544bc9}{00288}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t ICPR[1];                 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00289}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbefcd166e59396eadde34d46bfc4539}{00289}}        uint32\_t RESERVED3[31];}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00290}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaaed8c9afc755176cd51954c3056cc446}{00290}}        uint32\_t RESERVED4[64];}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00291}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga519d82311efa6ead6f53b495d3d80de8}{00291}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t IP[8];                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00292}00292 \}  \mbox{\hyperlink{struct_n_v_i_c___type}{NVIC\_Type}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00293}00293 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00305}\mbox{\hyperlink{struct_s_c_b___type}{00305}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00306}00306 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00307}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga30abfea43143a424074f682bd61eace0}{00307}}   \mbox{\hyperlink{core__cm0_8h_af63697ed9952cc71e1225efe205f6cd3}{\_\_I}}  uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga30abfea43143a424074f682bd61eace0}{CPUID}};                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00308}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8fec9e122b923822e7f951cd48cf1d47}{00308}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8fec9e122b923822e7f951cd48cf1d47}{ICSR}};                    }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00309}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf86c61a5d38a4fc9cef942a12744486b}{00309}}        uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf86c61a5d38a4fc9cef942a12744486b}{RESERVED0}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00310}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaaec159b48828355cb770049b8b2e8d91}{00310}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaaec159b48828355cb770049b8b2e8d91}{AIRCR}};                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00311}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga64a95891ad3e904dd5548112539c1c98}{00311}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga64a95891ad3e904dd5548112539c1c98}{SCR}};                     }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00312}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga5e1322e27c40bf91d172f9673f205c97}{00312}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga5e1322e27c40bf91d172f9673f205c97}{CCR}};                     }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00313}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac4ac04e673b5b8320d53f7b0947db902}{00313}}        uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac4ac04e673b5b8320d53f7b0947db902}{RESERVED1}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00314}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf6c413ed8c7d1b792a91f01e13b47adf}{00314}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t SHP[2];                  }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00315}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga04d136e5436e5fa2fb2aaa78a5f86b19}{00315}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga04d136e5436e5fa2fb2aaa78a5f86b19}{SHCSR}};                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00316}00316 \} \mbox{\hyperlink{struct_s_c_b___type}{SCB\_Type}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00317}00317 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00318}00318 \textcolor{comment}{/* SCB CPUID Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00319}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga58686b88f94f789d4e6f429fe1ff58cf}{00319}} \textcolor{preprocessor}{\#define SCB\_CPUID\_IMPLEMENTER\_Pos          24                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00320}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga0932b31faafd47656a03ced75a31d99b}{00320}} \textcolor{preprocessor}{\#define SCB\_CPUID\_IMPLEMENTER\_Msk          (0xFFUL << SCB\_CPUID\_IMPLEMENTER\_Pos)          }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00322}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga104462bd0815391b4044a70bd15d3a71}{00322}} \textcolor{preprocessor}{\#define SCB\_CPUID\_VARIANT\_Pos              20                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00323}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gad358dfbd04300afc1824329d128b99e8}{00323}} \textcolor{preprocessor}{\#define SCB\_CPUID\_VARIANT\_Msk              (0xFUL << SCB\_CPUID\_VARIANT\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00325}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaf8b3236b08fb8e840efb682645fb0e98}{00325}} \textcolor{preprocessor}{\#define SCB\_CPUID\_ARCHITECTURE\_Pos         16                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00326}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gafae4a1f27a927338ae9dc51a0e146213}{00326}} \textcolor{preprocessor}{\#define SCB\_CPUID\_ARCHITECTURE\_Msk         (0xFUL << SCB\_CPUID\_ARCHITECTURE\_Pos)          }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00328}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga705f68eaa9afb042ca2407dc4e4629ac}{00328}} \textcolor{preprocessor}{\#define SCB\_CPUID\_PARTNO\_Pos                4                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00329}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga98e581423ca016680c238c469aba546d}{00329}} \textcolor{preprocessor}{\#define SCB\_CPUID\_PARTNO\_Msk               (0xFFFUL << SCB\_CPUID\_PARTNO\_Pos)              }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00331}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga3c3d9071e574de11fb27ba57034838b1}{00331}} \textcolor{preprocessor}{\#define SCB\_CPUID\_REVISION\_Pos              0                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00332}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga2ec0448b6483f77e7f5d08b4b81d85df}{00332}} \textcolor{preprocessor}{\#define SCB\_CPUID\_REVISION\_Msk             (0xFUL << SCB\_CPUID\_REVISION\_Pos)              }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00334}00334 \textcolor{comment}{/* SCB Interrupt Control State Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00335}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga750d4b52624a46d71356db4ea769573b}{00335}} \textcolor{preprocessor}{\#define SCB\_ICSR\_NMIPENDSET\_Pos            31                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00336}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga340e3f79e9c3607dee9f2c048b6b22e8}{00336}} \textcolor{preprocessor}{\#define SCB\_ICSR\_NMIPENDSET\_Msk            (1UL << SCB\_ICSR\_NMIPENDSET\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00338}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gab5ded23d2ab1d5ff7cc7ce746205e9fe}{00338}} \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVSET\_Pos             28                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00339}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga1e40d93efb402763c8c00ddcc56724ff}{00339}} \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVSET\_Msk             (1UL << SCB\_ICSR\_PENDSVSET\_Pos)                }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00341}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gae218d9022288f89faf57187c4d542ecd}{00341}} \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVCLR\_Pos             27                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00342}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga4a901ace381d3c1c74ac82b22fae2e1e}{00342}} \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVCLR\_Msk             (1UL << SCB\_ICSR\_PENDSVCLR\_Pos)                }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00344}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga9dbb3358c6167c9c3f85661b90fb2794}{00344}} \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTSET\_Pos             26                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00345}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga7325b61ea0ec323ef2d5c893b112e546}{00345}} \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTSET\_Msk             (1UL << SCB\_ICSR\_PENDSTSET\_Pos)                }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00347}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gadbe25e4b333ece1341beb1a740168fdc}{00347}} \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTCLR\_Pos             25                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00348}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gab241827d2a793269d8cd99b9b28c2157}{00348}} \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTCLR\_Msk             (1UL << SCB\_ICSR\_PENDSTCLR\_Pos)                }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00350}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga11cb5b1f9ce167b81f31787a77e575df}{00350}} \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPREEMPT\_Pos            23                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00351}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaa966600396290808d596fe96e92ca2b5}{00351}} \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPREEMPT\_Msk            (1UL << SCB\_ICSR\_ISRPREEMPT\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00353}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga10749d92b9b744094b845c2eb46d4319}{00353}} \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPENDING\_Pos            22                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00354}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga056d74fd538e5d36d3be1f28d399c877}{00354}} \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPENDING\_Msk            (1UL << SCB\_ICSR\_ISRPENDING\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00356}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gada60c92bf88d6fd21a8f49efa4a127b8}{00356}} \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTPENDING\_Pos           12                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00357}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gacb6992e7c7ddc27a370f62878a21ef72}{00357}} \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTPENDING\_Msk           (0x1FFUL << SCB\_ICSR\_VECTPENDING\_Pos)          }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00359}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gae4f602c7c5c895d5fb687b71b0979fc3}{00359}} \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTACTIVE\_Pos             0                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00360}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga5533791a4ecf1b9301c883047b3e8396}{00360}} \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTACTIVE\_Msk            (0x1FFUL << SCB\_ICSR\_VECTACTIVE\_Pos)           }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00362}00362 \textcolor{comment}{/* SCB Application Interrupt and Reset Control Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00363}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaaa27c0ba600bf82c3da08c748845b640}{00363}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEY\_Pos              16                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00364}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga90c7cf0c490e7ae55f9503a7fda1dd22}{00364}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEY\_Msk              (0xFFFFUL << SCB\_AIRCR\_VECTKEY\_Pos)            }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00366}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaec404750ff5ca07f499a3c06b62051ef}{00366}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEYSTAT\_Pos          16                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00367}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gabacedaefeefc73d666bbe59ece904493}{00367}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEYSTAT\_Msk          (0xFFFFUL << SCB\_AIRCR\_VECTKEYSTAT\_Pos)        }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00369}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gad31dec98fbc0d33ace63cb1f1a927923}{00369}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_ENDIANESS\_Pos            15                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00370}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga2f571f93d3d4a6eac9a3040756d3d951}{00370}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_ENDIANESS\_Msk            (1UL << SCB\_AIRCR\_ENDIANESS\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00372}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaffb2737eca1eac0fc1c282a76a40953c}{00372}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_SYSRESETREQ\_Pos           2                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00373}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaae1181119559a5bd36e62afa373fa720}{00373}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_SYSRESETREQ\_Msk          (1UL << SCB\_AIRCR\_SYSRESETREQ\_Pos)             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00375}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaa30a12e892bb696e61626d71359a9029}{00375}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTCLRACTIVE\_Pos         1                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00376}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga212c5ab1c1c82c807d30d2307aa8d218}{00376}} \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTCLRACTIVE\_Msk        (1UL << SCB\_AIRCR\_VECTCLRACTIVE\_Pos)           }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00378}00378 \textcolor{comment}{/* SCB System Control Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00379}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga3bddcec40aeaf3d3a998446100fa0e44}{00379}} \textcolor{preprocessor}{\#define SCB\_SCR\_SEVONPEND\_Pos               4                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00380}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gafb98656644a14342e467505f69a997c9}{00380}} \textcolor{preprocessor}{\#define SCB\_SCR\_SEVONPEND\_Msk              (1UL << SCB\_SCR\_SEVONPEND\_Pos)                 }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00382}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gab304f6258ec03bd9a6e7a360515c3cfe}{00382}} \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPDEEP\_Pos               2                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00383}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga77c06a69c63f4b3f6ec1032e911e18e7}{00383}} \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPDEEP\_Msk              (1UL << SCB\_SCR\_SLEEPDEEP\_Pos)                 }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00385}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga3680a15114d7fdc1e25043b881308fe9}{00385}} \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPONEXIT\_Pos             1                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00386}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga50a243e317b9a70781b02758d45b05ee}{00386}} \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPONEXIT\_Msk            (1UL << SCB\_SCR\_SLEEPONEXIT\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00388}00388 \textcolor{comment}{/* SCB Configuration Control Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00389}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gac2d20a250960a432cc74da59d20e2f86}{00389}} \textcolor{preprocessor}{\#define SCB\_CCR\_STKALIGN\_Pos                9                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00390}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga33cf22d3d46af158a03aad25ddea1bcb}{00390}} \textcolor{preprocessor}{\#define SCB\_CCR\_STKALIGN\_Msk               (1UL << SCB\_CCR\_STKALIGN\_Pos)                  }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00392}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gac4e4928b864ea10fc24dbbc57d976229}{00392}} \textcolor{preprocessor}{\#define SCB\_CCR\_UNALIGN\_TRP\_Pos             3                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00393}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga68c96ad594af70c007923979085c99e0}{00393}} \textcolor{preprocessor}{\#define SCB\_CCR\_UNALIGN\_TRP\_Msk            (1UL << SCB\_CCR\_UNALIGN\_TRP\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00395}00395 \textcolor{comment}{/* SCB System Handler Control and State Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00396}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga2f93ec9b243f94cdd3e94b8f0bf43641}{00396}} \textcolor{preprocessor}{\#define SCB\_SHCSR\_SVCALLPENDED\_Pos         15                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00397}\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga6095a7acfbad66f52822b1392be88652}{00397}} \textcolor{preprocessor}{\#define SCB\_SHCSR\_SVCALLPENDED\_Msk         (1UL << SCB\_SHCSR\_SVCALLPENDED\_Pos)            }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00410}\mbox{\hyperlink{struct_sys_tick___type}{00410}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00411}00411 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00412}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga15fc8d35f045f329b80c544bef35ff64}{00412}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga15fc8d35f045f329b80c544bef35ff64}{CTRL}};                    }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00413}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaad9adf4efc940cddb8161b69cfbe19d3}{00413}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaad9adf4efc940cddb8161b69cfbe19d3}{LOAD}};                    }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00414}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga26fb318c3b0a0ec7f45daafd5f8799a3}{00414}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga26fb318c3b0a0ec7f45daafd5f8799a3}{VAL}};                     }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00415}\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga40e07d0a4638a676780713b6ceeec4ef}{00415}}   \mbox{\hyperlink{core__cm0_8h_af63697ed9952cc71e1225efe205f6cd3}{\_\_I}}  uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga40e07d0a4638a676780713b6ceeec4ef}{CALIB}};                   }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00416}00416 \} \mbox{\hyperlink{struct_sys_tick___type}{SysTick\_Type}};}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00417}00417 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00418}00418 \textcolor{comment}{/* SysTick Control / Status Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00419}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gadbb65d4a815759649db41df216ed4d60}{00419}} \textcolor{preprocessor}{\#define SysTick\_CTRL\_COUNTFLAG\_Pos         16                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00420}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga1bf3033ecccf200f59baefe15dbb367c}{00420}} \textcolor{preprocessor}{\#define SysTick\_CTRL\_COUNTFLAG\_Msk         (1UL << SysTick\_CTRL\_COUNTFLAG\_Pos)            }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00422}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga24fbc69a5f0b78d67fda2300257baff1}{00422}} \textcolor{preprocessor}{\#define SysTick\_CTRL\_CLKSOURCE\_Pos          2                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00423}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gaa41d06039797423a46596bd313d57373}{00423}} \textcolor{preprocessor}{\#define SysTick\_CTRL\_CLKSOURCE\_Msk         (1UL << SysTick\_CTRL\_CLKSOURCE\_Pos)            }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00425}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga88f45bbb89ce8df3cd2b2613c7b48214}{00425}} \textcolor{preprocessor}{\#define SysTick\_CTRL\_TICKINT\_Pos            1                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00426}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga95bb984266ca764024836a870238a027}{00426}} \textcolor{preprocessor}{\#define SysTick\_CTRL\_TICKINT\_Msk           (1UL << SysTick\_CTRL\_TICKINT\_Pos)              }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00428}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga0b48cc1e36d92a92e4bf632890314810}{00428}} \textcolor{preprocessor}{\#define SysTick\_CTRL\_ENABLE\_Pos             0                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00429}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga16c9fee0ed0235524bdeb38af328fd1f}{00429}} \textcolor{preprocessor}{\#define SysTick\_CTRL\_ENABLE\_Msk            (1UL << SysTick\_CTRL\_ENABLE\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00431}00431 \textcolor{comment}{/* SysTick Reload Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00432}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gaf44d10df359dc5bf5752b0894ae3bad2}{00432}} \textcolor{preprocessor}{\#define SysTick\_LOAD\_RELOAD\_Pos             0                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00433}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga265912a7962f0e1abd170336e579b1b1}{00433}} \textcolor{preprocessor}{\#define SysTick\_LOAD\_RELOAD\_Msk            (0xFFFFFFUL << SysTick\_LOAD\_RELOAD\_Pos)        }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00435}00435 \textcolor{comment}{/* SysTick Current Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00436}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga3208104c3b019b5de35ae8c21d5c34dd}{00436}} \textcolor{preprocessor}{\#define SysTick\_VAL\_CURRENT\_Pos             0                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00437}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gafc77b56d568930b49a2474debc75ab45}{00437}} \textcolor{preprocessor}{\#define SysTick\_VAL\_CURRENT\_Msk            (0xFFFFFFUL << SysTick\_VAL\_CURRENT\_Pos)        }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00439}00439 \textcolor{comment}{/* SysTick Calibration Register Definitions */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00440}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga534dbe414e7a46a6ce4c1eca1fbff409}{00440}} \textcolor{preprocessor}{\#define SysTick\_CALIB\_NOREF\_Pos            31                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00441}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga3af0d891fdd99bcc8d8912d37830edb6}{00441}} \textcolor{preprocessor}{\#define SysTick\_CALIB\_NOREF\_Msk            (1UL << SysTick\_CALIB\_NOREF\_Pos)               }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00443}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gadd0c9cd6641b9f6a0c618e7982954860}{00443}} \textcolor{preprocessor}{\#define SysTick\_CALIB\_SKEW\_Pos             30                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00444}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga8a6a85a87334776f33d77fd147587431}{00444}} \textcolor{preprocessor}{\#define SysTick\_CALIB\_SKEW\_Msk             (1UL << SysTick\_CALIB\_SKEW\_Pos)                }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00446}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gacae558f6e75a0bed5d826f606d8e695e}{00446}} \textcolor{preprocessor}{\#define SysTick\_CALIB\_TENMS\_Pos             0                                             }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00447}\mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gaf1e68865c5aece2ad58971225bd3e95e}{00447}} \textcolor{preprocessor}{\#define SysTick\_CALIB\_TENMS\_Msk            (0xFFFFFFUL << SysTick\_VAL\_CURRENT\_Pos)        }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00468}00468 \textcolor{comment}{/* Memory mapping of Cortex-\/M0 Hardware */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00469}\mbox{\hyperlink{group___c_m_s_i_s__core__base_ga3c14ed93192c8d9143322bbf77ebf770}{00469}} \textcolor{preprocessor}{\#define SCS\_BASE            (0xE000E000UL)                            }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00470}\mbox{\hyperlink{group___c_m_s_i_s__core__base_ga58effaac0b93006b756d33209e814646}{00470}} \textcolor{preprocessor}{\#define SysTick\_BASE        (SCS\_BASE +  0x0010UL)                    }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00471}\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaa0288691785a5f868238e0468b39523d}{00471}} \textcolor{preprocessor}{\#define NVIC\_BASE           (SCS\_BASE +  0x0100UL)                    }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00472}\mbox{\hyperlink{group___c_m_s_i_s__core__base_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}{00472}} \textcolor{preprocessor}{\#define SCB\_BASE            (SCS\_BASE +  0x0D00UL)                    }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00474}\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{00474}} \textcolor{preprocessor}{\#define SCB                 ((SCB\_Type       *)     SCB\_BASE      )   }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00475}\mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{00475}} \textcolor{preprocessor}{\#define SysTick             ((SysTick\_Type   *)     SysTick\_BASE  )   }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00476}\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{00476}} \textcolor{preprocessor}{\#define NVIC                ((NVIC\_Type      *)     NVIC\_BASE     )   }}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00483}00483 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00484}00484 \textcolor{comment}{ *                Hardware Abstraction Layer}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00485}00485 \textcolor{comment}{  Core Function Interface contains:}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00486}00486 \textcolor{comment}{  -\/ Core NVIC Functions}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00487}00487 \textcolor{comment}{  -\/ Core SysTick Functions}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00488}00488 \textcolor{comment}{  -\/ Core Register Access Functions}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00489}00489 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00495}00495 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#   NVIC functions  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00502}00502 \textcolor{comment}{/* Interrupt Priorities are WORD accessible only under ARMv6M                   */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00503}00503 \textcolor{comment}{/* The following MACROS handle generation of the register offset and byte masks */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00504}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga53c75b28823441c6153269f0ecbed878}{00504}} \textcolor{preprocessor}{\#define \_BIT\_SHIFT(IRQn)         (  (((uint32\_t)(IRQn)       )    \&  0x03) * 8 )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00505}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gaee4f7eb5d7e770ad51489dbceabb1755}{00505}} \textcolor{preprocessor}{\#define \_SHP\_IDX(IRQn)           ( ((((uint32\_t)(IRQn) \& 0x0F)-\/8) >>    2)     )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00506}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga370ec4b1751a6a889d849747df3763a9}{00506}} \textcolor{preprocessor}{\#define \_IP\_IDX(IRQn)            (   ((uint32\_t)(IRQn)            >>    2)     )}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00507}00507 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00508}00508 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00515}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga3349f2e3580d7ce22d6530b7294e5921}{00515}} \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga3349f2e3580d7ce22d6530b7294e5921}{NVIC\_EnableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00516}00516 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00517}00517   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISER[0] = (1 << ((uint32\_t)(IRQn) \& 0x1F));}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00518}00518 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00519}00519 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00520}00520 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00527}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga260fba04ac8346855c57f091d4ee1e71}{00527}} \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga260fba04ac8346855c57f091d4ee1e71}{NVIC\_DisableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00528}00528 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00529}00529   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ICER[0] = (1 << ((uint32\_t)(IRQn) \& 0x1F));}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00530}00530 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00531}00531 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00532}00532 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00543}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gafec8042db64c0f8ed432b6c8386a05d8}{00543}} \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gafec8042db64c0f8ed432b6c8386a05d8}{NVIC\_GetPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00544}00544 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00545}00545   \textcolor{keywordflow}{return}((uint32\_t) ((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISPR[0] \& (1 << ((uint32\_t)(IRQn) \& 0x1F)))?1:0));}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00546}00546 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00547}00547 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00548}00548 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00555}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga3ecf446519da33e1690deffbf5be505f}{00555}} \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga3ecf446519da33e1690deffbf5be505f}{NVIC\_SetPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00556}00556 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00557}00557   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISPR[0] = (1 << ((uint32\_t)(IRQn) \& 0x1F));}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00558}00558 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00559}00559 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00560}00560 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00567}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga332e10ef9605dc6eb10b9e14511930f8}{00567}} \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga332e10ef9605dc6eb10b9e14511930f8}{NVIC\_ClearPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00568}00568 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00569}00569   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ICPR[0] = (1 << ((uint32\_t)(IRQn) \& 0x1F)); \textcolor{comment}{/* Clear pending interrupt */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00570}00570 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00571}00571 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00572}00572 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00582}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga2305cbd44aaad792e3a4e538bdaf14f9}{00582}} \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga2305cbd44aaad792e3a4e538bdaf14f9}{NVIC\_SetPriority}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn, uint32\_t priority)}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00583}00583 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00584}00584   \textcolor{keywordflow}{if}(IRQn < 0) \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00585}00585     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHP[\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gaee4f7eb5d7e770ad51489dbceabb1755}{\_SHP\_IDX}}(IRQn)] = (\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHP[\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gaee4f7eb5d7e770ad51489dbceabb1755}{\_SHP\_IDX}}(IRQn)] \& \string~(0xFF << \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga53c75b28823441c6153269f0ecbed878}{\_BIT\_SHIFT}}(IRQn))) |}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00586}00586         (((priority << (8 -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) \& 0xFF) << \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga53c75b28823441c6153269f0ecbed878}{\_BIT\_SHIFT}}(IRQn)); \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00587}00587   \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00588}00588     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IP[\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga370ec4b1751a6a889d849747df3763a9}{\_IP\_IDX}}(IRQn)] = (\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IP[\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga370ec4b1751a6a889d849747df3763a9}{\_IP\_IDX}}(IRQn)] \& \string~(0xFF << \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga53c75b28823441c6153269f0ecbed878}{\_BIT\_SHIFT}}(IRQn))) |}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00589}00589         (((priority << (8 -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) \& 0xFF) << \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga53c75b28823441c6153269f0ecbed878}{\_BIT\_SHIFT}}(IRQn)); \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00590}00590 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00591}00591 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00592}00592 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00604}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga1cbaf8e6abd4aa4885828e7f24fcfeb4}{00604}} \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga1cbaf8e6abd4aa4885828e7f24fcfeb4}{NVIC\_GetPriority}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00605}00605 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00606}00606 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00607}00607   \textcolor{keywordflow}{if}(IRQn < 0) \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00608}00608     \textcolor{keywordflow}{return}((uint32\_t)(((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHP[\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gaee4f7eb5d7e770ad51489dbceabb1755}{\_SHP\_IDX}}(IRQn)] >> \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga53c75b28823441c6153269f0ecbed878}{\_BIT\_SHIFT}}(IRQn) ) \& 0xFF) >> (8 -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})));  \} \textcolor{comment}{/* get priority for Cortex-\/M0 system interrupts */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00609}00609   \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00610}00610     \textcolor{keywordflow}{return}((uint32\_t)(((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IP[ \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga370ec4b1751a6a889d849747df3763a9}{\_IP\_IDX}}(IRQn)] >> \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga53c75b28823441c6153269f0ecbed878}{\_BIT\_SHIFT}}(IRQn) ) \& 0xFF) >> (8 -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})));  \} \textcolor{comment}{/* get priority for device specific interrupts  */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00611}00611 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00612}00612 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00613}00613 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00618}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga1143dec48d60a3d6f238c4798a87759c}{00618}} \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga1143dec48d60a3d6f238c4798a87759c}{NVIC\_SystemReset}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00619}00619 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00620}00620   \_\_DSB();                                                     \textcolor{comment}{/* Ensure all outstanding memory accesses included}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00621}00621 \textcolor{comment}{                                                                  buffered write are completed before reset */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00622}00622   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>AIRCR  = ((0x5FA << \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaaa27c0ba600bf82c3da08c748845b640}{SCB\_AIRCR\_VECTKEY\_Pos}})      |}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00623}00623                  \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaae1181119559a5bd36e62afa373fa720}{SCB\_AIRCR\_SYSRESETREQ\_Msk}});}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00624}00624   \_\_DSB();                                                     \textcolor{comment}{/* Ensure completion of memory access */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00625}00625   \textcolor{keywordflow}{while}(1);                                                    \textcolor{comment}{/* wait until reset */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00626}00626 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00627}00627 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00632}00632 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#    SysTick function  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00639}00639 \textcolor{preprocessor}{\#if (\_\_Vendor\_SysTickConfig == 0)}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00640}00640 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00656}\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gae4e8f0238527c69f522029b93c8e5b78}{00656}} \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gae4e8f0238527c69f522029b93c8e5b78}{SysTick\_Config}}(uint32\_t ticks)}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00657}00657 \{}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00658}00658   \textcolor{keywordflow}{if} ((ticks -\/ 1) > \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga265912a7962f0e1abd170336e579b1b1}{SysTick\_LOAD\_RELOAD\_Msk}})  \textcolor{keywordflow}{return} (1);      \textcolor{comment}{/* Reload value impossible */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00659}00659 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00660}00660   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>LOAD  = ticks -\/ 1;                                  \textcolor{comment}{/* set reload register */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00661}00661   \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga2305cbd44aaad792e3a4e538bdaf14f9}{NVIC\_SetPriority}} (\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6dbff8f8543325f3474cbae2446776e7}{SysTick\_IRQn}}, (1<<\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}}) -\/ 1);  \textcolor{comment}{/* set Priority for Systick Interrupt */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00662}00662   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>VAL   = 0;                                          \textcolor{comment}{/* Load the SysTick Counter Value */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00663}00663   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL  = \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gaa41d06039797423a46596bd313d57373}{SysTick\_CTRL\_CLKSOURCE\_Msk}} |}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00664}00664                    \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga95bb984266ca764024836a870238a027}{SysTick\_CTRL\_TICKINT\_Msk}}   |}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00665}00665                    \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga16c9fee0ed0235524bdeb38af328fd1f}{SysTick\_CTRL\_ENABLE\_Msk}};                    \textcolor{comment}{/* Enable SysTick IRQ and SysTick Timer */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00666}00666   \textcolor{keywordflow}{return} (0);                                                  \textcolor{comment}{/* Function successful */}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00667}00667 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00668}00668 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00669}00669 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00670}00670 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00676}00676 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CM0\_H\_DEPENDANT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00677}00677 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00678}00678 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CMSIS\_GENERIC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00679}00679 }
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00680}00680 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00681}00681 \}}
+\DoxyCodeLine{\Hypertarget{core__cm0_8h_source_l00682}00682 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

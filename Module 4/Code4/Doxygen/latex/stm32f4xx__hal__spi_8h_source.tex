@@ -1,0 +1,244 @@
+\hypertarget{stm32f4xx__hal__spi_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+spi.\+h}
+\label{stm32f4xx__hal__spi_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_spi.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_spi.h}}
+\mbox{\hyperlink{stm32f4xx__hal__spi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_SPI\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_SPI\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}  }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{57 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_a5247eb0463437c9980a9d4a5300b50a5}{Mode}};               }
+\DoxyCodeLine{67   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_ae5c132f597c806d7a1fe316023b36867}{Direction}};          }
+\DoxyCodeLine{70   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_a24b7835dd877e1c4e55236303fa3387f}{DataSize}};           }
+\DoxyCodeLine{73   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_a96922c7ff9e589ebd9611fc4ab730454}{CLKPolarity}};        }
+\DoxyCodeLine{76   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_ab21a458209f2588f49a2353c56f62625}{CLKPhase}};           }
+\DoxyCodeLine{79   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_aed541d17808213ac6f90ac7deb2bec5f}{NSS}};                }
+\DoxyCodeLine{83   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_a1d553f90738cb633a9298d2b4d306fde}{BaudRatePrescaler}};  }
+\DoxyCodeLine{89   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_a8c541d8863cb62a3212b9381b5cba447}{FirstBit}};           }
+\DoxyCodeLine{92   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_a60db7e87bb66775df6213e4006dfd876}{TIMode}};             }
+\DoxyCodeLine{95   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_a3472de9bd9247c1d97312aff7e58e385}{CRCCalculation}};     }
+\DoxyCodeLine{98   uint32\_t \mbox{\hyperlink{struct_s_p_i___init_type_def_abdaf3ccbfa4ef68cc81fd32f29baa678}{CRCPolynomial}};      }
+\DoxyCodeLine{101 \}\mbox{\hyperlink{struct_s_p_i___init_type_def}{SPI\_InitTypeDef}};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{106 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{107 \{}
+\DoxyCodeLine{108   \mbox{\hyperlink{group___s_p_i_gga8891cb64e76198a860172d94c638c9b4adbc218df2c9841b561282b40b3ded69d}{HAL\_SPI\_STATE\_RESET}}      = 0x00,  }
+\DoxyCodeLine{109   \mbox{\hyperlink{group___s_p_i_gga8891cb64e76198a860172d94c638c9b4abb3992c67a15c14bd1808ef6b63fa926}{HAL\_SPI\_STATE\_READY}}      = 0x01,  }
+\DoxyCodeLine{110   \mbox{\hyperlink{group___s_p_i_gga8891cb64e76198a860172d94c638c9b4a0635e168bc0430253fe8e74cfe9768fd}{HAL\_SPI\_STATE\_BUSY}}       = 0x02,  }
+\DoxyCodeLine{111   \mbox{\hyperlink{group___s_p_i_gga8891cb64e76198a860172d94c638c9b4a5d82b644c7ca656ab5fe8a8e3cbc29ab}{HAL\_SPI\_STATE\_BUSY\_TX}}    = 0x12,  }
+\DoxyCodeLine{112   \mbox{\hyperlink{group___s_p_i_gga8891cb64e76198a860172d94c638c9b4afd7e00128aca1feaa099c2595ffb9277}{HAL\_SPI\_STATE\_BUSY\_RX}}    = 0x22,  }
+\DoxyCodeLine{113   \mbox{\hyperlink{group___s_p_i_gga8891cb64e76198a860172d94c638c9b4a9dae2883ae3e43ca28afc9453a14c938}{HAL\_SPI\_STATE\_BUSY\_TX\_RX}} = 0x32,  }
+\DoxyCodeLine{114   \mbox{\hyperlink{group___s_p_i_gga8891cb64e76198a860172d94c638c9b4a3cba266d2346abe3b62fa0acccab4711}{HAL\_SPI\_STATE\_ERROR}}      = 0x03   }
+\DoxyCodeLine{116 \}\mbox{\hyperlink{group___s_p_i_ga8891cb64e76198a860172d94c638c9b4}{HAL\_SPI\_StateTypeDef}};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{121 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{122 \{}
+\DoxyCodeLine{123   \mbox{\hyperlink{group___s_p_i_ggafabd084f961b80a2fd36388333718ed2a1eb8d08ce7611b8f0f64d71b0671351d}{HAL\_SPI\_ERROR\_NONE}}      = 0x00,    }
+\DoxyCodeLine{124   \mbox{\hyperlink{group___s_p_i_ggafabd084f961b80a2fd36388333718ed2a8c90d53dc33431fb38e3ac4b0e671744}{HAL\_SPI\_ERROR\_MODF}}      = 0x01,    }
+\DoxyCodeLine{125   \mbox{\hyperlink{group___s_p_i_ggafabd084f961b80a2fd36388333718ed2a7e14740322660d6e1872080e8e9c7635}{HAL\_SPI\_ERROR\_CRC}}       = 0x02,    }
+\DoxyCodeLine{126   \mbox{\hyperlink{group___s_p_i_ggafabd084f961b80a2fd36388333718ed2ad3721d0c777f018b6ea6fc4f3a2a7aae}{HAL\_SPI\_ERROR\_OVR}}       = 0x04,    }
+\DoxyCodeLine{127   \mbox{\hyperlink{group___s_p_i_ggafabd084f961b80a2fd36388333718ed2a227db0c19bbc65e4f793896ae415a896}{HAL\_SPI\_ERROR\_FRE}}       = 0x08,    }
+\DoxyCodeLine{128   \mbox{\hyperlink{group___s_p_i_ggafabd084f961b80a2fd36388333718ed2a24afad5a9fa56acad3eb992da873e009}{HAL\_SPI\_ERROR\_DMA}}       = 0x10,    }
+\DoxyCodeLine{129   \mbox{\hyperlink{group___s_p_i_ggafabd084f961b80a2fd36388333718ed2a77b8d10d46a0b4efe3404f2899a37690}{HAL\_SPI\_ERROR\_FLAG}}      = 0x20     }
+\DoxyCodeLine{131 \}\mbox{\hyperlink{group___s_p_i_gafabd084f961b80a2fd36388333718ed2}{HAL\_SPI\_ErrorTypeDef}};}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{136 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{\_\_SPI\_HandleTypeDef}}}
+\DoxyCodeLine{137 \{}
+\DoxyCodeLine{138   \mbox{\hyperlink{struct_s_p_i___type_def}{SPI\_TypeDef}}                *Instance;    \textcolor{comment}{/* SPI registers base address */}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140   \mbox{\hyperlink{struct_s_p_i___init_type_def}{SPI\_InitTypeDef}}            Init;         \textcolor{comment}{/* SPI communication parameters */}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142   uint8\_t                    *pTxBuffPtr;  \textcolor{comment}{/* Pointer to SPI Tx transfer Buffer */}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144   uint16\_t                   TxXferSize;   \textcolor{comment}{/* SPI Tx transfer size */}}
+\DoxyCodeLine{145   }
+\DoxyCodeLine{146   uint16\_t                   TxXferCount;  \textcolor{comment}{/* SPI Tx Transfer Counter */}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148   uint8\_t                    *pRxBuffPtr;  \textcolor{comment}{/* Pointer to SPI Rx transfer Buffer */}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150   uint16\_t                   RxXferSize;   \textcolor{comment}{/* SPI Rx transfer size */}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152   uint16\_t                   RxXferCount;  \textcolor{comment}{/* SPI Rx Transfer Counter */}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}          *hdmatx;      \textcolor{comment}{/* SPI Tx DMA handle parameters */}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}          *hdmarx;      \textcolor{comment}{/* SPI Rx DMA handle parameters */}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158   void                       (*RxISR)(\textcolor{keyword}{struct }\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{\_\_SPI\_HandleTypeDef}} * hspi); \textcolor{comment}{/* function pointer on Rx ISR */}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160   void                       (*TxISR)(\textcolor{keyword}{struct }\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{\_\_SPI\_HandleTypeDef}} * hspi); \textcolor{comment}{/* function pointer on Tx ISR */}}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}            Lock;         \textcolor{comment}{/* SPI locking object */}}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___s_p_i_ga8891cb64e76198a860172d94c638c9b4}{HAL\_SPI\_StateTypeDef}}  State;        \textcolor{comment}{/* SPI communication state */}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___s_p_i_gafabd084f961b80a2fd36388333718ed2}{HAL\_SPI\_ErrorTypeDef}}  ErrorCode;         \textcolor{comment}{/* SPI Error code */}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \}\mbox{\hyperlink{group___s_p_i_gab633e49dd034de2f3a1fe79853d78d18}{SPI\_HandleTypeDef}};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define SPI\_MODE\_SLAVE                  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define SPI\_MODE\_MASTER                 (SPI\_CR1\_MSTR | SPI\_CR1\_SSI)}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define IS\_SPI\_MODE(MODE) (((MODE) == SPI\_MODE\_SLAVE) || \(\backslash\)}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{                           ((MODE) == SPI\_MODE\_MASTER))}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define SPI\_DIRECTION\_2LINES             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define SPI\_DIRECTION\_2LINES\_RXONLY      SPI\_CR1\_RXONLY}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define SPI\_DIRECTION\_1LINE              SPI\_CR1\_BIDIMODE}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define IS\_SPI\_DIRECTION\_MODE(MODE) (((MODE) == SPI\_DIRECTION\_2LINES)        || \(\backslash\)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{                                     ((MODE) == SPI\_DIRECTION\_2LINES\_RXONLY) || \(\backslash\)}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{                                     ((MODE) == SPI\_DIRECTION\_1LINE))}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define IS\_SPI\_DIRECTION\_2LINES\_OR\_1LINE(MODE) (((MODE) == SPI\_DIRECTION\_2LINES)  || \(\backslash\)}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{                                                ((MODE) == SPI\_DIRECTION\_1LINE))}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define IS\_SPI\_DIRECTION\_2LINES(MODE) ((MODE) == SPI\_DIRECTION\_2LINES)}}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#define SPI\_DATASIZE\_8BIT               ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#define SPI\_DATASIZE\_16BIT              SPI\_CR1\_DFF}}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#define IS\_SPI\_DATASIZE(DATASIZE) (((DATASIZE) == SPI\_DATASIZE\_16BIT) || \(\backslash\)}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{                                   ((DATASIZE) == SPI\_DATASIZE\_8BIT))}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define SPI\_POLARITY\_LOW                ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{224 \textcolor{preprocessor}{\#define SPI\_POLARITY\_HIGH               SPI\_CR1\_CPOL}}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define IS\_SPI\_CPOL(CPOL) (((CPOL) == SPI\_POLARITY\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{                           ((CPOL) == SPI\_POLARITY\_HIGH))}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define SPI\_PHASE\_1EDGE                 ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define SPI\_PHASE\_2EDGE                 SPI\_CR1\_CPHA}}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define IS\_SPI\_CPHA(CPHA) (((CPHA) == SPI\_PHASE\_1EDGE) || \(\backslash\)}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{                           ((CPHA) == SPI\_PHASE\_2EDGE))}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define SPI\_NSS\_SOFT                    SPI\_CR1\_SSM}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define SPI\_NSS\_HARD\_INPUT              ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define SPI\_NSS\_HARD\_OUTPUT             ((uint32\_t)0x00040000)}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define IS\_SPI\_NSS(NSS) (((NSS) == SPI\_NSS\_SOFT)       || \(\backslash\)}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{                         ((NSS) == SPI\_NSS\_HARD\_INPUT) || \(\backslash\)}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{                         ((NSS) == SPI\_NSS\_HARD\_OUTPUT))}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define SPI\_BAUDRATEPRESCALER\_2         ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define SPI\_BAUDRATEPRESCALER\_4         ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define SPI\_BAUDRATEPRESCALER\_8         ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define SPI\_BAUDRATEPRESCALER\_16        ((uint32\_t)0x00000018)}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define SPI\_BAUDRATEPRESCALER\_32        ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#define SPI\_BAUDRATEPRESCALER\_64        ((uint32\_t)0x00000028)}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#define SPI\_BAUDRATEPRESCALER\_128       ((uint32\_t)0x00000030)}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define SPI\_BAUDRATEPRESCALER\_256       ((uint32\_t)0x00000038)}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#define IS\_SPI\_BAUDRATE\_PRESCALER(PRESCALER) (((PRESCALER) == SPI\_BAUDRATEPRESCALER\_2)   || \(\backslash\)}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_4)   || \(\backslash\)}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_8)   || \(\backslash\)}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_16)  || \(\backslash\)}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_32)  || \(\backslash\)}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_64)  || \(\backslash\)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_128) || \(\backslash\)}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{                                              ((PRESCALER) == SPI\_BAUDRATEPRESCALER\_256))}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#define SPI\_FIRSTBIT\_MSB                ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#define SPI\_FIRSTBIT\_LSB                SPI\_CR1\_LSBFIRST}}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#define IS\_SPI\_FIRST\_BIT(BIT) (((BIT) == SPI\_FIRSTBIT\_MSB) || \(\backslash\)}}
+\DoxyCodeLine{289 \textcolor{preprocessor}{                               ((BIT) == SPI\_FIRSTBIT\_LSB))}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define SPI\_TIMODE\_DISABLED             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#define SPI\_TIMODE\_ENABLED              SPI\_CR2\_FRF}}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#define IS\_SPI\_TIMODE(MODE) (((MODE) == SPI\_TIMODE\_DISABLED) || \(\backslash\)}}
+\DoxyCodeLine{301 \textcolor{preprocessor}{                             ((MODE) == SPI\_TIMODE\_ENABLED))}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define SPI\_CRCCALCULATION\_DISABLED     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#define SPI\_CRCCALCULATION\_ENABLED      SPI\_CR1\_CRCEN}}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#define IS\_SPI\_CRC\_CALCULATION(CALCULATION) (((CALCULATION) == SPI\_CRCCALCULATION\_DISABLED) || \(\backslash\)}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{                                             ((CALCULATION) == SPI\_CRCCALCULATION\_ENABLED))}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define SPI\_IT\_TXE                      SPI\_CR2\_TXEIE}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define SPI\_IT\_RXNE                     SPI\_CR2\_RXNEIE}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#define SPI\_IT\_ERR                      SPI\_CR2\_ERRIE}}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#define SPI\_FLAG\_RXNE                   SPI\_SR\_RXNE}}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define SPI\_FLAG\_TXE                    SPI\_SR\_TXE}}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#define SPI\_FLAG\_CRCERR                 SPI\_SR\_CRCERR}}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define SPI\_FLAG\_MODF                   SPI\_SR\_MODF}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define SPI\_FLAG\_OVR                    SPI\_SR\_OVR}}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define SPI\_FLAG\_BSY                    SPI\_SR\_BSY}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#define SPI\_FLAG\_FRE                    SPI\_SR\_FRE}}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{347 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{348 }
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_SPI\_STATE\_RESET)}}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)   ((\_\_HANDLE\_\_)-\/>Instance-\/>CR2 |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)  ((\_\_HANDLE\_\_)-\/>Instance-\/>CR2 \&= (\string~(\_\_INTERRUPT\_\_)))}}
+\DoxyCodeLine{368 }
+\DoxyCodeLine{379 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((((\_\_HANDLE\_\_)-\/>Instance-\/>CR2 \& (\_\_INTERRUPT\_\_)) == (\_\_INTERRUPT\_\_)) ? SET : RESET)}}
+\DoxyCodeLine{380 }
+\DoxyCodeLine{395 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((((\_\_HANDLE\_\_)-\/>Instance-\/>SR) \& (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{396 }
+\DoxyCodeLine{402 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_CLEAR\_CRCERRFLAG(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>SR \&= \string~(SPI\_FLAG\_CRCERR))}}
+\DoxyCodeLine{403 }
+\DoxyCodeLine{409 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_CLEAR\_MODFFLAG(\_\_HANDLE\_\_) do\{(\_\_HANDLE\_\_)-\/>Instance-\/>SR;\(\backslash\)}}
+\DoxyCodeLine{410 \textcolor{preprocessor}{                                                (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= (\string~SPI\_CR1\_SPE);\}while(0) }}
+\DoxyCodeLine{411 }
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_CLEAR\_OVRFLAG(\_\_HANDLE\_\_) do\{(\_\_HANDLE\_\_)-\/>Instance-\/>DR;\(\backslash\)}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{                                               (\_\_HANDLE\_\_)-\/>Instance-\/>SR;\}while(0) }}
+\DoxyCodeLine{419 }
+\DoxyCodeLine{425 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_CLEAR\_FREFLAG(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>SR)}}
+\DoxyCodeLine{426 }
+\DoxyCodeLine{427 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_ENABLE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |=  SPI\_CR1\_SPE)}}
+\DoxyCodeLine{428 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_DISABLE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&=  \string~SPI\_CR1\_SPE)}}
+\DoxyCodeLine{429 }
+\DoxyCodeLine{430 \textcolor{preprocessor}{\#define IS\_SPI\_CRC\_POLYNOMIAL(POLYNOMIAL) (((POLYNOMIAL) >= 0x1) \&\& ((POLYNOMIAL) <= 0xFFFF))}}
+\DoxyCodeLine{431 }
+\DoxyCodeLine{432 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_1LINE\_TX(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= SPI\_CR1\_BIDIOE)}}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{434 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_1LINE\_RX(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= \string~SPI\_CR1\_BIDIOE) }}
+\DoxyCodeLine{435 }
+\DoxyCodeLine{436 \textcolor{preprocessor}{\#define \_\_HAL\_SPI\_RESET\_CRC(\_\_HANDLE\_\_) do\{(\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= (\string~SPI\_CR1\_CRCEN);\(\backslash\)}}
+\DoxyCodeLine{437 \textcolor{preprocessor}{                                           (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= SPI\_CR1\_CRCEN;\}while(0)}}
+\DoxyCodeLine{438 }
+\DoxyCodeLine{439 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{440 }
+\DoxyCodeLine{441 \textcolor{comment}{/* Initialization/de-\/initialization functions  **********************************/}}
+\DoxyCodeLine{442 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_Init(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{443 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_DeInit (\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{444 \textcolor{keywordtype}{void} HAL\_SPI\_MspInit(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{445 \textcolor{keywordtype}{void} HAL\_SPI\_MspDeInit(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{446 }
+\DoxyCodeLine{447 \textcolor{comment}{/* I/O operation functions  *****************************************************/}}
+\DoxyCodeLine{448 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_Transmit(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pData, uint16\_t Size, uint32\_t Timeout);}
+\DoxyCodeLine{449 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_Receive(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pData, uint16\_t Size, uint32\_t Timeout);}
+\DoxyCodeLine{450 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_TransmitReceive(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pTxData, uint8\_t *pRxData, uint16\_t Size, uint32\_t Timeout);}
+\DoxyCodeLine{451 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_Transmit\_IT(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{452 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_Receive\_IT(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{453 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_TransmitReceive\_IT(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pTxData, uint8\_t *pRxData, uint16\_t Size);}
+\DoxyCodeLine{454 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_Transmit\_DMA(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{455 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_Receive\_DMA(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{456 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SPI\_TransmitReceive\_DMA(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi, uint8\_t *pTxData, uint8\_t *pRxData, uint16\_t Size);}
+\DoxyCodeLine{457 \textcolor{keywordtype}{void} HAL\_SPI\_IRQHandler(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{458 \textcolor{keywordtype}{void} HAL\_SPI\_TxCpltCallback(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{459 \textcolor{keywordtype}{void} HAL\_SPI\_RxCpltCallback(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{460 \textcolor{keywordtype}{void} HAL\_SPI\_TxRxCpltCallback(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{461 \textcolor{keywordtype}{void} HAL\_SPI\_ErrorCallback(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{462 }
+\DoxyCodeLine{463 \textcolor{comment}{/* Peripheral State and Control functions  **************************************/}}
+\DoxyCodeLine{464 \mbox{\hyperlink{group___s_p_i_ga8891cb64e76198a860172d94c638c9b4}{HAL\_SPI\_StateTypeDef}} HAL\_SPI\_GetState(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{465 \mbox{\hyperlink{group___s_p_i_gafabd084f961b80a2fd36388333718ed2}{HAL\_SPI\_ErrorTypeDef}} HAL\_SPI\_GetError(\mbox{\hyperlink{struct_____s_p_i___handle_type_def}{SPI\_HandleTypeDef}} *hspi);}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{475 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{476 \}}
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{478 }
+\DoxyCodeLine{479 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_SPI\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{480 }
+\DoxyCodeLine{481 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

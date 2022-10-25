@@ -1,0 +1,1409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___d_m_a" xml:lang="en-US">
+<title>DMA</title>
+<indexterm><primary>DMA</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___d_m_a___exported___constants">DMA_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_d_m_a___init_type_def">DMA_InitTypeDef</link></para>
+
+<para>DMA Configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_____d_m_a___handle_type_def">__DMA_HandleTypeDef</link></para>
+
+<para>DMA handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___d_m_a_1gaadcee34f0999c8eafd37de2f69daa0ac">__HAL_DMA_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2">HAL_DMA_STATE_RESET</link>)</para>
+
+<para>Reset DMA handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga8f0ff408d25904040b9d23ee7f6af080">__HAL_DMA_GET_FS</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;FCR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga56094479dc9b173b00ccfb199d8a2853">DMA_SxFCR_FS</link>)))</para>
+
+<para>Return the current DMA Stream FIFO filled level. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga93900b3ef3f87ef924eb887279a434b4">__HAL_DMA_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  <link linkend="_group___peripheral___registers___bits___definition_1gaabf69fe92e9a44167535365b0fe4ea9e">DMA_SxCR_EN</link>)</para>
+
+<para>Enable the specified DMA Stream. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1gafeef4c5e8c3f015cdecc0f37bbe063dc">__HAL_DMA_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1gaabf69fe92e9a44167535365b0fe4ea9e">DMA_SxCR_EN</link>)</para>
+
+<para>Disable the specified DMA Stream. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1gae3feef5ea50ff13a6a5b98cb353c87b0">__HAL_DMA_GET_TC_FLAG_INDEX</link>(__HANDLE__)</para>
+
+<para>Return the current DMA Stream transfer complete flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga0095f5f3166a82bedc67744ac94acfba">__HAL_DMA_GET_HT_FLAG_INDEX</link>(__HANDLE__)</para>
+
+<para>Return the current DMA Stream half transfer complete flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga5e765bb3b1c5fc9f1b1abbbb764250bc">__HAL_DMA_GET_TE_FLAG_INDEX</link>(__HANDLE__)</para>
+
+<para>Return the current DMA Stream transfer error flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga5878c3a1dbcf01e6840fffcf1f244088">__HAL_DMA_GET_FE_FLAG_INDEX</link>(__HANDLE__)</para>
+
+<para>Return the current DMA Stream FIFO error flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga23d1f282af3b9aa7aa396dcad94865d8">__HAL_DMA_GET_DME_FLAG_INDEX</link>(__HANDLE__)</para>
+
+<para>Return the current DMA Stream direct mode error flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga798d4b3b3fbd32b95540967bb35b35be">__HAL_DMA_GET_FLAG</link>(__HANDLE__,  __FLAG__)</para>
+
+<para>Get the DMA Stream pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1gabc041fb1c85ea7a3af94e42470ef7f2a">__HAL_DMA_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)</para>
+
+<para>Clear the DMA Stream pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga2124233229c04ca90b790cd8cddfa98b">__HAL_DMA_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+
+<para>Enable the specified DMA Stream interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga2867eab09398df2daac55c3f327654da">__HAL_DMA_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+
+<para>Disable the specified DMA Stream interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga206f24e6bee4600515b9b6b1ec79365b">__HAL_DMA_GET_IT_SOURCE</link>(__HANDLE__,  __INTERRUPT__)</para>
+
+<para>Check whether the specified DMA Stream interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga448a8f809df86ccffae200ffd33d0a82">__HAL_DMA_SET_COUNTER</link>(__HANDLE__,  __COUNTER__)   ((__HANDLE__)-&gt;Instance-&gt;NDTR = (uint16_t)(__COUNTER__))</para>
+
+<para>Writes the number of data units to be transferred on the DMA Stream. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a_1ga082d691311bac96641dc35a17cfe8e63">__HAL_DMA_GET_COUNTER</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;NDTR)</para>
+
+<para>Returns the number of remaining data units in the current DMAy Streamx transfer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_____d_m_a___handle_type_def">__DMA_HandleTypeDef</link> <link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link></para>
+
+<para>DMA handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___d_m_a_1ga9c012af359987a240826f29073bbe463">HAL_DMA_StateTypeDef</link> { 
+<link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2">HAL_DMA_STATE_RESET</link> = 0x00
+, <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a">HAL_DMA_STATE_READY</link> = 0x01
+, <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463af865496c2c56154d56e1dc8d3d42a1e1">HAL_DMA_STATE_READY_MEM0</link> = 0x11
+, <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463ac7e8231be0af20c6f36903b066411efe">HAL_DMA_STATE_READY_MEM1</link> = 0x21
+, 
+<link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a181e4eeeb144c9a345a26483ec20bade">HAL_DMA_STATE_READY_HALF_MEM0</link> = 0x31
+, <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a8f00c28e70c53aa0a2d7519983b3d265">HAL_DMA_STATE_READY_HALF_MEM1</link> = 0x41
+, <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463af7a0a2ca8de4e5be9e85b6a9073476ef">HAL_DMA_STATE_BUSY</link> = 0x02
+, <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a632399de6eff33c2757735789ea3ffc7">HAL_DMA_STATE_BUSY_MEM0</link> = 0x12
+, 
+<link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a64434f8acb36fcae6b79d6f98bb7b32c">HAL_DMA_STATE_BUSY_MEM1</link> = 0x22
+, <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463acf3a5443bf4dc71018512a255e2076eb">HAL_DMA_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463ac2ce65c7cb2410c143b14e309ba83742">HAL_DMA_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL DMA State structures definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___d_m_a_1gaee3245eea8fa938edeb35a6c9596fd86">HAL_DMA_LevelCompleteTypeDef</link> { <link linkend="_group___d_m_a_1ggaee3245eea8fa938edeb35a6c9596fd86a5314147c8ba21548763bf89446b78468">HAL_DMA_FULL_TRANSFER</link> = 0x00
+, <link linkend="_group___d_m_a_1ggaee3245eea8fa938edeb35a6c9596fd86ad0ba8bc74a2ae6dcdc3e316e8be0d5d8">HAL_DMA_HALF_TRANSFER</link> = 0x01
+ }</para>
+
+<para>HAL DMA Error Code structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___d_m_a_1ga0fbcb690074233a03f2fa366dc22ff01">HAL_DMA_Init</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___d_m_a_1ga7bb8587d642da11252a97f5c41c389ef">HAL_DMA_DeInit</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___d_m_a_1ga96fbd9c285135f558fd9283a57406330">HAL_DMA_Start</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___d_m_a_1ga7eddc0931ac8a3d77b23d6d5e68407c7">HAL_DMA_Start_IT</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___d_m_a_1ga001f9fb04328a7460f9ff16908ff987c">HAL_DMA_Abort</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___d_m_a_1ga676b9606af3221a6b7bd7de264809fc7">HAL_DMA_PollForTransfer</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma, uint32_t CompleteLevel, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___d_m_a_1ga8c8564d06f6d39b702af1c5cbb7dd54a">HAL_DMA_IRQHandler</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para><link linkend="_group___d_m_a_1ga9c012af359987a240826f29073bbe463">HAL_DMA_StateTypeDef</link> <link linkend="_group___d_m_a_1gaef09509c41da57dc118c8ffb9533ce3f">HAL_DMA_GetState</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___d_m_a_1gabc0735694a0dd08e352b796d7fa7634f">HAL_DMA_GetError</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___d_m_a_1gabc041fb1c85ea7a3af94e42470ef7f2a"/><section>
+    <title>__HAL_DMA_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_DMA_CLEAR_FLAG</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_CLEAR_FLAG( __HANDLE__,  __FLAG__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((uint32_t)((__HANDLE__)-&gt;Instance)&#32;&gt;&#32;(uint32_t)<link linkend="_group___peripheral__declaration_1gaa6ead6a5ca6b8df70b5505aaeec6fd2e">DMA2_Stream3</link>)?&#32;(<link linkend="_group___peripheral__declaration_1ga506520140eec1708bc7570c49bdf972d">DMA2</link>-&gt;HIFCR&#32;|=&#32;(__FLAG__))&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;&gt;&#32;(uint32_t)<link linkend="_group___peripheral__declaration_1ga8ecdeaf43d0f4207dab1fdb4d7bf8d26">DMA1_Stream7</link>)?&#32;(<link linkend="_group___peripheral__declaration_1ga506520140eec1708bc7570c49bdf972d">DMA2</link>-&gt;LIFCR&#32;|=&#32;(__FLAG__))&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;&gt;&#32;(uint32_t)<link linkend="_group___peripheral__declaration_1ga96ac1af7a92469fe86a9fbdec091f25d">DMA1_Stream3</link>)?&#32;(<link linkend="_group___peripheral__declaration_1gacc16d2a5937f7585320a98f7f6b578f9">DMA1</link>-&gt;HIFCR&#32;|=&#32;(__FLAG__))&#32;:&#32;(<link linkend="_group___peripheral__declaration_1gacc16d2a5937f7585320a98f7f6b578f9">DMA1</link>-&gt;LIFCR&#32;|=&#32;(__FLAG__)))
+</programlisting><para>
+
+<para>Clear the DMA Stream pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to clear. This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>DMA_FLAG_TCIFx: Transfer complete flag. </para>
+</listitem>
+<listitem>
+<para>DMA_FLAG_HTIFx: Half transfer complete flag. </para>
+</listitem>
+<listitem>
+<para>DMA_FLAG_TEIFx: Transfer error flag. </para>
+</listitem>
+<listitem>
+<para>DMA_FLAG_DMEIFx: Direct mode error flag. </para>
+</listitem>
+<listitem>
+<para>DMA_FLAG_FEIFx: FIFO error flag. Where x can be 0_4, 1_5, 2_6 or 3_7 to select the DMA Stream flag. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00584">584</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1gafeef4c5e8c3f015cdecc0f37bbe063dc"/><section>
+    <title>__HAL_DMA_DISABLE</title>
+<indexterm><primary>__HAL_DMA_DISABLE</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1gaabf69fe92e9a44167535365b0fe4ea9e">DMA_SxCR_EN</link>)</computeroutput></para><para>
+
+<para>Disable the specified DMA Stream. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00449">449</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga2867eab09398df2daac55c3f327654da"/><section>
+    <title>__HAL_DMA_DISABLE_IT</title>
+<indexterm><primary>__HAL_DMA_DISABLE_IT</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_DISABLE_IT( __HANDLE__,  __INTERRUPT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((__INTERRUPT__)&#32;!=&#32;<link linkend="_group___d_m_a__interrupt__enable__definitions_1ga93164ec039fc5579662c382e68d7d13f">DMA_IT_FE</link>)?&#32;\
+((__HANDLE__)-&gt;Instance-&gt;CR&#32;&amp;=&#32;~(__INTERRUPT__))&#32;:&#32;((__HANDLE__)-&gt;Instance-&gt;FCR&#32;&amp;=&#32;~(__INTERRUPT__)))
+</programlisting><para>
+
+<para>Disable the specified DMA Stream interrupts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the DMA interrupt sources to be enabled or disabled. This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>DMA_IT_TC: Transfer complete interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_HT: Half transfer complete interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_TE: Transfer error interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_FE: FIFO error interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_DME: Direct mode error interrupt. </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00616">616</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga93900b3ef3f87ef924eb887279a434b4"/><section>
+    <title>__HAL_DMA_ENABLE</title>
+<indexterm><primary>__HAL_DMA_ENABLE</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  <link linkend="_group___peripheral___registers___bits___definition_1gaabf69fe92e9a44167535365b0fe4ea9e">DMA_SxCR_EN</link>)</computeroutput></para><para>
+
+<para>Enable the specified DMA Stream. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00442">442</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga2124233229c04ca90b790cd8cddfa98b"/><section>
+    <title>__HAL_DMA_ENABLE_IT</title>
+<indexterm><primary>__HAL_DMA_ENABLE_IT</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_ENABLE_IT( __HANDLE__,  __INTERRUPT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((__INTERRUPT__)&#32;!=&#32;<link linkend="_group___d_m_a__interrupt__enable__definitions_1ga93164ec039fc5579662c382e68d7d13f">DMA_IT_FE</link>)?&#32;\
+((__HANDLE__)-&gt;Instance-&gt;CR&#32;|=&#32;(__INTERRUPT__))&#32;:&#32;((__HANDLE__)-&gt;Instance-&gt;FCR&#32;|=&#32;(__INTERRUPT__)))
+</programlisting><para>
+
+<para>Enable the specified DMA Stream interrupts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the DMA interrupt sources to be enabled or disabled. This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>DMA_IT_TC: Transfer complete interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_HT: Half transfer complete interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_TE: Transfer error interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_FE: FIFO error interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_DME: Direct mode error interrupt. </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00601">601</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga082d691311bac96641dc35a17cfe8e63"/><section>
+    <title>__HAL_DMA_GET_COUNTER</title>
+<indexterm><primary>__HAL_DMA_GET_COUNTER</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_COUNTER</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_COUNTER( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;NDTR)</computeroutput></para><para>
+
+<para>Returns the number of remaining data units in the current DMAy Streamx transfer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>number of remaining data units in the current DMA Stream transfer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00660">660</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga23d1f282af3b9aa7aa396dcad94865d8"/><section>
+    <title>__HAL_DMA_GET_DME_FLAG_INDEX</title>
+<indexterm><primary>__HAL_DMA_GET_DME_FLAG_INDEX</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_DME_FLAG_INDEX</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_DME_FLAG_INDEX( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga61247dd5d594289c404dd8774202dfd8">DMA1_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaee0e6da831d62bc84e9e28e59b8e9ede">DMA_FLAG_DMEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga3a2efe5fd7a7a79be3b08a1670bbd016">DMA2_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaee0e6da831d62bc84e9e28e59b8e9ede">DMA_FLAG_DMEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga87df45f4b82e0b3a8c1b17f1a77aecdb">DMA1_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaee0e6da831d62bc84e9e28e59b8e9ede">DMA_FLAG_DMEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae32674772021620800275dd3b6d62c2f">DMA2_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaee0e6da831d62bc84e9e28e59b8e9ede">DMA_FLAG_DMEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gaf7d82f110f19982d483eebc465d222b2">DMA1_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaae665bbda7f888f0b8ac3d10688bfc5d">DMA_FLAG_DMEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae96f15d34d3c41c16fce69bc2878151a">DMA2_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaae665bbda7f888f0b8ac3d10688bfc5d">DMA_FLAG_DMEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac3abc20f80e25c19b02104ad34eae652">DMA1_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaae665bbda7f888f0b8ac3d10688bfc5d">DMA_FLAG_DMEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac40f58718761251875b5a897287efd83">DMA2_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaae665bbda7f888f0b8ac3d10688bfc5d">DMA_FLAG_DMEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gad0e2140b8eeec3594035f1a7bf2a7250">DMA1_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga8963d8e64fa5610d7617d8fe81c76704">DMA_FLAG_DMEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga71bb410664b861ff0520f08976e24ee1">DMA2_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga8963d8e64fa5610d7617d8fe81c76704">DMA_FLAG_DMEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac95127480470900755953f1cfe68567d">DMA1_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga8963d8e64fa5610d7617d8fe81c76704">DMA_FLAG_DMEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga11a00b283e0911cd427e277e5a314ccc">DMA2_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga8963d8e64fa5610d7617d8fe81c76704">DMA_FLAG_DMEIF2_6</link>&#32;:\
+&#32;&#32;&#32;DMA_FLAG_DMEIF3_7)
+</programlisting><para>
+
+<para>Return the current DMA Stream direct mode error flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>specified direct mode error flag index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00538">538</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga5878c3a1dbcf01e6840fffcf1f244088"/><section>
+    <title>__HAL_DMA_GET_FE_FLAG_INDEX</title>
+<indexterm><primary>__HAL_DMA_GET_FE_FLAG_INDEX</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_FE_FLAG_INDEX</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_FE_FLAG_INDEX( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga61247dd5d594289c404dd8774202dfd8">DMA1_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga6f44b274316a463c9302d770b8205640">DMA_FLAG_FEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga3a2efe5fd7a7a79be3b08a1670bbd016">DMA2_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga6f44b274316a463c9302d770b8205640">DMA_FLAG_FEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga87df45f4b82e0b3a8c1b17f1a77aecdb">DMA1_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga6f44b274316a463c9302d770b8205640">DMA_FLAG_FEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae32674772021620800275dd3b6d62c2f">DMA2_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga6f44b274316a463c9302d770b8205640">DMA_FLAG_FEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gaf7d82f110f19982d483eebc465d222b2">DMA1_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga16a04159a9a7c434ac02e5c6ff630b2e">DMA_FLAG_FEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae96f15d34d3c41c16fce69bc2878151a">DMA2_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga16a04159a9a7c434ac02e5c6ff630b2e">DMA_FLAG_FEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac3abc20f80e25c19b02104ad34eae652">DMA1_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga16a04159a9a7c434ac02e5c6ff630b2e">DMA_FLAG_FEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac40f58718761251875b5a897287efd83">DMA2_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga16a04159a9a7c434ac02e5c6ff630b2e">DMA_FLAG_FEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gad0e2140b8eeec3594035f1a7bf2a7250">DMA1_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaba3e6950c089013f9f675b83d78cab5c">DMA_FLAG_FEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga71bb410664b861ff0520f08976e24ee1">DMA2_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaba3e6950c089013f9f675b83d78cab5c">DMA_FLAG_FEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac95127480470900755953f1cfe68567d">DMA1_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaba3e6950c089013f9f675b83d78cab5c">DMA_FLAG_FEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga11a00b283e0911cd427e277e5a314ccc">DMA2_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gaba3e6950c089013f9f675b83d78cab5c">DMA_FLAG_FEIF2_6</link>&#32;:\
+&#32;&#32;&#32;DMA_FLAG_FEIF3_7)
+</programlisting><para>
+
+<para>Return the current DMA Stream FIFO error flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>specified FIFO error flag index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00518">518</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga798d4b3b3fbd32b95540967bb35b35be"/><section>
+    <title>__HAL_DMA_GET_FLAG</title>
+<indexterm><primary>__HAL_DMA_GET_FLAG</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_FLAG( __HANDLE__,  __FLAG__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((uint32_t)((__HANDLE__)-&gt;Instance)&#32;&gt;&#32;(uint32_t)<link linkend="_group___peripheral__declaration_1gaa6ead6a5ca6b8df70b5505aaeec6fd2e">DMA2_Stream3</link>)?&#32;(<link linkend="_group___peripheral__declaration_1ga506520140eec1708bc7570c49bdf972d">DMA2</link>-&gt;HISR&#32;&amp;&#32;(__FLAG__))&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;&gt;&#32;(uint32_t)<link linkend="_group___peripheral__declaration_1ga8ecdeaf43d0f4207dab1fdb4d7bf8d26">DMA1_Stream7</link>)?&#32;(<link linkend="_group___peripheral__declaration_1ga506520140eec1708bc7570c49bdf972d">DMA2</link>-&gt;LISR&#32;&amp;&#32;(__FLAG__))&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;&gt;&#32;(uint32_t)<link linkend="_group___peripheral__declaration_1ga96ac1af7a92469fe86a9fbdec091f25d">DMA1_Stream3</link>)?&#32;(<link linkend="_group___peripheral__declaration_1gacc16d2a5937f7585320a98f7f6b578f9">DMA1</link>-&gt;HISR&#32;&amp;&#32;(__FLAG__))&#32;:&#32;(<link linkend="_group___peripheral__declaration_1gacc16d2a5937f7585320a98f7f6b578f9">DMA1</link>-&gt;LISR&#32;&amp;&#32;(__FLAG__)))
+</programlisting><para>
+
+<para>Get the DMA Stream pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>Get the specified flag. This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>DMA_FLAG_TCIFx: Transfer complete flag. </para>
+</listitem>
+<listitem>
+<para>DMA_FLAG_HTIFx: Half transfer complete flag. </para>
+</listitem>
+<listitem>
+<para>DMA_FLAG_TEIFx: Transfer error flag. </para>
+</listitem>
+<listitem>
+<para>DMA_FLAG_DMEIFx: Direct mode error flag. </para>
+</listitem>
+<listitem>
+<para>DMA_FLAG_FEIFx: FIFO error flag. Where x can be 0_4, 1_5, 2_6 or 3_7 to select the DMA Stream flag. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>state of FLAG (SET or RESET). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00566">566</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga8f0ff408d25904040b9d23ee7f6af080"/><section>
+    <title>__HAL_DMA_GET_FS</title>
+<indexterm><primary>__HAL_DMA_GET_FS</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_FS</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_FS( __HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;FCR &amp; (<link linkend="_group___peripheral___registers___bits___definition_1ga56094479dc9b173b00ccfb199d8a2853">DMA_SxFCR_FS</link>)))</computeroutput></para><para>
+
+<para>Return the current DMA Stream FIFO filled level. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>FIFO filling state.<itemizedlist>
+<listitem>
+<para>DMA_FIFOStatus_Less1QuarterFull: when FIFO is less than 1 quarter-full and not empty.</para>
+</listitem><listitem>
+<para>DMA_FIFOStatus_1QuarterFull: if more than 1 quarter-full.</para>
+</listitem><listitem>
+<para>DMA_FIFOStatus_HalfFull: if more than 1 half-full.</para>
+</listitem><listitem>
+<para>DMA_FIFOStatus_3QuartersFull: if more than 3 quarters-full.</para>
+</listitem><listitem>
+<para>DMA_FIFOStatus_Empty: when FIFO is empty</para>
+</listitem><listitem>
+<para>DMA_FIFOStatus_Full: when FIFO is full </para>
+</listitem></itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00435">435</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga0095f5f3166a82bedc67744ac94acfba"/><section>
+    <title>__HAL_DMA_GET_HT_FLAG_INDEX</title>
+<indexterm><primary>__HAL_DMA_GET_HT_FLAG_INDEX</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_HT_FLAG_INDEX</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_HT_FLAG_INDEX( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga61247dd5d594289c404dd8774202dfd8">DMA1_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga976fee242270824013f1fc0b6bd4c446">DMA_FLAG_HTIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga3a2efe5fd7a7a79be3b08a1670bbd016">DMA2_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga976fee242270824013f1fc0b6bd4c446">DMA_FLAG_HTIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga87df45f4b82e0b3a8c1b17f1a77aecdb">DMA1_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga976fee242270824013f1fc0b6bd4c446">DMA_FLAG_HTIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae32674772021620800275dd3b6d62c2f">DMA2_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga976fee242270824013f1fc0b6bd4c446">DMA_FLAG_HTIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gaf7d82f110f19982d483eebc465d222b2">DMA1_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga2c9522a20a6ace45958413034b7f3af8">DMA_FLAG_HTIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae96f15d34d3c41c16fce69bc2878151a">DMA2_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga2c9522a20a6ace45958413034b7f3af8">DMA_FLAG_HTIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac3abc20f80e25c19b02104ad34eae652">DMA1_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga2c9522a20a6ace45958413034b7f3af8">DMA_FLAG_HTIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac40f58718761251875b5a897287efd83">DMA2_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga2c9522a20a6ace45958413034b7f3af8">DMA_FLAG_HTIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gad0e2140b8eeec3594035f1a7bf2a7250">DMA1_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga2ae0054d63c453a14b6d3822c503e7b4">DMA_FLAG_HTIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga71bb410664b861ff0520f08976e24ee1">DMA2_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga2ae0054d63c453a14b6d3822c503e7b4">DMA_FLAG_HTIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac95127480470900755953f1cfe68567d">DMA1_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga2ae0054d63c453a14b6d3822c503e7b4">DMA_FLAG_HTIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga11a00b283e0911cd427e277e5a314ccc">DMA2_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga2ae0054d63c453a14b6d3822c503e7b4">DMA_FLAG_HTIF2_6</link>&#32;:\
+&#32;&#32;&#32;DMA_FLAG_HTIF3_7)
+</programlisting><para>
+
+<para>Return the current DMA Stream half transfer complete flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>specified half transfer complete flag index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00478">478</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga206f24e6bee4600515b9b6b1ec79365b"/><section>
+    <title>__HAL_DMA_GET_IT_SOURCE</title>
+<indexterm><primary>__HAL_DMA_GET_IT_SOURCE</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_IT_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_IT_SOURCE( __HANDLE__,  __INTERRUPT__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__INTERRUPT__)&#32;!=&#32;<link linkend="_group___d_m_a__interrupt__enable__definitions_1ga93164ec039fc5579662c382e68d7d13f">DMA_IT_FE</link>)?&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;CR&#32;&amp;&#32;(__INTERRUPT__))&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__HANDLE__)-&gt;Instance-&gt;FCR&#32;&amp;&#32;(__INTERRUPT__)))
+</programlisting><para>
+
+<para>Check whether the specified DMA Stream interrupt has occurred or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the DMA interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>DMA_IT_TC: Transfer complete interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_HT: Half transfer complete interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_TE: Transfer error interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_FE: FIFO error interrupt mask. </para>
+</listitem>
+<listitem>
+<para>DMA_IT_DME: Direct mode error interrupt. </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>state of DMA_IT. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00631">631</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1gae3feef5ea50ff13a6a5b98cb353c87b0"/><section>
+    <title>__HAL_DMA_GET_TC_FLAG_INDEX</title>
+<indexterm><primary>__HAL_DMA_GET_TC_FLAG_INDEX</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_TC_FLAG_INDEX</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_TC_FLAG_INDEX( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga61247dd5d594289c404dd8774202dfd8">DMA1_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga19dfe70176841c6972818e279ba02436">DMA_FLAG_TCIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga3a2efe5fd7a7a79be3b08a1670bbd016">DMA2_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga19dfe70176841c6972818e279ba02436">DMA_FLAG_TCIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga87df45f4b82e0b3a8c1b17f1a77aecdb">DMA1_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga19dfe70176841c6972818e279ba02436">DMA_FLAG_TCIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae32674772021620800275dd3b6d62c2f">DMA2_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga19dfe70176841c6972818e279ba02436">DMA_FLAG_TCIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gaf7d82f110f19982d483eebc465d222b2">DMA1_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga9546185449ae979fad0aa5e33310c0ab">DMA_FLAG_TCIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae96f15d34d3c41c16fce69bc2878151a">DMA2_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga9546185449ae979fad0aa5e33310c0ab">DMA_FLAG_TCIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac3abc20f80e25c19b02104ad34eae652">DMA1_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga9546185449ae979fad0aa5e33310c0ab">DMA_FLAG_TCIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac40f58718761251875b5a897287efd83">DMA2_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga9546185449ae979fad0aa5e33310c0ab">DMA_FLAG_TCIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gad0e2140b8eeec3594035f1a7bf2a7250">DMA1_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gab8096a50b81e30e474e2b1148b55a983">DMA_FLAG_TCIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga71bb410664b861ff0520f08976e24ee1">DMA2_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gab8096a50b81e30e474e2b1148b55a983">DMA_FLAG_TCIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac95127480470900755953f1cfe68567d">DMA1_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gab8096a50b81e30e474e2b1148b55a983">DMA_FLAG_TCIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga11a00b283e0911cd427e277e5a314ccc">DMA2_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gab8096a50b81e30e474e2b1148b55a983">DMA_FLAG_TCIF2_6</link>&#32;:\
+&#32;&#32;&#32;DMA_FLAG_TCIF3_7)
+</programlisting><para>
+
+<para>Return the current DMA Stream transfer complete flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>specified transfer complete flag index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00458">458</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga5e765bb3b1c5fc9f1b1abbbb764250bc"/><section>
+    <title>__HAL_DMA_GET_TE_FLAG_INDEX</title>
+<indexterm><primary>__HAL_DMA_GET_TE_FLAG_INDEX</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_GET_TE_FLAG_INDEX</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_GET_TE_FLAG_INDEX( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga61247dd5d594289c404dd8774202dfd8">DMA1_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gab98ef70ba0c1498d4c967a10b3f6e67f">DMA_FLAG_TEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga3a2efe5fd7a7a79be3b08a1670bbd016">DMA2_Stream0</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gab98ef70ba0c1498d4c967a10b3f6e67f">DMA_FLAG_TEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga87df45f4b82e0b3a8c1b17f1a77aecdb">DMA1_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gab98ef70ba0c1498d4c967a10b3f6e67f">DMA_FLAG_TEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae32674772021620800275dd3b6d62c2f">DMA2_Stream4</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1gab98ef70ba0c1498d4c967a10b3f6e67f">DMA_FLAG_TEIF0_4</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gaf7d82f110f19982d483eebc465d222b2">DMA1_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga9d4c5bac7bdcdb23b4d38186e918ae9e">DMA_FLAG_TEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gae96f15d34d3c41c16fce69bc2878151a">DMA2_Stream1</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga9d4c5bac7bdcdb23b4d38186e918ae9e">DMA_FLAG_TEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac3abc20f80e25c19b02104ad34eae652">DMA1_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga9d4c5bac7bdcdb23b4d38186e918ae9e">DMA_FLAG_TEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac40f58718761251875b5a897287efd83">DMA2_Stream5</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga9d4c5bac7bdcdb23b4d38186e918ae9e">DMA_FLAG_TEIF1_5</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gad0e2140b8eeec3594035f1a7bf2a7250">DMA1_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga7801bd49cbbe19be612718965e8c675e">DMA_FLAG_TEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga71bb410664b861ff0520f08976e24ee1">DMA2_Stream2</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga7801bd49cbbe19be612718965e8c675e">DMA_FLAG_TEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1gac95127480470900755953f1cfe68567d">DMA1_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga7801bd49cbbe19be612718965e8c675e">DMA_FLAG_TEIF2_6</link>&#32;:\
+&#32;((uint32_t)((__HANDLE__)-&gt;Instance)&#32;==&#32;((uint32_t)<link linkend="_group___peripheral__declaration_1ga11a00b283e0911cd427e277e5a314ccc">DMA2_Stream6</link>))?&#32;<link linkend="_group___d_m_a__flag__definitions_1ga7801bd49cbbe19be612718965e8c675e">DMA_FLAG_TEIF2_6</link>&#32;:\
+&#32;&#32;&#32;DMA_FLAG_TEIF3_7)
+</programlisting><para>
+
+<para>Return the current DMA Stream transfer error flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>specified transfer error flag index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00498">498</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1gaadcee34f0999c8eafd37de2f69daa0ac"/><section>
+    <title>__HAL_DMA_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_DMA_RESET_HANDLE_STATE</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2">HAL_DMA_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset DMA handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the DMA handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00421">421</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga448a8f809df86ccffae200ffd33d0a82"/><section>
+    <title>__HAL_DMA_SET_COUNTER</title>
+<indexterm><primary>__HAL_DMA_SET_COUNTER</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>__HAL_DMA_SET_COUNTER</secondary></indexterm>
+<para><computeroutput>#define __HAL_DMA_SET_COUNTER( __HANDLE__,  __COUNTER__)   ((__HANDLE__)-&gt;Instance-&gt;NDTR = (uint16_t)(__COUNTER__))</computeroutput></para><para>
+
+<para>Writes the number of data units to be transferred on the DMA Stream. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>DMA handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__COUNTER__</entry><entry>
+<para>Number of data units to be transferred (from 0 to 65535) Number of data items depends only on the Peripheral data format.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>If Peripheral data format is Bytes: number of data units is equal to total number of bytes to be transferred.</para>
+
+<para>If Peripheral data format is Half-Word: number of data units is 
+<literallayout>&#160;&#xa;</literallayout>
+ equal to total number of bytes to be transferred / 2.</para>
+
+<para>If Peripheral data format is Word: number of data units is equal to total number of bytes to be transferred / 4.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>number of remaining data units in the current DMAy Streamx transfer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00652">652</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b"/><section>
+    <title>DMA_HandleTypeDef</title>
+<indexterm><primary>DMA_HandleTypeDef</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>DMA_HandleTypeDef</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_struct_____d_m_a___handle_type_def">__DMA_HandleTypeDef</link> <link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link></computeroutput></para><para>
+
+<para>DMA handle Structure definition. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___d_m_a_1gaee3245eea8fa938edeb35a6c9596fd86"/><section>
+    <title>HAL_DMA_LevelCompleteTypeDef</title>
+<indexterm><primary>HAL_DMA_LevelCompleteTypeDef</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_LevelCompleteTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___d_m_a_1gaee3245eea8fa938edeb35a6c9596fd86">HAL_DMA_LevelCompleteTypeDef</link></computeroutput></para><para>
+
+<para>HAL DMA Error Code structure definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_DMA_FULL_TRANSFER</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_FULL_TRANSFER</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1ggaee3245eea8fa938edeb35a6c9596fd86a5314147c8ba21548763bf89446b78468"/>HAL_DMA_FULL_TRANSFER</entry><entry>
+<para>Full transfer 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_HALF_TRANSFER</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_HALF_TRANSFER</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1ggaee3245eea8fa938edeb35a6c9596fd86ad0ba8bc74a2ae6dcdc3e316e8be0d5d8"/>HAL_DMA_HALF_TRANSFER</entry><entry>
+<para>Half Transfer 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00133">133</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a_1ga9c012af359987a240826f29073bbe463"/><section>
+    <title>HAL_DMA_StateTypeDef</title>
+<indexterm><primary>HAL_DMA_StateTypeDef</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___d_m_a_1ga9c012af359987a240826f29073bbe463">HAL_DMA_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL DMA State structures definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_DMA_STATE_RESET</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2"/>HAL_DMA_STATE_RESET</entry><entry>
+<para>DMA not yet initialized or disabled </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_READY</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463ad497944e6e72bc3ca904694b1098105a"/>HAL_DMA_STATE_READY</entry><entry>
+<para>DMA initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_READY_MEM0</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_READY_MEM0</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463af865496c2c56154d56e1dc8d3d42a1e1"/>HAL_DMA_STATE_READY_MEM0</entry><entry>
+<para>DMA Mem0 process success 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_READY_MEM1</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_READY_MEM1</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463ac7e8231be0af20c6f36903b066411efe"/>HAL_DMA_STATE_READY_MEM1</entry><entry>
+<para>DMA Mem1 process success 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_READY_HALF_MEM0</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_READY_HALF_MEM0</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a181e4eeeb144c9a345a26483ec20bade"/>HAL_DMA_STATE_READY_HALF_MEM0</entry><entry>
+<para>DMA Mem0 Half process success 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_READY_HALF_MEM1</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_READY_HALF_MEM1</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a8f00c28e70c53aa0a2d7519983b3d265"/>HAL_DMA_STATE_READY_HALF_MEM1</entry><entry>
+<para>DMA Mem1 Half process success 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_BUSY</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463af7a0a2ca8de4e5be9e85b6a9073476ef"/>HAL_DMA_STATE_BUSY</entry><entry>
+<para>DMA process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_BUSY_MEM0</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_BUSY_MEM0</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a632399de6eff33c2757735789ea3ffc7"/>HAL_DMA_STATE_BUSY_MEM0</entry><entry>
+<para>DMA Mem0 process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_BUSY_MEM1</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_BUSY_MEM1</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463a64434f8acb36fcae6b79d6f98bb7b32c"/>HAL_DMA_STATE_BUSY_MEM1</entry><entry>
+<para>DMA Mem1 process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_TIMEOUT</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463acf3a5443bf4dc71018512a255e2076eb"/>HAL_DMA_STATE_TIMEOUT</entry><entry>
+<para>DMA timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_DMA_STATE_ERROR</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___d_m_a_1gga9c012af359987a240826f29073bbe463ac2ce65c7cb2410c143b14e309ba83742"/>HAL_DMA_STATE_ERROR</entry><entry>
+<para>DMA error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00115">115</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___d_m_a_1ga001f9fb04328a7460f9ff16908ff987c"/><section>
+    <title>HAL_DMA_Abort()</title>
+<indexterm><primary>HAL_DMA_Abort</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_Abort</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_DMA_Abort (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___d_m_a_1ga7bb8587d642da11252a97f5c41c389ef"/><section>
+    <title>HAL_DMA_DeInit()</title>
+<indexterm><primary>HAL_DMA_DeInit</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_DMA_DeInit (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___d_m_a_1gabc0735694a0dd08e352b796d7fa7634f"/><section>
+    <title>HAL_DMA_GetError()</title>
+<indexterm><primary>HAL_DMA_GetError</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_GetError</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_DMA_GetError (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___d_m_a_1gaef09509c41da57dc118c8ffb9533ce3f"/><section>
+    <title>HAL_DMA_GetState()</title>
+<indexterm><primary>HAL_DMA_GetState</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_m_a_1ga9c012af359987a240826f29073bbe463">HAL_DMA_StateTypeDef</link> HAL_DMA_GetState (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___d_m_a_1ga0fbcb690074233a03f2fa366dc22ff01"/><section>
+    <title>HAL_DMA_Init()</title>
+<indexterm><primary>HAL_DMA_Init</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_DMA_Init (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___d_m_a_1ga8c8564d06f6d39b702af1c5cbb7dd54a"/><section>
+    <title>HAL_DMA_IRQHandler()</title>
+<indexterm><primary>HAL_DMA_IRQHandler</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_DMA_IRQHandler (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___d_m_a_1ga676b9606af3221a6b7bd7de264809fc7"/><section>
+    <title>HAL_DMA_PollForTransfer()</title>
+<indexterm><primary>HAL_DMA_PollForTransfer</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_PollForTransfer</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_DMA_PollForTransfer (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma, uint32_t CompleteLevel, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___d_m_a_1ga96fbd9c285135f558fd9283a57406330"/><section>
+    <title>HAL_DMA_Start()</title>
+<indexterm><primary>HAL_DMA_Start</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_Start</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_DMA_Start (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength)</computeroutput></para></section>
+<anchor xml:id="_group___d_m_a_1ga7eddc0931ac8a3d77b23d6d5e68407c7"/><section>
+    <title>HAL_DMA_Start_IT()</title>
+<indexterm><primary>HAL_DMA_Start_IT</primary><secondary>DMA</secondary></indexterm>
+<indexterm><primary>DMA</primary><secondary>HAL_DMA_Start_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_DMA_Start_IT (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t DataLength)</computeroutput></para></section>
+</section>
+</section>

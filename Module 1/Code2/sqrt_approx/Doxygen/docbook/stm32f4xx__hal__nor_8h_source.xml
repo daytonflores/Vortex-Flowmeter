@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__nor_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_nor.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_nor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_NOR_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_NOR_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00046"/>00046 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00047"/>00047 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)||&#32;defined(STM32F417xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00048"/>00048 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_stm32f4xx__ll__fsmc_8h">stm32f4xx_ll_fsmc.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00049"/>00049 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00050"/>00050 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00051"/>00051 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00052"/>00052 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_stm32f4xx__ll__fmc_8h">stm32f4xx_ll_fmc.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00053"/>00053 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00054"/>00054 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00063"/>00063 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00064"/>00064 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00065"/>00065 <emphasis role="comment">/*&#32;Exported&#32;typedef&#32;----------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00069"/>00069 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00070"/>00070 {&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00071"/>00071 &#32;&#32;HAL_NOR_STATE_RESET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00072"/>00072 &#32;&#32;HAL_NOR_STATE_READY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00073"/>00073 &#32;&#32;HAL_NOR_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00074"/>00074 &#32;&#32;HAL_NOR_STATE_ERROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x03,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00075"/>00075 &#32;&#32;HAL_NOR_STATE_PROTECTED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x04&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00076"/>00076 }HAL_NOR_StateTypeDef;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00077"/>00077 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00081"/>00081 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00082"/>00082 {
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00083"/>00083 &#32;&#32;NOR_SUCCESS&#32;=&#32;0,
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00084"/>00084 &#32;&#32;NOR_ONGOING,
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00085"/>00085 &#32;&#32;NOR_ERROR,
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00086"/>00086 &#32;&#32;NOR_TIMEOUT
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00087"/>00087 }NOR_StatusTypedef;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00088"/>00088 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00092"/>00092 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00093"/>00093 {
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00094"/>00094 &#32;&#32;uint16_t&#32;Manufacturer_Code;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00096"/>00096 &#32;&#32;uint16_t&#32;Device_Code1;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00097"/>00097 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00098"/>00098 &#32;&#32;uint16_t&#32;Device_Code2;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00099"/>00099 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00100"/>00100 &#32;&#32;uint16_t&#32;Device_Code3;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00104"/>00104 }NOR_IDTypeDef;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00105"/>00105 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00109"/>00109 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00110"/>00110 {
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00115"/>00115 &#32;&#32;uint16_t&#32;CFI_1;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00116"/>00116 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00117"/>00117 &#32;&#32;uint16_t&#32;CFI_2;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00118"/>00118 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00119"/>00119 &#32;&#32;uint16_t&#32;CFI_3;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00120"/>00120 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00121"/>00121 &#32;&#32;uint16_t&#32;CFI_4;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00122"/>00122 }NOR_CFITypeDef;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00123"/>00123 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00127"/>00127 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00128"/>00128 {
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00129"/>00129 &#32;&#32;FMC_NORSRAM_TypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*Instance;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00131"/>00131 &#32;&#32;FMC_NORSRAM_EXTENDED_TypeDef&#32;&#32;*Extended;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00133"/>00133 &#32;&#32;FMC_NORSRAM_InitTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;Init;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00135"/>00135 &#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00137"/>00137 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;HAL_NOR_StateTypeDef&#32;&#32;&#32;&#32;&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00139"/>00139 }NOR_HandleTypeDef;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00140"/>00140 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00141"/>00141 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00145"/>00145 <emphasis role="comment">/*&#32;NOR&#32;device&#32;IDs&#32;addresses&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00146"/>00146 <emphasis role="preprocessor">#define&#32;MC_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00147"/>00147 <emphasis role="preprocessor">#define&#32;DEVICE_CODE1_ADDR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0001)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00148"/>00148 <emphasis role="preprocessor">#define&#32;DEVICE_CODE2_ADDR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x000E)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00149"/>00149 <emphasis role="preprocessor">#define&#32;DEVICE_CODE3_ADDR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x000F)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00150"/>00150 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00151"/>00151 <emphasis role="comment">/*&#32;NOR&#32;CFI&#32;IDs&#32;addresses&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00152"/>00152 <emphasis role="preprocessor">#define&#32;CFI1_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x61)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00153"/>00153 <emphasis role="preprocessor">#define&#32;CFI2_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x62)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00154"/>00154 <emphasis role="preprocessor">#define&#32;CFI3_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x63)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00155"/>00155 <emphasis role="preprocessor">#define&#32;CFI4_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x64)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00156"/>00156 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00157"/>00157 <emphasis role="comment">/*&#32;NOR&#32;operation&#32;wait&#32;timeout&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00158"/>00158 <emphasis role="preprocessor">#define&#32;NOR_TMEOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0xFFFF)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00159"/>00159 &#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00160"/>00160 <emphasis role="comment">/*&#32;#define&#32;NOR_MEMORY_16B&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00161"/>00161 <emphasis role="preprocessor">#define&#32;NOR_MEMORY_8B</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00162"/>00162 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00163"/>00163 <emphasis role="comment">/*&#32;NOR&#32;memory&#32;device&#32;read/write&#32;start&#32;address&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00164"/>00164 <emphasis role="preprocessor">#define&#32;NOR_MEMORY_ADRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x60000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00165"/>00165 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00170"/>00170 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00171"/>00171 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00176"/>00176 <emphasis role="preprocessor">#define&#32;__HAL_NOR_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_NOR_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00177"/>00177 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00183"/>00183 <emphasis role="preprocessor">#ifdef&#32;&#32;NOR_MEMORY_8B</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00184"/>00184 <emphasis role="preprocessor">&#32;#define&#32;__NOR_ADDR_SHIFT(__ADDRESS__)&#32;(uint32_t)(NOR_MEMORY_ADRESS&#32;+&#32;(2&#32;*&#32;(__ADDRESS__)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00185"/>00185 <emphasis role="preprocessor">#else&#32;</emphasis><emphasis role="comment">/*&#32;NOR_MEMORY_16B&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00186"/>00186 <emphasis role="preprocessor">&#32;#define&#32;__NOR_ADDR_SHIFT(__ADDRESS__)&#32;(uint32_t)(NOR_MEMORY_ADRESS&#32;+&#32;(__ADDRESS__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00187"/>00187 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;NOR_MEMORY_8B&#32;*/</emphasis><emphasis role="preprocessor">&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00188"/>00188 &#32;
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00195"/>00195 <emphasis role="preprocessor">#define&#32;__NOR_WRITE(__ADDRESS__,&#32;__DATA__)&#32;&#32;(*(__IO&#32;uint16_t&#32;*)((uint32_t)(__ADDRESS__))&#32;=&#32;(__DATA__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00196"/>00196 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00197"/>00197 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00198"/>00198 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00199"/>00199 <emphasis role="comment">/*&#32;Initialization/de-initialization&#32;functions&#32;&#32;********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00200"/>00200 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_Init(NOR_HandleTypeDef&#32;*hnor,&#32;FMC_NORSRAM_TimingTypeDef&#32;*Timing,&#32;FMC_NORSRAM_TimingTypeDef&#32;*ExtTiming);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00201"/>00201 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_DeInit(NOR_HandleTypeDef&#32;*hnor);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00202"/>00202 <emphasis role="keywordtype">void</emphasis>&#32;HAL_NOR_MspInit(NOR_HandleTypeDef&#32;*hnor);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00203"/>00203 <emphasis role="keywordtype">void</emphasis>&#32;HAL_NOR_MspDeInit(NOR_HandleTypeDef&#32;*hnor);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00204"/>00204 <emphasis role="keywordtype">void</emphasis>&#32;HAL_NOR_MspWait(NOR_HandleTypeDef&#32;*hnor,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00205"/>00205 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00206"/>00206 <emphasis role="comment">/*&#32;I/O&#32;operation&#32;functions&#32;&#32;***************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00207"/>00207 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_Read_ID(NOR_HandleTypeDef&#32;*hnor,&#32;NOR_IDTypeDef&#32;*pNOR_ID);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00208"/>00208 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_ReturnToReadMode(NOR_HandleTypeDef&#32;*hnor);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00209"/>00209 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_Read(NOR_HandleTypeDef&#32;*hnor,&#32;uint32_t&#32;*pAddress,&#32;uint16_t&#32;*pData);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00210"/>00210 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_Program(NOR_HandleTypeDef&#32;*hnor,&#32;uint32_t&#32;*pAddress,&#32;uint16_t&#32;*pData);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00211"/>00211 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00212"/>00212 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_ReadBuffer(NOR_HandleTypeDef&#32;*hnor,&#32;uint32_t&#32;uwAddress,&#32;uint16_t&#32;*pData,&#32;uint32_t&#32;uwBufferSize);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00213"/>00213 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_ProgramBuffer(NOR_HandleTypeDef&#32;*hnor,&#32;uint32_t&#32;uwAddress,&#32;uint16_t&#32;*pData,&#32;uint32_t&#32;uwBufferSize);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00214"/>00214 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00215"/>00215 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_Erase_Block(NOR_HandleTypeDef&#32;*hnor,&#32;uint32_t&#32;BlockAddress,&#32;uint32_t&#32;Address);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00216"/>00216 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_Erase_Chip(NOR_HandleTypeDef&#32;*hnor,&#32;uint32_t&#32;Address);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00217"/>00217 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_Read_CFI(NOR_HandleTypeDef&#32;*hnor,&#32;NOR_CFITypeDef&#32;*pNOR_CFI);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00218"/>00218 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00219"/>00219 <emphasis role="comment">/*&#32;NOR&#32;Control&#32;functions&#32;&#32;*****************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00220"/>00220 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_WriteOperation_Enable(NOR_HandleTypeDef&#32;*hnor);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00221"/>00221 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_NOR_WriteOperation_Disable(NOR_HandleTypeDef&#32;*hnor);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00222"/>00222 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00223"/>00223 <emphasis role="comment">/*&#32;NOR&#32;State&#32;functions&#32;********************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00224"/>00224 HAL_NOR_StateTypeDef&#32;HAL_NOR_GetState(NOR_HandleTypeDef&#32;*hnor);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00225"/>00225 NOR_StatusTypedef&#32;HAL_NOR_GetStatus(NOR_HandleTypeDef&#32;*hnor,&#32;uint32_t&#32;Address,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00226"/>00226 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00227"/>00227 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00236"/>00236 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00237"/>00237 }
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00238"/>00238 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00239"/>00239 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00240"/>00240 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_NOR_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00241"/>00241 
+<anchor xml:id="_stm32f4xx__hal__nor_8h_source_1l00242"/>00242 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_file_handle" xml:lang="en-US">
+<title>FileHandle Class Reference</title>
+<indexterm><primary>FileHandle</primary></indexterm>
+<para>
+<computeroutput>#include &lt;FileHandle.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for FileHandle:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmbed_1_1_file_handle.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual ssize_t <link linkend="_classmbed_1_1_file_handle_1afb4f34ce3f921a252f8244f34bc41adf">write</link> (const void *buffer, size_t length)=0</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_file_handle_1ac81e2718528549c8b1eed01c4d303546">close</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual ssize_t <link linkend="_classmbed_1_1_file_handle_1a46a09dc9739d9e3838c3d5786377b14a">read</link> (void *buffer, size_t length)=0</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_file_handle_1af8b1bceee5dae7fff7626bd575c309ad">isatty</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual off_t <link linkend="_classmbed_1_1_file_handle_1ac5c73beb78fc91ecbdbe4cf4a6b4faec">lseek</link> (off_t offset, int whence)=0</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_file_handle_1aba403acd4d983123d864c1d74f833422">fsync</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual off_t <link linkend="_classmbed_1_1_file_handle_1a3c8b116df2f335a817f94dab6dc55221">flen</link> ()</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classmbed_1_1_file_handle_1a41402663bfeb9097cb46749b0e652e15">~FileHandle</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>An OO equivalent of the internal FILEHANDLE variable and associated <emphasis>sys</emphasis>* functions.</para>
+
+<para><link linkend="_classmbed_1_1_file_handle">FileHandle</link> is an abstract class, needing at least sys_write and sys_read to be implmented for a simple interactive device.</para>
+
+<para>No one ever directly tals to/instanciates a <link linkend="_classmbed_1_1_file_handle">FileHandle</link> - it gets created by FileSystem, and wrapped up by stdio. </para>
+<para>
+Definition at line <link linkend="__file_handle_8h_source_1l00042">42</link> of file <link linkend="__file_handle_8h_source">FileHandle.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmbed_1_1_file_handle_1a41402663bfeb9097cb46749b0e652e15"/><section>
+    <title>~FileHandle()</title>
+<indexterm><primary>~FileHandle</primary><secondary>FileHandle</secondary></indexterm>
+<indexterm><primary>FileHandle</primary><secondary>~FileHandle</secondary></indexterm>
+<para><computeroutput>virtual ~<link linkend="_classmbed_1_1_file_handle">FileHandle</link> ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_file_handle_1ac81e2718528549c8b1eed01c4d303546"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>FileHandle</secondary></indexterm>
+<indexterm><primary>FileHandle</primary><secondary>close</secondary></indexterm>
+<para><computeroutput>virtual int close ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Close the file</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero on success, -1 on error. </para>
+</formalpara>
+</para>
+<para>
+Implemented in <link linkend="_classmbed_1_1_stream_1a2bc5dcba0e89b4a820b62a4cb183d702">Stream</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_handle_1a3c8b116df2f335a817f94dab6dc55221"/><section>
+    <title>flen()</title>
+<indexterm><primary>flen</primary><secondary>FileHandle</secondary></indexterm>
+<indexterm><primary>FileHandle</primary><secondary>flen</secondary></indexterm>
+<para><computeroutput>virtual off_t flen ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_classmbed_1_1_stream_1a3c8b116df2f335a817f94dab6dc55221">Stream</link>.</para>
+<para>
+Definition at line <link linkend="__file_handle_8h_source_1l00103">103</link> of file <link linkend="__file_handle_8h_source">FileHandle.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_handle_1aba403acd4d983123d864c1d74f833422"/><section>
+    <title>fsync()</title>
+<indexterm><primary>fsync</primary><secondary>FileHandle</secondary></indexterm>
+<indexterm><primary>FileHandle</primary><secondary>fsync</secondary></indexterm>
+<para><computeroutput>virtual int fsync ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Flush any buffers associated with the <link linkend="_classmbed_1_1_file_handle">FileHandle</link>, ensuring it is up to date on disk</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>0 on success or un-needed, -1 on error </para>
+</formalpara>
+</para>
+<para>
+Implemented in <link linkend="_classmbed_1_1_stream_1afbe9d4b6859e1410f88f6546f1f6d41e">Stream</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_handle_1af8b1bceee5dae7fff7626bd575c309ad"/><section>
+    <title>isatty()</title>
+<indexterm><primary>isatty</primary><secondary>FileHandle</secondary></indexterm>
+<indexterm><primary>FileHandle</primary><secondary>isatty</secondary></indexterm>
+<para><computeroutput>virtual int isatty ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Check if the handle is for a interactive terminal device. If so, line buffered behaviour is used by default</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>1 if it is a terminal, 0 otherwise </para>
+</formalpara>
+</para>
+<para>
+Implemented in <link linkend="_classmbed_1_1_stream_1a67cbbfec09edb77cf2d60ab3e2b79a66">Stream</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_handle_1ac5c73beb78fc91ecbdbe4cf4a6b4faec"/><section>
+    <title>lseek()</title>
+<indexterm><primary>lseek</primary><secondary>FileHandle</secondary></indexterm>
+<indexterm><primary>FileHandle</primary><secondary>lseek</secondary></indexterm>
+<para><computeroutput>virtual off_t lseek (off_t offset, int whence)<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Move the file position to a given offset from a given location.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>offset</entry><entry>
+<para>The offset from whence to move to </para>
+</entry>
+                            </row>
+                            <row>
+<entry>whence</entry><entry>
+<para>SEEK_SET for the start of the file, SEEK_CUR for the current file position, or SEEK_END for the end of the file.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>new file position on success, -1 on failure or unsupported </para>
+</formalpara>
+</para>
+<para>
+Implemented in <link linkend="_classmbed_1_1_stream_1aebc39cb3a78f1f8ec2aaa46ca6d8ae4c">Stream</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_handle_1a46a09dc9739d9e3838c3d5786377b14a"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>FileHandle</secondary></indexterm>
+<indexterm><primary>FileHandle</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>virtual ssize_t read (void * buffer, size_t length)<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Function read Reads the contents of the file into a buffer</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>the buffer to read in to </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>the number of characters to read</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of characters read (zero at end of file) on success, -1 on error. </para>
+</formalpara>
+</para>
+<para>
+Implemented in <link linkend="_classmbed_1_1_stream_1a48b616ed2c59a14b39c6d0afe91cf195">Stream</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_handle_1afb4f34ce3f921a252f8244f34bc41adf"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>FileHandle</secondary></indexterm>
+<indexterm><primary>FileHandle</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>virtual ssize_t write (const void * buffer, size_t length)<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Write the contents of a buffer to the file</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>the buffer to write from </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>the number of characters to write</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of characters written (possibly 0) on success, -1 on error. </para>
+</formalpara>
+</para>
+<para>
+Implemented in <link linkend="_classmbed_1_1_stream_1a2b295c28246c7c03393a40050313d4c2">Stream</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__file_handle_8h">FileHandle.h</link></section>
+</section>

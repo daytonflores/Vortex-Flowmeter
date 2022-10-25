@@ -1,0 +1,1162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___i2_c" xml:lang="en-US">
+<title>I2C</title>
+<indexterm><primary>I2C</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___i2_c___exported___constants">I2C_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_i2_c___init_type_def">I2C_InitTypeDef</link></para>
+
+<para>I2C Configuration Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link></para>
+
+<para>I2C handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga74c8fd72a78882720c28448ce8bd33d8">__HAL_I2C_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a91ba08634e08d7287940f1bc5a37eeff">HAL_I2C_STATE_RESET</link>)</para>
+
+<para>Reset I2C handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gac9d8b249b06b2d30f987acc9ceebd1d9">__HAL_I2C_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |= (__INTERRUPT__))</para>
+
+<para>Enable or disable the specified I2C interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga33d0c7202ae298fa3ae128c5da49d455">__HAL_I2C_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;= (~(__INTERRUPT__)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga932024bf4a259e0cdaf9e50b38e3d41a">__HAL_I2C_GET_IT_SOURCE</link>(__HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR2 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Checks if the specified I2C interrupt source is enabled or disabled. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gafbc0a6e4113be03100fbae1314a8b395">I2C_FLAG_MASK</link>   ((uint32_t)0x0000FFFF)</para>
+
+<para>Checks whether the specified I2C flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gafbdf01a7dc3183de7af56456cab93551">__HAL_I2C_GET_FLAG</link>(__HANDLE__,  __FLAG__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga933e2ea67e86db857a06b70a93be1186">__HAL_I2C_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR1 &amp;= ~((__FLAG__) &amp; <link linkend="_group___i2_c_1gafbc0a6e4113be03100fbae1314a8b395">I2C_FLAG_MASK</link>))</para>
+
+<para>Clears the I2C pending flags which are cleared by writing 0 in a specific bit. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga15a0a1a04971d44f9a1b82cab10af24f">__HAL_I2C_CLEAR_ADDRFLAG</link>(__HANDLE__)</para>
+
+<para>Clears the I2C ADDR pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gae8e94c16809df16411862b11fea781db">__HAL_I2C_CLEAR_STOPFLAG</link>(__HANDLE__)</para>
+
+<para>Clears the I2C STOPF pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gacff412c47b0c1d63ef3b2a07f65988b7">__HAL_I2C_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga953b0d38414808db79da116842ed3262">I2C_CR1_PE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga3d6a35da02ca72537a15570912c80412">__HAL_I2C_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga953b0d38414808db79da116842ed3262">I2C_CR1_PE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gab2be8b623e1ad2d0d8d08d616fb85426">__HAL_I2C_FREQRANGE</link>(__PCLK__)   ((__PCLK__)/1000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gab28a0b2c20296a6343f8a8a0206fbb19">__HAL_I2C_RISE_TIME</link>(__FREQRANGE__,  __SPEED__)   (((__SPEED__) &lt;= 100000) ? ((__FREQRANGE__) + 1) : ((((__FREQRANGE__) * 300) / 1000) + 1))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gacb4cea5c5bde7614853ed761f055f731">__HAL_I2C_SPEED_STANDARD</link>(__PCLK__,  __SPEED__)   (((((__PCLK__)/((__SPEED__) &lt;&lt; 1)) &amp; <link linkend="_group___peripheral___registers___bits___definition_1ga5c8cb2bd83dd7dbdcf6ca4bbf4a841de">I2C_CCR_CCR</link>) &lt; 4)? 4:((__PCLK__) / ((__SPEED__) &lt;&lt; 1)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga0d48fe0b84f50a8fb3555b2b1ee056ca">__HAL_I2C_SPEED_FAST</link>(__PCLK__,  __SPEED__,  __DUTYCYCLE__)   (((__DUTYCYCLE__) == <link linkend="_group___i2_c__duty__cycle__in__fast__mode_1ga414df076d339793a7c761033346fd4ca">I2C_DUTYCYCLE_2</link>)? ((__PCLK__) / ((__SPEED__) * 3)) : (((__PCLK__) / ((__SPEED__) * 25)) | <link linkend="_group___i2_c__duty__cycle__in__fast__mode_1gae9d1f8a140f052c1fcbcd87b4181f78d">I2C_DUTYCYCLE_16_9</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gab249c789f95139f961313f7b0da9299d">__HAL_I2C_SPEED</link>(__PCLK__,  __SPEED__,  __DUTYCYCLE__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gac6a0c48e5aa3590922bc2a805233af59">__HAL_I2C_7BIT_ADD_WRITE</link>(__ADDRESS__)   ((uint8_t)((__ADDRESS__) &amp; (~<link linkend="_group___peripheral___registers___bits___definition_1ga8b7c20c81f79d17921718412b8fca6d7">I2C_OAR1_ADD0</link>)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga84cba81af221281f39424ed62774ba6b">__HAL_I2C_7BIT_ADD_READ</link>(__ADDRESS__)   ((uint8_t)((__ADDRESS__) | <link linkend="_group___peripheral___registers___bits___definition_1ga8b7c20c81f79d17921718412b8fca6d7">I2C_OAR1_ADD0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gad41ecb188680ad96c9f0f4c009b29e15">__HAL_I2C_10BIT_ADDRESS</link>(__ADDRESS__)   ((uint8_t)((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0x00FF))))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gacaeaa830bef5933fcf25a969c4d03f37">__HAL_I2C_10BIT_HEADER_WRITE</link>(__ADDRESS__)   ((uint8_t)((uint16_t)((uint16_t)(((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0x0300))) &gt;&gt; 7) | (uint16_t)(0xF0))))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gacc0da1baaf1a2621659248fa025a9bbb">__HAL_I2C_10BIT_HEADER_READ</link>(__ADDRESS__)   ((uint8_t)((uint16_t)((uint16_t)(((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0x0300))) &gt;&gt; 7) | (uint16_t)(0xF1))))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga09507cddfc40405e27cf6a2051469d5e">__HAL_I2C_MEM_ADD_MSB</link>(__ADDRESS__)   ((uint8_t)((uint16_t)(((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0xFF00))) &gt;&gt; 8)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga1b00b0af2f6707444b2d25e4068724a1">__HAL_I2C_MEM_ADD_LSB</link>(__ADDRESS__)   ((uint8_t)((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0x00FF))))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gae0d731df1b264d853703716c29309b9b">IS_I2C_CLOCK_SPEED</link>(SPEED)   (((SPEED) &gt; 0) &amp;&amp; ((SPEED) &lt;= 400000))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1gad84e8b9523d45b6105b4d5cb68994a79">IS_I2C_OWN_ADDRESS1</link>(ADDRESS1)   (((ADDRESS1) &amp; (uint32_t)(0xFFFFFC00)) == 0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_c_1ga83001d53612b83ee90730d3bb2732537">IS_I2C_OWN_ADDRESS2</link>(ADDRESS2)   (((ADDRESS2) &amp; (uint32_t)(0xFFFFFF01)) == 0)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___i2_c_1gaef355af8eab251ae2a19ee164ad81c37">HAL_I2C_StateTypeDef</link> { 
+<link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a91ba08634e08d7287940f1bc5a37eeff">HAL_I2C_STATE_RESET</link> = 0x00
+, <link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1">HAL_I2C_STATE_READY</link> = 0x01
+, <link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a0c503d6c0388f0d872b368557e278b5a">HAL_I2C_STATE_BUSY</link> = 0x02
+, <link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37acb3a9e3d4d1076e0f4e65f91ca0161bc">HAL_I2C_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a4ea4ecc2dc3cb64c4877c123d9d73170">HAL_I2C_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a066fa01c246e6663566170f251233d0d">HAL_I2C_STATE_MEM_BUSY_TX</link> = 0x32
+, <link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37ace78b825fa91b289f6414faab26c0f5f">HAL_I2C_STATE_MEM_BUSY_RX</link> = 0x42
+, <link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a378abf24301fe7a23620fd78ff3f168b">HAL_I2C_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37afe3c9b304462901099426a0d414be2a2">HAL_I2C_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___i2_c_1gad384b843d04a1b0b6da7b41f9869c1c8">HAL_I2C_ErrorTypeDef</link> { 
+<link linkend="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8a0988a63dfb4541fdb5d6fec495714dec">HAL_I2C_ERROR_NONE</link> = 0x00
+, <link linkend="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8a11974e9e61e9d82de28504f852e68d2b">HAL_I2C_ERROR_BERR</link> = 0x01
+, <link linkend="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8a94ba8165576b598d22906350720149de">HAL_I2C_ERROR_ARLO</link> = 0x02
+, <link linkend="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8af2df5ee36a4fc8d2b91d67bc624ebebf">HAL_I2C_ERROR_AF</link> = 0x04
+, 
+<link linkend="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8ae86993df90e9689716c4023ce1590a98">HAL_I2C_ERROR_OVR</link> = 0x08
+, <link linkend="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8ab17368b17831c4afc8d077103c6b42b9">HAL_I2C_ERROR_DMA</link> = 0x10
+, <link linkend="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8a3e0ea9661f8843e23a81d21b124a1e69">HAL_I2C_ERROR_TIMEOUT</link> = 0x20
+ }</para>
+
+<para>HAL I2C Error Code structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga9d29159a6da072287fff73743fd93260">HAL_I2C_Init</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1gabda634ba18f874775d1262c887d273b4">HAL_I2C_DeInit</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1gabe01a202c27b23fc150aa66af3130073">HAL_I2C_MspInit</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1ga2ec8d9b09854c732e2feed549278f048">HAL_I2C_MspDeInit</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga9440a306e25c7bd038cfa8619ec9a830">HAL_I2C_Master_Transmit</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga6b3cef8c309e88ed6d3b8deba149aac9">HAL_I2C_Master_Receive</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga9128c5f01406d0da061a2bce00b6866e">HAL_I2C_Slave_Transmit</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga92b445a5ca4f5b8195f1c10ebdc41687">HAL_I2C_Slave_Receive</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga33e725a824eb672f9f999d9d5ce088fb">HAL_I2C_Mem_Write</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga7b593a1b85bd989dd002ee209eae4ad2">HAL_I2C_Mem_Read</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1gade6a669a25f0e99ef7fd52724acb3dec">HAL_I2C_IsDeviceReady</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint32_t Trials, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga48b84e0cff0e44d10e10bf9cc5a6726d">HAL_I2C_Master_Transmit_IT</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga2aebdb302ffc0a4dff28dc2c8b59e1e9">HAL_I2C_Master_Receive_IT</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1gabb5814408402b2e9d07c0b414e64fc9d">HAL_I2C_Slave_Transmit_IT</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga48113a4abed4b32ac19da51babb530eb">HAL_I2C_Slave_Receive_IT</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1gab57ffc32b01392d8bcce3c7ec32b3120">HAL_I2C_Mem_Write_IT</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga2274a9d894a1dc783bc647f937200f65">HAL_I2C_Mem_Read_IT</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga978126d41a3a67384f4cb2fe3e6e7e8f">HAL_I2C_Master_Transmit_DMA</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga299f5e16a92826b9856c60265bc22cf2">HAL_I2C_Master_Receive_DMA</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga59e69e0da57150f980deea0d235f0397">HAL_I2C_Slave_Transmit_DMA</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1gad9dd42a10e5c108e30e6546cb64639c2">HAL_I2C_Slave_Receive_DMA</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1ga12a2a86be393359534f630cdd090d8bb">HAL_I2C_Mem_Write_DMA</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_c_1gab25b99552182d2486d8eb441fffdd0a4">HAL_I2C_Mem_Read_DMA</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1ga0cd3cc56c83b85a65e31c945c854d9d5">HAL_I2C_EV_IRQHandler</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1ga78739c0d57d55034a9c8bc39c8ee6bc2">HAL_I2C_ER_IRQHandler</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1gaa258e0eb52bbc34002a46dc2db89a84b">HAL_I2C_MasterTxCpltCallback</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1ga5782358f977ddf450b203fc075833a1d">HAL_I2C_MasterRxCpltCallback</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1ga7e086b3ee67187ea072aec6fb4d52aad">HAL_I2C_SlaveTxCpltCallback</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1gae23a5b1ce68867c35093ff2b5931e9a0">HAL_I2C_SlaveRxCpltCallback</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1ga874f6104d2cdbced9f2ab6e941ec58f0">HAL_I2C_MemTxCpltCallback</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1gac16a95413b35f05c5ce725fefd8531a5">HAL_I2C_MemRxCpltCallback</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_c_1ga4d5338cd64a656dfdc4154773bc4f05d">HAL_I2C_ErrorCallback</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i2_c_1gaef355af8eab251ae2a19ee164ad81c37">HAL_I2C_StateTypeDef</link> <link linkend="_group___i2_c_1gad63373b093502b83d5f9bd5e292385f0">HAL_I2C_GetState</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___i2_c_1ga5db5fcfa0c3fd3e45e176d000738f7bc">HAL_I2C_GetError</link> (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> *hi2c)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___i2_c_1gad41ecb188680ad96c9f0f4c009b29e15"/><section>
+    <title>__HAL_I2C_10BIT_ADDRESS</title>
+<indexterm><primary>__HAL_I2C_10BIT_ADDRESS</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_10BIT_ADDRESS</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_10BIT_ADDRESS( __ADDRESS__)   ((uint8_t)((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0x00FF))))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00384">384</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gacc0da1baaf1a2621659248fa025a9bbb"/><section>
+    <title>__HAL_I2C_10BIT_HEADER_READ</title>
+<indexterm><primary>__HAL_I2C_10BIT_HEADER_READ</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_10BIT_HEADER_READ</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_10BIT_HEADER_READ( __ADDRESS__)   ((uint8_t)((uint16_t)((uint16_t)(((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0x0300))) &gt;&gt; 7) | (uint16_t)(0xF1))))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00386">386</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gacaeaa830bef5933fcf25a969c4d03f37"/><section>
+    <title>__HAL_I2C_10BIT_HEADER_WRITE</title>
+<indexterm><primary>__HAL_I2C_10BIT_HEADER_WRITE</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_10BIT_HEADER_WRITE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_10BIT_HEADER_WRITE( __ADDRESS__)   ((uint8_t)((uint16_t)((uint16_t)(((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0x0300))) &gt;&gt; 7) | (uint16_t)(0xF0))))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00385">385</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga84cba81af221281f39424ed62774ba6b"/><section>
+    <title>__HAL_I2C_7BIT_ADD_READ</title>
+<indexterm><primary>__HAL_I2C_7BIT_ADD_READ</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_7BIT_ADD_READ</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_7BIT_ADD_READ( __ADDRESS__)   ((uint8_t)((__ADDRESS__) | <link linkend="_group___peripheral___registers___bits___definition_1ga8b7c20c81f79d17921718412b8fca6d7">I2C_OAR1_ADD0</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00382">382</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gac6a0c48e5aa3590922bc2a805233af59"/><section>
+    <title>__HAL_I2C_7BIT_ADD_WRITE</title>
+<indexterm><primary>__HAL_I2C_7BIT_ADD_WRITE</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_7BIT_ADD_WRITE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_7BIT_ADD_WRITE( __ADDRESS__)   ((uint8_t)((__ADDRESS__) &amp; (~<link linkend="_group___peripheral___registers___bits___definition_1ga8b7c20c81f79d17921718412b8fca6d7">I2C_OAR1_ADD0</link>)))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00381">381</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga15a0a1a04971d44f9a1b82cab10af24f"/><section>
+    <title>__HAL_I2C_CLEAR_ADDRFLAG</title>
+<indexterm><primary>__HAL_I2C_CLEAR_ADDRFLAG</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_CLEAR_ADDRFLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_CLEAR_ADDRFLAG( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{(__HANDLE__)-&gt;Instance-&gt;SR1;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;SR2;}<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Clears the I2C ADDR pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2C Handle. This parameter can be I2C where x: 1, 2, or 3 to select the I2C peripheral. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00359">359</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga933e2ea67e86db857a06b70a93be1186"/><section>
+    <title>__HAL_I2C_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_I2C_CLEAR_FLAG</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR1 &amp;= ~((__FLAG__) &amp; <link linkend="_group___i2_c_1gafbc0a6e4113be03100fbae1314a8b395">I2C_FLAG_MASK</link>))</computeroutput></para><para>
+
+<para>Clears the I2C pending flags which are cleared by writing 0 in a specific bit. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2C Handle. This parameter can be I2C where x: 1, 2, or 3 to select the I2C peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to clear. This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>I2C_FLAG_SMBALERT: SMBus Alert flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_TIMEOUT: Timeout or Tlow error flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_PECERR: PEC error in reception flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_OVR: Overrun/Underrun flag (Slave mode) </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_AF: Acknowledge failure flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_ARLO: Arbitration lost flag (Master mode) </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_BERR: Bus error flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00351">351</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gae8e94c16809df16411862b11fea781db"/><section>
+    <title>__HAL_I2C_CLEAR_STOPFLAG</title>
+<indexterm><primary>__HAL_I2C_CLEAR_STOPFLAG</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_CLEAR_STOPFLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_CLEAR_STOPFLAG( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{(__HANDLE__)-&gt;Instance-&gt;SR1;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga953b0d38414808db79da116842ed3262">I2C_CR1_PE</link>;}<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Clears the I2C STOPF pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2C Handle. This parameter can be I2C where x: 1, 2, or 3 to select the I2C peripheral. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00367">367</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga3d6a35da02ca72537a15570912c80412"/><section>
+    <title>__HAL_I2C_DISABLE</title>
+<indexterm><primary>__HAL_I2C_DISABLE</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga953b0d38414808db79da116842ed3262">I2C_CR1_PE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00371">371</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga33d0c7202ae298fa3ae128c5da49d455"/><section>
+    <title>__HAL_I2C_DISABLE_IT</title>
+<indexterm><primary>__HAL_I2C_DISABLE_IT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_DISABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;= (~(__INTERRUPT__)))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00290">290</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gacff412c47b0c1d63ef3b2a07f65988b7"/><section>
+    <title>__HAL_I2C_ENABLE</title>
+<indexterm><primary>__HAL_I2C_ENABLE</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga953b0d38414808db79da116842ed3262">I2C_CR1_PE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00370">370</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gac9d8b249b06b2d30f987acc9ceebd1d9"/><section>
+    <title>__HAL_I2C_ENABLE_IT</title>
+<indexterm><primary>__HAL_I2C_ENABLE_IT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_ENABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enable or disable the specified I2C interrupts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2C Handle. This parameter can be I2C where x: 1, 2, or 3 to select the I2C peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the interrupt source to enable or disable. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>I2C_IT_BUF: Buffer interrupt enable </para>
+</listitem>
+<listitem>
+<para>I2C_IT_EVT: Event interrupt enable </para>
+</listitem>
+<listitem>
+<para>I2C_IT_ERR: Error interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00289">289</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gab2be8b623e1ad2d0d8d08d616fb85426"/><section>
+    <title>__HAL_I2C_FREQRANGE</title>
+<indexterm><primary>__HAL_I2C_FREQRANGE</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_FREQRANGE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_FREQRANGE( __PCLK__)   ((__PCLK__)/1000000)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00373">373</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gafbdf01a7dc3183de7af56456cab93551"/><section>
+    <title>__HAL_I2C_GET_FLAG</title>
+<indexterm><primary>__HAL_I2C_GET_FLAG</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_GET_FLAG( __HANDLE__,  __FLAG__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((uint8_t)((__FLAG__)&#32;&gt;&gt;&#32;16))&#32;==&#32;0x01)?((((__HANDLE__)-&gt;Instance-&gt;SR1)&#32;&amp;&#32;((__FLAG__)&#32;&amp;&#32;<link linkend="_group___i2_c_1gafbc0a6e4113be03100fbae1314a8b395">I2C_FLAG_MASK</link>))&#32;==&#32;((__FLAG__)&#32;&amp;&#32;<link linkend="_group___i2_c_1gafbc0a6e4113be03100fbae1314a8b395">I2C_FLAG_MASK</link>)):&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((((__HANDLE__)-&gt;Instance-&gt;SR2)&#32;&amp;&#32;((__FLAG__)&#32;&amp;&#32;<link linkend="_group___i2_c_1gafbc0a6e4113be03100fbae1314a8b395">I2C_FLAG_MASK</link>))&#32;==&#32;((__FLAG__)&#32;&amp;&#32;<link linkend="_group___i2_c_1gafbc0a6e4113be03100fbae1314a8b395">I2C_FLAG_MASK</link>)))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00334">334</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga932024bf4a259e0cdaf9e50b38e3d41a"/><section>
+    <title>__HAL_I2C_GET_IT_SOURCE</title>
+<indexterm><primary>__HAL_I2C_GET_IT_SOURCE</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_GET_IT_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_GET_IT_SOURCE( __HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR2 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Checks if the specified I2C interrupt source is enabled or disabled. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2C Handle. This parameter can be I2C where x: 1, 2, or 3 to select the I2C peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the I2C interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>I2C_IT_BUF: Buffer interrupt enable </para>
+</listitem>
+<listitem>
+<para>I2C_IT_EVT: Event interrupt enable </para>
+</listitem>
+<listitem>
+<para>I2C_IT_ERR: Error interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">INTERRUPT</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00302">302</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga1b00b0af2f6707444b2d25e4068724a1"/><section>
+    <title>__HAL_I2C_MEM_ADD_LSB</title>
+<indexterm><primary>__HAL_I2C_MEM_ADD_LSB</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_MEM_ADD_LSB</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_MEM_ADD_LSB( __ADDRESS__)   ((uint8_t)((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0x00FF))))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00389">389</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga09507cddfc40405e27cf6a2051469d5e"/><section>
+    <title>__HAL_I2C_MEM_ADD_MSB</title>
+<indexterm><primary>__HAL_I2C_MEM_ADD_MSB</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_MEM_ADD_MSB</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_MEM_ADD_MSB( __ADDRESS__)   ((uint8_t)((uint16_t)(((uint16_t)((__ADDRESS__) &amp; (uint16_t)(0xFF00))) &gt;&gt; 8)))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00388">388</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga74c8fd72a78882720c28448ce8bd33d8"/><section>
+    <title>__HAL_I2C_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_I2C_RESET_HANDLE_STATE</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a91ba08634e08d7287940f1bc5a37eeff">HAL_I2C_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset I2C handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2C Handle. This parameter can be I2C where x: 1, 2, or 3 to select the I2C peripheral. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00276">276</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gab28a0b2c20296a6343f8a8a0206fbb19"/><section>
+    <title>__HAL_I2C_RISE_TIME</title>
+<indexterm><primary>__HAL_I2C_RISE_TIME</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_RISE_TIME</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_RISE_TIME( __FREQRANGE__,  __SPEED__)   (((__SPEED__) &lt;= 100000) ? ((__FREQRANGE__) + 1) : ((((__FREQRANGE__) * 300) / 1000) + 1))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00374">374</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gab249c789f95139f961313f7b0da9299d"/><section>
+    <title>__HAL_I2C_SPEED</title>
+<indexterm><primary>__HAL_I2C_SPEED</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_SPEED</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_SPEED( __PCLK__,  __SPEED__,  __DUTYCYCLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((__SPEED__)&#32;&lt;=&#32;100000)?&#32;(<link linkend="_group___i2_c_1gacb4cea5c5bde7614853ed761f055f731">__HAL_I2C_SPEED_STANDARD</link>((__PCLK__),&#32;(__SPEED__)))&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((<link linkend="_group___i2_c_1ga0d48fe0b84f50a8fb3555b2b1ee056ca">__HAL_I2C_SPEED_FAST</link>((__PCLK__),&#32;(__SPEED__),&#32;(__DUTYCYCLE__))&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga5c8cb2bd83dd7dbdcf6ca4bbf4a841de">I2C_CCR_CCR</link>)&#32;==&#32;0)?&#32;1&#32;:&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((<link linkend="_group___i2_c_1ga0d48fe0b84f50a8fb3555b2b1ee056ca">__HAL_I2C_SPEED_FAST</link>((__PCLK__),&#32;(__SPEED__),&#32;(__DUTYCYCLE__)))&#32;|&#32;<link linkend="_group___peripheral___registers___bits___definition_1gaea64e5d7eba609ac9a84964bc0bc2def">I2C_CCR_FS</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00377">377</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga0d48fe0b84f50a8fb3555b2b1ee056ca"/><section>
+    <title>__HAL_I2C_SPEED_FAST</title>
+<indexterm><primary>__HAL_I2C_SPEED_FAST</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_SPEED_FAST</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_SPEED_FAST( __PCLK__,  __SPEED__,  __DUTYCYCLE__)   (((__DUTYCYCLE__) == <link linkend="_group___i2_c__duty__cycle__in__fast__mode_1ga414df076d339793a7c761033346fd4ca">I2C_DUTYCYCLE_2</link>)? ((__PCLK__) / ((__SPEED__) * 3)) : (((__PCLK__) / ((__SPEED__) * 25)) | <link linkend="_group___i2_c__duty__cycle__in__fast__mode_1gae9d1f8a140f052c1fcbcd87b4181f78d">I2C_DUTYCYCLE_16_9</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00376">376</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gacb4cea5c5bde7614853ed761f055f731"/><section>
+    <title>__HAL_I2C_SPEED_STANDARD</title>
+<indexterm><primary>__HAL_I2C_SPEED_STANDARD</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>__HAL_I2C_SPEED_STANDARD</secondary></indexterm>
+<para><computeroutput>#define __HAL_I2C_SPEED_STANDARD( __PCLK__,  __SPEED__)   (((((__PCLK__)/((__SPEED__) &lt;&lt; 1)) &amp; <link linkend="_group___peripheral___registers___bits___definition_1ga5c8cb2bd83dd7dbdcf6ca4bbf4a841de">I2C_CCR_CCR</link>) &lt; 4)? 4:((__PCLK__) / ((__SPEED__) &lt;&lt; 1)))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00375">375</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gafbc0a6e4113be03100fbae1314a8b395"/><section>
+    <title>I2C_FLAG_MASK</title>
+<indexterm><primary>I2C_FLAG_MASK</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>I2C_FLAG_MASK</secondary></indexterm>
+<para><computeroutput>#define I2C_FLAG_MASK   ((uint32_t)0x0000FFFF)</computeroutput></para><para>
+
+<para>Checks whether the specified I2C flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the I2C Handle. This parameter can be I2C where x: 1, 2, or 3 to select the I2C peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>I2C_FLAG_SMBALERT: SMBus Alert flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_TIMEOUT: Timeout or Tlow error flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_PECERR: PEC error in reception flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_OVR: Overrun/Underrun flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_AF: Acknowledge failure flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_ARLO: Arbitration lost flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_BERR: Bus error flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_TXE: Data register empty flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_RXNE: Data register not empty flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_STOPF: Stop detection flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_ADD10: 10-bit header sent flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_BTF: Byte transfer finished flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_ADDR: Address sent flag Address matched flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_SB: Start bit flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_DUALF: Dual flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_SMBHOST: SMBus host header </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_SMBDEFAULT: SMBus default header </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_GENCALL: General call header flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_TRA: Transmitter/Receiver flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_BUSY: Bus busy flag </para>
+</listitem>
+<listitem>
+<para>I2C_FLAG_MSL: Master/Slave flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00333">333</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gae0d731df1b264d853703716c29309b9b"/><section>
+    <title>IS_I2C_CLOCK_SPEED</title>
+<indexterm><primary>IS_I2C_CLOCK_SPEED</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>IS_I2C_CLOCK_SPEED</secondary></indexterm>
+<para><computeroutput>#define IS_I2C_CLOCK_SPEED( SPEED)   (((SPEED) &gt; 0) &amp;&amp; ((SPEED) &lt;= 400000))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00391">391</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gad84e8b9523d45b6105b4d5cb68994a79"/><section>
+    <title>IS_I2C_OWN_ADDRESS1</title>
+<indexterm><primary>IS_I2C_OWN_ADDRESS1</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>IS_I2C_OWN_ADDRESS1</secondary></indexterm>
+<para><computeroutput>#define IS_I2C_OWN_ADDRESS1( ADDRESS1)   (((ADDRESS1) &amp; (uint32_t)(0xFFFFFC00)) == 0)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00392">392</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1ga83001d53612b83ee90730d3bb2732537"/><section>
+    <title>IS_I2C_OWN_ADDRESS2</title>
+<indexterm><primary>IS_I2C_OWN_ADDRESS2</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>IS_I2C_OWN_ADDRESS2</secondary></indexterm>
+<para><computeroutput>#define IS_I2C_OWN_ADDRESS2( ADDRESS2)   (((ADDRESS2) &amp; (uint32_t)(0xFFFFFF01)) == 0)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00393">393</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___i2_c_1gad384b843d04a1b0b6da7b41f9869c1c8"/><section>
+    <title>HAL_I2C_ErrorTypeDef</title>
+<indexterm><primary>HAL_I2C_ErrorTypeDef</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ErrorTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___i2_c_1gad384b843d04a1b0b6da7b41f9869c1c8">HAL_I2C_ErrorTypeDef</link></computeroutput></para><para>
+
+<para>HAL I2C Error Code structure definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_I2C_ERROR_NONE</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ERROR_NONE</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8a0988a63dfb4541fdb5d6fec495714dec"/>HAL_I2C_ERROR_NONE</entry><entry>
+<para>No error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_ERROR_BERR</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ERROR_BERR</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8a11974e9e61e9d82de28504f852e68d2b"/>HAL_I2C_ERROR_BERR</entry><entry>
+<para>BERR error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_ERROR_ARLO</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ERROR_ARLO</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8a94ba8165576b598d22906350720149de"/>HAL_I2C_ERROR_ARLO</entry><entry>
+<para>ARLO error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_ERROR_AF</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ERROR_AF</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8af2df5ee36a4fc8d2b91d67bc624ebebf"/>HAL_I2C_ERROR_AF</entry><entry>
+<para>AF error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_ERROR_OVR</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ERROR_OVR</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8ae86993df90e9689716c4023ce1590a98"/>HAL_I2C_ERROR_OVR</entry><entry>
+<para>OVR error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_ERROR_DMA</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ERROR_DMA</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8ab17368b17831c4afc8d077103c6b42b9"/>HAL_I2C_ERROR_DMA</entry><entry>
+<para>DMA transfer error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_ERROR_TIMEOUT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ERROR_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggad384b843d04a1b0b6da7b41f9869c1c8a3e0ea9661f8843e23a81d21b124a1e69"/>HAL_I2C_ERROR_TIMEOUT</entry><entry>
+<para>Timeout error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00110">110</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+<anchor xml:id="_group___i2_c_1gaef355af8eab251ae2a19ee164ad81c37"/><section>
+    <title>HAL_I2C_StateTypeDef</title>
+<indexterm><primary>HAL_I2C_StateTypeDef</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___i2_c_1gaef355af8eab251ae2a19ee164ad81c37">HAL_I2C_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL State structures definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_I2C_STATE_RESET</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a91ba08634e08d7287940f1bc5a37eeff"/>HAL_I2C_STATE_RESET</entry><entry>
+<para>I2C not yet initialized or disabled 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_STATE_READY</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1"/>HAL_I2C_STATE_READY</entry><entry>
+<para>I2C initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_STATE_BUSY</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a0c503d6c0388f0d872b368557e278b5a"/>HAL_I2C_STATE_BUSY</entry><entry>
+<para>I2C internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_STATE_BUSY_TX</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_BUSY_TX</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37acb3a9e3d4d1076e0f4e65f91ca0161bc"/>HAL_I2C_STATE_BUSY_TX</entry><entry>
+<para>Data Transmission process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_STATE_BUSY_RX</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_BUSY_RX</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a4ea4ecc2dc3cb64c4877c123d9d73170"/>HAL_I2C_STATE_BUSY_RX</entry><entry>
+<para>Data Reception process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_STATE_MEM_BUSY_TX</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_MEM_BUSY_TX</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a066fa01c246e6663566170f251233d0d"/>HAL_I2C_STATE_MEM_BUSY_TX</entry><entry>
+<para>Memory Data Transmission process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_STATE_MEM_BUSY_RX</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_MEM_BUSY_RX</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37ace78b825fa91b289f6414faab26c0f5f"/>HAL_I2C_STATE_MEM_BUSY_RX</entry><entry>
+<para>Memory Data Reception process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_STATE_TIMEOUT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37a378abf24301fe7a23620fd78ff3f168b"/>HAL_I2C_STATE_TIMEOUT</entry><entry>
+<para>I2C timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_I2C_STATE_ERROR</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___i2_c_1ggaef355af8eab251ae2a19ee164ad81c37afe3c9b304462901099426a0d414be2a2"/>HAL_I2C_STATE_ERROR</entry><entry>
+<para>I2C error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__i2c_8h_source_1l00093">93</link> of file <link linkend="_stm32f4xx__hal__i2c_8h_source">stm32f4xx_hal_i2c.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___i2_c_1gabda634ba18f874775d1262c887d273b4"/><section>
+    <title>HAL_I2C_DeInit()</title>
+<indexterm><primary>HAL_I2C_DeInit</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_DeInit (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga78739c0d57d55034a9c8bc39c8ee6bc2"/><section>
+    <title>HAL_I2C_ER_IRQHandler()</title>
+<indexterm><primary>HAL_I2C_ER_IRQHandler</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ER_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_ER_IRQHandler (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga4d5338cd64a656dfdc4154773bc4f05d"/><section>
+    <title>HAL_I2C_ErrorCallback()</title>
+<indexterm><primary>HAL_I2C_ErrorCallback</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_ErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_ErrorCallback (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga0cd3cc56c83b85a65e31c945c854d9d5"/><section>
+    <title>HAL_I2C_EV_IRQHandler()</title>
+<indexterm><primary>HAL_I2C_EV_IRQHandler</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_EV_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_EV_IRQHandler (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga5db5fcfa0c3fd3e45e176d000738f7bc"/><section>
+    <title>HAL_I2C_GetError()</title>
+<indexterm><primary>HAL_I2C_GetError</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_GetError</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_I2C_GetError (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gad63373b093502b83d5f9bd5e292385f0"/><section>
+    <title>HAL_I2C_GetState()</title>
+<indexterm><primary>HAL_I2C_GetState</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___i2_c_1gaef355af8eab251ae2a19ee164ad81c37">HAL_I2C_StateTypeDef</link> HAL_I2C_GetState (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga9d29159a6da072287fff73743fd93260"/><section>
+    <title>HAL_I2C_Init()</title>
+<indexterm><primary>HAL_I2C_Init</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Init (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gade6a669a25f0e99ef7fd52724acb3dec"/><section>
+    <title>HAL_I2C_IsDeviceReady()</title>
+<indexterm><primary>HAL_I2C_IsDeviceReady</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_IsDeviceReady</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_IsDeviceReady (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint32_t Trials, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga6b3cef8c309e88ed6d3b8deba149aac9"/><section>
+    <title>HAL_I2C_Master_Receive()</title>
+<indexterm><primary>HAL_I2C_Master_Receive</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Master_Receive</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Master_Receive (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga299f5e16a92826b9856c60265bc22cf2"/><section>
+    <title>HAL_I2C_Master_Receive_DMA()</title>
+<indexterm><primary>HAL_I2C_Master_Receive_DMA</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Master_Receive_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Master_Receive_DMA (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga2aebdb302ffc0a4dff28dc2c8b59e1e9"/><section>
+    <title>HAL_I2C_Master_Receive_IT()</title>
+<indexterm><primary>HAL_I2C_Master_Receive_IT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Master_Receive_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Master_Receive_IT (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga9440a306e25c7bd038cfa8619ec9a830"/><section>
+    <title>HAL_I2C_Master_Transmit()</title>
+<indexterm><primary>HAL_I2C_Master_Transmit</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Master_Transmit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Master_Transmit (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga978126d41a3a67384f4cb2fe3e6e7e8f"/><section>
+    <title>HAL_I2C_Master_Transmit_DMA()</title>
+<indexterm><primary>HAL_I2C_Master_Transmit_DMA</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Master_Transmit_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Master_Transmit_DMA (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga48b84e0cff0e44d10e10bf9cc5a6726d"/><section>
+    <title>HAL_I2C_Master_Transmit_IT()</title>
+<indexterm><primary>HAL_I2C_Master_Transmit_IT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Master_Transmit_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Master_Transmit_IT (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga5782358f977ddf450b203fc075833a1d"/><section>
+    <title>HAL_I2C_MasterRxCpltCallback()</title>
+<indexterm><primary>HAL_I2C_MasterRxCpltCallback</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_MasterRxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_MasterRxCpltCallback (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gaa258e0eb52bbc34002a46dc2db89a84b"/><section>
+    <title>HAL_I2C_MasterTxCpltCallback()</title>
+<indexterm><primary>HAL_I2C_MasterTxCpltCallback</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_MasterTxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_MasterTxCpltCallback (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga7b593a1b85bd989dd002ee209eae4ad2"/><section>
+    <title>HAL_I2C_Mem_Read()</title>
+<indexterm><primary>HAL_I2C_Mem_Read</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Mem_Read</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Mem_Read (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gab25b99552182d2486d8eb441fffdd0a4"/><section>
+    <title>HAL_I2C_Mem_Read_DMA()</title>
+<indexterm><primary>HAL_I2C_Mem_Read_DMA</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Mem_Read_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Mem_Read_DMA (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga2274a9d894a1dc783bc647f937200f65"/><section>
+    <title>HAL_I2C_Mem_Read_IT()</title>
+<indexterm><primary>HAL_I2C_Mem_Read_IT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Mem_Read_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Mem_Read_IT (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga33e725a824eb672f9f999d9d5ce088fb"/><section>
+    <title>HAL_I2C_Mem_Write()</title>
+<indexterm><primary>HAL_I2C_Mem_Write</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Mem_Write</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Mem_Write (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga12a2a86be393359534f630cdd090d8bb"/><section>
+    <title>HAL_I2C_Mem_Write_DMA()</title>
+<indexterm><primary>HAL_I2C_Mem_Write_DMA</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Mem_Write_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Mem_Write_DMA (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gab57ffc32b01392d8bcce3c7ec32b3120"/><section>
+    <title>HAL_I2C_Mem_Write_IT()</title>
+<indexterm><primary>HAL_I2C_Mem_Write_IT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Mem_Write_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Mem_Write_IT (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gac16a95413b35f05c5ce725fefd8531a5"/><section>
+    <title>HAL_I2C_MemRxCpltCallback()</title>
+<indexterm><primary>HAL_I2C_MemRxCpltCallback</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_MemRxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_MemRxCpltCallback (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga874f6104d2cdbced9f2ab6e941ec58f0"/><section>
+    <title>HAL_I2C_MemTxCpltCallback()</title>
+<indexterm><primary>HAL_I2C_MemTxCpltCallback</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_MemTxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_MemTxCpltCallback (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga2ec8d9b09854c732e2feed549278f048"/><section>
+    <title>HAL_I2C_MspDeInit()</title>
+<indexterm><primary>HAL_I2C_MspDeInit</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_MspDeInit (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gabe01a202c27b23fc150aa66af3130073"/><section>
+    <title>HAL_I2C_MspInit()</title>
+<indexterm><primary>HAL_I2C_MspInit</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_MspInit (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga92b445a5ca4f5b8195f1c10ebdc41687"/><section>
+    <title>HAL_I2C_Slave_Receive()</title>
+<indexterm><primary>HAL_I2C_Slave_Receive</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Slave_Receive</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Slave_Receive (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gad9dd42a10e5c108e30e6546cb64639c2"/><section>
+    <title>HAL_I2C_Slave_Receive_DMA()</title>
+<indexterm><primary>HAL_I2C_Slave_Receive_DMA</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Slave_Receive_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Slave_Receive_DMA (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga48113a4abed4b32ac19da51babb530eb"/><section>
+    <title>HAL_I2C_Slave_Receive_IT()</title>
+<indexterm><primary>HAL_I2C_Slave_Receive_IT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Slave_Receive_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Slave_Receive_IT (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga9128c5f01406d0da061a2bce00b6866e"/><section>
+    <title>HAL_I2C_Slave_Transmit()</title>
+<indexterm><primary>HAL_I2C_Slave_Transmit</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Slave_Transmit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Slave_Transmit (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga59e69e0da57150f980deea0d235f0397"/><section>
+    <title>HAL_I2C_Slave_Transmit_DMA()</title>
+<indexterm><primary>HAL_I2C_Slave_Transmit_DMA</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Slave_Transmit_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Slave_Transmit_DMA (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gabb5814408402b2e9d07c0b414e64fc9d"/><section>
+    <title>HAL_I2C_Slave_Transmit_IT()</title>
+<indexterm><primary>HAL_I2C_Slave_Transmit_IT</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_Slave_Transmit_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_I2C_Slave_Transmit_IT (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1gae23a5b1ce68867c35093ff2b5931e9a0"/><section>
+    <title>HAL_I2C_SlaveRxCpltCallback()</title>
+<indexterm><primary>HAL_I2C_SlaveRxCpltCallback</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_SlaveRxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_SlaveRxCpltCallback (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+<anchor xml:id="_group___i2_c_1ga7e086b3ee67187ea072aec6fb4d52aad"/><section>
+    <title>HAL_I2C_SlaveTxCpltCallback()</title>
+<indexterm><primary>HAL_I2C_SlaveTxCpltCallback</primary><secondary>I2C</secondary></indexterm>
+<indexterm><primary>I2C</primary><secondary>HAL_I2C_SlaveTxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_I2C_SlaveTxCpltCallback (<link linkend="_struct_i2_c___handle_type_def">I2C_HandleTypeDef</link> * hi2c)</computeroutput></para></section>
+</section>
+</section>

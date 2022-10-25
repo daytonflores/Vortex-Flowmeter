@@ -1,0 +1,35 @@
+\hypertarget{group___u_a_r_t___parity}{}\doxysection{UART\+\_\+\+Parity}
+\label{group___u_a_r_t___parity}\index{UART\_Parity@{UART\_Parity}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___parity_ga270dea6e1a92dd83fe58802450bdd60c}\label{group___u_a_r_t___parity_ga270dea6e1a92dd83fe58802450bdd60c}} 
+\#define {\bfseries UART\+\_\+\+PARITY\+\_\+\+NONE}~((uint32\+\_\+t)0x00000000)
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___parity_ga063b14ac42ef9e8f4246c17a586b14eb}\label{group___u_a_r_t___parity_ga063b14ac42ef9e8f4246c17a586b14eb}} 
+\#define {\bfseries UART\+\_\+\+PARITY\+\_\+\+EVEN}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}})
+\item 
+\mbox{\Hypertarget{group___u_a_r_t___parity_ga229615e64964f68f7a856ea6ffea359e}\label{group___u_a_r_t___parity_ga229615e64964f68f7a856ea6ffea359e}} 
+\#define {\bfseries UART\+\_\+\+PARITY\+\_\+\+ODD}~((uint32\+\_\+t)(\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}} $\vert$ \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2e159d36ab2c93a2c1942df60e9eebbe}{USART\+\_\+\+CR1\+\_\+\+PS}}))
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___parity_gaf2f542d273738ee3cb4a93d169827744}{IS\+\_\+\+UART\+\_\+\+PARITY}}(PARITY)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_a_r_t___parity_gaf2f542d273738ee3cb4a93d169827744}\label{group___u_a_r_t___parity_gaf2f542d273738ee3cb4a93d169827744}} 
+\index{UART\_Parity@{UART\_Parity}!IS\_UART\_PARITY@{IS\_UART\_PARITY}}
+\index{IS\_UART\_PARITY@{IS\_UART\_PARITY}!UART\_Parity@{UART\_Parity}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_PARITY}{IS\_UART\_PARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+PARITY(\begin{DoxyParamCaption}\item[{}]{PARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((PARITY) == UART\_PARITY\_NONE) || \(\backslash\)}
+\DoxyCodeLine{                                ((PARITY) == UART\_PARITY\_EVEN) || \(\backslash\)}
+\DoxyCodeLine{                                ((PARITY) == UART\_PARITY\_ODD))}
+
+\end{DoxyCode}

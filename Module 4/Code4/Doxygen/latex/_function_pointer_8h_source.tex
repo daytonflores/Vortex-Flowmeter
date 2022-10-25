@@ -1,0 +1,78 @@
+\hypertarget{_function_pointer_8h_source}{}\doxysection{Function\+Pointer.\+h}
+\label{_function_pointer_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FunctionPointer.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FunctionPointer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_FUNCTIONPOINTER\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_FUNCTIONPOINTER\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} void (*pvoidf\_t)(void);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_function_pointer}{FunctionPointer}} \{}
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34     \mbox{\hyperlink{classmbed_1_1_function_pointer_abf3c87c05438a407458f0a6dd46b050f}{FunctionPointer}}(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}) = 0);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{42     \mbox{\hyperlink{classmbed_1_1_function_pointer_ab73294508b61c6480a0d12c46dddd8a8}{FunctionPointer}}(T *\textcolor{keywordtype}{object}, \textcolor{keywordtype}{void} (T::*member)(\textcolor{keywordtype}{void})) \{}
+\DoxyCodeLine{43         \mbox{\hyperlink{classmbed_1_1_function_pointer_aac93ab5b370e11baa42f30283b436c11}{attach}}(\textcolor{keywordtype}{object}, member);}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_function_pointer_aac93ab5b370e11baa42f30283b436c11}{attach}}(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}) = 0);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{57     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_function_pointer_a3fd4d6e476c53cbe574683eff7696dc9}{attach}}(T *\textcolor{keywordtype}{object}, \textcolor{keywordtype}{void} (T::*member)(\textcolor{keywordtype}{void})) \{}
+\DoxyCodeLine{59         \_object = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(object);}
+\DoxyCodeLine{60         memcpy(\_member, (\textcolor{keywordtype}{char}*)\&member, \textcolor{keyword}{sizeof}(member));}
+\DoxyCodeLine{61         \_membercaller = \&FunctionPointer::membercaller<T>;}
+\DoxyCodeLine{62         \_function = 0;}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_function_pointer_adb57c6df09538d8399b20da386757a7a}{call}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     pvoidf\_t get\_function()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} (pvoidf\_t)\_function;}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} operator ()(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{private}:}
+\DoxyCodeLine{78     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{79     \textcolor{keyword}{static} \textcolor{keywordtype}{void} membercaller(\textcolor{keywordtype}{void} *\textcolor{keywordtype}{object}, \textcolor{keywordtype}{char} *member) \{}
+\DoxyCodeLine{80         T* o = \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(object);}
+\DoxyCodeLine{81         void (T::*m)(void);}
+\DoxyCodeLine{82         memcpy((\textcolor{keywordtype}{char}*)\&m, member, \textcolor{keyword}{sizeof}(m));}
+\DoxyCodeLine{83         (o-\/>*m)();}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     void (*\_function)(void);             \textcolor{comment}{// static function pointer -\/ 0 if none attached}}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} *\_object;                       \textcolor{comment}{// object this pointer -\/ 0 if none attached}}
+\DoxyCodeLine{88     \textcolor{keywordtype}{char} \_member[16];                    \textcolor{comment}{// raw member function pointer storage -\/ converted back by registered \_membercaller}}
+\DoxyCodeLine{89     void (*\_membercaller)(\textcolor{keywordtype}{void}*, \textcolor{keywordtype}{char}*); \textcolor{comment}{// registered membercaller function to convert back and call \_member on \_object}}
+\DoxyCodeLine{90 \};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

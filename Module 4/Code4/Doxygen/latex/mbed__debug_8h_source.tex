@@ -1,0 +1,60 @@
+\hypertarget{mbed__debug_8h_source}{}\doxysection{mbed\+\_\+debug.\+h}
+\label{mbed__debug_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/mbed\_debug.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/mbed\_debug.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_DEBUG\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_DEBUG\_H}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}device.h"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{21 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#if DEVICE\_STDIO\_MESSAGES}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <stdarg.h>}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{32 \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} debug(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, ...) \{}
+\DoxyCodeLine{33     va\_list args;}
+\DoxyCodeLine{34     va\_start(args, format);}
+\DoxyCodeLine{35     vfprintf(stderr, format, args);}
+\DoxyCodeLine{36     va\_end(args);}
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{47 \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} debug\_if(\textcolor{keywordtype}{int} condition, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, ...) \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{if} (condition == 1) \{}
+\DoxyCodeLine{49         va\_list args;}
+\DoxyCodeLine{50         va\_start(args, format);}
+\DoxyCodeLine{51         vfprintf(stderr, format, args);}
+\DoxyCodeLine{52         va\_end(args);}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{57 \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} debug(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, ...) \{\}}
+\DoxyCodeLine{58 \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} debug\_if(\textcolor{keywordtype}{int} condition, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, ...) \{\}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{63 \}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,71 @@
+\hypertarget{_dir_handle_8h_source}{}\doxysection{Dir\+Handle.\+h}
+\label{_dir_handle_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/DirHandle.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/DirHandle.h}}
+\mbox{\hyperlink{_dir_handle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_DIRHANDLE\_H}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_DIRHANDLE\_H}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00019}00019 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) || defined(\_\_ICCARM\_\_)}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00020}00020 \textcolor{preprocessor}{\#   define NAME\_MAX 255}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00021}00021 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} mode\_t;}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00023}00023 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00024}00024 \textcolor{preprocessor}{\#   include <sys/syslimits.h>}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00025}00025 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00027}00027 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_handle_8h}{FileHandle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00029}\mbox{\hyperlink{structdirent}{00029}} \textcolor{keyword}{struct }\mbox{\hyperlink{structdirent}{dirent}} \{}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00030}\mbox{\hyperlink{structdirent_a28ed4d956394cb6d3311f13cf281b888}{00030}}     \textcolor{keywordtype}{char} \mbox{\hyperlink{structdirent_a28ed4d956394cb6d3311f13cf281b888}{d\_name}}[NAME\_MAX+1];}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00031}00031 \};}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00033}00033 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00048}\mbox{\hyperlink{classmbed_1_1_dir_handle}{00048}} \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_dir_handle}{DirHandle}} \{}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00050}00050 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00057}\mbox{\hyperlink{classmbed_1_1_dir_handle_abfcbbd1da4e5837c9ca1a3c568f52d23}{00057}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_dir_handle_abfcbbd1da4e5837c9ca1a3c568f52d23}{closedir}}()=0;}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00067}\mbox{\hyperlink{classmbed_1_1_dir_handle_aa49ff2ef9ccb8c6fbed92cddf9909bd1}{00067}}     \textcolor{keyword}{virtual} \textcolor{keyword}{struct }\mbox{\hyperlink{structdirent}{dirent}} *\mbox{\hyperlink{classmbed_1_1_dir_handle_aa49ff2ef9ccb8c6fbed92cddf9909bd1}{readdir}}()=0;}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00071}\mbox{\hyperlink{classmbed_1_1_dir_handle_a7de4203fc3947d4191c0ec5ab75c0de9}{00071}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_dir_handle_a7de4203fc3947d4191c0ec5ab75c0de9}{rewinddir}}()=0;}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00079}\mbox{\hyperlink{classmbed_1_1_dir_handle_a4c8b5ba35659cafddcc85b280854d215}{00079}}     \textcolor{keyword}{virtual} off\_t \mbox{\hyperlink{classmbed_1_1_dir_handle_a4c8b5ba35659cafddcc85b280854d215}{telldir}}() \{ \textcolor{keywordflow}{return} -\/1; \}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00085}\mbox{\hyperlink{classmbed_1_1_dir_handle_af6ac114f379a7a8da1dce8843a601820}{00085}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_dir_handle_af6ac114f379a7a8da1dce8843a601820}{seekdir}}(off\_t location) \{ \}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00087}\mbox{\hyperlink{classmbed_1_1_dir_handle_a9eab46a6c55a45f5d5e28586a89ab4b6}{00087}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_dir_handle_a9eab46a6c55a45f5d5e28586a89ab4b6}{\string~DirHandle}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00088}00088 \};}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00090}00090 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00092}\mbox{\hyperlink{_dir_handle_8h_a7d5f081155cbd798e6c01a4f37a62698}{00092}} \textcolor{keyword}{typedef} \mbox{\hyperlink{classmbed_1_1_dir_handle}{mbed::DirHandle}} \mbox{\hyperlink{_dir_handle_8h_a7d5f081155cbd798e6c01a4f37a62698}{DIR}};}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00094}00094 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00095}\mbox{\hyperlink{_dir_handle_8h_aab3004462f9600cbca87f31807214b23}{00095}}     \mbox{\hyperlink{classmbed_1_1_dir_handle}{DIR}} *\mbox{\hyperlink{_dir_handle_8h_aab3004462f9600cbca87f31807214b23}{opendir}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}*);}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00096}\mbox{\hyperlink{_dir_handle_8h_a7e8226cf83a9afb3578268c806fb797a}{00096}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structdirent}{dirent}} *\mbox{\hyperlink{_dir_handle_8h_a7e8226cf83a9afb3578268c806fb797a}{readdir}}(\mbox{\hyperlink{classmbed_1_1_dir_handle}{DIR}} *);}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00097}\mbox{\hyperlink{_dir_handle_8h_a008fe2cb2468b06197c2f9bc406300a4}{00097}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{_dir_handle_8h_a008fe2cb2468b06197c2f9bc406300a4}{closedir}}(\mbox{\hyperlink{classmbed_1_1_dir_handle}{DIR}}*);}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00098}\mbox{\hyperlink{_dir_handle_8h_a3fb58a6b4088367ccb71909e80ebbb1d}{00098}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{_dir_handle_8h_a3fb58a6b4088367ccb71909e80ebbb1d}{rewinddir}}(\mbox{\hyperlink{classmbed_1_1_dir_handle}{DIR}}*);}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00099}\mbox{\hyperlink{_dir_handle_8h_a02343c3edead3efa2926e37d340b9cbe}{00099}}     \textcolor{keywordtype}{long} \mbox{\hyperlink{_dir_handle_8h_a02343c3edead3efa2926e37d340b9cbe}{telldir}}(\mbox{\hyperlink{classmbed_1_1_dir_handle}{DIR}}*);}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00100}\mbox{\hyperlink{_dir_handle_8h_a32bca3b3ef688933b676d4511e78cb5d}{00100}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{_dir_handle_8h_a32bca3b3ef688933b676d4511e78cb5d}{seekdir}}(\mbox{\hyperlink{classmbed_1_1_dir_handle}{DIR}}*, \textcolor{keywordtype}{long});}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00101}\mbox{\hyperlink{_dir_handle_8h_a62a2a28943c326ccd2abd27293002b98}{00101}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{_dir_handle_8h_a62a2a28943c326ccd2abd27293002b98}{mkdir}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, mode\_t n);}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00102}00102 \};}
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_dir_handle_8h_source_l00104}00104 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* MBED\_DIRHANDLE\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

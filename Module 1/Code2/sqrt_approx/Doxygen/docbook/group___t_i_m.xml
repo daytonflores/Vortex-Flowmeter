@@ -1,0 +1,1368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m" xml:lang="en-US">
+<title>TIM</title>
+<indexterm><primary>TIM</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___t_i_m___exported___constants">TIM_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_t_i_m___base___init_type_def">TIM_Base_InitTypeDef</link></para>
+
+<para>TIM Time base Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___o_c___init_type_def">TIM_OC_InitTypeDef</link></para>
+
+<para>TIM Output Compare Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___one_pulse___init_type_def">TIM_OnePulse_InitTypeDef</link></para>
+
+<para>TIM One Pulse Mode Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___i_c___init_type_def">TIM_IC_InitTypeDef</link></para>
+
+<para>TIM Input Capture Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___encoder___init_type_def">TIM_Encoder_InitTypeDef</link></para>
+
+<para>TIM Encoder Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___clock_config_type_def">TIM_ClockConfigTypeDef</link></para>
+
+<para>Clock Configuration Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___clear_input_config_type_def">TIM_ClearInputConfigTypeDef</link></para>
+
+<para>Clear Input Configuration Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___slave_config_type_def">TIM_SlaveConfigTypeDef</link></para>
+
+<para>TIM Slave configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_t_i_m___handle_type_def">TIM_HandleTypeDef</link></para>
+
+<para>TIM Time Base Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gace20fd4e38231b9682fbc83a80ec19a3">__HAL_TIM_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc">HAL_TIM_STATE_RESET</link>)</para>
+
+<para>Reset TIM handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga1a90544705059e9f19f991651623b0c0">__HAL_TIM_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1|=(<link linkend="_group___peripheral___registers___bits___definition_1ga93d86355e5e3b399ed45e1ca83abed2a">TIM_CR1_CEN</link>))</para>
+
+<para>Enable the TIM peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga04890dcef3ed061854721a3672585607">__HAL_TIM_MOE_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;BDTR|=(<link linkend="_group___peripheral___registers___bits___definition_1ga277a096614829feba2d0a4fbb7d3dffc">TIM_BDTR_MOE</link>))</para>
+
+<para>Enable the TIM main Output. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga679b7f970f7ad7001de9d6f7b211d667">CCER_CCxE_MASK</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga3f494b9881e7b97bb2d79f7ad4e79937">TIM_CCER_CC1E</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga76392a4d63674cd0db0a55762458f16c">TIM_CCER_CC2E</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga1da114e666b61f09cf25f50cdaa7f81f">TIM_CCER_CC3E</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga940b041ab5975311f42f26d314a4b621">TIM_CCER_CC4E</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gadf1ac288d53d93679c086f9179dea88b">CCER_CCxNE_MASK</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga813056b3f90a13c4432aeba55f28957e">TIM_CCER_CC1NE</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga6a784649120eddec31998f34323d4156">TIM_CCER_CC2NE</link> | <link linkend="_group___peripheral___registers___bits___definition_1gad46cce61d3bd83b64257ba75e54ee1aa">TIM_CCER_CC3NE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga6a5e653e0e06a04151b74eb1a5f96eb6">__HAL_TIM_DISABLE</link>(__HANDLE__)</para>
+
+<para>Disable the TIM peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga69d63e147faeca8909e9679f684c0325">__HAL_TIM_MOE_DISABLE</link>(__HANDLE__)</para>
+
+<para>Disable the TIM main Output. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga4d69943bc4716743c78e3194e259097e">__HAL_TIM_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;DIER |= (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gabb91ccd46cd7204c87170a1ea5b38135">__HAL_TIM_ENABLE_DMA</link>(__HANDLE__,  __DMA__)   ((__HANDLE__)-&gt;Instance-&gt;DIER |= (__DMA__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga31d67e905bc62e3142179dc4bbf8ba64">__HAL_TIM_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;DIER &amp;= ~(__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga1a6e8b19efd23fd0295802d904c4702f">__HAL_TIM_DISABLE_DMA</link>(__HANDLE__,  __DMA__)   ((__HANDLE__)-&gt;Instance-&gt;DIER &amp;= ~(__DMA__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga96d98c66ad9d85f00c148de99888ef19">__HAL_TIM_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp;(__FLAG__)) == (__FLAG__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga2fe74db6b8cb4badd04ed48e0f5ac7b4">__HAL_TIM_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga5d7a45eb9aa876fe115fbdcfe07d07a7">__HAL_TIM_GET_ITSTATUS</link>(__HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;DIER &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gaea68155ce77e591e0c2582def061d6f0">__HAL_TIM_CLEAR_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gad8a9e037f1c12b9a37952e74054d7e79">__HAL_TIM_DIRECTION_STATUS</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;(<link linkend="_group___peripheral___registers___bits___definition_1gacea10770904af189f3aaeb97b45722aa">TIM_CR1_DIR</link>)) == (<link linkend="_group___peripheral___registers___bits___definition_1gacea10770904af189f3aaeb97b45722aa">TIM_CR1_DIR</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga64fdbe2a68fc8459071ee0dcb9096e34">__HAL_TIM_PRESCALER</link>   (__HANDLE__, __PRESC__)       ((__HANDLE__)-&gt;Instance-&gt;PSC |= (__PRESC__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga16daed101c796beb70b2ed7afc13dd5f">__HAL_TIM_SetICPrescalerValue</link>(__HANDLE__,  __CHANNEL__,  __ICPSC__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gacd53fb2c9e97b5c124b97145d0c09320">__HAL_TIM_ResetICPrescalerValue</link>(__HANDLE__,  __CHANNEL__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gad26791543e5289c81b6e169c38582de9">__HAL_TIM_SetCompare</link>(__HANDLE__,  __CHANNEL__,  __COMPARE__)   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)(&amp;((__HANDLE__)-&gt;Instance-&gt;CCR1) + ((__CHANNEL__) &gt;&gt; 2)) = (__COMPARE__))</para>
+
+<para>Sets the TIM Capture Compare Register value on runtime without calling another time ConfigChannel function. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga460481f0401b3ff3d723f73ebb86c7dd">__HAL_TIM_GetCompare</link>(__HANDLE__,  __CHANNEL__)     (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)(&amp;((__HANDLE__)-&gt;Instance-&gt;CCR1) + ((__CHANNEL__) &gt;&gt; 2)))</para>
+
+<para>Gets the TIM Capture Compare Register value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gacf163ad27212ed63b75588208a493679">__HAL_TIM_SetCounter</link>(__HANDLE__,  __COUNTER__)   ((__HANDLE__)-&gt;Instance-&gt;CNT = (__COUNTER__))</para>
+
+<para>Sets the TIM Counter Register value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga6b4401a1d55628b4c5f3de1776b3b932">__HAL_TIM_GetCounter</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CNT)</para>
+
+<para>Gets the TIM Counter Register value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gac8fc0ed9e0ac060bb27e09dd1603f345">__HAL_TIM_SetAutoreload</link>(__HANDLE__,  __AUTORELOAD__)</para>
+
+<para>Sets the TIM Autoreload Register value on runtime without calling another time any Init function. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga32d5ec268d72c142fe090be951731518">__HAL_TIM_GetAutoreload</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;ARR)</para>
+
+<para>Gets the TIM Autoreload Register value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gade878c10557a6d7ab9f675ed2c91070b">__HAL_TIM_SetClockDivision</link>(__HANDLE__,  __CKD__)</para>
+
+<para>Sets the TIM Clock Division value on runtime without calling another time any Init function. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga96d576fead1a1d314c51504244522661">__HAL_TIM_GetClockDivision</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp; <link linkend="_group___peripheral___registers___bits___definition_1gacacc4ff7e5b75fd2e4e6b672ccd33a72">TIM_CR1_CKD</link>)</para>
+
+<para>Gets the TIM Clock Division value on runtime. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1gac842aeb230e34f4effb920b09801bab2">__HAL_TIM_SetICPrescaler</link>(__HANDLE__,  __CHANNEL__,  __ICPSC__)</para>
+
+<para>Sets the TIM Input Capture prescaler on runtime without calling another time <link linkend="_group___s_t_m32_f4xx___h_a_l_1ga34805dabaf748c6eb823275dad2f19f5">HAL_TIM_IC_ConfigChannel()</link> function. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m_1ga4e49ad7c43343e71a4c6f0163295722a">__HAL_TIM_GetICPrescaler</link>(__HANDLE__,  __CHANNEL__)</para>
+
+<para>Gets the TIM Input Capture prescaler on runtime. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___t_i_m_1gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</link> { 
+<link linkend="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc">HAL_TIM_STATE_RESET</link> = 0x00
+, <link linkend="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca4545554d7fa04d17e78d69d17cb7e4b3">HAL_TIM_STATE_READY</link> = 0x01
+, <link linkend="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca1ddbfef19ad0562eb8143919b710cc12">HAL_TIM_STATE_BUSY</link> = 0x02
+, <link linkend="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca03e3339df71a74ac37820f72c2989371">HAL_TIM_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca318cceb243cb9ca9e01833913e4f90ea">HAL_TIM_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___t_i_m_1gaa3fa7bcbb4707f1151ccfc90a8cf9706">HAL_TIM_ActiveChannel</link> { 
+<link linkend="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a2024e95c48b58ec9b2115faa276e3fad">HAL_TIM_ACTIVE_CHANNEL_1</link> = 0x01
+, <link linkend="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706ae80e6a1dd1c479f504219c0fec2f3322">HAL_TIM_ACTIVE_CHANNEL_2</link> = 0x02
+, <link linkend="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706acc3fcf4ee6d91744c4bc6a5eccde2601">HAL_TIM_ACTIVE_CHANNEL_3</link> = 0x04
+, <link linkend="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a7d98ec7e385cacb3aaa6cec601fa6ab6">HAL_TIM_ACTIVE_CHANNEL_4</link> = 0x08
+, 
+<link linkend="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a574f72ac3bb41fe660318aa42dfdc98d">HAL_TIM_ACTIVE_CHANNEL_CLEARED</link> = 0x00
+ }</para>
+
+<para>HAL Active channel structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m_1ga2fe74db6b8cb4badd04ed48e0f5ac7b4"/><section>
+    <title>__HAL_TIM_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_TIM_CLEAR_FLAG</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_CLEAR_FLAG( __HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01073">1073</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gaea68155ce77e591e0c2582def061d6f0"/><section>
+    <title>__HAL_TIM_CLEAR_IT</title>
+<indexterm><primary>__HAL_TIM_CLEAR_IT</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_CLEAR_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_CLEAR_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01076">1076</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gad8a9e037f1c12b9a37952e74054d7e79"/><section>
+    <title>__HAL_TIM_DIRECTION_STATUS</title>
+<indexterm><primary>__HAL_TIM_DIRECTION_STATUS</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_DIRECTION_STATUS</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DIRECTION_STATUS( __HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;(<link linkend="_group___peripheral___registers___bits___definition_1gacea10770904af189f3aaeb97b45722aa">TIM_CR1_DIR</link>)) == (<link linkend="_group___peripheral___registers___bits___definition_1gacea10770904af189f3aaeb97b45722aa">TIM_CR1_DIR</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01078">1078</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga6a5e653e0e06a04151b74eb1a5f96eb6"/><section>
+    <title>__HAL_TIM_DISABLE</title>
+<indexterm><primary>__HAL_TIM_DISABLE</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DISABLE( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(((__HANDLE__)-&gt;Instance-&gt;CCER&#32;&amp;&#32;<link linkend="_group___t_i_m_1ga679b7f970f7ad7001de9d6f7b211d667">CCER_CCxE_MASK</link>)&#32;==&#32;0)&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(((__HANDLE__)-&gt;Instance-&gt;CCER&#32;&amp;&#32;<link linkend="_group___t_i_m_1gadf1ac288d53d93679c086f9179dea88b">CCER_CCxNE_MASK</link>)&#32;==&#32;0)&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;&amp;=&#32;~(<link linkend="_group___peripheral___registers___bits___definition_1ga93d86355e5e3b399ed45e1ca83abed2a">TIM_CR1_CEN</link>);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Disable the TIM peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01039">1039</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga1a6e8b19efd23fd0295802d904c4702f"/><section>
+    <title>__HAL_TIM_DISABLE_DMA</title>
+<indexterm><primary>__HAL_TIM_DISABLE_DMA</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_DISABLE_DMA</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DISABLE_DMA( __HANDLE__,  __DMA__)   ((__HANDLE__)-&gt;Instance-&gt;DIER &amp;= ~(__DMA__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01071">1071</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga31d67e905bc62e3142179dc4bbf8ba64"/><section>
+    <title>__HAL_TIM_DISABLE_IT</title>
+<indexterm><primary>__HAL_TIM_DISABLE_IT</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_DISABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;DIER &amp;= ~(__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01070">1070</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga1a90544705059e9f19f991651623b0c0"/><section>
+    <title>__HAL_TIM_ENABLE</title>
+<indexterm><primary>__HAL_TIM_ENABLE</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1|=(<link linkend="_group___peripheral___registers___bits___definition_1ga93d86355e5e3b399ed45e1ca83abed2a">TIM_CR1_CEN</link>))</computeroutput></para><para>
+
+<para>Enable the TIM peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01019">1019</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gabb91ccd46cd7204c87170a1ea5b38135"/><section>
+    <title>__HAL_TIM_ENABLE_DMA</title>
+<indexterm><primary>__HAL_TIM_ENABLE_DMA</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_ENABLE_DMA</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ENABLE_DMA( __HANDLE__,  __DMA__)   ((__HANDLE__)-&gt;Instance-&gt;DIER |= (__DMA__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01069">1069</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga4d69943bc4716743c78e3194e259097e"/><section>
+    <title>__HAL_TIM_ENABLE_IT</title>
+<indexterm><primary>__HAL_TIM_ENABLE_IT</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ENABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;DIER |= (__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01068">1068</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga96d98c66ad9d85f00c148de99888ef19"/><section>
+    <title>__HAL_TIM_GET_FLAG</title>
+<indexterm><primary>__HAL_TIM_GET_FLAG</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp;(__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01072">1072</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga5d7a45eb9aa876fe115fbdcfe07d07a7"/><section>
+    <title>__HAL_TIM_GET_ITSTATUS</title>
+<indexterm><primary>__HAL_TIM_GET_ITSTATUS</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_GET_ITSTATUS</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GET_ITSTATUS( __HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;DIER &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01075">1075</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga32d5ec268d72c142fe090be951731518"/><section>
+    <title>__HAL_TIM_GetAutoreload</title>
+<indexterm><primary>__HAL_TIM_GetAutoreload</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_GetAutoreload</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GetAutoreload( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;ARR)</computeroutput></para><para>
+
+<para>Gets the TIM Autoreload Register value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01155">1155</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga96d576fead1a1d314c51504244522661"/><section>
+    <title>__HAL_TIM_GetClockDivision</title>
+<indexterm><primary>__HAL_TIM_GetClockDivision</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_GetClockDivision</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GetClockDivision( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp; <link linkend="_group___peripheral___registers___bits___definition_1gacacc4ff7e5b75fd2e4e6b672ccd33a72">TIM_CR1_CKD</link>)</computeroutput></para><para>
+
+<para>Gets the TIM Clock Division value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01179">1179</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga460481f0401b3ff3d723f73ebb86c7dd"/><section>
+    <title>__HAL_TIM_GetCompare</title>
+<indexterm><primary>__HAL_TIM_GetCompare</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_GetCompare</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GetCompare( __HANDLE__,  __CHANNEL__)     (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)(&amp;((__HANDLE__)-&gt;Instance-&gt;CCR1) + ((__CHANNEL__) &gt;&gt; 2)))</computeroutput></para><para>
+
+<para>Gets the TIM Capture Compare Register value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__CHANNEL__</entry><entry>
+<para>: TIM Channel associated with the capture compare register This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: get capture/compare 1 register value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: get capture/compare 2 register value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: get capture/compare 3 register value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: get capture/compare 4 register value </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01120">1120</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga6b4401a1d55628b4c5f3de1776b3b932"/><section>
+    <title>__HAL_TIM_GetCounter</title>
+<indexterm><primary>__HAL_TIM_GetCounter</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_GetCounter</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GetCounter( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CNT)</computeroutput></para><para>
+
+<para>Gets the TIM Counter Register value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01136">1136</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga4e49ad7c43343e71a4c6f0163295722a"/><section>
+    <title>__HAL_TIM_GetICPrescaler</title>
+<indexterm><primary>__HAL_TIM_GetICPrescaler</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_GetICPrescaler</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_GetICPrescaler( __HANDLE__,  __CHANNEL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1gab46b7186665f5308cd2ca52acfb63e72">TIM_CCMR1_IC1PSC</link>)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;(((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga5e8e704f9ce5742f45e15e3b3126aa9d">TIM_CCMR1_IC2PSC</link>)&#32;&gt;&gt;&#32;8)&#32;:\
+&#32;&#32;&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1gafc3d11f2e968752bc9ec7131c986c3a6">TIM_CCMR2_IC3PSC</link>)&#32;:\
+&#32;&#32;&#32;(((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;&#32;<link linkend="_group___peripheral___registers___bits___definition_1ga6fd7591e2de10272f7fafb08cdd1b7b0">TIM_CCMR2_IC4PSC</link>))&#32;&gt;&gt;&#32;8)
+</programlisting><para>
+
+<para>Gets the TIM Input Capture prescaler on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__CHANNEL__</entry><entry>
+<para>: TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: get input capture 1 prescaler value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: get input capture 2 prescaler value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: get input capture 3 prescaler value </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: get input capture 4 prescaler value </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01216">1216</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga69d63e147faeca8909e9679f684c0325"/><section>
+    <title>__HAL_TIM_MOE_DISABLE</title>
+<indexterm><primary>__HAL_TIM_MOE_DISABLE</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_MOE_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_MOE_DISABLE( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(((__HANDLE__)-&gt;Instance-&gt;CCER&#32;&amp;&#32;<link linkend="_group___t_i_m_1ga679b7f970f7ad7001de9d6f7b211d667">CCER_CCxE_MASK</link>)&#32;==&#32;0)&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(((__HANDLE__)-&gt;Instance-&gt;CCER&#32;&amp;&#32;<link linkend="_group___t_i_m_1gadf1ac288d53d93679c086f9179dea88b">CCER_CCxNE_MASK</link>)&#32;==&#32;0)&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;BDTR&#32;&amp;=&#32;~(<link linkend="_group___peripheral___registers___bits___definition_1ga277a096614829feba2d0a4fbb7d3dffc">TIM_BDTR_MOE</link>);&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Disable the TIM main Output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01057">1057</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga04890dcef3ed061854721a3672585607"/><section>
+    <title>__HAL_TIM_MOE_ENABLE</title>
+<indexterm><primary>__HAL_TIM_MOE_ENABLE</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_MOE_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_MOE_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;BDTR|=(<link linkend="_group___peripheral___registers___bits___definition_1ga277a096614829feba2d0a4fbb7d3dffc">TIM_BDTR_MOE</link>))</computeroutput></para><para>
+
+<para>Enable the TIM main Output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01026">1026</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga64fdbe2a68fc8459071ee0dcb9096e34"/><section>
+    <title>__HAL_TIM_PRESCALER</title>
+<indexterm><primary>__HAL_TIM_PRESCALER</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_PRESCALER</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_PRESCALER   (__HANDLE__, __PRESC__)       ((__HANDLE__)-&gt;Instance-&gt;PSC |= (__PRESC__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01079">1079</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gace20fd4e38231b9682fbc83a80ec19a3"/><section>
+    <title>__HAL_TIM_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_TIM_RESET_HANDLE_STATE</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc">HAL_TIM_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset TIM handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01012">1012</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gacd53fb2c9e97b5c124b97145d0c09320"/><section>
+    <title>__HAL_TIM_ResetICPrescalerValue</title>
+<indexterm><primary>__HAL_TIM_ResetICPrescalerValue</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_ResetICPrescalerValue</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_ResetICPrescalerValue( __HANDLE__,  __CHANNEL__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;=&#32;(uint16_t)~TIM_CCMR1_IC1PSC)&#32;:\
+&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;&amp;=&#32;(uint16_t)~<link linkend="_group___peripheral___registers___bits___definition_1ga5e8e704f9ce5742f45e15e3b3126aa9d">TIM_CCMR1_IC2PSC</link>)&#32;:\
+&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;=&#32;(uint16_t)~TIM_CCMR2_IC3PSC)&#32;:\
+&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;&amp;=&#32;(uint16_t)~<link linkend="_group___peripheral___registers___bits___definition_1ga6fd7591e2de10272f7fafb08cdd1b7b0">TIM_CCMR2_IC4PSC</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01087">1087</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gac8fc0ed9e0ac060bb27e09dd1603f345"/><section>
+    <title>__HAL_TIM_SetAutoreload</title>
+<indexterm><primary>__HAL_TIM_SetAutoreload</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_SetAutoreload</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SetAutoreload( __HANDLE__,  __AUTORELOAD__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;ARR&#32;=&#32;(__AUTORELOAD__);&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Init.Period&#32;=&#32;(__AUTORELOAD__);&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Sets the TIM Autoreload Register value on runtime without calling another time any Init function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__AUTORELOAD__</entry><entry>
+<para>specifies the Counter register new value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01145">1145</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gade878c10557a6d7ab9f675ed2c91070b"/><section>
+    <title>__HAL_TIM_SetClockDivision</title>
+<indexterm><primary>__HAL_TIM_SetClockDivision</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_SetClockDivision</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SetClockDivision( __HANDLE__,  __CKD__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;&amp;=&#32;(uint16_t)(~TIM_CR1_CKD);&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;|=&#32;(__CKD__);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Init.ClockDivision&#32;=&#32;(__CKD__);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Sets the TIM Clock Division value on runtime without calling another time any Init function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__CKD__</entry><entry>
+<para>specifies the clock division value. This parameter can be one of the following value: <itemizedlist>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV1 </para>
+</listitem>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV2 </para>
+</listitem>
+<listitem>
+<para>TIM_CLOCKDIVISION_DIV4 </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01168">1168</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gad26791543e5289c81b6e169c38582de9"/><section>
+    <title>__HAL_TIM_SetCompare</title>
+<indexterm><primary>__HAL_TIM_SetCompare</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_SetCompare</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SetCompare( __HANDLE__,  __CHANNEL__,  __COMPARE__)   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)(&amp;((__HANDLE__)-&gt;Instance-&gt;CCR1) + ((__CHANNEL__) &gt;&gt; 2)) = (__COMPARE__))</computeroutput></para><para>
+
+<para>Sets the TIM Capture Compare Register value on runtime without calling another time ConfigChannel function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__CHANNEL__</entry><entry>
+<para>: TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                            <row>
+<entry>__COMPARE__</entry><entry>
+<para>specifies the Capture Compare register new value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01106">1106</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gacf163ad27212ed63b75588208a493679"/><section>
+    <title>__HAL_TIM_SetCounter</title>
+<indexterm><primary>__HAL_TIM_SetCounter</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_SetCounter</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SetCounter( __HANDLE__,  __COUNTER__)   ((__HANDLE__)-&gt;Instance-&gt;CNT = (__COUNTER__))</computeroutput></para><para>
+
+<para>Sets the TIM Counter Register value on runtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__COUNTER__</entry><entry>
+<para>specifies the Counter register new value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01129">1129</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gac842aeb230e34f4effb920b09801bab2"/><section>
+    <title>__HAL_TIM_SetICPrescaler</title>
+<indexterm><primary>__HAL_TIM_SetICPrescaler</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_SetICPrescaler</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SetICPrescaler( __HANDLE__,  __CHANNEL__,  __ICPSC__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_TIM_ResetICPrescalerValue((__HANDLE__),&#32;(__CHANNEL__));&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__HAL_TIM_SetICPrescalerValue((__HANDLE__),&#32;(__CHANNEL__),&#32;(__ICPSC__));&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Sets the TIM Input Capture prescaler on runtime without calling another time <link linkend="_group___s_t_m32_f4xx___h_a_l_1ga34805dabaf748c6eb823275dad2f19f5">HAL_TIM_IC_ConfigChannel()</link> function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>TIM handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__CHANNEL__</entry><entry>
+<para>: TIM Channels to be configured. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_CHANNEL_1: TIM Channel 1 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_2: TIM Channel 2 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_3: TIM Channel 3 selected </para>
+</listitem>
+<listitem>
+<para>TIM_CHANNEL_4: TIM Channel 4 selected </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                            <row>
+<entry>__ICPSC__</entry><entry>
+<para>specifies the Input Capture4 prescaler new value. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>TIM_ICPSC_DIV1: no prescaler </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV2: capture is done once every 2 events </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV4: capture is done once every 4 events </para>
+</listitem>
+<listitem>
+<para>TIM_ICPSC_DIV8: capture is done once every 8 events </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01199">1199</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga16daed101c796beb70b2ed7afc13dd5f"/><section>
+    <title>__HAL_TIM_SetICPrescalerValue</title>
+<indexterm><primary>__HAL_TIM_SetICPrescalerValue</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>__HAL_TIM_SetICPrescalerValue</secondary></indexterm>
+<para><computeroutput>#define __HAL_TIM_SetICPrescalerValue( __HANDLE__,  __CHANNEL__,  __ICPSC__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">(((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga6b1541e4a49d62610899e24bf23f4879">TIM_CHANNEL_1</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;|=&#32;(__ICPSC__))&#32;:\
+&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga33e02d43345a7ac5886f01b39e4f7ccd">TIM_CHANNEL_2</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR1&#32;|=&#32;((__ICPSC__)&#32;&lt;&lt;&#32;8))&#32;:\
+&#32;((__CHANNEL__)&#32;==&#32;<link linkend="_group___t_i_m___channel_1ga4ea100c1789b178f3cb46721b7257e2d">TIM_CHANNEL_3</link>)&#32;?&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;|=&#32;(__ICPSC__))&#32;:\
+&#32;((__HANDLE__)-&gt;Instance-&gt;CCMR2&#32;|=&#32;((__ICPSC__)&#32;&lt;&lt;&#32;8)))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01081">1081</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1ga679b7f970f7ad7001de9d6f7b211d667"/><section>
+    <title>CCER_CCxE_MASK</title>
+<indexterm><primary>CCER_CCxE_MASK</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>CCER_CCxE_MASK</secondary></indexterm>
+<para><computeroutput>#define CCER_CCxE_MASK   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga3f494b9881e7b97bb2d79f7ad4e79937">TIM_CCER_CC1E</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga76392a4d63674cd0db0a55762458f16c">TIM_CCER_CC2E</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga1da114e666b61f09cf25f50cdaa7f81f">TIM_CCER_CC3E</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga940b041ab5975311f42f26d314a4b621">TIM_CCER_CC4E</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01031">1031</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gadf1ac288d53d93679c086f9179dea88b"/><section>
+    <title>CCER_CCxNE_MASK</title>
+<indexterm><primary>CCER_CCxNE_MASK</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>CCER_CCxNE_MASK</secondary></indexterm>
+<para><computeroutput>#define CCER_CCxNE_MASK   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga813056b3f90a13c4432aeba55f28957e">TIM_CCER_CC1NE</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga6a784649120eddec31998f34323d4156">TIM_CCER_CC2NE</link> | <link linkend="_group___peripheral___registers___bits___definition_1gad46cce61d3bd83b64257ba75e54ee1aa">TIM_CCER_CC3NE</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l01032">1032</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___t_i_m_1gaa3fa7bcbb4707f1151ccfc90a8cf9706"/><section>
+    <title>HAL_TIM_ActiveChannel</title>
+<indexterm><primary>HAL_TIM_ActiveChannel</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_ActiveChannel</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___t_i_m_1gaa3fa7bcbb4707f1151ccfc90a8cf9706">HAL_TIM_ActiveChannel</link></computeroutput></para><para>
+
+<para>HAL Active channel structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_1</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_1</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a2024e95c48b58ec9b2115faa276e3fad"/>HAL_TIM_ACTIVE_CHANNEL_1</entry><entry>
+<para>The active channel is 1 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_2</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_2</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706ae80e6a1dd1c479f504219c0fec2f3322"/>HAL_TIM_ACTIVE_CHANNEL_2</entry><entry>
+<para>The active channel is 2 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_3</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_3</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706acc3fcf4ee6d91744c4bc6a5eccde2601"/>HAL_TIM_ACTIVE_CHANNEL_3</entry><entry>
+<para>The active channel is 3 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_4</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_4</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a7d98ec7e385cacb3aaa6cec601fa6ab6"/>HAL_TIM_ACTIVE_CHANNEL_4</entry><entry>
+<para>The active channel is 4 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_ACTIVE_CHANNEL_CLEARED</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_ACTIVE_CHANNEL_CLEARED</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggaa3fa7bcbb4707f1151ccfc90a8cf9706a574f72ac3bb41fe660318aa42dfdc98d"/>HAL_TIM_ACTIVE_CHANNEL_CLEARED</entry><entry>
+<para>All active channels cleared </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00274">274</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m_1gae0994cf5970e56ca4903e9151f40010c"/><section>
+    <title>HAL_TIM_StateTypeDef</title>
+<indexterm><primary>HAL_TIM_StateTypeDef</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___t_i_m_1gae0994cf5970e56ca4903e9151f40010c">HAL_TIM_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_TIM_STATE_RESET</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc"/>HAL_TIM_STATE_RESET</entry><entry>
+<para>Peripheral not yet initialized or disabled 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_STATE_READY</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca4545554d7fa04d17e78d69d17cb7e4b3"/>HAL_TIM_STATE_READY</entry><entry>
+<para>Peripheral Initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_STATE_BUSY</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca1ddbfef19ad0562eb8143919b710cc12"/>HAL_TIM_STATE_BUSY</entry><entry>
+<para>An internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_STATE_TIMEOUT</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca03e3339df71a74ac37820f72c2989371"/>HAL_TIM_STATE_TIMEOUT</entry><entry>
+<para>Timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_TIM_STATE_ERROR</primary><secondary>TIM</secondary></indexterm>
+<indexterm><primary>TIM</primary><secondary>HAL_TIM_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___t_i_m_1ggae0994cf5970e56ca4903e9151f40010ca318cceb243cb9ca9e01833913e4f90ea"/>HAL_TIM_STATE_ERROR</entry><entry>
+<para>Reception process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00262">262</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,77 @@
+\hypertarget{_interrupt_manager_8h_source}{}\doxysection{Interrupt\+Manager.\+h}
+\label{_interrupt_manager_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/InterruptManager.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/InterruptManager.h}}
+\mbox{\hyperlink{_interrupt_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef MBED\_INTERRUPTMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00002}00002 \textcolor{preprocessor}{\#define MBED\_INTERRUPTMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cmsis_8h}{cmsis.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_call_chain_8h}{CallChain.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00036}\mbox{\hyperlink{classmbed_1_1_interrupt_manager}{00036}} \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}} \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00037}00037 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00040}\mbox{\hyperlink{classmbed_1_1_interrupt_manager_a629b18584b99e4ab63ab7031eaf6ba18}{00040}}     \textcolor{keyword}{static} \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}* \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a629b18584b99e4ab63ab7031eaf6ba18}{get}}();}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00044}\mbox{\hyperlink{classmbed_1_1_interrupt_manager_a112a068c3a6f373ec6c12fdf0b48987b}{00044}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a112a068c3a6f373ec6c12fdf0b48987b}{destroy}}();}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00054}\mbox{\hyperlink{classmbed_1_1_interrupt_manager_a352607247d5c0532ecf602d1cf60169e}{00054}}     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a352607247d5c0532ecf602d1cf60169e}{add\_handler}}(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq) \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00055}00055         \textcolor{keywordflow}{return} add\_common(function, irq);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00066}\mbox{\hyperlink{classmbed_1_1_interrupt_manager_a1db579c8908fa8aa0815d41f6840fd68}{00066}}     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a1db579c8908fa8aa0815d41f6840fd68}{add\_handler\_front}}(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq) \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00067}00067         \textcolor{keywordflow}{return} add\_common(function, irq, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00068}00068     \}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00079}00079     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00080}\mbox{\hyperlink{classmbed_1_1_interrupt_manager_a64fd0e2a456c655832e4fe83fe62762b}{00080}}     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a64fd0e2a456c655832e4fe83fe62762b}{add\_handler}}(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq) \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00081}00081         \textcolor{keywordflow}{return} add\_common(tptr, mptr, irq);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00093}00093     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00094}\mbox{\hyperlink{classmbed_1_1_interrupt_manager_a750dc4a22734ace4595e1710d3454275}{00094}}     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a750dc4a22734ace4595e1710d3454275}{add\_handler\_front}}(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq) \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00095}00095         \textcolor{keywordflow}{return} add\_common(tptr, mptr, irq, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00096}00096     \}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00106}\mbox{\hyperlink{classmbed_1_1_interrupt_manager_a2eb949920e99f46b2f7a4c3e4c75df7a}{00106}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a2eb949920e99f46b2f7a4c3e4c75df7a}{remove\_handler}}(\mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} handler, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00108}00108 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00109}00109     \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}();}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00110}00110     \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{\string~InterruptManager}}();}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00112}00112     \textcolor{comment}{// We declare the copy contructor and the assignment operator, but we don't}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00113}00113     \textcolor{comment}{// implement them. This way, if someone tries to copy/assign our instance,}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00114}00114     \textcolor{comment}{// he will get an error at compile time.}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00115}00115     \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}\&);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00116}00116     \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}\& operator =(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}\&);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00118}00118     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00119}00119     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} add\_common(T *tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq, \textcolor{keywordtype}{bool} front=\textcolor{keyword}{false}) \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00120}00120         \textcolor{keywordtype}{int} irq\_pos = get\_irq\_index(irq);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00121}00121         \textcolor{keywordtype}{bool} change = must\_replace\_vector(irq);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00123}00123         \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} pf = front ? \_chains[irq\_pos]-\/>\mbox{\hyperlink{classmbed_1_1_call_chain_a5e0dd730be3640cee8e482663d9025d7}{add\_front}}(tptr, mptr) : \_chains[irq\_pos]-\/>\mbox{\hyperlink{classmbed_1_1_call_chain_a472ea4d4bff102206dabec6d29df9c6a}{add}}(tptr, mptr);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00124}00124         \textcolor{keywordflow}{if} (change)}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00125}00125             \mbox{\hyperlink{cmsis__nvic_8h_ab43c1c59d5c081f1bc725237f4b1f916}{NVIC\_SetVector}}(irq, (uint32\_t)\&InterruptManager::static\_irq\_helper);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00126}00126         \textcolor{keywordflow}{return} pf;}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00127}00127     \}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00129}00129     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} add\_common(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq, \textcolor{keywordtype}{bool} front=\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00130}00130     \textcolor{keywordtype}{bool} must\_replace\_vector(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00131}00131     \textcolor{keywordtype}{int} get\_irq\_index(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq);}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00132}00132     \textcolor{keywordtype}{void} irq\_helper();}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00133}00133     \textcolor{keywordtype}{void} add\_helper(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq, \textcolor{keywordtype}{bool} front=\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00134}00134     \textcolor{keyword}{static} \textcolor{keywordtype}{void} static\_irq\_helper();}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00136}00136     \mbox{\hyperlink{classmbed_1_1_call_chain}{CallChain}}* \_chains[\mbox{\hyperlink{cmsis__nvic_8h_aabda131b2f01e9aa52b49477300bddf6}{NVIC\_NUM\_VECTORS}}];}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00137}00137     \textcolor{keyword}{static} \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}* \_instance;}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00138}00138 \};}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00140}00140 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00142}00142 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_interrupt_manager_8h_source_l00143}00143 }
+
+\end{DoxyCode}

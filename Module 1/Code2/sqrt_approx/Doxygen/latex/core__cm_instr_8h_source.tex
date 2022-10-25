@@ -1,0 +1,372 @@
+\hypertarget{core__cm_instr_8h_source}{}\doxysection{core\+\_\+cm\+Instr.\+h}
+\label{core__cm_instr_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/core\_cmInstr.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/core\_cmInstr.h}}
+\mbox{\hyperlink{core__cm_instr_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00001}00001 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00010}00010 \textcolor{comment}{/* Copyright (c) 2009 -\/ 2013 ARM LIMITED}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00011}00011 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00012}00012 \textcolor{comment}{   All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00013}00013 \textcolor{comment}{   Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00014}00014 \textcolor{comment}{   modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00015}00015 \textcolor{comment}{   -\/ Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00016}00016 \textcolor{comment}{     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00017}00017 \textcolor{comment}{   -\/ Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00018}00018 \textcolor{comment}{     notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00019}00019 \textcolor{comment}{     documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00020}00020 \textcolor{comment}{   -\/ Neither the name of ARM nor the names of its contributors may be used}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00021}00021 \textcolor{comment}{     to endorse or promote products derived from this software without}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00022}00022 \textcolor{comment}{     specific prior written permission.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00023}00023 \textcolor{comment}{   *}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00024}00024 \textcolor{comment}{   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00025}00025 \textcolor{comment}{   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00026}00026 \textcolor{comment}{   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00027}00027 \textcolor{comment}{   ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00028}00028 \textcolor{comment}{   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00029}00029 \textcolor{comment}{   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00030}00030 \textcolor{comment}{   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00031}00031 \textcolor{comment}{   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00032}00032 \textcolor{comment}{   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00033}00033 \textcolor{comment}{   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00034}00034 \textcolor{comment}{   POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00035}00035 \textcolor{comment}{   -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00038}00038 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CMINSTR\_H}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00039}00039 \textcolor{preprocessor}{\#define \_\_CORE\_CMINSTR\_H}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00042}00042 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  Core Instruction Access  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00048}00048 \textcolor{preprocessor}{\#if   defined ( \_\_CC\_ARM ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/RealView Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00049}00049 \textcolor{comment}{/* ARM armcc specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00051}00051 \textcolor{preprocessor}{\#if (\_\_ARMCC\_VERSION < 400677)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00052}00052 \textcolor{preprocessor}{  \#error "{}Please use ARM Compiler Toolchain V4.0.677 or later!"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00053}00053 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00060}00060 \textcolor{preprocessor}{\#define \_\_NOP                             \_\_nop}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00068}00068 \textcolor{preprocessor}{\#define \_\_WFI                             \_\_wfi}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00076}00076 \textcolor{preprocessor}{\#define \_\_WFE                             \_\_wfe}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00083}00083 \textcolor{preprocessor}{\#define \_\_SEV                             \_\_sev}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00092}00092 \textcolor{preprocessor}{\#define \_\_ISB()                           \_\_isb(0xF)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00100}00100 \textcolor{preprocessor}{\#define \_\_DSB()                           \_\_dsb(0xF)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00108}00108 \textcolor{preprocessor}{\#define \_\_DMB()                           \_\_dmb(0xF)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00118}00118 \textcolor{preprocessor}{\#define \_\_REV                             \_\_rev}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00128}00128 \textcolor{preprocessor}{\#ifndef \_\_NO\_EMBEDDED\_ASM}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00129}00129 \_\_attribute\_\_((section(\textcolor{stringliteral}{"{}.rev16\_text"{}}))) \_\_STATIC\_INLINE \_\_ASM uint32\_t \_\_REV16(uint32\_t value)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00130}00130 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00131}00131   rev16 r0, r0}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00132}00132   bx lr}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00133}00133 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00134}00134 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00143}00143 \textcolor{preprocessor}{\#ifndef \_\_NO\_EMBEDDED\_ASM}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00144}00144 \_\_attribute\_\_((section(\textcolor{stringliteral}{"{}.revsh\_text"{}}))) \_\_STATIC\_INLINE \_\_ASM int32\_t \_\_REVSH(int32\_t value)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00145}00145 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00146}00146   revsh r0, r0}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00147}00147   bx lr}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00148}00148 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00149}00149 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00160}00160 \textcolor{preprocessor}{\#define \_\_ROR                             \_\_ror}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00171}00171 \textcolor{preprocessor}{\#define \_\_BKPT(value)                       \_\_breakpoint(value)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00174}00174 \textcolor{preprocessor}{\#if       (\_\_CORTEX\_M >= 0x03)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00183}00183 \textcolor{preprocessor}{\#define \_\_RBIT                            \_\_rbit}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00193}00193 \textcolor{preprocessor}{\#define \_\_LDREXB(ptr)                     ((uint8\_t ) \_\_ldrex(ptr))}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00203}00203 \textcolor{preprocessor}{\#define \_\_LDREXH(ptr)                     ((uint16\_t) \_\_ldrex(ptr))}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00213}00213 \textcolor{preprocessor}{\#define \_\_LDREXW(ptr)                     ((uint32\_t ) \_\_ldrex(ptr))}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00214}00214 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00225}00225 \textcolor{preprocessor}{\#define \_\_STREXB(value, ptr)              \_\_strex(value, ptr)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00237}00237 \textcolor{preprocessor}{\#define \_\_STREXH(value, ptr)              \_\_strex(value, ptr)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00249}00249 \textcolor{preprocessor}{\#define \_\_STREXW(value, ptr)              \_\_strex(value, ptr)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00251}00251 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00257}00257 \textcolor{preprocessor}{\#define \_\_CLREX                           \_\_clrex}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00258}00258 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00268}00268 \textcolor{preprocessor}{\#define \_\_SSAT                            \_\_ssat}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00270}00270 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00279}00279 \textcolor{preprocessor}{\#define \_\_USAT                            \_\_usat}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00280}00280 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00289}00289 \textcolor{preprocessor}{\#define \_\_CLZ                             \_\_clz}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00290}00290 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00291}00291 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* (\_\_CORTEX\_M >= 0x03) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00292}00292 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00293}00293 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00294}00294 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00295}00295 \textcolor{preprocessor}{\#elif defined ( \_\_ICCARM\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ ICC Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00296}00296 \textcolor{comment}{/* IAR iccarm specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00297}00297 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00298}00298 \textcolor{preprocessor}{\#include <cmsis\_iar.h>}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00300}00300 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00301}00301 \textcolor{preprocessor}{\#elif defined ( \_\_TMS470\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ TI CCS Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00302}00302 \textcolor{comment}{/* TI CCS specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00303}00303 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00304}00304 \textcolor{preprocessor}{\#include <cmsis\_ccs.h>}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00306}00306 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00307}00307 \textcolor{preprocessor}{\#elif defined ( \_\_GNUC\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ GNU Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00308}00308 \textcolor{comment}{/* GNU gcc specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00309}00309 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00310}00310 \textcolor{comment}{/* Define macros for porting to both thumb1 and thumb2.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00311}00311 \textcolor{comment}{ * For thumb1, use low register (r0-\/r7), specified by constrant "{}l"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00312}00312 \textcolor{comment}{ * Otherwise, use general registers, specified by constrant "{}r"{} */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00313}00313 \textcolor{preprocessor}{\#if defined (\_\_thumb\_\_) \&\& !defined (\_\_thumb2\_\_)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00314}00314 \textcolor{preprocessor}{\#define \_\_CMSIS\_GCC\_OUT\_REG(r) "{}=l"{}} (r)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00315}00315 \textcolor{preprocessor}{\#define \_\_CMSIS\_GCC\_USE\_REG(r) "{}l"{}} (r)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00316}00316 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00317}00317 \textcolor{preprocessor}{\#define \_\_CMSIS\_GCC\_OUT\_REG(r) "{}=r"{}} (r)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00318}00318 \textcolor{preprocessor}{\#define \_\_CMSIS\_GCC\_USE\_REG(r) "{}r"{}} (r)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00319}00319 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00320}00320 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00325}00325 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_NOP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00326}00326 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00327}00327   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}nop"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00328}00328 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00329}00329 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00330}00330 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00336}00336 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_WFI(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00337}00337 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00338}00338   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}wfi"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00339}00339 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00340}00340 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00341}00341 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00347}00347 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_WFE(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00348}00348 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00349}00349   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}wfe"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00350}00350 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00351}00351 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00352}00352 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00357}00357 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_SEV(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00358}00358 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00359}00359   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}sev"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00360}00360 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00361}00361 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00362}00362 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00369}00369 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_ISB(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00370}00370 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00371}00371   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}isb"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00372}00372 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00373}00373 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00374}00374 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00380}00380 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_DSB(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00381}00381 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00382}00382   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}dsb"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00383}00383 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00384}00384 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00385}00385 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00391}00391 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_DMB(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00392}00392 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00393}00393   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}dmb"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00394}00394 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00395}00395 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00396}00396 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00404}00404 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_REV(uint32\_t value)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00405}00405 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00406}00406 \textcolor{preprocessor}{\#if (\_\_GNUC\_\_ > 4) || (\_\_GNUC\_\_ == 4 \&\& \_\_GNUC\_MINOR\_\_ >= 5)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00407}00407   \textcolor{keywordflow}{return} \_\_builtin\_bswap32(value);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00408}00408 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00409}00409   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00410}00410 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00411}00411   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}rev \%0, \%1"{}} : \_\_CMSIS\_GCC\_OUT\_REG (result) : \_\_CMSIS\_GCC\_USE\_REG (value) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00412}00412   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00413}00413 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00414}00414 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00415}00415 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00416}00416 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00424}00424 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_REV16(uint32\_t value)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00425}00425 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00426}00426   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00427}00427 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00428}00428   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}rev16 \%0, \%1"{}} : \_\_CMSIS\_GCC\_OUT\_REG (result) : \_\_CMSIS\_GCC\_USE\_REG (value) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00429}00429   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00430}00430 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00431}00431 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00432}00432 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00440}00440 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE int32\_t \_\_REVSH(int32\_t value)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00441}00441 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00442}00442 \textcolor{preprocessor}{\#if (\_\_GNUC\_\_ > 4) || (\_\_GNUC\_\_ == 4 \&\& \_\_GNUC\_MINOR\_\_ >= 8)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00443}00443   \textcolor{keywordflow}{return} (\textcolor{keywordtype}{short})\_\_builtin\_bswap16(value);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00444}00444 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00445}00445   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00446}00446 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00447}00447   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}revsh \%0, \%1"{}} : \_\_CMSIS\_GCC\_OUT\_REG (result) : \_\_CMSIS\_GCC\_USE\_REG (value) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00448}00448   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00449}00449 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00450}00450 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00451}00451 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00452}00452 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00461}00461 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_ROR(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00462}00462 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00463}00463   \textcolor{keywordflow}{return} (op1 >> op2) | (op1 << (32 -\/ op2)); }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00464}00464 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00465}00465 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00466}00466 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00475}00475 \textcolor{preprocessor}{\#define \_\_BKPT(value)                       \_\_ASM volatile ("{}bkpt "{}}\#value)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00476}00476 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00477}00477 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00478}00478 \textcolor{preprocessor}{\#if       (\_\_CORTEX\_M >= 0x03)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00479}00479 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00487}00487 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_RBIT(uint32\_t value)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00488}00488 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00489}00489   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00490}00490 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00491}00491    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}rbit \%0, \%1"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (value) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00492}00492    \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00493}00493 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00494}00494 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00495}00495 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00503}00503 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint8\_t \_\_LDREXB(\textcolor{keyword}{volatile} uint8\_t *addr)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00504}00504 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00505}00505     uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00506}00506 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00507}00507 \textcolor{preprocessor}{\#if (\_\_GNUC\_\_ > 4) || (\_\_GNUC\_\_ == 4 \&\& \_\_GNUC\_MINOR\_\_ >= 8)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00508}00508    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}ldrexb \%0, \%1"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}Q"{}} (*addr) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00509}00509 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00510}00510     \textcolor{comment}{/* Prior to GCC 4.8, "{}Q"{} will be expanded to [rx, \#0] which is not}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00511}00511 \textcolor{comment}{       accepted by assembler. So has to use following less efficient pattern.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00512}00512 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00513}00513    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}ldrexb \%0, [\%1]"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (addr) : \textcolor{stringliteral}{"{}memory"{}} );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00514}00514 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00515}00515    \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00516}00516 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00517}00517 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00518}00518 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00526}00526 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint16\_t \_\_LDREXH(\textcolor{keyword}{volatile} uint16\_t *addr)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00527}00527 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00528}00528     uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00529}00529 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00530}00530 \textcolor{preprocessor}{\#if (\_\_GNUC\_\_ > 4) || (\_\_GNUC\_\_ == 4 \&\& \_\_GNUC\_MINOR\_\_ >= 8)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00531}00531    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}ldrexh \%0, \%1"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}Q"{}} (*addr) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00532}00532 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00533}00533     \textcolor{comment}{/* Prior to GCC 4.8, "{}Q"{} will be expanded to [rx, \#0] which is not}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00534}00534 \textcolor{comment}{       accepted by assembler. So has to use following less efficient pattern.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00535}00535 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00536}00536    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}ldrexh \%0, [\%1]"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (addr) : \textcolor{stringliteral}{"{}memory"{}} );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00537}00537 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00538}00538    \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00539}00539 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00540}00540 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00541}00541 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00549}00549 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_LDREXW(\textcolor{keyword}{volatile} uint32\_t *addr)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00550}00550 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00551}00551     uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00552}00552 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00553}00553    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}ldrex \%0, \%1"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}Q"{}} (*addr) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00554}00554    \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00555}00555 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00556}00556 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00557}00557 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00567}00567 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_STREXB(uint8\_t value, \textcolor{keyword}{volatile} uint8\_t *addr)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00568}00568 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00569}00569    uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00570}00570 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00571}00571    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}strexb \%0, \%2, \%1"{}} : \textcolor{stringliteral}{"{}=\&r"{}} (result), \textcolor{stringliteral}{"{}=Q"{}} (*addr) : \textcolor{stringliteral}{"{}r"{}} (value) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00572}00572    \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00573}00573 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00574}00574 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00575}00575 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00585}00585 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_STREXH(uint16\_t value, \textcolor{keyword}{volatile} uint16\_t *addr)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00586}00586 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00587}00587    uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00588}00588 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00589}00589    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}strexh \%0, \%2, \%1"{}} : \textcolor{stringliteral}{"{}=\&r"{}} (result), \textcolor{stringliteral}{"{}=Q"{}} (*addr) : \textcolor{stringliteral}{"{}r"{}} (value) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00590}00590    \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00591}00591 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00592}00592 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00593}00593 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00603}00603 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_STREXW(uint32\_t value, \textcolor{keyword}{volatile} uint32\_t *addr)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00604}00604 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00605}00605    uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00606}00606 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00607}00607    \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}strex \%0, \%2, \%1"{}} : \textcolor{stringliteral}{"{}=\&r"{}} (result), \textcolor{stringliteral}{"{}=Q"{}} (*addr) : \textcolor{stringliteral}{"{}r"{}} (value) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00608}00608    \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00609}00609 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00610}00610 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00611}00611 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00617}00617 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_CLREX(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00618}00618 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00619}00619   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}clrex"{}} ::: \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00620}00620 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00621}00621 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00622}00622 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00631}00631 \textcolor{preprocessor}{\#define \_\_SSAT(ARG1,ARG2) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00632}00632 \textcolor{preprocessor}{(\{                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00633}00633 \textcolor{preprocessor}{  uint32\_t \_\_RES, \_\_ARG1 = (ARG1); \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00634}00634 \textcolor{preprocessor}{  \_\_ASM ("{}ssat \%0, \%1, \%2"{}} : "{}=r"{} (\_\_RES) :  "{}I"{} (ARG2), "{}r"{} (\_\_ARG1) ); \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00635}00635   \_\_RES; \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00636}00636  \})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00637}00637 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00638}00638 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00647}00647 \textcolor{preprocessor}{\#define \_\_USAT(ARG1,ARG2) \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00648}00648 \textcolor{preprocessor}{(\{                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00649}00649 \textcolor{preprocessor}{  uint32\_t \_\_RES, \_\_ARG1 = (ARG1); \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00650}00650 \textcolor{preprocessor}{  \_\_ASM ("{}usat \%0, \%1, \%2"{}} : "{}=r"{} (\_\_RES) :  "{}I"{} (ARG2), "{}r"{} (\_\_ARG1) ); \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00651}00651   \_\_RES; \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00652}00652  \})}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00653}00653 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00654}00654 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00662}00662 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint8\_t \_\_CLZ(uint32\_t value)}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00663}00663 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00664}00664    uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00665}00665 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00666}00666   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}clz \%0, \%1"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (value) );}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00667}00667   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00668}00668 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00669}00669 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00670}00670 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* (\_\_CORTEX\_M >= 0x03) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00671}00671 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00672}00672 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00673}00673 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00674}00674 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00675}00675 \textcolor{preprocessor}{\#elif defined ( \_\_TASKING\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ TASKING Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00676}00676 \textcolor{comment}{/* TASKING carm specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00677}00677 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00678}00678 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00679}00679 \textcolor{comment}{ * The CMSIS functions have been implemented as intrinsics in the compiler.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00680}00680 \textcolor{comment}{ * Please use "{}carm -\/?i"{} to get an up to date list of all intrinsics,}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00681}00681 \textcolor{comment}{ * Including the CMSIS ones.}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00682}00682 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00683}00683 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00684}00684 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00685}00685  \textcolor{comment}{/* end of group CMSIS\_Core\_InstructionInterface */}}
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00687}00687 }
+\DoxyCodeLine{\Hypertarget{core__cm_instr_8h_source_l00688}00688 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CMINSTR\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

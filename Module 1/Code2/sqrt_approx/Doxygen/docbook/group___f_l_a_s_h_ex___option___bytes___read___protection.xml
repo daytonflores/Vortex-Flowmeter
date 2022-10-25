@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex___option___bytes___read___protection" xml:lang="en-US">
+<title>FLASH Option Bytes Read Protection</title>
+<indexterm><primary>FLASH Option Bytes Read Protection</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga22c7871bda267a2844ab9ca9f7bd38e4">OB_RDP_LEVEL_0</link>   ((uint8_t)0xAA)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga778207f0d12d87bbff9d55e985aba5bc">OB_RDP_LEVEL_1</link>   ((uint8_t)0x55)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga8d602a97cd688390b3d1956d9970e712">IS_OB_RDP_LEVEL</link>(LEVEL)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga8d602a97cd688390b3d1956d9970e712"/><section>
+    <title>IS_OB_RDP_LEVEL</title>
+<indexterm><primary>IS_OB_RDP_LEVEL</primary><secondary>FLASH Option Bytes Read Protection</secondary></indexterm>
+<indexterm><primary>FLASH Option Bytes Read Protection</primary><secondary>IS_OB_RDP_LEVEL</secondary></indexterm>
+<para><computeroutput>#define IS_OB_RDP_LEVEL( LEVEL)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((LEVEL)&#32;==&#32;<link linkend="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga22c7871bda267a2844ab9ca9f7bd38e4">OB_RDP_LEVEL_0</link>)&#32;&#32;&#32;||\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((LEVEL)&#32;==&#32;<link linkend="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga778207f0d12d87bbff9d55e985aba5bc">OB_RDP_LEVEL_1</link>))<emphasis role="comment">/*||\</emphasis>
+<emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((LEVEL)&#32;==&#32;OB_RDP_LEVEL_2))*/</emphasis>
+</programlisting>
+<para>&lt; Warning: When enabling read protection level 2 it s no more possible to go back to level 1 or 0 </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash__ex_8h_source_1l00211">211</link> of file <link linkend="_stm32f4xx__hal__flash__ex_8h_source">stm32f4xx_hal_flash_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga22c7871bda267a2844ab9ca9f7bd38e4"/><section>
+    <title>OB_RDP_LEVEL_0</title>
+<indexterm><primary>OB_RDP_LEVEL_0</primary><secondary>FLASH Option Bytes Read Protection</secondary></indexterm>
+<indexterm><primary>FLASH Option Bytes Read Protection</primary><secondary>OB_RDP_LEVEL_0</secondary></indexterm>
+<para><computeroutput>#define OB_RDP_LEVEL_0   ((uint8_t)0xAA)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__flash__ex_8h_source_1l00207">207</link> of file <link linkend="_stm32f4xx__hal__flash__ex_8h_source">stm32f4xx_hal_flash_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga778207f0d12d87bbff9d55e985aba5bc"/><section>
+    <title>OB_RDP_LEVEL_1</title>
+<indexterm><primary>OB_RDP_LEVEL_1</primary><secondary>FLASH Option Bytes Read Protection</secondary></indexterm>
+<indexterm><primary>FLASH Option Bytes Read Protection</primary><secondary>OB_RDP_LEVEL_1</secondary></indexterm>
+<para><computeroutput>#define OB_RDP_LEVEL_1   ((uint8_t)0x55)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__flash__ex_8h_source_1l00208">208</link> of file <link linkend="_stm32f4xx__hal__flash__ex_8h_source">stm32f4xx_hal_flash_ex.h</link>.</para>
+</section>
+</section>
+</section>

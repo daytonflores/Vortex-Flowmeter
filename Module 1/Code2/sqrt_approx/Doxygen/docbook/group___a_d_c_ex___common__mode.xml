@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___a_d_c_ex___common__mode" xml:lang="en-US">
+<title>ADCEx_Common_mode</title>
+<indexterm><primary>ADCEx_Common_mode</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1gaac07297889e931df4083427a99211638">ADC_MODE_INDEPENDENT</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1gac3ad57b1150ca7862fcc932cf19b2fb0">ADC_DUALMODE_REGSIMULT_INJECSIMULT</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga2667b75f8acb086aa6ab723466bb3f40">ADC_DUALMODE_REGSIMULT_ALTERTRIG</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga8e81364b24ed3c089bb6993b48a020e9">ADC_DUALMODE_INJECSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga5318d363b48a4244335cdafaed0d179c">ADC_DUALMODE_REGSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga29697d148e4ed75c3d2adaef0f3e1385">ADC_DUALMODE_INTERL</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga45e63dd5e2f36e62fa1b2cb9eff891ed">ADC_DUALMODE_ALTERTRIG</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae55be7b911b4c0272543f98a0dba5f20">ADC_CCR_MULTI_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1gaf035650c27a3a4655c2ee42e96a277dd">ADC_TRIPLEMODE_REGSIMULT_INJECSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga0aea7119339e4474cfdb7f3084c6dce5">ADC_TRIPLEMODE_REGSIMULT_AlterTrig</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga9d5e9c416713570aeecff01f6c006b35">ADC_TRIPLEMODE_INJECSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1gaa111c2e1827ffebceb3f22deefd951db">ADC_TRIPLEMODE_REGSIMULT</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga7c1e457e958e4002726bb9187a5ffe22">ADC_TRIPLEMODE_INTERL</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga5ad65e0e5b27f2f72d4856b3651f0b8b">ADC_TRIPLEMODE_ALTERTRIG</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae55be7b911b4c0272543f98a0dba5f20">ADC_CCR_MULTI_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex___common__mode_1ga4abf4c7de28a42d7b124c9e403a6e537">IS_ADC_MODE</link>(MODE)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga45e63dd5e2f36e62fa1b2cb9eff891ed"/><section>
+    <title>ADC_DUALMODE_ALTERTRIG</title>
+<indexterm><primary>ADC_DUALMODE_ALTERTRIG</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_DUALMODE_ALTERTRIG</secondary></indexterm>
+<para><computeroutput>#define ADC_DUALMODE_ALTERTRIG   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae55be7b911b4c0272543f98a0dba5f20">ADC_CCR_MULTI_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00114">114</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga8e81364b24ed3c089bb6993b48a020e9"/><section>
+    <title>ADC_DUALMODE_INJECSIMULT</title>
+<indexterm><primary>ADC_DUALMODE_INJECSIMULT</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_DUALMODE_INJECSIMULT</secondary></indexterm>
+<para><computeroutput>#define ADC_DUALMODE_INJECSIMULT   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00111">111</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga29697d148e4ed75c3d2adaef0f3e1385"/><section>
+    <title>ADC_DUALMODE_INTERL</title>
+<indexterm><primary>ADC_DUALMODE_INTERL</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_DUALMODE_INTERL</secondary></indexterm>
+<para><computeroutput>#define ADC_DUALMODE_INTERL   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00113">113</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga5318d363b48a4244335cdafaed0d179c"/><section>
+    <title>ADC_DUALMODE_REGSIMULT</title>
+<indexterm><primary>ADC_DUALMODE_REGSIMULT</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_DUALMODE_REGSIMULT</secondary></indexterm>
+<para><computeroutput>#define ADC_DUALMODE_REGSIMULT   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00112">112</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga2667b75f8acb086aa6ab723466bb3f40"/><section>
+    <title>ADC_DUALMODE_REGSIMULT_ALTERTRIG</title>
+<indexterm><primary>ADC_DUALMODE_REGSIMULT_ALTERTRIG</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_DUALMODE_REGSIMULT_ALTERTRIG</secondary></indexterm>
+<para><computeroutput>#define ADC_DUALMODE_REGSIMULT_ALTERTRIG   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00110">110</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1gac3ad57b1150ca7862fcc932cf19b2fb0"/><section>
+    <title>ADC_DUALMODE_REGSIMULT_INJECSIMULT</title>
+<indexterm><primary>ADC_DUALMODE_REGSIMULT_INJECSIMULT</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_DUALMODE_REGSIMULT_INJECSIMULT</secondary></indexterm>
+<para><computeroutput>#define ADC_DUALMODE_REGSIMULT_INJECSIMULT   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00109">109</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1gaac07297889e931df4083427a99211638"/><section>
+    <title>ADC_MODE_INDEPENDENT</title>
+<indexterm><primary>ADC_MODE_INDEPENDENT</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_MODE_INDEPENDENT</secondary></indexterm>
+<para><computeroutput>#define ADC_MODE_INDEPENDENT   ((uint32_t)0x00000000)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00108">108</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga5ad65e0e5b27f2f72d4856b3651f0b8b"/><section>
+    <title>ADC_TRIPLEMODE_ALTERTRIG</title>
+<indexterm><primary>ADC_TRIPLEMODE_ALTERTRIG</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_TRIPLEMODE_ALTERTRIG</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIPLEMODE_ALTERTRIG   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae55be7b911b4c0272543f98a0dba5f20">ADC_CCR_MULTI_3</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00120">120</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga9d5e9c416713570aeecff01f6c006b35"/><section>
+    <title>ADC_TRIPLEMODE_INJECSIMULT</title>
+<indexterm><primary>ADC_TRIPLEMODE_INJECSIMULT</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_TRIPLEMODE_INJECSIMULT</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIPLEMODE_INJECSIMULT   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00117">117</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga7c1e457e958e4002726bb9187a5ffe22"/><section>
+    <title>ADC_TRIPLEMODE_INTERL</title>
+<indexterm><primary>ADC_TRIPLEMODE_INTERL</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_TRIPLEMODE_INTERL</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIPLEMODE_INTERL   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00119">119</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1gaa111c2e1827ffebceb3f22deefd951db"/><section>
+    <title>ADC_TRIPLEMODE_REGSIMULT</title>
+<indexterm><primary>ADC_TRIPLEMODE_REGSIMULT</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_TRIPLEMODE_REGSIMULT</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIPLEMODE_REGSIMULT   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae6a5be6cff1227431b8d54dffcc1ce88">ADC_CCR_MULTI_2</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00118">118</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga0aea7119339e4474cfdb7f3084c6dce5"/><section>
+    <title>ADC_TRIPLEMODE_REGSIMULT_AlterTrig</title>
+<indexterm><primary>ADC_TRIPLEMODE_REGSIMULT_AlterTrig</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_TRIPLEMODE_REGSIMULT_AlterTrig</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIPLEMODE_REGSIMULT_AlterTrig   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8781dec7f076b475b85f8470aee94d06">ADC_CCR_MULTI_1</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00116">116</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1gaf035650c27a3a4655c2ee42e96a277dd"/><section>
+    <title>ADC_TRIPLEMODE_REGSIMULT_INJECSIMULT</title>
+<indexterm><primary>ADC_TRIPLEMODE_REGSIMULT_INJECSIMULT</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>ADC_TRIPLEMODE_REGSIMULT_INJECSIMULT</secondary></indexterm>
+<para><computeroutput>#define ADC_TRIPLEMODE_REGSIMULT_INJECSIMULT   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga5087b3cb0d4570b80b3138c277bcbf6c">ADC_CCR_MULTI_4</link> | <link linkend="_group___peripheral___registers___bits___definition_1gae4e7104ce01e3a79b8f6138d87dc3684">ADC_CCR_MULTI_0</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00115">115</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_ex___common__mode_1ga4abf4c7de28a42d7b124c9e403a6e537"/><section>
+    <title>IS_ADC_MODE</title>
+<indexterm><primary>IS_ADC_MODE</primary><secondary>ADCEx_Common_mode</secondary></indexterm>
+<indexterm><primary>ADCEx_Common_mode</primary><secondary>IS_ADC_MODE</secondary></indexterm>
+<para><computeroutput>#define IS_ADC_MODE( MODE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1gaac07297889e931df4083427a99211638">ADC_MODE_INDEPENDENT</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1gac3ad57b1150ca7862fcc932cf19b2fb0">ADC_DUALMODE_REGSIMULT_INJECSIMULT</link>)&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga2667b75f8acb086aa6ab723466bb3f40">ADC_DUALMODE_REGSIMULT_ALTERTRIG</link>)&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga8e81364b24ed3c089bb6993b48a020e9">ADC_DUALMODE_INJECSIMULT</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga5318d363b48a4244335cdafaed0d179c">ADC_DUALMODE_REGSIMULT</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga29697d148e4ed75c3d2adaef0f3e1385">ADC_DUALMODE_INTERL</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga45e63dd5e2f36e62fa1b2cb9eff891ed">ADC_DUALMODE_ALTERTRIG</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1gaf035650c27a3a4655c2ee42e96a277dd">ADC_TRIPLEMODE_REGSIMULT_INJECSIMULT</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga0aea7119339e4474cfdb7f3084c6dce5">ADC_TRIPLEMODE_REGSIMULT_AlterTrig</link>)&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga9d5e9c416713570aeecff01f6c006b35">ADC_TRIPLEMODE_INJECSIMULT</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1gaa111c2e1827ffebceb3f22deefd951db">ADC_TRIPLEMODE_REGSIMULT</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga7c1e457e958e4002726bb9187a5ffe22">ADC_TRIPLEMODE_INTERL</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___a_d_c_ex___common__mode_1ga5ad65e0e5b27f2f72d4856b3651f0b8b">ADC_TRIPLEMODE_ALTERTRIG</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00122">122</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+</section>
+</section>

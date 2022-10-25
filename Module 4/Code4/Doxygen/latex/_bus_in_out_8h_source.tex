@@ -1,0 +1,73 @@
+\hypertarget{_bus_in_out_8h_source}{}\doxysection{Bus\+In\+Out.\+h}
+\label{_bus_in_out_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/BusInOut.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/BusInOut.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_BUSINOUT\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_BUSINOUT\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}DigitalInOut.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_bus_in_out}{BusInOut}} \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{37     \mbox{\hyperlink{classmbed_1_1_bus_in_out_aeb307d492d797e5a10919a92f1da5e31}{BusInOut}}(PinName p0, PinName p1 = NC, PinName p2 = NC, PinName p3 = NC,}
+\DoxyCodeLine{38              PinName p4 = NC, PinName p5 = NC, PinName p6 = NC, PinName p7 = NC,}
+\DoxyCodeLine{39              PinName p8 = NC, PinName p9 = NC, PinName p10 = NC, PinName p11 = NC,}
+\DoxyCodeLine{40              PinName p12 = NC, PinName p13 = NC, PinName p14 = NC, PinName p15 = NC);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \mbox{\hyperlink{classmbed_1_1_bus_in_out_aeb307d492d797e5a10919a92f1da5e31}{BusInOut}}(PinName pins[16]);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_bus_in_out}{\string~BusInOut}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{/* Group: Access Methods */}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_bus_in_out_a36473cded1109d3960d51c6f8e1ee123}{write}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_bus_in_out_a98154c0add9d2e8bec0e27ca42249b31}{read}}();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_bus_in_out_aea68cf05f895ef5d7a6c4a963fe695d4}{output}}();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_bus_in_out_a2f5cdeb39d9f1b2e71281f48ead9090f}{input}}();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_bus_in_out_ae16e26bbb20523c2ae428db3fca5bb15}{mode}}(PinMode pull);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{79     \mbox{\hyperlink{classmbed_1_1_bus_in_out}{BusInOut}}\& \mbox{\hyperlink{classmbed_1_1_bus_in_out_ac0614da22e30b548c0ab863ade51428b}{operator= }}(\textcolor{keywordtype}{int} v);}
+\DoxyCodeLine{80     \mbox{\hyperlink{classmbed_1_1_bus_in_out}{BusInOut}}\& \mbox{\hyperlink{classmbed_1_1_bus_in_out_ac0614da22e30b548c0ab863ade51428b}{operator= }}(\mbox{\hyperlink{classmbed_1_1_bus_in_out}{BusInOut}}\& rhs);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{84     \textcolor{keyword}{operator} int();}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{88     \mbox{\hyperlink{classmbed_1_1_digital_in_out}{DigitalInOut}}* \_pin[16];}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90     \textcolor{comment}{/* disallow copy constructor and assignment operators */}}
+\DoxyCodeLine{91 \textcolor{keyword}{private}:}
+\DoxyCodeLine{92     \mbox{\hyperlink{classmbed_1_1_bus_in_out_aeb307d492d797e5a10919a92f1da5e31}{BusInOut}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_bus_in_out}{BusInOut}}\&);}
+\DoxyCodeLine{93     \mbox{\hyperlink{classmbed_1_1_bus_in_out}{BusInOut}} \& \mbox{\hyperlink{classmbed_1_1_bus_in_out_ac0614da22e30b548c0ab863ade51428b}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_bus_in_out}{BusInOut}}\&);}
+\DoxyCodeLine{94 \};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

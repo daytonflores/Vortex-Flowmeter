@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_c_d___interrupt___clock" xml:lang="en-US">
+<title>PCD_Interrupt_Clock</title>
+<indexterm><primary>PCD_Interrupt_Clock</primary></indexterm>
+<para>
+
+<para>macros to handle interrupts and specific clock configurations </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gaaa11c016ef66a8888c6c174bd05e3aa7">__HAL_PCD_ENABLE</link>(__HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1gaa8938bc57ec4994b1d2a04dceb12c67a">USB_EnableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga71786c2c6765e270f25c21a85ac3fa77">__HAL_PCD_DISABLE</link>(__HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1ga81380ef9f6be2f72b70284d2108b4aed">USB_DisableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga7f3604641a19c15a294c542a24ffc55f">__HAL_GET_FLAG</link>(__HANDLE__,  __INTERRUPT__)   ((<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) &amp; (__INTERRUPT__)) == (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga8459525389520201c570fd1b61b830ec">__HAL_CLEAR_FLAG</link>(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;GINTSTS) |= (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga4fe23b08c61f807591978300b6a378c6">__HAL_IS_INVALID_INTERRUPT</link>(__HANDLE__)   (<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) == 0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga047a62834d348f1c64542411a584718b">__HAL_PCD_UNGATE_PHYCLOCK</link>(__HANDLE__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gac1d803708856b8fcefc92dce3e7d4d53">__HAL_PCD_GATE_PHYCLOCK</link>(__HANDLE__)   *(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)((uint32_t)((__HANDLE__)-&gt;Instance) + <link linkend="_group___peripheral__registers__structures_1gaa9766975aca084c257730879568bc7cf">USB_OTG_PCGCCTL_BASE</link>) |= <link linkend="_group___peripheral___registers___bits___definition_1ga77cb2d7ab53783663a7a6dd457d3ba25">USB_OTG_PCGCCTL_STOPCLK</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gae430a9fb7b8bb0f57be94a446b7e3d89">__HAL_PCD_IS_PHY_SUSPENDED</link>(__HANDLE__)   ((*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)((uint32_t)((__HANDLE__)-&gt;Instance) + <link linkend="_group___peripheral__registers__structures_1gaa9766975aca084c257730879568bc7cf">USB_OTG_PCGCCTL_BASE</link>))&amp;0x10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga4635bede79c31eb76839b0682657e31e">USB_FS_EXTI_TRIGGER_RISING_EDGE</link>   ((uint32_t)0x08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga61994671a8124f126378447f96f87843">USB_FS_EXTI_TRIGGER_FALLING_EDGE</link>   ((uint32_t)0x0C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga10b3c6190659b38d5e6d3155e30e3b5a">USB_FS_EXTI_TRIGGER_BOTH_EDGE</link>   ((uint32_t)0x10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gabae8c431934cc5189524c41c4a413e5d">USB_HS_EXTI_TRIGGER_RISING_EDGE</link>   ((uint32_t)0x08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gacf7c7cd4c0acdaef836d1381884eafdc">USB_HS_EXTI_TRIGGER_FALLING_EDGE</link>   ((uint32_t)0x0C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga88242c33988234109ab398a9195f6c11">USB_HS_EXTI_TRIGGER_BOTH_EDGE</link>   ((uint32_t)0x10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>   ((uint32_t)0x00100000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>   ((uint32_t)0x00040000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga87317f6c787c6896a8158f0c721a0059">__HAL_USB_HS_EXTI_ENABLE_IT</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga528473fda2a12b6c19506cc9b3806d54">__HAL_USB_HS_EXTI_DISABLE_IT</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gabaec74cd1b3ed759121fe6c6c156c5d9">__HAL_USB_HS_EXTI_GET_FLAG</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gabac9d7c6658baf369cf15b62ad31b927">__HAL_USB_HS_EXTI_CLEAR_FLAG</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga339c3114eb6623ec941cc21749d80a63">__HAL_USB_HS_EXTI_SET_RISING_EGDE_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga4c4cd1d025d300ef7d5f3699c1cb49a9">__HAL_USB_HS_EXTI_SET_FALLING_EGDE_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga586006e6d558a29fbc44c0fd969f0096">__HAL_USB_HS_EXTI_SET_FALLINGRISING_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gae113b8efe910324f5cf22be175a3c24a">__HAL_USB_FS_EXTI_ENABLE_IT</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= <link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga85cb6f6fd06419e0b152512a0e4a51d5">__HAL_USB_FS_EXTI_DISABLE_IT</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga7ec01deaa7c0ca7833fb374b3858e27d">__HAL_USB_FS_EXTI_GET_FLAG</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gaccb126374d3cc612038112ad1790c682">__HAL_USB_FS_EXTI_CLEAR_FLAG</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = <link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga085b51c65324c07245ef178fbc896607">__HAL_USB_FS_EXTI_SET_RISING_EGDE_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga74e87932df67f732aedf8a6f17f626ba">__HAL_USB_FS_EXTI_SET_FALLING_EGDE_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gad6a19214a37b7c7fd2c4367d3ec4e98f">__HAL_USB_FS_EXTI_SET_FALLINGRISING_TRIGGER</link>()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>macros to handle interrupts and specific clock configurations </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga8459525389520201c570fd1b61b830ec"/><section>
+    <title>__HAL_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_CLEAR_FLAG</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_CLEAR_FLAG( __HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;GINTSTS) |= (__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00143">143</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga7f3604641a19c15a294c542a24ffc55f"/><section>
+    <title>__HAL_GET_FLAG</title>
+<indexterm><primary>__HAL_GET_FLAG</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_GET_FLAG( __HANDLE__,  __INTERRUPT__)   ((<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) &amp; (__INTERRUPT__)) == (__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00142">142</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga4fe23b08c61f807591978300b6a378c6"/><section>
+    <title>__HAL_IS_INVALID_INTERRUPT</title>
+<indexterm><primary>__HAL_IS_INVALID_INTERRUPT</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_IS_INVALID_INTERRUPT</secondary></indexterm>
+<para><computeroutput>#define __HAL_IS_INVALID_INTERRUPT( __HANDLE__)   (<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) == 0)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00144">144</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga71786c2c6765e270f25c21a85ac3fa77"/><section>
+    <title>__HAL_PCD_DISABLE</title>
+<indexterm><primary>__HAL_PCD_DISABLE</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_PCD_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_PCD_DISABLE( __HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1ga81380ef9f6be2f72b70284d2108b4aed">USB_DisableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00140">140</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gaaa11c016ef66a8888c6c174bd05e3aa7"/><section>
+    <title>__HAL_PCD_ENABLE</title>
+<indexterm><primary>__HAL_PCD_ENABLE</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_PCD_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_PCD_ENABLE( __HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1gaa8938bc57ec4994b1d2a04dceb12c67a">USB_EnableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00139">139</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gac1d803708856b8fcefc92dce3e7d4d53"/><section>
+    <title>__HAL_PCD_GATE_PHYCLOCK</title>
+<indexterm><primary>__HAL_PCD_GATE_PHYCLOCK</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_PCD_GATE_PHYCLOCK</secondary></indexterm>
+<para><computeroutput>#define __HAL_PCD_GATE_PHYCLOCK( __HANDLE__)   *(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)((uint32_t)((__HANDLE__)-&gt;Instance) + <link linkend="_group___peripheral__registers__structures_1gaa9766975aca084c257730879568bc7cf">USB_OTG_PCGCCTL_BASE</link>) |= <link linkend="_group___peripheral___registers___bits___definition_1ga77cb2d7ab53783663a7a6dd457d3ba25">USB_OTG_PCGCCTL_STOPCLK</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00151">151</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gae430a9fb7b8bb0f57be94a446b7e3d89"/><section>
+    <title>__HAL_PCD_IS_PHY_SUSPENDED</title>
+<indexterm><primary>__HAL_PCD_IS_PHY_SUSPENDED</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_PCD_IS_PHY_SUSPENDED</secondary></indexterm>
+<para><computeroutput>#define __HAL_PCD_IS_PHY_SUSPENDED( __HANDLE__)   ((*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)((uint32_t)((__HANDLE__)-&gt;Instance) + <link linkend="_group___peripheral__registers__structures_1gaa9766975aca084c257730879568bc7cf">USB_OTG_PCGCCTL_BASE</link>))&amp;0x10)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00153">153</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga047a62834d348f1c64542411a584718b"/><section>
+    <title>__HAL_PCD_UNGATE_PHYCLOCK</title>
+<indexterm><primary>__HAL_PCD_UNGATE_PHYCLOCK</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_PCD_UNGATE_PHYCLOCK</secondary></indexterm>
+<para><computeroutput>#define __HAL_PCD_UNGATE_PHYCLOCK( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*(<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;*)((uint32_t)((__HANDLE__)-&gt;Instance)&#32;+&#32;<link linkend="_group___peripheral__registers__structures_1gaa9766975aca084c257730879568bc7cf">USB_OTG_PCGCCTL_BASE</link>)&#32;&amp;=&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;~(<link linkend="_group___peripheral___registers___bits___definition_1ga77cb2d7ab53783663a7a6dd457d3ba25">USB_OTG_PCGCCTL_STOPCLK</link>)
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00147">147</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gaccb126374d3cc612038112ad1790c682"/><section>
+    <title>__HAL_USB_FS_EXTI_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_USB_FS_EXTI_CLEAR_FLAG</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_FS_EXTI_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_FS_EXTI_CLEAR_FLAG( )   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = <link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00191">191</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga85cb6f6fd06419e0b152512a0e4a51d5"/><section>
+    <title>__HAL_USB_FS_EXTI_DISABLE_IT</title>
+<indexterm><primary>__HAL_USB_FS_EXTI_DISABLE_IT</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_FS_EXTI_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_FS_EXTI_DISABLE_IT( )   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00189">189</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gae113b8efe910324f5cf22be175a3c24a"/><section>
+    <title>__HAL_USB_FS_EXTI_ENABLE_IT</title>
+<indexterm><primary>__HAL_USB_FS_EXTI_ENABLE_IT</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_FS_EXTI_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_FS_EXTI_ENABLE_IT( )   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= <link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00188">188</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga7ec01deaa7c0ca7833fb374b3858e27d"/><section>
+    <title>__HAL_USB_FS_EXTI_GET_FLAG</title>
+<indexterm><primary>__HAL_USB_FS_EXTI_GET_FLAG</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_FS_EXTI_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_FS_EXTI_GET_FLAG( )   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00190">190</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga74e87932df67f732aedf8a6f17f626ba"/><section>
+    <title>__HAL_USB_FS_EXTI_SET_FALLING_EGDE_TRIGGER</title>
+<indexterm><primary>__HAL_USB_FS_EXTI_SET_FALLING_EGDE_TRIGGER</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_FS_EXTI_SET_FALLING_EGDE_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_FS_EXTI_SET_FALLING_EGDE_TRIGGER( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;FTSR&#32;|=&#32;(<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXTI-&gt;RTSR&#32;&amp;=&#32;~(<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>)
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00197">197</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gad6a19214a37b7c7fd2c4367d3ec4e98f"/><section>
+    <title>__HAL_USB_FS_EXTI_SET_FALLINGRISING_TRIGGER</title>
+<indexterm><primary>__HAL_USB_FS_EXTI_SET_FALLINGRISING_TRIGGER</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_FS_EXTI_SET_FALLINGRISING_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_FS_EXTI_SET_FALLINGRISING_TRIGGER( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;RTSR&#32;&amp;=&#32;~(<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXTI-&gt;FTSR&#32;&amp;=&#32;~(<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXTI-&gt;RTSR&#32;|=&#32;<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXTI-&gt;FTSR&#32;|=&#32;<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00201">201</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga085b51c65324c07245ef178fbc896607"/><section>
+    <title>__HAL_USB_FS_EXTI_SET_RISING_EGDE_TRIGGER</title>
+<indexterm><primary>__HAL_USB_FS_EXTI_SET_RISING_EGDE_TRIGGER</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_FS_EXTI_SET_RISING_EGDE_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_FS_EXTI_SET_RISING_EGDE_TRIGGER( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;FTSR&#32;&amp;=&#32;~(<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXTI-&gt;RTSR&#32;|=&#32;<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00193">193</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gabac9d7c6658baf369cf15b62ad31b927"/><section>
+    <title>__HAL_USB_HS_EXTI_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_USB_HS_EXTI_CLEAR_FLAG</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_HS_EXTI_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_HS_EXTI_CLEAR_FLAG( )   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00172">172</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga528473fda2a12b6c19506cc9b3806d54"/><section>
+    <title>__HAL_USB_HS_EXTI_DISABLE_IT</title>
+<indexterm><primary>__HAL_USB_HS_EXTI_DISABLE_IT</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_HS_EXTI_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_HS_EXTI_DISABLE_IT( )   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00170">170</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga87317f6c787c6896a8158f0c721a0059"/><section>
+    <title>__HAL_USB_HS_EXTI_ENABLE_IT</title>
+<indexterm><primary>__HAL_USB_HS_EXTI_ENABLE_IT</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_HS_EXTI_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_HS_EXTI_ENABLE_IT( )   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00169">169</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gabaec74cd1b3ed759121fe6c6c156c5d9"/><section>
+    <title>__HAL_USB_HS_EXTI_GET_FLAG</title>
+<indexterm><primary>__HAL_USB_HS_EXTI_GET_FLAG</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_HS_EXTI_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_HS_EXTI_GET_FLAG( )   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00171">171</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga4c4cd1d025d300ef7d5f3699c1cb49a9"/><section>
+    <title>__HAL_USB_HS_EXTI_SET_FALLING_EGDE_TRIGGER</title>
+<indexterm><primary>__HAL_USB_HS_EXTI_SET_FALLING_EGDE_TRIGGER</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_HS_EXTI_SET_FALLING_EGDE_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_HS_EXTI_SET_FALLING_EGDE_TRIGGER( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;FTSR&#32;|=&#32;(<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXTI-&gt;RTSR&#32;&amp;=&#32;~(<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00178">178</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga586006e6d558a29fbc44c0fd969f0096"/><section>
+    <title>__HAL_USB_HS_EXTI_SET_FALLINGRISING_TRIGGER</title>
+<indexterm><primary>__HAL_USB_HS_EXTI_SET_FALLINGRISING_TRIGGER</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_HS_EXTI_SET_FALLINGRISING_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_HS_EXTI_SET_FALLINGRISING_TRIGGER( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;RTSR&#32;&amp;=&#32;~(<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXTI-&gt;FTSR&#32;&amp;=&#32;~(<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>;)\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;RTSR&#32;|=&#32;<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;FTSR&#32;|=&#32;<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00182">182</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga339c3114eb6623ec941cc21749d80a63"/><section>
+    <title>__HAL_USB_HS_EXTI_SET_RISING_EGDE_TRIGGER</title>
+<indexterm><primary>__HAL_USB_HS_EXTI_SET_RISING_EGDE_TRIGGER</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>__HAL_USB_HS_EXTI_SET_RISING_EGDE_TRIGGER</secondary></indexterm>
+<para><computeroutput>#define __HAL_USB_HS_EXTI_SET_RISING_EGDE_TRIGGER( )</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;FTSR&#32;&amp;=&#32;~(<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EXTI-&gt;RTSR&#32;|=&#32;<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00174">174</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163"/><section>
+    <title>USB_FS_EXTI_LINE_WAKEUP</title>
+<indexterm><primary>USB_FS_EXTI_LINE_WAKEUP</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>USB_FS_EXTI_LINE_WAKEUP</secondary></indexterm>
+<para><computeroutput>#define USB_FS_EXTI_LINE_WAKEUP   ((uint32_t)0x00040000)</computeroutput></para>
+<para>External interrupt line 18 Connected to the USB FS EXTI Line </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00165">165</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga10b3c6190659b38d5e6d3155e30e3b5a"/><section>
+    <title>USB_FS_EXTI_TRIGGER_BOTH_EDGE</title>
+<indexterm><primary>USB_FS_EXTI_TRIGGER_BOTH_EDGE</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>USB_FS_EXTI_TRIGGER_BOTH_EDGE</secondary></indexterm>
+<para><computeroutput>#define USB_FS_EXTI_TRIGGER_BOTH_EDGE   ((uint32_t)0x10)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00157">157</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga61994671a8124f126378447f96f87843"/><section>
+    <title>USB_FS_EXTI_TRIGGER_FALLING_EDGE</title>
+<indexterm><primary>USB_FS_EXTI_TRIGGER_FALLING_EDGE</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>USB_FS_EXTI_TRIGGER_FALLING_EDGE</secondary></indexterm>
+<para><computeroutput>#define USB_FS_EXTI_TRIGGER_FALLING_EDGE   ((uint32_t)0x0C)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00156">156</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga4635bede79c31eb76839b0682657e31e"/><section>
+    <title>USB_FS_EXTI_TRIGGER_RISING_EDGE</title>
+<indexterm><primary>USB_FS_EXTI_TRIGGER_RISING_EDGE</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>USB_FS_EXTI_TRIGGER_RISING_EDGE</secondary></indexterm>
+<para><computeroutput>#define USB_FS_EXTI_TRIGGER_RISING_EDGE   ((uint32_t)0x08)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00155">155</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265"/><section>
+    <title>USB_HS_EXTI_LINE_WAKEUP</title>
+<indexterm><primary>USB_HS_EXTI_LINE_WAKEUP</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>USB_HS_EXTI_LINE_WAKEUP</secondary></indexterm>
+<para><computeroutput>#define USB_HS_EXTI_LINE_WAKEUP   ((uint32_t)0x00100000)</computeroutput></para>
+<para>External interrupt line 20 Connected to the USB HS EXTI Line </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00164">164</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1ga88242c33988234109ab398a9195f6c11"/><section>
+    <title>USB_HS_EXTI_TRIGGER_BOTH_EDGE</title>
+<indexterm><primary>USB_HS_EXTI_TRIGGER_BOTH_EDGE</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>USB_HS_EXTI_TRIGGER_BOTH_EDGE</secondary></indexterm>
+<para><computeroutput>#define USB_HS_EXTI_TRIGGER_BOTH_EDGE   ((uint32_t)0x10)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00161">161</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gacf7c7cd4c0acdaef836d1381884eafdc"/><section>
+    <title>USB_HS_EXTI_TRIGGER_FALLING_EDGE</title>
+<indexterm><primary>USB_HS_EXTI_TRIGGER_FALLING_EDGE</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>USB_HS_EXTI_TRIGGER_FALLING_EDGE</secondary></indexterm>
+<para><computeroutput>#define USB_HS_EXTI_TRIGGER_FALLING_EDGE   ((uint32_t)0x0C)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00160">160</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d___interrupt___clock_1gabae8c431934cc5189524c41c4a413e5d"/><section>
+    <title>USB_HS_EXTI_TRIGGER_RISING_EDGE</title>
+<indexterm><primary>USB_HS_EXTI_TRIGGER_RISING_EDGE</primary><secondary>PCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>PCD_Interrupt_Clock</primary><secondary>USB_HS_EXTI_TRIGGER_RISING_EDGE</secondary></indexterm>
+<para><computeroutput>#define USB_HS_EXTI_TRIGGER_RISING_EDGE   ((uint32_t)0x08)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00159">159</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,39 @@
+\hypertarget{group___d_m_a___peripheral__burst}{}\doxysection{DMA\+\_\+\+Peripheral\+\_\+burst}
+\label{group___d_m_a___peripheral__burst}\index{DMA\_Peripheral\_burst@{DMA\_Peripheral\_burst}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___d_m_a___peripheral__burst_ga1ee9cf4dc1c8bfc5ab6dfb95a00f81ff}\label{group___d_m_a___peripheral__burst_ga1ee9cf4dc1c8bfc5ab6dfb95a00f81ff}} 
+\#define {\bfseries DMA\+\_\+\+PBURST\+\_\+\+SINGLE}~((uint32\+\_\+t)0x00000000)
+\item 
+\mbox{\Hypertarget{group___d_m_a___peripheral__burst_gacc54efc746528ed9e0173dad956f7caf}\label{group___d_m_a___peripheral__burst_gacc54efc746528ed9e0173dad956f7caf}} 
+\#define {\bfseries DMA\+\_\+\+PBURST\+\_\+\+INC4}~((uint32\+\_\+t)DMA\+\_\+\+Sx\+CR\+\_\+\+PBURST\+\_\+0)
+\item 
+\mbox{\Hypertarget{group___d_m_a___peripheral__burst_gaf76dd9b208c8606e8c5ae7abf8c26532}\label{group___d_m_a___peripheral__burst_gaf76dd9b208c8606e8c5ae7abf8c26532}} 
+\#define {\bfseries DMA\+\_\+\+PBURST\+\_\+\+INC8}~((uint32\+\_\+t)DMA\+\_\+\+Sx\+CR\+\_\+\+PBURST\+\_\+1)
+\item 
+\mbox{\Hypertarget{group___d_m_a___peripheral__burst_ga705a631ea96b34aa5afa7fed06a487e0}\label{group___d_m_a___peripheral__burst_ga705a631ea96b34aa5afa7fed06a487e0}} 
+\#define {\bfseries DMA\+\_\+\+PBURST\+\_\+\+INC16}~((uint32\+\_\+t)DMA\+\_\+\+Sx\+CR\+\_\+\+PBURST)
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___peripheral__burst_ga7c60961178e2a32e9e364a220a8aca88}{IS\+\_\+\+DMA\+\_\+\+PERIPHERAL\+\_\+\+BURST}}(BURST)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___d_m_a___peripheral__burst_ga7c60961178e2a32e9e364a220a8aca88}\label{group___d_m_a___peripheral__burst_ga7c60961178e2a32e9e364a220a8aca88}} 
+\index{DMA\_Peripheral\_burst@{DMA\_Peripheral\_burst}!IS\_DMA\_PERIPHERAL\_BURST@{IS\_DMA\_PERIPHERAL\_BURST}}
+\index{IS\_DMA\_PERIPHERAL\_BURST@{IS\_DMA\_PERIPHERAL\_BURST}!DMA\_Peripheral\_burst@{DMA\_Peripheral\_burst}}
+\doxysubsubsection{\texorpdfstring{IS\_DMA\_PERIPHERAL\_BURST}{IS\_DMA\_PERIPHERAL\_BURST}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+DMA\+\_\+\+PERIPHERAL\+\_\+\+BURST(\begin{DoxyParamCaption}\item[{}]{BURST }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((BURST) == DMA\_PBURST\_SINGLE) || \(\backslash\)}
+\DoxyCodeLine{                                        ((BURST) == DMA\_PBURST\_INC4)   || \(\backslash\)}
+\DoxyCodeLine{                                        ((BURST) == DMA\_PBURST\_INC8)   || \(\backslash\)}
+\DoxyCodeLine{                                        ((BURST) == DMA\_PBURST\_INC16))}
+
+\end{DoxyCode}

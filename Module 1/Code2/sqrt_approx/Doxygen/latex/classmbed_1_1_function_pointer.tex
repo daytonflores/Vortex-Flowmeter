@@ -1,0 +1,119 @@
+\hypertarget{classmbed_1_1_function_pointer}{}\doxysection{Function\+Pointer Class Reference}
+\label{classmbed_1_1_function_pointer}\index{FunctionPointer@{FunctionPointer}}
+
+
+{\ttfamily \#include $<$Function\+Pointer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmbed_1_1_function_pointer_a0ccc51be605d508ff0df32d226f76c7a}{Function\+Pointer}} (void($\ast$function)(void)=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmbed_1_1_function_pointer_aeea086175529743816a9fb0d2d972834}{Function\+Pointer}} (T $\ast$object, void(T\+::$\ast$member)(void))
+\item 
+void \mbox{\hyperlink{classmbed_1_1_function_pointer_ae8507d9ccbe0a467029ec8c126f5e711}{attach}} (void($\ast$function)(void)=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmbed_1_1_function_pointer_acf0c3786a58620cbe4af0b00e1812b99}{attach}} (T $\ast$object, void(T\+::$\ast$member)(void))
+\item 
+void \mbox{\hyperlink{classmbed_1_1_function_pointer_aba7af6b502e464074d3c31ff9236a22c}{call}} ()
+\item 
+\mbox{\hyperlink{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}{pvoidf\+\_\+t}} \mbox{\hyperlink{classmbed_1_1_function_pointer_adc1be146f35c0125c1bb647d0f0b35d1}{get\+\_\+function}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for storing and calling a pointer to a static or member void function 
+
+Definition at line \mbox{\hyperlink{_function_pointer_8h_source_l00027}{27}} of file \mbox{\hyperlink{_function_pointer_8h_source}{Function\+Pointer.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmbed_1_1_function_pointer_a0ccc51be605d508ff0df32d226f76c7a}\label{classmbed_1_1_function_pointer_a0ccc51be605d508ff0df32d226f76c7a}} 
+\index{FunctionPointer@{FunctionPointer}!FunctionPointer@{FunctionPointer}}
+\index{FunctionPointer@{FunctionPointer}!FunctionPointer@{FunctionPointer}}
+\doxysubsubsection{\texorpdfstring{FunctionPointer()}{FunctionPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}} (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{function = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Create a \mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}}, attaching a static function
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The void static function to attach (default is none) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmbed_1_1_function_pointer_aeea086175529743816a9fb0d2d972834}\label{classmbed_1_1_function_pointer_aeea086175529743816a9fb0d2d972834}} 
+\index{FunctionPointer@{FunctionPointer}!FunctionPointer@{FunctionPointer}}
+\index{FunctionPointer@{FunctionPointer}!FunctionPointer@{FunctionPointer}}
+\doxysubsubsection{\texorpdfstring{FunctionPointer()}{FunctionPointer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}} (\begin{DoxyParamCaption}\item[{T $\ast$}]{object,  }\item[{void(T\+::$\ast$)(void)}]{member }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a \mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}}, attaching a member function
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object pointer to invoke the member function on (i.\+e. the this pointer) \\
+\hline
+{\em function} & The address of the void member function to attach \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_function_pointer_8h_source_l00042}{42}} of file \mbox{\hyperlink{_function_pointer_8h_source}{Function\+Pointer.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_function_pointer_acf0c3786a58620cbe4af0b00e1812b99}\label{classmbed_1_1_function_pointer_acf0c3786a58620cbe4af0b00e1812b99}} 
+\index{FunctionPointer@{FunctionPointer}!attach@{attach}}
+\index{attach@{attach}!FunctionPointer@{FunctionPointer}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void attach (\begin{DoxyParamCaption}\item[{T $\ast$}]{object,  }\item[{void(T\+::$\ast$)(void)}]{member }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Attach a member function
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object pointer to invoke the member function on (i.\+e. the this pointer) \\
+\hline
+{\em function} & The address of the void member function to attach \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_function_pointer_8h_source_l00058}{58}} of file \mbox{\hyperlink{_function_pointer_8h_source}{Function\+Pointer.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_function_pointer_ae8507d9ccbe0a467029ec8c126f5e711}\label{classmbed_1_1_function_pointer_ae8507d9ccbe0a467029ec8c126f5e711}} 
+\index{FunctionPointer@{FunctionPointer}!attach@{attach}}
+\index{attach@{attach}!FunctionPointer@{FunctionPointer}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void attach (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{function = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Attach a static function
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The void static function to attach (default is none) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmbed_1_1_function_pointer_aba7af6b502e464074d3c31ff9236a22c}\label{classmbed_1_1_function_pointer_aba7af6b502e464074d3c31ff9236a22c}} 
+\index{FunctionPointer@{FunctionPointer}!call@{call}}
+\index{call@{call}!FunctionPointer@{FunctionPointer}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily void call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Call the attached static or member function \mbox{\Hypertarget{classmbed_1_1_function_pointer_adc1be146f35c0125c1bb647d0f0b35d1}\label{classmbed_1_1_function_pointer_adc1be146f35c0125c1bb647d0f0b35d1}} 
+\index{FunctionPointer@{FunctionPointer}!get\_function@{get\_function}}
+\index{get\_function@{get\_function}!FunctionPointer@{FunctionPointer}}
+\doxysubsubsection{\texorpdfstring{get\_function()}{get\_function()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}{pvoidf\+\_\+t}} get\+\_\+function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_function_pointer_8h_source_l00069}{69}} of file \mbox{\hyperlink{_function_pointer_8h_source}{Function\+Pointer.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\mbox{\hyperlink{_function_pointer_8h}{Function\+Pointer.\+h}}\end{DoxyCompactItemize}

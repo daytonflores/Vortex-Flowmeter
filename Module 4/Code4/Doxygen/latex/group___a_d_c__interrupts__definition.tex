@@ -1,0 +1,37 @@
+\hypertarget{group___a_d_c__interrupts__definition}{}\doxysection{ADC\+\_\+interrupts\+\_\+definition}
+\label{group___a_d_c__interrupts__definition}\index{ADC\_interrupts\_definition@{ADC\_interrupts\_definition}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___a_d_c__interrupts__definition_ga0ad335d835f54415194d448019569e00}\label{group___a_d_c__interrupts__definition_ga0ad335d835f54415194d448019569e00}} 
+\#define {\bfseries ADC\+\_\+\+IT\+\_\+\+EOC}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa39fee2e812a7ca45998cccf32e90aea}{ADC\+\_\+\+CR1\+\_\+\+EOCIE}})
+\item 
+\mbox{\Hypertarget{group___a_d_c__interrupts__definition_ga2f5c7f9900c24250a0c6ccaa7cbca946}\label{group___a_d_c__interrupts__definition_ga2f5c7f9900c24250a0c6ccaa7cbca946}} 
+\#define {\bfseries ADC\+\_\+\+IT\+\_\+\+AWD}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_gacd44f86b189696d5a3780342516de722}{ADC\+\_\+\+CR1\+\_\+\+AWDIE}})
+\item 
+\mbox{\Hypertarget{group___a_d_c__interrupts__definition_gad439fc0cd69706704d47aeabfeddb631}\label{group___a_d_c__interrupts__definition_gad439fc0cd69706704d47aeabfeddb631}} 
+\#define {\bfseries ADC\+\_\+\+IT\+\_\+\+JEOC}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5c46fc1dc6c63acf88821f46a8f6d5e7}{ADC\+\_\+\+CR1\+\_\+\+JEOCIE}})
+\item 
+\mbox{\Hypertarget{group___a_d_c__interrupts__definition_gac3852b7789860e0ea79b82115ab877a0}\label{group___a_d_c__interrupts__definition_gac3852b7789860e0ea79b82115ab877a0}} 
+\#define {\bfseries ADC\+\_\+\+IT\+\_\+\+OVR}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa892fda7c204bf18a33a059f28be0fba}{ADC\+\_\+\+CR1\+\_\+\+OVRIE}})
+\item 
+\#define \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaf5f8d35930becff402eeb8220641432f}{IS\+\_\+\+ADC\+\_\+\+IT}}(IT)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___a_d_c__interrupts__definition_gaf5f8d35930becff402eeb8220641432f}\label{group___a_d_c__interrupts__definition_gaf5f8d35930becff402eeb8220641432f}} 
+\index{ADC\_interrupts\_definition@{ADC\_interrupts\_definition}!IS\_ADC\_IT@{IS\_ADC\_IT}}
+\index{IS\_ADC\_IT@{IS\_ADC\_IT}!ADC\_interrupts\_definition@{ADC\_interrupts\_definition}}
+\doxysubsubsection{\texorpdfstring{IS\_ADC\_IT}{IS\_ADC\_IT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{IT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                       (((IT) == ADC\_IT\_EOC) || ((IT) == ADC\_IT\_AWD) || \(\backslash\)}
+\DoxyCodeLine{                       ((IT) == ADC\_IT\_JEOC)|| ((IT) == ADC\_IT\_OVR))}
+
+\end{DoxyCode}

@@ -1,0 +1,167 @@
+\hypertarget{classmbed_1_1_timer}{}\doxysection{Timer Class Reference}
+\label{classmbed_1_1_timer}\index{Timer@{Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmbed_1_1_timer_a6a8bc5014802d569f6d01c4f36121a81}{Timer}} ()
+\item 
+void \mbox{\hyperlink{classmbed_1_1_timer_a60de64d75454385b23995437f1d72669}{start}} ()
+\item 
+void \mbox{\hyperlink{classmbed_1_1_timer_a8c528baf37154d347366083f0f816846}{stop}} ()
+\item 
+void \mbox{\hyperlink{classmbed_1_1_timer_ad20897c5c8bd47f5d4005989bead0e55}{reset}} ()
+\item 
+float \mbox{\hyperlink{classmbed_1_1_timer_a868d9d1513fbaf34c4d5d15a7fa4baa8}{read}} ()
+\item 
+int \mbox{\hyperlink{classmbed_1_1_timer_a38a24fea60aa73f6998a95f9fd1fe2e3}{read\+\_\+ms}} ()
+\item 
+int \mbox{\hyperlink{classmbed_1_1_timer_a51b422fd7d12542497eabe92eecc9c57}{read\+\_\+us}} ()
+\item 
+\mbox{\hyperlink{classmbed_1_1_timer_a5da5fe89e1ef3be42d473952d55db574}{operator float}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmbed_1_1_timer_a350185b1eefd911df905adc62e103d23}{slicetime}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmbed_1_1_timer_aab1928c8feeb06c575e468f8a9b92c7d}{\+\_\+running}}
+\item 
+unsigned int \mbox{\hyperlink{classmbed_1_1_timer_a0db75ca46f6d8668854d17a49f749f55}{\+\_\+start}}
+\item 
+int \mbox{\hyperlink{classmbed_1_1_timer_a8edd95b8c67bbcc681266737a72e5a0e}{\+\_\+time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A general purpose timer
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Count the time to toggle a LED}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mbed_8h}{mbed.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classmbed_1_1_timer_a6a8bc5014802d569f6d01c4f36121a81}{Timer}} timer;}
+\DoxyCodeLine{DigitalOut led(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1adac6477842247cab1a8c02c65f431b44}{LED1}});}
+\DoxyCodeLine{\textcolor{keywordtype}{int} begin, end;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}() \{}
+\DoxyCodeLine{    timer.start();}
+\DoxyCodeLine{    begin = timer.read\_us();}
+\DoxyCodeLine{    led = !led;}
+\DoxyCodeLine{    end = timer.read\_us();}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}Toggle the led takes \%d us"{}}, end -\/ begin);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{_timer_8h_source_l00044}{44}} of file \mbox{\hyperlink{_timer_8h_source}{Timer.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmbed_1_1_timer_a6a8bc5014802d569f6d01c4f36121a81}\label{classmbed_1_1_timer_a6a8bc5014802d569f6d01c4f36121a81}} 
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmbed_1_1_timer}{Timer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_timer_a5da5fe89e1ef3be42d473952d55db574}\label{classmbed_1_1_timer_a5da5fe89e1ef3be42d473952d55db574}} 
+\index{Timer@{Timer}!operator float@{operator float}}
+\index{operator float@{operator float}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{operator float()}{operator float()}}
+{\footnotesize\ttfamily operator float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmbed_1_1_timer_a868d9d1513fbaf34c4d5d15a7fa4baa8}\label{classmbed_1_1_timer_a868d9d1513fbaf34c4d5d15a7fa4baa8}} 
+\index{Timer@{Timer}!read@{read}}
+\index{read@{read}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily float read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the time passed in seconds \mbox{\Hypertarget{classmbed_1_1_timer_a38a24fea60aa73f6998a95f9fd1fe2e3}\label{classmbed_1_1_timer_a38a24fea60aa73f6998a95f9fd1fe2e3}} 
+\index{Timer@{Timer}!read\_ms@{read\_ms}}
+\index{read\_ms@{read\_ms}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{read\_ms()}{read\_ms()}}
+{\footnotesize\ttfamily int read\+\_\+ms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the time passed in mili-\/seconds \mbox{\Hypertarget{classmbed_1_1_timer_a51b422fd7d12542497eabe92eecc9c57}\label{classmbed_1_1_timer_a51b422fd7d12542497eabe92eecc9c57}} 
+\index{Timer@{Timer}!read\_us@{read\_us}}
+\index{read\_us@{read\_us}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{read\_us()}{read\_us()}}
+{\footnotesize\ttfamily int read\+\_\+us (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the time passed in micro-\/seconds \mbox{\Hypertarget{classmbed_1_1_timer_ad20897c5c8bd47f5d4005989bead0e55}\label{classmbed_1_1_timer_ad20897c5c8bd47f5d4005989bead0e55}} 
+\index{Timer@{Timer}!reset@{reset}}
+\index{reset@{reset}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset the timer to 0.
+
+If it was already counting, it will continue \mbox{\Hypertarget{classmbed_1_1_timer_a350185b1eefd911df905adc62e103d23}\label{classmbed_1_1_timer_a350185b1eefd911df905adc62e103d23}} 
+\index{Timer@{Timer}!slicetime@{slicetime}}
+\index{slicetime@{slicetime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{slicetime()}{slicetime()}}
+{\footnotesize\ttfamily int slicetime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmbed_1_1_timer_a60de64d75454385b23995437f1d72669}\label{classmbed_1_1_timer_a60de64d75454385b23995437f1d72669}} 
+\index{Timer@{Timer}!start@{start}}
+\index{start@{start}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start the timer \mbox{\Hypertarget{classmbed_1_1_timer_a8c528baf37154d347366083f0f816846}\label{classmbed_1_1_timer_a8c528baf37154d347366083f0f816846}} 
+\index{Timer@{Timer}!stop@{stop}}
+\index{stop@{stop}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stop the timer 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmbed_1_1_timer_aab1928c8feeb06c575e468f8a9b92c7d}\label{classmbed_1_1_timer_aab1928c8feeb06c575e468f8a9b92c7d}} 
+\index{Timer@{Timer}!\_running@{\_running}}
+\index{\_running@{\_running}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{\_running}{\_running}}
+{\footnotesize\ttfamily int \+\_\+running\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_timer_8h_source_l00081}{81}} of file \mbox{\hyperlink{_timer_8h_source}{Timer.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_timer_a0db75ca46f6d8668854d17a49f749f55}\label{classmbed_1_1_timer_a0db75ca46f6d8668854d17a49f749f55}} 
+\index{Timer@{Timer}!\_start@{\_start}}
+\index{\_start@{\_start}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{\_start}{\_start}}
+{\footnotesize\ttfamily unsigned int \+\_\+start\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_timer_8h_source_l00082}{82}} of file \mbox{\hyperlink{_timer_8h_source}{Timer.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_timer_a8edd95b8c67bbcc681266737a72e5a0e}\label{classmbed_1_1_timer_a8edd95b8c67bbcc681266737a72e5a0e}} 
+\index{Timer@{Timer}!\_time@{\_time}}
+\index{\_time@{\_time}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{\_time}{\_time}}
+{\footnotesize\ttfamily int \+\_\+time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_timer_8h_source_l00083}{83}} of file \mbox{\hyperlink{_timer_8h_source}{Timer.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\mbox{\hyperlink{_timer_8h}{Timer.\+h}}\end{DoxyCompactItemize}

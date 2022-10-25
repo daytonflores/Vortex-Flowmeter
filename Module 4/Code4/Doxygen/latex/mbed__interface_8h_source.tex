@@ -1,0 +1,66 @@
+\hypertarget{mbed__interface_8h_source}{}\doxysection{mbed\+\_\+interface.\+h}
+\label{mbed__interface_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/mbed\_interface.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/mbed\_interface.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_INTERFACE\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_INTERFACE\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}device.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{comment}{/* Mbed interface mac address}}
+\DoxyCodeLine{22 \textcolor{comment}{ * if MBED\_MAC\_ADD\_x are zero, interface uid sets mac address,}}
+\DoxyCodeLine{23 \textcolor{comment}{ * otherwise MAC\_ADD\_x are used.}}
+\DoxyCodeLine{24 \textcolor{comment}{ */}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define MBED\_MAC\_ADDR\_INTERFACE 0x00}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define MBED\_MAC\_ADDR\_0  MBED\_MAC\_ADDR\_INTERFACE}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define MBED\_MAC\_ADDR\_1  MBED\_MAC\_ADDR\_INTERFACE}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define MBED\_MAC\_ADDR\_2  MBED\_MAC\_ADDR\_INTERFACE}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define MBED\_MAC\_ADDR\_3  MBED\_MAC\_ADDR\_INTERFACE}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define MBED\_MAC\_ADDR\_4  MBED\_MAC\_ADDR\_INTERFACE}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define MBED\_MAC\_ADDR\_5  MBED\_MAC\_ADDR\_INTERFACE}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define MBED\_MAC\_ADDRESS\_SUM (MBED\_MAC\_ADDR\_0 | MBED\_MAC\_ADDR\_1 | MBED\_MAC\_ADDR\_2 | MBED\_MAC\_ADDR\_3 | MBED\_MAC\_ADDR\_4 | MBED\_MAC\_ADDR\_5)}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{35 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#if DEVICE\_SEMIHOST}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{54 \textcolor{keywordtype}{int} mbed\_interface\_connected(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{62 \textcolor{keywordtype}{int} mbed\_interface\_reset(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{71 \textcolor{keywordtype}{int} mbed\_interface\_disconnect(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{81 \textcolor{keywordtype}{int} mbed\_interface\_powerdown(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{92 \textcolor{keywordtype}{int} mbed\_interface\_uid(\textcolor{keywordtype}{char} *uid);}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{104 \textcolor{keywordtype}{void} mbed\_mac\_address(\textcolor{keywordtype}{char} *mac);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{108 \textcolor{keywordtype}{void} mbed\_die(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{111 \}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

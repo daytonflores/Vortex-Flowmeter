@@ -1,0 +1,77 @@
+\hypertarget{_analog_out_8h_source}{}\doxysection{Analog\+Out.\+h}
+\label{_analog_out_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/AnalogOut.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/AnalogOut.h}}
+\mbox{\hyperlink{_analog_out_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_ANALOGOUT\_H}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_ANALOGOUT\_H}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{platform_8h}{platform.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00021}00021 \textcolor{preprocessor}{\#if DEVICE\_ANALOGOUT}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00023}00023 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{analogout__api_8h}{analogout\_api.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00025}00025 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00047}00047 \textcolor{keyword}{class }AnalogOut \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00049}00049 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00055}00055     AnalogOut(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin) \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00056}00056         analogout\_init(\&\_dac, pin);}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00066}00066     \textcolor{keywordtype}{void} write(\textcolor{keywordtype}{float} value) \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00067}00067         analogout\_write(\&\_dac, value);}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00068}00068     \}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00075}00075     \textcolor{keywordtype}{void} write\_u16(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} value) \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00076}00076         analogout\_write\_u16(\&\_dac, value);}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00089}00089     \textcolor{keywordtype}{float} read() \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00090}00090         \textcolor{keywordflow}{return} analogout\_read(\&\_dac);}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00091}00091     \}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00093}00093 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00096}00096     AnalogOut\& operator= (\textcolor{keywordtype}{float} percent) \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00097}00097         write(percent);}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00098}00098         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00099}00099     \}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00101}00101     AnalogOut\& operator= (AnalogOut\& rhs) \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00102}00102         write(rhs.read());}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00103}00103         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00104}00104     \}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00108}00108     \textcolor{keyword}{operator} float() \{}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00109}00109         \textcolor{keywordflow}{return} read();}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00110}00110     \}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00111}00111 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00113}00113 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00114}00114     dac\_t \_dac;}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00115}00115 \};}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00117}00117 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00119}00119 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{_analog_out_8h_source_l00121}00121 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

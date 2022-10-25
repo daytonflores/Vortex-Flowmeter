@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__sdram_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_sdram.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sdram.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_SDRAM_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_SDRAM_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00047"/>00047 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00048"/>00048 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00049"/>00049 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__ll__fmc_8h">stm32f4xx_ll_fmc.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00050"/>00050 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00059"/>00059 <emphasis role="comment">/*&#32;Exported&#32;typedef&#32;----------------------------------------------------------*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00060"/>00060 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00064"/>00064 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00065"/>00065 {
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00066"/>00066 &#32;&#32;HAL_SDRAM_STATE_RESET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00067"/>00067 &#32;&#32;HAL_SDRAM_STATE_READY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00068"/>00068 &#32;&#32;HAL_SDRAM_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00069"/>00069 &#32;&#32;HAL_SDRAM_STATE_ERROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x03,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00070"/>00070 &#32;&#32;HAL_SDRAM_STATE_WRITE_PROTECTED&#32;&#32;&#32;=&#32;0x04,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00071"/>00071 &#32;&#32;HAL_SDRAM_STATE_PRECHARGED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x05&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00073"/>00073 }HAL_SDRAM_StateTypeDef;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00074"/>00074 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00078"/>00078 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00079"/>00079 {
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00080"/>00080 &#32;&#32;FMC_SDRAM_TypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*Instance;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00082"/>00082 &#32;&#32;FMC_SDRAM_InitTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Init;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00084"/>00084 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;HAL_SDRAM_StateTypeDef&#32;&#32;&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00086"/>00086 &#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00088"/>00088 &#32;&#32;<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*hdma;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00090"/>00090 }SDRAM_HandleTypeDef;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00092"/>00092 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00093"/>00093 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00094"/>00094 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00099"/>00099 <emphasis role="preprocessor">#define&#32;__HAL_SDRAM_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_SDRAM_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00100"/>00100 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00101"/>00101 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00102"/>00102 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00103"/>00103 <emphasis role="comment">/*&#32;Initialization/de-initialization&#32;functions&#32;&#32;**********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00104"/>00104 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Init(SDRAM_HandleTypeDef&#32;*hsdram,&#32;FMC_SDRAM_TimingTypeDef&#32;*Timing);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00105"/>00105 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_DeInit(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00106"/>00106 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SDRAM_MspInit(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00107"/>00107 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SDRAM_MspDeInit(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00108"/>00108 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00109"/>00109 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SDRAM_IRQHandler(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00110"/>00110 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SDRAM_RefreshErrorCallback(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00111"/>00111 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SDRAM_DMA_XferCpltCallback(<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;*hdma);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00112"/>00112 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SDRAM_DMA_XferErrorCallback(<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;*hdma);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00113"/>00113 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00114"/>00114 <emphasis role="comment">/*&#32;I/O&#32;operation&#32;functions&#32;&#32;*****************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00115"/>00115 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Read_8b(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;*pAddress,&#32;uint8_t&#32;*pDstBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00116"/>00116 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Write_8b(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;*pAddress,&#32;uint8_t&#32;*pSrcBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00117"/>00117 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Read_16b(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;*pAddress,&#32;uint16_t&#32;*pDstBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00118"/>00118 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Write_16b(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;*pAddress,&#32;uint16_t&#32;*pSrcBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00119"/>00119 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Read_32b(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;*pAddress,&#32;uint32_t&#32;*pDstBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00120"/>00120 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Write_32b(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;*pAddress,&#32;uint32_t&#32;*pSrcBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00121"/>00121 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00122"/>00122 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Read_DMA(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;*&#32;pAddress,&#32;uint32_t&#32;*pDstBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00123"/>00123 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_Write_DMA(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;*pAddress,&#32;uint32_t&#32;*pSrcBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00124"/>00124 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00125"/>00125 <emphasis role="comment">/*&#32;SDRAM&#32;Control&#32;functions&#32;&#32;*****************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00126"/>00126 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_WriteProtection_Enable(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00127"/>00127 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_WriteProtection_Disable(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00128"/>00128 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_SendCommand(SDRAM_HandleTypeDef&#32;*hsdram,&#32;FMC_SDRAM_CommandTypeDef&#32;*Command,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00129"/>00129 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_ProgramRefreshRate(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;RefreshRate);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00130"/>00130 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SDRAM_SetAutoRefreshNumber(SDRAM_HandleTypeDef&#32;*hsdram,&#32;uint32_t&#32;AutoRefreshNumber);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00131"/>00131 uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_SDRAM_GetModeStatus(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00132"/>00132 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00133"/>00133 <emphasis role="comment">/*&#32;SDRAM&#32;State&#32;functions&#32;********************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00134"/>00134 HAL_SDRAM_StateTypeDef&#32;&#32;HAL_SDRAM_GetState(SDRAM_HandleTypeDef&#32;*hsdram);
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00135"/>00135 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00136"/>00136 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00145"/>00145 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00146"/>00146 }
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00147"/>00147 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00148"/>00148 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00149"/>00149 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_SDRAM_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00150"/>00150 
+<anchor xml:id="_stm32f4xx__hal__sdram_8h_source_1l00151"/>00151 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

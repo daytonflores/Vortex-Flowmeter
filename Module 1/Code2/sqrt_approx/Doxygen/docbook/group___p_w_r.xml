@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_w_r" xml:lang="en-US">
+<title>PWR</title>
+<indexterm><primary>PWR</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___p_w_r___exported___constants">PWR_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_p_w_r___p_v_d_type_def">PWR_PVDTypeDef</link></para>
+
+<para>PWR PVD configuration structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga7f88bce73931300319824f22578f90de">PWR_OFFSET</link>   (<link linkend="_group___peripheral__registers__structures_1gac691ec23dace8b7a649a25acb110217a">PWR_BASE</link> - <link linkend="_group___peripheral__registers__structures_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link>   (<link linkend="_group___p_w_r_1ga7f88bce73931300319824f22578f90de">PWR_OFFSET</link> + 0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga36ff45d972bf94f31f172fd53cf44d23">DBP_BitNumber</link>   0x08</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga799ab60bdbcfc1076cf2d7f206d09b0c">CR_DBP_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga36ff45d972bf94f31f172fd53cf44d23">DBP_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga17d618eb800c401ef9c6789c9374eaf8">PVDE_BitNumber</link>   0x04</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga49f51ef8285a6be76fd204d49a00709c">CR_PVDE_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga17d618eb800c401ef9c6789c9374eaf8">PVDE_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1gad99a3da921e3e64587f6b9505ecba665">FPDS_BitNumber</link>   0x09</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga57d7041b5d1bf0ec94fa18152a7fa208">CR_FPDS_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1gad99a3da921e3e64587f6b9505ecba665">FPDS_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga15fea9df1b0d324394336f70b319b377">PMODE_BitNumber</link>   0x0E</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga2e7c040f5c63f0fce3e274d9a03f1d1a">CR_PMODE_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga15fea9df1b0d324394336f70b319b377">PMODE_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga984cbe73312b6d3d355c5053763d499a">CSR_OFFSET</link>   (<link linkend="_group___p_w_r_1ga7f88bce73931300319824f22578f90de">PWR_OFFSET</link> + 0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga94fe0520e8f9b71fa2b99c0565ec70ea">EWUP_BitNumber</link>   0x08</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1gaaff864595f697850b19173b0bca991b0">CSR_EWUP_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1ga984cbe73312b6d3d355c5053763d499a">CSR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga94fe0520e8f9b71fa2b99c0565ec70ea">EWUP_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga1a0832bfe421cdd6f2640ffb625cc2d8">BRE_BitNumber</link>   0x09</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga1451a5ec810860a7c2e28c23f0c0e928">CSR_BRE_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1ga984cbe73312b6d3d355c5053763d499a">CSR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga1a0832bfe421cdd6f2640ffb625cc2d8">BRE_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga1ee778f7ff494723bd0ef04ec44b0f77">__HAL_PWR_VOLTAGESCALING_CONFIG</link>(__REGULATOR__)   (<link linkend="_group___exported__macro_1ga6553c99f510c3bab8cc0a91602053247">MODIFY_REG</link>(<link linkend="_group___peripheral__declaration_1ga04651c526497822a859942b928e57f8e">PWR</link>-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1gaccc33f1ba4e374e116ffa50f3a503030">PWR_CR_VOS</link>, (__REGULATOR__)))</para>
+
+<para>macros configure the main internal regulator output voltage. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga2977135bbea35b786805eea640d1c884">__HAL_PWR_GET_FLAG</link>(__FLAG__)   ((<link linkend="_group___peripheral__declaration_1ga04651c526497822a859942b928e57f8e">PWR</link>-&gt;CSR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Check PWR flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga96f24bf4b16c9f944cd829100bf746e5">__HAL_PWR_CLEAR_FLAG</link>(__FLAG__)   (<link linkend="_group___peripheral__declaration_1ga04651c526497822a859942b928e57f8e">PWR</link>-&gt;CR |=  (__FLAG__) &lt;&lt; 2)</para>
+
+<para>Clear the PWR&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga43a49255649e03d2d2b6b12c5c379d2b">PWR_EXTI_LINE_PVD</link>   ((uint32_t)0x00010000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga88e67c74a89b512fe8540e3096e18bec">__HAL_PVD_EXTI_ENABLE_IT</link>(__EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= (__EXTILINE__))</para>
+
+<para>Enable the PVD Exti Line. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1gacc1fd67c8a6dced45635c741c09604e5">__HAL_PVD_EXTI_DISABLE_IT</link>(__EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(__EXTILINE__))</para>
+
+<para>Disable the PVD EXTI Line. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1gac17acaab21b918123a212a3e303b76c6">__HAL_PVD_EXTI_GET_FLAG</link>(__EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (__EXTILINE__))</para>
+
+<para>checks whether the specified PVD Exti interrupt flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_w_r_1ga24e6477217088646f495fde495f2cc90">__HAL_PVD_EXTI_CLEAR_FLAG</link>(__EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (__EXTILINE__))</para>
+
+<para>Clear the PVD Exti flag. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___p_w_r_1ga7edb99b94a46448c34f0301b0a077ff5">HAL_PWR_DeInit</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1ga3d07cef39bf294db4aed7e06e5dbf9af">HAL_PWR_EnableBkUpAccess</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1ga1513de5f2e4b72e094fb04bab786fec8">HAL_PWR_DisableBkUpAccess</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1ga4faeb5c3434293ebf870b2e8fcf8af77">HAL_PWR_PVDConfig</link> (<link linkend="_struct_p_w_r___p_v_d_type_def">PWR_PVDTypeDef</link> *sConfigPVD)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1ga729c254eac1847073d8a55621384107d">HAL_PWR_EnablePVD</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1ga3a843cc2fd1a1bb02c7f2dfa355bf9ec">HAL_PWR_DisablePVD</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1gaa76f42833a89110293f687b034164916">HAL_PWR_EnableWakeUpPin</link> (uint32_t WakeUpPinx)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1gab12ca816929e23e36f5ed8f4ccdb1472">HAL_PWR_DisableWakeUpPin</link> (uint32_t WakeUpPinx)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1gacfca5f1062274423e08317c0a5a225fa">HAL_PWR_EnterSTOPMode</link> (uint32_t Regulator, uint8_t STOPEntry)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1ga5c84f4e046525c22d233c8a3443fab5f">HAL_PWR_EnterSLEEPMode</link> (uint32_t Regulator, uint8_t SLEEPEntry)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1ga40736f74c169077fcd08f34470559aa2">HAL_PWR_EnterSTANDBYMode</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1gae3403237bde597d72b32f0434932a047">HAL_PWR_PVD_IRQHandler</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_w_r_1gaa4843b3eb7989f5b95e1218af4086940">HAL_PWR_PVDCallback</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___p_w_r_1ga24e6477217088646f495fde495f2cc90"/><section>
+    <title>__HAL_PVD_EXTI_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_PVD_EXTI_CLEAR_FLAG</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>__HAL_PVD_EXTI_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PVD_EXTI_CLEAR_FLAG( __EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (__EXTILINE__))</computeroutput></para><para>
+
+<para>Clear the PVD Exti flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__EXTILINE__</entry><entry>
+<para>specifies the PVD Exti sources to be cleared. This parameter can be: <itemizedlist>
+<listitem>
+<para>PWR_EXTI_LINE_PVD 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00290">290</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1gacc1fd67c8a6dced45635c741c09604e5"/><section>
+    <title>__HAL_PVD_EXTI_DISABLE_IT</title>
+<indexterm><primary>__HAL_PVD_EXTI_DISABLE_IT</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>__HAL_PVD_EXTI_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_PVD_EXTI_DISABLE_IT( __EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(__EXTILINE__))</computeroutput></para><para>
+
+<para>Disable the PVD EXTI Line. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__EXTILINE__</entry><entry>
+<para>specifies the PVD EXTI sources to be disabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>PWR_EXTI_LINE_PVD 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00272">272</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga88e67c74a89b512fe8540e3096e18bec"/><section>
+    <title>__HAL_PVD_EXTI_ENABLE_IT</title>
+<indexterm><primary>__HAL_PVD_EXTI_ENABLE_IT</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>__HAL_PVD_EXTI_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_PVD_EXTI_ENABLE_IT( __EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= (__EXTILINE__))</computeroutput></para><para>
+
+<para>Enable the PVD Exti Line. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__EXTILINE__</entry><entry>
+<para>specifies the PVD Exti sources to be enabled. This parameter can be: <itemizedlist>
+<listitem>
+<para>PWR_EXTI_LINE_PVD 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None.</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00263">263</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1gac17acaab21b918123a212a3e303b76c6"/><section>
+    <title>__HAL_PVD_EXTI_GET_FLAG</title>
+<indexterm><primary>__HAL_PVD_EXTI_GET_FLAG</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>__HAL_PVD_EXTI_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PVD_EXTI_GET_FLAG( __EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (__EXTILINE__))</computeroutput></para><para>
+
+<para>checks whether the specified PVD Exti interrupt flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__EXTILINE__</entry><entry>
+<para>specifies the PVD Exti sources to be cleared. This parameter can be: <itemizedlist>
+<listitem>
+<para>PWR_EXTI_LINE_PVD 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>EXTI</entry><entry>
+<para>PVD Line Status. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00281">281</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga96f24bf4b16c9f944cd829100bf746e5"/><section>
+    <title>__HAL_PWR_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_PWR_CLEAR_FLAG</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>__HAL_PWR_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_CLEAR_FLAG( __FLAG__)   (<link linkend="_group___peripheral__declaration_1ga04651c526497822a859942b928e57f8e">PWR</link>-&gt;CR |=  (__FLAG__) &lt;&lt; 2)</computeroutput></para><para>
+
+<para>Clear the PWR&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to clear. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>PWR_FLAG_WU: Wake Up flag </para>
+</listitem>
+<listitem>
+<para>PWR_FLAG_SB: StandBy flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00253">253</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga2977135bbea35b786805eea640d1c884"/><section>
+    <title>__HAL_PWR_GET_FLAG</title>
+<indexterm><primary>__HAL_PWR_GET_FLAG</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>__HAL_PWR_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_GET_FLAG( __FLAG__)   ((<link linkend="_group___peripheral__declaration_1ga04651c526497822a859942b928e57f8e">PWR</link>-&gt;CSR &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Check PWR flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>PWR_FLAG_WU: Wake Up flag. This flag indicates that a wakeup event was received from the WKUP pin or from the RTC alarm (Alarm A or Alarm B), RTC Tamper event, RTC TimeStamp event or RTC Wakeup. An additional wakeup event is detected if the WKUP pin is enabled (by setting the EWUP bit) when the WKUP pin level is already high. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+<listitem>
+<para>PWR_FLAG_SB: StandBy flag. This flag indicates that the system was resumed from StandBy mode. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+<listitem>
+<para>PWR_FLAG_PVDO: PVD Output. This flag is valid only if PVD is enabled by the <link linkend="_group___p_w_r_1ga729c254eac1847073d8a55621384107d">HAL_PWR_EnablePVD()</link> function. The PVD is stopped by Standby mode For this reason, this bit is equal to 0 after Standby or reset until the PVDE bit is set. </para>
+</listitem>
+<listitem>
+<para>PWR_FLAG_BRR: Backup regulator ready flag. This bit is not reset when the device wakes up from Standby mode or by a system reset or power reset. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+<listitem>
+<para>PWR_FLAG_VOSRDY: This flag indicates that the Regulator voltage scaling output selection is ready. </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00245">245</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga1ee778f7ff494723bd0ef04ec44b0f77"/><section>
+    <title>__HAL_PWR_VOLTAGESCALING_CONFIG</title>
+<indexterm><primary>__HAL_PWR_VOLTAGESCALING_CONFIG</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>__HAL_PWR_VOLTAGESCALING_CONFIG</secondary></indexterm>
+<para><computeroutput>#define __HAL_PWR_VOLTAGESCALING_CONFIG( __REGULATOR__)   (<link linkend="_group___exported__macro_1ga6553c99f510c3bab8cc0a91602053247">MODIFY_REG</link>(<link linkend="_group___peripheral__declaration_1ga04651c526497822a859942b928e57f8e">PWR</link>-&gt;CR, <link linkend="_group___peripheral___registers___bits___definition_1gaccc33f1ba4e374e116ffa50f3a503030">PWR_CR_VOS</link>, (__REGULATOR__)))</computeroutput></para><para>
+
+<para>macros configure the main internal regulator output voltage. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__REGULATOR__</entry><entry>
+<para>specifies the regulator output voltage to achieve a tradeoff between performance and power consumption when the device does not operate at the maximum frequency (refer to the datasheets for more details). This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>PWR_REGULATOR_VOLTAGE_SCALE1: Regulator voltage output Scale 1 mode </para>
+</listitem>
+<listitem>
+<para>PWR_REGULATOR_VOLTAGE_SCALE2: Regulator voltage output Scale 2 mode </para>
+</listitem>
+<listitem>
+<para>PWR_REGULATOR_VOLTAGE_SCALE3: Regulator voltage output Scale 3 mode </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00222">222</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga1a0832bfe421cdd6f2640ffb625cc2d8"/><section>
+    <title>BRE_BitNumber</title>
+<indexterm><primary>BRE_BitNumber</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>BRE_BitNumber</secondary></indexterm>
+<para><computeroutput>#define BRE_BitNumber   0x09</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00099">99</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga799ab60bdbcfc1076cf2d7f206d09b0c"/><section>
+    <title>CR_DBP_BB</title>
+<indexterm><primary>CR_DBP_BB</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>CR_DBP_BB</secondary></indexterm>
+<para><computeroutput>#define CR_DBP_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga36ff45d972bf94f31f172fd53cf44d23">DBP_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00078">78</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga57d7041b5d1bf0ec94fa18152a7fa208"/><section>
+    <title>CR_FPDS_BB</title>
+<indexterm><primary>CR_FPDS_BB</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>CR_FPDS_BB</secondary></indexterm>
+<para><computeroutput>#define CR_FPDS_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1gad99a3da921e3e64587f6b9505ecba665">FPDS_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00086">86</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc"/><section>
+    <title>CR_OFFSET</title>
+<indexterm><primary>CR_OFFSET</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>CR_OFFSET</secondary></indexterm>
+<para><computeroutput>#define CR_OFFSET   (<link linkend="_group___p_w_r_1ga7f88bce73931300319824f22578f90de">PWR_OFFSET</link> + 0x00)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00076">76</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga2e7c040f5c63f0fce3e274d9a03f1d1a"/><section>
+    <title>CR_PMODE_BB</title>
+<indexterm><primary>CR_PMODE_BB</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>CR_PMODE_BB</secondary></indexterm>
+<para><computeroutput>#define CR_PMODE_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga15fea9df1b0d324394336f70b319b377">PMODE_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00090">90</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga49f51ef8285a6be76fd204d49a00709c"/><section>
+    <title>CR_PVDE_BB</title>
+<indexterm><primary>CR_PVDE_BB</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>CR_PVDE_BB</secondary></indexterm>
+<para><computeroutput>#define CR_PVDE_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1gafa1d3d0ea72132df651c76fc1bdffffc">CR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga17d618eb800c401ef9c6789c9374eaf8">PVDE_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00082">82</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga1451a5ec810860a7c2e28c23f0c0e928"/><section>
+    <title>CSR_BRE_BB</title>
+<indexterm><primary>CSR_BRE_BB</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>CSR_BRE_BB</secondary></indexterm>
+<para><computeroutput>#define CSR_BRE_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1ga984cbe73312b6d3d355c5053763d499a">CSR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga1a0832bfe421cdd6f2640ffb625cc2d8">BRE_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00100">100</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1gaaff864595f697850b19173b0bca991b0"/><section>
+    <title>CSR_EWUP_BB</title>
+<indexterm><primary>CSR_EWUP_BB</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>CSR_EWUP_BB</secondary></indexterm>
+<para><computeroutput>#define CSR_EWUP_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___p_w_r_1ga984cbe73312b6d3d355c5053763d499a">CSR_OFFSET</link> * 32) + (<link linkend="_group___p_w_r_1ga94fe0520e8f9b71fa2b99c0565ec70ea">EWUP_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00096">96</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga984cbe73312b6d3d355c5053763d499a"/><section>
+    <title>CSR_OFFSET</title>
+<indexterm><primary>CSR_OFFSET</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>CSR_OFFSET</secondary></indexterm>
+<para><computeroutput>#define CSR_OFFSET   (<link linkend="_group___p_w_r_1ga7f88bce73931300319824f22578f90de">PWR_OFFSET</link> + 0x04)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00094">94</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga36ff45d972bf94f31f172fd53cf44d23"/><section>
+    <title>DBP_BitNumber</title>
+<indexterm><primary>DBP_BitNumber</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>DBP_BitNumber</secondary></indexterm>
+<para><computeroutput>#define DBP_BitNumber   0x08</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00077">77</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga94fe0520e8f9b71fa2b99c0565ec70ea"/><section>
+    <title>EWUP_BitNumber</title>
+<indexterm><primary>EWUP_BitNumber</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>EWUP_BitNumber</secondary></indexterm>
+<para><computeroutput>#define EWUP_BitNumber   0x08</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00095">95</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1gad99a3da921e3e64587f6b9505ecba665"/><section>
+    <title>FPDS_BitNumber</title>
+<indexterm><primary>FPDS_BitNumber</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>FPDS_BitNumber</secondary></indexterm>
+<para><computeroutput>#define FPDS_BitNumber   0x09</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00085">85</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga15fea9df1b0d324394336f70b319b377"/><section>
+    <title>PMODE_BitNumber</title>
+<indexterm><primary>PMODE_BitNumber</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>PMODE_BitNumber</secondary></indexterm>
+<para><computeroutput>#define PMODE_BitNumber   0x0E</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00089">89</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga17d618eb800c401ef9c6789c9374eaf8"/><section>
+    <title>PVDE_BitNumber</title>
+<indexterm><primary>PVDE_BitNumber</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>PVDE_BitNumber</secondary></indexterm>
+<para><computeroutput>#define PVDE_BitNumber   0x04</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00081">81</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga43a49255649e03d2d2b6b12c5c379d2b"/><section>
+    <title>PWR_EXTI_LINE_PVD</title>
+<indexterm><primary>PWR_EXTI_LINE_PVD</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>PWR_EXTI_LINE_PVD</secondary></indexterm>
+<para><computeroutput>#define PWR_EXTI_LINE_PVD   ((uint32_t)0x00010000)</computeroutput></para>
+<para>External interrupt line 16 Connected to the PVD EXTI Line </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00255">255</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_w_r_1ga7f88bce73931300319824f22578f90de"/><section>
+    <title>PWR_OFFSET</title>
+<indexterm><primary>PWR_OFFSET</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>PWR_OFFSET</secondary></indexterm>
+<para><computeroutput>#define PWR_OFFSET   (<link linkend="_group___peripheral__registers__structures_1gac691ec23dace8b7a649a25acb110217a">PWR_BASE</link> - <link linkend="_group___peripheral__registers__structures_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pwr_8h_source_1l00072">72</link> of file <link linkend="_stm32f4xx__hal__pwr_8h_source">stm32f4xx_hal_pwr.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___p_w_r_1ga7edb99b94a46448c34f0301b0a077ff5"/><section>
+    <title>HAL_PWR_DeInit()</title>
+<indexterm><primary>HAL_PWR_DeInit</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_DeInit</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_DeInit (void )</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1ga1513de5f2e4b72e094fb04bab786fec8"/><section>
+    <title>HAL_PWR_DisableBkUpAccess()</title>
+<indexterm><primary>HAL_PWR_DisableBkUpAccess</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_DisableBkUpAccess</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_DisableBkUpAccess (void )</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1ga3a843cc2fd1a1bb02c7f2dfa355bf9ec"/><section>
+    <title>HAL_PWR_DisablePVD()</title>
+<indexterm><primary>HAL_PWR_DisablePVD</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_DisablePVD</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_DisablePVD (void )</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1gab12ca816929e23e36f5ed8f4ccdb1472"/><section>
+    <title>HAL_PWR_DisableWakeUpPin()</title>
+<indexterm><primary>HAL_PWR_DisableWakeUpPin</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_DisableWakeUpPin</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_DisableWakeUpPin (uint32_t WakeUpPinx)</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1ga3d07cef39bf294db4aed7e06e5dbf9af"/><section>
+    <title>HAL_PWR_EnableBkUpAccess()</title>
+<indexterm><primary>HAL_PWR_EnableBkUpAccess</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_EnableBkUpAccess</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_EnableBkUpAccess (void )</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1ga729c254eac1847073d8a55621384107d"/><section>
+    <title>HAL_PWR_EnablePVD()</title>
+<indexterm><primary>HAL_PWR_EnablePVD</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_EnablePVD</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_EnablePVD (void )</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1gaa76f42833a89110293f687b034164916"/><section>
+    <title>HAL_PWR_EnableWakeUpPin()</title>
+<indexterm><primary>HAL_PWR_EnableWakeUpPin</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_EnableWakeUpPin</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_EnableWakeUpPin (uint32_t WakeUpPinx)</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1ga5c84f4e046525c22d233c8a3443fab5f"/><section>
+    <title>HAL_PWR_EnterSLEEPMode()</title>
+<indexterm><primary>HAL_PWR_EnterSLEEPMode</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_EnterSLEEPMode</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_EnterSLEEPMode (uint32_t Regulator, uint8_t SLEEPEntry)</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1ga40736f74c169077fcd08f34470559aa2"/><section>
+    <title>HAL_PWR_EnterSTANDBYMode()</title>
+<indexterm><primary>HAL_PWR_EnterSTANDBYMode</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_EnterSTANDBYMode</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_EnterSTANDBYMode (void )</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1gacfca5f1062274423e08317c0a5a225fa"/><section>
+    <title>HAL_PWR_EnterSTOPMode()</title>
+<indexterm><primary>HAL_PWR_EnterSTOPMode</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_EnterSTOPMode</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_EnterSTOPMode (uint32_t Regulator, uint8_t STOPEntry)</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1gae3403237bde597d72b32f0434932a047"/><section>
+    <title>HAL_PWR_PVD_IRQHandler()</title>
+<indexterm><primary>HAL_PWR_PVD_IRQHandler</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_PVD_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_PVD_IRQHandler (void )</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1gaa4843b3eb7989f5b95e1218af4086940"/><section>
+    <title>HAL_PWR_PVDCallback()</title>
+<indexterm><primary>HAL_PWR_PVDCallback</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_PVDCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_PVDCallback (void )</computeroutput></para></section>
+<anchor xml:id="_group___p_w_r_1ga4faeb5c3434293ebf870b2e8fcf8af77"/><section>
+    <title>HAL_PWR_PVDConfig()</title>
+<indexterm><primary>HAL_PWR_PVDConfig</primary><secondary>PWR</secondary></indexterm>
+<indexterm><primary>PWR</primary><secondary>HAL_PWR_PVDConfig</secondary></indexterm>
+<para><computeroutput>void HAL_PWR_PVDConfig (<link linkend="_struct_p_w_r___p_v_d_type_def">PWR_PVDTypeDef</link> * sConfigPVD)</computeroutput></para></section>
+</section>
+</section>

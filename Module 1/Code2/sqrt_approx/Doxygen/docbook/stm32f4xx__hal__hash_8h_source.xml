@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__hash_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_hash.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_HASH_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_HASH_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#if&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00047"/>00047 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00048"/>00048 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00049"/>00049 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00050"/>00050 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00059"/>00059 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00060"/>00060 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00064"/>00064 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00065"/>00065 {
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00066"/>00066 &#32;&#32;uint32_t&#32;DataType;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00069"/>00069 &#32;&#32;uint32_t&#32;KeySize;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00071"/>00071 &#32;&#32;uint8_t*&#32;pKey;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00072"/>00072 }HASH_InitTypeDef;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00073"/>00073 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00077"/>00077 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00078"/>00078 {
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00079"/>00079 &#32;&#32;HAL_HASH_STATE_RESET&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00080"/>00080 &#32;&#32;HAL_HASH_STATE_READY&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00081"/>00081 &#32;&#32;HAL_HASH_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00082"/>00082 &#32;&#32;HAL_HASH_STATE_TIMEOUT&#32;&#32;&#32;=&#32;0x03,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00083"/>00083 &#32;&#32;HAL_HASH_STATE_ERROR&#32;&#32;&#32;&#32;&#32;=&#32;0x04&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00084"/>00084 }HAL_HASH_STATETypeDef;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00085"/>00085 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00089"/>00089 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00090"/>00090 {
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00091"/>00091 &#32;&#32;HAL_HASH_PHASE_READY&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00092"/>00092 &#32;&#32;HAL_HASH_PHASE_PROCESS&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00093"/>00093 }HAL_HASHPhaseTypeDef;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00094"/>00094 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00098"/>00098 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00099"/>00099 {
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;HASH_InitTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Init;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*pHashInBuffPtr;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*pHashOutBuffPtr;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HashBuffSize;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HashInCount;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HashITCounter;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Status;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;HAL_HASHPhaseTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;Phase;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*hdmain;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;HAL_HASH_STATETypeDef&#32;&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00121"/>00121 }&#32;HASH_HandleTypeDef;
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00122"/>00122 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00123"/>00123 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00124"/>00124 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00132"/>00132 <emphasis role="preprocessor">#define&#32;HASH_AlgoSelection_SHA1&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x0000)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00133"/>00133 <emphasis role="preprocessor">#define&#32;HASH_AlgoSelection_SHA224&#32;&#32;&#32;&#32;HASH_CR_ALGO_1&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00134"/>00134 <emphasis role="preprocessor">#define&#32;HASH_AlgoSelection_SHA256&#32;&#32;&#32;&#32;HASH_CR_ALGO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00135"/>00135 <emphasis role="preprocessor">#define&#32;HASH_AlgoSelection_MD5&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_CR_ALGO_0&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00137"/>00137 <emphasis role="preprocessor">#define&#32;IS_HASH_ALGOSELECTION(ALGOSELECTION)&#32;(((ALGOSELECTION)&#32;==&#32;HASH_AlgoSelection_SHA1)&#32;&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00138"/>00138 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ALGOSELECTION)&#32;==&#32;HASH_AlgoSelection_SHA224)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00139"/>00139 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ALGOSELECTION)&#32;==&#32;HASH_AlgoSelection_SHA256)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00140"/>00140 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ALGOSELECTION)&#32;==&#32;HASH_AlgoSelection_MD5))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00148"/>00148 <emphasis role="preprocessor">#define&#32;HASH_AlgoMode_HASH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00149"/>00149 <emphasis role="preprocessor">#define&#32;HASH_AlgoMode_HMAC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_CR_MODE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00151"/>00151 <emphasis role="preprocessor">#define&#32;IS_HASH_ALGOMODE(ALGOMODE)&#32;(((ALGOMODE)&#32;==&#32;HASH_AlgoMode_HASH)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00152"/>00152 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ALGOMODE)&#32;==&#32;HASH_AlgoMode_HMAC))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00160"/>00160 <emphasis role="preprocessor">#define&#32;HASH_DATATYPE_32B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x0000)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00161"/>00161 <emphasis role="preprocessor">#define&#32;HASH_DATATYPE_16B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_CR_DATATYPE_0&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00162"/>00162 <emphasis role="preprocessor">#define&#32;HASH_DATATYPE_8B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_CR_DATATYPE_1&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00163"/>00163 <emphasis role="preprocessor">#define&#32;HASH_DATATYPE_1B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_CR_DATATYPE&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00165"/>00165 <emphasis role="preprocessor">#define&#32;IS_HASH_DATATYPE(DATATYPE)&#32;(((DATATYPE)&#32;==&#32;HASH_DATATYPE_32B)||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00166"/>00166 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DATATYPE)&#32;==&#32;HASH_DATATYPE_16B)||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00167"/>00167 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DATATYPE)&#32;==&#32;HASH_DATATYPE_8B)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00168"/>00168 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DATATYPE)&#32;==&#32;HASH_DATATYPE_1B))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00176"/>00176 <emphasis role="preprocessor">#define&#32;HASH_HMACKeyType_ShortKey&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00177"/>00177 <emphasis role="preprocessor">#define&#32;HASH_HMACKeyType_LongKey&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_CR_LKEY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00179"/>00179 <emphasis role="preprocessor">#define&#32;IS_HASH_HMAC_KEYTYPE(KEYTYPE)&#32;(((KEYTYPE)&#32;==&#32;HASH_HMACKeyType_ShortKey)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00180"/>00180 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((KEYTYPE)&#32;==&#32;HASH_HMACKeyType_LongKey))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00188"/>00188 <emphasis role="preprocessor">#define&#32;HASH_FLAG_DINIS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_SR_DINIS&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00189"/>00189 <emphasis role="preprocessor">#define&#32;HASH_FLAG_DCIS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_SR_DCIS&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00190"/>00190 <emphasis role="preprocessor">#define&#32;HASH_FLAG_DMAS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_SR_DMAS&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00191"/>00191 <emphasis role="preprocessor">#define&#32;HASH_FLAG_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_SR_BUSY&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00192"/>00192 <emphasis role="preprocessor">#define&#32;HASH_FLAG_DINNE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_CR_DINNE&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00200"/>00200 <emphasis role="preprocessor">#define&#32;HASH_IT_DINI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_IMR_DINIM&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00201"/>00201 <emphasis role="preprocessor">#define&#32;HASH_IT_DCI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH_IMR_DCIM&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00210"/>00210 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00211"/>00211 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00216"/>00216 <emphasis role="preprocessor">#define&#32;__HAL_HASH_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_HASH_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00217"/>00217 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00228"/>00228 <emphasis role="preprocessor">#define&#32;__HAL_HASH_GET_FLAG(__FLAG__)&#32;((HASH-&gt;SR&#32;&amp;&#32;(__FLAG__))&#32;==&#32;(__FLAG__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00229"/>00229 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00235"/>00235 <emphasis role="preprocessor">#define&#32;HAL_HMAC_MD5_Finish&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_HASH_MD5_Finish</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00236"/>00236 <emphasis role="preprocessor">#define&#32;HAL_HMAC_SHA1_Finish&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_HASH_SHA1_Finish</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00237"/>00237 <emphasis role="preprocessor">#define&#32;HAL_HMAC_SHA224_Finish&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_HASH_SHA224_Finish</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00238"/>00238 <emphasis role="preprocessor">#define&#32;HAL_HMAC_SHA256_Finish&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_HASH_SHA256_Finish</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00239"/>00239 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00246"/>00246 <emphasis role="preprocessor">#define&#32;__HAL_HASH_SET_MDMAT()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH-&gt;CR&#32;|=&#32;HASH_CR_MDMAT</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00247"/>00247 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00253"/>00253 <emphasis role="preprocessor">#define&#32;__HAL_HASH_RESET_MDMAT()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH-&gt;CR&#32;&amp;=&#32;(uint32_t)(~HASH_CR_MDMAT)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00254"/>00254 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00260"/>00260 <emphasis role="preprocessor">#define&#32;__HAL_HASH_START_DIGEST()&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH-&gt;STR&#32;|=&#32;HASH_STR_DCAL</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00261"/>00261 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00267"/>00267 <emphasis role="preprocessor">#define&#32;__HAL_HASH_SET_NBVALIDBITS(SIZE)&#32;do{HASH-&gt;STR&#32;&amp;=&#32;~(HASH_STR_NBW);\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00268"/>00268 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HASH-&gt;STR&#32;|=&#32;8&#32;*&#32;((SIZE)&#32;%&#32;4);\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00269"/>00269 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}while(0)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00270"/>00270 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00271"/>00271 <emphasis role="comment">/*&#32;Include&#32;HASH&#32;HAL&#32;Extension&#32;module&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00272"/>00272 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__hash__ex_8h">stm32f4xx_hal_hash_ex.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00273"/>00273 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00274"/>00274 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00275"/>00275 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00276"/>00276 <emphasis role="comment">/*&#32;Initialization&#32;and&#32;de-initialization&#32;functions&#32;&#32;**********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00277"/>00277 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_Init(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00278"/>00278 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_DeInit(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00279"/>00279 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00280"/>00280 <emphasis role="comment">/*&#32;HASH&#32;processing&#32;using&#32;polling&#32;&#32;*********************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00281"/>00281 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_SHA1_Start(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size,&#32;uint8_t*&#32;pOutBuffer,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00282"/>00282 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_MD5_Start(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size,&#32;uint8_t*&#32;pOutBuffer,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00283"/>00283 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_MD5_Accumulate(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00284"/>00284 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_SHA1_Accumulate(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00285"/>00285 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00286"/>00286 <emphasis role="comment">/*&#32;HASH-MAC&#32;processing&#32;using&#32;polling&#32;&#32;*****************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00287"/>00287 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HMAC_SHA1_Start(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size,&#32;uint8_t*&#32;pOutBuffer,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00288"/>00288 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HMAC_MD5_Start(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size,&#32;uint8_t*&#32;pOutBuffer,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00289"/>00289 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00290"/>00290 <emphasis role="comment">/*&#32;HASH&#32;processing&#32;using&#32;interrupt&#32;&#32;*******************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00291"/>00291 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_SHA1_Start_IT(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size,&#32;uint8_t*&#32;pOutBuffer);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00292"/>00292 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_MD5_Start_IT(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size,&#32;uint8_t*&#32;pOutBuffer);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00293"/>00293 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00294"/>00294 <emphasis role="comment">/*&#32;HASH&#32;processing&#32;using&#32;DMA&#32;&#32;*************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00295"/>00295 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_SHA1_Start_DMA(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00296"/>00296 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_SHA1_Finish(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t*&#32;pOutBuffer,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00297"/>00297 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_MD5_Start_DMA(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00298"/>00298 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HASH_MD5_Finish(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t*&#32;pOutBuffer,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00299"/>00299 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00300"/>00300 <emphasis role="comment">/*&#32;HASH-HMAC&#32;processing&#32;using&#32;DMA&#32;&#32;********************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00301"/>00301 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HMAC_SHA1_Start_DMA(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00302"/>00302 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_HMAC_MD5_Start_DMA(HASH_HandleTypeDef&#32;*hhash,&#32;uint8_t&#32;*pInBuffer,&#32;uint32_t&#32;Size);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00303"/>00303 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00304"/>00304 <emphasis role="comment">/*&#32;Processing&#32;functions&#32;&#32;******************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00305"/>00305 <emphasis role="keywordtype">void</emphasis>&#32;HAL_HASH_IRQHandler(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00306"/>00306 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00307"/>00307 <emphasis role="comment">/*&#32;Peripheral&#32;State&#32;functions&#32;&#32;************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00308"/>00308 HAL_HASH_STATETypeDef&#32;HAL_HASH_GetState(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00309"/>00309 <emphasis role="keywordtype">void</emphasis>&#32;HAL_HASH_MspInit(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00310"/>00310 <emphasis role="keywordtype">void</emphasis>&#32;HAL_HASH_MspDeInit(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00311"/>00311 <emphasis role="keywordtype">void</emphasis>&#32;HAL_HASH_InCpltCallback(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00312"/>00312 <emphasis role="keywordtype">void</emphasis>&#32;HAL_HASH_DgstCpltCallback(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00313"/>00313 <emphasis role="keywordtype">void</emphasis>&#32;HAL_HASH_ErrorCallback(HASH_HandleTypeDef&#32;*hhash);
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00314"/>00314 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00315"/>00315 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F415xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00324"/>00324 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00325"/>00325 }
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00326"/>00326 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00327"/>00327 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00328"/>00328 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00329"/>00329 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_HASH_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00330"/>00330 
+<anchor xml:id="_stm32f4xx__hal__hash_8h_source_1l00331"/>00331 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

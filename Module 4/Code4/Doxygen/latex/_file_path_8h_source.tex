@@ -1,0 +1,52 @@
+\hypertarget{_file_path_8h_source}{}\doxysection{File\+Path.\+h}
+\label{_file_path_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FilePath.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FilePath.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_FILEPATH\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_FILEPATH\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}FileSystemLike.h"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}FileLike.h"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_file_path}{FilePath}} \{}
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \mbox{\hyperlink{classmbed_1_1_file_path}{FilePath}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file\_path);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* fileName(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{bool}          isFileSystem(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{33     \mbox{\hyperlink{classmbed_1_1_file_system_like}{FileSystemLike}}* fileSystem(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool}    isFile(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{36     \mbox{\hyperlink{classmbed_1_1_file_like}{FileLike}}* file(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{37     \textcolor{keywordtype}{bool}    exists(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{private}:}
+\DoxyCodeLine{40     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* file\_name;}
+\DoxyCodeLine{41     \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}}* fb;}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

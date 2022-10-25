@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__usart_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_usart.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_usart.h</primary></indexterm>
+<para>
+
+<para>Header file of USART HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_u_s_a_r_t___init_type_def">USART_InitTypeDef</link></para>
+
+<para>USART Init Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link></para>
+
+<para>USART handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___word___length_1gae2978458689a31bed9a8a3e66ed84f50">USART_WORDLENGTH_8B</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___word___length_1ga3a8363f7dccf85ccb52d698e0900f347">USART_WORDLENGTH_9B</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga95f0288b9c6aaeca7cb6550a2e6833e2">USART_CR1_M</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___word___length_1ga5b07b29ee91f0bea4c10ec0fd74fbc04">IS_USART_WORD_LENGTH</link>(LENGTH)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___stop___bits_1ga82aae3118e9cd59bb270c028e21c23b4">USART_STOPBITS_1</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___stop___bits_1gaa6e5782774150ff935df3fc06d9ec0c4">USART_STOPBITS_0_5</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaee6ee01c6e5325b378b2209ef20d0a61">USART_CR2_STOP_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___stop___bits_1gaf8d022e62f55ceb7b5e03eea336b5c45">USART_STOPBITS_2</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga2b24d14f0e5d1c76c878b08aad44d02b">USART_CR2_STOP_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___stop___bits_1ga5b799017a5d9ab7de71a49c625f87532">USART_STOPBITS_1_5</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gaee6ee01c6e5325b378b2209ef20d0a61">USART_CR2_STOP_0</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2b24d14f0e5d1c76c878b08aad44d02b">USART_CR2_STOP_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___stop___bits_1ga6f9153c1fbee1058ba26ec88f0f20828">IS_USART_STOPBITS</link>(STOPBITS)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___parity_1ga85bfcbeb5ba1c34bbcda3f3e3b994846">USART_PARITY_NONE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___parity_1gae7630824c78a39366b7e5b4c55996200">USART_PARITY_EVEN</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___parity_1ga184f3e22cb30ea94b797b02e94e774a1">USART_PARITY_ODD</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2e159d36ab2c93a2c1942df60e9eebbe">USART_CR1_PS</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___parity_1gaa87b2e338e0ccc42887d3c56901bee87">IS_USART_PARITY</link>(PARITY)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___mode_1ga3efdc5989048ad122a5c9c1e325bb89c">USART_MODE_RX</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gada0d5d407a22264de847bc1b40a17aeb">USART_CR1_RE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___mode_1ga7a2fcdc3486d2675cc147811b996eb16">USART_MODE_TX</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gade7f090b04fd78b755b43357ecaa9622">USART_CR1_TE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___mode_1ga82418ff60ab8dac647eb7a6ba6db1284">USART_MODE_TX_RX</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gade7f090b04fd78b755b43357ecaa9622">USART_CR1_TE</link> |<link linkend="_group___peripheral___registers___bits___definition_1gada0d5d407a22264de847bc1b40a17aeb">USART_CR1_RE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___mode_1gae9140e5ca405d2377fe0e82c79e136a2">IS_USART_MODE</link>(MODE)   ((((MODE) &amp; (uint32_t)0xFFF3) == 0x00) &amp;&amp; ((MODE) != (uint32_t)0x00))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock_1ga45c49fb3e5ff70db2dea36e909ffa07a">USART_CLOCK_DISABLED</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock_1ga259282d33c89b8a3ce2db2192124ce61">USART_CLOCK_ENABLED</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga42a396cde02ffa0c4d3fd9817b6af853">USART_CR2_CLKEN</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock_1ga0f1e1ba37690b21b7338ed3b06614cf6">IS_USART_CLOCK</link>(CLOCK)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock___polarity_1ga5afb62c05704ca0e750ca8f4bb5ccc7d">USART_POLARITY_LOW</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock___polarity_1ga3b3e3d798d4797a220346f6b14d257ee">USART_POLARITY_HIGH</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gafbb4336ac93d94d4e78f9fb7b3a0dc68">USART_CR2_CPOL</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock___polarity_1ga365cbaaf0cc68a8c689b4ee418cd287d">IS_USART_POLARITY</link>(CPOL)   (((CPOL) == <link linkend="_group___u_s_a_r_t___clock___polarity_1ga5afb62c05704ca0e750ca8f4bb5ccc7d">USART_POLARITY_LOW</link>) || ((CPOL) == <link linkend="_group___u_s_a_r_t___clock___polarity_1ga3b3e3d798d4797a220346f6b14d257ee">USART_POLARITY_HIGH</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock___phase_1gab050873df3eb3844f973e61681e02e6a">USART_PHASE_1EDGE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock___phase_1ga080cff411c6cefbb511162fcc91c43ec">USART_PHASE_2EDGE</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga362976ce813e58310399d113d2cf09cb">USART_CR2_CPHA</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___clock___phase_1ga6ea3d074e9204eb593472e03452e537b">IS_USART_PHASE</link>(CPHA)   (((CPHA) == <link linkend="_group___u_s_a_r_t___clock___phase_1gab050873df3eb3844f973e61681e02e6a">USART_PHASE_1EDGE</link>) || ((CPHA) == <link linkend="_group___u_s_a_r_t___clock___phase_1ga080cff411c6cefbb511162fcc91c43ec">USART_PHASE_2EDGE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___last___bit_1gac96499244ffa44ff6fa739da9cc9d53f">USART_LASTBIT_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___last___bit_1gae851e2151668c666028dc10f20f4f676">USART_LASTBIT_ENABLE</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga4a62e93ae7864e89622bdd92508b615e">USART_CR2_LBCL</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___last___bit_1gaa941695e5612b53e9c2aca6a9fa0d695">IS_USART_LASTBIT</link>(LASTBIT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___n_a_c_k___state_1ga5e2a0ab7e7ccbdc9832d363b95389f7f">USARTNACK_ENABLED</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga3f3b70b2ee9ff0b59e952fd7ab04373c">USART_CR3_NACK</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___n_a_c_k___state_1ga44c940c85051784c23cb5fdef98fe5e3">USARTNACK_DISABLED</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___n_a_c_k___state_1ga92c8c26cb4d4f8f20c67a85c2d457797">IS_USART_NACK_STATE</link>(NACK)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___flags_1ga7129f13333f2a7218838cc32fe507bfa">USART_FLAG_TXE</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___flags_1gae7b85c9e2cc86af5bbc8b8d8b854410f">USART_FLAG_TC</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___flags_1ga11d6b70c8f00216b6d8a43790dfdcf2f">USART_FLAG_RXNE</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___flags_1gac2f1ccc91a834f9cbec3f058872b972a">USART_FLAG_IDLE</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___flags_1gabdb285b5c1876d93f9c802f9304538d5">USART_FLAG_ORE</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___flags_1ga81781d27ffc8b85dfaf7b7b791229547">USART_FLAG_NE</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___flags_1ga3551a32bac49a2ec040e5fdafcc9c4bd">USART_FLAG_FE</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___flags_1ga5e87fde5704f27c75df25395e23404ad">USART_FLAG_PE</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___interrupt__definition_1gae607c28a462c224c575b7541dc4f7067">USART_IT_PE</link>   ((uint32_t)0x10000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___interrupt__definition_1gab18d0fe889204a4c34f6d5817fb5147d">USART_IT_TXE</link>   ((uint32_t)0x10000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___interrupt__definition_1ga748e86162cc110513330079982821c39">USART_IT_TC</link>   ((uint32_t)0x10000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___interrupt__definition_1gacdd49b93072655a21a63a35e6431f8ae">USART_IT_RXNE</link>   ((uint32_t)0x10000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___interrupt__definition_1ga5d85aab24b7b2dfddb61ba2a49fa6185">USART_IT_IDLE</link>   ((uint32_t)0x10000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___interrupt__definition_1ga063628e16cdda199b07d380421afc4a5">USART_IT_LBD</link>   ((uint32_t)0x20000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___interrupt__definition_1gab49efbefaca2921e8cbe8f5146e99dbd">USART_IT_CTS</link>   ((uint32_t)0x30000400)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t___interrupt__definition_1ga631e83efd4c4789128d80a9539faf78a">USART_IT_ERR</link>   ((uint32_t)0x30000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga953ddcf8e901974e9f73e7d337238170">__HAL_USART_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5ab78adc4ded45529f2cf9e74150e49696">HAL_USART_STATE_RESET</link>)</para>
+
+<para>Reset USART handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga16b9a5a85a8edc0464db168c2db21b3a">__HAL_USART_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Checks whether the specified Smartcard flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1gaff3cb6ff740b240764e7844eaf3d6807">__HAL_USART_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</para>
+
+<para>Clears the specified Smartcard pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga034341c78baf4241878310a22ec76a06">USART_IT_MASK</link>   ((uint32_t)0x0000FFFF)</para>
+
+<para>Enables or disables the specified Usart interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1gae9a3340e7cbd8844eb5302ccca5c248a">__USART_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga7d56e0df4c0106136fc9696e238c3a77">__USART_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga3ab781c75a319bd41e4b64098259f018">__HAL_USART_GET_IT_SOURCE</link>(__HANDLE__,  __IT__)</para>
+
+<para>Checks whether the specified Usart interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga90b3aa911836550c0358bd6d301c3048">__USART_ENABLE</link>(__HANDLE__)   ( (__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga8424f50f162648a8e724de5865c2b987">__USART_DISABLE</link>(__HANDLE__)   ( (__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>(_PCLK_,  _BAUD_)   (((_PCLK_)*25)/(4*(_BAUD_)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>(_PCLK_,  _BAUD_)   (<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_))/100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>(_PCLK_,  _BAUD_)   (((<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_)) - (<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) * 100)) * 16 + 50) / 100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1gabc7f532530dcaae9b6294fa87b3b8105">__USART_BRR</link>(_PCLK_,  _BAUD_)   ((<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) &lt;&lt; 4)|(<link linkend="_group___u_s_a_r_t_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>((_PCLK_), (_BAUD_)) &amp; 0x0F))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_a_r_t_1ga9dc365e0a1e01031a8e0757a34b9d420">IS_USART_BAUDRATE</link>(BAUDRATE)   ((BAUDRATE) &lt; 10500001)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___u_s_a_r_t_1ga502e7abdfa6b24f0f6b40cf60c7383c5">HAL_USART_StateTypeDef</link> { 
+<link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5ab78adc4ded45529f2cf9e74150e49696">HAL_USART_STATE_RESET</link> = 0x00
+, <link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5ac707f3dc06c16fce84d167b03441e3d1">HAL_USART_STATE_READY</link> = 0x01
+, <link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5af29d38beb8203761692149ce14a9cbdb">HAL_USART_STATE_BUSY</link> = 0x02
+, <link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5a2ee8ab5e15829c484ab4c4fbec68d3f6">HAL_USART_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5a4943f2dd7af684bfad7688b16e149f0d">HAL_USART_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5aab5458c5e3bf1fbd3065ef8fb0109e63">HAL_USART_STATE_BUSY_TX_RX</link> = 0x32
+, <link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5a7e3fd9d81ea140c60b8ace92fa0efb06">HAL_USART_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___u_s_a_r_t_1gga502e7abdfa6b24f0f6b40cf60c7383c5a3bd9b34183b2942ab9b8bb8e9f2beb13">HAL_USART_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___u_s_a_r_t_1ga7090b1731570d5766a5d739979ea0bf7">HAL_USART_ErrorTypeDef</link> { 
+<link linkend="_group___u_s_a_r_t_1gga7090b1731570d5766a5d739979ea0bf7acd43a8ff168c7bd8c8f7b6115ce8a5d8">HAL_USART_ERROR_NONE</link> = 0x00
+, <link linkend="_group___u_s_a_r_t_1gga7090b1731570d5766a5d739979ea0bf7ad9d4b8b2d366ab70bf8074b5c126d4d2">HAL_USART_ERROR_PE</link> = 0x01
+, <link linkend="_group___u_s_a_r_t_1gga7090b1731570d5766a5d739979ea0bf7aab388efd14207e42199b530e3370bb87">HAL_USART_ERROR_NE</link> = 0x02
+, <link linkend="_group___u_s_a_r_t_1gga7090b1731570d5766a5d739979ea0bf7ace59c242a7c36e0aa22bf2c125049adf">HAL_USART_ERROR_FE</link> = 0x04
+, 
+<link linkend="_group___u_s_a_r_t_1gga7090b1731570d5766a5d739979ea0bf7a8ca9947ad1d568e44e30526c01b531b8">HAL_USART_ERROR_ORE</link> = 0x08
+, <link linkend="_group___u_s_a_r_t_1gga7090b1731570d5766a5d739979ea0bf7abf9d4931bcdde8334dc9fcbcf493d546">HAL_USART_ERROR_DMA</link> = 0x10
+ }</para>
+
+<para>HAL USART Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1ga388056e8e46439e4ff8f6327c1c7b955">HAL_USART_Init</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1gab8ba342814b8325670b01c4091047efc">HAL_USART_DeInit</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1gac9c43cec371f5c2da4ba18aacd4c7694">HAL_USART_MspInit</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1ga6d212f24838f3f4923cae63bb2e3f6b3">HAL_USART_MspDeInit</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1gaa80425d3a8fa74a17f74cb03a3c2ad05">HAL_USART_Transmit</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pTxData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1ga1da8a5ce515c18b9960d366812bf737e">HAL_USART_Receive</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pRxData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1gad6da6800e21d17bd021f5d0cc068f271">HAL_USART_TransmitReceive</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1gaee43a3d0faab6467aea5663f8b0e87b0">HAL_USART_Transmit_IT</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pTxData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1ga19816dd7809a5dba59f309172cb7ea2d">HAL_USART_Receive_IT</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pRxData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1gaf67f2b883594afd0027f10a518a3f595">HAL_USART_TransmitReceive_IT</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1ga3d52e7ec93f6111e87c11daa8c00d1a1">HAL_USART_Transmit_DMA</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pTxData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1gab0322771e1ddbb8c2ac6dd75e7e1c90e">HAL_USART_Receive_DMA</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pRxData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1ga8ad37a3c54b720f1f0a2a32dafcac6df">HAL_USART_TransmitReceive_DMA</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1gab6d960d952daee0b6aa82fbf0a4b61b0">HAL_USART_DMAPause</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1ga20e7a0e7864825eb18c9ee57a4e63fb7">HAL_USART_DMAResume</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___u_s_a_r_t_1gabeaf40f697cb852cb54a3ad81df4375e">HAL_USART_DMAStop</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1ga4ac0981601603af111c7e59db1680ace">HAL_USART_IRQHandler</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1ga140f7cd834ae6359fcb4a71e0fe29909">HAL_USART_TxCpltCallback</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1ga107416fd537ed66aaaf530581c1a2c0a">HAL_USART_TxHalfCpltCallback</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1ga5937cf9bb1958b927bf34900d19c9724">HAL_USART_RxCpltCallback</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1ga2b22726b27e640b3d37a896ef5113b49">HAL_USART_RxHalfCpltCallback</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1ga5ed0ad2c026a5d53cda4485557558eaa">HAL_USART_TxRxCpltCallback</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___u_s_a_r_t_1gae7e2b482040e13cb538fa507617f8229">HAL_USART_ErrorCallback</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_a_r_t_1ga502e7abdfa6b24f0f6b40cf60c7383c5">HAL_USART_StateTypeDef</link> <link linkend="_group___u_s_a_r_t_1ga4fd7b79a07f70c5c9b4d13b7aaf147e8">HAL_USART_GetState</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___u_s_a_r_t_1ga0a6ae309b21478da71f41cbc2b72fc47">HAL_USART_GetError</link> (<link linkend="_struct_u_s_a_r_t___handle_type_def">USART_HandleTypeDef</link> *husart)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of USART HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__usart_8h_source">stm32f4xx_hal_usart.h</link>.</para>
+</section>
+</section>

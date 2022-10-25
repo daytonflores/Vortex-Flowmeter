@@ -1,0 +1,954 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___s_p_i" xml:lang="en-US">
+<title>SPI</title>
+<indexterm><primary>SPI</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___s_p_i___exported___constants">SPI_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_s_p_i___init_type_def">SPI_InitTypeDef</link></para>
+
+<para>SPI Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_____s_p_i___handle_type_def">__SPI_HandleTypeDef</link></para>
+
+<para>SPI handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_p_i_1ga0d846f9517715960873e854b4a0790b0">__HAL_SPI_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4adbc218df2c9841b561282b40b3ded69d">HAL_SPI_STATE_RESET</link>)</para>
+
+<para>Reset SPI handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1ga76064652f6f56d8868720b5541e854f5">__HAL_SPI_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |= (__INTERRUPT__))</para>
+
+<para>Enable or disable the specified SPI interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1ga47fa7321c5755bfbff1a7229fbe5b21c">__HAL_SPI_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;= (~(__INTERRUPT__)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1gabdaab061e4603331a0ec4b9d651df0b5">__HAL_SPI_GET_IT_SOURCE</link>(__HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR2 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Check if the specified SPI interrupt source is enabled or disabled. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1gaa0bbe5fb55f93fd277ddb6acf58cec53">__HAL_SPI_GET_FLAG</link>(__HANDLE__,  __FLAG__)   ((((__HANDLE__)-&gt;Instance-&gt;SR) &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Check whether the specified SPI flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1gad1cb4100b67726531ad426d300f4cd26">__HAL_SPI_CLEAR_CRCERRFLAG</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(<link linkend="_group___s_p_i___flag__definition_1ga30fb6af50e1f3c61cb9de76b0101c889">SPI_FLAG_CRCERR</link>))</para>
+
+<para>Clear the SPI CRCERR pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1ga6c88becbe528c542156bc201622efba2">__HAL_SPI_CLEAR_MODFFLAG</link>(__HANDLE__)</para>
+
+<para>Clear the SPI MODF pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1gaf6af33b1c5d334b9fe7bb778c5b6442e">__HAL_SPI_CLEAR_OVRFLAG</link>(__HANDLE__)</para>
+
+<para>Clear the SPI OVR pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1ga7ff182f5cf6c731318c882351d6d7ac2">__HAL_SPI_CLEAR_FREFLAG</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;SR)</para>
+
+<para>Clear the SPI FRE pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1ga16d2d73c2b16004499ae8d492e71fd4e">__HAL_SPI_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1gac5a646d978d3b98eb7c6a5d95d75c3f9">SPI_CR1_SPE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1gaa10d88f87d16de53bd81dfb33bd56959">__HAL_SPI_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1gac5a646d978d3b98eb7c6a5d95d75c3f9">SPI_CR1_SPE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1ga76eec5bbb44c873aa52966a9cb6c8f8c">IS_SPI_CRC_POLYNOMIAL</link>(POLYNOMIAL)   (((POLYNOMIAL) &gt;= 0x1) &amp;&amp; ((POLYNOMIAL) &lt;= 0xFFFF))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1ga0ce6f69a353e6be97cf4b1baa8217c61">__HAL_SPI_1LINE_TX</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |= <link linkend="_group___peripheral___registers___bits___definition_1ga378953916b7701bd49f063c0366b703f">SPI_CR1_BIDIOE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1gad65dd79ecc8cabb54c3836676a0ca582">__HAL_SPI_1LINE_RX</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga378953916b7701bd49f063c0366b703f">SPI_CR1_BIDIOE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_p_i_1gabe0f481cf4cad7bb33d5a8c03bc8f9de">__HAL_SPI_RESET_CRC</link>(__HANDLE__)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_struct_____s_p_i___handle_type_def">__SPI_HandleTypeDef</link> <link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link></para>
+
+<para>SPI handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___s_p_i_1ga8891cb64e76198a860172d94c638c9b4">HAL_SPI_StateTypeDef</link> { 
+<link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4adbc218df2c9841b561282b40b3ded69d">HAL_SPI_STATE_RESET</link> = 0x00
+, <link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4abb3992c67a15c14bd1808ef6b63fa926">HAL_SPI_STATE_READY</link> = 0x01
+, <link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4a0635e168bc0430253fe8e74cfe9768fd">HAL_SPI_STATE_BUSY</link> = 0x02
+, <link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4a5d82b644c7ca656ab5fe8a8e3cbc29ab">HAL_SPI_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4afd7e00128aca1feaa099c2595ffb9277">HAL_SPI_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4a9dae2883ae3e43ca28afc9453a14c938">HAL_SPI_STATE_BUSY_TX_RX</link> = 0x32
+, <link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4a3cba266d2346abe3b62fa0acccab4711">HAL_SPI_STATE_ERROR</link> = 0x03
+ }</para>
+
+<para>HAL SPI State structure definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_p_i_1gafabd084f961b80a2fd36388333718ed2">HAL_SPI_ErrorTypeDef</link> { 
+<link linkend="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a1eb8d08ce7611b8f0f64d71b0671351d">HAL_SPI_ERROR_NONE</link> = 0x00
+, <link linkend="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a8c90d53dc33431fb38e3ac4b0e671744">HAL_SPI_ERROR_MODF</link> = 0x01
+, <link linkend="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a7e14740322660d6e1872080e8e9c7635">HAL_SPI_ERROR_CRC</link> = 0x02
+, <link linkend="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2ad3721d0c777f018b6ea6fc4f3a2a7aae">HAL_SPI_ERROR_OVR</link> = 0x04
+, 
+<link linkend="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a227db0c19bbc65e4f793896ae415a896">HAL_SPI_ERROR_FRE</link> = 0x08
+, <link linkend="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a24afad5a9fa56acad3eb992da873e009">HAL_SPI_ERROR_DMA</link> = 0x10
+, <link linkend="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a77b8d10d46a0b4efe3404f2899a37690">HAL_SPI_ERROR_FLAG</link> = 0x20
+ }</para>
+
+<para>HAL SPI Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1gaadb9d40e710c714d96b2501996658c44">HAL_SPI_Init</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1gaca2db2a7bbed96ac013c565080fb61f2">HAL_SPI_DeInit</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_p_i_1ga17f583be14b22caffa6c4e56dcd035ef">HAL_SPI_MspInit</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_p_i_1gabadc4d4974af1afd943e8d13589068e1">HAL_SPI_MspDeInit</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1ga02ec86e05d0702387c221f90b6f041a2">HAL_SPI_Transmit</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1gafdf43dbe4e5ef225bed6650b6e8c6313">HAL_SPI_Receive</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1ga7c3106fe01493a33b08e5c617f45aeb1">HAL_SPI_TransmitReceive</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1gafbb309aa738bb3296934fb1a39ffbf40">HAL_SPI_Transmit_IT</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1gaaae0af2e2db7e7549b52b020a18f6168">HAL_SPI_Receive_IT</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1ga518c43d8323499451e7f4782a9dc6e32">HAL_SPI_TransmitReceive_IT</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1ga6aebe304396c3e18b55f926dae0dadcb">HAL_SPI_Transmit_DMA</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1ga626bb2ec54e7b6ff9bd5d807ae6e6e24">HAL_SPI_Receive_DMA</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_p_i_1ga228553c64b10b8dade9fee525a8a489d">HAL_SPI_TransmitReceive_DMA</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_p_i_1gaf3da6e0a87468bc039b578c21329df47">HAL_SPI_IRQHandler</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_p_i_1ga0a99ab4f6aa6ee7dc2abca5483910dde">HAL_SPI_TxCpltCallback</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_p_i_1ga3df7021fe24cf874f8b1eec5bd5f4cb3">HAL_SPI_RxCpltCallback</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_p_i_1ga04e63f382f172164c8e7cae4ff5d883c">HAL_SPI_TxRxCpltCallback</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_p_i_1ga3db7835e7e7ac335887f62fedf156926">HAL_SPI_ErrorCallback</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_p_i_1ga8891cb64e76198a860172d94c638c9b4">HAL_SPI_StateTypeDef</link> <link linkend="_group___s_p_i_1ga4e599e7fac80bb2eb0fd3f1737e50a5e">HAL_SPI_GetState</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_p_i_1gafabd084f961b80a2fd36388333718ed2">HAL_SPI_ErrorTypeDef</link> <link linkend="_group___s_p_i_1ga40c9e31d89881be808e36929221cffe5">HAL_SPI_GetError</link> (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___s_p_i_1gad65dd79ecc8cabb54c3836676a0ca582"/><section>
+    <title>__HAL_SPI_1LINE_RX</title>
+<indexterm><primary>__HAL_SPI_1LINE_RX</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_1LINE_RX</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_1LINE_RX( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga378953916b7701bd49f063c0366b703f">SPI_CR1_BIDIOE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00434">434</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga0ce6f69a353e6be97cf4b1baa8217c61"/><section>
+    <title>__HAL_SPI_1LINE_TX</title>
+<indexterm><primary>__HAL_SPI_1LINE_TX</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_1LINE_TX</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_1LINE_TX( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |= <link linkend="_group___peripheral___registers___bits___definition_1ga378953916b7701bd49f063c0366b703f">SPI_CR1_BIDIOE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00432">432</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1gad1cb4100b67726531ad426d300f4cd26"/><section>
+    <title>__HAL_SPI_CLEAR_CRCERRFLAG</title>
+<indexterm><primary>__HAL_SPI_CLEAR_CRCERRFLAG</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_CLEAR_CRCERRFLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_CLEAR_CRCERRFLAG( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(<link linkend="_group___s_p_i___flag__definition_1ga30fb6af50e1f3c61cb9de76b0101c889">SPI_FLAG_CRCERR</link>))</computeroutput></para><para>
+
+<para>Clear the SPI CRCERR pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SPI handle. This parameter can be SPI where x: 1, 2, or 3 to select the SPI peripheral. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00402">402</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga7ff182f5cf6c731318c882351d6d7ac2"/><section>
+    <title>__HAL_SPI_CLEAR_FREFLAG</title>
+<indexterm><primary>__HAL_SPI_CLEAR_FREFLAG</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_CLEAR_FREFLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_CLEAR_FREFLAG( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;SR)</computeroutput></para><para>
+
+<para>Clear the SPI FRE pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SPI handle. This parameter can be SPI where x: 1, 2, or 3 to select the SPI peripheral. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00425">425</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga6c88becbe528c542156bc201622efba2"/><section>
+    <title>__HAL_SPI_CLEAR_MODFFLAG</title>
+<indexterm><primary>__HAL_SPI_CLEAR_MODFFLAG</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_CLEAR_MODFFLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_CLEAR_MODFFLAG( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{(__HANDLE__)-&gt;Instance-&gt;SR;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;&amp;=&#32;(~SPI_CR1_SPE);}<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Clear the SPI MODF pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SPI handle. This parameter can be SPI where x: 1, 2, or 3 to select the SPI peripheral. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00409">409</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1gaf6af33b1c5d334b9fe7bb778c5b6442e"/><section>
+    <title>__HAL_SPI_CLEAR_OVRFLAG</title>
+<indexterm><primary>__HAL_SPI_CLEAR_OVRFLAG</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_CLEAR_OVRFLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_CLEAR_OVRFLAG( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{(__HANDLE__)-&gt;Instance-&gt;DR;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;SR;}<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+
+<para>Clear the SPI OVR pending flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SPI handle. This parameter can be SPI where x: 1, 2, or 3 to select the SPI peripheral. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00417">417</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1gaa10d88f87d16de53bd81dfb33bd56959"/><section>
+    <title>__HAL_SPI_DISABLE</title>
+<indexterm><primary>__HAL_SPI_DISABLE</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1gac5a646d978d3b98eb7c6a5d95d75c3f9">SPI_CR1_SPE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00428">428</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga47fa7321c5755bfbff1a7229fbe5b21c"/><section>
+    <title>__HAL_SPI_DISABLE_IT</title>
+<indexterm><primary>__HAL_SPI_DISABLE_IT</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_DISABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;= (~(__INTERRUPT__)))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00367">367</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga16d2d73c2b16004499ae8d492e71fd4e"/><section>
+    <title>__HAL_SPI_ENABLE</title>
+<indexterm><primary>__HAL_SPI_ENABLE</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1gac5a646d978d3b98eb7c6a5d95d75c3f9">SPI_CR1_SPE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00427">427</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga76064652f6f56d8868720b5541e854f5"/><section>
+    <title>__HAL_SPI_ENABLE_IT</title>
+<indexterm><primary>__HAL_SPI_ENABLE_IT</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_ENABLE_IT( __HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enable or disable the specified SPI interrupts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SPI handle. This parameter can be SPI where x: 1, 2, or 3 to select the SPI peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the interrupt source to enable or disable. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>SPI_IT_TXE: Tx buffer empty interrupt enable </para>
+</listitem>
+<listitem>
+<para>SPI_IT_RXNE: RX buffer not empty interrupt enable </para>
+</listitem>
+<listitem>
+<para>SPI_IT_ERR: Error interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00366">366</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1gaa0bbe5fb55f93fd277ddb6acf58cec53"/><section>
+    <title>__HAL_SPI_GET_FLAG</title>
+<indexterm><primary>__HAL_SPI_GET_FLAG</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_GET_FLAG( __HANDLE__,  __FLAG__)   ((((__HANDLE__)-&gt;Instance-&gt;SR) &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Check whether the specified SPI flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SPI handle. This parameter can be SPI where x: 1, 2, or 3 to select the SPI peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>SPI_FLAG_RXNE: Receive buffer not empty flag </para>
+</listitem>
+<listitem>
+<para>SPI_FLAG_TXE: Transmit buffer empty flag </para>
+</listitem>
+<listitem>
+<para>SPI_FLAG_CRCERR: CRC error flag </para>
+</listitem>
+<listitem>
+<para>SPI_FLAG_MODF: Mode fault flag </para>
+</listitem>
+<listitem>
+<para>SPI_FLAG_OVR: Overrun flag </para>
+</listitem>
+<listitem>
+<para>SPI_FLAG_BSY: Busy flag </para>
+</listitem>
+<listitem>
+<para>SPI_FLAG_FRE: Frame format error flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00395">395</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1gabdaab061e4603331a0ec4b9d651df0b5"/><section>
+    <title>__HAL_SPI_GET_IT_SOURCE</title>
+<indexterm><primary>__HAL_SPI_GET_IT_SOURCE</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_GET_IT_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_GET_IT_SOURCE( __HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR2 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Check if the specified SPI interrupt source is enabled or disabled. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SPI handle. This parameter can be SPI where x: 1, 2, or 3 to select the SPI peripheral. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the SPI interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>SPI_IT_TXE: Tx buffer empty interrupt enable </para>
+</listitem>
+<listitem>
+<para>SPI_IT_RXNE: RX buffer not empty interrupt enable </para>
+</listitem>
+<listitem>
+<para>SPI_IT_ERR: Error interrupt enable </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">IT</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00379">379</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1gabe0f481cf4cad7bb33d5a8c03bc8f9de"/><section>
+    <title>__HAL_SPI_RESET_CRC</title>
+<indexterm><primary>__HAL_SPI_RESET_CRC</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_RESET_CRC</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_RESET_CRC( __HANDLE__)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{(__HANDLE__)-&gt;Instance-&gt;CR1&#32;&amp;=&#32;(~<link linkend="_group___peripheral___registers___bits___definition_1gac9339b7c6466f09ad26c26b3bb81c51b">SPI_CR1_CRCEN</link>);\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__HANDLE__)-&gt;Instance-&gt;CR1&#32;|=&#32;<link linkend="_group___peripheral___registers___bits___definition_1gac9339b7c6466f09ad26c26b3bb81c51b">SPI_CR1_CRCEN</link>;}<emphasis role="keywordflow">while</emphasis>(0)
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00436">436</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga0d846f9517715960873e854b4a0790b0"/><section>
+    <title>__HAL_SPI_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_SPI_RESET_HANDLE_STATE</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>__HAL_SPI_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_SPI_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4adbc218df2c9841b561282b40b3ded69d">HAL_SPI_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset SPI handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the SPI handle. This parameter can be SPI where x: 1, 2, or 3 to select the SPI peripheral. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00354">354</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga76eec5bbb44c873aa52966a9cb6c8f8c"/><section>
+    <title>IS_SPI_CRC_POLYNOMIAL</title>
+<indexterm><primary>IS_SPI_CRC_POLYNOMIAL</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>IS_SPI_CRC_POLYNOMIAL</secondary></indexterm>
+<para><computeroutput>#define IS_SPI_CRC_POLYNOMIAL( POLYNOMIAL)   (((POLYNOMIAL) &gt;= 0x1) &amp;&amp; ((POLYNOMIAL) &lt;= 0xFFFF))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00430">430</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18"/><section>
+    <title>SPI_HandleTypeDef</title>
+<indexterm><primary>SPI_HandleTypeDef</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>SPI_HandleTypeDef</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_struct_____s_p_i___handle_type_def">__SPI_HandleTypeDef</link> <link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link></computeroutput></para><para>
+
+<para>SPI handle Structure definition. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___s_p_i_1gafabd084f961b80a2fd36388333718ed2"/><section>
+    <title>HAL_SPI_ErrorTypeDef</title>
+<indexterm><primary>HAL_SPI_ErrorTypeDef</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ErrorTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___s_p_i_1gafabd084f961b80a2fd36388333718ed2">HAL_SPI_ErrorTypeDef</link></computeroutput></para><para>
+
+<para>HAL SPI Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_SPI_ERROR_NONE</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ERROR_NONE</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a1eb8d08ce7611b8f0f64d71b0671351d"/>HAL_SPI_ERROR_NONE</entry><entry>
+<para>No error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_ERROR_MODF</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ERROR_MODF</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a8c90d53dc33431fb38e3ac4b0e671744"/>HAL_SPI_ERROR_MODF</entry><entry>
+<para>MODF error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_ERROR_CRC</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ERROR_CRC</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a7e14740322660d6e1872080e8e9c7635"/>HAL_SPI_ERROR_CRC</entry><entry>
+<para>CRC error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_ERROR_OVR</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ERROR_OVR</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2ad3721d0c777f018b6ea6fc4f3a2a7aae"/>HAL_SPI_ERROR_OVR</entry><entry>
+<para>OVR error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_ERROR_FRE</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ERROR_FRE</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a227db0c19bbc65e4f793896ae415a896"/>HAL_SPI_ERROR_FRE</entry><entry>
+<para>FRE error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_ERROR_DMA</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ERROR_DMA</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a24afad5a9fa56acad3eb992da873e009"/>HAL_SPI_ERROR_DMA</entry><entry>
+<para>DMA transfer error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_ERROR_FLAG</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ERROR_FLAG</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1ggafabd084f961b80a2fd36388333718ed2a77b8d10d46a0b4efe3404f2899a37690"/>HAL_SPI_ERROR_FLAG</entry><entry>
+<para>Flag: RXNE,TXE, BSY 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00121">121</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_p_i_1ga8891cb64e76198a860172d94c638c9b4"/><section>
+    <title>HAL_SPI_StateTypeDef</title>
+<indexterm><primary>HAL_SPI_StateTypeDef</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___s_p_i_1ga8891cb64e76198a860172d94c638c9b4">HAL_SPI_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL SPI State structure definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_SPI_STATE_RESET</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4adbc218df2c9841b561282b40b3ded69d"/>HAL_SPI_STATE_RESET</entry><entry>
+<para>SPI not yet initialized or disabled 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_STATE_READY</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4abb3992c67a15c14bd1808ef6b63fa926"/>HAL_SPI_STATE_READY</entry><entry>
+<para>SPI initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_STATE_BUSY</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4a0635e168bc0430253fe8e74cfe9768fd"/>HAL_SPI_STATE_BUSY</entry><entry>
+<para>SPI process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_STATE_BUSY_TX</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_STATE_BUSY_TX</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4a5d82b644c7ca656ab5fe8a8e3cbc29ab"/>HAL_SPI_STATE_BUSY_TX</entry><entry>
+<para>Data Transmission process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_STATE_BUSY_RX</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_STATE_BUSY_RX</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4afd7e00128aca1feaa099c2595ffb9277"/>HAL_SPI_STATE_BUSY_RX</entry><entry>
+<para>Data Reception process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_STATE_BUSY_TX_RX</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_STATE_BUSY_TX_RX</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4a9dae2883ae3e43ca28afc9453a14c938"/>HAL_SPI_STATE_BUSY_TX_RX</entry><entry>
+<para>Data Transmission and Reception process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_SPI_STATE_ERROR</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_p_i_1gga8891cb64e76198a860172d94c638c9b4a3cba266d2346abe3b62fa0acccab4711"/>HAL_SPI_STATE_ERROR</entry><entry>
+<para>SPI error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00106">106</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___s_p_i_1gaca2db2a7bbed96ac013c565080fb61f2"/><section>
+    <title>HAL_SPI_DeInit()</title>
+<indexterm><primary>HAL_SPI_DeInit</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_DeInit (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga3db7835e7e7ac335887f62fedf156926"/><section>
+    <title>HAL_SPI_ErrorCallback()</title>
+<indexterm><primary>HAL_SPI_ErrorCallback</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_ErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SPI_ErrorCallback (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga40c9e31d89881be808e36929221cffe5"/><section>
+    <title>HAL_SPI_GetError()</title>
+<indexterm><primary>HAL_SPI_GetError</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_GetError</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_p_i_1gafabd084f961b80a2fd36388333718ed2">HAL_SPI_ErrorTypeDef</link> HAL_SPI_GetError (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga4e599e7fac80bb2eb0fd3f1737e50a5e"/><section>
+    <title>HAL_SPI_GetState()</title>
+<indexterm><primary>HAL_SPI_GetState</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_p_i_1ga8891cb64e76198a860172d94c638c9b4">HAL_SPI_StateTypeDef</link> HAL_SPI_GetState (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1gaadb9d40e710c714d96b2501996658c44"/><section>
+    <title>HAL_SPI_Init()</title>
+<indexterm><primary>HAL_SPI_Init</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_Init (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1gaf3da6e0a87468bc039b578c21329df47"/><section>
+    <title>HAL_SPI_IRQHandler()</title>
+<indexterm><primary>HAL_SPI_IRQHandler</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_SPI_IRQHandler (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1gabadc4d4974af1afd943e8d13589068e1"/><section>
+    <title>HAL_SPI_MspDeInit()</title>
+<indexterm><primary>HAL_SPI_MspDeInit</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_SPI_MspDeInit (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga17f583be14b22caffa6c4e56dcd035ef"/><section>
+    <title>HAL_SPI_MspInit()</title>
+<indexterm><primary>HAL_SPI_MspInit</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_SPI_MspInit (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1gafdf43dbe4e5ef225bed6650b6e8c6313"/><section>
+    <title>HAL_SPI_Receive()</title>
+<indexterm><primary>HAL_SPI_Receive</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_Receive</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_Receive (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga626bb2ec54e7b6ff9bd5d807ae6e6e24"/><section>
+    <title>HAL_SPI_Receive_DMA()</title>
+<indexterm><primary>HAL_SPI_Receive_DMA</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_Receive_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_Receive_DMA (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1gaaae0af2e2db7e7549b52b020a18f6168"/><section>
+    <title>HAL_SPI_Receive_IT()</title>
+<indexterm><primary>HAL_SPI_Receive_IT</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_Receive_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_Receive_IT (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga3df7021fe24cf874f8b1eec5bd5f4cb3"/><section>
+    <title>HAL_SPI_RxCpltCallback()</title>
+<indexterm><primary>HAL_SPI_RxCpltCallback</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_RxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SPI_RxCpltCallback (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga02ec86e05d0702387c221f90b6f041a2"/><section>
+    <title>HAL_SPI_Transmit()</title>
+<indexterm><primary>HAL_SPI_Transmit</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_Transmit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_Transmit (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga6aebe304396c3e18b55f926dae0dadcb"/><section>
+    <title>HAL_SPI_Transmit_DMA()</title>
+<indexterm><primary>HAL_SPI_Transmit_DMA</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_Transmit_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_Transmit_DMA (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1gafbb309aa738bb3296934fb1a39ffbf40"/><section>
+    <title>HAL_SPI_Transmit_IT()</title>
+<indexterm><primary>HAL_SPI_Transmit_IT</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_Transmit_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_Transmit_IT (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga7c3106fe01493a33b08e5c617f45aeb1"/><section>
+    <title>HAL_SPI_TransmitReceive()</title>
+<indexterm><primary>HAL_SPI_TransmitReceive</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_TransmitReceive</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_TransmitReceive (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pTxData, uint8_t * pRxData, uint16_t Size, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga228553c64b10b8dade9fee525a8a489d"/><section>
+    <title>HAL_SPI_TransmitReceive_DMA()</title>
+<indexterm><primary>HAL_SPI_TransmitReceive_DMA</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_TransmitReceive_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_TransmitReceive_DMA (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pTxData, uint8_t * pRxData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga518c43d8323499451e7f4782a9dc6e32"/><section>
+    <title>HAL_SPI_TransmitReceive_IT()</title>
+<indexterm><primary>HAL_SPI_TransmitReceive_IT</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_TransmitReceive_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SPI_TransmitReceive_IT (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi, uint8_t * pTxData, uint8_t * pRxData, uint16_t Size)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga0a99ab4f6aa6ee7dc2abca5483910dde"/><section>
+    <title>HAL_SPI_TxCpltCallback()</title>
+<indexterm><primary>HAL_SPI_TxCpltCallback</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_TxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SPI_TxCpltCallback (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+<anchor xml:id="_group___s_p_i_1ga04e63f382f172164c8e7cae4ff5d883c"/><section>
+    <title>HAL_SPI_TxRxCpltCallback()</title>
+<indexterm><primary>HAL_SPI_TxRxCpltCallback</primary><secondary>SPI</secondary></indexterm>
+<indexterm><primary>SPI</primary><secondary>HAL_SPI_TxRxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SPI_TxRxCpltCallback (<link linkend="_group___s_p_i_1gab633e49dd034de2f3a1fe79853d78d18">SPI_HandleTypeDef</link> * hspi)</computeroutput></para></section>
+</section>
+</section>

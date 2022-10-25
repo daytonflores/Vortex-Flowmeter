@@ -1,0 +1,58 @@
+\hypertarget{_file_system_like_8h_source}{}\doxysection{File\+System\+Like.\+h}
+\label{_file_system_like_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FileSystemLike.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FileSystemLike.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_FILESYSTEMLIKE\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_FILESYSTEMLIKE\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}FileBase.h"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}FileHandle.h"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}DirHandle.h"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{33 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_file_system_like}{FileSystemLike}} : \textcolor{keyword}{public} \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}} \{}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{public}:}
+\DoxyCodeLine{40     \mbox{\hyperlink{classmbed_1_1_file_system_like_adaf42774569bda270f4f686623722b19}{FileSystemLike}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_file_system_like}{\string~FileSystemLike}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{static} \mbox{\hyperlink{classmbed_1_1_dir_handle}{DirHandle}} *opendir();}
+\DoxyCodeLine{45     \textcolor{keyword}{friend} \textcolor{keyword}{class }BaseDirHandle;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{57     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_file_handle}{FileHandle}} *\mbox{\hyperlink{classmbed_1_1_file_system_like_a1283408c952faf4d0872a0a96361fe7c}{open}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *filename, \textcolor{keywordtype}{int} flags) = 0;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{64     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_system_like_af3db57c1a612e1ca59c88da3488194ee}{remove}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *filename) \{ \textcolor{keywordflow}{return} -\/1; \};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{75     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_system_like_a32cef6f224a3fa357d8e7e1d59002f16}{rename}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *oldname, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *newname) \{ \textcolor{keywordflow}{return} -\/1; \};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{86     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_dir_handle}{DirHandle}} *\mbox{\hyperlink{classmbed_1_1_file_system_like_a34bf769cc9ee447af685a10bd0ae3758}{opendir}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name) \{ \textcolor{keywordflow}{return} NULL; \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{97     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_system_like_ac397d79d5aead33cdda1070ef3f56b38}{mkdir}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, mode\_t mode) \{ \textcolor{keywordflow}{return} -\/1; \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \textcolor{comment}{// TODO other filesystem functions (mkdir, rm, rn, ls etc)}}
+\DoxyCodeLine{100 \};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

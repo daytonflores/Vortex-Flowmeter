@@ -1,0 +1,109 @@
+\hypertarget{classmbed_1_1_timer_event}{}\doxysection{Timer\+Event Class Reference}
+\label{classmbed_1_1_timer_event}\index{TimerEvent@{TimerEvent}}
+
+
+{\ttfamily \#include $<$Timer\+Event.\+h$>$}
+
+Inheritance diagram for Timer\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmbed_1_1_timer_event}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmbed_1_1_timer_event_a34640a15dc5b54243b244b9e3bcb2a7b}{Timer\+Event}} ()
+\item 
+virtual \mbox{\hyperlink{classmbed_1_1_timer_event_addfc336919a4a4c3e4908a4046a51a21}{$\sim$\+Timer\+Event}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classmbed_1_1_timer_event_a979cddb21da6c2cd8f97919cfe6a7e4c}{irq}} (uint32\+\_\+t id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classmbed_1_1_timer_event_a5cb82440540ffc0e041f54dbb66e3f98}{handler}} ()=0
+\item 
+void \mbox{\hyperlink{classmbed_1_1_timer_event_a41ab3fb2397e9e754be10caaa89dad4c}{insert}} (unsigned int timestamp)
+\item 
+void \mbox{\hyperlink{classmbed_1_1_timer_event_a1fcb45e5d2428352eb36b487d1d4eea3}{remove}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{us__ticker__api_8h_a72ca2ef9e5e60ec062b314f8f8e5cf47}{ticker\+\_\+event\+\_\+t}} \mbox{\hyperlink{classmbed_1_1_timer_event_ae0f3a450afa245f1b3cab8ef189abd14}{event}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base abstraction for timer interrupts 
+
+Definition at line \mbox{\hyperlink{_timer_event_8h_source_l00025}{25}} of file \mbox{\hyperlink{_timer_event_8h_source}{Timer\+Event.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmbed_1_1_timer_event_a34640a15dc5b54243b244b9e3bcb2a7b}\label{classmbed_1_1_timer_event_a34640a15dc5b54243b244b9e3bcb2a7b}} 
+\index{TimerEvent@{TimerEvent}!TimerEvent@{TimerEvent}}
+\index{TimerEvent@{TimerEvent}!TimerEvent@{TimerEvent}}
+\doxysubsubsection{\texorpdfstring{TimerEvent()}{TimerEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmbed_1_1_timer_event}{Timer\+Event}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmbed_1_1_timer_event_addfc336919a4a4c3e4908a4046a51a21}\label{classmbed_1_1_timer_event_addfc336919a4a4c3e4908a4046a51a21}} 
+\index{TimerEvent@{TimerEvent}!````~TimerEvent@{$\sim$TimerEvent}}
+\index{````~TimerEvent@{$\sim$TimerEvent}!TimerEvent@{TimerEvent}}
+\doxysubsubsection{\texorpdfstring{$\sim$TimerEvent()}{~TimerEvent()}}
+{\footnotesize\ttfamily virtual $\sim$\mbox{\hyperlink{classmbed_1_1_timer_event}{Timer\+Event}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destruction removes it... 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_timer_event_a5cb82440540ffc0e041f54dbb66e3f98}\label{classmbed_1_1_timer_event_a5cb82440540ffc0e041f54dbb66e3f98}} 
+\index{TimerEvent@{TimerEvent}!handler@{handler}}
+\index{handler@{handler}!TimerEvent@{TimerEvent}}
+\doxysubsubsection{\texorpdfstring{handler()}{handler()}}
+{\footnotesize\ttfamily virtual void handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classmbed_1_1_ticker_a10a5ab629c238472e20543206af37ce3}{Ticker}}, and \mbox{\hyperlink{classmbed_1_1_timeout_a10a5ab629c238472e20543206af37ce3}{Timeout}}.
+
+\mbox{\Hypertarget{classmbed_1_1_timer_event_a41ab3fb2397e9e754be10caaa89dad4c}\label{classmbed_1_1_timer_event_a41ab3fb2397e9e754be10caaa89dad4c}} 
+\index{TimerEvent@{TimerEvent}!insert@{insert}}
+\index{insert@{insert}!TimerEvent@{TimerEvent}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void insert (\begin{DoxyParamCaption}\item[{unsigned int}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmbed_1_1_timer_event_a979cddb21da6c2cd8f97919cfe6a7e4c}\label{classmbed_1_1_timer_event_a979cddb21da6c2cd8f97919cfe6a7e4c}} 
+\index{TimerEvent@{TimerEvent}!irq@{irq}}
+\index{irq@{irq}!TimerEvent@{TimerEvent}}
+\doxysubsubsection{\texorpdfstring{irq()}{irq()}}
+{\footnotesize\ttfamily static void irq (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+The handler registered with the underlying timer interrupt \mbox{\Hypertarget{classmbed_1_1_timer_event_a1fcb45e5d2428352eb36b487d1d4eea3}\label{classmbed_1_1_timer_event_a1fcb45e5d2428352eb36b487d1d4eea3}} 
+\index{TimerEvent@{TimerEvent}!remove@{remove}}
+\index{remove@{remove}!TimerEvent@{TimerEvent}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmbed_1_1_timer_event_ae0f3a450afa245f1b3cab8ef189abd14}\label{classmbed_1_1_timer_event_ae0f3a450afa245f1b3cab8ef189abd14}} 
+\index{TimerEvent@{TimerEvent}!event@{event}}
+\index{event@{event}!TimerEvent@{TimerEvent}}
+\doxysubsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily \mbox{\hyperlink{us__ticker__api_8h_a72ca2ef9e5e60ec062b314f8f8e5cf47}{ticker\+\_\+event\+\_\+t}} event\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_timer_event_8h_source_l00047}{47}} of file \mbox{\hyperlink{_timer_event_8h_source}{Timer\+Event.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\mbox{\hyperlink{_timer_event_8h}{Timer\+Event.\+h}}\end{DoxyCompactItemize}

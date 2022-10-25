@@ -1,0 +1,61 @@
+\hypertarget{_monitor_8cpp}{}\doxysection{C\+:/\+Users/dayton.flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/src/\+Monitor.cpp File Reference}
+\label{_monitor_8cpp}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/src/Monitor.cpp@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/src/Monitor.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}shared.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a49c1846d0cf1072cc80a949c8a6eea9f}\label{_monitor_8cpp_a49c1846d0cf1072cc80a949c8a6eea9f}} 
+\#define {\bfseries LOWER\+\_\+\+MEM\+\_\+\+ADDRESS}~0x00000000
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a59e56ac41819f0f35119e820bab5de98}\label{_monitor_8cpp_a59e56ac41819f0f35119e820bab5de98}} 
+\#define {\bfseries UPPER\+\_\+\+MEM\+\_\+\+ADDRESS}~0x00000100
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a51e2557a4e0dde3744d12f7a58f3737d}\label{_monitor_8cpp_a51e2557a4e0dde3744d12f7a58f3737d}} 
+uchar8\+\_\+t {\bfseries is\+\_\+hex} (uchar8\+\_\+t)
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_acd5157b5f415f4ca9be9b2a23943440c}\label{_monitor_8cpp_acd5157b5f415f4ca9be9b2a23943440c}} 
+void {\bfseries set\+\_\+display\+\_\+mode} (void)
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a29be7c30b6929c50ebb985b228fc1be2}\label{_monitor_8cpp_a29be7c30b6929c50ebb985b228fc1be2}} 
+void {\bfseries chk\+\_\+\+UART\+\_\+msg} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item fills a message buffer until return is encountered, then calls message processing 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}{UART\+\_\+msg\+\_\+process}} (void)
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a6b63ddfd916a5a9de2d766ca81818a74}\label{_monitor_8cpp_a6b63ddfd916a5a9de2d766ca81818a74}} 
+\+\_\+\+\_\+asm int {\bfseries get\+\_\+mem\+\_\+data} (int address)
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a59a4a0c8721f73a8c9d9db5a4cdc6e88}\label{_monitor_8cpp_a59a4a0c8721f73a8c9d9db5a4cdc6e88}} 
+void {\bfseries monitor} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+
+
+\DoxyHorRuler{0}
+ -- ECEN 5003 Mastering Embedded System Architecture -- -- Project 1 Module 4 -- -- Microcontroller Firmware -- -- \mbox{\hyperlink{_monitor_8cpp}{Monitor.\+cpp}} -- \hypertarget{_monitor_8cpp_autotoc_md6}{}\doxysubsubsection{–                                                                           –}\label{_monitor_8cpp_autotoc_md6}
+-- \hypertarget{_monitor_8cpp_autotoc_md7}{}\doxysubsubsection{–  Designed for\+:  University of Colorado at Boulder}\label{_monitor_8cpp_autotoc_md7}
+-- ~\newline
+ -- Designed by\+: Tim Scherr \hypertarget{_monitor_8cpp_autotoc_md8}{}\doxysubsubsection{–  Revised by\+:  Student\textquotesingle{}s name}\label{_monitor_8cpp_autotoc_md8}
+-- Version\+: 2.\+0 -- Date of current revision\+: 2022-\/06-\/20 ~\newline
+ -- Target Microcontroller\+: ST STM32\+F401\+RE -- Tools used\+: ARM mbed compiler -- ARM mbed SDK \hypertarget{_monitor_8cpp_autotoc_md9}{}\doxysubsubsection{–              ST Nucleo STM32\+F401\+RE Board}\label{_monitor_8cpp_autotoc_md9}
+-- \hypertarget{_monitor_8cpp_autotoc_md10}{}\doxysubsubsection{Functional Description\+: See below}\label{_monitor_8cpp_autotoc_md10}
+\hypertarget{_monitor_8cpp_autotoc_md11}{}\doxysubsubsection{–      Copyright (c) 2015, 2022 Tim Scherr All rights reserved.}\label{_monitor_8cpp_autotoc_md11}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}\label{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}} 
+\index{Monitor.cpp@{Monitor.cpp}!UART\_msg\_process@{UART\_msg\_process}}
+\index{UART\_msg\_process@{UART\_msg\_process}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{UART\_msg\_process()}{UART\_msg\_process()}}
+{\footnotesize\ttfamily void UART\+\_\+msg\+\_\+process (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+UART Input Message Processing 

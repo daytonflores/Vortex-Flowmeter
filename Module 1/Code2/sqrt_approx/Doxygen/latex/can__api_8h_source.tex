@@ -1,0 +1,86 @@
+\hypertarget{can__api_8h_source}{}\doxysection{can\+\_\+api.\+h}
+\label{can__api_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/can\_api.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/can\_api.h}}
+\mbox{\hyperlink{can__api_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_CAN\_API\_H}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_CAN\_API\_H}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{device_8h}{device.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00021}00021 \textcolor{preprocessor}{\#if DEVICE\_CAN}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00023}00023 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pin_names_8h}{PinNames.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00024}00024 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_peripheral_names_8h}{PeripheralNames.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00025}00025 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{can__helper_8h}{can\_helper.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00027}00027 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00028}00028 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00029}00029 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00031}00031 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00032}00032     IRQ\_RX,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00033}00033     IRQ\_TX,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00034}00034     IRQ\_ERROR,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00035}00035     IRQ\_OVERRUN,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00036}00036     IRQ\_WAKEUP,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00037}00037     IRQ\_PASSIVE,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00038}00038     IRQ\_ARB,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00039}00039     IRQ\_BUS,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00040}00040     IRQ\_READY}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00041}00041 \} CanIrqType;}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00044}00044 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00045}00045     MODE\_RESET,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00046}00046     MODE\_NORMAL,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00047}00047     MODE\_SILENT,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00048}00048     MODE\_TEST\_GLOBAL,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00049}00049     MODE\_TEST\_LOCAL,}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00050}00050     MODE\_TEST\_SILENT}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00051}00051 \} CanMode;}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00053}00053 \textcolor{keyword}{typedef} void (*can\_irq\_handler)(uint32\_t id, CanIrqType type);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00055}00055 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }can\_s can\_t;}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00057}00057 \textcolor{keywordtype}{void}          can\_init     (can\_t *obj, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} rd, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} td);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00058}00058 \textcolor{keywordtype}{void}          can\_free     (can\_t *obj);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00059}00059 \textcolor{keywordtype}{int}           can\_frequency(can\_t *obj, \textcolor{keywordtype}{int} hz);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00061}00061 \textcolor{keywordtype}{void}          can\_irq\_init (can\_t *obj, can\_irq\_handler handler, uint32\_t \textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00062}00062 \textcolor{keywordtype}{void}          can\_irq\_free (can\_t *obj);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00063}00063 \textcolor{keywordtype}{void}          can\_irq\_set  (can\_t *obj, CanIrqType irq, uint32\_t enable);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00065}00065 \textcolor{keywordtype}{int}           can\_write    (can\_t *obj, CAN\_Message, \textcolor{keywordtype}{int} cc);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00066}00066 \textcolor{keywordtype}{int}           can\_read     (can\_t *obj, CAN\_Message *msg, \textcolor{keywordtype}{int} handle);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00067}00067 \textcolor{keywordtype}{int}           can\_mode     (can\_t *obj, CanMode mode);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00068}00068 \textcolor{keywordtype}{int}           can\_filter(can\_t *obj, uint32\_t \textcolor{keywordtype}{id}, uint32\_t mask, CANFormat format, int32\_t handle);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00069}00069 \textcolor{keywordtype}{void}          can\_reset    (can\_t *obj);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00070}00070 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} can\_rderror  (can\_t *obj);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00071}00071 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} can\_tderror  (can\_t *obj);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00072}00072 \textcolor{keywordtype}{void}          can\_monitor  (can\_t *obj, \textcolor{keywordtype}{int} silent);}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00074}00074 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00075}00075 \};}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00076}00076 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00078}00078 \textcolor{preprocessor}{\#endif    }\textcolor{comment}{// MBED\_CAN\_API\_H}}
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{can__api_8h_source_l00080}00080 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

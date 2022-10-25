@@ -1,0 +1,20 @@
+\hypertarget{group___h_c_d___instance__definition}{}\doxysection{HCD\+\_\+\+Instance\+\_\+definition}
+\label{group___h_c_d___instance__definition}\index{HCD\_Instance\_definition@{HCD\_Instance\_definition}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_c_d___instance__definition_gac88bf63750919b21f644840103db807b}\label{group___h_c_d___instance__definition_gac88bf63750919b21f644840103db807b}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((USB\+\_\+\+Read\+Interrupts((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\mbox{\Hypertarget{group___h_c_d___instance__definition_ga3d4d13a8205789990dd59dc7a8fe5cb2}\label{group___h_c_d___instance__definition_ga3d4d13a8205789990dd59dc7a8fe5cb2}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$GINTSTS) $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\mbox{\Hypertarget{group___h_c_d___instance__definition_gaa51008d7ca3f27922440ffe336115372}\label{group___h_c_d___instance__definition_gaa51008d7ca3f27922440ffe336115372}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+IS\+\_\+\+INVALID\+\_\+\+INTERRUPT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(USB\+\_\+\+Read\+Interrupts((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance) == 0)
+\item 
+\mbox{\Hypertarget{group___h_c_d___instance__definition_ga6696ebd1aea007a19e831517f3e1f497}\label{group___h_c_d___instance__definition_ga6696ebd1aea007a19e831517f3e1f497}} 
+\#define {\bfseries IS\+\_\+\+HCD\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)~(((INSTANCE) == USB\+\_\+\+OTG\+\_\+\+FS))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

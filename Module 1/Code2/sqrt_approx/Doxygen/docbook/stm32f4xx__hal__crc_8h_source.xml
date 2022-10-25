@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__crc_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_crc.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_crc.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_CRC_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_CRC_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00046"/>00046 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00047"/>00047 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00048"/>00048 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00057"/>00057 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00058"/>00058 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00062"/><link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">00062</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00063"/>00063 {
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00064"/><link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97">00064</link> &#32;&#32;<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97">HAL_CRC_STATE_RESET</link>&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00065"/><link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeaa47f50129543b87fac3a83df1a634474">00065</link> &#32;&#32;<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeaa47f50129543b87fac3a83df1a634474">HAL_CRC_STATE_READY</link>&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00066"/><link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea9d03b0c1d233e87e35b9c5c8353a4b70">00066</link> &#32;&#32;<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea9d03b0c1d233e87e35b9c5c8353a4b70">HAL_CRC_STATE_BUSY</link>&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00067"/><link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea5d803dcd1d578edb76b57e3d34adc5a8">00067</link> &#32;&#32;<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea5d803dcd1d578edb76b57e3d34adc5a8">HAL_CRC_STATE_TIMEOUT</link>&#32;&#32;&#32;=&#32;0x03,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00068"/>00068 &#32;&#32;<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeadb51c35f7716430bb0c893069466a1b2">HAL_CRC_STATE_ERROR</link>&#32;&#32;&#32;&#32;&#32;=&#32;0x04&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00070"/><link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeadb51c35f7716430bb0c893069466a1b2">00070</link> }<link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link>;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00071"/>00071 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00075"/><link linkend="_struct_c_r_c___handle_type_def">00075</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00076"/>00076 {
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00077"/><link linkend="_struct_c_r_c___handle_type_def_1ad47f94224843c74bd605a4299349798a">00077</link> &#32;&#32;<link linkend="_struct_c_r_c___type_def">CRC_TypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*<link linkend="_struct_c_r_c___handle_type_def_1ad47f94224843c74bd605a4299349798a">Instance</link>;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00079"/><link linkend="_struct_c_r_c___handle_type_def_1ad4cf225029dbefe8d3fe660c33b8bb6b">00079</link> &#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_c_r_c___handle_type_def_1ad4cf225029dbefe8d3fe660c33b8bb6b">Lock</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00081"/><link linkend="_struct_c_r_c___handle_type_def_1a5d303997b28e27531cbcff9d51113dc6">00081</link> &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;<link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link>&#32;&#32;&#32;<link linkend="_struct_c_r_c___handle_type_def_1a5d303997b28e27531cbcff9d51113dc6">State</link>;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00083"/>00083 }<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link>;
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00084"/>00084 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00085"/>00085 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00086"/>00086 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00087"/>00087 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00092"/><link linkend="_group___c_r_c_1gab6ec5d74fdff177143f4b22652a18114">00092</link> <emphasis role="preprocessor">#define&#32;__HAL_CRC_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_CRC_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00093"/>00093 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00099"/><link linkend="_group___c_r_c_1ga0007a05fb01806007181e12eedc14d28">00099</link> <emphasis role="preprocessor">#define&#32;__HAL_CRC_DR_RESET(__HANDLE__)&#32;((__HANDLE__)-&gt;Instance-&gt;CR&#32;|=&#32;CRC_CR_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00100"/>00100 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00101"/>00101 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00102"/>00102 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00103"/>00103 <emphasis role="comment">/*&#32;Initialization/de-initialization&#32;functions&#32;&#32;**********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00104"/><link linkend="_group___c_r_c_1ga23e7df2eaecf59615e13b2cad8b7185f">00104</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___c_r_c_1ga23e7df2eaecf59615e13b2cad8b7185f">HAL_CRC_Init</link>(<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link>&#32;*hcrc);
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00105"/><link linkend="_group___c_r_c_1gac600b9a1785f2372ca40ed5449c23739">00105</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___c_r_c_1gac600b9a1785f2372ca40ed5449c23739">HAL_CRC_DeInit</link>&#32;(<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link>&#32;*hcrc);
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00106"/><link linkend="_group___c_r_c_1ga5167ffd293de5d86f5873910416b36d0">00106</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___c_r_c_1ga5167ffd293de5d86f5873910416b36d0">HAL_CRC_MspInit</link>(<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link>&#32;*hcrc);
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00107"/><link linkend="_group___c_r_c_1gac19b8df939b3490e690bdf1e1e04ead3">00107</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___c_r_c_1gac19b8df939b3490e690bdf1e1e04ead3">HAL_CRC_MspDeInit</link>(<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link>&#32;*hcrc);
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00108"/>00108 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00109"/>00109 <emphasis role="comment">/*&#32;Peripheral&#32;Control&#32;functions&#32;&#32;************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00110"/><link linkend="_group___c_r_c_1ga124a77d595e4982ad6e9a64c22f28b7b">00110</link> uint32_t&#32;<link linkend="_group___c_r_c_1ga124a77d595e4982ad6e9a64c22f28b7b">HAL_CRC_Accumulate</link>(<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link>&#32;*hcrc,&#32;uint32_t&#32;pBuffer[],&#32;uint32_t&#32;BufferLength);
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00111"/><link linkend="_group___c_r_c_1ga298593a6fb0bbd109cdbed3851806371">00111</link> uint32_t&#32;<link linkend="_group___c_r_c_1ga298593a6fb0bbd109cdbed3851806371">HAL_CRC_Calculate</link>(<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link>&#32;*hcrc,&#32;uint32_t&#32;pBuffer[],&#32;uint32_t&#32;BufferLength);
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00112"/>00112 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00113"/>00113 <emphasis role="comment">/*&#32;Peripheral&#32;State&#32;functions&#32;&#32;**************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00114"/><link linkend="_group___c_r_c_1ga4fb3d3460bd83853c28215bc5e14babe">00114</link> <link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link>&#32;<link linkend="_group___c_r_c_1ga4fb3d3460bd83853c28215bc5e14babe">HAL_CRC_GetState</link>(<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link>&#32;*hcrc);
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00115"/>00115 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00124"/>00124 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00125"/>00125 }
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00126"/>00126 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00127"/>00127 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00128"/>00128 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_CRC_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00129"/>00129 
+<anchor xml:id="_stm32f4xx__hal__crc_8h_source_1l00130"/>00130 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

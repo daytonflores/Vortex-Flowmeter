@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__i2s__ex_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_i2s_ex.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s_ex.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_I2S_EX_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_I2S_EX_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00046"/>00046 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00047"/>00047 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00048"/>00048 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00057"/>00057 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>&#32;
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00058"/>00058 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00059"/>00059 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00060"/>00060 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00061"/>00061 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00062"/>00062 <emphasis role="comment">/*&#32;Extended&#32;features&#32;functions&#32;**************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00063"/>00063 &#32;<emphasis role="comment">/*&#32;Blocking&#32;mode:&#32;Polling&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00064"/><link linkend="_group___i2_s_ex_1gacaac4e4831691548ade7b5f76d6b5bce">00064</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___i2_s_ex_1gacaac4e4831691548ade7b5f76d6b5bce">HAL_I2SEx_TransmitReceive</link>(<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link>&#32;*hi2s,&#32;uint16_t&#32;*pTxData,&#32;uint16_t&#32;*pRxData,&#32;uint16_t&#32;Size,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00065"/>00065 &#32;<emphasis role="comment">/*&#32;Non-Blocking&#32;mode:&#32;Interrupt&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00066"/><link linkend="_group___i2_s_ex_1gabd9cee0d3571ee3341eb5eac33cb9a63">00066</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___i2_s_ex_1gabd9cee0d3571ee3341eb5eac33cb9a63">HAL_I2SEx_TransmitReceive_IT</link>(<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link>&#32;*hi2s,&#32;uint16_t&#32;*pTxData,&#32;uint16_t&#32;*pRxData,&#32;uint16_t&#32;Size);
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00067"/>00067 <emphasis role="comment">/*&#32;Non-Blocking&#32;mode:&#32;DMA&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00068"/><link linkend="_group___i2_s_ex_1gaed32024956333befe14df26134440ba0">00068</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___i2_s_ex_1gaed32024956333befe14df26134440ba0">HAL_I2SEx_TransmitReceive_DMA</link>(<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link>&#32;*hi2s,&#32;uint16_t&#32;*pTxData,&#32;uint16_t&#32;*pRxData,&#32;uint16_t&#32;Size);
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00069"/>00069 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00070"/><link linkend="_group___i2_s_ex_1gadb32478994e5c63d4691dba692305969">00070</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___i2_s_ex_1gadb32478994e5c63d4691dba692305969">I2SEx_TransmitReceive_IT</link>(<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link>&#32;*hi2s);
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00079"/>00079 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00080"/>00080 }
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00081"/>00081 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00082"/>00082 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00083"/>00083 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00084"/>00084 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_I2S_EX_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00085"/>00085 
+<anchor xml:id="_stm32f4xx__hal__i2s__ex_8h_source_1l00086"/>00086 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

@@ -1,0 +1,665 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_n_g" xml:lang="en-US">
+<title>RNG</title>
+<indexterm><primary>RNG</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___r_n_g___exported___constants">RNG_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link></para>
+
+<para>RNG Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga5af98831d5e8f86ceba4dc6834b6683c">__HAL_RNG_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ac6ae3d9b920346eb9dbf70734cf6b24d">HAL_RNG_STATE_RESET</link>)</para>
+
+<para>Reset RNG handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga94417ed0a672802a1fe6b563fa6db67a">__HAL_RNG_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  RNG_CR_RNGEN)</para>
+
+<para>Enables the RNG peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga9f481a8bf336ef8f5896dc1b65816ec0">__HAL_RNG_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~RNG_CR_RNGEN)</para>
+
+<para>Disables the RNG peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga7d3a78fbebb37ac4bbad41bbafc45231">__HAL_RNG_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Gets the selected RNG&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga7ce64050d8d8b43a032ae7122f49d589">__HAL_RNG_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR) &amp;= ~(__FLAG__))</para>
+
+<para>Clears the RNG&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1gae57547b6ac50cab512a710ca2197ceef">__HAL_RNG_ENABLE_IT</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  RNG_CR_IE)</para>
+
+<para>Enables the RNG interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga0931b99dc51e49f8750769a4640b180d">__HAL_RNG_DISABLE_IT</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~RNG_CR_IE)</para>
+
+<para>Disables the RNG interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga8eb2f8e5e41d49baea4e228f02476587">__HAL_RNG_GET_IT</link>(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__INTERRUPT__)) == (__INTERRUPT__))</para>
+
+<para>Checks whether the specified RNG interrupt has occurred or not. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___r_n_g_1ga4df5a662b522fdd2a0628b98e3218164">HAL_RNG_StateTypeDef</link> { 
+<link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ac6ae3d9b920346eb9dbf70734cf6b24d">HAL_RNG_STATE_RESET</link> = 0x00
+, <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164aa3b092b8667b3c44bae319cefc1be8ec">HAL_RNG_STATE_READY</link> = 0x01
+, <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164af91167eb8a28f0322bdc6a6efbf7ecf1">HAL_RNG_STATE_BUSY</link> = 0x02
+, <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ae4af344563d5d2a88572c892c9be654f">HAL_RNG_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ad5f27831d44979023e9dc8012f15e838">HAL_RNG_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>RNG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_n_g_1gabb8a1155a3240d63c2407454d31c8df8">HAL_RNG_Init</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_n_g_1ga83742c9e725e9d2c07db6ee95c3b3ff6">HAL_RNG_DeInit</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1gafe887fca6ab3b254e871a1a2d88a30d7">HAL_RNG_MspInit</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1gaee48b1f58486bd2c1535a5b2486f9a6c">HAL_RNG_MspDeInit</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___r_n_g_1gae589fa0838911facb5f44a3454ed2617">HAL_RNG_GetRandomNumber</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___r_n_g_1gaf581e06eaa5281bc954e038207be1cdb">HAL_RNG_GetRandomNumber_IT</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1ga678b4fe183d5639b658b2e4e38b881b0">HAL_RNG_IRQHandler</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1gaae52f6c36cfa915c7781397d610d8253">HAL_RNG_ReadyCallback</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1ga6bbfc492695015cbf5f3ce470d2ec63f">HAL_RNG_ErrorCallback</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para><link linkend="_group___r_n_g_1ga4df5a662b522fdd2a0628b98e3218164">HAL_RNG_StateTypeDef</link> <link linkend="_group___r_n_g_1ga15f07098d0e6b39b6840b796c69685b6">HAL_RNG_GetState</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_n_g_1ga7ce64050d8d8b43a032ae7122f49d589"/><section>
+    <title>__HAL_RNG_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_RNG_CLEAR_FLAG</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>__HAL_RNG_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RNG_CLEAR_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR) &amp;= ~(__FLAG__))</computeroutput></para><para>
+
+<para>Clears the RNG&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>RNG Handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>RNG flag </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00158">158</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_n_g_1ga9f481a8bf336ef8f5896dc1b65816ec0"/><section>
+    <title>__HAL_RNG_DISABLE</title>
+<indexterm><primary>__HAL_RNG_DISABLE</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>__HAL_RNG_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RNG_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~RNG_CR_RNGEN)</computeroutput></para><para>
+
+<para>Disables the RNG peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>RNG Handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00142">142</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_n_g_1ga0931b99dc51e49f8750769a4640b180d"/><section>
+    <title>__HAL_RNG_DISABLE_IT</title>
+<indexterm><primary>__HAL_RNG_DISABLE_IT</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>__HAL_RNG_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RNG_DISABLE_IT( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~RNG_CR_IE)</computeroutput></para><para>
+
+<para>Disables the RNG interrupts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>RNG Handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00172">172</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_n_g_1ga94417ed0a672802a1fe6b563fa6db67a"/><section>
+    <title>__HAL_RNG_ENABLE</title>
+<indexterm><primary>__HAL_RNG_ENABLE</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>__HAL_RNG_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RNG_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  RNG_CR_RNGEN)</computeroutput></para><para>
+
+<para>Enables the RNG peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>RNG Handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00135">135</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_n_g_1gae57547b6ac50cab512a710ca2197ceef"/><section>
+    <title>__HAL_RNG_ENABLE_IT</title>
+<indexterm><primary>__HAL_RNG_ENABLE_IT</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>__HAL_RNG_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RNG_ENABLE_IT( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  RNG_CR_IE)</computeroutput></para><para>
+
+<para>Enables the RNG interrupts. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>RNG Handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00165">165</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_n_g_1ga7d3a78fbebb37ac4bbad41bbafc45231"/><section>
+    <title>__HAL_RNG_GET_FLAG</title>
+<indexterm><primary>__HAL_RNG_GET_FLAG</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>__HAL_RNG_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_RNG_GET_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Gets the selected RNG&apos;s flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>RNG Handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>RNG flag </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of RNG_FLAG (SET or RESET). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00150">150</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_n_g_1ga8eb2f8e5e41d49baea4e228f02476587"/><section>
+    <title>__HAL_RNG_GET_IT</title>
+<indexterm><primary>__HAL_RNG_GET_IT</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>__HAL_RNG_GET_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_RNG_GET_IT( __HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__INTERRUPT__)) == (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Checks whether the specified RNG interrupt has occurred or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>RNG Handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the RNG interrupt source to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>RNG_FLAG_DRDY: Data ready interrupt </para>
+</listitem>
+<listitem>
+<para>RNG_FLAG_CECS: Clock error interrupt </para>
+</listitem>
+<listitem>
+<para>RNG_FLAG_SECS: Seed error interrupt </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of RNG_FLAG (SET or RESET). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00184">184</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_n_g_1ga5af98831d5e8f86ceba4dc6834b6683c"/><section>
+    <title>__HAL_RNG_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_RNG_RESET_HANDLE_STATE</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>__HAL_RNG_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_RNG_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ac6ae3d9b920346eb9dbf70734cf6b24d">HAL_RNG_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset RNG handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>RNG Handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00128">128</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___r_n_g_1ga4df5a662b522fdd2a0628b98e3218164"/><section>
+    <title>HAL_RNG_StateTypeDef</title>
+<indexterm><primary>HAL_RNG_StateTypeDef</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___r_n_g_1ga4df5a662b522fdd2a0628b98e3218164">HAL_RNG_StateTypeDef</link></computeroutput></para><para>
+
+<para>RNG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_RNG_STATE_RESET</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ac6ae3d9b920346eb9dbf70734cf6b24d"/>HAL_RNG_STATE_RESET</entry><entry>
+<para>RNG not yet initialized or disabled </para>
+</entry></row><row><entry><indexterm><primary>HAL_RNG_STATE_READY</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164aa3b092b8667b3c44bae319cefc1be8ec"/>HAL_RNG_STATE_READY</entry><entry>
+<para>RNG initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_RNG_STATE_BUSY</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164af91167eb8a28f0322bdc6a6efbf7ecf1"/>HAL_RNG_STATE_BUSY</entry><entry>
+<para>RNG internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_RNG_STATE_TIMEOUT</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ae4af344563d5d2a88572c892c9be654f"/>HAL_RNG_STATE_TIMEOUT</entry><entry>
+<para>RNG timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_RNG_STATE_ERROR</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ad5f27831d44979023e9dc8012f15e838"/>HAL_RNG_STATE_ERROR</entry><entry>
+<para>RNG error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rng_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___r_n_g_1ga83742c9e725e9d2c07db6ee95c3b3ff6"/><section>
+    <title>HAL_RNG_DeInit()</title>
+<indexterm><primary>HAL_RNG_DeInit</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RNG_DeInit (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1ga6bbfc492695015cbf5f3ce470d2ec63f"/><section>
+    <title>HAL_RNG_ErrorCallback()</title>
+<indexterm><primary>HAL_RNG_ErrorCallback</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_ErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_RNG_ErrorCallback (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1gae589fa0838911facb5f44a3454ed2617"/><section>
+    <title>HAL_RNG_GetRandomNumber()</title>
+<indexterm><primary>HAL_RNG_GetRandomNumber</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_GetRandomNumber</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_RNG_GetRandomNumber (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1gaf581e06eaa5281bc954e038207be1cdb"/><section>
+    <title>HAL_RNG_GetRandomNumber_IT()</title>
+<indexterm><primary>HAL_RNG_GetRandomNumber_IT</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_GetRandomNumber_IT</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_RNG_GetRandomNumber_IT (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1ga15f07098d0e6b39b6840b796c69685b6"/><section>
+    <title>HAL_RNG_GetState()</title>
+<indexterm><primary>HAL_RNG_GetState</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___r_n_g_1ga4df5a662b522fdd2a0628b98e3218164">HAL_RNG_StateTypeDef</link> HAL_RNG_GetState (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1gabb8a1155a3240d63c2407454d31c8df8"/><section>
+    <title>HAL_RNG_Init()</title>
+<indexterm><primary>HAL_RNG_Init</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_RNG_Init (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1ga678b4fe183d5639b658b2e4e38b881b0"/><section>
+    <title>HAL_RNG_IRQHandler()</title>
+<indexterm><primary>HAL_RNG_IRQHandler</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_RNG_IRQHandler (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1gaee48b1f58486bd2c1535a5b2486f9a6c"/><section>
+    <title>HAL_RNG_MspDeInit()</title>
+<indexterm><primary>HAL_RNG_MspDeInit</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_RNG_MspDeInit (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1gafe887fca6ab3b254e871a1a2d88a30d7"/><section>
+    <title>HAL_RNG_MspInit()</title>
+<indexterm><primary>HAL_RNG_MspInit</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_RNG_MspInit (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+<anchor xml:id="_group___r_n_g_1gaae52f6c36cfa915c7781397d610d8253"/><section>
+    <title>HAL_RNG_ReadyCallback()</title>
+<indexterm><primary>HAL_RNG_ReadyCallback</primary><secondary>RNG</secondary></indexterm>
+<indexterm><primary>RNG</primary><secondary>HAL_RNG_ReadyCallback</secondary></indexterm>
+<para><computeroutput>void HAL_RNG_ReadyCallback (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> * hrng)</computeroutput></para></section>
+</section>
+</section>

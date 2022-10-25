@@ -1,0 +1,67 @@
+\hypertarget{classmbed_1_1_timeout}{}\doxysection{mbed\+::Timeout Class Reference}
+\label{classmbed_1_1_timeout}\index{mbed::Timeout@{mbed::Timeout}}
+
+
+{\ttfamily \#include $<$Timeout.\+h$>$}
+
+Inheritance diagram for mbed\+::Timeout\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmbed_1_1_timeout}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classmbed_1_1_timeout_a2324f9b01f39fa36f4b799541a46112b}{handler}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classmbed_1_1_timeout}{Timeout}} is used to call a function at a point in the future
+
+You can use as many seperate \mbox{\hyperlink{classmbed_1_1_timeout}{Timeout}} objects as you require.
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Blink until timeout.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}mbed.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Timeout timeout;}
+\DoxyCodeLine{DigitalOut led(LED1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} on = 1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} attimeout() \{}
+\DoxyCodeLine{    on = 0;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() \{}
+\DoxyCodeLine{    timeout.attach(\&attimeout, 5);}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(on) \{}
+\DoxyCodeLine{        led = !led;}
+\DoxyCodeLine{        wait(0.2);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_timeout_a2324f9b01f39fa36f4b799541a46112b}\label{classmbed_1_1_timeout_a2324f9b01f39fa36f4b799541a46112b}} 
+\index{mbed::Timeout@{mbed::Timeout}!handler@{handler}}
+\index{handler@{handler}!mbed::Timeout@{mbed::Timeout}}
+\doxysubsubsection{\texorpdfstring{handler()}{handler()}}
+{\footnotesize\ttfamily virtual void mbed\+::\+Timeout\+::handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classmbed_1_1_ticker}{mbed\+::\+Ticker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/Timeout.\+h\end{DoxyCompactItemize}

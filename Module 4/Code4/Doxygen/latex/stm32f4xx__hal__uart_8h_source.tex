@@ -1,0 +1,233 @@
+\hypertarget{stm32f4xx__hal__uart_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+uart.\+h}
+\label{stm32f4xx__hal__uart_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_uart.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_uart.h}}
+\mbox{\hyperlink{stm32f4xx__hal__uart_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_UART\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_UART\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{57 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_ae460c2e4d7ddc67bca9f5756f45b1d83}{BaudRate}};                  }
+\DoxyCodeLine{70   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a0f1cd85e62aa4fd4b36ee9e610e7789f}{WordLength}};                }
+\DoxyCodeLine{73   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a6717dfe595617c7b2d57139d9cd306ef}{StopBits}};                  }
+\DoxyCodeLine{76   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_adc92243425cb18cb8b5f03692841db48}{Parity}};                    }
+\DoxyCodeLine{83   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_ab2ee6ea5a5d4ca5ee6b759be197bcfcb}{Mode}};                      }
+\DoxyCodeLine{86   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_adbf4734130666b94201c6658464c1622}{HwFlowCtl}};                 }
+\DoxyCodeLine{90   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___init_type_def_a77c2c86a2186e09cbf022e27c0c82324}{OverSampling}};              }
+\DoxyCodeLine{92 \}\mbox{\hyperlink{struct_u_a_r_t___init_type_def}{UART\_InitTypeDef}};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{97 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{98 \{}
+\DoxyCodeLine{99   \mbox{\hyperlink{group___u_a_r_t_ggaf55d844a35379c204c90be5d1e8e50baa9c7d889fce61ccc717228d099a61d113}{HAL\_UART\_STATE\_RESET}}             = 0x00,    }
+\DoxyCodeLine{100   \mbox{\hyperlink{group___u_a_r_t_ggaf55d844a35379c204c90be5d1e8e50baade763629c1bdb4f08e52ef79d6e0900e}{HAL\_UART\_STATE\_READY}}             = 0x01,    }
+\DoxyCodeLine{101   \mbox{\hyperlink{group___u_a_r_t_ggaf55d844a35379c204c90be5d1e8e50baad1eddce038ba828e8b4061a33a2d8801}{HAL\_UART\_STATE\_BUSY}}              = 0x02,    }
+\DoxyCodeLine{102   \mbox{\hyperlink{group___u_a_r_t_ggaf55d844a35379c204c90be5d1e8e50baadc97ca42e9b05a08cb98e6721e27e80c}{HAL\_UART\_STATE\_BUSY\_TX}}           = 0x12,    }
+\DoxyCodeLine{103   \mbox{\hyperlink{group___u_a_r_t_ggaf55d844a35379c204c90be5d1e8e50baaf7929f7aebd6b450c25907904411680b}{HAL\_UART\_STATE\_BUSY\_RX}}           = 0x22,    }
+\DoxyCodeLine{104   \mbox{\hyperlink{group___u_a_r_t_ggaf55d844a35379c204c90be5d1e8e50baa2fdde93f9f55972b7133bf7c75dd2e8a}{HAL\_UART\_STATE\_BUSY\_TX\_RX}}        = 0x32,    }
+\DoxyCodeLine{105   \mbox{\hyperlink{group___u_a_r_t_ggaf55d844a35379c204c90be5d1e8e50baa90891eeb767df19780e620a15bec807d}{HAL\_UART\_STATE\_TIMEOUT}}           = 0x03,    }
+\DoxyCodeLine{106   \mbox{\hyperlink{group___u_a_r_t_ggaf55d844a35379c204c90be5d1e8e50baa5d50bfe0750db02c4fd03d778c8c318c}{HAL\_UART\_STATE\_ERROR}}             = 0x04     }
+\DoxyCodeLine{107 \}\mbox{\hyperlink{group___u_a_r_t_gaf55d844a35379c204c90be5d1e8e50ba}{HAL\_UART\_StateTypeDef}};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{112 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{113 \{}
+\DoxyCodeLine{114   \mbox{\hyperlink{group___u_a_r_t_gga9c84f51c2a1319577e9262a9554a43f4ae8fc450f442c38f1341efdf01547bc18}{HAL\_UART\_ERROR\_NONE}}      = 0x00,    }
+\DoxyCodeLine{115   \mbox{\hyperlink{group___u_a_r_t_gga9c84f51c2a1319577e9262a9554a43f4ae71cee41a15f1826d65a7656de6cd632}{HAL\_UART\_ERROR\_PE}}        = 0x01,    }
+\DoxyCodeLine{116   \mbox{\hyperlink{group___u_a_r_t_gga9c84f51c2a1319577e9262a9554a43f4af8e4eb46e6bab9851192832b24b7c28a}{HAL\_UART\_ERROR\_NE}}        = 0x02,    }
+\DoxyCodeLine{117   \mbox{\hyperlink{group___u_a_r_t_gga9c84f51c2a1319577e9262a9554a43f4a7dec947090ad7e30a7c8d8aef283c49e}{HAL\_UART\_ERROR\_FE}}        = 0x04,    }
+\DoxyCodeLine{118   \mbox{\hyperlink{group___u_a_r_t_gga9c84f51c2a1319577e9262a9554a43f4a6638bcad803890bde022fc33a6811f21}{HAL\_UART\_ERROR\_ORE}}       = 0x08,    }
+\DoxyCodeLine{119   \mbox{\hyperlink{group___u_a_r_t_gga9c84f51c2a1319577e9262a9554a43f4a6ef3b8de21df24d9a526eb42ffaa8b4f}{HAL\_UART\_ERROR\_DMA}}       = 0x10     }
+\DoxyCodeLine{120 \}\mbox{\hyperlink{group___u_a_r_t_ga9c84f51c2a1319577e9262a9554a43f4}{HAL\_UART\_ErrorTypeDef}};}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{125 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{126 \{}
+\DoxyCodeLine{127   \mbox{\hyperlink{struct_u_s_a_r_t___type_def}{USART\_TypeDef}}                 *Instance;        \textcolor{comment}{/* UART registers base address        */}}
+\DoxyCodeLine{128   }
+\DoxyCodeLine{129   \mbox{\hyperlink{struct_u_a_r_t___init_type_def}{UART\_InitTypeDef}}              Init;             \textcolor{comment}{/* UART communication parameters      */}}
+\DoxyCodeLine{130   }
+\DoxyCodeLine{131   uint8\_t                       *pTxBuffPtr;      \textcolor{comment}{/* Pointer to UART Tx transfer Buffer */}}
+\DoxyCodeLine{132   }
+\DoxyCodeLine{133   uint16\_t                      TxXferSize;       \textcolor{comment}{/* UART Tx Transfer size              */}}
+\DoxyCodeLine{134   }
+\DoxyCodeLine{135   uint16\_t                      TxXferCount;      \textcolor{comment}{/* UART Tx Transfer Counter           */}}
+\DoxyCodeLine{136   }
+\DoxyCodeLine{137   uint8\_t                       *pRxBuffPtr;      \textcolor{comment}{/* Pointer to UART Rx transfer Buffer */}}
+\DoxyCodeLine{138   }
+\DoxyCodeLine{139   uint16\_t                      RxXferSize;       \textcolor{comment}{/* UART Rx Transfer size              */}}
+\DoxyCodeLine{140   }
+\DoxyCodeLine{141   uint16\_t                      RxXferCount;      \textcolor{comment}{/* UART Rx Transfer Counter           */}  }
+\DoxyCodeLine{142   }
+\DoxyCodeLine{143   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}             *hdmatx;          \textcolor{comment}{/* UART Tx DMA Handle parameters      */}}
+\DoxyCodeLine{144     }
+\DoxyCodeLine{145   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}             *hdmarx;          \textcolor{comment}{/* UART Rx DMA Handle parameters      */}}
+\DoxyCodeLine{146   }
+\DoxyCodeLine{147   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}               Lock;            \textcolor{comment}{/* Locking object                     */}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___u_a_r_t_gaf55d844a35379c204c90be5d1e8e50ba}{HAL\_UART\_StateTypeDef}}    State;            \textcolor{comment}{/* UART communication state           */}}
+\DoxyCodeLine{150   }
+\DoxyCodeLine{151   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___u_a_r_t_ga9c84f51c2a1319577e9262a9554a43f4}{HAL\_UART\_ErrorTypeDef}}    ErrorCode;        \textcolor{comment}{/* UART Error code                    */}}
+\DoxyCodeLine{152   }
+\DoxyCodeLine{153 \}\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}};}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define UART\_WORDLENGTH\_8B                  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define UART\_WORDLENGTH\_9B                  ((uint32\_t)USART\_CR1\_M)}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define IS\_UART\_WORD\_LENGTH(LENGTH) (((LENGTH) == UART\_WORDLENGTH\_8B) || \(\backslash\)}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{                                     ((LENGTH) == UART\_WORDLENGTH\_9B))}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define UART\_STOPBITS\_1                     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define UART\_STOPBITS\_2                     ((uint32\_t)USART\_CR2\_STOP\_1)}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define IS\_UART\_STOPBITS(STOPBITS) (((STOPBITS) == UART\_STOPBITS\_1) || \(\backslash\)}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{                                    ((STOPBITS) == UART\_STOPBITS\_2))}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define UART\_PARITY\_NONE                    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define UART\_PARITY\_EVEN                    ((uint32\_t)USART\_CR1\_PCE)}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define UART\_PARITY\_ODD                     ((uint32\_t)(USART\_CR1\_PCE | USART\_CR1\_PS)) }}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define IS\_UART\_PARITY(PARITY) (((PARITY) == UART\_PARITY\_NONE) || \(\backslash\)}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{                                ((PARITY) == UART\_PARITY\_EVEN) || \(\backslash\)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{                                ((PARITY) == UART\_PARITY\_ODD))}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define UART\_HWCONTROL\_NONE                  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define UART\_HWCONTROL\_RTS                   ((uint32\_t)USART\_CR3\_RTSE)}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define UART\_HWCONTROL\_CTS                   ((uint32\_t)USART\_CR3\_CTSE)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define UART\_HWCONTROL\_RTS\_CTS               ((uint32\_t)(USART\_CR3\_RTSE | USART\_CR3\_CTSE))}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define IS\_UART\_HARDWARE\_FLOW\_CONTROL(CONTROL)\(\backslash\)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{                              (((CONTROL) == UART\_HWCONTROL\_NONE) || \(\backslash\)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{                               ((CONTROL) == UART\_HWCONTROL\_RTS) || \(\backslash\)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{                               ((CONTROL) == UART\_HWCONTROL\_CTS) || \(\backslash\)}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{                               ((CONTROL) == UART\_HWCONTROL\_RTS\_CTS))}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#define UART\_MODE\_RX                        ((uint32\_t)USART\_CR1\_RE)}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#define UART\_MODE\_TX                        ((uint32\_t)USART\_CR1\_TE)}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define UART\_MODE\_TX\_RX                     ((uint32\_t)(USART\_CR1\_TE |USART\_CR1\_RE))}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#define IS\_UART\_MODE(MODE) ((((MODE) \& (uint32\_t)0x0000FFF3) == 0x00) \&\& ((MODE) != (uint32\_t)0x000000))}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define UART\_STATE\_DISABLE                  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define UART\_STATE\_ENABLE                   ((uint32\_t)USART\_CR1\_UE)}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define IS\_UART\_STATE(STATE) (((STATE) == UART\_STATE\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{228 \textcolor{preprocessor}{                              ((STATE) == UART\_STATE\_ENABLE))}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define UART\_OVERSAMPLING\_16                    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define UART\_OVERSAMPLING\_8                     ((uint32\_t)USART\_CR1\_OVER8)}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define IS\_UART\_OVERSAMPLING(SAMPLING) (((SAMPLING) == UART\_OVERSAMPLING\_16) || \(\backslash\)}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{                                        ((SAMPLING) == UART\_OVERSAMPLING\_8))}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define UART\_LINBREAKDETECTLENGTH\_10B      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define UART\_LINBREAKDETECTLENGTH\_11B      ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define IS\_UART\_LIN\_BREAK\_DETECT\_LENGTH(LENGTH) (((LENGTH) == UART\_LINBREAKDETECTLENGTH\_10B) || \(\backslash\)}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{                                                 ((LENGTH) == UART\_LINBREAKDETECTLENGTH\_11B))}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define UART\_WAKEUPMETHODE\_IDLELINE                ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#define UART\_WAKEUPMETHODE\_ADDRESSMARK             ((uint32\_t)0x00000800)}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#define IS\_UART\_WAKEUPMETHODE(WAKEUP) (((WAKEUP) == UART\_WAKEUPMETHODE\_IDLELINE) || \(\backslash\)}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{                                       ((WAKEUP) == UART\_WAKEUPMETHODE\_ADDRESSMARK))}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#define UART\_FLAG\_CTS                       ((uint32\_t)0x00000200)}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#define UART\_FLAG\_LBD                       ((uint32\_t)0x00000100)}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#define UART\_FLAG\_TXE                       ((uint32\_t)0x00000080)}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define UART\_FLAG\_TC                        ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define UART\_FLAG\_RXNE                      ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define UART\_FLAG\_IDLE                      ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define UART\_FLAG\_ORE                       ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define UART\_FLAG\_NE                        ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#define UART\_FLAG\_FE                        ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#define UART\_FLAG\_PE                        ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define UART\_IT\_PE                          ((uint32\_t)0x10000100)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define UART\_IT\_TXE                         ((uint32\_t)0x10000080)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define UART\_IT\_TC                          ((uint32\_t)0x10000040)}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#define UART\_IT\_RXNE                        ((uint32\_t)0x10000020)}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#define UART\_IT\_IDLE                        ((uint32\_t)0x10000010)}}
+\DoxyCodeLine{300 }
+\DoxyCodeLine{301 \textcolor{preprocessor}{\#define UART\_IT\_LBD                         ((uint32\_t)0x20000040)}}
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#define UART\_IT\_CTS                         ((uint32\_t)0x30000400)}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304 \textcolor{preprocessor}{\#define UART\_IT\_ERR                         ((uint32\_t)0x30000001)}}
+\DoxyCodeLine{305 }
+\DoxyCodeLine{314 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_UART\_STATE\_RESET)}}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_FLUSH\_DRREGISTER(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>DR)}}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>SR \& (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))   }}
+\DoxyCodeLine{349      }
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>SR \&= \string~(\_\_FLAG\_\_))}}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#define UART\_IT\_MASK  ((uint32\_t)0x0000FFFF)}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)   ((((\_\_INTERRUPT\_\_) >> 28) == 1)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= ((\_\_INTERRUPT\_\_) \& UART\_IT\_MASK)): \(\backslash\)}}
+\DoxyCodeLine{394 \textcolor{preprocessor}{                                                           (((\_\_INTERRUPT\_\_) >> 28) == 2)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR2 |=  ((\_\_INTERRUPT\_\_) \& UART\_IT\_MASK)): \(\backslash\)}}
+\DoxyCodeLine{395 \textcolor{preprocessor}{                                                        ((\_\_HANDLE\_\_)-\/>Instance-\/>CR3 |= ((\_\_INTERRUPT\_\_) \& UART\_IT\_MASK)))}}
+\DoxyCodeLine{396 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)  ((((\_\_INTERRUPT\_\_) >> 28) == 1)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= \string~((\_\_INTERRUPT\_\_) \& UART\_IT\_MASK)): \(\backslash\)}}
+\DoxyCodeLine{397 \textcolor{preprocessor}{                                                           (((\_\_INTERRUPT\_\_) >> 28) == 2)? ((\_\_HANDLE\_\_)-\/>Instance-\/>CR2 \&= \string~((\_\_INTERRUPT\_\_) \& UART\_IT\_MASK)): \(\backslash\)}}
+\DoxyCodeLine{398 \textcolor{preprocessor}{                                                        ((\_\_HANDLE\_\_)-\/>Instance-\/>CR3 \&= \string~ ((\_\_INTERRUPT\_\_) \& UART\_IT\_MASK)))}}
+\DoxyCodeLine{399     }
+\DoxyCodeLine{415 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_IT\_\_) (((((\_\_IT\_\_) >> 28) == 1)? (\_\_HANDLE\_\_)-\/>Instance-\/>CR1:(((((uint32\_t)(\_\_IT\_\_)) >> 28) == 2)? \(\backslash\)}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>Instance-\/>CR2 : (\_\_HANDLE\_\_)-\/>Instance-\/>CR3)) \& (((uint32\_t)(\_\_IT\_\_)) \& UART\_IT\_MASK))}}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{422 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_ONEBIT\_ENABLE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR3|= USART\_CR3\_ONEBIT)}}
+\DoxyCodeLine{423 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_ONEBIT\_DISABLE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR3 \&= (uint16\_t)\string~((uint16\_t)USART\_CR3\_ONEBIT))}}
+\DoxyCodeLine{424 }
+\DoxyCodeLine{425 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_ENABLE(\_\_HANDLE\_\_)               ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |=  USART\_CR1\_UE)}}
+\DoxyCodeLine{426 \textcolor{preprocessor}{\#define \_\_HAL\_UART\_DISABLE(\_\_HANDLE\_\_)              ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&=  \string~USART\_CR1\_UE)}}
+\DoxyCodeLine{427     }
+\DoxyCodeLine{428 \textcolor{preprocessor}{\#define \_\_DIV\_SAMPLING16(\_PCLK\_, \_BAUD\_)            (((\_PCLK\_)*25)/(4*(\_BAUD\_)))}}
+\DoxyCodeLine{429 \textcolor{preprocessor}{\#define \_\_DIVMANT\_SAMPLING16(\_PCLK\_, \_BAUD\_)        (\_\_DIV\_SAMPLING16((\_PCLK\_), (\_BAUD\_))/100)}}
+\DoxyCodeLine{430 \textcolor{preprocessor}{\#define \_\_DIVFRAQ\_SAMPLING16(\_PCLK\_, \_BAUD\_)        (((\_\_DIV\_SAMPLING16((\_PCLK\_), (\_BAUD\_)) -\/ (\_\_DIVMANT\_SAMPLING16((\_PCLK\_), (\_BAUD\_)) * 100)) * 16 + 50) / 100)}}
+\DoxyCodeLine{431 \textcolor{preprocessor}{\#define \_\_UART\_BRR\_SAMPLING16(\_PCLK\_, \_BAUD\_)       ((\_\_DIVMANT\_SAMPLING16((\_PCLK\_), (\_BAUD\_)) << 4)|(\_\_DIVFRAQ\_SAMPLING16((\_PCLK\_), (\_BAUD\_)) \& 0x0F))}}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433 \textcolor{preprocessor}{\#define \_\_DIV\_SAMPLING8(\_PCLK\_, \_BAUD\_)             (((\_PCLK\_)*25)/(2*(\_BAUD\_)))}}
+\DoxyCodeLine{434 \textcolor{preprocessor}{\#define \_\_DIVMANT\_SAMPLING8(\_PCLK\_, \_BAUD\_)         (\_\_DIV\_SAMPLING8((\_PCLK\_), (\_BAUD\_))/100)}}
+\DoxyCodeLine{435 \textcolor{preprocessor}{\#define \_\_DIVFRAQ\_SAMPLING8(\_PCLK\_, \_BAUD\_)         (((\_\_DIV\_SAMPLING8((\_PCLK\_), (\_BAUD\_)) -\/ (\_\_DIVMANT\_SAMPLING8((\_PCLK\_), (\_BAUD\_)) * 100)) * 16 + 50) / 100)}}
+\DoxyCodeLine{436 \textcolor{preprocessor}{\#define \_\_UART\_BRR\_SAMPLING8(\_PCLK\_, \_BAUD\_)        ((\_\_DIVMANT\_SAMPLING8((\_PCLK\_), (\_BAUD\_)) << 4)|(\_\_DIVFRAQ\_SAMPLING8((\_PCLK\_), (\_BAUD\_)) \& 0x0F))}}
+\DoxyCodeLine{437 }
+\DoxyCodeLine{438 \textcolor{preprocessor}{\#define IS\_UART\_BAUDRATE(BAUDRATE) ((BAUDRATE) < 10500001)}}
+\DoxyCodeLine{439 \textcolor{preprocessor}{\#define IS\_UART\_ADDRESS(ADDRESS) ((ADDRESS) <= 0xF)                             }}
+\DoxyCodeLine{440 }
+\DoxyCodeLine{441 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{442 \textcolor{comment}{/* Initialization/de-\/initialization functions  **********************************/}}
+\DoxyCodeLine{443 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_Init(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{444 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HalfDuplex\_Init(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{445 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LIN\_Init(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint32\_t BreakDetectLength);}
+\DoxyCodeLine{446 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_MultiProcessor\_Init(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t Address, uint32\_t WakeUpMethode);}
+\DoxyCodeLine{447 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_DeInit (\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{448 \textcolor{keywordtype}{void} HAL\_UART\_MspInit(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{449 \textcolor{keywordtype}{void} HAL\_UART\_MspDeInit(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{450 }
+\DoxyCodeLine{451 \textcolor{comment}{/* IO operation functions *******************************************************/}}
+\DoxyCodeLine{452 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_Transmit(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size, uint32\_t Timeout);}
+\DoxyCodeLine{453 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_Receive(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size, uint32\_t Timeout);}
+\DoxyCodeLine{454 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_Transmit\_IT(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{455 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_Receive\_IT(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{456 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_Transmit\_DMA(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{457 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_Receive\_DMA(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{458 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_DMAPause(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{459 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_DMAResume(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{460 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UART\_DMAStop(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{461 \textcolor{keywordtype}{void} HAL\_UART\_IRQHandler(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{462 \textcolor{keywordtype}{void} HAL\_UART\_TxCpltCallback(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{463 \textcolor{keywordtype}{void} HAL\_UART\_TxHalfCpltCallback(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{464 \textcolor{keywordtype}{void} HAL\_UART\_RxCpltCallback(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{465 \textcolor{keywordtype}{void} HAL\_UART\_RxHalfCpltCallback(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{466 \textcolor{keywordtype}{void} HAL\_UART\_ErrorCallback(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{467 }
+\DoxyCodeLine{468 \textcolor{comment}{/* Peripheral Control functions  ************************************************/}}
+\DoxyCodeLine{469 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LIN\_SendBreak(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{470 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_MultiProcessor\_EnterMuteMode(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{471 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_MultiProcessor\_ExitMuteMode(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{472 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HalfDuplex\_EnableTransmitter(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{473 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_HalfDuplex\_EnableReceiver(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{474 }
+\DoxyCodeLine{475 \textcolor{comment}{/* Peripheral State functions  **************************************************/}}
+\DoxyCodeLine{476 \mbox{\hyperlink{group___u_a_r_t_gaf55d844a35379c204c90be5d1e8e50ba}{HAL\_UART\_StateTypeDef}} HAL\_UART\_GetState(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{477 uint32\_t              HAL\_UART\_GetError(\mbox{\hyperlink{struct_u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{478 }
+\DoxyCodeLine{487 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{488 \}}
+\DoxyCodeLine{489 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{490 }
+\DoxyCodeLine{491 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_UART\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{492 }
+\DoxyCodeLine{493 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

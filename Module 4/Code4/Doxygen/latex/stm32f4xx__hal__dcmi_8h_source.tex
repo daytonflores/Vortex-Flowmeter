@@ -1,0 +1,215 @@
+\hypertarget{stm32f4xx__hal__dcmi_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+dcmi.\+h}
+\label{stm32f4xx__hal__dcmi_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_dcmi.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_dcmi.h}}
+\mbox{\hyperlink{stm32f4xx__hal__dcmi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_DCMI\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_DCMI\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#if defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{59 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{64 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{65 \{ }
+\DoxyCodeLine{66   DCMI\_ERROR\_SYNC = 1,     }
+\DoxyCodeLine{67   DCMI\_OVERRUN   = 2,      }
+\DoxyCodeLine{68 \}DCMI\_ErrorTypeDef;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{73 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75   uint8\_t FrameStartCode; }
+\DoxyCodeLine{76   uint8\_t LineStartCode;  }
+\DoxyCodeLine{77   uint8\_t LineEndCode;    }
+\DoxyCodeLine{78   uint8\_t FrameEndCode;   }
+\DoxyCodeLine{79 \}DCMI\_CodesInitTypeDef;}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{84 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{85 \{}
+\DoxyCodeLine{86   uint32\_t  SynchroMode;                }
+\DoxyCodeLine{89   uint32\_t  PCKPolarity;                }
+\DoxyCodeLine{92   uint32\_t  VSPolarity;                 }
+\DoxyCodeLine{95   uint32\_t  HSPolarity;                 }
+\DoxyCodeLine{98   uint32\_t  CaptureRate;                }
+\DoxyCodeLine{101   uint32\_t  ExtendedDataMode;           }
+\DoxyCodeLine{104   DCMI\_CodesInitTypeDef SyncroCode;     }
+\DoxyCodeLine{106   uint32\_t JPEGMode;                    }
+\DoxyCodeLine{109 \}DCMI\_InitTypeDef;}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{114 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{115 \{}
+\DoxyCodeLine{116   HAL\_DCMI\_STATE\_RESET             = 0x00,  }
+\DoxyCodeLine{117   HAL\_DCMI\_STATE\_READY             = 0x01,  }
+\DoxyCodeLine{118   HAL\_DCMI\_STATE\_BUSY              = 0x02,  }
+\DoxyCodeLine{119   HAL\_DCMI\_STATE\_TIMEOUT           = 0x03,  }
+\DoxyCodeLine{120   HAL\_DCMI\_STATE\_ERROR             = 0x04   }
+\DoxyCodeLine{121 \}HAL\_DCMI\_StateTypeDef;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{126 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{127 \{}
+\DoxyCodeLine{128   DCMI\_TypeDef                  *Instance;           }
+\DoxyCodeLine{130   DCMI\_InitTypeDef              Init;                }
+\DoxyCodeLine{132   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}               Lock;                }
+\DoxyCodeLine{134   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_DCMI\_StateTypeDef    State;               }
+\DoxyCodeLine{136   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t                 XferCount;           }
+\DoxyCodeLine{138   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t                 XferSize;            }
+\DoxyCodeLine{140   uint32\_t                      XferTransferNumber;  }
+\DoxyCodeLine{142   uint32\_t                      pBuffPtr;            }
+\DoxyCodeLine{144   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}             *DMA\_Handle;         }
+\DoxyCodeLine{146   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t                 ErrorCode;           }
+\DoxyCodeLine{148 \}DCMI\_HandleTypeDef;}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define HAL\_DCMI\_ERROR\_NONE      ((uint32\_t)0x00000000)    }}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define HAL\_DCMI\_ERROR\_OVF       ((uint32\_t)0x00000001)    }}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define HAL\_DCMI\_ERROR\_SYNC      ((uint32\_t)0x00000002)    }}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define HAL\_DCMI\_ERROR\_TIMEOUT   ((uint32\_t)0x00000020)    }}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define DCMI\_MODE\_CONTINUOUS           ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define DCMI\_MODE\_SNAPSHOT             ((uint32\_t)DCMI\_CR\_CM)  }}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define IS\_DCMI\_CAPTURE\_MODE(MODE)(((MODE) == DCMI\_MODE\_CONTINUOUS) || \(\backslash\)}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{                                   ((MODE) == DCMI\_MODE\_SNAPSHOT))}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define DCMI\_SYNCHRO\_HARDWARE        ((uint32\_t)0x00000000)   }}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define DCMI\_SYNCHRO\_EMBEDDED        ((uint32\_t)DCMI\_CR\_ESS)  }}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define IS\_DCMI\_SYNCHRO(MODE)(((MODE) == DCMI\_SYNCHRO\_HARDWARE) || \(\backslash\)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{                              ((MODE) == DCMI\_SYNCHRO\_EMBEDDED))}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define DCMI\_PCKPOLARITY\_FALLING    ((uint32\_t)0x00000000)      }}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define DCMI\_PCKPOLARITY\_RISING     ((uint32\_t)DCMI\_CR\_PCKPOL)  }}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define IS\_DCMI\_PCKPOLARITY(POLARITY)(((POLARITY) == DCMI\_PCKPOLARITY\_FALLING) || \(\backslash\)}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{                                      ((POLARITY) == DCMI\_PCKPOLARITY\_RISING))}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define DCMI\_VSPOLARITY\_LOW     ((uint32\_t)0x00000000)     }}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#define DCMI\_VSPOLARITY\_HIGH    ((uint32\_t)DCMI\_CR\_VSPOL)  }}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define IS\_DCMI\_VSPOLARITY(POLARITY)(((POLARITY) == DCMI\_VSPOLARITY\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{                                     ((POLARITY) == DCMI\_VSPOLARITY\_HIGH))}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define DCMI\_HSPOLARITY\_LOW     ((uint32\_t)0x00000000)     }}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define DCMI\_HSPOLARITY\_HIGH    ((uint32\_t)DCMI\_CR\_HSPOL)  }}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define IS\_DCMI\_HSPOLARITY(POLARITY)(((POLARITY) == DCMI\_HSPOLARITY\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{                                     ((POLARITY) == DCMI\_HSPOLARITY\_HIGH))}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define DCMI\_JPEG\_DISABLE   ((uint32\_t)0x00000000)    }}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define DCMI\_JPEG\_ENABLE    ((uint32\_t)DCMI\_CR\_JPEG)  }}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define IS\_DCMI\_MODE\_JPEG(JPEG\_MODE)(((JPEG\_MODE) == DCMI\_JPEG\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{                                     ((JPEG\_MODE) == DCMI\_JPEG\_ENABLE))}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define DCMI\_CR\_ALL\_FRAME            ((uint32\_t)0x00000000)      }}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define DCMI\_CR\_ALTERNATE\_2\_FRAME    ((uint32\_t)DCMI\_CR\_FCRC\_0)  }}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define DCMI\_CR\_ALTERNATE\_4\_FRAME    ((uint32\_t)DCMI\_CR\_FCRC\_1)  }}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define IS\_DCMI\_CAPTURE\_RATE(RATE) (((RATE) == DCMI\_CR\_ALL\_FRAME)         || \(\backslash\)}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{                                    ((RATE) == DCMI\_CR\_ALTERNATE\_2\_FRAME) || \(\backslash\)}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{                                    ((RATE) == DCMI\_CR\_ALTERNATE\_4\_FRAME))}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#define DCMI\_EXTEND\_DATA\_8B     ((uint32\_t)0x00000000)                       }}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define DCMI\_EXTEND\_DATA\_10B    ((uint32\_t)DCMI\_CR\_EDM\_0)                    }}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define DCMI\_EXTEND\_DATA\_12B    ((uint32\_t)DCMI\_CR\_EDM\_1)                    }}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define DCMI\_EXTEND\_DATA\_14B    ((uint32\_t)(DCMI\_CR\_EDM\_0 | DCMI\_CR\_EDM\_1))  }}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define IS\_DCMI\_EXTENDED\_DATA(DATA)(((DATA) == DCMI\_EXTEND\_DATA\_8B)  || \(\backslash\)}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{                                    ((DATA) == DCMI\_EXTEND\_DATA\_10B) || \(\backslash\)}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{                                    ((DATA) == DCMI\_EXTEND\_DATA\_12B) || \(\backslash\)}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{                                    ((DATA) == DCMI\_EXTEND\_DATA\_14B))}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define DCMI\_WINDOW\_COORDINATE    ((uint32\_t)0x3FFF)  }}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define IS\_DCMI\_WINDOW\_COORDINATE(COORDINATE) ((COORDINATE) <= DCMI\_WINDOW\_COORDINATE)}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#define DCMI\_WINDOW\_HEIGHT    ((uint32\_t)0x1FFF)  }}
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#define IS\_DCMI\_WINDOW\_HEIGHT(HEIGHT) ((HEIGHT) <= DCMI\_WINDOW\_HEIGHT)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define DCMI\_IT\_FRAME    ((uint32\_t)DCMI\_IER\_FRAME\_IE)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define DCMI\_IT\_OVF      ((uint32\_t)DCMI\_IER\_OVF\_IE)}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#define DCMI\_IT\_ERR      ((uint32\_t)DCMI\_IER\_ERR\_IE)}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#define DCMI\_IT\_VSYNC    ((uint32\_t)DCMI\_IER\_VSYNC\_IE)}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#define DCMI\_IT\_LINE     ((uint32\_t)DCMI\_IER\_LINE\_IE)}}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#define IS\_DCMI\_CONFIG\_IT(IT) ((((IT) \& (uint16\_t)0xFFE0) == 0x0000) \&\& ((IT) != 0x0000))}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304 \textcolor{preprocessor}{\#define IS\_DCMI\_GET\_IT(IT) (((IT) == DCMI\_IT\_FRAME) || \(\backslash\)}}
+\DoxyCodeLine{305 \textcolor{preprocessor}{                            ((IT) == DCMI\_IT\_OVF)   || \(\backslash\)}}
+\DoxyCodeLine{306 \textcolor{preprocessor}{                            ((IT) == DCMI\_IT\_ERR)   || \(\backslash\)}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{                            ((IT) == DCMI\_IT\_VSYNC) || \(\backslash\)}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{                            ((IT) == DCMI\_IT\_LINE))}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#define DCMI\_FLAG\_HSYNC     ((uint32\_t)0x2001)}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define DCMI\_FLAG\_VSYNC     ((uint32\_t)0x2002)}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define DCMI\_FLAG\_FNE       ((uint32\_t)0x2004)}}
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#define DCMI\_FLAG\_FRAMERI    ((uint32\_t)DCMI\_RISR\_FRAME\_RIS)}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#define DCMI\_FLAG\_OVFRI      ((uint32\_t)DCMI\_RISR\_OVF\_RIS)}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#define DCMI\_FLAG\_ERRRI      ((uint32\_t)DCMI\_RISR\_ERR\_RIS)}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#define DCMI\_FLAG\_VSYNCRI    ((uint32\_t)DCMI\_RISR\_VSYNC\_RIS)}}
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#define DCMI\_FLAG\_LINERI     ((uint32\_t)DCMI\_RISR\_LINE\_RIS)}}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define DCMI\_FLAG\_FRAMEMI    ((uint32\_t)0x1001)}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define DCMI\_FLAG\_OVFMI      ((uint32\_t)0x1002)}}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define DCMI\_FLAG\_ERRMI      ((uint32\_t)0x1004)}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#define DCMI\_FLAG\_VSYNCMI    ((uint32\_t)0x1008)}}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define DCMI\_FLAG\_LINEMI     ((uint32\_t)0x1010)}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#define IS\_DCMI\_GET\_FLAG(FLAG) (((FLAG) == DCMI\_FLAG\_HSYNC)   || \(\backslash\)}}
+\DoxyCodeLine{340 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_VSYNC)   || \(\backslash\)}}
+\DoxyCodeLine{341 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_FNE)     || \(\backslash\)}}
+\DoxyCodeLine{342 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_FRAMERI) || \(\backslash\)}}
+\DoxyCodeLine{343 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_OVFRI)   || \(\backslash\)}}
+\DoxyCodeLine{344 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_ERRRI)   || \(\backslash\)}}
+\DoxyCodeLine{345 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_VSYNCRI) || \(\backslash\)}}
+\DoxyCodeLine{346 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_LINERI)  || \(\backslash\)}}
+\DoxyCodeLine{347 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_FRAMEMI) || \(\backslash\)}}
+\DoxyCodeLine{348 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_OVFMI)   || \(\backslash\)}}
+\DoxyCodeLine{349 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_ERRMI)   || \(\backslash\)}}
+\DoxyCodeLine{350 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_VSYNCMI) || \(\backslash\)}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{                                ((FLAG) == DCMI\_FLAG\_LINEMI))}}
+\DoxyCodeLine{352                                 }
+\DoxyCodeLine{353 \textcolor{preprocessor}{\#define IS\_DCMI\_CLEAR\_FLAG(FLAG) ((((FLAG) \& (uint32\_t)0xFFE0) == 0x0000) \&\& ((FLAG) != 0x0000))}}
+\DoxyCodeLine{362 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define \_\_HAL\_DCMI\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_DCMI\_STATE\_RESET)}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{375 \textcolor{preprocessor}{\#define \_\_HAL\_DCMI\_ENABLE(\_\_HANDLE\_\_)    ((\_\_HANDLE\_\_)-\/>Instance-\/>CR |= DCMI\_CR\_ENABLE)}}
+\DoxyCodeLine{376 }
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#define \_\_HAL\_DCMI\_DISABLE(\_\_HANDLE\_\_)   ((\_\_HANDLE\_\_)-\/>Instance-\/>CR \&= \string~(DCMI\_CR\_ENABLE))}}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384 \textcolor{comment}{/* Interrupt \& Flag management */}}
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#define \_\_HAL\_DCMI\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)\(\backslash\)}}
+\DoxyCodeLine{398 \textcolor{preprocessor}{((((\_\_FLAG\_\_) \& 0x3000) == 0x0)? ((\_\_HANDLE\_\_)-\/>Instance-\/>RISR \& (\_\_FLAG\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{399 \textcolor{preprocessor}{ (((\_\_FLAG\_\_) \& 0x2000) == 0x0)? ((\_\_HANDLE\_\_)-\/>Instance-\/>MISR \& (\_\_FLAG\_\_)) : ((\_\_HANDLE\_\_)-\/>Instance-\/>SR \& (\_\_FLAG\_\_)))}}
+\DoxyCodeLine{400 }
+\DoxyCodeLine{413 \textcolor{preprocessor}{\#define \_\_HAL\_DCMI\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>ICR |= (\_\_FLAG\_\_))}}
+\DoxyCodeLine{414 }
+\DoxyCodeLine{427 \textcolor{preprocessor}{\#define \_\_HAL\_DCMI\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>IER |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{428 }
+\DoxyCodeLine{441 \textcolor{preprocessor}{\#define \_\_HAL\_DCMI\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>IER \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{442 }
+\DoxyCodeLine{455 \textcolor{preprocessor}{\#define \_\_HAL\_DCMI\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>MISR \& (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{456     }
+\DoxyCodeLine{457 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{458 }
+\DoxyCodeLine{459 \textcolor{comment}{/* Initialization and de-\/initialization functions *****************************/}}
+\DoxyCodeLine{460 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DCMI\_Init(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{461 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DCMI\_DeInit(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{462 \textcolor{keywordtype}{void}       HAL\_DCMI\_MspInit(DCMI\_HandleTypeDef* hdcmi);}
+\DoxyCodeLine{463 \textcolor{keywordtype}{void}       HAL\_DCMI\_MspDeInit(DCMI\_HandleTypeDef* hdcmi);}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{465 \textcolor{comment}{/* IO operation functions *****************************************************/}}
+\DoxyCodeLine{466 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DCMI\_Start\_DMA(DCMI\_HandleTypeDef* hdcmi, uint32\_t DCMI\_Mode, uint32\_t pData, uint32\_t Length);}
+\DoxyCodeLine{467 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DCMI\_Stop(DCMI\_HandleTypeDef* hdcmi);}
+\DoxyCodeLine{468 \textcolor{keywordtype}{void}       HAL\_DCMI\_ErrorCallback(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{469 \textcolor{keywordtype}{void}       HAL\_DCMI\_LineEventCallback(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{470 \textcolor{keywordtype}{void}       HAL\_DCMI\_FrameEventCallback(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{471 \textcolor{keywordtype}{void}       HAL\_DCMI\_VsyncEventCallback(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{472 \textcolor{keywordtype}{void}              HAL\_DCMI\_IRQHandler(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{473 }
+\DoxyCodeLine{474 \textcolor{comment}{/* Peripheral Control functions ***********************************************/}}
+\DoxyCodeLine{475 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}     HAL\_DCMI\_ConfigCROP(DCMI\_HandleTypeDef *hdcmi, uint32\_t X0, uint32\_t Y0, uint32\_t XSize, uint32\_t YSize);}
+\DoxyCodeLine{476 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}     HAL\_DCMI\_EnableCROP(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{477 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}     HAL\_DCMI\_DisableCROP(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{478 }
+\DoxyCodeLine{479 \textcolor{comment}{/* Peripheral State functions *************************************************/}}
+\DoxyCodeLine{480 HAL\_DCMI\_StateTypeDef HAL\_DCMI\_GetState(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{481 uint32\_t              HAL\_DCMI\_GetError(DCMI\_HandleTypeDef *hdcmi);}
+\DoxyCodeLine{482 }
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{492 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{493 \}}
+\DoxyCodeLine{494 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{495 }
+\DoxyCodeLine{496 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_DCMI\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{497 }
+\DoxyCodeLine{498 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

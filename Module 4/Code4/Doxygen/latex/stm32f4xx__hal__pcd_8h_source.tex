@@ -1,0 +1,179 @@
+\hypertarget{stm32f4xx__hal__pcd_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+pcd.\+h}
+\label{stm32f4xx__hal__pcd_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_pcd.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_pcd.h}}
+\mbox{\hyperlink{stm32f4xx__hal__pcd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_PCD\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_PCD\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__ll__usb_8h}{stm32f4xx\_ll\_usb.h}}"{}}}
+\DoxyCodeLine{48    }
+\DoxyCodeLine{57 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   PCD\_READY    = 0x00,}
+\DoxyCodeLine{65   PCD\_ERROR    = 0x01,}
+\DoxyCodeLine{66   PCD\_BUSY     = 0x02,}
+\DoxyCodeLine{67   PCD\_TIMEOUT  = 0x03}
+\DoxyCodeLine{68 \} \mbox{\hyperlink{group___p_c_d_ga78b8f0aa4eea3865fb695a732b26be96}{PCD\_StateTypeDef}};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\_OTG\_GlobalTypeDef}}  \mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{PCD\_TypeDef}};}
+\DoxyCodeLine{72 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_u_s_b___o_t_g___cfg_type_def}{USB\_OTG\_CfgTypeDef}}     \mbox{\hyperlink{struct_u_s_b___o_t_g___cfg_type_def}{PCD\_InitTypeDef}};}
+\DoxyCodeLine{73 \textcolor{keyword}{typedef} \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\_OTG\_EPTypeDef}}      \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{PCD\_EPTypeDef}} ;                          }
+\DoxyCodeLine{74 }
+\DoxyCodeLine{78 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{79 \{}
+\DoxyCodeLine{80   \mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{PCD\_TypeDef}}             *\mbox{\hyperlink{struct_p_c_d___handle_type_def_afd50525fd795b4f93a09a0e606ec6b2c}{Instance}};   }
+\DoxyCodeLine{81   \mbox{\hyperlink{struct_u_s_b___o_t_g___cfg_type_def}{PCD\_InitTypeDef}}         \mbox{\hyperlink{struct_p_c_d___handle_type_def_af610ca87ae079aa8aef6734862ef2485}{Init}};       }
+\DoxyCodeLine{82   \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{PCD\_EPTypeDef}}           IN\_ep[15];  }
+\DoxyCodeLine{83   \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{PCD\_EPTypeDef}}           OUT\_ep[15]; }
+\DoxyCodeLine{84   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}         \mbox{\hyperlink{struct_p_c_d___handle_type_def_a836e3913271729600785e1d0cf5521bd}{Lock}};       }
+\DoxyCodeLine{85   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___p_c_d_ga78b8f0aa4eea3865fb695a732b26be96}{PCD\_StateTypeDef}}   \mbox{\hyperlink{struct_p_c_d___handle_type_def_ad7994c5f1b1d47cfffb95e9d8ec6a5f4}{State}};      }
+\DoxyCodeLine{86   uint32\_t                Setup[12];  }
+\DoxyCodeLine{87   \textcolor{keywordtype}{void}                    *\mbox{\hyperlink{struct_p_c_d___handle_type_def_a936f1eff2cdf03ccbbf1443b18204311}{pData}};      }
+\DoxyCodeLine{89 \} \mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}};}
+\DoxyCodeLine{90   }
+\DoxyCodeLine{91 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define PCD\_SPEED\_HIGH               0}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define PCD\_SPEED\_HIGH\_IN\_FULL       1}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define PCD\_SPEED\_FULL               2}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define PCD\_PHY\_ULPI                 1}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define PCD\_PHY\_EMBEDDED             2}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{ \#define IS\_PCD\_ALL\_INSTANCE(INSTANCE) (((INSTANCE) == USB\_OTG\_FS) || \(\backslash\)}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{                                        ((INSTANCE) == USB\_OTG\_HS))}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#elif defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{ \#define IS\_PCD\_ALL\_INSTANCE(INSTANCE) (((INSTANCE) == USB\_OTG\_FS))}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{133 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define \_\_HAL\_PCD\_ENABLE(\_\_HANDLE\_\_)                   USB\_EnableGlobalInt ((\_\_HANDLE\_\_)-\/>Instance)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define \_\_HAL\_PCD\_DISABLE(\_\_HANDLE\_\_)                  USB\_DisableGlobalInt ((\_\_HANDLE\_\_)-\/>Instance)}}
+\DoxyCodeLine{141    }
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define \_\_HAL\_GET\_FLAG(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)      ((USB\_ReadInterrupts((\_\_HANDLE\_\_)-\/>Instance) \& (\_\_INTERRUPT\_\_)) == (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define \_\_HAL\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)    (((\_\_HANDLE\_\_)-\/>Instance-\/>GINTSTS) |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define \_\_HAL\_IS\_INVALID\_INTERRUPT(\_\_HANDLE\_\_)         (USB\_ReadInterrupts((\_\_HANDLE\_\_)-\/>Instance) == 0)}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define \_\_HAL\_PCD\_UNGATE\_PHYCLOCK(\_\_HANDLE\_\_)             *(\_\_IO uint32\_t *)((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance) + USB\_OTG\_PCGCCTL\_BASE) \&= \(\backslash\)}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{                                                       \string~(USB\_OTG\_PCGCCTL\_STOPCLK)}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define \_\_HAL\_PCD\_GATE\_PHYCLOCK(\_\_HANDLE\_\_)               *(\_\_IO uint32\_t *)((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance) + USB\_OTG\_PCGCCTL\_BASE) |= USB\_OTG\_PCGCCTL\_STOPCLK}}
+\DoxyCodeLine{152                                                       }
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define \_\_HAL\_PCD\_IS\_PHY\_SUSPENDED(\_\_HANDLE\_\_)            ((*(\_\_IO uint32\_t *)((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance) + USB\_OTG\_PCGCCTL\_BASE))\&0x10)}}
+\DoxyCodeLine{154                                                          }
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define USB\_FS\_EXTI\_TRIGGER\_RISING\_EDGE      ((uint32\_t)0x08) }}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define USB\_FS\_EXTI\_TRIGGER\_FALLING\_EDGE     ((uint32\_t)0x0C) }}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define USB\_FS\_EXTI\_TRIGGER\_BOTH\_EDGE        ((uint32\_t)0x10) }}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define USB\_HS\_EXTI\_TRIGGER\_RISING\_EDGE      ((uint32\_t)0x08) }}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define USB\_HS\_EXTI\_TRIGGER\_FALLING\_EDGE     ((uint32\_t)0x0C) }}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define USB\_HS\_EXTI\_TRIGGER\_BOTH\_EDGE        ((uint32\_t)0x10) }}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define USB\_HS\_EXTI\_LINE\_WAKEUP              ((uint32\_t)0x00100000)  }}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define USB\_FS\_EXTI\_LINE\_WAKEUP              ((uint32\_t)0x00040000)  }}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_HS\_EXTI\_ENABLE\_IT()    EXTI-\/>IMR |= (USB\_HS\_EXTI\_LINE\_WAKEUP)}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_HS\_EXTI\_DISABLE\_IT()   EXTI-\/>IMR \&= \string~(USB\_HS\_EXTI\_LINE\_WAKEUP)}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_HS\_EXTI\_GET\_FLAG()     EXTI-\/>PR \& (USB\_HS\_EXTI\_LINE\_WAKEUP)}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_HS\_EXTI\_CLEAR\_FLAG()   EXTI-\/>PR = (USB\_HS\_EXTI\_LINE\_WAKEUP)}}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_HS\_EXTI\_SET\_RISING\_EGDE\_TRIGGER() EXTI-\/>FTSR \&= \string~(USB\_HS\_EXTI\_LINE\_WAKEUP);\(\backslash\)}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{                                                    EXTI-\/>RTSR |= USB\_HS\_EXTI\_LINE\_WAKEUP}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177                                                       }
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_HS\_EXTI\_SET\_FALLING\_EGDE\_TRIGGER()  EXTI-\/>FTSR |= (USB\_HS\_EXTI\_LINE\_WAKEUP);\(\backslash\)}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{                                                      EXTI-\/>RTSR \&= \string~(USB\_HS\_EXTI\_LINE\_WAKEUP)}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_HS\_EXTI\_SET\_FALLINGRISING\_TRIGGER()   EXTI-\/>RTSR \&= \string~(USB\_HS\_EXTI\_LINE\_WAKEUP);\(\backslash\)}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{                                                        EXTI-\/>FTSR \&= \string~(USB\_HS\_EXTI\_LINE\_WAKEUP;)\(\backslash\)}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{                                                        EXTI-\/>RTSR |= USB\_HS\_EXTI\_LINE\_WAKEUP;\(\backslash\)}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{                                                        EXTI-\/>FTSR |= USB\_HS\_EXTI\_LINE\_WAKEUP}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_FS\_EXTI\_ENABLE\_IT()    EXTI-\/>IMR |= USB\_FS\_EXTI\_LINE\_WAKEUP}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_FS\_EXTI\_DISABLE\_IT()   EXTI-\/>IMR \&= \string~(USB\_FS\_EXTI\_LINE\_WAKEUP)}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_FS\_EXTI\_GET\_FLAG()     EXTI-\/>PR \& (USB\_FS\_EXTI\_LINE\_WAKEUP)}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_FS\_EXTI\_CLEAR\_FLAG()   EXTI-\/>PR = USB\_FS\_EXTI\_LINE\_WAKEUP}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_FS\_EXTI\_SET\_RISING\_EGDE\_TRIGGER() EXTI-\/>FTSR \&= \string~(USB\_FS\_EXTI\_LINE\_WAKEUP);\(\backslash\)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{                                                    EXTI-\/>RTSR |= USB\_FS\_EXTI\_LINE\_WAKEUP}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196                                                       }
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_FS\_EXTI\_SET\_FALLING\_EGDE\_TRIGGER()  EXTI-\/>FTSR |= (USB\_FS\_EXTI\_LINE\_WAKEUP);\(\backslash\)}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{                                                      EXTI-\/>RTSR \&= \string~(USB\_FS\_EXTI\_LINE\_WAKEUP)}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define \_\_HAL\_USB\_FS\_EXTI\_SET\_FALLINGRISING\_TRIGGER()  EXTI-\/>RTSR \&= \string~(USB\_FS\_EXTI\_LINE\_WAKEUP);\(\backslash\)}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{                                                       EXTI-\/>FTSR \&= \string~(USB\_FS\_EXTI\_LINE\_WAKEUP);\(\backslash\)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{                                                       EXTI-\/>RTSR |= USB\_FS\_EXTI\_LINE\_WAKEUP;\(\backslash\)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{                                                       EXTI-\/>FTSR |= USB\_FS\_EXTI\_LINE\_WAKEUP  }}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{210 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212 \textcolor{comment}{/* Initialization/de-\/initialization functions  **********************************/}}
+\DoxyCodeLine{213 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_Init(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{214 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_DeInit (\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{215 \textcolor{keywordtype}{void} HAL\_PCD\_MspInit(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{216 \textcolor{keywordtype}{void} HAL\_PCD\_MspDeInit(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 \textcolor{comment}{/* I/O operation functions  *****************************************************/}}
+\DoxyCodeLine{219  \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{220 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_Start(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{221 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_Stop(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{222 \textcolor{keywordtype}{void} HAL\_PCD\_IRQHandler(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224 \textcolor{keywordtype}{void} HAL\_PCD\_DataOutStageCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t epnum);}
+\DoxyCodeLine{225 \textcolor{keywordtype}{void} HAL\_PCD\_DataInStageCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t epnum);}
+\DoxyCodeLine{226 \textcolor{keywordtype}{void} HAL\_PCD\_SetupStageCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{227 \textcolor{keywordtype}{void} HAL\_PCD\_SOFCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{228 \textcolor{keywordtype}{void} HAL\_PCD\_ResetCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{229 \textcolor{keywordtype}{void} HAL\_PCD\_SuspendCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{230 \textcolor{keywordtype}{void} HAL\_PCD\_ResumeCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{231 \textcolor{keywordtype}{void} HAL\_PCD\_ISOOUTIncompleteCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t epnum);}
+\DoxyCodeLine{232 \textcolor{keywordtype}{void} HAL\_PCD\_ISOINIncompleteCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t epnum);}
+\DoxyCodeLine{233 \textcolor{keywordtype}{void} HAL\_PCD\_ConnectCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{234 \textcolor{keywordtype}{void} HAL\_PCD\_DisconnectCallback(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238 \textcolor{comment}{/* Peripheral Control functions  ************************************************/}}
+\DoxyCodeLine{239 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_DevConnect(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{240 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_DevDisconnect(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{241 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_SetAddress(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t address);}
+\DoxyCodeLine{242 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_EP\_Open(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t ep\_addr, uint16\_t ep\_mps, uint8\_t ep\_type);}
+\DoxyCodeLine{243 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_EP\_Close(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t ep\_addr);}
+\DoxyCodeLine{244 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_EP\_Receive(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t ep\_addr, uint8\_t *pBuf, uint32\_t len);}
+\DoxyCodeLine{245 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_EP\_Transmit(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t ep\_addr, uint8\_t *pBuf, uint32\_t len);}
+\DoxyCodeLine{246 uint16\_t          HAL\_PCD\_EP\_GetRxCount(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t ep\_addr);}
+\DoxyCodeLine{247 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_EP\_SetStall(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t ep\_addr);}
+\DoxyCodeLine{248 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_EP\_ClrStall(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t ep\_addr);}
+\DoxyCodeLine{249 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_EP\_Flush(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t ep\_addr);}
+\DoxyCodeLine{250 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_SetTxFiFo(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint8\_t fifo, uint16\_t size);}
+\DoxyCodeLine{251 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_SetRxFiFo(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd, uint16\_t size);}
+\DoxyCodeLine{252 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_ActiveRemoteWakeup(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{253 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PCD\_DeActiveRemoteWakeup(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{254 \textcolor{comment}{/* Peripheral State functions  **************************************************/}}
+\DoxyCodeLine{255 \mbox{\hyperlink{group___p_c_d_ga78b8f0aa4eea3865fb695a732b26be96}{PCD\_StateTypeDef}} HAL\_PCD\_GetState(\mbox{\hyperlink{struct_p_c_d___handle_type_def}{PCD\_HandleTypeDef}} *hpcd);}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{266 \}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_PCD\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,48 @@
+\hypertarget{port__api_8h_source}{}\doxysection{port\+\_\+api.\+h}
+\label{port__api_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/port\_api.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/port\_api.h}}
+\mbox{\hyperlink{port__api_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_PORTMAP\_H}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_PORTMAP\_H}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{device_8h}{device.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00021}00021 \textcolor{preprocessor}{\#if DEVICE\_PORTIN || DEVICE\_PORTOUT}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00023}00023 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00024}00024 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00025}00025 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00027}00027 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structport__s}{port\_s}} port\_t;}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00029}00029 \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} port\_pin(\mbox{\hyperlink{_port_names_8h_a59d6d8d6337e04ac7ad3dc96eb920416}{PortName}} \mbox{\hyperlink{structport__s_aee39efc434a1663ab3a030d3e1214c32}{port}}, \textcolor{keywordtype}{int} pin\_n);}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00031}00031 \textcolor{keywordtype}{void} port\_init (port\_t *obj, \mbox{\hyperlink{_port_names_8h_a59d6d8d6337e04ac7ad3dc96eb920416}{PortName}} \mbox{\hyperlink{structport__s_aee39efc434a1663ab3a030d3e1214c32}{port}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{structport__s_ad3bee21df6875eeccd25d3c577e0600a}{mask}}, \mbox{\hyperlink{_pin_names_8h_a8ff912d511000d542e6ad34966166f38}{PinDirection}} dir);}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00032}00032 \textcolor{keywordtype}{void} port\_mode (port\_t *obj, \mbox{\hyperlink{_pin_names_8h_a15c0c34a3baec6b9d2390a426bd3ba96}{PinMode}} mode);}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00033}00033 \textcolor{keywordtype}{void} port\_dir  (port\_t *obj, \mbox{\hyperlink{_pin_names_8h_a8ff912d511000d542e6ad34966166f38}{PinDirection}} dir);}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00034}00034 \textcolor{keywordtype}{void} port\_write(port\_t *obj, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00035}00035 \textcolor{keywordtype}{int}  port\_read (port\_t *obj);}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00037}00037 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00038}00038 \}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00039}00039 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00040}00040 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{port__api_8h_source_l00042}00042 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

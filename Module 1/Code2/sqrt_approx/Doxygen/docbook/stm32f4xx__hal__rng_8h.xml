@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__rng_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rng.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rng.h</primary></indexterm>
+<para>
+
+<para>Header file of RNG HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link></para>
+
+<para>RNG Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_n_g___interrupt__definition_1ga8dabf5f116a92e59d18a224d14882927">RNG_IT_CEI</link>   ((uint32_t)0x20)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g___interrupt__definition_1ga2343cb323912a036fa46b081bbe751bc">RNG_IT_SEI</link>   ((uint32_t)0x40)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g___interrupt__definition_1gaa110e0edaec1c15ed3a9620b001f8d91">IS_RNG_IT</link>(IT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g___flag__definition_1ga25845be03c05930bde3c03975eb6c44f">RNG_FLAG_DRDY</link>   ((uint32_t)0x0001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g___flag__definition_1ga4d4d7142b6c50bf0f421a1b668b3ff42">RNG_FLAG_CECS</link>   ((uint32_t)0x0002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g___flag__definition_1ga0a3a6b3d5e584f04546cbcfe0b4fdac3">RNG_FLAG_SECS</link>   ((uint32_t)0x0004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g___flag__definition_1ga96edbf26cc1c4b05064f47b02ee460bf">IS_RNG_FLAG</link>(FLAG)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga5af98831d5e8f86ceba4dc6834b6683c">__HAL_RNG_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ac6ae3d9b920346eb9dbf70734cf6b24d">HAL_RNG_STATE_RESET</link>)</para>
+
+<para>Reset RNG handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga94417ed0a672802a1fe6b563fa6db67a">__HAL_RNG_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  RNG_CR_RNGEN)</para>
+
+<para>Enables the RNG peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga9f481a8bf336ef8f5896dc1b65816ec0">__HAL_RNG_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~RNG_CR_RNGEN)</para>
+
+<para>Disables the RNG peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga7d3a78fbebb37ac4bbad41bbafc45231">__HAL_RNG_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Gets the selected RNG&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga7ce64050d8d8b43a032ae7122f49d589">__HAL_RNG_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR) &amp;= ~(__FLAG__))</para>
+
+<para>Clears the RNG&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1gae57547b6ac50cab512a710ca2197ceef">__HAL_RNG_ENABLE_IT</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  RNG_CR_IE)</para>
+
+<para>Enables the RNG interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga0931b99dc51e49f8750769a4640b180d">__HAL_RNG_DISABLE_IT</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~RNG_CR_IE)</para>
+
+<para>Disables the RNG interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_n_g_1ga8eb2f8e5e41d49baea4e228f02476587">__HAL_RNG_GET_IT</link>(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__INTERRUPT__)) == (__INTERRUPT__))</para>
+
+<para>Checks whether the specified RNG interrupt has occurred or not. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___r_n_g_1ga4df5a662b522fdd2a0628b98e3218164">HAL_RNG_StateTypeDef</link> { 
+<link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ac6ae3d9b920346eb9dbf70734cf6b24d">HAL_RNG_STATE_RESET</link> = 0x00
+, <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164aa3b092b8667b3c44bae319cefc1be8ec">HAL_RNG_STATE_READY</link> = 0x01
+, <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164af91167eb8a28f0322bdc6a6efbf7ecf1">HAL_RNG_STATE_BUSY</link> = 0x02
+, <link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ae4af344563d5d2a88572c892c9be654f">HAL_RNG_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___r_n_g_1gga4df5a662b522fdd2a0628b98e3218164ad5f27831d44979023e9dc8012f15e838">HAL_RNG_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>RNG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_n_g_1gabb8a1155a3240d63c2407454d31c8df8">HAL_RNG_Init</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_n_g_1ga83742c9e725e9d2c07db6ee95c3b3ff6">HAL_RNG_DeInit</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1gafe887fca6ab3b254e871a1a2d88a30d7">HAL_RNG_MspInit</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1gaee48b1f58486bd2c1535a5b2486f9a6c">HAL_RNG_MspDeInit</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___r_n_g_1gae589fa0838911facb5f44a3454ed2617">HAL_RNG_GetRandomNumber</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___r_n_g_1gaf581e06eaa5281bc954e038207be1cdb">HAL_RNG_GetRandomNumber_IT</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1ga678b4fe183d5639b658b2e4e38b881b0">HAL_RNG_IRQHandler</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1gaae52f6c36cfa915c7781397d610d8253">HAL_RNG_ReadyCallback</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_n_g_1ga6bbfc492695015cbf5f3ce470d2ec63f">HAL_RNG_ErrorCallback</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+            <listitem><para><link linkend="_group___r_n_g_1ga4df5a662b522fdd2a0628b98e3218164">HAL_RNG_StateTypeDef</link> <link linkend="_group___r_n_g_1ga15f07098d0e6b39b6840b796c69685b6">HAL_RNG_GetState</link> (<link linkend="_struct_r_n_g___handle_type_def">RNG_HandleTypeDef</link> *hrng)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of RNG HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__rng_8h_source">stm32f4xx_hal_rng.h</link>.</para>
+</section>
+</section>

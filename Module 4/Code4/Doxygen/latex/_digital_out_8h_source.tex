@@ -1,0 +1,71 @@
+\hypertarget{_digital_out_8h_source}{}\doxysection{Digital\+Out.\+h}
+\label{_digital_out_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/DigitalOut.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/DigitalOut.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_DIGITALOUT\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_DIGITALOUT\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}gpio\_api.h"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{41 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_digital_out}{DigitalOut}} \{}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{public}:}
+\DoxyCodeLine{48     \mbox{\hyperlink{classmbed_1_1_digital_out_aad0eaa96c3fad0b2e31c167d616fe3c2}{DigitalOut}}(PinName pin) : gpio() \{}
+\DoxyCodeLine{49         gpio\_init\_out(\&gpio, pin);}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{57     \mbox{\hyperlink{classmbed_1_1_digital_out_a6068274615ee97f1ff3a3ceb701faa26}{DigitalOut}}(PinName pin, \textcolor{keywordtype}{int} value) : gpio() \{}
+\DoxyCodeLine{58         gpio\_init\_out\_ex(\&gpio, pin, value);}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_digital_out_a780c53a27d6ef36e8f57dc796d4c117c}{write}}(\textcolor{keywordtype}{int} value) \{}
+\DoxyCodeLine{67         gpio\_write(\&gpio, value);}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_digital_out_aee5b6dba79cb58aa87a18b3dc38621bd}{read}}() \{}
+\DoxyCodeLine{77         \textcolor{keywordflow}{return} gpio\_read(\&gpio);}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{83     \mbox{\hyperlink{classmbed_1_1_digital_out}{DigitalOut}}\& \mbox{\hyperlink{classmbed_1_1_digital_out_a4654b98ddcf62451a78ec9d3b0b625bd}{operator= }}(\textcolor{keywordtype}{int} value) \{}
+\DoxyCodeLine{84         \mbox{\hyperlink{classmbed_1_1_digital_out_a780c53a27d6ef36e8f57dc796d4c117c}{write}}(value);}
+\DoxyCodeLine{85         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \mbox{\hyperlink{classmbed_1_1_digital_out}{DigitalOut}}\& \mbox{\hyperlink{classmbed_1_1_digital_out_a4654b98ddcf62451a78ec9d3b0b625bd}{operator= }}(\mbox{\hyperlink{classmbed_1_1_digital_out}{DigitalOut}}\& rhs) \{}
+\DoxyCodeLine{89         \mbox{\hyperlink{classmbed_1_1_digital_out_a780c53a27d6ef36e8f57dc796d4c117c}{write}}(rhs.\mbox{\hyperlink{classmbed_1_1_digital_out_aee5b6dba79cb58aa87a18b3dc38621bd}{read}}());}
+\DoxyCodeLine{90         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{95     \textcolor{keyword}{operator} int() \{}
+\DoxyCodeLine{96         \textcolor{keywordflow}{return} \mbox{\hyperlink{classmbed_1_1_digital_out_aee5b6dba79cb58aa87a18b3dc38621bd}{read}}();}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{101     \mbox{\hyperlink{structgpio__t}{gpio\_t}} gpio;}
+\DoxyCodeLine{102 \};}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

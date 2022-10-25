@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___d_m_a__mode" xml:lang="en-US">
+<title>DMA_mode</title>
+<indexterm><primary>DMA_mode</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___d_m_a__mode_1ga04941acfbbdefc53e1e08133cffa3b8a">DMA_NORMAL</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a__mode_1ga4c4f425cba13edffb3c831c036c91e01">DMA_CIRCULAR</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gadc248dbc519cc580621cdadcdd8741fb">DMA_SxCR_CIRC</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a__mode_1ga7974ee645c8e275a2297cf37eec9e022">DMA_PFCTRL</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga11f412d256043bec3e01ceef7f2099f2">DMA_SxCR_PFCTRL</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___d_m_a__mode_1gad88ee5030574d6a573904378fb62c7ac">IS_DMA_MODE</link>(MODE)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___d_m_a__mode_1ga4c4f425cba13edffb3c831c036c91e01"/><section>
+    <title>DMA_CIRCULAR</title>
+<indexterm><primary>DMA_CIRCULAR</primary><secondary>DMA_mode</secondary></indexterm>
+<indexterm><primary>DMA_mode</primary><secondary>DMA_CIRCULAR</secondary></indexterm>
+<para><computeroutput>#define DMA_CIRCULAR   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gadc248dbc519cc580621cdadcdd8741fb">DMA_SxCR_CIRC</link>)</computeroutput></para>
+<para>Circular mode 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00286">286</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a__mode_1ga04941acfbbdefc53e1e08133cffa3b8a"/><section>
+    <title>DMA_NORMAL</title>
+<indexterm><primary>DMA_NORMAL</primary><secondary>DMA_mode</secondary></indexterm>
+<indexterm><primary>DMA_mode</primary><secondary>DMA_NORMAL</secondary></indexterm>
+<para><computeroutput>#define DMA_NORMAL   ((uint32_t)0x00000000)</computeroutput></para>
+<para>Normal mode 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00285">285</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a__mode_1ga7974ee645c8e275a2297cf37eec9e022"/><section>
+    <title>DMA_PFCTRL</title>
+<indexterm><primary>DMA_PFCTRL</primary><secondary>DMA_mode</secondary></indexterm>
+<indexterm><primary>DMA_mode</primary><secondary>DMA_PFCTRL</secondary></indexterm>
+<para><computeroutput>#define DMA_PFCTRL   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga11f412d256043bec3e01ceef7f2099f2">DMA_SxCR_PFCTRL</link>)</computeroutput></para>
+<para>Peripheral flow control mode </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00287">287</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_group___d_m_a__mode_1gad88ee5030574d6a573904378fb62c7ac"/><section>
+    <title>IS_DMA_MODE</title>
+<indexterm><primary>IS_DMA_MODE</primary><secondary>DMA_mode</secondary></indexterm>
+<indexterm><primary>DMA_mode</primary><secondary>IS_DMA_MODE</secondary></indexterm>
+<para><computeroutput>#define IS_DMA_MODE( MODE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((MODE)&#32;==&#32;<link linkend="_group___d_m_a__mode_1ga04941acfbbdefc53e1e08133cffa3b8a">DMA_NORMAL</link>&#32;)&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___d_m_a__mode_1ga4c4f425cba13edffb3c831c036c91e01">DMA_CIRCULAR</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___d_m_a__mode_1ga7974ee645c8e275a2297cf37eec9e022">DMA_PFCTRL</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00289">289</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+</section>
+</section>

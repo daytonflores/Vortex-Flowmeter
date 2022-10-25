@@ -1,0 +1,1536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s___t_p_i" xml:lang="en-US">
+<title>Trace Port Interface (TPI)</title>
+<indexterm><primary>Trace Port Interface (TPI)</primary></indexterm>
+<para>
+
+<para>Type definitions for the Trace Port Interface (TPI) </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_m_s_i_s___core_debug">Core Debug Registers (CoreDebug)</link></para>
+
+<para>Cortex-M0 Core Debug Registers (DCB registers, SHCSR, and DFSR) are only accessible over DAP and not via processor. Therefore they are not covered by the Cortex-M0 header file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_t_p_i___type">TPI_Type</link></para>
+
+<para>Structure type to access the Trace Port Interface Register (TPI). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928">TPI_ACPR_PRESCALER_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4fcacd27208419929921aec8457a8c13">TPI_ACPR_PRESCALER_Msk</link>   (0x1FFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928">TPI_ACPR_PRESCALER_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858">TPI_SPPR_TXMODE_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaca085c8a954393d70dbd7240bb02cc1f">TPI_SPPR_TXMODE_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858">TPI_SPPR_TXMODE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8">TPI_FFSR_FtNonStop_Pos</link>   3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaaa313f980974a8cfc7dac68c4d805ab1">TPI_FFSR_FtNonStop_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8">TPI_FFSR_FtNonStop_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c">TPI_FFSR_TCPresent_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0d6bfd263ff2fdec72d6ec9415fb1135">TPI_FFSR_TCPresent_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c">TPI_FFSR_TCPresent_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2">TPI_FFSR_FtStopped_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1ab6c3abe1cf6311ee07e7c479ce5f78">TPI_FFSR_FtStopped_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2">TPI_FFSR_FtStopped_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf">TPI_FFSR_FlInProg_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga63dfb09259893958962914fc3a9e3824">TPI_FFSR_FlInProg_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf">TPI_FFSR_FlInProg_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b">TPI_FFCR_TrigIn_Pos</link>   8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga360b413bc5da61f751546a7133c3e4dd">TPI_FFCR_TrigIn_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b">TPI_FFCR_TrigIn_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64">TPI_FFCR_EnFCont_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga27d1ecf2e0ff496df03457a2a97cb2c9">TPI_FFCR_EnFCont_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64">TPI_FFCR_EnFCont_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99">TPI_TRIGGER_TRIGGER_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga814227af2b2665a0687bb49345e21110">TPI_TRIGGER_TRIGGER_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99">TPI_TRIGGER_TRIGGER_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae">TPI_FIFO0_ITM_ATVALID_Pos</link>   29</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga94cb2493ed35d2dab7bd4092b88a05bc">TPI_FIFO0_ITM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae">TPI_FIFO0_ITM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52">TPI_FIFO0_ITM_bytecount_Pos</link>   27</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga07bafa971b8daf0d63b3f92b9ae7fa16">TPI_FIFO0_ITM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52">TPI_FIFO0_ITM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d">TPI_FIFO0_ETM_ATVALID_Pos</link>   26</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4f0005dc420b28f2369179a935b9a9d3">TPI_FIFO0_ETM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d">TPI_FIFO0_ETM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf">TPI_FIFO0_ETM_bytecount_Pos</link>   24</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad2536b3a935361c68453cd068640af92">TPI_FIFO0_ETM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf">TPI_FIFO0_ETM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48">TPI_FIFO0_ETM2_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa82a7b9b99c990fb12eafb3c84b68254">TPI_FIFO0_ETM2_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48">TPI_FIFO0_ETM2_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413">TPI_FIFO0_ETM1_Pos</link>   8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaad9c1a6ed34a70905005a0cc14d5f01b">TPI_FIFO0_ETM1_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413">TPI_FIFO0_ETM1_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87">TPI_FIFO0_ETM0_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaf924f7d1662f3f6c1da12052390cb118">TPI_FIFO0_ETM0_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87">TPI_FIFO0_ETM0_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga6959f73d7db4a87ae9ad9cfc99844526">TPI_ITATBCTR2_ATREADY_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1859502749709a2e5ead9a2599d998db">TPI_ITATBCTR2_ATREADY_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga6959f73d7db4a87ae9ad9cfc99844526">TPI_ITATBCTR2_ATREADY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb">TPI_FIFO1_ITM_ATVALID_Pos</link>   29</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gabc1f6a3b6cac0099d7c01ca949b4dd08">TPI_FIFO1_ITM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb">TPI_FIFO1_ITM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a">TPI_FIFO1_ITM_bytecount_Pos</link>   27</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gacba2edfc0499828019550141356b0dcb">TPI_FIFO1_ITM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a">TPI_FIFO1_ITM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d">TPI_FIFO1_ETM_ATVALID_Pos</link>   26</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0e8f29a1e9378d1ceb0708035edbb86d">TPI_FIFO1_ETM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d">TPI_FIFO1_ETM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06">TPI_FIFO1_ETM_bytecount_Pos</link>   24</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab554305459953b80554fdb1908b73291">TPI_FIFO1_ETM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06">TPI_FIFO1_ETM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b">TPI_FIFO1_ITM2_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gae54512f926ebc00f2e056232aa21d335">TPI_FIFO1_ITM2_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b">TPI_FIFO1_ITM2_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f">TPI_FIFO1_ITM1_Pos</link>   8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3347f42828920dfe56e3130ad319a9e6">TPI_FIFO1_ITM1_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f">TPI_FIFO1_ITM1_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440">TPI_FIFO1_ITM0_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga8ae09f544fc1a428797e2a150f14a4c9">TPI_FIFO1_ITM0_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440">TPI_FIFO1_ITM0_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab1eb6866c65f02fa9c83696b49b0f346">TPI_ITATBCTR0_ATREADY_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaee320b3c60f9575aa96a8742c4ff9356">TPI_ITATBCTR0_ATREADY_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab1eb6866c65f02fa9c83696b49b0f346">TPI_ITATBCTR0_ATREADY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0">TPI_ITCTRL_Mode_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad6f87550b468ad0920d5f405bfd3f017">TPI_ITCTRL_Mode_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0">TPI_ITCTRL_Mode_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4">TPI_DEVID_NRZVALID_Pos</link>   11</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gacecc8710a8f6a23a7d1d4f5674daf02a">TPI_DEVID_NRZVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4">TPI_DEVID_NRZVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c">TPI_DEVID_MANCVALID_Pos</link>   10</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4c3ee4b1a34ad1960a6b2d6e7e0ff942">TPI_DEVID_MANCVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c">TPI_DEVID_MANCVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b">TPI_DEVID_PTINVALID_Pos</link>   9</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1ca84d62243e475836bba02516ba6b97">TPI_DEVID_PTINVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b">TPI_DEVID_PTINVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d">TPI_DEVID_MinBufSz_Pos</link>   6</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga939e068ff3f1a65b35187ab34a342cd8">TPI_DEVID_MinBufSz_Msk</link>   (0x7UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d">TPI_DEVID_MinBufSz_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8">TPI_DEVID_AsynClkIn_Pos</link>   5</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab67830557d2d10be882284275025a2d3">TPI_DEVID_AsynClkIn_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8">TPI_DEVID_AsynClkIn_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed">TPI_DEVID_NrTraceInput_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gabed454418d2140043cd65ec899abd97f">TPI_DEVID_NrTraceInput_Msk</link>   (0x1FUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed">TPI_DEVID_NrTraceInput_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a">TPI_DEVTYPE_SubType_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5b2fd7dddaf5f64855d9c0696acd65c1">TPI_DEVTYPE_SubType_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a">TPI_DEVTYPE_SubType_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd">TPI_DEVTYPE_MajorType_Pos</link>   4</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaecbceed6d08ec586403b37ad47b38c88">TPI_DEVTYPE_MajorType_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd">TPI_DEVTYPE_MajorType_Pos</link>)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928">TPI_ACPR_PRESCALER_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4fcacd27208419929921aec8457a8c13">TPI_ACPR_PRESCALER_Msk</link>   (0x1FFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928">TPI_ACPR_PRESCALER_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858">TPI_SPPR_TXMODE_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaca085c8a954393d70dbd7240bb02cc1f">TPI_SPPR_TXMODE_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858">TPI_SPPR_TXMODE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8">TPI_FFSR_FtNonStop_Pos</link>   3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaaa313f980974a8cfc7dac68c4d805ab1">TPI_FFSR_FtNonStop_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8">TPI_FFSR_FtNonStop_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c">TPI_FFSR_TCPresent_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0d6bfd263ff2fdec72d6ec9415fb1135">TPI_FFSR_TCPresent_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c">TPI_FFSR_TCPresent_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2">TPI_FFSR_FtStopped_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1ab6c3abe1cf6311ee07e7c479ce5f78">TPI_FFSR_FtStopped_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2">TPI_FFSR_FtStopped_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf">TPI_FFSR_FlInProg_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga63dfb09259893958962914fc3a9e3824">TPI_FFSR_FlInProg_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf">TPI_FFSR_FlInProg_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b">TPI_FFCR_TrigIn_Pos</link>   8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga360b413bc5da61f751546a7133c3e4dd">TPI_FFCR_TrigIn_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b">TPI_FFCR_TrigIn_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64">TPI_FFCR_EnFCont_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga27d1ecf2e0ff496df03457a2a97cb2c9">TPI_FFCR_EnFCont_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64">TPI_FFCR_EnFCont_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99">TPI_TRIGGER_TRIGGER_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga814227af2b2665a0687bb49345e21110">TPI_TRIGGER_TRIGGER_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99">TPI_TRIGGER_TRIGGER_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae">TPI_FIFO0_ITM_ATVALID_Pos</link>   29</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga94cb2493ed35d2dab7bd4092b88a05bc">TPI_FIFO0_ITM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae">TPI_FIFO0_ITM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52">TPI_FIFO0_ITM_bytecount_Pos</link>   27</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga07bafa971b8daf0d63b3f92b9ae7fa16">TPI_FIFO0_ITM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52">TPI_FIFO0_ITM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d">TPI_FIFO0_ETM_ATVALID_Pos</link>   26</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4f0005dc420b28f2369179a935b9a9d3">TPI_FIFO0_ETM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d">TPI_FIFO0_ETM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf">TPI_FIFO0_ETM_bytecount_Pos</link>   24</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad2536b3a935361c68453cd068640af92">TPI_FIFO0_ETM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf">TPI_FIFO0_ETM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48">TPI_FIFO0_ETM2_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa82a7b9b99c990fb12eafb3c84b68254">TPI_FIFO0_ETM2_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48">TPI_FIFO0_ETM2_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413">TPI_FIFO0_ETM1_Pos</link>   8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaad9c1a6ed34a70905005a0cc14d5f01b">TPI_FIFO0_ETM1_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413">TPI_FIFO0_ETM1_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87">TPI_FIFO0_ETM0_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaf924f7d1662f3f6c1da12052390cb118">TPI_FIFO0_ETM0_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87">TPI_FIFO0_ETM0_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga6959f73d7db4a87ae9ad9cfc99844526">TPI_ITATBCTR2_ATREADY_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1859502749709a2e5ead9a2599d998db">TPI_ITATBCTR2_ATREADY_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga6959f73d7db4a87ae9ad9cfc99844526">TPI_ITATBCTR2_ATREADY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb">TPI_FIFO1_ITM_ATVALID_Pos</link>   29</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gabc1f6a3b6cac0099d7c01ca949b4dd08">TPI_FIFO1_ITM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb">TPI_FIFO1_ITM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a">TPI_FIFO1_ITM_bytecount_Pos</link>   27</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gacba2edfc0499828019550141356b0dcb">TPI_FIFO1_ITM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a">TPI_FIFO1_ITM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d">TPI_FIFO1_ETM_ATVALID_Pos</link>   26</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0e8f29a1e9378d1ceb0708035edbb86d">TPI_FIFO1_ETM_ATVALID_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d">TPI_FIFO1_ETM_ATVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06">TPI_FIFO1_ETM_bytecount_Pos</link>   24</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab554305459953b80554fdb1908b73291">TPI_FIFO1_ETM_bytecount_Msk</link>   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06">TPI_FIFO1_ETM_bytecount_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b">TPI_FIFO1_ITM2_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gae54512f926ebc00f2e056232aa21d335">TPI_FIFO1_ITM2_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b">TPI_FIFO1_ITM2_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f">TPI_FIFO1_ITM1_Pos</link>   8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3347f42828920dfe56e3130ad319a9e6">TPI_FIFO1_ITM1_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f">TPI_FIFO1_ITM1_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440">TPI_FIFO1_ITM0_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga8ae09f544fc1a428797e2a150f14a4c9">TPI_FIFO1_ITM0_Msk</link>   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440">TPI_FIFO1_ITM0_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab1eb6866c65f02fa9c83696b49b0f346">TPI_ITATBCTR0_ATREADY_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaee320b3c60f9575aa96a8742c4ff9356">TPI_ITATBCTR0_ATREADY_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab1eb6866c65f02fa9c83696b49b0f346">TPI_ITATBCTR0_ATREADY_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0">TPI_ITCTRL_Mode_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gad6f87550b468ad0920d5f405bfd3f017">TPI_ITCTRL_Mode_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0">TPI_ITCTRL_Mode_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4">TPI_DEVID_NRZVALID_Pos</link>   11</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gacecc8710a8f6a23a7d1d4f5674daf02a">TPI_DEVID_NRZVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4">TPI_DEVID_NRZVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c">TPI_DEVID_MANCVALID_Pos</link>   10</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga4c3ee4b1a34ad1960a6b2d6e7e0ff942">TPI_DEVID_MANCVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c">TPI_DEVID_MANCVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b">TPI_DEVID_PTINVALID_Pos</link>   9</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga1ca84d62243e475836bba02516ba6b97">TPI_DEVID_PTINVALID_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b">TPI_DEVID_PTINVALID_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d">TPI_DEVID_MinBufSz_Pos</link>   6</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga939e068ff3f1a65b35187ab34a342cd8">TPI_DEVID_MinBufSz_Msk</link>   (0x7UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d">TPI_DEVID_MinBufSz_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8">TPI_DEVID_AsynClkIn_Pos</link>   5</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gab67830557d2d10be882284275025a2d3">TPI_DEVID_AsynClkIn_Msk</link>   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8">TPI_DEVID_AsynClkIn_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed">TPI_DEVID_NrTraceInput_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gabed454418d2140043cd65ec899abd97f">TPI_DEVID_NrTraceInput_Msk</link>   (0x1FUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed">TPI_DEVID_NrTraceInput_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a">TPI_DEVTYPE_SubType_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga5b2fd7dddaf5f64855d9c0696acd65c1">TPI_DEVTYPE_SubType_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a">TPI_DEVTYPE_SubType_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd">TPI_DEVTYPE_MajorType_Pos</link>   4</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___t_p_i_1gaecbceed6d08ec586403b37ad47b38c88">TPI_DEVTYPE_MajorType_Msk</link>   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd">TPI_DEVTYPE_MajorType_Pos</link>)</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Type definitions for the Trace Port Interface (TPI) </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga4fcacd27208419929921aec8457a8c13"/><section>
+    <title>TPI_ACPR_PRESCALER_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_ACPR_PRESCALER_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ACPR_PRESCALER_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_ACPR_PRESCALER_Msk   (0x1FFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928">TPI_ACPR_PRESCALER_Pos</link>)</computeroutput></para>
+<para>TPI ACPR: PRESCALER Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00916">916</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga4fcacd27208419929921aec8457a8c13"/><section>
+    <title>TPI_ACPR_PRESCALER_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_ACPR_PRESCALER_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ACPR_PRESCALER_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_ACPR_PRESCALER_Msk   (0x1FFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928">TPI_ACPR_PRESCALER_Pos</link>)</computeroutput></para>
+<para>TPI ACPR: PRESCALER Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00949">949</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928"/><section>
+    <title>TPI_ACPR_PRESCALER_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_ACPR_PRESCALER_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ACPR_PRESCALER_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_ACPR_PRESCALER_Pos   0</computeroutput></para>
+<para>TPI ACPR: PRESCALER Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00915">915</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga5a82d274eb2df8b0c92dd4ed63535928"/><section>
+    <title>TPI_ACPR_PRESCALER_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_ACPR_PRESCALER_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ACPR_PRESCALER_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_ACPR_PRESCALER_Pos   0</computeroutput></para>
+<para>TPI ACPR: PRESCALER Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00948">948</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gab67830557d2d10be882284275025a2d3"/><section>
+    <title>TPI_DEVID_AsynClkIn_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_AsynClkIn_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_AsynClkIn_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_AsynClkIn_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8">TPI_DEVID_AsynClkIn_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: AsynClkIn Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01016">1016</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gab67830557d2d10be882284275025a2d3"/><section>
+    <title>TPI_DEVID_AsynClkIn_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_AsynClkIn_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_AsynClkIn_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_AsynClkIn_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8">TPI_DEVID_AsynClkIn_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: AsynClkIn Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01049">1049</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8"/><section>
+    <title>TPI_DEVID_AsynClkIn_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_AsynClkIn_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_AsynClkIn_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_AsynClkIn_Pos   5</computeroutput></para>
+<para>TPI DEVID: AsynClkIn Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01015">1015</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gab382b1296b5efd057be606eb8f768df8"/><section>
+    <title>TPI_DEVID_AsynClkIn_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_AsynClkIn_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_AsynClkIn_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_AsynClkIn_Pos   5</computeroutput></para>
+<para>TPI DEVID: AsynClkIn Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01048">1048</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga4c3ee4b1a34ad1960a6b2d6e7e0ff942"/><section>
+    <title>TPI_DEVID_MANCVALID_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_MANCVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_MANCVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_MANCVALID_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c">TPI_DEVID_MANCVALID_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: MANCVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01007">1007</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga4c3ee4b1a34ad1960a6b2d6e7e0ff942"/><section>
+    <title>TPI_DEVID_MANCVALID_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_MANCVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_MANCVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_MANCVALID_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c">TPI_DEVID_MANCVALID_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: MANCVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01040">1040</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c"/><section>
+    <title>TPI_DEVID_MANCVALID_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_MANCVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_MANCVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_MANCVALID_Pos   10</computeroutput></para>
+<para>TPI DEVID: MANCVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01006">1006</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga675534579d9e25477bb38970e3ef973c"/><section>
+    <title>TPI_DEVID_MANCVALID_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_MANCVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_MANCVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_MANCVALID_Pos   10</computeroutput></para>
+<para>TPI DEVID: MANCVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01039">1039</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga939e068ff3f1a65b35187ab34a342cd8"/><section>
+    <title>TPI_DEVID_MinBufSz_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_MinBufSz_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_MinBufSz_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_MinBufSz_Msk   (0x7UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d">TPI_DEVID_MinBufSz_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: MinBufSz Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01013">1013</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga939e068ff3f1a65b35187ab34a342cd8"/><section>
+    <title>TPI_DEVID_MinBufSz_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_MinBufSz_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_MinBufSz_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_MinBufSz_Msk   (0x7UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d">TPI_DEVID_MinBufSz_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: MinBufSz Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01046">1046</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d"/><section>
+    <title>TPI_DEVID_MinBufSz_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_MinBufSz_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_MinBufSz_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_MinBufSz_Pos   6</computeroutput></para>
+<para>TPI DEVID: MinBufSz Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01012">1012</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga3f7da5de2a34be41a092e5eddd22ac4d"/><section>
+    <title>TPI_DEVID_MinBufSz_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_MinBufSz_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_MinBufSz_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_MinBufSz_Pos   6</computeroutput></para>
+<para>TPI DEVID: MinBufSz Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01045">1045</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gabed454418d2140043cd65ec899abd97f"/><section>
+    <title>TPI_DEVID_NrTraceInput_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_NrTraceInput_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_NrTraceInput_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_NrTraceInput_Msk   (0x1FUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed">TPI_DEVID_NrTraceInput_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: NrTraceInput Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01019">1019</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gabed454418d2140043cd65ec899abd97f"/><section>
+    <title>TPI_DEVID_NrTraceInput_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_NrTraceInput_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_NrTraceInput_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_NrTraceInput_Msk   (0x1FUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed">TPI_DEVID_NrTraceInput_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: NrTraceInput Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01052">1052</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed"/><section>
+    <title>TPI_DEVID_NrTraceInput_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_NrTraceInput_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_NrTraceInput_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_NrTraceInput_Pos   0</computeroutput></para>
+<para>TPI DEVID: NrTraceInput Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01018">1018</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga80ecae7fec479e80e583f545996868ed"/><section>
+    <title>TPI_DEVID_NrTraceInput_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_NrTraceInput_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_NrTraceInput_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_NrTraceInput_Pos   0</computeroutput></para>
+<para>TPI DEVID: NrTraceInput Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01051">1051</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gacecc8710a8f6a23a7d1d4f5674daf02a"/><section>
+    <title>TPI_DEVID_NRZVALID_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_NRZVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_NRZVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_NRZVALID_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4">TPI_DEVID_NRZVALID_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: NRZVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01004">1004</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gacecc8710a8f6a23a7d1d4f5674daf02a"/><section>
+    <title>TPI_DEVID_NRZVALID_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_NRZVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_NRZVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_NRZVALID_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4">TPI_DEVID_NRZVALID_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: NRZVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01037">1037</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4"/><section>
+    <title>TPI_DEVID_NRZVALID_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_NRZVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_NRZVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_NRZVALID_Pos   11</computeroutput></para>
+<para>TPI DEVID: NRZVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01003">1003</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga9f46cf1a1708575f56d6b827766277f4"/><section>
+    <title>TPI_DEVID_NRZVALID_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_NRZVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_NRZVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_NRZVALID_Pos   11</computeroutput></para>
+<para>TPI DEVID: NRZVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01036">1036</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga1ca84d62243e475836bba02516ba6b97"/><section>
+    <title>TPI_DEVID_PTINVALID_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_PTINVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_PTINVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_PTINVALID_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b">TPI_DEVID_PTINVALID_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: PTINVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01010">1010</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga1ca84d62243e475836bba02516ba6b97"/><section>
+    <title>TPI_DEVID_PTINVALID_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_PTINVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_PTINVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_PTINVALID_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b">TPI_DEVID_PTINVALID_Pos</link>)</computeroutput></para>
+<para>TPI DEVID: PTINVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01043">1043</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b"/><section>
+    <title>TPI_DEVID_PTINVALID_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_PTINVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_PTINVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_PTINVALID_Pos   9</computeroutput></para>
+<para>TPI DEVID: PTINVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01009">1009</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga974cccf4c958b4a45cb71c7b5de39b7b"/><section>
+    <title>TPI_DEVID_PTINVALID_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVID_PTINVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVID_PTINVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVID_PTINVALID_Pos   9</computeroutput></para>
+<para>TPI DEVID: PTINVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01042">1042</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaecbceed6d08ec586403b37ad47b38c88"/><section>
+    <title>TPI_DEVTYPE_MajorType_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVTYPE_MajorType_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVTYPE_MajorType_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVTYPE_MajorType_Msk   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd">TPI_DEVTYPE_MajorType_Pos</link>)</computeroutput></para>
+<para>TPI DEVTYPE: MajorType Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01026">1026</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaecbceed6d08ec586403b37ad47b38c88"/><section>
+    <title>TPI_DEVTYPE_MajorType_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVTYPE_MajorType_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVTYPE_MajorType_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVTYPE_MajorType_Msk   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd">TPI_DEVTYPE_MajorType_Pos</link>)</computeroutput></para>
+<para>TPI DEVTYPE: MajorType Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01059">1059</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd"/><section>
+    <title>TPI_DEVTYPE_MajorType_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVTYPE_MajorType_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVTYPE_MajorType_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVTYPE_MajorType_Pos   4</computeroutput></para>
+<para>TPI DEVTYPE: MajorType Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01025">1025</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga69c4892d332755a9f64c1680497cebdd"/><section>
+    <title>TPI_DEVTYPE_MajorType_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVTYPE_MajorType_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVTYPE_MajorType_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVTYPE_MajorType_Pos   4</computeroutput></para>
+<para>TPI DEVTYPE: MajorType Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01058">1058</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga5b2fd7dddaf5f64855d9c0696acd65c1"/><section>
+    <title>TPI_DEVTYPE_SubType_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVTYPE_SubType_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVTYPE_SubType_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVTYPE_SubType_Msk   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a">TPI_DEVTYPE_SubType_Pos</link>)</computeroutput></para>
+<para>TPI DEVTYPE: SubType Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01023">1023</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga5b2fd7dddaf5f64855d9c0696acd65c1"/><section>
+    <title>TPI_DEVTYPE_SubType_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVTYPE_SubType_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVTYPE_SubType_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVTYPE_SubType_Msk   (0xFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a">TPI_DEVTYPE_SubType_Pos</link>)</computeroutput></para>
+<para>TPI DEVTYPE: SubType Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01056">1056</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a"/><section>
+    <title>TPI_DEVTYPE_SubType_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVTYPE_SubType_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVTYPE_SubType_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVTYPE_SubType_Pos   0</computeroutput></para>
+<para>TPI DEVTYPE: SubType Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01022">1022</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga0c799ff892af5eb3162d152abc00af7a"/><section>
+    <title>TPI_DEVTYPE_SubType_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_DEVTYPE_SubType_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_DEVTYPE_SubType_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_DEVTYPE_SubType_Pos   0</computeroutput></para>
+<para>TPI DEVTYPE: SubType Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01055">1055</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga27d1ecf2e0ff496df03457a2a97cb2c9"/><section>
+    <title>TPI_FFCR_EnFCont_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFCR_EnFCont_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFCR_EnFCont_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFCR_EnFCont_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64">TPI_FFCR_EnFCont_Pos</link>)</computeroutput></para>
+<para>TPI FFCR: EnFCont Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00940">940</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga27d1ecf2e0ff496df03457a2a97cb2c9"/><section>
+    <title>TPI_FFCR_EnFCont_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFCR_EnFCont_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFCR_EnFCont_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFCR_EnFCont_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64">TPI_FFCR_EnFCont_Pos</link>)</computeroutput></para>
+<para>TPI FFCR: EnFCont Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00973">973</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64"/><section>
+    <title>TPI_FFCR_EnFCont_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFCR_EnFCont_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFCR_EnFCont_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFCR_EnFCont_Pos   1</computeroutput></para>
+<para>TPI FFCR: EnFCont Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00939">939</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga99e58a0960b275a773b245e2b69b9a64"/><section>
+    <title>TPI_FFCR_EnFCont_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFCR_EnFCont_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFCR_EnFCont_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFCR_EnFCont_Pos   1</computeroutput></para>
+<para>TPI FFCR: EnFCont Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00972">972</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga360b413bc5da61f751546a7133c3e4dd"/><section>
+    <title>TPI_FFCR_TrigIn_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFCR_TrigIn_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFCR_TrigIn_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFCR_TrigIn_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b">TPI_FFCR_TrigIn_Pos</link>)</computeroutput></para>
+<para>TPI FFCR: TrigIn Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00937">937</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga360b413bc5da61f751546a7133c3e4dd"/><section>
+    <title>TPI_FFCR_TrigIn_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFCR_TrigIn_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFCR_TrigIn_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFCR_TrigIn_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b">TPI_FFCR_TrigIn_Pos</link>)</computeroutput></para>
+<para>TPI FFCR: TrigIn Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00970">970</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b"/><section>
+    <title>TPI_FFCR_TrigIn_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFCR_TrigIn_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFCR_TrigIn_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFCR_TrigIn_Pos   8</computeroutput></para>
+<para>TPI FFCR: TrigIn Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00936">936</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa7ea11ba6ea75b541cd82e185c725b5b"/><section>
+    <title>TPI_FFCR_TrigIn_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFCR_TrigIn_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFCR_TrigIn_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFCR_TrigIn_Pos   8</computeroutput></para>
+<para>TPI FFCR: TrigIn Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00969">969</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga63dfb09259893958962914fc3a9e3824"/><section>
+    <title>TPI_FFSR_FlInProg_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FlInProg_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FlInProg_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FlInProg_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf">TPI_FFSR_FlInProg_Pos</link>)</computeroutput></para>
+<para>TPI FFSR: FlInProg Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00933">933</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga63dfb09259893958962914fc3a9e3824"/><section>
+    <title>TPI_FFSR_FlInProg_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FlInProg_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FlInProg_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FlInProg_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf">TPI_FFSR_FlInProg_Pos</link>)</computeroutput></para>
+<para>TPI FFSR: FlInProg Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00966">966</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf"/><section>
+    <title>TPI_FFSR_FlInProg_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FlInProg_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FlInProg_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FlInProg_Pos   0</computeroutput></para>
+<para>TPI FFSR: FlInProg Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00932">932</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga542ca74a081588273e6d5275ba5da6bf"/><section>
+    <title>TPI_FFSR_FlInProg_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FlInProg_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FlInProg_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FlInProg_Pos   0</computeroutput></para>
+<para>TPI FFSR: FlInProg Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00965">965</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaaa313f980974a8cfc7dac68c4d805ab1"/><section>
+    <title>TPI_FFSR_FtNonStop_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FtNonStop_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FtNonStop_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FtNonStop_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8">TPI_FFSR_FtNonStop_Pos</link>)</computeroutput></para>
+<para>TPI FFSR: FtNonStop Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00924">924</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaaa313f980974a8cfc7dac68c4d805ab1"/><section>
+    <title>TPI_FFSR_FtNonStop_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FtNonStop_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FtNonStop_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FtNonStop_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8">TPI_FFSR_FtNonStop_Pos</link>)</computeroutput></para>
+<para>TPI FFSR: FtNonStop Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00957">957</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8"/><section>
+    <title>TPI_FFSR_FtNonStop_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FtNonStop_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FtNonStop_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FtNonStop_Pos   3</computeroutput></para>
+<para>TPI FFSR: FtNonStop Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00923">923</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga9537b8a660cc8803f57cbbee320b2fc8"/><section>
+    <title>TPI_FFSR_FtNonStop_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FtNonStop_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FtNonStop_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FtNonStop_Pos   3</computeroutput></para>
+<para>TPI FFSR: FtNonStop Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00956">956</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga1ab6c3abe1cf6311ee07e7c479ce5f78"/><section>
+    <title>TPI_FFSR_FtStopped_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FtStopped_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FtStopped_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FtStopped_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2">TPI_FFSR_FtStopped_Pos</link>)</computeroutput></para>
+<para>TPI FFSR: FtStopped Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00930">930</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga1ab6c3abe1cf6311ee07e7c479ce5f78"/><section>
+    <title>TPI_FFSR_FtStopped_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FtStopped_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FtStopped_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FtStopped_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2">TPI_FFSR_FtStopped_Pos</link>)</computeroutput></para>
+<para>TPI FFSR: FtStopped Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00963">963</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2"/><section>
+    <title>TPI_FFSR_FtStopped_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FtStopped_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FtStopped_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FtStopped_Pos   1</computeroutput></para>
+<para>TPI FFSR: FtStopped Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00929">929</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaedf31fd453a878021b542b644e2869d2"/><section>
+    <title>TPI_FFSR_FtStopped_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_FtStopped_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_FtStopped_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_FtStopped_Pos   1</computeroutput></para>
+<para>TPI FFSR: FtStopped Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00962">962</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga0d6bfd263ff2fdec72d6ec9415fb1135"/><section>
+    <title>TPI_FFSR_TCPresent_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_TCPresent_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_TCPresent_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_TCPresent_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c">TPI_FFSR_TCPresent_Pos</link>)</computeroutput></para>
+<para>TPI FFSR: TCPresent Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00927">927</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga0d6bfd263ff2fdec72d6ec9415fb1135"/><section>
+    <title>TPI_FFSR_TCPresent_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_TCPresent_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_TCPresent_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_TCPresent_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c">TPI_FFSR_TCPresent_Pos</link>)</computeroutput></para>
+<para>TPI FFSR: TCPresent Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00960">960</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c"/><section>
+    <title>TPI_FFSR_TCPresent_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_TCPresent_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_TCPresent_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_TCPresent_Pos   2</computeroutput></para>
+<para>TPI FFSR: TCPresent Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00926">926</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gad30fde0c058da2ffb2b0a213be7a1b5c"/><section>
+    <title>TPI_FFSR_TCPresent_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FFSR_TCPresent_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FFSR_TCPresent_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FFSR_TCPresent_Pos   2</computeroutput></para>
+<para>TPI FFSR: TCPresent Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00959">959</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaf924f7d1662f3f6c1da12052390cb118"/><section>
+    <title>TPI_FIFO0_ETM0_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM0_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM0_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM0_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87">TPI_FIFO0_ETM0_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM0 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00966">966</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaf924f7d1662f3f6c1da12052390cb118"/><section>
+    <title>TPI_FIFO0_ETM0_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM0_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM0_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM0_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87">TPI_FIFO0_ETM0_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM0 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00999">999</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87"/><section>
+    <title>TPI_FIFO0_ETM0_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM0_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM0_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM0_Pos   0</computeroutput></para>
+<para>TPI FIFO0: ETM0 Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00965">965</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga48783ce3c695d8c06b1352a526110a87"/><section>
+    <title>TPI_FIFO0_ETM0_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM0_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM0_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM0_Pos   0</computeroutput></para>
+<para>TPI FIFO0: ETM0 Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00998">998</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaad9c1a6ed34a70905005a0cc14d5f01b"/><section>
+    <title>TPI_FIFO0_ETM1_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM1_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM1_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM1_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413">TPI_FIFO0_ETM1_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM1 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00963">963</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaad9c1a6ed34a70905005a0cc14d5f01b"/><section>
+    <title>TPI_FIFO0_ETM1_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM1_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM1_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM1_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413">TPI_FIFO0_ETM1_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM1 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00996">996</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413"/><section>
+    <title>TPI_FIFO0_ETM1_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM1_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM1_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM1_Pos   8</computeroutput></para>
+<para>TPI FIFO0: ETM1 Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00962">962</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gac5a2ef4b7f811d1f3d81ec919d794413"/><section>
+    <title>TPI_FIFO0_ETM1_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM1_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM1_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM1_Pos   8</computeroutput></para>
+<para>TPI FIFO0: ETM1 Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00995">995</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa82a7b9b99c990fb12eafb3c84b68254"/><section>
+    <title>TPI_FIFO0_ETM2_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM2_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM2_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM2_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48">TPI_FIFO0_ETM2_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM2 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00960">960</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa82a7b9b99c990fb12eafb3c84b68254"/><section>
+    <title>TPI_FIFO0_ETM2_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM2_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM2_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM2_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48">TPI_FIFO0_ETM2_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM2 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00993">993</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48"/><section>
+    <title>TPI_FIFO0_ETM2_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM2_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM2_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM2_Pos   16</computeroutput></para>
+<para>TPI FIFO0: ETM2 Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00959">959</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga5f0037cc80c65e86d9e94e5005077a48"/><section>
+    <title>TPI_FIFO0_ETM2_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM2_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM2_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM2_Pos   16</computeroutput></para>
+<para>TPI FIFO0: ETM2 Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00992">992</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga4f0005dc420b28f2369179a935b9a9d3"/><section>
+    <title>TPI_FIFO0_ETM_ATVALID_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM_ATVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM_ATVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM_ATVALID_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d">TPI_FIFO0_ETM_ATVALID_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM_ATVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00954">954</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga4f0005dc420b28f2369179a935b9a9d3"/><section>
+    <title>TPI_FIFO0_ETM_ATVALID_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM_ATVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM_ATVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM_ATVALID_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d">TPI_FIFO0_ETM_ATVALID_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM_ATVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00987">987</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d"/><section>
+    <title>TPI_FIFO0_ETM_ATVALID_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM_ATVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM_ATVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM_ATVALID_Pos   26</computeroutput></para>
+<para>TPI FIFO0: ETM_ATVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00953">953</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga7fdeb3e465ca4aa9e3b2f424ab3bbd1d"/><section>
+    <title>TPI_FIFO0_ETM_ATVALID_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM_ATVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM_ATVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM_ATVALID_Pos   26</computeroutput></para>
+<para>TPI FIFO0: ETM_ATVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00986">986</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gad2536b3a935361c68453cd068640af92"/><section>
+    <title>TPI_FIFO0_ETM_bytecount_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM_bytecount_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM_bytecount_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM_bytecount_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf">TPI_FIFO0_ETM_bytecount_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM_bytecount Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00957">957</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gad2536b3a935361c68453cd068640af92"/><section>
+    <title>TPI_FIFO0_ETM_bytecount_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM_bytecount_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM_bytecount_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM_bytecount_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf">TPI_FIFO0_ETM_bytecount_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ETM_bytecount Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00990">990</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf"/><section>
+    <title>TPI_FIFO0_ETM_bytecount_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM_bytecount_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM_bytecount_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM_bytecount_Pos   24</computeroutput></para>
+<para>TPI FIFO0: ETM_bytecount Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00956">956</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga2f738e45386ebf58c4d406f578e7ddaf"/><section>
+    <title>TPI_FIFO0_ETM_bytecount_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ETM_bytecount_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ETM_bytecount_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ETM_bytecount_Pos   24</computeroutput></para>
+<para>TPI FIFO0: ETM_bytecount Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00989">989</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga94cb2493ed35d2dab7bd4092b88a05bc"/><section>
+    <title>TPI_FIFO0_ITM_ATVALID_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ITM_ATVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ITM_ATVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ITM_ATVALID_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae">TPI_FIFO0_ITM_ATVALID_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ITM_ATVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00948">948</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga94cb2493ed35d2dab7bd4092b88a05bc"/><section>
+    <title>TPI_FIFO0_ITM_ATVALID_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ITM_ATVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ITM_ATVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ITM_ATVALID_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae">TPI_FIFO0_ITM_ATVALID_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ITM_ATVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00981">981</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae"/><section>
+    <title>TPI_FIFO0_ITM_ATVALID_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ITM_ATVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ITM_ATVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ITM_ATVALID_Pos   29</computeroutput></para>
+<para>TPI FIFO0: ITM_ATVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00947">947</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa7e050e9eb6528241ebc6835783b6bae"/><section>
+    <title>TPI_FIFO0_ITM_ATVALID_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ITM_ATVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ITM_ATVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ITM_ATVALID_Pos   29</computeroutput></para>
+<para>TPI FIFO0: ITM_ATVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00980">980</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga07bafa971b8daf0d63b3f92b9ae7fa16"/><section>
+    <title>TPI_FIFO0_ITM_bytecount_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ITM_bytecount_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ITM_bytecount_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ITM_bytecount_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52">TPI_FIFO0_ITM_bytecount_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ITM_bytecount Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00951">951</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga07bafa971b8daf0d63b3f92b9ae7fa16"/><section>
+    <title>TPI_FIFO0_ITM_bytecount_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ITM_bytecount_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ITM_bytecount_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ITM_bytecount_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52">TPI_FIFO0_ITM_bytecount_Pos</link>)</computeroutput></para>
+<para>TPI FIFO0: ITM_bytecount Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00984">984</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52"/><section>
+    <title>TPI_FIFO0_ITM_bytecount_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ITM_bytecount_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ITM_bytecount_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ITM_bytecount_Pos   27</computeroutput></para>
+<para>TPI FIFO0: ITM_bytecount Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00950">950</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gac2b6f7f13a2fa0be4aa7645a47dcac52"/><section>
+    <title>TPI_FIFO0_ITM_bytecount_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO0_ITM_bytecount_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO0_ITM_bytecount_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO0_ITM_bytecount_Pos   27</computeroutput></para>
+<para>TPI FIFO0: ITM_bytecount Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00983">983</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga0e8f29a1e9378d1ceb0708035edbb86d"/><section>
+    <title>TPI_FIFO1_ETM_ATVALID_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ETM_ATVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ETM_ATVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ETM_ATVALID_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d">TPI_FIFO1_ETM_ATVALID_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ETM_ATVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00980">980</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga0e8f29a1e9378d1ceb0708035edbb86d"/><section>
+    <title>TPI_FIFO1_ETM_ATVALID_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ETM_ATVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ETM_ATVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ETM_ATVALID_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d">TPI_FIFO1_ETM_ATVALID_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ETM_ATVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01013">1013</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d"/><section>
+    <title>TPI_FIFO1_ETM_ATVALID_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ETM_ATVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ETM_ATVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ETM_ATVALID_Pos   26</computeroutput></para>
+<para>TPI FIFO1: ETM_ATVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00979">979</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga3177b8d815cf4a707a2d3d3d5499315d"/><section>
+    <title>TPI_FIFO1_ETM_ATVALID_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ETM_ATVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ETM_ATVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ETM_ATVALID_Pos   26</computeroutput></para>
+<para>TPI FIFO1: ETM_ATVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01012">1012</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gab554305459953b80554fdb1908b73291"/><section>
+    <title>TPI_FIFO1_ETM_bytecount_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ETM_bytecount_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ETM_bytecount_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ETM_bytecount_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06">TPI_FIFO1_ETM_bytecount_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ETM_bytecount Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00983">983</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gab554305459953b80554fdb1908b73291"/><section>
+    <title>TPI_FIFO1_ETM_bytecount_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ETM_bytecount_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ETM_bytecount_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ETM_bytecount_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06">TPI_FIFO1_ETM_bytecount_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ETM_bytecount Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01016">1016</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06"/><section>
+    <title>TPI_FIFO1_ETM_bytecount_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ETM_bytecount_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ETM_bytecount_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ETM_bytecount_Pos   24</computeroutput></para>
+<para>TPI FIFO1: ETM_bytecount Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00982">982</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaab31238152b5691af633a7475eaf1f06"/><section>
+    <title>TPI_FIFO1_ETM_bytecount_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ETM_bytecount_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ETM_bytecount_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ETM_bytecount_Pos   24</computeroutput></para>
+<para>TPI FIFO1: ETM_bytecount Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01015">1015</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga8ae09f544fc1a428797e2a150f14a4c9"/><section>
+    <title>TPI_FIFO1_ITM0_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM0_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM0_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM0_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440">TPI_FIFO1_ITM0_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM0 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00992">992</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga8ae09f544fc1a428797e2a150f14a4c9"/><section>
+    <title>TPI_FIFO1_ITM0_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM0_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM0_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM0_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440">TPI_FIFO1_ITM0_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM0 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01025">1025</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440"/><section>
+    <title>TPI_FIFO1_ITM0_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM0_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM0_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM0_Pos   0</computeroutput></para>
+<para>TPI FIFO1: ITM0 Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00991">991</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga2188671488417a52abb075bcd4d73440"/><section>
+    <title>TPI_FIFO1_ITM0_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM0_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM0_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM0_Pos   0</computeroutput></para>
+<para>TPI FIFO1: ITM0 Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01024">1024</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga3347f42828920dfe56e3130ad319a9e6"/><section>
+    <title>TPI_FIFO1_ITM1_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM1_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM1_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM1_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f">TPI_FIFO1_ITM1_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM1 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00989">989</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga3347f42828920dfe56e3130ad319a9e6"/><section>
+    <title>TPI_FIFO1_ITM1_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM1_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM1_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM1_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f">TPI_FIFO1_ITM1_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM1 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01022">1022</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f"/><section>
+    <title>TPI_FIFO1_ITM1_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM1_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM1_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM1_Pos   8</computeroutput></para>
+<para>TPI FIFO1: ITM1 Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00988">988</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaece86ab513bc3d0e0a9dbd82258af49f"/><section>
+    <title>TPI_FIFO1_ITM1_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM1_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM1_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM1_Pos   8</computeroutput></para>
+<para>TPI FIFO1: ITM1 Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01021">1021</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gae54512f926ebc00f2e056232aa21d335"/><section>
+    <title>TPI_FIFO1_ITM2_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM2_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM2_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM2_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b">TPI_FIFO1_ITM2_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM2 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00986">986</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gae54512f926ebc00f2e056232aa21d335"/><section>
+    <title>TPI_FIFO1_ITM2_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM2_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM2_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM2_Msk   (0xFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b">TPI_FIFO1_ITM2_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM2 Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01019">1019</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b"/><section>
+    <title>TPI_FIFO1_ITM2_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM2_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM2_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM2_Pos   16</computeroutput></para>
+<para>TPI FIFO1: ITM2 Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00985">985</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga1828c228f3940005f48fb8dd88ada35b"/><section>
+    <title>TPI_FIFO1_ITM2_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM2_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM2_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM2_Pos   16</computeroutput></para>
+<para>TPI FIFO1: ITM2 Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01018">1018</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gabc1f6a3b6cac0099d7c01ca949b4dd08"/><section>
+    <title>TPI_FIFO1_ITM_ATVALID_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM_ATVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM_ATVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM_ATVALID_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb">TPI_FIFO1_ITM_ATVALID_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM_ATVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00974">974</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gabc1f6a3b6cac0099d7c01ca949b4dd08"/><section>
+    <title>TPI_FIFO1_ITM_ATVALID_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM_ATVALID_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM_ATVALID_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM_ATVALID_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb">TPI_FIFO1_ITM_ATVALID_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM_ATVALID Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01007">1007</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb"/><section>
+    <title>TPI_FIFO1_ITM_ATVALID_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM_ATVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM_ATVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM_ATVALID_Pos   29</computeroutput></para>
+<para>TPI FIFO1: ITM_ATVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00973">973</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga08edfc862b2c8c415854cc4ae2067dfb"/><section>
+    <title>TPI_FIFO1_ITM_ATVALID_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM_ATVALID_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM_ATVALID_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM_ATVALID_Pos   29</computeroutput></para>
+<para>TPI FIFO1: ITM_ATVALID Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01006">1006</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gacba2edfc0499828019550141356b0dcb"/><section>
+    <title>TPI_FIFO1_ITM_bytecount_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM_bytecount_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM_bytecount_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM_bytecount_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a">TPI_FIFO1_ITM_bytecount_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM_bytecount Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00977">977</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gacba2edfc0499828019550141356b0dcb"/><section>
+    <title>TPI_FIFO1_ITM_bytecount_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM_bytecount_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM_bytecount_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM_bytecount_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a">TPI_FIFO1_ITM_bytecount_Pos</link>)</computeroutput></para>
+<para>TPI FIFO1: ITM_bytecount Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01010">1010</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a"/><section>
+    <title>TPI_FIFO1_ITM_bytecount_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM_bytecount_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM_bytecount_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM_bytecount_Pos   27</computeroutput></para>
+<para>TPI FIFO1: ITM_bytecount Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00976">976</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa22ebf7c86e4f4b2c98cfd0b5981375a"/><section>
+    <title>TPI_FIFO1_ITM_bytecount_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_FIFO1_ITM_bytecount_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_FIFO1_ITM_bytecount_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_FIFO1_ITM_bytecount_Pos   27</computeroutput></para>
+<para>TPI FIFO1: ITM_bytecount Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01009">1009</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaee320b3c60f9575aa96a8742c4ff9356"/><section>
+    <title>TPI_ITATBCTR0_ATREADY_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_ITATBCTR0_ATREADY_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITATBCTR0_ATREADY_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_ITATBCTR0_ATREADY_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab1eb6866c65f02fa9c83696b49b0f346">TPI_ITATBCTR0_ATREADY_Pos</link>)</computeroutput></para>
+<para>TPI ITATBCTR0: ATREADY Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00996">996</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaee320b3c60f9575aa96a8742c4ff9356"/><section>
+    <title>TPI_ITATBCTR0_ATREADY_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_ITATBCTR0_ATREADY_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITATBCTR0_ATREADY_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_ITATBCTR0_ATREADY_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gab1eb6866c65f02fa9c83696b49b0f346">TPI_ITATBCTR0_ATREADY_Pos</link>)</computeroutput></para>
+<para>TPI ITATBCTR0: ATREADY Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01029">1029</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gab1eb6866c65f02fa9c83696b49b0f346"/><section>
+    <title>TPI_ITATBCTR0_ATREADY_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_ITATBCTR0_ATREADY_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITATBCTR0_ATREADY_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_ITATBCTR0_ATREADY_Pos   0</computeroutput></para>
+<para>TPI ITATBCTR0: ATREADY Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00995">995</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gab1eb6866c65f02fa9c83696b49b0f346"/><section>
+    <title>TPI_ITATBCTR0_ATREADY_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_ITATBCTR0_ATREADY_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITATBCTR0_ATREADY_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_ITATBCTR0_ATREADY_Pos   0</computeroutput></para>
+<para>TPI ITATBCTR0: ATREADY Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01028">1028</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga1859502749709a2e5ead9a2599d998db"/><section>
+    <title>TPI_ITATBCTR2_ATREADY_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_ITATBCTR2_ATREADY_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITATBCTR2_ATREADY_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_ITATBCTR2_ATREADY_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga6959f73d7db4a87ae9ad9cfc99844526">TPI_ITATBCTR2_ATREADY_Pos</link>)</computeroutput></para>
+<para>TPI ITATBCTR2: ATREADY Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00970">970</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga1859502749709a2e5ead9a2599d998db"/><section>
+    <title>TPI_ITATBCTR2_ATREADY_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_ITATBCTR2_ATREADY_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITATBCTR2_ATREADY_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_ITATBCTR2_ATREADY_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga6959f73d7db4a87ae9ad9cfc99844526">TPI_ITATBCTR2_ATREADY_Pos</link>)</computeroutput></para>
+<para>TPI ITATBCTR2: ATREADY Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01003">1003</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga6959f73d7db4a87ae9ad9cfc99844526"/><section>
+    <title>TPI_ITATBCTR2_ATREADY_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_ITATBCTR2_ATREADY_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITATBCTR2_ATREADY_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_ITATBCTR2_ATREADY_Pos   0</computeroutput></para>
+<para>TPI ITATBCTR2: ATREADY Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00969">969</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga6959f73d7db4a87ae9ad9cfc99844526"/><section>
+    <title>TPI_ITATBCTR2_ATREADY_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_ITATBCTR2_ATREADY_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITATBCTR2_ATREADY_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_ITATBCTR2_ATREADY_Pos   0</computeroutput></para>
+<para>TPI ITATBCTR2: ATREADY Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01002">1002</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gad6f87550b468ad0920d5f405bfd3f017"/><section>
+    <title>TPI_ITCTRL_Mode_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_ITCTRL_Mode_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITCTRL_Mode_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_ITCTRL_Mode_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0">TPI_ITCTRL_Mode_Pos</link>)</computeroutput></para>
+<para>TPI ITCTRL: Mode Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01000">1000</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gad6f87550b468ad0920d5f405bfd3f017"/><section>
+    <title>TPI_ITCTRL_Mode_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_ITCTRL_Mode_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITCTRL_Mode_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_ITCTRL_Mode_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0">TPI_ITCTRL_Mode_Pos</link>)</computeroutput></para>
+<para>TPI ITCTRL: Mode Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01033">1033</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0"/><section>
+    <title>TPI_ITCTRL_Mode_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_ITCTRL_Mode_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITCTRL_Mode_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_ITCTRL_Mode_Pos   0</computeroutput></para>
+<para>TPI ITCTRL: Mode Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00999">999</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaa847adb71a1bc811d2e3190528f495f0"/><section>
+    <title>TPI_ITCTRL_Mode_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_ITCTRL_Mode_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_ITCTRL_Mode_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_ITCTRL_Mode_Pos   0</computeroutput></para>
+<para>TPI ITCTRL: Mode Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01032">1032</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaca085c8a954393d70dbd7240bb02cc1f"/><section>
+    <title>TPI_SPPR_TXMODE_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_SPPR_TXMODE_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_SPPR_TXMODE_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_SPPR_TXMODE_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858">TPI_SPPR_TXMODE_Pos</link>)</computeroutput></para>
+<para>TPI SPPR: TXMODE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00920">920</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1gaca085c8a954393d70dbd7240bb02cc1f"/><section>
+    <title>TPI_SPPR_TXMODE_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_SPPR_TXMODE_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_SPPR_TXMODE_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_SPPR_TXMODE_Msk   (0x3UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858">TPI_SPPR_TXMODE_Pos</link>)</computeroutput></para>
+<para>TPI SPPR: TXMODE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00953">953</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858"/><section>
+    <title>TPI_SPPR_TXMODE_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_SPPR_TXMODE_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_SPPR_TXMODE_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_SPPR_TXMODE_Pos   0</computeroutput></para>
+<para>TPI SPPR: TXMODE Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00919">919</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga0f302797b94bb2da24052082ab630858"/><section>
+    <title>TPI_SPPR_TXMODE_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_SPPR_TXMODE_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_SPPR_TXMODE_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_SPPR_TXMODE_Pos   0</computeroutput></para>
+<para>TPI SPPR: TXMODE Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00952">952</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga814227af2b2665a0687bb49345e21110"/><section>
+    <title>TPI_TRIGGER_TRIGGER_Msk<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_TRIGGER_TRIGGER_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_TRIGGER_TRIGGER_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_TRIGGER_TRIGGER_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99">TPI_TRIGGER_TRIGGER_Pos</link>)</computeroutput></para>
+<para>TPI TRIGGER: TRIGGER Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00944">944</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga814227af2b2665a0687bb49345e21110"/><section>
+    <title>TPI_TRIGGER_TRIGGER_Msk<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_TRIGGER_TRIGGER_Msk</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_TRIGGER_TRIGGER_Msk</secondary></indexterm>
+<para><computeroutput>#define TPI_TRIGGER_TRIGGER_Msk   (0x1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99">TPI_TRIGGER_TRIGGER_Pos</link>)</computeroutput></para>
+<para>TPI TRIGGER: TRIGGER Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00977">977</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99"/><section>
+    <title>TPI_TRIGGER_TRIGGER_Pos<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>TPI_TRIGGER_TRIGGER_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_TRIGGER_TRIGGER_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_TRIGGER_TRIGGER_Pos   0</computeroutput></para>
+<para>TPI TRIGGER: TRIGGER Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00943">943</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___t_p_i_1ga5517fa2ced64efbbd413720329c50b99"/><section>
+    <title>TPI_TRIGGER_TRIGGER_Pos<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>TPI_TRIGGER_TRIGGER_Pos</primary><secondary>Trace Port Interface (TPI)</secondary></indexterm>
+<indexterm><primary>Trace Port Interface (TPI)</primary><secondary>TPI_TRIGGER_TRIGGER_Pos</secondary></indexterm>
+<para><computeroutput>#define TPI_TRIGGER_TRIGGER_Pos   0</computeroutput></para>
+<para>TPI TRIGGER: TRIGGER Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00976">976</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+</section>
+</section>

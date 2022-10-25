@@ -1,0 +1,1120 @@
+\hypertarget{stm32f4xx__hal__eth_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+eth.\+h}
+\label{stm32f4xx__hal__eth_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_eth.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_eth.h}}
+\mbox{\hyperlink{stm32f4xx__hal__eth_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_ETH\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_ETH\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#if defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{58 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65   HAL\_ETH\_STATE\_RESET             = 0x00,    }
+\DoxyCodeLine{66   HAL\_ETH\_STATE\_READY             = 0x01,    }
+\DoxyCodeLine{67   HAL\_ETH\_STATE\_BUSY              = 0x02,    }
+\DoxyCodeLine{68   HAL\_ETH\_STATE\_BUSY\_TX           = 0x12,    }
+\DoxyCodeLine{69   HAL\_ETH\_STATE\_BUSY\_RX           = 0x22,    }
+\DoxyCodeLine{70   HAL\_ETH\_STATE\_BUSY\_TX\_RX        = 0x32,    }
+\DoxyCodeLine{71   HAL\_ETH\_STATE\_BUSY\_WR           = 0x42,    }
+\DoxyCodeLine{72   HAL\_ETH\_STATE\_BUSY\_RD           = 0x82,    }
+\DoxyCodeLine{73   HAL\_ETH\_STATE\_TIMEOUT           = 0x03,    }
+\DoxyCodeLine{74   HAL\_ETH\_STATE\_ERROR             = 0x04     }
+\DoxyCodeLine{75 \}HAL\_ETH\_StateTypeDef;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83   uint32\_t             AutoNegotiation;           }
+\DoxyCodeLine{88   uint32\_t             Speed;                     }
+\DoxyCodeLine{91   uint32\_t             DuplexMode;                }
+\DoxyCodeLine{94   uint16\_t             PhyAddress;                }
+\DoxyCodeLine{97   uint8\_t             *MACAddr;                   }
+\DoxyCodeLine{99   uint32\_t             RxMode;                    }
+\DoxyCodeLine{102   uint32\_t             ChecksumMode;              }
+\DoxyCodeLine{105   uint32\_t             MediaInterface    ;               }
+\DoxyCodeLine{108 \} ETH\_InitTypeDef;}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 }
+\DoxyCodeLine{115 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{116 \{}
+\DoxyCodeLine{117   uint32\_t             Watchdog;                  }
+\DoxyCodeLine{122   uint32\_t             Jabber;                    }
+\DoxyCodeLine{127   uint32\_t             InterFrameGap;             }
+\DoxyCodeLine{130   uint32\_t             CarrierSense;              }
+\DoxyCodeLine{133   uint32\_t             ReceiveOwn;                }
+\DoxyCodeLine{138   uint32\_t             LoopbackMode;              }
+\DoxyCodeLine{141   uint32\_t             ChecksumOffload;           }
+\DoxyCodeLine{144   uint32\_t             RetryTransmission;         }
+\DoxyCodeLine{148   uint32\_t             AutomaticPadCRCStrip;      }
+\DoxyCodeLine{151   uint32\_t             BackOffLimit;              }
+\DoxyCodeLine{154   uint32\_t             DeferralCheck;             }
+\DoxyCodeLine{157   uint32\_t             ReceiveAll;                }
+\DoxyCodeLine{160   uint32\_t             SourceAddrFilter;          }
+\DoxyCodeLine{163   uint32\_t             PassControlFrames;         }
+\DoxyCodeLine{166   uint32\_t             BroadcastFramesReception;  }
+\DoxyCodeLine{169   uint32\_t             DestinationAddrFilter;     }
+\DoxyCodeLine{172   uint32\_t             PromiscuousMode;           }
+\DoxyCodeLine{175   uint32\_t             MulticastFramesFilter;     }
+\DoxyCodeLine{178   uint32\_t             UnicastFramesFilter;       }
+\DoxyCodeLine{181   uint32\_t             HashTableHigh;             }
+\DoxyCodeLine{184   uint32\_t             HashTableLow;              }
+\DoxyCodeLine{187   uint32\_t             PauseTime;                 }
+\DoxyCodeLine{190   uint32\_t             ZeroQuantaPause;           }
+\DoxyCodeLine{193   uint32\_t             PauseLowThreshold;         }
+\DoxyCodeLine{197   uint32\_t             UnicastPauseFrameDetect;   }
+\DoxyCodeLine{201   uint32\_t             ReceiveFlowControl;        }
+\DoxyCodeLine{205   uint32\_t             TransmitFlowControl;       }
+\DoxyCodeLine{209   uint32\_t             VLANTagComparison;         }
+\DoxyCodeLine{213   uint32\_t             VLANTagIdentifier;         }
+\DoxyCodeLine{215 \} ETH\_MACInitTypeDef;}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217 }
+\DoxyCodeLine{222 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{223 \{}
+\DoxyCodeLine{224  uint32\_t              DropTCPIPChecksumErrorFrame; }
+\DoxyCodeLine{227   uint32\_t             ReceiveStoreForward;         }
+\DoxyCodeLine{230   uint32\_t             FlushReceivedFrame;          }
+\DoxyCodeLine{233   uint32\_t             TransmitStoreForward;        }
+\DoxyCodeLine{236   uint32\_t             TransmitThresholdControl;    }
+\DoxyCodeLine{239   uint32\_t             ForwardErrorFrames;          }
+\DoxyCodeLine{242   uint32\_t             ForwardUndersizedGoodFrames; }
+\DoxyCodeLine{246   uint32\_t             ReceiveThresholdControl;     }
+\DoxyCodeLine{249   uint32\_t             SecondFrameOperate;          }
+\DoxyCodeLine{253   uint32\_t             AddressAlignedBeats;         }
+\DoxyCodeLine{256   uint32\_t             FixedBurst;                  }
+\DoxyCodeLine{259   uint32\_t             RxDMABurstLength;            }
+\DoxyCodeLine{262   uint32\_t             TxDMABurstLength;            }
+\DoxyCodeLine{265   uint32\_t             EnhancedDescriptorFormat;    }
+\DoxyCodeLine{268   uint32\_t             DescriptorSkipLength;        }
+\DoxyCodeLine{271   uint32\_t             DMAArbitration;              }
+\DoxyCodeLine{273 \} ETH\_DMAInitTypeDef;}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275 }
+\DoxyCodeLine{280 \textcolor{keyword}{typedef} \textcolor{keyword}{struct  }}
+\DoxyCodeLine{281 \{}
+\DoxyCodeLine{282   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t   Status;           }
+\DoxyCodeLine{284   uint32\_t   ControlBufferSize;     }
+\DoxyCodeLine{286   uint32\_t   Buffer1Addr;           }
+\DoxyCodeLine{288   uint32\_t   Buffer2NextDescAddr;   }
+\DoxyCodeLine{291   uint32\_t   ExtendedStatus;        }
+\DoxyCodeLine{293   uint32\_t   Reserved1;             }
+\DoxyCodeLine{295   uint32\_t   TimeStampLow;          }
+\DoxyCodeLine{297   uint32\_t   TimeStampHigh;         }
+\DoxyCodeLine{299 \} ETH\_DMADescTypeDef;}
+\DoxyCodeLine{300 }
+\DoxyCodeLine{301 }
+\DoxyCodeLine{305 \textcolor{keyword}{typedef} \textcolor{keyword}{struct  }}
+\DoxyCodeLine{306 \{}
+\DoxyCodeLine{307   ETH\_DMADescTypeDef *FSRxDesc;          }
+\DoxyCodeLine{309   ETH\_DMADescTypeDef *LSRxDesc;          }
+\DoxyCodeLine{311   uint32\_t  SegCount;                    }
+\DoxyCodeLine{313   uint32\_t length;                       }
+\DoxyCodeLine{315   uint32\_t buffer;                       }
+\DoxyCodeLine{317 \} ETH\_DMARxFrameInfos;}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{319 }
+\DoxyCodeLine{324 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{325 \{}
+\DoxyCodeLine{326   ETH\_TypeDef                *Instance;     }
+\DoxyCodeLine{328   ETH\_InitTypeDef            Init;          }
+\DoxyCodeLine{330   uint32\_t                   LinkStatus;    }
+\DoxyCodeLine{332   ETH\_DMADescTypeDef         *RxDesc;       }
+\DoxyCodeLine{334   ETH\_DMADescTypeDef         *TxDesc;       }
+\DoxyCodeLine{336   ETH\_DMARxFrameInfos        RxFrameInfos;  }
+\DoxyCodeLine{338   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_ETH\_StateTypeDef  State;         }
+\DoxyCodeLine{340   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}            Lock;          }
+\DoxyCodeLine{342 \} ETH\_HandleTypeDef;}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{345 }
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#define IS\_ETH\_PHY\_ADDRESS(ADDRESS) ((ADDRESS) <= 0x20)}}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348 \textcolor{comment}{/* Delay to wait when writing to some Ethernet registers */}}
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define ETH\_REG\_WRITE\_DELAY ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352 \textcolor{comment}{/* ETHERNET Errors */}}
+\DoxyCodeLine{353 \textcolor{preprocessor}{\#define  ETH\_SUCCESS            ((uint32\_t)0)}}
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#define  ETH\_ERROR              ((uint32\_t)1)}}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define ETH\_MAX\_PACKET\_SIZE    ((uint32\_t)1524)    }}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#define ETH\_HEADER               ((uint32\_t)14)    }}
+\DoxyCodeLine{361 \textcolor{preprocessor}{\#define ETH\_CRC                   ((uint32\_t)4)    }}
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#define ETH\_EXTRA                 ((uint32\_t)2)    }}
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#define VLAN\_TAG                  ((uint32\_t)4)    }}
+\DoxyCodeLine{364 \textcolor{preprocessor}{\#define MIN\_ETH\_PAYLOAD          ((uint32\_t)46)    }}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#define MAX\_ETH\_PAYLOAD        ((uint32\_t)1500)    }}
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#define JUMBO\_FRAME\_PAYLOAD    ((uint32\_t)9000)    }}
+\DoxyCodeLine{368  \textcolor{comment}{/* Ethernet driver receive buffers are organized in a chained linked-\/list, when}}
+\DoxyCodeLine{369 \textcolor{comment}{    an ethernet packet is received, the Rx-\/DMA will transfer the packet from RxFIFO}}
+\DoxyCodeLine{370 \textcolor{comment}{    to the driver receive buffers memory.}}
+\DoxyCodeLine{371 \textcolor{comment}{}}
+\DoxyCodeLine{372 \textcolor{comment}{    Depending on the size of the received ethernet packet and the size of }}
+\DoxyCodeLine{373 \textcolor{comment}{    each ethernet driver receive buffer, the received packet can take one or more}}
+\DoxyCodeLine{374 \textcolor{comment}{    ethernet driver receive buffer. }}
+\DoxyCodeLine{375 \textcolor{comment}{}}
+\DoxyCodeLine{376 \textcolor{comment}{    In below are defined the size of one ethernet driver receive buffer ETH\_RX\_BUF\_SIZE }}
+\DoxyCodeLine{377 \textcolor{comment}{    and the total count of the driver receive buffers ETH\_RXBUFNB.}}
+\DoxyCodeLine{378 \textcolor{comment}{}}
+\DoxyCodeLine{379 \textcolor{comment}{    The configured value for ETH\_RX\_BUF\_SIZE and ETH\_RXBUFNB are only provided as }}
+\DoxyCodeLine{380 \textcolor{comment}{    example, they can be reconfigured in the application layer to fit the application }}
+\DoxyCodeLine{381 \textcolor{comment}{    needs */} }
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383 \textcolor{comment}{/* Here we configure each Ethernet driver receive buffer to fit the Max size Ethernet}}
+\DoxyCodeLine{384 \textcolor{comment}{   packet */}}
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#ifndef ETH\_RX\_BUF\_SIZE}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{ \#define ETH\_RX\_BUF\_SIZE         ETH\_MAX\_PACKET\_SIZE }}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{388 }
+\DoxyCodeLine{389 \textcolor{comment}{/* 5 Ethernet driver receive buffers are used (in a chained linked list)*/} }
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#ifndef ETH\_RXBUFNB}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{ \#define ETH\_RXBUFNB             ((uint32\_t)5     }\textcolor{comment}{/*  5 Rx buffers of size ETH\_RX\_BUF\_SIZE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{394 }
+\DoxyCodeLine{395  \textcolor{comment}{/* Ethernet driver transmit buffers are organized in a chained linked-\/list, when}}
+\DoxyCodeLine{396 \textcolor{comment}{    an ethernet packet is transmitted, Tx-\/DMA will transfer the packet from the }}
+\DoxyCodeLine{397 \textcolor{comment}{    driver transmit buffers memory to the TxFIFO.}}
+\DoxyCodeLine{398 \textcolor{comment}{}}
+\DoxyCodeLine{399 \textcolor{comment}{    Depending on the size of the Ethernet packet to be transmitted and the size of }}
+\DoxyCodeLine{400 \textcolor{comment}{    each ethernet driver transmit buffer, the packet to be transmitted can take }}
+\DoxyCodeLine{401 \textcolor{comment}{    one or more ethernet driver transmit buffer. }}
+\DoxyCodeLine{402 \textcolor{comment}{}}
+\DoxyCodeLine{403 \textcolor{comment}{    In below are defined the size of one ethernet driver transmit buffer ETH\_TX\_BUF\_SIZE }}
+\DoxyCodeLine{404 \textcolor{comment}{    and the total count of the driver transmit buffers ETH\_TXBUFNB.}}
+\DoxyCodeLine{405 \textcolor{comment}{}}
+\DoxyCodeLine{406 \textcolor{comment}{    The configured value for ETH\_TX\_BUF\_SIZE and ETH\_TXBUFNB are only provided as }}
+\DoxyCodeLine{407 \textcolor{comment}{    example, they can be reconfigured in the application layer to fit the application }}
+\DoxyCodeLine{408 \textcolor{comment}{    needs */} }
+\DoxyCodeLine{409 }
+\DoxyCodeLine{410 \textcolor{comment}{/* Here we configure each Ethernet driver transmit buffer to fit the Max size Ethernet}}
+\DoxyCodeLine{411 \textcolor{comment}{   packet */}}
+\DoxyCodeLine{412 \textcolor{preprocessor}{\#ifndef ETH\_TX\_BUF\_SIZE }}
+\DoxyCodeLine{413 \textcolor{preprocessor}{ \#define ETH\_TX\_BUF\_SIZE         ETH\_MAX\_PACKET\_SIZE}}
+\DoxyCodeLine{414 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416 \textcolor{comment}{/* 5 ethernet driver transmit buffers are used (in a chained linked list)*/} }
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#ifndef ETH\_TXBUFNB}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{ \#define ETH\_TXBUFNB             ((uint32\_t)5      }\textcolor{comment}{/* 5  Tx buffers of size ETH\_TX\_BUF\_SIZE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{421 }
+\DoxyCodeLine{422 \textcolor{comment}{/*}}
+\DoxyCodeLine{423 \textcolor{comment}{   DMA Tx Desciptor}}
+\DoxyCodeLine{424 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{425 \textcolor{comment}{  TDES0 | OWN(31) | CTRL[30:26] | Reserved[25:24] | CTRL[23:20] | Reserved[19:17] | Status[16:0] |}}
+\DoxyCodeLine{426 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{427 \textcolor{comment}{  TDES1 | Reserved[31:29] | Buffer2 ByteCount[28:16] | Reserved[15:13] | Buffer1 ByteCount[12:0] |}}
+\DoxyCodeLine{428 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{429 \textcolor{comment}{  TDES2 |                         Buffer1 Address [31:0]                                         |}}
+\DoxyCodeLine{430 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{431 \textcolor{comment}{  TDES3 |                   Buffer2 Address [31:0] / Next Descriptor Address [31:0]              |}}
+\DoxyCodeLine{432 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{433 \textcolor{comment}{*/}}
+\DoxyCodeLine{434 }
+\DoxyCodeLine{438 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_OWN                     ((uint32\_t)0x80000000)  }}
+\DoxyCodeLine{439 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_IC                      ((uint32\_t)0x40000000)  }}
+\DoxyCodeLine{440 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_LS                      ((uint32\_t)0x20000000)  }}
+\DoxyCodeLine{441 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_FS                      ((uint32\_t)0x10000000)  }}
+\DoxyCodeLine{442 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_DC                      ((uint32\_t)0x08000000)  }}
+\DoxyCodeLine{443 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_DP                      ((uint32\_t)0x04000000)  }}
+\DoxyCodeLine{444 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_TTSE                    ((uint32\_t)0x02000000)  }}
+\DoxyCodeLine{445 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CIC                     ((uint32\_t)0x00C00000)  }}
+\DoxyCodeLine{446 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CIC\_BYPASS              ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{447 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CIC\_IPV4HEADER          ((uint32\_t)0x00400000)  }}
+\DoxyCodeLine{448 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CIC\_TCPUDPICMP\_SEGMENT  ((uint32\_t)0x00800000)  }}
+\DoxyCodeLine{449 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CIC\_TCPUDPICMP\_FULL     ((uint32\_t)0x00C00000)  }}
+\DoxyCodeLine{450 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_TER                     ((uint32\_t)0x00200000)  }}
+\DoxyCodeLine{451 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_TCH                     ((uint32\_t)0x00100000)  }}
+\DoxyCodeLine{452 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_TTSS                    ((uint32\_t)0x00020000)  }}
+\DoxyCodeLine{453 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_IHE                     ((uint32\_t)0x00010000)  }}
+\DoxyCodeLine{454 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_ES                      ((uint32\_t)0x00008000)  }}
+\DoxyCodeLine{455 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_JT                      ((uint32\_t)0x00004000)  }}
+\DoxyCodeLine{456 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_FF                      ((uint32\_t)0x00002000)  }}
+\DoxyCodeLine{457 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_PCE                     ((uint32\_t)0x00001000)  }}
+\DoxyCodeLine{458 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_LCA                     ((uint32\_t)0x00000800)  }}
+\DoxyCodeLine{459 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_NC                      ((uint32\_t)0x00000400)  }}
+\DoxyCodeLine{460 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_LCO                     ((uint32\_t)0x00000200)  }}
+\DoxyCodeLine{461 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_EC                      ((uint32\_t)0x00000100)  }}
+\DoxyCodeLine{462 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_VF                      ((uint32\_t)0x00000080)  }}
+\DoxyCodeLine{463 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CC                      ((uint32\_t)0x00000078)  }}
+\DoxyCodeLine{464 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_ED                      ((uint32\_t)0x00000004)  }}
+\DoxyCodeLine{465 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_UF                      ((uint32\_t)0x00000002)  }}
+\DoxyCodeLine{466 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_DB                      ((uint32\_t)0x00000001)  }}
+\DoxyCodeLine{471 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_TBS2  ((uint32\_t)0x1FFF0000)  }}
+\DoxyCodeLine{472 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_TBS1  ((uint32\_t)0x00001FFF)  }}
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_B1AP  ((uint32\_t)0xFFFFFFFF)  }}
+\DoxyCodeLine{482 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_B2AP  ((uint32\_t)0xFFFFFFFF)  }}
+\DoxyCodeLine{484   \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{485 \textcolor{comment}{  TDES6 |                         Transmit Time Stamp Low [31:0]                                 |}}
+\DoxyCodeLine{486 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{487 \textcolor{comment}{  TDES7 |                         Transmit Time Stamp High [31:0]                                |}}
+\DoxyCodeLine{488 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{489 }
+\DoxyCodeLine{490 \textcolor{comment}{/* Bit definition of TDES6 register */}}
+\DoxyCodeLine{491 \textcolor{preprocessor}{ \#define ETH\_DMAPTPTXDESC\_TTSL  ((uint32\_t)0xFFFFFFFF)  }\textcolor{comment}{/* Transmit Time Stamp Low */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{492 }
+\DoxyCodeLine{493 \textcolor{comment}{/* Bit definition of TDES7 register */}}
+\DoxyCodeLine{494 \textcolor{preprocessor}{ \#define ETH\_DMAPTPTXDESC\_TTSH  ((uint32\_t)0xFFFFFFFF)  }\textcolor{comment}{/* Transmit Time Stamp High */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{495 }
+\DoxyCodeLine{505 \textcolor{comment}{/*}}
+\DoxyCodeLine{506 \textcolor{comment}{  DMA Rx Descriptor}}
+\DoxyCodeLine{507 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{508 \textcolor{comment}{  RDES0 | OWN(31) |                                             Status [30:0]                                          |}}
+\DoxyCodeLine{509 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{510 \textcolor{comment}{  RDES1 | CTRL(31) | Reserved[30:29] | Buffer2 ByteCount[28:16] | CTRL[15:14] | Reserved(13) | Buffer1 ByteCount[12:0] |}}
+\DoxyCodeLine{511 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{512 \textcolor{comment}{  RDES2 |                                       Buffer1 Address [31:0]                                                 |}}
+\DoxyCodeLine{513 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{514 \textcolor{comment}{  RDES3 |                          Buffer2 Address [31:0] / Next Descriptor Address [31:0]                             |}}
+\DoxyCodeLine{515 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{516 \textcolor{comment}{*/}}
+\DoxyCodeLine{517 }
+\DoxyCodeLine{521 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_OWN         ((uint32\_t)0x80000000)  }}
+\DoxyCodeLine{522 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_AFM         ((uint32\_t)0x40000000)  }}
+\DoxyCodeLine{523 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_FL          ((uint32\_t)0x3FFF0000)  }}
+\DoxyCodeLine{524 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_ES          ((uint32\_t)0x00008000)  }}
+\DoxyCodeLine{525 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_DE          ((uint32\_t)0x00004000)  }}
+\DoxyCodeLine{526 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_SAF         ((uint32\_t)0x00002000)  }}
+\DoxyCodeLine{527 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_LE          ((uint32\_t)0x00001000)  }}
+\DoxyCodeLine{528 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_OE          ((uint32\_t)0x00000800)  }}
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_VLAN        ((uint32\_t)0x00000400)  }}
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_FS          ((uint32\_t)0x00000200)  }}
+\DoxyCodeLine{531 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_LS          ((uint32\_t)0x00000100)  }}
+\DoxyCodeLine{532 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_IPV4HCE     ((uint32\_t)0x00000080)  }}
+\DoxyCodeLine{533 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_LC          ((uint32\_t)0x00000040)  }}
+\DoxyCodeLine{534 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_FT          ((uint32\_t)0x00000020)  }}
+\DoxyCodeLine{535 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_RWT         ((uint32\_t)0x00000010)  }}
+\DoxyCodeLine{536 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_RE          ((uint32\_t)0x00000008)  }}
+\DoxyCodeLine{537 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_DBE         ((uint32\_t)0x00000004)  }}
+\DoxyCodeLine{538 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_CE          ((uint32\_t)0x00000002)  }}
+\DoxyCodeLine{539 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_MAMPCE      ((uint32\_t)0x00000001)  }}
+\DoxyCodeLine{544 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_DIC   ((uint32\_t)0x80000000)  }}
+\DoxyCodeLine{545 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_RBS2  ((uint32\_t)0x1FFF0000)  }}
+\DoxyCodeLine{546 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_RER   ((uint32\_t)0x00008000)  }}
+\DoxyCodeLine{547 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_RCH   ((uint32\_t)0x00004000)  }}
+\DoxyCodeLine{548 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_RBS1  ((uint32\_t)0x00001FFF)  }}
+\DoxyCodeLine{553 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_B1AP  ((uint32\_t)0xFFFFFFFF)  }}
+\DoxyCodeLine{558 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_B2AP  ((uint32\_t)0xFFFFFFFF)  }}
+\DoxyCodeLine{560 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{561 \textcolor{comment}{  RDES4 |                   Reserved[31:15]              |             Extended Status [14:0]                          |}}
+\DoxyCodeLine{562 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{563 \textcolor{comment}{  RDES5 |                                            Reserved[31:0]                                                    |}}
+\DoxyCodeLine{564 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{565 \textcolor{comment}{  RDES6 |                                       Receive Time Stamp Low [31:0]                                          |}}
+\DoxyCodeLine{566 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{567 \textcolor{comment}{  RDES7 |                                       Receive Time Stamp High [31:0]                                         |}}
+\DoxyCodeLine{568 \textcolor{comment}{  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{569 }
+\DoxyCodeLine{570 \textcolor{comment}{/* Bit definition of RDES4 register */}}
+\DoxyCodeLine{571 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_PTPV     ((uint32\_t)0x00002000)  }\textcolor{comment}{/* PTP Version */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{572 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_PTPFT    ((uint32\_t)0x00001000)  }\textcolor{comment}{/* PTP Frame Type */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{573 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_PTPMT    ((uint32\_t)0x00000F00)  }\textcolor{comment}{/* PTP Message Type */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{574 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_PTPMT\_SYNC                      ((uint32\_t)0x00000100)  }\textcolor{comment}{/* SYNC message (all clock types) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{575 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_PTPMT\_FOLLOWUP                  ((uint32\_t)0x00000200)  }\textcolor{comment}{/* FollowUp message (all clock types) */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{576 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_PTPMT\_DELAYREQ                  ((uint32\_t)0x00000300)  }\textcolor{comment}{/* DelayReq message (all clock types) */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{577 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_PTPMT\_DELAYRESP                 ((uint32\_t)0x00000400)  }\textcolor{comment}{/* DelayResp message (all clock types) */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{578 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_PTPMT\_PDELAYREQ\_ANNOUNCE        ((uint32\_t)0x00000500)  }\textcolor{comment}{/* PdelayReq message (peer-\/to-\/peer transparent clock) or Announce message (Ordinary or Boundary clock) */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{579 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_PTPMT\_PDELAYRESP\_MANAG          ((uint32\_t)0x00000600)  }\textcolor{comment}{/* PdelayResp message (peer-\/to-\/peer transparent clock) or Management message (Ordinary or Boundary clock)  */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{580 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_PTPMT\_PDELAYRESPFOLLOWUP\_SIGNAL ((uint32\_t)0x00000700)  }\textcolor{comment}{/* PdelayRespFollowUp message (peer-\/to-\/peer transparent clock) or Signaling message (Ordinary or Boundary clock) */}\textcolor{preprocessor}{           }}
+\DoxyCodeLine{581 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_IPV6PR   ((uint32\_t)0x00000080)  }\textcolor{comment}{/* IPv6 Packet Received */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{582 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_IPV4PR   ((uint32\_t)0x00000040)  }\textcolor{comment}{/* IPv4 Packet Received */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{583 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_IPCB  ((uint32\_t)0x00000020)  }\textcolor{comment}{/* IP Checksum Bypassed */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{584 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_IPPE  ((uint32\_t)0x00000010)  }\textcolor{comment}{/* IP Payload Error */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{585 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_IPHE  ((uint32\_t)0x00000008)  }\textcolor{comment}{/* IP Header Error */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{586 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_IPPT  ((uint32\_t)0x00000007)  }\textcolor{comment}{/* IP Payload Type */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{587 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_IPPT\_UDP                 ((uint32\_t)0x00000001)  }\textcolor{comment}{/* UDP payload encapsulated in the IP datagram */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{588 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_IPPT\_TCP                 ((uint32\_t)0x00000002)  }\textcolor{comment}{/* TCP payload encapsulated in the IP datagram */}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{589 \textcolor{preprocessor}{  \#define ETH\_DMAPTPRXDESC\_IPPT\_ICMP                ((uint32\_t)0x00000003)  }\textcolor{comment}{/* ICMP payload encapsulated in the IP datagram */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{590 }
+\DoxyCodeLine{591 \textcolor{comment}{/* Bit definition of RDES6 register */}}
+\DoxyCodeLine{592 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_RTSL  ((uint32\_t)0xFFFFFFFF)  }\textcolor{comment}{/* Receive Time Stamp Low */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{593 }
+\DoxyCodeLine{594 \textcolor{comment}{/* Bit definition of RDES7 register */}}
+\DoxyCodeLine{595 \textcolor{preprocessor}{\#define ETH\_DMAPTPRXDESC\_RTSH  ((uint32\_t)0xFFFFFFFF)  }\textcolor{comment}{/* Receive Time Stamp High */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{596 }
+\DoxyCodeLine{597 }
+\DoxyCodeLine{601 \textcolor{preprocessor}{\#define ETH\_AUTONEGOTIATION\_ENABLE     ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{602 \textcolor{preprocessor}{\#define ETH\_AUTONEGOTIATION\_DISABLE    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{603 \textcolor{preprocessor}{\#define IS\_ETH\_AUTONEGOTIATION(CMD) (((CMD) == ETH\_AUTONEGOTIATION\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{604 \textcolor{preprocessor}{                                     ((CMD) == ETH\_AUTONEGOTIATION\_DISABLE))}}
+\DoxyCodeLine{611 \textcolor{preprocessor}{\#define ETH\_SPEED\_10M        ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{612 \textcolor{preprocessor}{\#define ETH\_SPEED\_100M       ((uint32\_t)0x00004000)}}
+\DoxyCodeLine{613 \textcolor{preprocessor}{\#define IS\_ETH\_SPEED(SPEED) (((SPEED) == ETH\_SPEED\_10M) || \(\backslash\)}}
+\DoxyCodeLine{614 \textcolor{preprocessor}{                             ((SPEED) == ETH\_SPEED\_100M))}}
+\DoxyCodeLine{621 \textcolor{preprocessor}{\#define ETH\_MODE\_FULLDUPLEX       ((uint32\_t)0x00000800)}}
+\DoxyCodeLine{622 \textcolor{preprocessor}{\#define ETH\_MODE\_HALFDUPLEX       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{623 \textcolor{preprocessor}{\#define IS\_ETH\_DUPLEX\_MODE(MODE)  (((MODE) == ETH\_MODE\_FULLDUPLEX) || \(\backslash\)}}
+\DoxyCodeLine{624 \textcolor{preprocessor}{                                  ((MODE) == ETH\_MODE\_HALFDUPLEX))}}
+\DoxyCodeLine{631 \textcolor{preprocessor}{\#define ETH\_RXPOLLING\_MODE      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{632 \textcolor{preprocessor}{\#define ETH\_RXINTERRUPT\_MODE    ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{633 \textcolor{preprocessor}{\#define IS\_ETH\_RX\_MODE(MODE)    (((MODE) == ETH\_RXPOLLING\_MODE) || \(\backslash\)}}
+\DoxyCodeLine{634 \textcolor{preprocessor}{                                 ((MODE) == ETH\_RXINTERRUPT\_MODE))}}
+\DoxyCodeLine{642 \textcolor{preprocessor}{\#define ETH\_CHECKSUM\_BY\_HARDWARE      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{643 \textcolor{preprocessor}{\#define ETH\_CHECKSUM\_BY\_SOFTWARE      ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{644 \textcolor{preprocessor}{\#define IS\_ETH\_CHECKSUM\_MODE(MODE)    (((MODE) == ETH\_CHECKSUM\_BY\_HARDWARE) || \(\backslash\)}}
+\DoxyCodeLine{645 \textcolor{preprocessor}{                                      ((MODE) == ETH\_CHECKSUM\_BY\_SOFTWARE))}}
+\DoxyCodeLine{653 \textcolor{preprocessor}{\#define ETH\_MEDIA\_INTERFACE\_MII       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{654 \textcolor{preprocessor}{\#define ETH\_MEDIA\_INTERFACE\_RMII      ((uint32\_t)SYSCFG\_PMC\_MII\_RMII\_SEL)}}
+\DoxyCodeLine{655 \textcolor{preprocessor}{\#define IS\_ETH\_MEDIA\_INTERFACE(MODE)         (((MODE) == ETH\_MEDIA\_INTERFACE\_MII) || \(\backslash\)}}
+\DoxyCodeLine{656 \textcolor{preprocessor}{                                              ((MODE) == ETH\_MEDIA\_INTERFACE\_RMII))}}
+\DoxyCodeLine{657 }
+\DoxyCodeLine{665 \textcolor{preprocessor}{\#define ETH\_WATCHDOG\_ENABLE       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{666 \textcolor{preprocessor}{\#define ETH\_WATCHDOG\_DISABLE      ((uint32\_t)0x00800000)}}
+\DoxyCodeLine{667 \textcolor{preprocessor}{\#define IS\_ETH\_WATCHDOG(CMD) (((CMD) == ETH\_WATCHDOG\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{668 \textcolor{preprocessor}{                              ((CMD) == ETH\_WATCHDOG\_DISABLE))}}
+\DoxyCodeLine{669 }
+\DoxyCodeLine{677 \textcolor{preprocessor}{\#define ETH\_JABBER\_ENABLE    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{678 \textcolor{preprocessor}{\#define ETH\_JABBER\_DISABLE   ((uint32\_t)0x00400000)}}
+\DoxyCodeLine{679 \textcolor{preprocessor}{\#define IS\_ETH\_JABBER(CMD) (((CMD) == ETH\_JABBER\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{680 \textcolor{preprocessor}{                            ((CMD) == ETH\_JABBER\_DISABLE))}}
+\DoxyCodeLine{681 }
+\DoxyCodeLine{689 \textcolor{preprocessor}{\#define ETH\_INTERFRAMEGAP\_96BIT   ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{690 \textcolor{preprocessor}{\#define ETH\_INTERFRAMEGAP\_88BIT   ((uint32\_t)0x00020000)  }}
+\DoxyCodeLine{691 \textcolor{preprocessor}{\#define ETH\_INTERFRAMEGAP\_80BIT   ((uint32\_t)0x00040000)  }}
+\DoxyCodeLine{692 \textcolor{preprocessor}{\#define ETH\_INTERFRAMEGAP\_72BIT   ((uint32\_t)0x00060000)  }}
+\DoxyCodeLine{693 \textcolor{preprocessor}{\#define ETH\_INTERFRAMEGAP\_64BIT   ((uint32\_t)0x00080000)  }}
+\DoxyCodeLine{694 \textcolor{preprocessor}{\#define ETH\_INTERFRAMEGAP\_56BIT   ((uint32\_t)0x000A0000)  }}
+\DoxyCodeLine{695 \textcolor{preprocessor}{\#define ETH\_INTERFRAMEGAP\_48BIT   ((uint32\_t)0x000C0000)  }}
+\DoxyCodeLine{696 \textcolor{preprocessor}{\#define ETH\_INTERFRAMEGAP\_40BIT   ((uint32\_t)0x000E0000)  }}
+\DoxyCodeLine{697 \textcolor{preprocessor}{\#define IS\_ETH\_INTER\_FRAME\_GAP(GAP) (((GAP) == ETH\_INTERFRAMEGAP\_96BIT) || \(\backslash\)}}
+\DoxyCodeLine{698 \textcolor{preprocessor}{                                     ((GAP) == ETH\_INTERFRAMEGAP\_88BIT) || \(\backslash\)}}
+\DoxyCodeLine{699 \textcolor{preprocessor}{                                     ((GAP) == ETH\_INTERFRAMEGAP\_80BIT) || \(\backslash\)}}
+\DoxyCodeLine{700 \textcolor{preprocessor}{                                     ((GAP) == ETH\_INTERFRAMEGAP\_72BIT) || \(\backslash\)}}
+\DoxyCodeLine{701 \textcolor{preprocessor}{                                     ((GAP) == ETH\_INTERFRAMEGAP\_64BIT) || \(\backslash\)}}
+\DoxyCodeLine{702 \textcolor{preprocessor}{                                     ((GAP) == ETH\_INTERFRAMEGAP\_56BIT) || \(\backslash\)}}
+\DoxyCodeLine{703 \textcolor{preprocessor}{                                     ((GAP) == ETH\_INTERFRAMEGAP\_48BIT) || \(\backslash\)}}
+\DoxyCodeLine{704 \textcolor{preprocessor}{                                     ((GAP) == ETH\_INTERFRAMEGAP\_40BIT))}}
+\DoxyCodeLine{705 }
+\DoxyCodeLine{713 \textcolor{preprocessor}{\#define ETH\_CARRIERSENCE\_ENABLE   ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{714 \textcolor{preprocessor}{\#define ETH\_CARRIERSENCE\_DISABLE ((uint32\_t)0x00010000)}}
+\DoxyCodeLine{715 \textcolor{preprocessor}{\#define IS\_ETH\_CARRIER\_SENSE(CMD) (((CMD) == ETH\_CARRIERSENCE\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{716 \textcolor{preprocessor}{                                   ((CMD) == ETH\_CARRIERSENCE\_DISABLE))}}
+\DoxyCodeLine{717 }
+\DoxyCodeLine{725 \textcolor{preprocessor}{\#define ETH\_RECEIVEOWN\_ENABLE     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{726 \textcolor{preprocessor}{\#define ETH\_RECEIVEOWN\_DISABLE   ((uint32\_t)0x00002000)}}
+\DoxyCodeLine{727 \textcolor{preprocessor}{\#define IS\_ETH\_RECEIVE\_OWN(CMD) (((CMD) == ETH\_RECEIVEOWN\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{728 \textcolor{preprocessor}{                                 ((CMD) == ETH\_RECEIVEOWN\_DISABLE))}}
+\DoxyCodeLine{729 }
+\DoxyCodeLine{737 \textcolor{preprocessor}{\#define ETH\_LOOPBACKMODE\_ENABLE        ((uint32\_t)0x00001000)}}
+\DoxyCodeLine{738 \textcolor{preprocessor}{\#define ETH\_LOOPBACKMODE\_DISABLE       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{739 \textcolor{preprocessor}{\#define IS\_ETH\_LOOPBACK\_MODE(CMD) (((CMD) == ETH\_LOOPBACKMODE\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{740 \textcolor{preprocessor}{                                   ((CMD) == ETH\_LOOPBACKMODE\_DISABLE))}}
+\DoxyCodeLine{741 }
+\DoxyCodeLine{749 \textcolor{preprocessor}{\#define ETH\_CHECKSUMOFFLAOD\_ENABLE     ((uint32\_t)0x00000400)}}
+\DoxyCodeLine{750 \textcolor{preprocessor}{\#define ETH\_CHECKSUMOFFLAOD\_DISABLE    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{751 \textcolor{preprocessor}{\#define IS\_ETH\_CHECKSUM\_OFFLOAD(CMD) (((CMD) == ETH\_CHECKSUMOFFLAOD\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{752 \textcolor{preprocessor}{                                      ((CMD) == ETH\_CHECKSUMOFFLAOD\_DISABLE))}}
+\DoxyCodeLine{753 }
+\DoxyCodeLine{761 \textcolor{preprocessor}{\#define ETH\_RETRYTRANSMISSION\_ENABLE   ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{762 \textcolor{preprocessor}{\#define ETH\_RETRYTRANSMISSION\_DISABLE  ((uint32\_t)0x00000200)}}
+\DoxyCodeLine{763 \textcolor{preprocessor}{\#define IS\_ETH\_RETRY\_TRANSMISSION(CMD) (((CMD) == ETH\_RETRYTRANSMISSION\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{764 \textcolor{preprocessor}{                                        ((CMD) == ETH\_RETRYTRANSMISSION\_DISABLE))}}
+\DoxyCodeLine{765 }
+\DoxyCodeLine{773 \textcolor{preprocessor}{\#define ETH\_AUTOMATICPADCRCSTRIP\_ENABLE     ((uint32\_t)0x00000080)}}
+\DoxyCodeLine{774 \textcolor{preprocessor}{\#define ETH\_AUTOMATICPADCRCSTRIP\_DISABLE    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{775 \textcolor{preprocessor}{\#define IS\_ETH\_AUTOMATIC\_PADCRC\_STRIP(CMD) (((CMD) == ETH\_AUTOMATICPADCRCSTRIP\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{776 \textcolor{preprocessor}{                                            ((CMD) == ETH\_AUTOMATICPADCRCSTRIP\_DISABLE))}}
+\DoxyCodeLine{777 }
+\DoxyCodeLine{785 \textcolor{preprocessor}{\#define ETH\_BACKOFFLIMIT\_10  ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{786 \textcolor{preprocessor}{\#define ETH\_BACKOFFLIMIT\_8   ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{787 \textcolor{preprocessor}{\#define ETH\_BACKOFFLIMIT\_4   ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{788 \textcolor{preprocessor}{\#define ETH\_BACKOFFLIMIT\_1   ((uint32\_t)0x00000060)}}
+\DoxyCodeLine{789 \textcolor{preprocessor}{\#define IS\_ETH\_BACKOFF\_LIMIT(LIMIT) (((LIMIT) == ETH\_BACKOFFLIMIT\_10) || \(\backslash\)}}
+\DoxyCodeLine{790 \textcolor{preprocessor}{                                     ((LIMIT) == ETH\_BACKOFFLIMIT\_8) || \(\backslash\)}}
+\DoxyCodeLine{791 \textcolor{preprocessor}{                                     ((LIMIT) == ETH\_BACKOFFLIMIT\_4) || \(\backslash\)}}
+\DoxyCodeLine{792 \textcolor{preprocessor}{                                     ((LIMIT) == ETH\_BACKOFFLIMIT\_1))}}
+\DoxyCodeLine{793 }
+\DoxyCodeLine{801 \textcolor{preprocessor}{\#define ETH\_DEFFERRALCHECK\_ENABLE       ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{802 \textcolor{preprocessor}{\#define ETH\_DEFFERRALCHECK\_DISABLE      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{803 \textcolor{preprocessor}{\#define IS\_ETH\_DEFERRAL\_CHECK(CMD) (((CMD) == ETH\_DEFFERRALCHECK\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{804 \textcolor{preprocessor}{                                    ((CMD) == ETH\_DEFFERRALCHECK\_DISABLE))}}
+\DoxyCodeLine{805 }
+\DoxyCodeLine{813 \textcolor{preprocessor}{\#define ETH\_RECEIVEALL\_ENABLE     ((uint32\_t)0x80000000)}}
+\DoxyCodeLine{814 \textcolor{preprocessor}{\#define ETH\_RECEIVEAll\_DISABLE    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{815 \textcolor{preprocessor}{\#define IS\_ETH\_RECEIVE\_ALL(CMD) (((CMD) == ETH\_RECEIVEALL\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{816 \textcolor{preprocessor}{                                 ((CMD) == ETH\_RECEIVEAll\_DISABLE))}}
+\DoxyCodeLine{817 }
+\DoxyCodeLine{825 \textcolor{preprocessor}{\#define ETH\_SOURCEADDRFILTER\_NORMAL\_ENABLE       ((uint32\_t)0x00000200)}}
+\DoxyCodeLine{826 \textcolor{preprocessor}{\#define ETH\_SOURCEADDRFILTER\_INVERSE\_ENABLE      ((uint32\_t)0x00000300)}}
+\DoxyCodeLine{827 \textcolor{preprocessor}{\#define ETH\_SOURCEADDRFILTER\_DISABLE             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{828 \textcolor{preprocessor}{\#define IS\_ETH\_SOURCE\_ADDR\_FILTER(CMD) (((CMD) == ETH\_SOURCEADDRFILTER\_NORMAL\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{829 \textcolor{preprocessor}{                                        ((CMD) == ETH\_SOURCEADDRFILTER\_INVERSE\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{830 \textcolor{preprocessor}{                                        ((CMD) == ETH\_SOURCEADDRFILTER\_DISABLE))}}
+\DoxyCodeLine{831 }
+\DoxyCodeLine{839 \textcolor{preprocessor}{\#define ETH\_PASSCONTROLFRAMES\_BLOCKALL                ((uint32\_t)0x00000040)  }}
+\DoxyCodeLine{840 \textcolor{preprocessor}{\#define ETH\_PASSCONTROLFRAMES\_FORWARDALL              ((uint32\_t)0x00000080)  }}
+\DoxyCodeLine{841 \textcolor{preprocessor}{\#define ETH\_PASSCONTROLFRAMES\_FORWARDPASSEDADDRFILTER ((uint32\_t)0x000000C0)  }}
+\DoxyCodeLine{842 \textcolor{preprocessor}{\#define IS\_ETH\_CONTROL\_FRAMES(PASS) (((PASS) == ETH\_PASSCONTROLFRAMES\_BLOCKALL) || \(\backslash\)}}
+\DoxyCodeLine{843 \textcolor{preprocessor}{                                     ((PASS) == ETH\_PASSCONTROLFRAMES\_FORWARDALL) || \(\backslash\)}}
+\DoxyCodeLine{844 \textcolor{preprocessor}{                                     ((PASS) == ETH\_PASSCONTROLFRAMES\_FORWARDPASSEDADDRFILTER))}}
+\DoxyCodeLine{845 }
+\DoxyCodeLine{853 \textcolor{preprocessor}{\#define ETH\_BROADCASTFRAMESRECEPTION\_ENABLE     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{854 \textcolor{preprocessor}{\#define ETH\_BROADCASTFRAMESRECEPTION\_DISABLE    ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{855 \textcolor{preprocessor}{\#define IS\_ETH\_BROADCAST\_FRAMES\_RECEPTION(CMD) (((CMD) == ETH\_BROADCASTFRAMESRECEPTION\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{856 \textcolor{preprocessor}{                                                ((CMD) == ETH\_BROADCASTFRAMESRECEPTION\_DISABLE))}}
+\DoxyCodeLine{857 }
+\DoxyCodeLine{865 \textcolor{preprocessor}{\#define ETH\_DESTINATIONADDRFILTER\_NORMAL    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{866 \textcolor{preprocessor}{\#define ETH\_DESTINATIONADDRFILTER\_INVERSE   ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{867 \textcolor{preprocessor}{\#define IS\_ETH\_DESTINATION\_ADDR\_FILTER(FILTER) (((FILTER) == ETH\_DESTINATIONADDRFILTER\_NORMAL) || \(\backslash\)}}
+\DoxyCodeLine{868 \textcolor{preprocessor}{                                                ((FILTER) == ETH\_DESTINATIONADDRFILTER\_INVERSE))}}
+\DoxyCodeLine{869 }
+\DoxyCodeLine{877 \textcolor{preprocessor}{\#define ETH\_PROMISCIOUSMODE\_ENABLE     ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{878 \textcolor{preprocessor}{\#define ETH\_PROMISCIOUSMODE\_DISABLE    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{879 \textcolor{preprocessor}{\#define IS\_ETH\_PROMISCIOUS\_MODE(CMD) (((CMD) == ETH\_PROMISCIOUSMODE\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{880 \textcolor{preprocessor}{                                      ((CMD) == ETH\_PROMISCIOUSMODE\_DISABLE))}}
+\DoxyCodeLine{881 }
+\DoxyCodeLine{889 \textcolor{preprocessor}{\#define ETH\_MULTICASTFRAMESFILTER\_PERFECTHASHTABLE    ((uint32\_t)0x00000404)}}
+\DoxyCodeLine{890 \textcolor{preprocessor}{\#define ETH\_MULTICASTFRAMESFILTER\_HASHTABLE           ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{891 \textcolor{preprocessor}{\#define ETH\_MULTICASTFRAMESFILTER\_PERFECT             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{892 \textcolor{preprocessor}{\#define ETH\_MULTICASTFRAMESFILTER\_NONE                ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{893 \textcolor{preprocessor}{\#define IS\_ETH\_MULTICAST\_FRAMES\_FILTER(FILTER) (((FILTER) == ETH\_MULTICASTFRAMESFILTER\_PERFECTHASHTABLE) || \(\backslash\)}}
+\DoxyCodeLine{894 \textcolor{preprocessor}{                                                ((FILTER) == ETH\_MULTICASTFRAMESFILTER\_HASHTABLE) || \(\backslash\)}}
+\DoxyCodeLine{895 \textcolor{preprocessor}{                                                ((FILTER) == ETH\_MULTICASTFRAMESFILTER\_PERFECT) || \(\backslash\)}}
+\DoxyCodeLine{896 \textcolor{preprocessor}{                                                ((FILTER) == ETH\_MULTICASTFRAMESFILTER\_NONE))}}
+\DoxyCodeLine{904 \textcolor{preprocessor}{\#define ETH\_UNICASTFRAMESFILTER\_PERFECTHASHTABLE ((uint32\_t)0x00000402)}}
+\DoxyCodeLine{905 \textcolor{preprocessor}{\#define ETH\_UNICASTFRAMESFILTER\_HASHTABLE        ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{906 \textcolor{preprocessor}{\#define ETH\_UNICASTFRAMESFILTER\_PERFECT          ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{907 \textcolor{preprocessor}{\#define IS\_ETH\_UNICAST\_FRAMES\_FILTER(FILTER) (((FILTER) == ETH\_UNICASTFRAMESFILTER\_PERFECTHASHTABLE) || \(\backslash\)}}
+\DoxyCodeLine{908 \textcolor{preprocessor}{                                              ((FILTER) == ETH\_UNICASTFRAMESFILTER\_HASHTABLE) || \(\backslash\)}}
+\DoxyCodeLine{909 \textcolor{preprocessor}{                                              ((FILTER) == ETH\_UNICASTFRAMESFILTER\_PERFECT))}}
+\DoxyCodeLine{917 \textcolor{preprocessor}{\#define IS\_ETH\_PAUSE\_TIME(TIME) ((TIME) <= 0xFFFF)}}
+\DoxyCodeLine{918 }
+\DoxyCodeLine{926 \textcolor{preprocessor}{\#define ETH\_ZEROQUANTAPAUSE\_ENABLE     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{927 \textcolor{preprocessor}{\#define ETH\_ZEROQUANTAPAUSE\_DISABLE    ((uint32\_t)0x00000080)}}
+\DoxyCodeLine{928 \textcolor{preprocessor}{\#define IS\_ETH\_ZEROQUANTA\_PAUSE(CMD)   (((CMD) == ETH\_ZEROQUANTAPAUSE\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{929 \textcolor{preprocessor}{                                        ((CMD) == ETH\_ZEROQUANTAPAUSE\_DISABLE))}}
+\DoxyCodeLine{937 \textcolor{preprocessor}{\#define ETH\_PAUSELOWTHRESHOLD\_MINUS4        ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{938 \textcolor{preprocessor}{\#define ETH\_PAUSELOWTHRESHOLD\_MINUS28       ((uint32\_t)0x00000010)  }}
+\DoxyCodeLine{939 \textcolor{preprocessor}{\#define ETH\_PAUSELOWTHRESHOLD\_MINUS144      ((uint32\_t)0x00000020)  }}
+\DoxyCodeLine{940 \textcolor{preprocessor}{\#define ETH\_PAUSELOWTHRESHOLD\_MINUS256      ((uint32\_t)0x00000030)  }}
+\DoxyCodeLine{941 \textcolor{preprocessor}{\#define IS\_ETH\_PAUSE\_LOW\_THRESHOLD(THRESHOLD) (((THRESHOLD) == ETH\_PAUSELOWTHRESHOLD\_MINUS4) || \(\backslash\)}}
+\DoxyCodeLine{942 \textcolor{preprocessor}{                                               ((THRESHOLD) == ETH\_PAUSELOWTHRESHOLD\_MINUS28) || \(\backslash\)}}
+\DoxyCodeLine{943 \textcolor{preprocessor}{                                               ((THRESHOLD) == ETH\_PAUSELOWTHRESHOLD\_MINUS144) || \(\backslash\)}}
+\DoxyCodeLine{944 \textcolor{preprocessor}{                                               ((THRESHOLD) == ETH\_PAUSELOWTHRESHOLD\_MINUS256))}}
+\DoxyCodeLine{952 \textcolor{preprocessor}{\#define ETH\_UNICASTPAUSEFRAMEDETECT\_ENABLE  ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{953 \textcolor{preprocessor}{\#define ETH\_UNICASTPAUSEFRAMEDETECT\_DISABLE ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{954 \textcolor{preprocessor}{\#define IS\_ETH\_UNICAST\_PAUSE\_FRAME\_DETECT(CMD) (((CMD) == ETH\_UNICASTPAUSEFRAMEDETECT\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{955 \textcolor{preprocessor}{                                                ((CMD) == ETH\_UNICASTPAUSEFRAMEDETECT\_DISABLE))}}
+\DoxyCodeLine{963 \textcolor{preprocessor}{\#define ETH\_RECEIVEFLOWCONTROL\_ENABLE       ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{964 \textcolor{preprocessor}{\#define ETH\_RECEIVEFLOWCONTROL\_DISABLE      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{965 \textcolor{preprocessor}{\#define IS\_ETH\_RECEIVE\_FLOWCONTROL(CMD) (((CMD) == ETH\_RECEIVEFLOWCONTROL\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{966 \textcolor{preprocessor}{                                         ((CMD) == ETH\_RECEIVEFLOWCONTROL\_DISABLE))}}
+\DoxyCodeLine{974 \textcolor{preprocessor}{\#define ETH\_TRANSMITFLOWCONTROL\_ENABLE      ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{975 \textcolor{preprocessor}{\#define ETH\_TRANSMITFLOWCONTROL\_DISABLE     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{976 \textcolor{preprocessor}{\#define IS\_ETH\_TRANSMIT\_FLOWCONTROL(CMD) (((CMD) == ETH\_TRANSMITFLOWCONTROL\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{977 \textcolor{preprocessor}{                                          ((CMD) == ETH\_TRANSMITFLOWCONTROL\_DISABLE))}}
+\DoxyCodeLine{985 \textcolor{preprocessor}{\#define ETH\_VLANTAGCOMPARISON\_12BIT    ((uint32\_t)0x00010000)}}
+\DoxyCodeLine{986 \textcolor{preprocessor}{\#define ETH\_VLANTAGCOMPARISON\_16BIT    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{987 \textcolor{preprocessor}{\#define IS\_ETH\_VLAN\_TAG\_COMPARISON(COMPARISON) (((COMPARISON) == ETH\_VLANTAGCOMPARISON\_12BIT) || \(\backslash\)}}
+\DoxyCodeLine{988 \textcolor{preprocessor}{                                                ((COMPARISON) == ETH\_VLANTAGCOMPARISON\_16BIT))}}
+\DoxyCodeLine{989 \textcolor{preprocessor}{\#define IS\_ETH\_VLAN\_TAG\_IDENTIFIER(IDENTIFIER) ((IDENTIFIER) <= 0xFFFF)}}
+\DoxyCodeLine{990 }
+\DoxyCodeLine{998 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESS0     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{999 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESS1     ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{1000 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESS2     ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{1001 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESS3     ((uint32\_t)0x00000018)}}
+\DoxyCodeLine{1002 \textcolor{preprocessor}{\#define IS\_ETH\_MAC\_ADDRESS0123(ADDRESS) (((ADDRESS) == ETH\_MAC\_ADDRESS0) || \(\backslash\)}}
+\DoxyCodeLine{1003 \textcolor{preprocessor}{                                         ((ADDRESS) == ETH\_MAC\_ADDRESS1) || \(\backslash\)}}
+\DoxyCodeLine{1004 \textcolor{preprocessor}{                                         ((ADDRESS) == ETH\_MAC\_ADDRESS2) || \(\backslash\)}}
+\DoxyCodeLine{1005 \textcolor{preprocessor}{                                         ((ADDRESS) == ETH\_MAC\_ADDRESS3))}}
+\DoxyCodeLine{1006 \textcolor{preprocessor}{\#define IS\_ETH\_MAC\_ADDRESS123(ADDRESS) (((ADDRESS) == ETH\_MAC\_ADDRESS1) || \(\backslash\)}}
+\DoxyCodeLine{1007 \textcolor{preprocessor}{                                        ((ADDRESS) == ETH\_MAC\_ADDRESS2) || \(\backslash\)}}
+\DoxyCodeLine{1008 \textcolor{preprocessor}{                                        ((ADDRESS) == ETH\_MAC\_ADDRESS3))}}
+\DoxyCodeLine{1016 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESSFILTER\_SA       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{1017 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESSFILTER\_DA       ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{1018 \textcolor{preprocessor}{\#define IS\_ETH\_MAC\_ADDRESS\_FILTER(FILTER) (((FILTER) == ETH\_MAC\_ADDRESSFILTER\_SA) || \(\backslash\)}}
+\DoxyCodeLine{1019 \textcolor{preprocessor}{                                           ((FILTER) == ETH\_MAC\_ADDRESSFILTER\_DA))}}
+\DoxyCodeLine{1027 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESSMASK\_BYTE6      ((uint32\_t)0x20000000)  }}
+\DoxyCodeLine{1028 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESSMASK\_BYTE5      ((uint32\_t)0x10000000)  }}
+\DoxyCodeLine{1029 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESSMASK\_BYTE4      ((uint32\_t)0x08000000)  }}
+\DoxyCodeLine{1030 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESSMASK\_BYTE3      ((uint32\_t)0x04000000)  }}
+\DoxyCodeLine{1031 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESSMASK\_BYTE2      ((uint32\_t)0x02000000)  }}
+\DoxyCodeLine{1032 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDRESSMASK\_BYTE1      ((uint32\_t)0x01000000)  }}
+\DoxyCodeLine{1033 \textcolor{preprocessor}{\#define IS\_ETH\_MAC\_ADDRESS\_MASK(MASK) (((MASK) == ETH\_MAC\_ADDRESSMASK\_BYTE6) || \(\backslash\)}}
+\DoxyCodeLine{1034 \textcolor{preprocessor}{                                       ((MASK) == ETH\_MAC\_ADDRESSMASK\_BYTE5) || \(\backslash\)}}
+\DoxyCodeLine{1035 \textcolor{preprocessor}{                                       ((MASK) == ETH\_MAC\_ADDRESSMASK\_BYTE4) || \(\backslash\)}}
+\DoxyCodeLine{1036 \textcolor{preprocessor}{                                       ((MASK) == ETH\_MAC\_ADDRESSMASK\_BYTE3) || \(\backslash\)}}
+\DoxyCodeLine{1037 \textcolor{preprocessor}{                                       ((MASK) == ETH\_MAC\_ADDRESSMASK\_BYTE2) || \(\backslash\)}}
+\DoxyCodeLine{1038 \textcolor{preprocessor}{                                       ((MASK) == ETH\_MAC\_ADDRESSMASK\_BYTE1))}}
+\DoxyCodeLine{1039 }
+\DoxyCodeLine{1047 \textcolor{preprocessor}{\#define ETH\_MAC\_TXFIFO\_FULL          ((uint32\_t)0x02000000)  }\textcolor{comment}{/* Tx FIFO full */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1048 }
+\DoxyCodeLine{1049 \textcolor{preprocessor}{\#define ETH\_MAC\_TXFIFONOT\_EMPTY      ((uint32\_t)0x01000000)  }\textcolor{comment}{/* Tx FIFO not empty */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1050 }
+\DoxyCodeLine{1051 \textcolor{preprocessor}{\#define ETH\_MAC\_TXFIFO\_WRITE\_ACTIVE  ((uint32\_t)0x00400000)  }\textcolor{comment}{/* Tx FIFO write active */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1052 }
+\DoxyCodeLine{1053 \textcolor{preprocessor}{\#define ETH\_MAC\_TXFIFO\_IDLE     ((uint32\_t)0x00000000)  }\textcolor{comment}{/* Tx FIFO read status: Idle */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1054 \textcolor{preprocessor}{\#define ETH\_MAC\_TXFIFO\_READ     ((uint32\_t)0x00100000)  }\textcolor{comment}{/* Tx FIFO read status: Read (transferring data to the MAC transmitter) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1055 \textcolor{preprocessor}{\#define ETH\_MAC\_TXFIFO\_WAITING  ((uint32\_t)0x00200000)  }\textcolor{comment}{/* Tx FIFO read status: Waiting for TxStatus from MAC transmitter */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1056 \textcolor{preprocessor}{\#define ETH\_MAC\_TXFIFO\_WRITING  ((uint32\_t)0x00300000)  }\textcolor{comment}{/* Tx FIFO read status: Writing the received TxStatus or flushing the TxFIFO */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1057 }
+\DoxyCodeLine{1058 \textcolor{preprocessor}{\#define ETH\_MAC\_TRANSMISSION\_PAUSE     ((uint32\_t)0x00080000)  }\textcolor{comment}{/* MAC transmitter in pause */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1059 }
+\DoxyCodeLine{1060 \textcolor{preprocessor}{\#define ETH\_MAC\_TRANSMITFRAMECONTROLLER\_IDLE            ((uint32\_t)0x00000000)  }\textcolor{comment}{/* MAC transmit frame controller: Idle */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1061 \textcolor{preprocessor}{\#define ETH\_MAC\_TRANSMITFRAMECONTROLLER\_WAITING         ((uint32\_t)0x00020000)  }\textcolor{comment}{/* MAC transmit frame controller: Waiting for Status of previous frame or IFG/backoff period to be over */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1062 \textcolor{preprocessor}{\#define ETH\_MAC\_TRANSMITFRAMECONTROLLER\_GENRATING\_PCF   ((uint32\_t)0x00040000)  }\textcolor{comment}{/* MAC transmit frame controller: Generating and transmitting a Pause control frame (in full duplex mode) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1063 \textcolor{preprocessor}{\#define ETH\_MAC\_TRANSMITFRAMECONTROLLER\_TRANSFERRING    ((uint32\_t)0x00060000)  }\textcolor{comment}{/* MAC transmit frame controller: Transferring input frame for transmission */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1064 }
+\DoxyCodeLine{1065 \textcolor{preprocessor}{\#define ETH\_MAC\_MII\_TRANSMIT\_ACTIVE      ((uint32\_t)0x00010000)  }\textcolor{comment}{/* MAC MII transmit engine active */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1066 }
+\DoxyCodeLine{1067 \textcolor{preprocessor}{\#define ETH\_MAC\_RXFIFO\_EMPTY             ((uint32\_t)0x00000000)  }\textcolor{comment}{/* Rx FIFO fill level: empty */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1068 \textcolor{preprocessor}{\#define ETH\_MAC\_RXFIFO\_BELOW\_THRESHOLD   ((uint32\_t)0x00000100)  }\textcolor{comment}{/* Rx FIFO fill level: fill-\/level below flow-\/control de-\/activate threshold */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1069 \textcolor{preprocessor}{\#define ETH\_MAC\_RXFIFO\_ABOVE\_THRESHOLD   ((uint32\_t)0x00000200)  }\textcolor{comment}{/* Rx FIFO fill level: fill-\/level above flow-\/control activate threshold */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1070 \textcolor{preprocessor}{\#define ETH\_MAC\_RXFIFO\_FULL              ((uint32\_t)0x00000300)  }\textcolor{comment}{/* Rx FIFO fill level: full */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1071 }
+\DoxyCodeLine{1072 \textcolor{preprocessor}{\#define ETH\_MAC\_READCONTROLLER\_IDLE            ((uint32\_t)0x00000060)  }\textcolor{comment}{/* Rx FIFO read controller IDLE state */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1073 \textcolor{preprocessor}{\#define ETH\_MAC\_READCONTROLLER\_READING\_DATA    ((uint32\_t)0x00000060)  }\textcolor{comment}{/* Rx FIFO read controller Reading frame data */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1074 \textcolor{preprocessor}{\#define ETH\_MAC\_READCONTROLLER\_READING\_STATUS  ((uint32\_t)0x00000060)  }\textcolor{comment}{/* Rx FIFO read controller Reading frame status (or time-\/stamp) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1075 \textcolor{preprocessor}{\#define ETH\_MAC\_READCONTROLLER\_ FLUSHING       ((uint32\_t)0x00000060)  }\textcolor{comment}{/* Rx FIFO read controller Flushing the frame data and status */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1076 }
+\DoxyCodeLine{1077 \textcolor{preprocessor}{\#define ETH\_MAC\_RXFIFO\_WRITE\_ACTIVE     ((uint32\_t)0x00000010)  }\textcolor{comment}{/* Rx FIFO write controller active */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1078 }
+\DoxyCodeLine{1079 \textcolor{preprocessor}{\#define ETH\_MAC\_SMALL\_FIFO\_NOTACTIVE    ((uint32\_t)0x00000000)  }\textcolor{comment}{/* MAC small FIFO read / write controllers not active */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1080 \textcolor{preprocessor}{\#define ETH\_MAC\_SMALL\_FIFO\_READ\_ACTIVE  ((uint32\_t)0x00000002)  }\textcolor{comment}{/* MAC small FIFO read controller active */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1081 \textcolor{preprocessor}{\#define ETH\_MAC\_SMALL\_FIFO\_WRITE\_ACTIVE ((uint32\_t)0x00000004)  }\textcolor{comment}{/* MAC small FIFO write controller active */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1082 \textcolor{preprocessor}{\#define ETH\_MAC\_SMALL\_FIFO\_RW\_ACTIVE    ((uint32\_t)0x00000006)  }\textcolor{comment}{/* MAC small FIFO read / write controllers active */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1083 }
+\DoxyCodeLine{1084 \textcolor{preprocessor}{\#define ETH\_MAC\_MII\_RECEIVE\_PROTOCOL\_AVTIVE   ((uint32\_t)0x00000001)  }\textcolor{comment}{/* MAC MII receive protocol engine active */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1085 }
+\DoxyCodeLine{1093 \textcolor{preprocessor}{\#define ETH\_DROPTCPIPCHECKSUMERRORFRAME\_ENABLE   ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{1094 \textcolor{preprocessor}{\#define ETH\_DROPTCPIPCHECKSUMERRORFRAME\_DISABLE  ((uint32\_t)0x04000000)}}
+\DoxyCodeLine{1095 \textcolor{preprocessor}{\#define IS\_ETH\_DROP\_TCPIP\_CHECKSUM\_FRAME(CMD) (((CMD) == ETH\_DROPTCPIPCHECKSUMERRORFRAME\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1096 \textcolor{preprocessor}{                                               ((CMD) == ETH\_DROPTCPIPCHECKSUMERRORFRAME\_DISABLE))}}
+\DoxyCodeLine{1104 \textcolor{preprocessor}{\#define ETH\_RECEIVESTOREFORWARD\_ENABLE      ((uint32\_t)0x02000000)}}
+\DoxyCodeLine{1105 \textcolor{preprocessor}{\#define ETH\_RECEIVESTOREFORWARD\_DISABLE     ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{1106 \textcolor{preprocessor}{\#define IS\_ETH\_RECEIVE\_STORE\_FORWARD(CMD) (((CMD) == ETH\_RECEIVESTOREFORWARD\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1107 \textcolor{preprocessor}{                                           ((CMD) == ETH\_RECEIVESTOREFORWARD\_DISABLE))}}
+\DoxyCodeLine{1115 \textcolor{preprocessor}{\#define ETH\_FLUSHRECEIVEDFRAME\_ENABLE       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{1116 \textcolor{preprocessor}{\#define ETH\_FLUSHRECEIVEDFRAME\_DISABLE      ((uint32\_t)0x01000000)}}
+\DoxyCodeLine{1117 \textcolor{preprocessor}{\#define IS\_ETH\_FLUSH\_RECEIVE\_FRAME(CMD) (((CMD) == ETH\_FLUSHRECEIVEDFRAME\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1118 \textcolor{preprocessor}{                                         ((CMD) == ETH\_FLUSHRECEIVEDFRAME\_DISABLE))}}
+\DoxyCodeLine{1126 \textcolor{preprocessor}{\#define ETH\_TRANSMITSTOREFORWARD\_ENABLE     ((uint32\_t)0x00200000)}}
+\DoxyCodeLine{1127 \textcolor{preprocessor}{\#define ETH\_TRANSMITSTOREFORWARD\_DISABLE    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{1128 \textcolor{preprocessor}{\#define IS\_ETH\_TRANSMIT\_STORE\_FORWARD(CMD) (((CMD) == ETH\_TRANSMITSTOREFORWARD\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1129 \textcolor{preprocessor}{                                            ((CMD) == ETH\_TRANSMITSTOREFORWARD\_DISABLE))}}
+\DoxyCodeLine{1137 \textcolor{preprocessor}{\#define ETH\_TRANSMITTHRESHOLDCONTROL\_64BYTES     ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{1138 \textcolor{preprocessor}{\#define ETH\_TRANSMITTHRESHOLDCONTROL\_128BYTES    ((uint32\_t)0x00004000)  }}
+\DoxyCodeLine{1139 \textcolor{preprocessor}{\#define ETH\_TRANSMITTHRESHOLDCONTROL\_192BYTES    ((uint32\_t)0x00008000)  }}
+\DoxyCodeLine{1140 \textcolor{preprocessor}{\#define ETH\_TRANSMITTHRESHOLDCONTROL\_256BYTES    ((uint32\_t)0x0000C000)  }}
+\DoxyCodeLine{1141 \textcolor{preprocessor}{\#define ETH\_TRANSMITTHRESHOLDCONTROL\_40BYTES     ((uint32\_t)0x00010000)  }}
+\DoxyCodeLine{1142 \textcolor{preprocessor}{\#define ETH\_TRANSMITTHRESHOLDCONTROL\_32BYTES     ((uint32\_t)0x00014000)  }}
+\DoxyCodeLine{1143 \textcolor{preprocessor}{\#define ETH\_TRANSMITTHRESHOLDCONTROL\_24BYTES     ((uint32\_t)0x00018000)  }}
+\DoxyCodeLine{1144 \textcolor{preprocessor}{\#define ETH\_TRANSMITTHRESHOLDCONTROL\_16BYTES     ((uint32\_t)0x0001C000)  }}
+\DoxyCodeLine{1145 \textcolor{preprocessor}{\#define IS\_ETH\_TRANSMIT\_THRESHOLD\_CONTROL(THRESHOLD) (((THRESHOLD) == ETH\_TRANSMITTHRESHOLDCONTROL\_64BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1146 \textcolor{preprocessor}{                                                      ((THRESHOLD) == ETH\_TRANSMITTHRESHOLDCONTROL\_128BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1147 \textcolor{preprocessor}{                                                      ((THRESHOLD) == ETH\_TRANSMITTHRESHOLDCONTROL\_192BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1148 \textcolor{preprocessor}{                                                      ((THRESHOLD) == ETH\_TRANSMITTHRESHOLDCONTROL\_256BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1149 \textcolor{preprocessor}{                                                      ((THRESHOLD) == ETH\_TRANSMITTHRESHOLDCONTROL\_40BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1150 \textcolor{preprocessor}{                                                      ((THRESHOLD) == ETH\_TRANSMITTHRESHOLDCONTROL\_32BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1151 \textcolor{preprocessor}{                                                      ((THRESHOLD) == ETH\_TRANSMITTHRESHOLDCONTROL\_24BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1152 \textcolor{preprocessor}{                                                      ((THRESHOLD) == ETH\_TRANSMITTHRESHOLDCONTROL\_16BYTES))}}
+\DoxyCodeLine{1160 \textcolor{preprocessor}{\#define ETH\_FORWARDERRORFRAMES\_ENABLE       ((uint32\_t)0x00000080)}}
+\DoxyCodeLine{1161 \textcolor{preprocessor}{\#define ETH\_FORWARDERRORFRAMES\_DISABLE      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{1162 \textcolor{preprocessor}{\#define IS\_ETH\_FORWARD\_ERROR\_FRAMES(CMD) (((CMD) == ETH\_FORWARDERRORFRAMES\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1163 \textcolor{preprocessor}{                                          ((CMD) == ETH\_FORWARDERRORFRAMES\_DISABLE))}}
+\DoxyCodeLine{1171 \textcolor{preprocessor}{\#define ETH\_FORWARDUNDERSIZEDGOODFRAMES\_ENABLE   ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{1172 \textcolor{preprocessor}{\#define ETH\_FORWARDUNDERSIZEDGOODFRAMES\_DISABLE  ((uint32\_t)0x00000000)     }}
+\DoxyCodeLine{1173 \textcolor{preprocessor}{\#define IS\_ETH\_FORWARD\_UNDERSIZED\_GOOD\_FRAMES(CMD) (((CMD) == ETH\_FORWARDUNDERSIZEDGOODFRAMES\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1174 \textcolor{preprocessor}{                                                    ((CMD) == ETH\_FORWARDUNDERSIZEDGOODFRAMES\_DISABLE))}}
+\DoxyCodeLine{1175 }
+\DoxyCodeLine{1183 \textcolor{preprocessor}{\#define ETH\_RECEIVEDTHRESHOLDCONTROL\_64BYTES      ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{1184 \textcolor{preprocessor}{\#define ETH\_RECEIVEDTHRESHOLDCONTROL\_32BYTES      ((uint32\_t)0x00000008)  }}
+\DoxyCodeLine{1185 \textcolor{preprocessor}{\#define ETH\_RECEIVEDTHRESHOLDCONTROL\_96BYTES      ((uint32\_t)0x00000010)  }}
+\DoxyCodeLine{1186 \textcolor{preprocessor}{\#define ETH\_RECEIVEDTHRESHOLDCONTROL\_128BYTES     ((uint32\_t)0x00000018)  }}
+\DoxyCodeLine{1187 \textcolor{preprocessor}{\#define IS\_ETH\_RECEIVE\_THRESHOLD\_CONTROL(THRESHOLD) (((THRESHOLD) == ETH\_RECEIVEDTHRESHOLDCONTROL\_64BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1188 \textcolor{preprocessor}{                                                     ((THRESHOLD) == ETH\_RECEIVEDTHRESHOLDCONTROL\_32BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1189 \textcolor{preprocessor}{                                                     ((THRESHOLD) == ETH\_RECEIVEDTHRESHOLDCONTROL\_96BYTES) || \(\backslash\)}}
+\DoxyCodeLine{1190 \textcolor{preprocessor}{                                                     ((THRESHOLD) == ETH\_RECEIVEDTHRESHOLDCONTROL\_128BYTES))}}
+\DoxyCodeLine{1198 \textcolor{preprocessor}{\#define ETH\_SECONDFRAMEOPERARTE\_ENABLE       ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{1199 \textcolor{preprocessor}{\#define ETH\_SECONDFRAMEOPERARTE\_DISABLE      ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{1200 \textcolor{preprocessor}{\#define IS\_ETH\_SECOND\_FRAME\_OPERATE(CMD) (((CMD) == ETH\_SECONDFRAMEOPERARTE\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1201 \textcolor{preprocessor}{                                          ((CMD) == ETH\_SECONDFRAMEOPERARTE\_DISABLE))}}
+\DoxyCodeLine{1202 }
+\DoxyCodeLine{1210 \textcolor{preprocessor}{\#define ETH\_ADDRESSALIGNEDBEATS\_ENABLE      ((uint32\_t)0x02000000)}}
+\DoxyCodeLine{1211 \textcolor{preprocessor}{\#define ETH\_ADDRESSALIGNEDBEATS\_DISABLE     ((uint32\_t)0x00000000) }}
+\DoxyCodeLine{1212 \textcolor{preprocessor}{\#define IS\_ETH\_ADDRESS\_ALIGNED\_BEATS(CMD) (((CMD) == ETH\_ADDRESSALIGNEDBEATS\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1213 \textcolor{preprocessor}{                                           ((CMD) == ETH\_ADDRESSALIGNEDBEATS\_DISABLE))}}
+\DoxyCodeLine{1214 }
+\DoxyCodeLine{1222 \textcolor{preprocessor}{\#define ETH\_FIXEDBURST\_ENABLE     ((uint32\_t)0x00010000)}}
+\DoxyCodeLine{1223 \textcolor{preprocessor}{\#define ETH\_FIXEDBURST\_DISABLE    ((uint32\_t)0x00000000) }}
+\DoxyCodeLine{1224 \textcolor{preprocessor}{\#define IS\_ETH\_FIXED\_BURST(CMD) (((CMD) == ETH\_FIXEDBURST\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1225 \textcolor{preprocessor}{                                 ((CMD) == ETH\_FIXEDBURST\_DISABLE))}}
+\DoxyCodeLine{1226 }
+\DoxyCodeLine{1234 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_1BEAT          ((uint32\_t)0x00020000)  }}
+\DoxyCodeLine{1235 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_2BEAT          ((uint32\_t)0x00040000)  }}
+\DoxyCodeLine{1236 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_4BEAT          ((uint32\_t)0x00080000)  }}
+\DoxyCodeLine{1237 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_8BEAT          ((uint32\_t)0x00100000)  }}
+\DoxyCodeLine{1238 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_16BEAT         ((uint32\_t)0x00200000)  }}
+\DoxyCodeLine{1239 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_32BEAT         ((uint32\_t)0x00400000)  }}
+\DoxyCodeLine{1240 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_4XPBL\_4BEAT    ((uint32\_t)0x01020000)  }}
+\DoxyCodeLine{1241 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_4XPBL\_8BEAT    ((uint32\_t)0x01040000)  }}
+\DoxyCodeLine{1242 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_4XPBL\_16BEAT   ((uint32\_t)0x01080000)  }}
+\DoxyCodeLine{1243 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_4XPBL\_32BEAT   ((uint32\_t)0x01100000)  }}
+\DoxyCodeLine{1244 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_4XPBL\_64BEAT   ((uint32\_t)0x01200000)  }}
+\DoxyCodeLine{1245 \textcolor{preprocessor}{\#define ETH\_RXDMABURSTLENGTH\_4XPBL\_128BEAT  ((uint32\_t)0x01400000)  }}
+\DoxyCodeLine{1247 \textcolor{preprocessor}{\#define IS\_ETH\_RXDMA\_BURST\_LENGTH(LENGTH) (((LENGTH) == ETH\_RXDMABURSTLENGTH\_1BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1248 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_2BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1249 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_4BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1250 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_8BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1251 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_16BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1252 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_32BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1253 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_4XPBL\_4BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1254 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_4XPBL\_8BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1255 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_4XPBL\_16BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1256 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_4XPBL\_32BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1257 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_4XPBL\_64BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1258 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_RXDMABURSTLENGTH\_4XPBL\_128BEAT))}}
+\DoxyCodeLine{1259  }
+\DoxyCodeLine{1267 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_1BEAT          ((uint32\_t)0x00000100)  }}
+\DoxyCodeLine{1268 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_2BEAT          ((uint32\_t)0x00000200)  }}
+\DoxyCodeLine{1269 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_4BEAT          ((uint32\_t)0x00000400)  }}
+\DoxyCodeLine{1270 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_8BEAT          ((uint32\_t)0x00000800)  }}
+\DoxyCodeLine{1271 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_16BEAT         ((uint32\_t)0x00001000)  }}
+\DoxyCodeLine{1272 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_32BEAT         ((uint32\_t)0x00002000)  }}
+\DoxyCodeLine{1273 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_4XPBL\_4BEAT    ((uint32\_t)0x01000100)  }}
+\DoxyCodeLine{1274 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_4XPBL\_8BEAT    ((uint32\_t)0x01000200)  }}
+\DoxyCodeLine{1275 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_4XPBL\_16BEAT   ((uint32\_t)0x01000400)  }}
+\DoxyCodeLine{1276 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_4XPBL\_32BEAT   ((uint32\_t)0x01000800)  }}
+\DoxyCodeLine{1277 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_4XPBL\_64BEAT   ((uint32\_t)0x01001000)  }}
+\DoxyCodeLine{1278 \textcolor{preprocessor}{\#define ETH\_TXDMABURSTLENGTH\_4XPBL\_128BEAT  ((uint32\_t)0x01002000)  }}
+\DoxyCodeLine{1280 \textcolor{preprocessor}{\#define IS\_ETH\_TXDMA\_BURST\_LENGTH(LENGTH) (((LENGTH) == ETH\_TXDMABURSTLENGTH\_1BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1281 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_2BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1282 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_4BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1283 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_8BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1284 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_16BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1285 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_32BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1286 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_4XPBL\_4BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1287 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_4XPBL\_8BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1288 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_4XPBL\_16BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1289 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_4XPBL\_32BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1290 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_4XPBL\_64BEAT) || \(\backslash\)}}
+\DoxyCodeLine{1291 \textcolor{preprocessor}{                                           ((LENGTH) == ETH\_TXDMABURSTLENGTH\_4XPBL\_128BEAT))}}
+\DoxyCodeLine{1292 }
+\DoxyCodeLine{1296 \textcolor{preprocessor}{\#define ETH\_DMAENHANCEDDESCRIPTOR\_ENABLE              ((uint32\_t)0x00000080)}}
+\DoxyCodeLine{1297 \textcolor{preprocessor}{\#define ETH\_DMAENHANCEDDESCRIPTOR\_DISABLE             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{1298 }
+\DoxyCodeLine{1299 \textcolor{preprocessor}{\#define IS\_ETH\_ENHANCED\_DESCRIPTOR\_FORMAT(CMD) (((CMD) == ETH\_DMAENHANCEDDESCRIPTOR\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{1300 \textcolor{preprocessor}{                                                ((CMD) == ETH\_DMAENHANCEDDESCRIPTOR\_DISABLE))}}
+\DoxyCodeLine{1301 }
+\DoxyCodeLine{1309 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_DESC\_SKIP\_LENGTH(LENGTH) ((LENGTH) <= 0x1F)}}
+\DoxyCodeLine{1310 }
+\DoxyCodeLine{1311 }
+\DoxyCodeLine{1315 \textcolor{preprocessor}{\#define ETH\_DMAARBITRATION\_ROUNDROBIN\_RXTX\_1\_1   ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{1316 \textcolor{preprocessor}{\#define ETH\_DMAARBITRATION\_ROUNDROBIN\_RXTX\_2\_1   ((uint32\_t)0x00004000)}}
+\DoxyCodeLine{1317 \textcolor{preprocessor}{\#define ETH\_DMAARBITRATION\_ROUNDROBIN\_RXTX\_3\_1   ((uint32\_t)0x00008000)}}
+\DoxyCodeLine{1318 \textcolor{preprocessor}{\#define ETH\_DMAARBITRATION\_ROUNDROBIN\_RXTX\_4\_1   ((uint32\_t)0x0000C000)}}
+\DoxyCodeLine{1319 \textcolor{preprocessor}{\#define ETH\_DMAARBITRATION\_RXPRIORTX             ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{1320 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_ARBITRATION\_ROUNDROBIN\_RXTX(RATIO) (((RATIO) == ETH\_DMAARBITRATION\_ROUNDROBIN\_RXTX\_1\_1) || \(\backslash\)}}
+\DoxyCodeLine{1321 \textcolor{preprocessor}{                                                       ((RATIO) == ETH\_DMAARBITRATION\_ROUNDROBIN\_RXTX\_2\_1) || \(\backslash\)}}
+\DoxyCodeLine{1322 \textcolor{preprocessor}{                                                       ((RATIO) == ETH\_DMAARBITRATION\_ROUNDROBIN\_RXTX\_3\_1) || \(\backslash\)}}
+\DoxyCodeLine{1323 \textcolor{preprocessor}{                                                       ((RATIO) == ETH\_DMAARBITRATION\_ROUNDROBIN\_RXTX\_4\_1) || \(\backslash\)}}
+\DoxyCodeLine{1324 \textcolor{preprocessor}{                                                       ((RATIO) == ETH\_DMAARBITRATION\_RXPRIORTX))}}
+\DoxyCodeLine{1332 \textcolor{preprocessor}{\#define IS\_ETH\_DMATXDESC\_GET\_FLAG(FLAG) (((FLAG) == ETH\_DMATXDESC\_OWN) || \(\backslash\)}}
+\DoxyCodeLine{1333 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_IC) || \(\backslash\)}}
+\DoxyCodeLine{1334 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_LS) || \(\backslash\)}}
+\DoxyCodeLine{1335 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_FS) || \(\backslash\)}}
+\DoxyCodeLine{1336 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_DC) || \(\backslash\)}}
+\DoxyCodeLine{1337 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_DP) || \(\backslash\)}}
+\DoxyCodeLine{1338 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_TTSE) || \(\backslash\)}}
+\DoxyCodeLine{1339 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_TER) || \(\backslash\)}}
+\DoxyCodeLine{1340 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_TCH) || \(\backslash\)}}
+\DoxyCodeLine{1341 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_TTSS) || \(\backslash\)}}
+\DoxyCodeLine{1342 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_IHE) || \(\backslash\)}}
+\DoxyCodeLine{1343 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_ES) || \(\backslash\)}}
+\DoxyCodeLine{1344 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_JT) || \(\backslash\)}}
+\DoxyCodeLine{1345 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_FF) || \(\backslash\)}}
+\DoxyCodeLine{1346 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_PCE) || \(\backslash\)}}
+\DoxyCodeLine{1347 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_LCA) || \(\backslash\)}}
+\DoxyCodeLine{1348 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_NC) || \(\backslash\)}}
+\DoxyCodeLine{1349 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_LCO) || \(\backslash\)}}
+\DoxyCodeLine{1350 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_EC) || \(\backslash\)}}
+\DoxyCodeLine{1351 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_VF) || \(\backslash\)}}
+\DoxyCodeLine{1352 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_CC) || \(\backslash\)}}
+\DoxyCodeLine{1353 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_ED) || \(\backslash\)}}
+\DoxyCodeLine{1354 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_UF) || \(\backslash\)}}
+\DoxyCodeLine{1355 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMATXDESC\_DB))}}
+\DoxyCodeLine{1356 }
+\DoxyCodeLine{1364 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_LASTSEGMENTS      ((uint32\_t)0x40000000)  }}
+\DoxyCodeLine{1365 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_FIRSTSEGMENT      ((uint32\_t)0x20000000)  }}
+\DoxyCodeLine{1366 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_TXDESC\_SEGMENT(SEGMENT) (((SEGMENT) == ETH\_DMATXDESC\_LASTSEGMENTS) || \(\backslash\)}}
+\DoxyCodeLine{1367 \textcolor{preprocessor}{                                            ((SEGMENT) == ETH\_DMATXDESC\_FIRSTSEGMENT))}}
+\DoxyCodeLine{1368 }
+\DoxyCodeLine{1376 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CHECKSUMBYPASS             ((uint32\_t)0x00000000)   }}
+\DoxyCodeLine{1377 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CHECKSUMIPV4HEADER         ((uint32\_t)0x00400000)   }}
+\DoxyCodeLine{1378 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CHECKSUMTCPUDPICMPSEGMENT  ((uint32\_t)0x00800000)   }}
+\DoxyCodeLine{1379 \textcolor{preprocessor}{\#define ETH\_DMATXDESC\_CHECKSUMTCPUDPICMPFULL     ((uint32\_t)0x00C00000)   }}
+\DoxyCodeLine{1380 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_TXDESC\_CHECKSUM(CHECKSUM) (((CHECKSUM) == ETH\_DMATXDESC\_CHECKSUMBYPASS) || \(\backslash\)}}
+\DoxyCodeLine{1381 \textcolor{preprocessor}{                                              ((CHECKSUM) == ETH\_DMATXDESC\_CHECKSUMIPV4HEADER) || \(\backslash\)}}
+\DoxyCodeLine{1382 \textcolor{preprocessor}{                                              ((CHECKSUM) == ETH\_DMATXDESC\_CHECKSUMTCPUDPICMPSEGMENT) || \(\backslash\)}}
+\DoxyCodeLine{1383 \textcolor{preprocessor}{                                              ((CHECKSUM) == ETH\_DMATXDESC\_CHECKSUMTCPUDPICMPFULL))}}
+\DoxyCodeLine{1387 \textcolor{preprocessor}{\#define IS\_ETH\_DMATXDESC\_BUFFER\_SIZE(SIZE) ((SIZE) <= 0x1FFF)}}
+\DoxyCodeLine{1388 }
+\DoxyCodeLine{1396 \textcolor{preprocessor}{\#define IS\_ETH\_DMARXDESC\_GET\_FLAG(FLAG) (((FLAG) == ETH\_DMARXDESC\_OWN) || \(\backslash\)}}
+\DoxyCodeLine{1397 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_AFM) || \(\backslash\)}}
+\DoxyCodeLine{1398 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_ES) || \(\backslash\)}}
+\DoxyCodeLine{1399 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_DE) || \(\backslash\)}}
+\DoxyCodeLine{1400 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_SAF) || \(\backslash\)}}
+\DoxyCodeLine{1401 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_LE) || \(\backslash\)}}
+\DoxyCodeLine{1402 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_OE) || \(\backslash\)}}
+\DoxyCodeLine{1403 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_VLAN) || \(\backslash\)}}
+\DoxyCodeLine{1404 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_FS) || \(\backslash\)}}
+\DoxyCodeLine{1405 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_LS) || \(\backslash\)}}
+\DoxyCodeLine{1406 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_IPV4HCE) || \(\backslash\)}}
+\DoxyCodeLine{1407 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_LC) || \(\backslash\)}}
+\DoxyCodeLine{1408 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_FT) || \(\backslash\)}}
+\DoxyCodeLine{1409 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_RWT) || \(\backslash\)}}
+\DoxyCodeLine{1410 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_RE) || \(\backslash\)}}
+\DoxyCodeLine{1411 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_DBE) || \(\backslash\)}}
+\DoxyCodeLine{1412 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_CE) || \(\backslash\)}}
+\DoxyCodeLine{1413 \textcolor{preprocessor}{                                         ((FLAG) == ETH\_DMARXDESC\_MAMPCE))}}
+\DoxyCodeLine{1414 }
+\DoxyCodeLine{1415 \textcolor{comment}{/* ETHERNET DMA PTP Rx descriptor extended flags  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1416 \textcolor{preprocessor}{\#define IS\_ETH\_DMAPTPRXDESC\_GET\_EXTENDED\_FLAG(FLAG) (((FLAG) == ETH\_DMAPTPRXDESC\_PTPV) || \(\backslash\)}}
+\DoxyCodeLine{1417 \textcolor{preprocessor}{                                                     ((FLAG) == ETH\_DMAPTPRXDESC\_PTPFT) || \(\backslash\)}}
+\DoxyCodeLine{1418 \textcolor{preprocessor}{                                                     ((FLAG) == ETH\_DMAPTPRXDESC\_PTPMT) || \(\backslash\)}}
+\DoxyCodeLine{1419 \textcolor{preprocessor}{                                                     ((FLAG) == ETH\_DMAPTPRXDESC\_IPV6PR) || \(\backslash\)}}
+\DoxyCodeLine{1420 \textcolor{preprocessor}{                                                     ((FLAG) == ETH\_DMAPTPRXDESC\_IPV4PR) || \(\backslash\)}}
+\DoxyCodeLine{1421 \textcolor{preprocessor}{                                                     ((FLAG) == ETH\_DMAPTPRXDESC\_IPCB) || \(\backslash\)}}
+\DoxyCodeLine{1422 \textcolor{preprocessor}{                                                     ((FLAG) == ETH\_DMAPTPRXDESC\_IPPE) || \(\backslash\)}}
+\DoxyCodeLine{1423 \textcolor{preprocessor}{                                                     ((FLAG) == ETH\_DMAPTPRXDESC\_IPHE) || \(\backslash\)}}
+\DoxyCodeLine{1424 \textcolor{preprocessor}{                                                     ((FLAG) == ETH\_DMAPTPRXDESC\_IPPT))}}
+\DoxyCodeLine{1425 }
+\DoxyCodeLine{1433 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_BUFFER1     ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{1434 \textcolor{preprocessor}{\#define ETH\_DMARXDESC\_BUFFER2     ((uint32\_t)0x00000001)  }}
+\DoxyCodeLine{1435 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_RXDESC\_BUFFER(BUFFER) (((BUFFER) == ETH\_DMARXDESC\_BUFFER1) || \(\backslash\)}}
+\DoxyCodeLine{1436 \textcolor{preprocessor}{                                          ((BUFFER) == ETH\_DMARXDESC\_BUFFER2))}}
+\DoxyCodeLine{1437 }
+\DoxyCodeLine{1438 }
+\DoxyCodeLine{1439 \textcolor{comment}{/* ETHERNET DMA Tx descriptors Collision Count Shift */}}
+\DoxyCodeLine{1440 \textcolor{preprocessor}{\#define  ETH\_DMATXDESC\_COLLISION\_COUNTSHIFT         ((uint32\_t)3)}}
+\DoxyCodeLine{1441 }
+\DoxyCodeLine{1442 \textcolor{comment}{/* ETHERNET DMA Tx descriptors Buffer2 Size Shift */}}
+\DoxyCodeLine{1443 \textcolor{preprocessor}{\#define  ETH\_DMATXDESC\_BUFFER2\_SIZESHIFT           ((uint32\_t)16)}}
+\DoxyCodeLine{1444 }
+\DoxyCodeLine{1445 \textcolor{comment}{/* ETHERNET DMA Rx descriptors Frame Length Shift */}}
+\DoxyCodeLine{1446 \textcolor{preprocessor}{\#define  ETH\_DMARXDESC\_FRAME\_LENGTHSHIFT           ((uint32\_t)16)}}
+\DoxyCodeLine{1447 }
+\DoxyCodeLine{1448 \textcolor{comment}{/* ETHERNET DMA Rx descriptors Buffer2 Size Shift */}}
+\DoxyCodeLine{1449 \textcolor{preprocessor}{\#define  ETH\_DMARXDESC\_BUFFER2\_SIZESHIFT           ((uint32\_t)16)}}
+\DoxyCodeLine{1450 }
+\DoxyCodeLine{1451 \textcolor{comment}{/* ETHERNET DMA Rx descriptors Frame length Shift */}}
+\DoxyCodeLine{1452 \textcolor{preprocessor}{\#define  ETH\_DMARXDESC\_FRAMELENGTHSHIFT            ((uint32\_t)16)}}
+\DoxyCodeLine{1453  }
+\DoxyCodeLine{1461 \textcolor{preprocessor}{\#define ETH\_PMT\_FLAG\_WUFFRPR      ((uint32\_t)0x80000000)  }}
+\DoxyCodeLine{1462 \textcolor{preprocessor}{\#define ETH\_PMT\_FLAG\_WUFR         ((uint32\_t)0x00000040)  }}
+\DoxyCodeLine{1463 \textcolor{preprocessor}{\#define ETH\_PMT\_FLAG\_MPR          ((uint32\_t)0x00000020)  }}
+\DoxyCodeLine{1464 \textcolor{preprocessor}{\#define IS\_ETH\_PMT\_GET\_FLAG(FLAG) (((FLAG) == ETH\_PMT\_FLAG\_WUFR) || \(\backslash\)}}
+\DoxyCodeLine{1465 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_PMT\_FLAG\_MPR))}}
+\DoxyCodeLine{1473 \textcolor{preprocessor}{\#define ETH\_MMC\_IT\_TGF       ((uint32\_t)0x00200000)  }}
+\DoxyCodeLine{1474 \textcolor{preprocessor}{\#define ETH\_MMC\_IT\_TGFMSC    ((uint32\_t)0x00008000)  }}
+\DoxyCodeLine{1475 \textcolor{preprocessor}{\#define ETH\_MMC\_IT\_TGFSC     ((uint32\_t)0x00004000)  }}
+\DoxyCodeLine{1484 \textcolor{preprocessor}{\#define ETH\_MMC\_IT\_RGUF      ((uint32\_t)0x10020000)  }}
+\DoxyCodeLine{1485 \textcolor{preprocessor}{\#define ETH\_MMC\_IT\_RFAE      ((uint32\_t)0x10000040)  }}
+\DoxyCodeLine{1486 \textcolor{preprocessor}{\#define ETH\_MMC\_IT\_RFCE      ((uint32\_t)0x10000020)  }}
+\DoxyCodeLine{1487 \textcolor{preprocessor}{\#define IS\_ETH\_MMC\_IT(IT) (((((IT) \& (uint32\_t)0xFFDF3FFF) == 0x00) || (((IT) \& (uint32\_t)0xEFFDFF9F) == 0x00)) \&\& \(\backslash\)}}
+\DoxyCodeLine{1488 \textcolor{preprocessor}{                           ((IT) != 0x00))}}
+\DoxyCodeLine{1489 \textcolor{preprocessor}{\#define IS\_ETH\_MMC\_GET\_IT(IT) (((IT) == ETH\_MMC\_IT\_TGF) || ((IT) == ETH\_MMC\_IT\_TGFMSC) || \(\backslash\)}}
+\DoxyCodeLine{1490 \textcolor{preprocessor}{                               ((IT) == ETH\_MMC\_IT\_TGFSC) || ((IT) == ETH\_MMC\_IT\_RGUF) || \(\backslash\)}}
+\DoxyCodeLine{1491 \textcolor{preprocessor}{                               ((IT) == ETH\_MMC\_IT\_RFAE) || ((IT) == ETH\_MMC\_IT\_RFCE))}}
+\DoxyCodeLine{1499 \textcolor{preprocessor}{\#define ETH\_MMCCR            ((uint32\_t)0x00000100)  }}
+\DoxyCodeLine{1500 \textcolor{preprocessor}{\#define ETH\_MMCRIR           ((uint32\_t)0x00000104)  }}
+\DoxyCodeLine{1501 \textcolor{preprocessor}{\#define ETH\_MMCTIR           ((uint32\_t)0x00000108)  }}
+\DoxyCodeLine{1502 \textcolor{preprocessor}{\#define ETH\_MMCRIMR          ((uint32\_t)0x0000010C)  }}
+\DoxyCodeLine{1503 \textcolor{preprocessor}{\#define ETH\_MMCTIMR          ((uint32\_t)0x00000110)  }}
+\DoxyCodeLine{1504 \textcolor{preprocessor}{\#define ETH\_MMCTGFSCCR       ((uint32\_t)0x0000014C)  }}
+\DoxyCodeLine{1505 \textcolor{preprocessor}{\#define ETH\_MMCTGFMSCCR      ((uint32\_t)0x00000150)  }}
+\DoxyCodeLine{1506 \textcolor{preprocessor}{\#define ETH\_MMCTGFCR         ((uint32\_t)0x00000168)  }}
+\DoxyCodeLine{1507 \textcolor{preprocessor}{\#define ETH\_MMCRFCECR        ((uint32\_t)0x00000194)  }}
+\DoxyCodeLine{1508 \textcolor{preprocessor}{\#define ETH\_MMCRFAECR        ((uint32\_t)0x00000198)  }}
+\DoxyCodeLine{1509 \textcolor{preprocessor}{\#define ETH\_MMCRGUFCR        ((uint32\_t)0x000001C4)  }}
+\DoxyCodeLine{1514 \textcolor{preprocessor}{\#define IS\_ETH\_MMC\_REGISTER(REG) (((REG) == ETH\_MMCCR)  || ((REG) == ETH\_MMCRIR) || \(\backslash\)}}
+\DoxyCodeLine{1515 \textcolor{preprocessor}{                                  ((REG) == ETH\_MMCTIR)  || ((REG) == ETH\_MMCRIMR) || \(\backslash\)}}
+\DoxyCodeLine{1516 \textcolor{preprocessor}{                                  ((REG) == ETH\_MMCTIMR) || ((REG) == ETH\_MMCTGFSCCR) || \(\backslash\)}}
+\DoxyCodeLine{1517 \textcolor{preprocessor}{                                  ((REG) == ETH\_MMCTGFMSCCR) || ((REG) == ETH\_MMCTGFCR) || \(\backslash\)}}
+\DoxyCodeLine{1518 \textcolor{preprocessor}{                                  ((REG) == ETH\_MMCRFCECR) || ((REG) == ETH\_MMCRFAECR) || \(\backslash\)}}
+\DoxyCodeLine{1519 \textcolor{preprocessor}{                                  ((REG) == ETH\_MMCRGUFCR)) }}
+\DoxyCodeLine{1527 \textcolor{preprocessor}{\#define ETH\_MAC\_FLAG\_TST     ((uint32\_t)0x00000200)  }}
+\DoxyCodeLine{1528 \textcolor{preprocessor}{\#define ETH\_MAC\_FLAG\_MMCT    ((uint32\_t)0x00000040)  }}
+\DoxyCodeLine{1529 \textcolor{preprocessor}{\#define ETH\_MAC\_FLAG\_MMCR    ((uint32\_t)0x00000020)  }}
+\DoxyCodeLine{1530 \textcolor{preprocessor}{\#define ETH\_MAC\_FLAG\_MMC     ((uint32\_t)0x00000010)  }}
+\DoxyCodeLine{1531 \textcolor{preprocessor}{\#define ETH\_MAC\_FLAG\_PMT     ((uint32\_t)0x00000008)  }}
+\DoxyCodeLine{1532 \textcolor{preprocessor}{\#define IS\_ETH\_MAC\_GET\_FLAG(FLAG) (((FLAG) == ETH\_MAC\_FLAG\_TST) || ((FLAG) == ETH\_MAC\_FLAG\_MMCT) || \(\backslash\)}}
+\DoxyCodeLine{1533 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_MAC\_FLAG\_MMCR) || ((FLAG) == ETH\_MAC\_FLAG\_MMC) || \(\backslash\)}}
+\DoxyCodeLine{1534 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_MAC\_FLAG\_PMT))}}
+\DoxyCodeLine{1542 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_TST               ((uint32\_t)0x20000000)  }}
+\DoxyCodeLine{1543 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_PMT               ((uint32\_t)0x10000000)  }}
+\DoxyCodeLine{1544 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_MMC               ((uint32\_t)0x08000000)  }}
+\DoxyCodeLine{1545 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_DATATRANSFERERROR ((uint32\_t)0x00800000)  }}
+\DoxyCodeLine{1546 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_READWRITEERROR    ((uint32\_t)0x01000000)  }}
+\DoxyCodeLine{1547 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_ACCESSERROR       ((uint32\_t)0x02000000)  }}
+\DoxyCodeLine{1548 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_NIS               ((uint32\_t)0x00010000)  }}
+\DoxyCodeLine{1549 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_AIS               ((uint32\_t)0x00008000)  }}
+\DoxyCodeLine{1550 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_ER                ((uint32\_t)0x00004000)  }}
+\DoxyCodeLine{1551 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_FBE               ((uint32\_t)0x00002000)  }}
+\DoxyCodeLine{1552 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_ET                ((uint32\_t)0x00000400)  }}
+\DoxyCodeLine{1553 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_RWT               ((uint32\_t)0x00000200)  }}
+\DoxyCodeLine{1554 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_RPS               ((uint32\_t)0x00000100)  }}
+\DoxyCodeLine{1555 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_RBU               ((uint32\_t)0x00000080)  }}
+\DoxyCodeLine{1556 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_R                 ((uint32\_t)0x00000040)  }}
+\DoxyCodeLine{1557 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_TU                ((uint32\_t)0x00000020)  }}
+\DoxyCodeLine{1558 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_RO                ((uint32\_t)0x00000010)  }}
+\DoxyCodeLine{1559 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_TJT               ((uint32\_t)0x00000008)  }}
+\DoxyCodeLine{1560 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_TBU               ((uint32\_t)0x00000004)  }}
+\DoxyCodeLine{1561 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_TPS               ((uint32\_t)0x00000002)  }}
+\DoxyCodeLine{1562 \textcolor{preprocessor}{\#define ETH\_DMA\_FLAG\_T                 ((uint32\_t)0x00000001)  }}
+\DoxyCodeLine{1564 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_FLAG(FLAG) ((((FLAG) \& (uint32\_t)0xC7FE1800) == 0x00) \&\& ((FLAG) != 0x00)) }}
+\DoxyCodeLine{1565 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_GET\_FLAG(FLAG) (((FLAG) == ETH\_DMA\_FLAG\_TST) || ((FLAG) == ETH\_DMA\_FLAG\_PMT) || \(\backslash\)}}
+\DoxyCodeLine{1566 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_MMC) || ((FLAG) == ETH\_DMA\_FLAG\_DATATRANSFERERROR) || \(\backslash\)}}
+\DoxyCodeLine{1567 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_READWRITEERROR) || ((FLAG) == ETH\_DMA\_FLAG\_ACCESSERROR) || \(\backslash\)}}
+\DoxyCodeLine{1568 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_NIS) || ((FLAG) == ETH\_DMA\_FLAG\_AIS) || \(\backslash\)}}
+\DoxyCodeLine{1569 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_ER) || ((FLAG) == ETH\_DMA\_FLAG\_FBE) || \(\backslash\)}}
+\DoxyCodeLine{1570 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_ET) || ((FLAG) == ETH\_DMA\_FLAG\_RWT) || \(\backslash\)}}
+\DoxyCodeLine{1571 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_RPS) || ((FLAG) == ETH\_DMA\_FLAG\_RBU) || \(\backslash\)}}
+\DoxyCodeLine{1572 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_R) || ((FLAG) == ETH\_DMA\_FLAG\_TU) || \(\backslash\)}}
+\DoxyCodeLine{1573 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_RO) || ((FLAG) == ETH\_DMA\_FLAG\_TJT) || \(\backslash\)}}
+\DoxyCodeLine{1574 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_TBU) || ((FLAG) == ETH\_DMA\_FLAG\_TPS) || \(\backslash\)}}
+\DoxyCodeLine{1575 \textcolor{preprocessor}{                                   ((FLAG) == ETH\_DMA\_FLAG\_T))}}
+\DoxyCodeLine{1583 \textcolor{preprocessor}{\#define ETH\_MAC\_IT\_TST       ((uint32\_t)0x00000200)  }}
+\DoxyCodeLine{1584 \textcolor{preprocessor}{\#define ETH\_MAC\_IT\_MMCT      ((uint32\_t)0x00000040)  }}
+\DoxyCodeLine{1585 \textcolor{preprocessor}{\#define ETH\_MAC\_IT\_MMCR      ((uint32\_t)0x00000020)  }}
+\DoxyCodeLine{1586 \textcolor{preprocessor}{\#define ETH\_MAC\_IT\_MMC       ((uint32\_t)0x00000010)  }}
+\DoxyCodeLine{1587 \textcolor{preprocessor}{\#define ETH\_MAC\_IT\_PMT       ((uint32\_t)0x00000008)  }}
+\DoxyCodeLine{1588 \textcolor{preprocessor}{\#define IS\_ETH\_MAC\_IT(IT) ((((IT) \& (uint32\_t)0xFFFFFDF7) == 0x00) \&\& ((IT) != 0x00))}}
+\DoxyCodeLine{1589 \textcolor{preprocessor}{\#define IS\_ETH\_MAC\_GET\_IT(IT) (((IT) == ETH\_MAC\_IT\_TST) || ((IT) == ETH\_MAC\_IT\_MMCT) || \(\backslash\)}}
+\DoxyCodeLine{1590 \textcolor{preprocessor}{                               ((IT) == ETH\_MAC\_IT\_MMCR) || ((IT) == ETH\_MAC\_IT\_MMC) || \(\backslash\)}}
+\DoxyCodeLine{1591 \textcolor{preprocessor}{                               ((IT) == ETH\_MAC\_IT\_PMT))}}
+\DoxyCodeLine{1599 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_TST       ((uint32\_t)0x20000000)  }}
+\DoxyCodeLine{1600 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_PMT       ((uint32\_t)0x10000000)  }}
+\DoxyCodeLine{1601 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_MMC       ((uint32\_t)0x08000000)  }}
+\DoxyCodeLine{1602 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_NIS       ((uint32\_t)0x00010000)  }}
+\DoxyCodeLine{1603 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_AIS       ((uint32\_t)0x00008000)  }}
+\DoxyCodeLine{1604 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_ER        ((uint32\_t)0x00004000)  }}
+\DoxyCodeLine{1605 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_FBE       ((uint32\_t)0x00002000)  }}
+\DoxyCodeLine{1606 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_ET        ((uint32\_t)0x00000400)  }}
+\DoxyCodeLine{1607 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_RWT       ((uint32\_t)0x00000200)  }}
+\DoxyCodeLine{1608 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_RPS       ((uint32\_t)0x00000100)  }}
+\DoxyCodeLine{1609 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_RBU       ((uint32\_t)0x00000080)  }}
+\DoxyCodeLine{1610 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_R         ((uint32\_t)0x00000040)  }}
+\DoxyCodeLine{1611 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_TU        ((uint32\_t)0x00000020)  }}
+\DoxyCodeLine{1612 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_RO        ((uint32\_t)0x00000010)  }}
+\DoxyCodeLine{1613 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_TJT       ((uint32\_t)0x00000008)  }}
+\DoxyCodeLine{1614 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_TBU       ((uint32\_t)0x00000004)  }}
+\DoxyCodeLine{1615 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_TPS       ((uint32\_t)0x00000002)  }}
+\DoxyCodeLine{1616 \textcolor{preprocessor}{\#define ETH\_DMA\_IT\_T         ((uint32\_t)0x00000001)  }}
+\DoxyCodeLine{1618 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_IT(IT) ((((IT) \& (uint32\_t)0xC7FE1800) == 0x00) \&\& ((IT) != 0x00))}}
+\DoxyCodeLine{1619 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_GET\_IT(IT) (((IT) == ETH\_DMA\_IT\_TST) || ((IT) == ETH\_DMA\_IT\_PMT) || \(\backslash\)}}
+\DoxyCodeLine{1620 \textcolor{preprocessor}{                               ((IT) == ETH\_DMA\_IT\_MMC) || ((IT) == ETH\_DMA\_IT\_NIS) || \(\backslash\)}}
+\DoxyCodeLine{1621 \textcolor{preprocessor}{                               ((IT) == ETH\_DMA\_IT\_AIS) || ((IT) == ETH\_DMA\_IT\_ER) || \(\backslash\)}}
+\DoxyCodeLine{1622 \textcolor{preprocessor}{                               ((IT) == ETH\_DMA\_IT\_FBE) || ((IT) == ETH\_DMA\_IT\_ET) || \(\backslash\)}}
+\DoxyCodeLine{1623 \textcolor{preprocessor}{                               ((IT) == ETH\_DMA\_IT\_RWT) || ((IT) == ETH\_DMA\_IT\_RPS) || \(\backslash\)}}
+\DoxyCodeLine{1624 \textcolor{preprocessor}{                               ((IT) == ETH\_DMA\_IT\_RBU) || ((IT) == ETH\_DMA\_IT\_R) || \(\backslash\)}}
+\DoxyCodeLine{1625 \textcolor{preprocessor}{                               ((IT) == ETH\_DMA\_IT\_TU) || ((IT) == ETH\_DMA\_IT\_RO) || \(\backslash\)}}
+\DoxyCodeLine{1626 \textcolor{preprocessor}{                               ((IT) == ETH\_DMA\_IT\_TJT) || ((IT) == ETH\_DMA\_IT\_TBU) || \(\backslash\)}}
+\DoxyCodeLine{1627 \textcolor{preprocessor}{                               ((IT) == ETH\_DMA\_IT\_TPS) || ((IT) == ETH\_DMA\_IT\_T))}}
+\DoxyCodeLine{1628 }
+\DoxyCodeLine{1636 \textcolor{preprocessor}{\#define ETH\_DMA\_TRANSMITPROCESS\_STOPPED     ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{1637 \textcolor{preprocessor}{\#define ETH\_DMA\_TRANSMITPROCESS\_FETCHING    ((uint32\_t)0x00100000)  }}
+\DoxyCodeLine{1638 \textcolor{preprocessor}{\#define ETH\_DMA\_TRANSMITPROCESS\_WAITING     ((uint32\_t)0x00200000)  }}
+\DoxyCodeLine{1639 \textcolor{preprocessor}{\#define ETH\_DMA\_TRANSMITPROCESS\_READING     ((uint32\_t)0x00300000)  }}
+\DoxyCodeLine{1640 \textcolor{preprocessor}{\#define ETH\_DMA\_TRANSMITPROCESS\_SUSPENDED   ((uint32\_t)0x00600000)  }}
+\DoxyCodeLine{1641 \textcolor{preprocessor}{\#define ETH\_DMA\_TRANSMITPROCESS\_CLOSING     ((uint32\_t)0x00700000)  }}
+\DoxyCodeLine{1651 \textcolor{preprocessor}{\#define ETH\_DMA\_RECEIVEPROCESS\_STOPPED      ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{1652 \textcolor{preprocessor}{\#define ETH\_DMA\_RECEIVEPROCESS\_FETCHING     ((uint32\_t)0x00020000)  }}
+\DoxyCodeLine{1653 \textcolor{preprocessor}{\#define ETH\_DMA\_RECEIVEPROCESS\_WAITING      ((uint32\_t)0x00060000)  }}
+\DoxyCodeLine{1654 \textcolor{preprocessor}{\#define ETH\_DMA\_RECEIVEPROCESS\_SUSPENDED    ((uint32\_t)0x00080000)  }}
+\DoxyCodeLine{1655 \textcolor{preprocessor}{\#define ETH\_DMA\_RECEIVEPROCESS\_CLOSING      ((uint32\_t)0x000A0000)  }}
+\DoxyCodeLine{1656 \textcolor{preprocessor}{\#define ETH\_DMA\_RECEIVEPROCESS\_QUEUING      ((uint32\_t)0x000E0000)  }}
+\DoxyCodeLine{1665 \textcolor{preprocessor}{\#define ETH\_DMA\_OVERFLOW\_RXFIFOCOUNTER      ((uint32\_t)0x10000000)  }}
+\DoxyCodeLine{1666 \textcolor{preprocessor}{\#define ETH\_DMA\_OVERFLOW\_MISSEDFRAMECOUNTER ((uint32\_t)0x00010000)  }}
+\DoxyCodeLine{1667 \textcolor{preprocessor}{\#define IS\_ETH\_DMA\_GET\_OVERFLOW(OVERFLOW) (((OVERFLOW) == ETH\_DMA\_OVERFLOW\_RXFIFOCOUNTER) || \(\backslash\)}}
+\DoxyCodeLine{1668 \textcolor{preprocessor}{                                           ((OVERFLOW) == ETH\_DMA\_OVERFLOW\_MISSEDFRAMECOUNTER))}}
+\DoxyCodeLine{1673 \textcolor{comment}{/* ETHERNET MAC address offsets */}}
+\DoxyCodeLine{1674 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDR\_HBASE    (uint32\_t)(ETH\_MAC\_BASE + (uint32\_t)0x40)  }\textcolor{comment}{/* ETHERNET MAC address high offset */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1675 \textcolor{preprocessor}{\#define ETH\_MAC\_ADDR\_LBASE    (uint32\_t)(ETH\_MAC\_BASE + (uint32\_t)0x44)  }\textcolor{comment}{/* ETHERNET MAC address low offset */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1676 }
+\DoxyCodeLine{1677 \textcolor{comment}{/* ETHERNET MACMIIAR register Mask */}}
+\DoxyCodeLine{1678 \textcolor{preprocessor}{\#define MACMIIAR\_CR\_MASK    ((uint32\_t)0xFFFFFFE3)}}
+\DoxyCodeLine{1679 }
+\DoxyCodeLine{1680 \textcolor{comment}{/* ETHERNET MACCR register Mask */}}
+\DoxyCodeLine{1681 \textcolor{preprocessor}{\#define MACCR\_CLEAR\_MASK    ((uint32\_t)0xFF20810F)  }}
+\DoxyCodeLine{1682 }
+\DoxyCodeLine{1683 \textcolor{comment}{/* ETHERNET MACFCR register Mask */}}
+\DoxyCodeLine{1684 \textcolor{preprocessor}{\#define MACFCR\_CLEAR\_MASK   ((uint32\_t)0x0000FF41)}}
+\DoxyCodeLine{1685 }
+\DoxyCodeLine{1686 }
+\DoxyCodeLine{1687 \textcolor{comment}{/* ETHERNET DMAOMR register Mask */}}
+\DoxyCodeLine{1688 \textcolor{preprocessor}{\#define DMAOMR\_CLEAR\_MASK   ((uint32\_t)0xF8DE3F23)}}
+\DoxyCodeLine{1689 }
+\DoxyCodeLine{1690 }
+\DoxyCodeLine{1691 \textcolor{comment}{/* ETHERNET Remote Wake-\/up frame register length */}}
+\DoxyCodeLine{1692 \textcolor{preprocessor}{\#define ETH\_WAKEUP\_REGISTER\_LENGTH      8}}
+\DoxyCodeLine{1693 }
+\DoxyCodeLine{1694 \textcolor{comment}{/* ETHERNET Missed frames counter Shift */}}
+\DoxyCodeLine{1695 \textcolor{preprocessor}{\#define  ETH\_DMA\_RX\_OVERFLOW\_MISSEDFRAMES\_COUNTERSHIFT     17}}
+\DoxyCodeLine{1696 }
+\DoxyCodeLine{1701 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1702 }
+\DoxyCodeLine{1707 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_ETH\_STATE\_RESET)}}
+\DoxyCodeLine{1708 }
+\DoxyCodeLine{1715 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)             ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status \& (\_\_FLAG\_\_) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{1716 }
+\DoxyCodeLine{1723 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMARXDESC\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)             ((\_\_HANDLE\_\_)-\/>RxDesc-\/>Status \& (\_\_FLAG\_\_) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{1724 }
+\DoxyCodeLine{1730 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMARXDESC\_ENABLE\_IT(\_\_HANDLE\_\_)                          ((\_\_HANDLE\_\_)-\/>RxDesc-\/>ControlBufferSize \&=(\string~(uint32\_t)ETH\_DMARXDESC\_DIC))}}
+\DoxyCodeLine{1731 }
+\DoxyCodeLine{1737 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMARXDESC\_DISABLE\_IT(\_\_HANDLE\_\_)                         ((\_\_HANDLE\_\_)-\/>RxDesc-\/>ControlBufferSize |= ETH\_DMARXDESC\_DIC)}}
+\DoxyCodeLine{1738 }
+\DoxyCodeLine{1744 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMARXDESC\_SET\_OWN\_BIT(\_\_HANDLE\_\_)                           ((\_\_HANDLE\_\_)-\/>RxDesc-\/>Status |= ETH\_DMARXDESC\_OWN)}}
+\DoxyCodeLine{1745 }
+\DoxyCodeLine{1751 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_GET\_COLLISION\_COUNT(\_\_HANDLE\_\_)                   (((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status \& ETH\_DMATXDESC\_CC) >> ETH\_DMATXDESC\_COLLISION\_COUNTSHIFT)}}
+\DoxyCodeLine{1752 }
+\DoxyCodeLine{1758 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_SET\_OWN\_BIT(\_\_HANDLE\_\_)                       ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status |= ETH\_DMATXDESC\_OWN)}}
+\DoxyCodeLine{1759 }
+\DoxyCodeLine{1765 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_ENABLE\_IT(\_\_HANDLE\_\_)                          ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status |= ETH\_DMATXDESC\_IC)}}
+\DoxyCodeLine{1766 }
+\DoxyCodeLine{1772 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_DISABLE\_IT(\_\_HANDLE\_\_)                          ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status \&= \string~ETH\_DMATXDESC\_IC)}}
+\DoxyCodeLine{1773 }
+\DoxyCodeLine{1785 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_CHECKSUM\_INSERTION(\_\_HANDLE\_\_, \_\_CHECKSUM\_\_)     ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status |= (\_\_CHECKSUM\_\_))}}
+\DoxyCodeLine{1786 }
+\DoxyCodeLine{1792 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_CRC\_ENABLE(\_\_HANDLE\_\_)                          ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status \&= \string~ETH\_DMATXDESC\_DC)}}
+\DoxyCodeLine{1793 }
+\DoxyCodeLine{1799 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_CRC\_DISABLE(\_\_HANDLE\_\_)                         ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status |= ETH\_DMATXDESC\_DC)}}
+\DoxyCodeLine{1800 }
+\DoxyCodeLine{1806 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_SHORT\_FRAME\_PADDING\_ENABLE(\_\_HANDLE\_\_)            ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status \&= \string~ETH\_DMATXDESC\_DP)}}
+\DoxyCodeLine{1807 }
+\DoxyCodeLine{1813 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMATXDESC\_SHORT\_FRAME\_PADDING\_DISABLE(\_\_HANDLE\_\_)           ((\_\_HANDLE\_\_)-\/>TxDesc-\/>Status |= ETH\_DMATXDESC\_DP)}}
+\DoxyCodeLine{1814 }
+\DoxyCodeLine{1825 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MAC\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)                 ((\_\_HANDLE\_\_)-\/>Instance-\/>MACIMR |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1826 }
+\DoxyCodeLine{1837 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MAC\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)                ((\_\_HANDLE\_\_)-\/>Instance-\/>MACIMR \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1838 }
+\DoxyCodeLine{1844 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_INITIATE\_PAUSE\_CONTROL\_FRAME(\_\_HANDLE\_\_)              ((\_\_HANDLE\_\_)-\/>Instance-\/>MACFCR |= ETH\_MACFCR\_FCBBPA)}}
+\DoxyCodeLine{1845 }
+\DoxyCodeLine{1851 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_GET\_FLOW\_CONTROL\_BUSY\_STATUS(\_\_HANDLE\_\_)               (((\_\_HANDLE\_\_)-\/>Instance-\/>MACFCR \& ETH\_MACFCR\_FCBBPA) == ETH\_MACFCR\_FCBBPA)}}
+\DoxyCodeLine{1852 }
+\DoxyCodeLine{1858 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_BACK\_PRESSURE\_ACTIVATION\_ENABLE(\_\_HANDLE\_\_)          ((\_\_HANDLE\_\_)-\/>Instance-\/>MACFCR |= ETH\_MACFCR\_FCBBPA)}}
+\DoxyCodeLine{1859 }
+\DoxyCodeLine{1865 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_BACK\_PRESSURE\_ACTIVATION\_DISABLE(\_\_HANDLE\_\_)         ((\_\_HANDLE\_\_)-\/>Instance-\/>MACFCR \&= \string~ETH\_MACFCR\_FCBBPA)}}
+\DoxyCodeLine{1866 }
+\DoxyCodeLine{1879 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MAC\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)                   (((\_\_HANDLE\_\_)-\/>Instance-\/>MACSR \&( \_\_FLAG\_\_)) == ( \_\_FLAG\_\_))}}
+\DoxyCodeLine{1880 }
+\DoxyCodeLine{1893 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MAC\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)                 ((\_\_HANDLE\_\_)-\/>Instance-\/>MACSR \&= \string~(\_\_FLAG\_\_))}}
+\DoxyCodeLine{1894 }
+\DoxyCodeLine{1902 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMA\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)                 ((\_\_HANDLE\_\_)-\/>Instance-\/>DMAIER |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1903 }
+\DoxyCodeLine{1911 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMA\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)                ((\_\_HANDLE\_\_)-\/>Instance-\/>DMAIER \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1912 }
+\DoxyCodeLine{1919 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMA\_CLEAR\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)      ((\_\_HANDLE\_\_)-\/>Instance-\/>DMASR =(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1920 }
+\DoxyCodeLine{1927 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMA\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)                   (((\_\_HANDLE\_\_)-\/>Instance-\/>DMASR \&( \_\_FLAG\_\_)) == ( \_\_FLAG\_\_))}}
+\DoxyCodeLine{1928 }
+\DoxyCodeLine{1935 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_DMA\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)                 ((\_\_HANDLE\_\_)-\/>Instance-\/>DMASR \&= \string~(\_\_FLAG\_\_))}}
+\DoxyCodeLine{1936 }
+\DoxyCodeLine{1946 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_GET\_DMA\_OVERFLOW\_STATUS(\_\_HANDLE\_\_, \_\_OVERFLOW\_\_)       (((\_\_HANDLE\_\_)-\/>Instance-\/>DMAMFBOCR \& (\_\_OVERFLOW\_\_)) == (\_\_OVERFLOW\_\_))}}
+\DoxyCodeLine{1947 }
+\DoxyCodeLine{1954 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_SET\_RECEIVE\_WATCHDOG\_TIMER(\_\_HANDLE\_\_, \_\_VALUE\_\_)       ((\_\_HANDLE\_\_)-\/>Instance-\/>DMARSWTR = (\_\_VALUE\_\_))}}
+\DoxyCodeLine{1955 }
+\DoxyCodeLine{1962 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_GLOBAL\_UNICAST\_WAKEUP\_ENABLE(\_\_HANDLE\_\_)               ((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR |= ETH\_MACPMTCSR\_GU)}}
+\DoxyCodeLine{1963 }
+\DoxyCodeLine{1970 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_GLOBAL\_UNICAST\_WAKEUP\_DISABLE(\_\_HANDLE\_\_)              ((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR \&= \string~ETH\_MACPMTCSR\_GU)}}
+\DoxyCodeLine{1971 }
+\DoxyCodeLine{1977 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_WAKEUP\_FRAME\_DETECTION\_ENABLE(\_\_HANDLE\_\_)              ((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR |= ETH\_MACPMTCSR\_WFE)}}
+\DoxyCodeLine{1978 }
+\DoxyCodeLine{1984 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_WAKEUP\_FRAME\_DETECTION\_DISABLE(\_\_HANDLE\_\_)             ((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR \&= \string~ETH\_MACPMTCSR\_WFE)}}
+\DoxyCodeLine{1985 }
+\DoxyCodeLine{1991 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MAGIC\_PACKET\_DETECTION\_ENABLE(\_\_HANDLE\_\_)              ((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR |= ETH\_MACPMTCSR\_MPE)}}
+\DoxyCodeLine{1992 }
+\DoxyCodeLine{1998 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MAGIC\_PACKET\_DETECTION\_DISABLE(\_\_HANDLE\_\_)             ((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR \&= \string~ETH\_MACPMTCSR\_WFE)}}
+\DoxyCodeLine{1999 }
+\DoxyCodeLine{2005 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_POWER\_DOWN\_ENABLE(\_\_HANDLE\_\_)                         ((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR |= ETH\_MACPMTCSR\_PD)}}
+\DoxyCodeLine{2006 }
+\DoxyCodeLine{2012 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_POWER\_DOWN\_DISABLE(\_\_HANDLE\_\_)                        ((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR \&= \string~ETH\_MACPMTCSR\_PD)}}
+\DoxyCodeLine{2013 }
+\DoxyCodeLine{2024 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_GET\_PMT\_FLAG\_STATUS(\_\_HANDLE\_\_, \_\_FLAG\_\_)               (((\_\_HANDLE\_\_)-\/>Instance-\/>MACPMTCSR \&( \_\_FLAG\_\_)) == ( \_\_FLAG\_\_))}}
+\DoxyCodeLine{2025 }
+\DoxyCodeLine{2031 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_COUNTER\_FULL\_PRESET(\_\_HANDLE\_\_)                     ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR |= (ETH\_MMCCR\_MCFHP | ETH\_MMCCR\_MCP))}}
+\DoxyCodeLine{2032 }
+\DoxyCodeLine{2038 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_COUNTER\_HALF\_PRESET(\_\_HANDLE\_\_)                     do\{(\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR \&= \string~ETH\_MMCCR\_MCFHP;\(\backslash\)}}
+\DoxyCodeLine{2039 \textcolor{preprocessor}{                                                                          (\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR |= ETH\_MMCCR\_MCP;\} while (0)}}
+\DoxyCodeLine{2040 }
+\DoxyCodeLine{2046 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_COUNTER\_FREEZE\_ENABLE(\_\_HANDLE\_\_)                  ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR |= ETH\_MMCCR\_MCF)}}
+\DoxyCodeLine{2047 }
+\DoxyCodeLine{2053 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_COUNTER\_FREEZE\_DISABLE(\_\_HANDLE\_\_)                 ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR \&= \string~ETH\_MMCCR\_MCF)}}
+\DoxyCodeLine{2054 }
+\DoxyCodeLine{2060 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_ETH\_MMC\_RESET\_ONREAD\_ENABLE(\_\_HANDLE\_\_)                ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR |= ETH\_MMCCR\_ROR)}}
+\DoxyCodeLine{2061 }
+\DoxyCodeLine{2067 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_ETH\_MMC\_RESET\_ONREAD\_DISABLE(\_\_HANDLE\_\_)               ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR \&= \string~ETH\_MMCCR\_ROR)}}
+\DoxyCodeLine{2068 }
+\DoxyCodeLine{2074 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_ETH\_MMC\_COUNTER\_ROLLOVER\_ENABLE(\_\_HANDLE\_\_)            ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR \&= \string~ETH\_MMCCR\_CSR)}}
+\DoxyCodeLine{2075 }
+\DoxyCodeLine{2081 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_ETH\_MMC\_COUNTER\_ROLLOVER\_DISABLE(\_\_HANDLE\_\_)           ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR |= ETH\_MMCCR\_CSR)}}
+\DoxyCodeLine{2082 }
+\DoxyCodeLine{2088 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_COUNTERS\_RESET(\_\_HANDLE\_\_)                         ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCCR |= ETH\_MMCCR\_CR)}}
+\DoxyCodeLine{2089 }
+\DoxyCodeLine{2100 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_RX\_IT\_ENABLE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)               (\_\_HANDLE\_\_)-\/>Instance-\/>MMCRIMR \&= \string~((\_\_INTERRUPT\_\_) \& 0xEFFFFFFF)}}
+\DoxyCodeLine{2111 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_RX\_IT\_DISABLE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)              (\_\_HANDLE\_\_)-\/>Instance-\/>MMCRIMR |= ((\_\_INTERRUPT\_\_) \& 0xEFFFFFFF)}}
+\DoxyCodeLine{2122 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_TX\_IT\_ENABLE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)            ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCRIMR \&= \string~ (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{2123 }
+\DoxyCodeLine{2134 \textcolor{preprocessor}{\#define \_\_HAL\_ETH\_MMC\_TX\_IT\_DISABLE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)           ((\_\_HANDLE\_\_)-\/>Instance-\/>MMCRIMR |= (\_\_INTERRUPT\_\_))                                             }}
+\DoxyCodeLine{2135 }
+\DoxyCodeLine{2136 }
+\DoxyCodeLine{2137 }
+\DoxyCodeLine{2138 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{2139 }
+\DoxyCodeLine{2140 \textcolor{comment}{/* Initialization and de-\/initialization functions  ****************************/}}
+\DoxyCodeLine{2141 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_Init(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2142 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_DeInit(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2143 \textcolor{keywordtype}{void} HAL\_ETH\_MspInit(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2144 \textcolor{keywordtype}{void} HAL\_ETH\_MspDeInit(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2145 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_DMATxDescListInit(ETH\_HandleTypeDef *heth, ETH\_DMADescTypeDef *DMATxDescTab, uint8\_t* TxBuff, uint32\_t TxBuffCount);}
+\DoxyCodeLine{2146 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_DMARxDescListInit(ETH\_HandleTypeDef *heth, ETH\_DMADescTypeDef *DMARxDescTab, uint8\_t *RxBuff, uint32\_t RxBuffCount);}
+\DoxyCodeLine{2147 }
+\DoxyCodeLine{2148 \textcolor{comment}{/* IO operation functions  ****************************************************/}}
+\DoxyCodeLine{2149 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_TransmitFrame(ETH\_HandleTypeDef *heth, uint32\_t FrameLength);}
+\DoxyCodeLine{2150 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_GetReceivedFrame(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2151 }
+\DoxyCodeLine{2152  \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{2153 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_GetReceivedFrame\_IT(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2154 \textcolor{keywordtype}{void} HAL\_ETH\_IRQHandler(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2155 }
+\DoxyCodeLine{2156  \textcolor{comment}{/* Callback in non blocking modes (Interrupt) */}}
+\DoxyCodeLine{2157 \textcolor{keywordtype}{void} HAL\_ETH\_TxCpltCallback(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2158 \textcolor{keywordtype}{void} HAL\_ETH\_RxCpltCallback(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2159 \textcolor{keywordtype}{void} HAL\_ETH\_ErrorCallback(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2160 }
+\DoxyCodeLine{2161 \textcolor{comment}{/* Cmmunication with PHY functions*/}}
+\DoxyCodeLine{2162 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_ReadPHYRegister(ETH\_HandleTypeDef *heth, uint16\_t PHYReg, uint32\_t *RegValue);}
+\DoxyCodeLine{2163 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_WritePHYRegister(ETH\_HandleTypeDef *heth, uint16\_t PHYReg, uint32\_t RegValue);}
+\DoxyCodeLine{2164 }
+\DoxyCodeLine{2165 \textcolor{comment}{/* Peripheral Control functions  **********************************************/}}
+\DoxyCodeLine{2166 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_Start(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2167 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_Stop(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2168 }
+\DoxyCodeLine{2169 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_ConfigMAC(ETH\_HandleTypeDef *heth, ETH\_MACInitTypeDef *macconf);}
+\DoxyCodeLine{2170 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_ETH\_ConfigDMA(ETH\_HandleTypeDef *heth, ETH\_DMAInitTypeDef *dmaconf);}
+\DoxyCodeLine{2171 }
+\DoxyCodeLine{2172 \textcolor{comment}{/* Peripheral State functions  ************************************************/}}
+\DoxyCodeLine{2173 HAL\_ETH\_StateTypeDef HAL\_ETH\_GetState(ETH\_HandleTypeDef *heth);}
+\DoxyCodeLine{2174 }
+\DoxyCodeLine{2175 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2184 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{2185 \}}
+\DoxyCodeLine{2186 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{2187 }
+\DoxyCodeLine{2188 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_ETH\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2189 }
+\DoxyCodeLine{2190 }
+\DoxyCodeLine{2191 }
+\DoxyCodeLine{2192 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__bus_out_8h_source" xml:lang="en-US">
+<title>BusOut.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/BusOut.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__bus_out_8h_source_1l00001"/>00001 <emphasis role="comment">/*&#32;mbed&#32;Microcontroller&#32;Library</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*&#32;Copyright&#32;(c)&#32;2006-2013&#32;ARM&#32;Limited</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;Licensed&#32;under&#32;the&#32;Apache&#32;License,&#32;Version&#32;2.0&#32;(the&#32;&quot;License&quot;);</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*&#32;you&#32;may&#32;not&#32;use&#32;this&#32;file&#32;except&#32;in&#32;compliance&#32;with&#32;the&#32;License.</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00006"/>00006 <emphasis role="comment">&#32;*&#32;You&#32;may&#32;obtain&#32;a&#32;copy&#32;of&#32;the&#32;License&#32;at</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00007"/>00007 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00008"/>00008 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;&#32;http://www.apache.org/licenses/LICENSE-2.0</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00009"/>00009 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00010"/>00010 <emphasis role="comment">&#32;*&#32;Unless&#32;required&#32;by&#32;applicable&#32;law&#32;or&#32;agreed&#32;to&#32;in&#32;writing,&#32;software</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00011"/>00011 <emphasis role="comment">&#32;*&#32;distributed&#32;under&#32;the&#32;License&#32;is&#32;distributed&#32;on&#32;an&#32;&quot;AS&#32;IS&quot;&#32;BASIS,</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;*&#32;WITHOUT&#32;WARRANTIES&#32;OR&#32;CONDITIONS&#32;OF&#32;ANY&#32;KIND,&#32;either&#32;express&#32;or&#32;implied.</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;*&#32;See&#32;the&#32;License&#32;for&#32;the&#32;specific&#32;language&#32;governing&#32;permissions&#32;and</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;*&#32;limitations&#32;under&#32;the&#32;License.</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#ifndef&#32;MBED_BUSOUT_H</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#define&#32;MBED_BUSOUT_H</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00018"/>00018 
+<anchor xml:id="__bus_out_8h_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__digital_out_8h">DigitalOut.h</link>&quot;</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00020"/>00020 
+<anchor xml:id="__bus_out_8h_source_1l00021"/>00021 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacembed">mbed</link>&#32;{
+<anchor xml:id="__bus_out_8h_source_1l00022"/>00022 
+<anchor xml:id="__bus_out_8h_source_1l00025"/><link linkend="_classmbed_1_1_bus_out">00025</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classmbed_1_1_bus_out">BusOut</link>&#32;{
+<anchor xml:id="__bus_out_8h_source_1l00026"/>00026 
+<anchor xml:id="__bus_out_8h_source_1l00027"/>00027 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__bus_out_8h_source_1l00028"/>00028 
+<anchor xml:id="__bus_out_8h_source_1l00037"/><link linkend="_classmbed_1_1_bus_out_1a3b0fadabe8e5208de19b2349a2697dde">00037</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_bus_out_1a3b0fadabe8e5208de19b2349a2697dde">BusOut</link>(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p0,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p1&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p2&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p3&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,
+<anchor xml:id="__bus_out_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p4&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p5&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p6&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p7&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,
+<anchor xml:id="__bus_out_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p8&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p9&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p10&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p11&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,
+<anchor xml:id="__bus_out_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p12&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p13&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p14&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>,&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;p15&#32;=&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01">NC</link>);
+<anchor xml:id="__bus_out_8h_source_1l00041"/>00041 
+<anchor xml:id="__bus_out_8h_source_1l00042"/><link linkend="_classmbed_1_1_bus_out_1a14458cb7f53d0b84ebb69213f68805d4">00042</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_bus_out_1a14458cb7f53d0b84ebb69213f68805d4">BusOut</link>(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;pins[16]);
+<anchor xml:id="__bus_out_8h_source_1l00043"/>00043 
+<anchor xml:id="__bus_out_8h_source_1l00044"/><link linkend="_classmbed_1_1_bus_out_1a0fabbff7b505f08f5449ec3177c55f8d">00044</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classmbed_1_1_bus_out_1a0fabbff7b505f08f5449ec3177c55f8d">~BusOut</link>();
+<anchor xml:id="__bus_out_8h_source_1l00045"/>00045 
+<anchor xml:id="__bus_out_8h_source_1l00050"/><link linkend="_classmbed_1_1_bus_out_1a25d1931bc29d014446294ab8dc470f2a">00050</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmbed_1_1_bus_out_1a25d1931bc29d014446294ab8dc470f2a">write</link>(<emphasis role="keywordtype">int</emphasis>&#32;value);
+<anchor xml:id="__bus_out_8h_source_1l00051"/>00051 
+<anchor xml:id="__bus_out_8h_source_1l00057"/><link linkend="_classmbed_1_1_bus_out_1aaab5dab5b969a87f538242e524431637">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classmbed_1_1_bus_out_1aaab5dab5b969a87f538242e524431637">read</link>();
+<anchor xml:id="__bus_out_8h_source_1l00058"/>00058 
+<anchor xml:id="__bus_out_8h_source_1l00059"/>00059 <emphasis role="preprocessor">#ifdef&#32;MBED_OPERATORS</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00062"/><link linkend="_classmbed_1_1_bus_out_1acac20fef2ea576c5a89a4886128f5e11">00062</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_bus_out">BusOut</link>&amp;&#32;<link linkend="_classmbed_1_1_bus_out_1acac20fef2ea576c5a89a4886128f5e11">operator= </link>(<emphasis role="keywordtype">int</emphasis>&#32;v);
+<anchor xml:id="__bus_out_8h_source_1l00063"/><link linkend="_classmbed_1_1_bus_out_1a817cfc7ffc337e21482d4b5310ce8f8e">00063</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_bus_out">BusOut</link>&amp;&#32;<link linkend="_classmbed_1_1_bus_out_1acac20fef2ea576c5a89a4886128f5e11">operator= </link>(<link linkend="_classmbed_1_1_bus_out">BusOut</link>&amp;&#32;rhs);
+<anchor xml:id="__bus_out_8h_source_1l00064"/>00064 
+<anchor xml:id="__bus_out_8h_source_1l00067"/><link linkend="_classmbed_1_1_bus_out_1a4f4ea421e40bda08a2deca657f640fea">00067</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">operator</emphasis>&#32;int();
+<anchor xml:id="__bus_out_8h_source_1l00068"/>00068 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00069"/>00069 
+<anchor xml:id="__bus_out_8h_source_1l00070"/>00070 <emphasis role="keyword">protected</emphasis>:
+<anchor xml:id="__bus_out_8h_source_1l00071"/><link linkend="_classmbed_1_1_bus_out_1a48ada5605ea52e3deb0fab3ffce61991">00071</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_digital_out">DigitalOut</link>*&#32;<link linkend="_classmbed_1_1_bus_out_1a48ada5605ea52e3deb0fab3ffce61991">_pin</link>[16];
+<anchor xml:id="__bus_out_8h_source_1l00072"/>00072 
+<anchor xml:id="__bus_out_8h_source_1l00073"/>00073 &#32;&#32;&#32;<emphasis role="comment">/*&#32;disallow&#32;copy&#32;constructor&#32;and&#32;assignment&#32;operators&#32;*/</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00074"/>00074 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__bus_out_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_bus_out_1a3b0fadabe8e5208de19b2349a2697dde">BusOut</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmbed_1_1_bus_out">BusOut</link>&amp;);
+<anchor xml:id="__bus_out_8h_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_bus_out">BusOut</link>&#32;&amp;&#32;<link linkend="_classmbed_1_1_bus_out_1acac20fef2ea576c5a89a4886128f5e11">operator = </link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmbed_1_1_bus_out">BusOut</link>&amp;);
+<anchor xml:id="__bus_out_8h_source_1l00077"/>00077 };
+<anchor xml:id="__bus_out_8h_source_1l00078"/>00078 
+<anchor xml:id="__bus_out_8h_source_1l00079"/>00079 }&#32;<emphasis role="comment">//&#32;namespace&#32;mbed</emphasis>
+<anchor xml:id="__bus_out_8h_source_1l00080"/>00080 
+<anchor xml:id="__bus_out_8h_source_1l00081"/>00081 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

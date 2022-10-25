@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__interrupt_manager_8h_source" xml:lang="en-US">
+<title>InterruptManager.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/InterruptManager.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__interrupt_manager_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;MBED_INTERRUPTMANAGER_H</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;MBED_INTERRUPTMANAGER_H</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00003"/>00003 
+<anchor xml:id="__interrupt_manager_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cmsis_8h">cmsis.h</link>&quot;</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__call_chain_8h">CallChain.h</link>&quot;</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00007"/>00007 
+<anchor xml:id="__interrupt_manager_8h_source_1l00008"/>00008 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacembed">mbed</link>&#32;{
+<anchor xml:id="__interrupt_manager_8h_source_1l00009"/>00009 
+<anchor xml:id="__interrupt_manager_8h_source_1l00036"/><link linkend="_classmbed_1_1_interrupt_manager">00036</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link>&#32;{
+<anchor xml:id="__interrupt_manager_8h_source_1l00037"/>00037 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__interrupt_manager_8h_source_1l00040"/><link linkend="_classmbed_1_1_interrupt_manager_1a629b18584b99e4ab63ab7031eaf6ba18">00040</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link>*&#32;<link linkend="_classmbed_1_1_interrupt_manager_1a629b18584b99e4ab63ab7031eaf6ba18">get</link>();
+<anchor xml:id="__interrupt_manager_8h_source_1l00041"/>00041 
+<anchor xml:id="__interrupt_manager_8h_source_1l00044"/><link linkend="_classmbed_1_1_interrupt_manager_1a112a068c3a6f373ec6c12fdf0b48987b">00044</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmbed_1_1_interrupt_manager_1a112a068c3a6f373ec6c12fdf0b48987b">destroy</link>();
+<anchor xml:id="__interrupt_manager_8h_source_1l00045"/>00045 
+<anchor xml:id="__interrupt_manager_8h_source_1l00054"/><link linkend="_classmbed_1_1_interrupt_manager_1a352607247d5c0532ecf602d1cf60169e">00054</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_function_pointer">pFunctionPointer_t</link>&#32;<link linkend="_classmbed_1_1_interrupt_manager_1a352607247d5c0532ecf602d1cf60169e">add_handler</link>(<emphasis role="keywordtype">void</emphasis>&#32;(*function)(<emphasis role="keywordtype">void</emphasis>),&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq)&#32;{
+<anchor xml:id="__interrupt_manager_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;add_common(function,&#32;irq);
+<anchor xml:id="__interrupt_manager_8h_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__interrupt_manager_8h_source_1l00057"/>00057 
+<anchor xml:id="__interrupt_manager_8h_source_1l00066"/><link linkend="_classmbed_1_1_interrupt_manager_1a1db579c8908fa8aa0815d41f6840fd68">00066</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_function_pointer">pFunctionPointer_t</link>&#32;<link linkend="_classmbed_1_1_interrupt_manager_1a1db579c8908fa8aa0815d41f6840fd68">add_handler_front</link>(<emphasis role="keywordtype">void</emphasis>&#32;(*function)(<emphasis role="keywordtype">void</emphasis>),&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq)&#32;{
+<anchor xml:id="__interrupt_manager_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;add_common(function,&#32;irq,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__interrupt_manager_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__interrupt_manager_8h_source_1l00069"/>00069 
+<anchor xml:id="__interrupt_manager_8h_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__interrupt_manager_8h_source_1l00080"/><link linkend="_classmbed_1_1_interrupt_manager_1a64fd0e2a456c655832e4fe83fe62762b">00080</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_function_pointer">pFunctionPointer_t</link>&#32;<link linkend="_classmbed_1_1_interrupt_manager_1a64fd0e2a456c655832e4fe83fe62762b">add_handler</link>(T*&#32;tptr,&#32;<emphasis role="keywordtype">void</emphasis>&#32;(T::*mptr)(<emphasis role="keywordtype">void</emphasis>),&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq)&#32;{
+<anchor xml:id="__interrupt_manager_8h_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;add_common(tptr,&#32;mptr,&#32;irq);
+<anchor xml:id="__interrupt_manager_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__interrupt_manager_8h_source_1l00083"/>00083 
+<anchor xml:id="__interrupt_manager_8h_source_1l00093"/>00093 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__interrupt_manager_8h_source_1l00094"/><link linkend="_classmbed_1_1_interrupt_manager_1a750dc4a22734ace4595e1710d3454275">00094</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_function_pointer">pFunctionPointer_t</link>&#32;<link linkend="_classmbed_1_1_interrupt_manager_1a750dc4a22734ace4595e1710d3454275">add_handler_front</link>(T*&#32;tptr,&#32;<emphasis role="keywordtype">void</emphasis>&#32;(T::*mptr)(<emphasis role="keywordtype">void</emphasis>),&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq)&#32;{
+<anchor xml:id="__interrupt_manager_8h_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;add_common(tptr,&#32;mptr,&#32;irq,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__interrupt_manager_8h_source_1l00096"/>00096 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__interrupt_manager_8h_source_1l00097"/>00097 
+<anchor xml:id="__interrupt_manager_8h_source_1l00106"/><link linkend="_classmbed_1_1_interrupt_manager_1a2eb949920e99f46b2f7a4c3e4c75df7a">00106</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classmbed_1_1_interrupt_manager_1a2eb949920e99f46b2f7a4c3e4c75df7a">remove_handler</link>(<link linkend="_classmbed_1_1_function_pointer">pFunctionPointer_t</link>&#32;handler,&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq);
+<anchor xml:id="__interrupt_manager_8h_source_1l00107"/>00107 
+<anchor xml:id="__interrupt_manager_8h_source_1l00108"/>00108 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__interrupt_manager_8h_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link>();
+<anchor xml:id="__interrupt_manager_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_interrupt_manager">~InterruptManager</link>();
+<anchor xml:id="__interrupt_manager_8h_source_1l00111"/>00111 
+<anchor xml:id="__interrupt_manager_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;We&#32;declare&#32;the&#32;copy&#32;contructor&#32;and&#32;the&#32;assignment&#32;operator,&#32;but&#32;we&#32;don&apos;t</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00113"/>00113 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;implement&#32;them.&#32;This&#32;way,&#32;if&#32;someone&#32;tries&#32;to&#32;copy/assign&#32;our&#32;instance,</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;he&#32;will&#32;get&#32;an&#32;error&#32;at&#32;compile&#32;time.</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00115"/>00115 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link>&amp;);
+<anchor xml:id="__interrupt_manager_8h_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link>&amp;&#32;operator&#32;=(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link>&amp;);
+<anchor xml:id="__interrupt_manager_8h_source_1l00117"/>00117 
+<anchor xml:id="__interrupt_manager_8h_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+<anchor xml:id="__interrupt_manager_8h_source_1l00119"/>00119 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_function_pointer">pFunctionPointer_t</link>&#32;add_common(T&#32;*tptr,&#32;<emphasis role="keywordtype">void</emphasis>&#32;(T::*mptr)(<emphasis role="keywordtype">void</emphasis>),&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;front=<emphasis role="keyword">false</emphasis>)&#32;{
+<anchor xml:id="__interrupt_manager_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;irq_pos&#32;=&#32;get_irq_index(irq);
+<anchor xml:id="__interrupt_manager_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;change&#32;=&#32;must_replace_vector(irq);
+<anchor xml:id="__interrupt_manager_8h_source_1l00122"/>00122 
+<anchor xml:id="__interrupt_manager_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_function_pointer">pFunctionPointer_t</link>&#32;pf&#32;=&#32;front&#32;?&#32;_chains[irq_pos]-&gt;<link linkend="_classmbed_1_1_call_chain_1a5e0dd730be3640cee8e482663d9025d7">add_front</link>(tptr,&#32;mptr)&#32;:&#32;_chains[irq_pos]-&gt;<link linkend="_classmbed_1_1_call_chain_1a472ea4d4bff102206dabec6d29df9c6a">add</link>(tptr,&#32;mptr);
+<anchor xml:id="__interrupt_manager_8h_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(change)
+<anchor xml:id="__interrupt_manager_8h_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_cmsis__nvic_8h_1ab43c1c59d5c081f1bc725237f4b1f916">NVIC_SetVector</link>(irq,&#32;(uint32_t)&amp;InterruptManager::static_irq_helper);
+<anchor xml:id="__interrupt_manager_8h_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pf;
+<anchor xml:id="__interrupt_manager_8h_source_1l00127"/>00127 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__interrupt_manager_8h_source_1l00128"/>00128 
+<anchor xml:id="__interrupt_manager_8h_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_function_pointer">pFunctionPointer_t</link>&#32;add_common(<emphasis role="keywordtype">void</emphasis>&#32;(*function)(<emphasis role="keywordtype">void</emphasis>),&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;front=<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__interrupt_manager_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;must_replace_vector(<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq);
+<anchor xml:id="__interrupt_manager_8h_source_1l00131"/>00131 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;get_irq_index(<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq);
+<anchor xml:id="__interrupt_manager_8h_source_1l00132"/>00132 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;irq_helper();
+<anchor xml:id="__interrupt_manager_8h_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;add_helper(<emphasis role="keywordtype">void</emphasis>&#32;(*function)(<emphasis role="keywordtype">void</emphasis>),&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;irq,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;front=<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__interrupt_manager_8h_source_1l00134"/>00134 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;static_irq_helper();
+<anchor xml:id="__interrupt_manager_8h_source_1l00135"/>00135 
+<anchor xml:id="__interrupt_manager_8h_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_call_chain">CallChain</link>*&#32;_chains[<link linkend="_cmsis__nvic_8h_1aabda131b2f01e9aa52b49477300bddf6">NVIC_NUM_VECTORS</link>];
+<anchor xml:id="__interrupt_manager_8h_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_classmbed_1_1_interrupt_manager">InterruptManager</link>*&#32;_instance;
+<anchor xml:id="__interrupt_manager_8h_source_1l00138"/>00138 };
+<anchor xml:id="__interrupt_manager_8h_source_1l00139"/>00139 
+<anchor xml:id="__interrupt_manager_8h_source_1l00140"/>00140 }&#32;<emphasis role="comment">//&#32;namespace&#32;mbed</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00141"/>00141 
+<anchor xml:id="__interrupt_manager_8h_source_1l00142"/>00142 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__interrupt_manager_8h_source_1l00143"/>00143 
+</programlisting></section>

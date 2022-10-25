@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_t_c_ex___wakeup___timer___definitions" xml:lang="en-US">
+<title>RTCEx_Wakeup_Timer_Definitions</title>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1ga3864a5d628a34118dfcc86e9b8958e51">RTC_WAKEUPCLOCK_RTCCLK_DIV16</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gaaa4ec1d6b96e88b070899d0dd5d8869f">RTC_WAKEUPCLOCK_RTCCLK_DIV8</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gade098ac6e923b02c06de003f61aafd2c">RTC_WAKEUPCLOCK_RTCCLK_DIV4</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gab1013526c00cfab26015267f17b6553f">RTC_WAKEUPCLOCK_RTCCLK_DIV2</link>   ((uint32_t)0x00000003)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1ga2d75cf962faf3257ada7f102fccfcb62">RTC_WAKEUPCLOCK_CK_SPRE_16BITS</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gab4ff75ad48550530f95698f269a617dd">RTC_WAKEUPCLOCK_CK_SPRE_17BITS</link>   ((uint32_t)0x00000006)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gab8e7db6943d4d03c850ef9dc20389bb3">IS_WAKEUP_CLOCK</link>(CLOCK)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1ga862e77efddc4db29ce0779501b21c029">IS_WAKEUP_COUNTER</link>(COUNTER)   ((COUNTER) &lt;= 0xFFFF)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_t_c_ex___wakeup___timer___definitions_1gab8e7db6943d4d03c850ef9dc20389bb3"/><section>
+    <title>IS_WAKEUP_CLOCK</title>
+<indexterm><primary>IS_WAKEUP_CLOCK</primary><secondary>RTCEx_Wakeup_Timer_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary><secondary>IS_WAKEUP_CLOCK</secondary></indexterm>
+<para><computeroutput>#define IS_WAKEUP_CLOCK( CLOCK)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((CLOCK)&#32;==&#32;<link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1ga3864a5d628a34118dfcc86e9b8958e51">RTC_WAKEUPCLOCK_RTCCLK_DIV16</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CLOCK)&#32;==&#32;<link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gaaa4ec1d6b96e88b070899d0dd5d8869f">RTC_WAKEUPCLOCK_RTCCLK_DIV8</link>)&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CLOCK)&#32;==&#32;<link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gade098ac6e923b02c06de003f61aafd2c">RTC_WAKEUPCLOCK_RTCCLK_DIV4</link>)&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CLOCK)&#32;==&#32;<link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gab1013526c00cfab26015267f17b6553f">RTC_WAKEUPCLOCK_RTCCLK_DIV2</link>)&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CLOCK)&#32;==&#32;<link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1ga2d75cf962faf3257ada7f102fccfcb62">RTC_WAKEUPCLOCK_CK_SPRE_16BITS</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CLOCK)&#32;==&#32;<link linkend="_group___r_t_c_ex___wakeup___timer___definitions_1gab4ff75ad48550530f95698f269a617dd">RTC_WAKEUPCLOCK_CK_SPRE_17BITS</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00312">312</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___wakeup___timer___definitions_1ga862e77efddc4db29ce0779501b21c029"/><section>
+    <title>IS_WAKEUP_COUNTER</title>
+<indexterm><primary>IS_WAKEUP_COUNTER</primary><secondary>RTCEx_Wakeup_Timer_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary><secondary>IS_WAKEUP_COUNTER</secondary></indexterm>
+<para><computeroutput>#define IS_WAKEUP_COUNTER( COUNTER)   ((COUNTER) &lt;= 0xFFFF)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00319">319</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___wakeup___timer___definitions_1ga2d75cf962faf3257ada7f102fccfcb62"/><section>
+    <title>RTC_WAKEUPCLOCK_CK_SPRE_16BITS</title>
+<indexterm><primary>RTC_WAKEUPCLOCK_CK_SPRE_16BITS</primary><secondary>RTCEx_Wakeup_Timer_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary><secondary>RTC_WAKEUPCLOCK_CK_SPRE_16BITS</secondary></indexterm>
+<para><computeroutput>#define RTC_WAKEUPCLOCK_CK_SPRE_16BITS   ((uint32_t)0x00000004)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00309">309</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___wakeup___timer___definitions_1gab4ff75ad48550530f95698f269a617dd"/><section>
+    <title>RTC_WAKEUPCLOCK_CK_SPRE_17BITS</title>
+<indexterm><primary>RTC_WAKEUPCLOCK_CK_SPRE_17BITS</primary><secondary>RTCEx_Wakeup_Timer_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary><secondary>RTC_WAKEUPCLOCK_CK_SPRE_17BITS</secondary></indexterm>
+<para><computeroutput>#define RTC_WAKEUPCLOCK_CK_SPRE_17BITS   ((uint32_t)0x00000006)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00310">310</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___wakeup___timer___definitions_1ga3864a5d628a34118dfcc86e9b8958e51"/><section>
+    <title>RTC_WAKEUPCLOCK_RTCCLK_DIV16</title>
+<indexterm><primary>RTC_WAKEUPCLOCK_RTCCLK_DIV16</primary><secondary>RTCEx_Wakeup_Timer_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary><secondary>RTC_WAKEUPCLOCK_RTCCLK_DIV16</secondary></indexterm>
+<para><computeroutput>#define RTC_WAKEUPCLOCK_RTCCLK_DIV16   ((uint32_t)0x00000000)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00305">305</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___wakeup___timer___definitions_1gab1013526c00cfab26015267f17b6553f"/><section>
+    <title>RTC_WAKEUPCLOCK_RTCCLK_DIV2</title>
+<indexterm><primary>RTC_WAKEUPCLOCK_RTCCLK_DIV2</primary><secondary>RTCEx_Wakeup_Timer_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary><secondary>RTC_WAKEUPCLOCK_RTCCLK_DIV2</secondary></indexterm>
+<para><computeroutput>#define RTC_WAKEUPCLOCK_RTCCLK_DIV2   ((uint32_t)0x00000003)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00308">308</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___wakeup___timer___definitions_1gade098ac6e923b02c06de003f61aafd2c"/><section>
+    <title>RTC_WAKEUPCLOCK_RTCCLK_DIV4</title>
+<indexterm><primary>RTC_WAKEUPCLOCK_RTCCLK_DIV4</primary><secondary>RTCEx_Wakeup_Timer_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary><secondary>RTC_WAKEUPCLOCK_RTCCLK_DIV4</secondary></indexterm>
+<para><computeroutput>#define RTC_WAKEUPCLOCK_RTCCLK_DIV4   ((uint32_t)0x00000002)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00307">307</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___wakeup___timer___definitions_1gaaa4ec1d6b96e88b070899d0dd5d8869f"/><section>
+    <title>RTC_WAKEUPCLOCK_RTCCLK_DIV8</title>
+<indexterm><primary>RTC_WAKEUPCLOCK_RTCCLK_DIV8</primary><secondary>RTCEx_Wakeup_Timer_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Wakeup_Timer_Definitions</primary><secondary>RTC_WAKEUPCLOCK_RTCCLK_DIV8</secondary></indexterm>
+<para><computeroutput>#define RTC_WAKEUPCLOCK_RTCCLK_DIV8   ((uint32_t)0x00000001)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00306">306</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+</section>
+</section>

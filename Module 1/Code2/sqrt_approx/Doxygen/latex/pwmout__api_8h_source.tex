@@ -1,0 +1,55 @@
+\hypertarget{pwmout__api_8h_source}{}\doxysection{pwmout\+\_\+api.\+h}
+\label{pwmout__api_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/pwmout\_api.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/pwmout\_api.h}}
+\mbox{\hyperlink{pwmout__api_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_PWMOUT\_API\_H}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_PWMOUT\_API\_H}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{device_8h}{device.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00021}00021 \textcolor{preprocessor}{\#if DEVICE\_PWMOUT}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00023}00023 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00024}00024 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00025}00025 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00027}00027 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structpwmout__s}{pwmout\_s}} pwmout\_t;}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00029}00029 \textcolor{keywordtype}{void} pwmout\_init         (pwmout\_t* obj, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structpwmout__s_a1f46a3d0fd63bcb5591dc1db407300aa}{pin}});}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00030}00030 \textcolor{keywordtype}{void} pwmout\_free         (pwmout\_t* obj);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00032}00032 \textcolor{keywordtype}{void}  pwmout\_write       (pwmout\_t* obj, \textcolor{keywordtype}{float} percent);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00033}00033 \textcolor{keywordtype}{float} pwmout\_read        (pwmout\_t* obj);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00035}00035 \textcolor{keywordtype}{void} pwmout\_period       (pwmout\_t* obj, \textcolor{keywordtype}{float} seconds);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00036}00036 \textcolor{keywordtype}{void} pwmout\_period\_ms    (pwmout\_t* obj, \textcolor{keywordtype}{int} ms);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00037}00037 \textcolor{keywordtype}{void} pwmout\_period\_us    (pwmout\_t* obj, \textcolor{keywordtype}{int} us);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00039}00039 \textcolor{keywordtype}{void} pwmout\_pulsewidth   (pwmout\_t* obj, \textcolor{keywordtype}{float} seconds);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00040}00040 \textcolor{keywordtype}{void} pwmout\_pulsewidth\_ms(pwmout\_t* obj, \textcolor{keywordtype}{int} ms);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00041}00041 \textcolor{keywordtype}{void} pwmout\_pulsewidth\_us(pwmout\_t* obj, \textcolor{keywordtype}{int} us);}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00043}00043 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00045}00045 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00047}00047 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{pwmout__api_8h_source_l00049}00049 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

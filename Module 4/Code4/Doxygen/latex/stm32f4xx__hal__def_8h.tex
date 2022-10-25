@@ -1,0 +1,119 @@
+\hypertarget{stm32f4xx__hal__def_8h}{}\doxysection{C\+:/\+Users/dayton.flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/\+TARGET\+\_\+\+NUCLEO\+\_\+\+F401\+RE/stm32f4xx\+\_\+hal\+\_\+def.h File Reference}
+\label{stm32f4xx__hal__def_8h}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_def.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_def.h}}
+
+
+This file contains HAL common defines, enumeration, macros and structures definitions.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_aad28bc64749c50dcedd6bf819fdc6974}\label{stm32f4xx__hal__def_8h_aad28bc64749c50dcedd6bf819fdc6974}} 
+\#define {\bfseries HAL\+\_\+\+MAX\+\_\+\+DELAY}~0x\+FFFFFFFF
+\item 
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}\label{stm32f4xx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}} 
+\#define {\bfseries HAL\+\_\+\+IS\+\_\+\+BIT\+\_\+\+SET}(REG,  BIT)~(((REG) \& (BIT)) != RESET)
+\item 
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a82637a84fbdca0e2a25496089b549924}\label{stm32f4xx__hal__def_8h_a82637a84fbdca0e2a25496089b549924}} 
+\#define {\bfseries HAL\+\_\+\+IS\+\_\+\+BIT\+\_\+\+CLR}(REG,  BIT)~(((REG) \& (BIT)) == RESET)
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__def_8h_af5b3b3d0eff8c4cb59d4d3909c247311}{\+\_\+\+\_\+\+HAL\+\_\+\+LINKDMA}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+PPP\+\_\+\+DMA\+\_\+\+FIELD\+\_\+\+\_\+,  \+\_\+\+\_\+\+DMA\+\_\+\+HANDLE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\+\_\+\+\_\+\+HAL\+\_\+\+LOCK}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\+\_\+\+\_\+\+HAL\+\_\+\+UNLOCK}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}\label{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}} 
+enum \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \{ {\bfseries HAL\+\_\+\+OK} = 0x00
+, {\bfseries HAL\+\_\+\+ERROR} = 0x01
+, {\bfseries HAL\+\_\+\+BUSY} = 0x02
+, {\bfseries HAL\+\_\+\+TIMEOUT} = 0x03
+ \}
+\begin{DoxyCompactList}\small\item\em HAL Status structures definition ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}\label{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}} 
+enum \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\+\_\+\+Lock\+Type\+Def}} \{ {\bfseries HAL\+\_\+\+UNLOCKED} = 0x00
+, {\bfseries HAL\+\_\+\+LOCKED} = 0x01
+ \}
+\begin{DoxyCompactList}\small\item\em HAL Lock structures definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains HAL common defines, enumeration, macros and structures definitions. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0\+RC2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/May-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_af5b3b3d0eff8c4cb59d4d3909c247311}\label{stm32f4xx__hal__def_8h_af5b3b3d0eff8c4cb59d4d3909c247311}} 
+\index{stm32f4xx\_hal\_def.h@{stm32f4xx\_hal\_def.h}!\_\_HAL\_LINKDMA@{\_\_HAL\_LINKDMA}}
+\index{\_\_HAL\_LINKDMA@{\_\_HAL\_LINKDMA}!stm32f4xx\_hal\_def.h@{stm32f4xx\_hal\_def.h}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_LINKDMA}{\_\_HAL\_LINKDMA}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+LINKDMA(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PPP\+\_\+\+DMA\+\_\+\+FIELD\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+DMA\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                        \textcolor{keywordflow}{do}\{                                                      \(\backslash\)}
+\DoxyCodeLine{                              (\_\_HANDLE\_\_)-\/>\_\_PPP\_DMA\_FIELD\_\_ = \&(\_\_DMA\_HANDLE\_\_); \(\backslash\)}
+\DoxyCodeLine{                              (\_\_DMA\_HANDLE\_\_).Parent = (\_\_HANDLE\_\_);             \(\backslash\)}
+\DoxyCodeLine{                          \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}\label{stm32f4xx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}} 
+\index{stm32f4xx\_hal\_def.h@{stm32f4xx\_hal\_def.h}!\_\_HAL\_LOCK@{\_\_HAL\_LOCK}}
+\index{\_\_HAL\_LOCK@{\_\_HAL\_LOCK}!stm32f4xx\_hal\_def.h@{stm32f4xx\_hal\_def.h}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_LOCK}{\_\_HAL\_LOCK}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+LOCK(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                \textcolor{keywordflow}{do}\{                                        \(\backslash\)}
+\DoxyCodeLine{                                    if((\_\_HANDLE\_\_)-\/>Lock == HAL\_LOCKED)   \(\backslash\)}
+\DoxyCodeLine{                                    \{                                      \(\backslash\)}
+\DoxyCodeLine{                                       return HAL\_BUSY;                    \(\backslash\)}
+\DoxyCodeLine{                                    \}                                      \(\backslash\)}
+\DoxyCodeLine{                                    else                                   \(\backslash\)}
+\DoxyCodeLine{                                    \{                                      \(\backslash\)}
+\DoxyCodeLine{                                       (\_\_HANDLE\_\_)-\/>Lock = HAL\_LOCKED;    \(\backslash\)}
+\DoxyCodeLine{                                    \}                                      \(\backslash\)}
+\DoxyCodeLine{                                  \}\textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}\label{stm32f4xx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}} 
+\index{stm32f4xx\_hal\_def.h@{stm32f4xx\_hal\_def.h}!\_\_HAL\_UNLOCK@{\_\_HAL\_UNLOCK}}
+\index{\_\_HAL\_UNLOCK@{\_\_HAL\_UNLOCK}!stm32f4xx\_hal\_def.h@{stm32f4xx\_hal\_def.h}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_UNLOCK}{\_\_HAL\_UNLOCK}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+UNLOCK(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                  \textcolor{keywordflow}{do}\{                                       \(\backslash\)}
+\DoxyCodeLine{                                      (\_\_HANDLE\_\_)-\/>Lock = HAL\_UNLOCKED;    \(\backslash\)}
+\DoxyCodeLine{                                    \}\textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}

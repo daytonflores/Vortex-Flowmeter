@@ -1,0 +1,241 @@
+\hypertarget{stm32f4xx__hal__ltdc_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+ltdc.\+h}
+\label{stm32f4xx__hal__ltdc_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_ltdc.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_ltdc.h}}
+\mbox{\hyperlink{stm32f4xx__hal__ltdc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00038}00038 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_LTDC\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00040}00040 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_LTDC\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00046}00046 \textcolor{preprocessor}{\#if defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00047}00047 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00048}00048 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00059}00059 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00061}00061 \textcolor{preprocessor}{\#define MAX\_LAYER  2}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00066}00066 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00067}00067 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00068}00068   uint8\_t Blue;                    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00071}00071   uint8\_t Green;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00074}00074   uint8\_t Red;                     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00077}00077   uint8\_t Reserved;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00078}00078 \} LTDC\_ColorTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00083}00083 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00084}00084 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00085}00085   uint32\_t            HSPolarity;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00088}00088   uint32\_t            VSPolarity;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00091}00091   uint32\_t            DEPolarity;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00094}00094   uint32\_t            PCPolarity;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00097}00097   uint32\_t            HorizontalSync;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00100}00100   uint32\_t            VerticalSync;              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00103}00103   uint32\_t            AccumulatedHBP;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00106}00106   uint32\_t            AccumulatedVBP;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00109}00109   uint32\_t            AccumulatedActiveW;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00112}00112   uint32\_t            AccumulatedActiveH;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00115}00115   uint32\_t            TotalWidth;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00118}00118   uint32\_t            TotalHeigh;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00121}00121   LTDC\_ColorTypeDef   Backcolor;                 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00122}00122 \} LTDC\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00128}00128 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00129}00129 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00130}00130   uint32\_t WindowX0;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00133}00133   uint32\_t WindowX1;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00136}00136   uint32\_t WindowY0;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00139}00139   uint32\_t WindowY1;                   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00142}00142   uint32\_t PixelFormat;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00145}00145   uint32\_t Alpha;                      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00148}00148   uint32\_t Alpha0;                     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00151}00151   uint32\_t BlendingFactor1;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00154}00154   uint32\_t BlendingFactor2;            }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00157}00157   uint32\_t FBStartAdress;              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00159}00159   uint32\_t ImageWidth;                 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00162}00162   uint32\_t ImageHeight;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00165}00165   LTDC\_ColorTypeDef   Backcolor;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00166}00166 \} LTDC\_LayerCfgTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00171}00171 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00172}00172 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00173}00173   HAL\_LTDC\_STATE\_RESET             = 0x00,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00174}00174   HAL\_LTDC\_STATE\_READY             = 0x01,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00175}00175   HAL\_LTDC\_STATE\_BUSY              = 0x02,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00176}00176   HAL\_LTDC\_STATE\_TIMEOUT           = 0x03,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00177}00177   HAL\_LTDC\_STATE\_ERROR             = 0x04     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00178}00178 \}HAL\_LTDC\_StateTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00183}00183 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00184}00184 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00185}00185   LTDC\_TypeDef                *Instance;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00187}00187   LTDC\_InitTypeDef            Init;                     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00189}00189   LTDC\_LayerCfgTypeDef        LayerCfg[MAX\_LAYER];      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00191}00191   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             Lock;                     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00193}00193   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_LTDC\_StateTypeDef  State;                    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00195}00195   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               ErrorCode;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00197}00197 \} LTDC\_HandleTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00199}00199 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00207}00207 \textcolor{preprocessor}{\#define IS\_LTDC\_LAYER(LAYER) ((LAYER) <= MAX\_LAYER)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00215}00215 \textcolor{preprocessor}{\#define HAL\_LTDC\_ERROR\_NONE      ((uint32\_t)0x00000000)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00216}00216 \textcolor{preprocessor}{\#define HAL\_LTDC\_ERROR\_TE        ((uint32\_t)0x00000001)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00217}00217 \textcolor{preprocessor}{\#define HAL\_LTDC\_ERROR\_FU        ((uint32\_t)0x00000002)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00218}00218 \textcolor{preprocessor}{\#define HAL\_LTDC\_ERROR\_TIMEOUT   ((uint32\_t)0x00000020)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00227}00227 \textcolor{preprocessor}{\#define LTDC\_HSPOLARITY\_AL                ((uint32\_t)0x00000000)                }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00228}00228 \textcolor{preprocessor}{\#define LTDC\_HSPOLARITY\_AH                LTDC\_GCR\_HSPOL                        }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00230}00230 \textcolor{preprocessor}{\#define IS\_LTDC\_HSPOL(HSPOL) (((HSPOL) == LTDC\_HSPOLARITY\_AL) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00231}00231 \textcolor{preprocessor}{                              ((HSPOL) == LTDC\_HSPOLARITY\_AH))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00239}00239 \textcolor{preprocessor}{\#define LTDC\_VSPOLARITY\_AL                ((uint32\_t)0x00000000)                }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00240}00240 \textcolor{preprocessor}{\#define LTDC\_VSPOLARITY\_AH                LTDC\_GCR\_VSPOL                        }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00242}00242 \textcolor{preprocessor}{\#define IS\_LTDC\_VSPOL(VSPOL) (((VSPOL) == LTDC\_VSPOLARITY\_AL) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00243}00243 \textcolor{preprocessor}{                              ((VSPOL) == LTDC\_VSPOLARITY\_AH))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00251}00251 \textcolor{preprocessor}{\#define LTDC\_DEPOLARITY\_AL                ((uint32\_t)0x00000000)                }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00252}00252 \textcolor{preprocessor}{\#define LTDC\_DEPOLARITY\_AH                LTDC\_GCR\_DEPOL                        }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00254}00254 \textcolor{preprocessor}{\#define IS\_LTDC\_DEPOL(DEPOL) (((DEPOL) ==  LTDC\_DEPOLARITY\_AL) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00255}00255 \textcolor{preprocessor}{                              ((DEPOL) ==  LTDC\_DEPOLARITY\_AH))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00263}00263 \textcolor{preprocessor}{\#define LTDC\_PCPOLARITY\_IPC               ((uint32\_t)0x00000000)                }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00264}00264 \textcolor{preprocessor}{\#define LTDC\_PCPOLARITY\_IIPC              LTDC\_GCR\_PCPOL                        }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00266}00266 \textcolor{preprocessor}{\#define IS\_LTDC\_PCPOL(PCPOL) (((PCPOL) ==  LTDC\_PCPOLARITY\_IPC) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00267}00267 \textcolor{preprocessor}{                              ((PCPOL) ==  LTDC\_PCPOLARITY\_IIPC))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00275}00275 \textcolor{preprocessor}{\#define LTDC\_HORIZONTALSYNC               (LTDC\_SSCR\_HSW >> 16)                 }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00276}00276 \textcolor{preprocessor}{\#define LTDC\_VERTICALSYNC                 LTDC\_SSCR\_VSH                         }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00278}00278 \textcolor{preprocessor}{\#define IS\_LTDC\_HSYNC(HSYNC)   ((HSYNC)  <= LTDC\_HORIZONTALSYNC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00279}00279 \textcolor{preprocessor}{\#define IS\_LTDC\_VSYNC(VSYNC)   ((VSYNC)  <= LTDC\_VERTICALSYNC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00280}00280 \textcolor{preprocessor}{\#define IS\_LTDC\_AHBP(AHBP)     ((AHBP)   <= LTDC\_HORIZONTALSYNC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00281}00281 \textcolor{preprocessor}{\#define IS\_LTDC\_AVBP(AVBP)     ((AVBP)   <= LTDC\_VERTICALSYNC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00282}00282 \textcolor{preprocessor}{\#define IS\_LTDC\_AAW(AAW)       ((AAW)    <= LTDC\_HORIZONTALSYNC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00283}00283 \textcolor{preprocessor}{\#define IS\_LTDC\_AAH(AAH)       ((AAH)    <= LTDC\_VERTICALSYNC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00284}00284 \textcolor{preprocessor}{\#define IS\_LTDC\_TOTALW(TOTALW) ((TOTALW) <= LTDC\_HORIZONTALSYNC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00285}00285 \textcolor{preprocessor}{\#define IS\_LTDC\_TOTALH(TOTALH) ((TOTALH) <= LTDC\_VERTICALSYNC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00293}00293 \textcolor{preprocessor}{\#define LTDC\_COLOR                   ((uint32\_t)0x000000FF)                     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00295}00295 \textcolor{preprocessor}{\#define IS\_LTDC\_BLUEVALUE(BBLUE)    ((BBLUE)  <= LTDC\_COLOR)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00296}00296 \textcolor{preprocessor}{\#define IS\_LTDC\_GREENVALUE(BGREEN)  ((BGREEN) <= LTDC\_COLOR)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00297}00297 \textcolor{preprocessor}{\#define IS\_LTDC\_REDVALUE(BRED)      ((BRED)   <= LTDC\_COLOR) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00305}00305 \textcolor{preprocessor}{\#define LTDC\_BLENDING\_FACTOR1\_CA                       ((uint32\_t)0x00000400)   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00306}00306 \textcolor{preprocessor}{\#define LTDC\_BLENDING\_FACTOR1\_PAxCA                    ((uint32\_t)0x00000600)   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00308}00308 \textcolor{preprocessor}{\#define IS\_LTDC\_BLENDING\_FACTOR1(BlendingFactor1) (((BlendingFactor1) == LTDC\_BLENDING\_FACTOR1\_CA) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00309}00309 \textcolor{preprocessor}{                                                   ((BlendingFactor1) == LTDC\_BLENDING\_FACTOR1\_PAxCA))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00317}00317 \textcolor{preprocessor}{\#define LTDC\_BLENDING\_FACTOR2\_CA                       ((uint32\_t)0x00000005)   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00318}00318 \textcolor{preprocessor}{\#define LTDC\_BLENDING\_FACTOR2\_PAxCA                    ((uint32\_t)0x00000007)   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00320}00320 \textcolor{preprocessor}{\#define IS\_LTDC\_BLENDING\_FACTOR2(BlendingFactor2) (((BlendingFactor2) == LTDC\_BLENDING\_FACTOR2\_CA) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00321}00321 \textcolor{preprocessor}{                                                   ((BlendingFactor2) == LTDC\_BLENDING\_FACTOR2\_PAxCA))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00329}00329 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_ARGB8888                  ((uint32\_t)0x00000000)      }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00330}00330 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_RGB888                    ((uint32\_t)0x00000001)      }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00331}00331 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_RGB565                    ((uint32\_t)0x00000002)      }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00332}00332 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_ARGB1555                  ((uint32\_t)0x00000003)      }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00333}00333 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_ARGB4444                  ((uint32\_t)0x00000004)      }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00334}00334 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_L8                        ((uint32\_t)0x00000005)      }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00335}00335 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_AL44                      ((uint32\_t)0x00000006)      }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00336}00336 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_AL88                      ((uint32\_t)0x00000007)      }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00338}00338 \textcolor{preprocessor}{\#define IS\_LTDC\_PIXEL\_FORMAT(Pixelformat) (((Pixelformat) == LTDC\_PIXEL\_FORMAT\_ARGB8888) || ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_RGB888)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00339}00339 \textcolor{preprocessor}{                                           ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_RGB565)   || ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_ARGB1555) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00340}00340 \textcolor{preprocessor}{                                           ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_ARGB4444) || ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_L8)       || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00341}00341 \textcolor{preprocessor}{                                           ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_AL44)     || ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_AL88))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00349}00349 \textcolor{preprocessor}{\#define LTDC\_ALPHA               LTDC\_LxCACR\_CONSTA                             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00351}00351 \textcolor{preprocessor}{\#define IS\_LTDC\_ALPHA(ALPHA) ((ALPHA) <= LTDC\_ALPHA)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00359}00359 \textcolor{preprocessor}{\#define LTDC\_STOPPOSITION                 (LTDC\_LxWHPCR\_WHSPPOS >> 16)          }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00360}00360 \textcolor{preprocessor}{\#define LTDC\_STARTPOSITION                LTDC\_LxWHPCR\_WHSTPOS                  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00362}00362 \textcolor{preprocessor}{\#define LTDC\_COLOR\_FRAME\_BUFFER           LTDC\_LxCFBLR\_CFBLL                    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00363}00363 \textcolor{preprocessor}{\#define LTDC\_LINE\_NUMBER                  LTDC\_LxCFBLNR\_CFBLNBR                 }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00365}00365 \textcolor{preprocessor}{\#define IS\_LTDC\_HCONFIGST(HCONFIGST) ((HCONFIGST) <= LTDC\_STARTPOSITION)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00366}00366 \textcolor{preprocessor}{\#define IS\_LTDC\_HCONFIGSP(HCONFIGSP) ((HCONFIGSP) <= LTDC\_STOPPOSITION)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00367}00367 \textcolor{preprocessor}{\#define IS\_LTDC\_VCONFIGST(VCONFIGST)  ((VCONFIGST) <= LTDC\_STARTPOSITION)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00368}00368 \textcolor{preprocessor}{\#define IS\_LTDC\_VCONFIGSP(VCONFIGSP) ((VCONFIGSP) <= LTDC\_STOPPOSITION)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00369}00369 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00370}00370 \textcolor{preprocessor}{\#define IS\_LTDC\_CFBP(CFBP) ((CFBP) <= LTDC\_COLOR\_FRAME\_BUFFER)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00371}00371 \textcolor{preprocessor}{\#define IS\_LTDC\_CFBLL(CFBLL) ((CFBLL) <= LTDC\_COLOR\_FRAME\_BUFFER)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00372}00372 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00373}00373 \textcolor{preprocessor}{\#define IS\_LTDC\_CFBLNBR(CFBLNBR) ((CFBLNBR) <= LTDC\_LINE\_NUMBER)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00381}00381 \textcolor{preprocessor}{\#define IS\_LTDC\_LIPOS(LIPOS) ((LIPOS) <= 0x7FF)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00389}00389 \textcolor{preprocessor}{\#define LTDC\_IT\_LI                      LTDC\_IER\_LIE}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00390}00390 \textcolor{preprocessor}{\#define LTDC\_IT\_FU                      LTDC\_IER\_FUIE}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00391}00391 \textcolor{preprocessor}{\#define LTDC\_IT\_TE                      LTDC\_IER\_TERRIE}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00392}00392 \textcolor{preprocessor}{\#define LTDC\_IT\_RR                      LTDC\_IER\_RRIE}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00393}00393 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00394}00394 \textcolor{preprocessor}{\#define IS\_LTDC\_IT(IT) ((((IT) \& (uint32\_t)0xFFFFFFF0) == 0x00) \&\& ((IT) != 0x00))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00402}00402 \textcolor{preprocessor}{\#define LTDC\_FLAG\_LI                     LTDC\_ISR\_LIF}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00403}00403 \textcolor{preprocessor}{\#define LTDC\_FLAG\_FU                     LTDC\_ISR\_FUIF}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00404}00404 \textcolor{preprocessor}{\#define LTDC\_FLAG\_TE                     LTDC\_ISR\_TERRIF}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00405}00405 \textcolor{preprocessor}{\#define LTDC\_FLAG\_RR                     LTDC\_ISR\_RRIF}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00406}00406 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00407}00407 \textcolor{preprocessor}{\#define IS\_LTDC\_FLAG(FLAG) (((FLAG) == LTDC\_FLAG\_LI) || ((FLAG) == LTDC\_FLAG\_FU) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00408}00408 \textcolor{preprocessor}{                               ((FLAG) == LTDC\_FLAG\_TERR) || ((FLAG) == LTDC\_FLAG\_RR))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00417}00417 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00418}00418 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00423}00423 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_LTDC\_STATE\_RESET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00424}00424 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00430}00430 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_ENABLE(\_\_HANDLE\_\_)    ((\_\_HANDLE\_\_)-\/>Instance-\/>GCR |= LTDC\_GCR\_LTDCEN)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00431}00431 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00437}00437 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_DISABLE(\_\_HANDLE\_\_)   ((\_\_HANDLE\_\_)-\/>Instance-\/>GCR \&= \string~(LTDC\_GCR\_LTDCEN))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00438}00438 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00446}00446 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_LAYER(\_\_HANDLE\_\_, \_\_LAYER\_\_)   ((LTDC\_Layer\_TypeDef *)(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)) + 0x84 + (0x80*(\_\_LAYER\_\_))))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00447}00447 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00448}00448 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_LAYER\_ENABLE(\_\_HANDLE\_\_, \_\_LAYER\_\_)  ((\_\_HAL\_LTDC\_LAYER((\_\_HANDLE\_\_), (\_\_LAYER\_\_)))-\/>CR |= (uint32\_t)LTDC\_LxCR\_LEN)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00449}00449 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00457}00457 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_LAYER\_DISABLE(\_\_HANDLE\_\_, \_\_LAYER\_\_) ((\_\_HAL\_LTDC\_LAYER((\_\_HANDLE\_\_), (\_\_LAYER\_\_)))-\/>CR \&= \string~(uint32\_t)LTDC\_LxCR\_LEN)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00458}00458 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00464}00464 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_RELOAD\_CONFIG(\_\_HANDLE\_\_)   ((\_\_HANDLE\_\_)-\/>Instance-\/>SRCR |= LTDC\_SRCR\_IMR)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00465}00465 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00466}00466 \textcolor{comment}{/* Interrupt \& Flag management */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00478}00478 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>ISR \& (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00479}00479 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00491}00491 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>ICR |= (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00492}00492 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00504}00504 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>IER |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00505}00505 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00517}00517 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>IER \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00518}00518 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00530}00530 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>ISR \& (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00531}00531 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00532}00532 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00533}00533 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00534}00534 \textcolor{comment}{/* Initialization and de-\/initialization functions *****************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00535}00535 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_Init(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00536}00536 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_DeInit(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00537}00537 \textcolor{keywordtype}{void} HAL\_LTDC\_MspInit(LTDC\_HandleTypeDef* hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00538}00538 \textcolor{keywordtype}{void} HAL\_LTDC\_MspDeInit(LTDC\_HandleTypeDef* hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00539}00539 \textcolor{keywordtype}{void} HAL\_LTDC\_ErrorCallback(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00540}00540 \textcolor{keywordtype}{void} HAL\_LTDC\_LineEvenCallback(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00541}00541 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00542}00542 \textcolor{comment}{/* IO operation functions *****************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00543}00543 \textcolor{keywordtype}{void}  HAL\_LTDC\_IRQHandler(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00544}00544 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00545}00545 \textcolor{comment}{/* Peripheral Control functions ***********************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00546}00546 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_ConfigLayer(LTDC\_HandleTypeDef *hltdc, LTDC\_LayerCfgTypeDef *pLayerCfg, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00547}00547 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetWindowSize(LTDC\_HandleTypeDef *hltdc, uint32\_t XSize, uint32\_t YSize, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00548}00548 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetWindowPosition(LTDC\_HandleTypeDef *hltdc, uint32\_t X0, uint32\_t Y0, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00549}00549 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetPixelFormat(LTDC\_HandleTypeDef *hltdc, uint32\_t Pixelformat, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00550}00550 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetAlpha(LTDC\_HandleTypeDef *hltdc, uint32\_t Alpha, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00551}00551 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetAddress(LTDC\_HandleTypeDef *hltdc, uint32\_t Address, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00552}00552 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_ConfigColorKeying(LTDC\_HandleTypeDef *hltdc, uint32\_t RGBValue, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00553}00553 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_ConfigCLUT(LTDC\_HandleTypeDef *hltdc, uint32\_t *pCLUT, uint32\_t CLUTSize, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00554}00554 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_EnableColorKeying(LTDC\_HandleTypeDef *hltdc, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00555}00555 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_DisableColorKeying(LTDC\_HandleTypeDef *hltdc, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00556}00556 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_EnableCLUT(LTDC\_HandleTypeDef *hltdc, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00557}00557 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_DisableCLUT(LTDC\_HandleTypeDef *hltdc, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00558}00558 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_ProgramLineEvent(LTDC\_HandleTypeDef *hltdc, uint32\_t Line);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00559}00559 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_EnableDither(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00560}00560 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_DisableDither(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00561}00561 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00562}00562 \textcolor{comment}{/* Peripheral State functions *************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00563}00563 HAL\_LTDC\_StateTypeDef HAL\_LTDC\_GetState(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00564}00564 uint32\_t              HAL\_LTDC\_GetError(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00565}00565 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00566}00566 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00567}00567 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00576}00576 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00577}00577 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00578}00578 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00579}00579 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00580}00580 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_LTDC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00581}00581 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__ltdc_8h_source_l00582}00582 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

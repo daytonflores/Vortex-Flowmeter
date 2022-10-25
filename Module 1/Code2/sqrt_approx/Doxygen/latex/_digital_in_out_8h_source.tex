@@ -1,0 +1,84 @@
+\hypertarget{_digital_in_out_8h_source}{}\doxysection{Digital\+In\+Out.\+h}
+\label{_digital_in_out_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/DigitalInOut.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/DigitalInOut.h}}
+\mbox{\hyperlink{_digital_in_out_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_DIGITALINOUT\_H}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_DIGITALINOUT\_H}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{platform_8h}{platform.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00021}00021 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gpio__api_8h}{gpio\_api.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00023}00023 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00027}\mbox{\hyperlink{classmbed_1_1_digital_in_out}{00027}} \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_digital_in_out}{DigitalInOut}} \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00029}00029 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00034}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a417f1fb1ec2ce972b0790aa5e5e5a628}{00034}}     \mbox{\hyperlink{classmbed_1_1_digital_in_out_a417f1fb1ec2ce972b0790aa5e5e5a628}{DigitalInOut}}(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin) : \mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}}() \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00035}00035         \mbox{\hyperlink{gpio__api_8h_a673e8a1c56bae84724ba155f3c99e959}{gpio\_init\_in}}(\&\mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}}, pin);}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00045}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a75465681335eddd9d9d3e72336cfc935}{00045}}     \mbox{\hyperlink{classmbed_1_1_digital_in_out_a75465681335eddd9d9d3e72336cfc935}{DigitalInOut}}(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin, \mbox{\hyperlink{_pin_names_8h_a8ff912d511000d542e6ad34966166f38}{PinDirection}} direction, \mbox{\hyperlink{_pin_names_8h_a15c0c34a3baec6b9d2390a426bd3ba96}{PinMode}} \mbox{\hyperlink{classmbed_1_1_digital_in_out_a12ffae4af877bdcd41ad2fc6a0a444ad}{mode}}, \textcolor{keywordtype}{int} value) : \mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}}() \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00046}00046         \mbox{\hyperlink{gpio__api_8h_ada71c18e8fe139d522d63f2a7f9f2f3e}{gpio\_init\_inout}}(\&\mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}}, pin, direction, \mbox{\hyperlink{classmbed_1_1_digital_in_out_a12ffae4af877bdcd41ad2fc6a0a444ad}{mode}}, value);}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00054}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a25d1931bc29d014446294ab8dc470f2a}{00054}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_digital_in_out_a25d1931bc29d014446294ab8dc470f2a}{write}}(\textcolor{keywordtype}{int} value) \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00055}00055         \mbox{\hyperlink{gpio__api_8h_aedd478762e37aeafcf9ade8e255718b0}{gpio\_write}}(\&\mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}}, value);}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00064}\mbox{\hyperlink{classmbed_1_1_digital_in_out_aaab5dab5b969a87f538242e524431637}{00064}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_digital_in_out_aaab5dab5b969a87f538242e524431637}{read}}() \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00065}00065         \textcolor{keywordflow}{return} \mbox{\hyperlink{gpio__api_8h_abb97298a1eb6f6c11b6290abe7a1823b}{gpio\_read}}(\&\mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}});}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00070}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a7437b254e19e7e12fc2ec99945f4ecea}{00070}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_digital_in_out_a7437b254e19e7e12fc2ec99945f4ecea}{output}}() \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00071}00071         \mbox{\hyperlink{gpio__api_8h_a5a6594d03628bb652d45bdd5bf266348}{gpio\_dir}}(\&\mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}}, \mbox{\hyperlink{_pin_names_8h_a8ff912d511000d542e6ad34966166f38a7a0976acb2666b52e320497c547ea647}{PIN\_OUTPUT}});}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00076}\mbox{\hyperlink{classmbed_1_1_digital_in_out_ac3bdbc826d19fb41ffb25470527c3801}{00076}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_digital_in_out_ac3bdbc826d19fb41ffb25470527c3801}{input}}() \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00077}00077         \mbox{\hyperlink{gpio__api_8h_a5a6594d03628bb652d45bdd5bf266348}{gpio\_dir}}(\&\mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}}, \mbox{\hyperlink{_pin_names_8h_a8ff912d511000d542e6ad34966166f38a9473a73f5d4f521d8dd4459d84a5e580}{PIN\_INPUT}});}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00078}00078     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00084}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a12ffae4af877bdcd41ad2fc6a0a444ad}{00084}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_digital_in_out_a12ffae4af877bdcd41ad2fc6a0a444ad}{mode}}(\mbox{\hyperlink{_pin_names_8h_a15c0c34a3baec6b9d2390a426bd3ba96}{PinMode}} pull) \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00085}00085         \mbox{\hyperlink{gpio__api_8h_a980b8f8055986ffc177267488a4bd19d}{gpio\_mode}}(\&\mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}}, pull);}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00086}00086     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00088}00088 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00091}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a68ae482470b76ee95e7ef3c8afca94d1}{00091}}     \mbox{\hyperlink{classmbed_1_1_digital_in_out}{DigitalInOut}}\& \mbox{\hyperlink{classmbed_1_1_digital_in_out_a68ae482470b76ee95e7ef3c8afca94d1}{operator= }}(\textcolor{keywordtype}{int} value) \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00092}00092         \mbox{\hyperlink{classmbed_1_1_digital_in_out_a25d1931bc29d014446294ab8dc470f2a}{write}}(value);}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00093}00093         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00096}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a0c90e5c5611f603c94ed64c81b9fb601}{00096}}     \mbox{\hyperlink{classmbed_1_1_digital_in_out}{DigitalInOut}}\& \mbox{\hyperlink{classmbed_1_1_digital_in_out_a68ae482470b76ee95e7ef3c8afca94d1}{operator= }}(\mbox{\hyperlink{classmbed_1_1_digital_in_out}{DigitalInOut}}\& rhs) \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00097}00097         \mbox{\hyperlink{classmbed_1_1_digital_in_out_a25d1931bc29d014446294ab8dc470f2a}{write}}(rhs.\mbox{\hyperlink{classmbed_1_1_digital_in_out_aaab5dab5b969a87f538242e524431637}{read}}());}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00098}00098         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00099}00099     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00103}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a4f4ea421e40bda08a2deca657f640fea}{00103}}     \textcolor{keyword}{operator} int() \{}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00104}00104         \textcolor{keywordflow}{return} \mbox{\hyperlink{classmbed_1_1_digital_in_out_aaab5dab5b969a87f538242e524431637}{read}}();}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00105}00105     \}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00106}00106 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00108}00108 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00109}\mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{00109}}     \mbox{\hyperlink{structgpio__t}{gpio\_t}} \mbox{\hyperlink{classmbed_1_1_digital_in_out_a18315be473e254aa585988e1ce74e512}{gpio}};}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00110}00110 \};}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00112}00112 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_digital_in_out_8h_source_l00114}00114 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

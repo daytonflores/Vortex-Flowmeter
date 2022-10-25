@@ -1,0 +1,723 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___s_d" xml:lang="en-US">
+<title>SD</title>
+<indexterm><primary>SD</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___s_d___exported___constants">SD_Exported_Constants</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d___interrupt___clock">SD_Interrupt_Clock</link></para>
+
+<para>macros to handle interrupts and specific clock configurations </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link></para>
+
+<para>SDIO Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_a_l___s_d___c_s_d_typedef">HAL_SD_CSDTypedef</link></para>
+
+<para>Card Specific Data: CSD Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_a_l___s_d___c_i_d_typedef">HAL_SD_CIDTypedef</link></para>
+
+<para>Card Identification Data: CID Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_a_l___s_d___card_status_typedef">HAL_SD_CardStatusTypedef</link></para>
+
+<para>SD Card Status returned by ACMD13 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_h_a_l___s_d___card_info_typedef">HAL_SD_CardInfoTypedef</link></para>
+
+<para>SD Card information structure. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_d_1ga0e053bc407d4d1001b3f3125f17340f7">SD_InitTypeDef</link>   <link linkend="_struct_s_d_i_o___init_type_def">SDIO_InitTypeDef</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_1gaba823a712a2920fb20f03f74651d0beb">SD_TypeDef</link>   <link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> { 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa6dfaca7c6ace1889e0294f4ec3ec535c">SD_CMD_CRC_FAIL</link> = (1)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aad99fcef385ca3270d3bce97ed972ff1c">SD_DATA_CRC_FAIL</link> = (2)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae1c1b2d0962bd3f40490b15aed01c8ff">SD_CMD_RSP_TIMEOUT</link> = (3)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac5f321853ccd7c8aaa571afab467dddd">SD_DATA_TIMEOUT</link> = (4)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa7b3c2c028697b45c7e4ab738dfb32732">SD_TX_UNDERRUN</link> = (5)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa8536106ed9ebb00c16d0f42d78f31e37">SD_RX_OVERRUN</link> = (6)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aacc0291fc528b2bb330ca1487a8a3f3cd">SD_START_BIT_ERR</link> = (7)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa2435ce658dcb58fc0970c9750fecbf10">SD_CMD_OUT_OF_RANGE</link> = (8)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac862cc999fa6648eeb631ea82a07a51e">SD_ADDR_MISALIGNED</link> = (9)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aadd08e6cdc391423ee7c1ba246faf42c3">SD_BLOCK_LEN_ERR</link> = (10)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae83866c46e2c68646ce05ff3707b042e">SD_ERASE_SEQ_ERR</link> = (11)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac52c7addfcb59055f5701898c3484d06">SD_BAD_ERASE_PARAM</link> = (12)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa4e295d82b6481694f927367f35aa182d">SD_WRITE_PROT_VIOLATION</link> = (13)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa093949ff310e17d6596e686804cd0e1e">SD_LOCK_UNLOCK_FAILED</link> = (14)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa01a35bd6664353a1af3b9ac093acdf94">SD_COM_CRC_FAILED</link> = (15)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa7fefea39264d07dd179b12be8bf2e51c">SD_ILLEGAL_CMD</link> = (16)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa283091b73f40d5c229c2c3f3d0f4cb74">SD_CARD_ECC_FAILED</link> = (17)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa2c6401e2495de3d9fd3b41c273fda150">SD_CC_ERROR</link> = (18)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa46c693b1502d9e2137ead7857cfe5f9b">SD_GENERAL_UNKNOWN_ERROR</link> = (19)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aaadb3266a9761e9e3d82c1b2512ef6668">SD_STREAM_READ_UNDERRUN</link> = (20)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa3847c922ab4b7f94469768c63084af6b">SD_STREAM_WRITE_OVERRUN</link> = (21)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aadc80e2b4a985f211d85fae68e15fd136">SD_CID_CSD_OVERWRITE</link> = (22)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa07b0cc4f75330bdc7efb59f3b3492a3f">SD_WP_ERASE_SKIP</link> = (23)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa4db59f403f83442543a1f1bef242efbd">SD_CARD_ECC_DISABLED</link> = (24)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa59f8949439bd7871cb2cf3238c6282c5">SD_ERASE_RESET</link> = (25)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aafbcf7369094d1a0fa1932c552ab45382">SD_AKE_SEQ_ERROR</link> = (26)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa97d498fc349b05a8945156a9f3ccdff5">SD_INVALID_VOLTRANGE</link> = (27)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa82b0b9ba6052f6f2bd0bee7e79cf8ef3">SD_ADDR_OUT_OF_RANGE</link> = (28)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa9566932cb0ad8fe80d5610da9d11fb55">SD_SWITCH_ERROR</link> = (29)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa9e97f8897dab543749255331f57ae1a7">SD_SDIO_DISABLED</link> = (30)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae4e66b4e0f2a5f5a49b3c785d9905e8b">SD_SDIO_FUNCTION_BUSY</link> = (31)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aaab75aa11f151a11569079c41d019ef3c">SD_SDIO_FUNCTION_FAILED</link> = (32)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa544f7094c7417e8e3be527d83c65d024">SD_SDIO_UNKNOWN_FUNCTION</link> = (33)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa3edc8995af0f0ca919abd400d01d235d">SD_INTERNAL_ERROR</link> = (34)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aad2334607a2604507143ebbd5fcc82876">SD_NOT_CONFIGURED</link> = (35)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa48c30b9e7fbd21a2e3dc134b9d0c8bff">SD_REQUEST_PENDING</link> = (36)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aada6e80166445f5ee6b7e808a4e7aff23">SD_REQUEST_NOT_APPLICABLE</link> = (37)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa1111de40fd22949b14d492954755a70c">SD_INVALID_PARAMETER</link> = (38)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa788dcef7dd77feb8a8ba97d84813a8fb">SD_UNSUPPORTED_FEATURE</link> = (39)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa280d7d545d73078027a223ff35a2b696">SD_UNSUPPORTED_HW</link> = (40)
+, 
+<link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa0002d0c8feceb0fb4cd7d9fc96066c3d">SD_ERROR</link> = (41)
+, <link linkend="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae7d9e30a15fd1bc4b2cd8f10208e76a6">SD_OK</link> = (0)
+ }</para>
+
+<para>SD Error status enumeration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_d_1gaeac2ceb9473e8e4ea9cd587642d9cbca">HAL_SD_TransferStateTypedef</link> { <link linkend="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaa52c1686845d340ee5d8c0bc0325f9af3">SD_TRANSFER_OK</link> = 0
+, <link linkend="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaaef1a870ef1c17e160d57d732328b042e">SD_TRANSFER_BUSY</link> = 1
+, <link linkend="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaa1c06f1ea5cd5d5f2ecb715654384b047">SD_TRANSFER_ERROR</link> = 2
+ }</para>
+
+<para>SD Transfer state enumeration structure. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_d_1ga0e6f2367262980fc7e531981bab32df4">HAL_SD_CardStateTypedef</link> { 
+<link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a7105d3ddde877b8d09471eb482fb5520">SD_CARD_READY</link> = ((uint32_t)0x00000001)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a18689e3260641d154376eba9a1e3da47">SD_CARD_IDENTIFICATION</link> = ((uint32_t)0x00000002)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a6e24b45fe387177e2383bac672525f1a">SD_CARD_STANDBY</link> = ((uint32_t)0x00000003)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a090f585cfc114861ad07114914a3ad1d">SD_CARD_TRANSFER</link> = ((uint32_t)0x00000004)
+, 
+<link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a23dec93b22009b39f7b7311f22a7c396">SD_CARD_SENDING</link> = ((uint32_t)0x00000005)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a467165b416761a4858546d616c8dac12">SD_CARD_RECEIVING</link> = ((uint32_t)0x00000006)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4aa72e3de9b7ac3217b05862ec2412c6cc">SD_CARD_PROGRAMMING</link> = ((uint32_t)0x00000007)
+, <link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4ac5dd213f085b94ecd3735f15d6a257ec">SD_CARD_DISCONNECTED</link> = ((uint32_t)0x00000008)
+, 
+<link linkend="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4aed9c89d9fc0101e995ae957f132af14c">SD_CARD_ERROR</link> = ((uint32_t)0x000000FF)
+ }</para>
+
+<para>SD Card State enumeration structure. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___s_d_1ga82fe633c4b9fa45bede0890e9e23d4c1">HAL_SD_OperationTypedef</link> { <link linkend="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1a99c20a704cce28fee37b9b0f14b2ff15">SD_READ_SINGLE_BLOCK</link> = 0
+, <link linkend="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1aa58b1d9f75b639dc1b28163988bc8aa3">SD_READ_MULTIPLE_BLOCK</link> = 1
+, <link linkend="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1adca664fbf5ff0b4d174ca21641e01004">SD_WRITE_SINGLE_BLOCK</link> = 2
+, <link linkend="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1a9cd6e9c88c3989531a71015147496895">SD_WRITE_MULTIPLE_BLOCK</link> = 3
+ }</para>
+
+<para>SD Operation enumeration structure 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga55004d6b817f7e431bd97101ad2d0b62">HAL_SD_Init</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, <link linkend="_struct_h_a_l___s_d___card_info_typedef">HAL_SD_CardInfoTypedef</link> *SDCardInfo)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_1ga6bba9fce639c7d476dbd443b8c9e3117">HAL_SD_DeInit</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga11b692d44079cb65eb037202d627ae96">HAL_SD_MspInit</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1gaad3ad0f8145fca4a29dbe8beef5db085">HAL_SD_MspDeInit</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1gad0d930e6695258d4227f3cc85690b35e">HAL_SD_ReadBlocks</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pReadBuffer, uint64_t ReadAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga879dae58b5e4f8514be2d3fac5d99f2b">HAL_SD_WriteBlocks</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pWriteBuffer, uint64_t WriteAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga49d1d5c7f592addea7b36c7cf49faba4">HAL_SD_Erase</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint64_t startaddr, uint64_t endaddr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga78f4def85126ae50eba783a6b237ec0f">HAL_SD_IRQHandler</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga57b3c755c8430777cfe821c8a12e794e">HAL_SD_DMA_RxCpltCallback</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga66cb9701bb00d0bb363ea06312ea4446">HAL_SD_DMA_RxErrorCallback</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga98f37b0096e2d3dec374321524015a1f">HAL_SD_DMA_TxCpltCallback</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga45c840786fabc5ef29d887b119b01442">HAL_SD_DMA_TxErrorCallback</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1ga4d1214c3d3e6c1e5dd587592e7618177">HAL_SD_XferCpltCallback</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___s_d_1gad7d953cc31fbb7e875aef443027b3e5c">HAL_SD_XferErrorCallback</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga445d2fb6f83f1680ca2295ebc8fb591e">HAL_SD_ReadBlocks_DMA</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pReadBuffer, uint64_t ReadAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga4e9138ffd8d54c138b21cc95e2b5955c">HAL_SD_WriteBlocks_DMA</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pWriteBuffer, uint64_t WriteAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga1e823fda07f8246994c13fe9397e38ae">HAL_SD_CheckWriteOperation</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga91b0db763b2d9360f10cc959b1c8547e">HAL_SD_CheckReadOperation</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga757649bfd6987928fc7f968a881767b4">HAL_SD_Get_CardInfo</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, <link linkend="_struct_h_a_l___s_d___card_info_typedef">HAL_SD_CardInfoTypedef</link> *pCardInfo)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga55e5d39a7a3b67b4b236e014c429e4fd">HAL_SD_WideBusOperation_Config</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t WideMode)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga28d4283c9c7caafe6b0f65c15d805e16">HAL_SD_StopTransfer</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga5c1fb71046436127d873a16511b40777">HAL_SD_HighSpeed</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1ga0f6201bbcab5c9a4fbb059d3659a2d56">HAL_SD_SendSDStatus</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, uint32_t *pSDstatus)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> <link linkend="_group___s_d_1gaa21f427748a4d59b41b45fff21342e3f">HAL_SD_GetCardStatus</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd, <link linkend="_struct_h_a_l___s_d___card_status_typedef">HAL_SD_CardStatusTypedef</link> *pCardStatus)</para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_1gaeac2ceb9473e8e4ea9cd587642d9cbca">HAL_SD_TransferStateTypedef</link> <link linkend="_group___s_d_1ga7e359042aa28a3ceab37d70885af3051">HAL_SD_GetStatus</link> (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> *hsd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___s_d_1ga0e053bc407d4d1001b3f3125f17340f7"/><section>
+    <title>SD_InitTypeDef</title>
+<indexterm><primary>SD_InitTypeDef</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_InitTypeDef</secondary></indexterm>
+<para><computeroutput>#define SD_InitTypeDef   <link linkend="_struct_s_d_i_o___init_type_def">SDIO_InitTypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__sd_8h_source_1l00058">58</link> of file <link linkend="_stm32f4xx__hal__sd_8h_source">stm32f4xx_hal_sd.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_1gaba823a712a2920fb20f03f74651d0beb"/><section>
+    <title>SD_TypeDef</title>
+<indexterm><primary>SD_TypeDef</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_TypeDef</secondary></indexterm>
+<para><computeroutput>#define SD_TypeDef   <link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__sd_8h_source_1l00059">59</link> of file <link linkend="_stm32f4xx__hal__sd_8h_source">stm32f4xx_hal_sd.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___s_d_1ga0e6f2367262980fc7e531981bab32df4"/><section>
+    <title>HAL_SD_CardStateTypedef</title>
+<indexterm><primary>HAL_SD_CardStateTypedef</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_CardStateTypedef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___s_d_1ga0e6f2367262980fc7e531981bab32df4">HAL_SD_CardStateTypedef</link></computeroutput></para><para>
+
+<para>SD Card State enumeration structure. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>SD_CARD_READY</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_READY</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a7105d3ddde877b8d09471eb482fb5520"/>SD_CARD_READY</entry><entry>
+<para>Card state is ready 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_IDENTIFICATION</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_IDENTIFICATION</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a18689e3260641d154376eba9a1e3da47"/>SD_CARD_IDENTIFICATION</entry><entry>
+<para>Card is in identification state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_STANDBY</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_STANDBY</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a6e24b45fe387177e2383bac672525f1a"/>SD_CARD_STANDBY</entry><entry>
+<para>Card is in standby state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_TRANSFER</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_TRANSFER</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a090f585cfc114861ad07114914a3ad1d"/>SD_CARD_TRANSFER</entry><entry>
+<para>Card is in transfer state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_SENDING</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_SENDING</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a23dec93b22009b39f7b7311f22a7c396"/>SD_CARD_SENDING</entry><entry>
+<para>Card is sending an operation 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_RECEIVING</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_RECEIVING</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4a467165b416761a4858546d616c8dac12"/>SD_CARD_RECEIVING</entry><entry>
+<para>Card is receiving operation information </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_PROGRAMMING</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_PROGRAMMING</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4aa72e3de9b7ac3217b05862ec2412c6cc"/>SD_CARD_PROGRAMMING</entry><entry>
+<para>Card is in programming state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_DISCONNECTED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_DISCONNECTED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4ac5dd213f085b94ecd3735f15d6a257ec"/>SD_CARD_DISCONNECTED</entry><entry>
+<para>Card is disconnected 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_ERROR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga0e6f2367262980fc7e531981bab32df4aed9c89d9fc0101e995ae957f132af14c"/>SD_CARD_ERROR</entry><entry>
+<para>Card is in error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__sd_8h_source_1l00260">260</link> of file <link linkend="_stm32f4xx__hal__sd_8h_source">stm32f4xx_hal_sd.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a"/><section>
+    <title>HAL_SD_ErrorTypedef</title>
+<indexterm><primary>HAL_SD_ErrorTypedef</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_ErrorTypedef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link></computeroutput></para><para>
+
+<para>SD Error status enumeration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>SD_CMD_CRC_FAIL</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CMD_CRC_FAIL</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa6dfaca7c6ace1889e0294f4ec3ec535c"/>SD_CMD_CRC_FAIL</entry><entry>
+<para>SD specific error defines 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+
+<para>Command response received (but CRC check failed) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_DATA_CRC_FAIL</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_DATA_CRC_FAIL</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aad99fcef385ca3270d3bce97ed972ff1c"/>SD_DATA_CRC_FAIL</entry><entry>
+<para>Data block sent/received (CRC check failed) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CMD_RSP_TIMEOUT</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CMD_RSP_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae1c1b2d0962bd3f40490b15aed01c8ff"/>SD_CMD_RSP_TIMEOUT</entry><entry>
+<para>Command response timeout 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_DATA_TIMEOUT</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_DATA_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac5f321853ccd7c8aaa571afab467dddd"/>SD_DATA_TIMEOUT</entry><entry>
+<para>Data timeout 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_TX_UNDERRUN</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_TX_UNDERRUN</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa7b3c2c028697b45c7e4ab738dfb32732"/>SD_TX_UNDERRUN</entry><entry>
+<para>Transmit FIFO underrun 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_RX_OVERRUN</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_RX_OVERRUN</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa8536106ed9ebb00c16d0f42d78f31e37"/>SD_RX_OVERRUN</entry><entry>
+<para>Receive FIFO overrun 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_START_BIT_ERR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_START_BIT_ERR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aacc0291fc528b2bb330ca1487a8a3f3cd"/>SD_START_BIT_ERR</entry><entry>
+<para>Start bit not detected on all data signals in wide bus mode 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CMD_OUT_OF_RANGE</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CMD_OUT_OF_RANGE</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa2435ce658dcb58fc0970c9750fecbf10"/>SD_CMD_OUT_OF_RANGE</entry><entry>
+<para>Command&apos;s argument was out of range. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_ADDR_MISALIGNED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_ADDR_MISALIGNED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac862cc999fa6648eeb631ea82a07a51e"/>SD_ADDR_MISALIGNED</entry><entry>
+<para>Misaligned address 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_BLOCK_LEN_ERR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_BLOCK_LEN_ERR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aadd08e6cdc391423ee7c1ba246faf42c3"/>SD_BLOCK_LEN_ERR</entry><entry>
+<para>Transferred block length is not allowed for the card or the number of transferred bytes does not match the block length </para>
+</entry></row><row><entry><indexterm><primary>SD_ERASE_SEQ_ERR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_ERASE_SEQ_ERR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae83866c46e2c68646ce05ff3707b042e"/>SD_ERASE_SEQ_ERR</entry><entry>
+<para>An error in the sequence of erase command occurs. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_BAD_ERASE_PARAM</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_BAD_ERASE_PARAM</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aac52c7addfcb59055f5701898c3484d06"/>SD_BAD_ERASE_PARAM</entry><entry>
+<para>An invalid selection for erase groups 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_WRITE_PROT_VIOLATION</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_WRITE_PROT_VIOLATION</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa4e295d82b6481694f927367f35aa182d"/>SD_WRITE_PROT_VIOLATION</entry><entry>
+<para>Attempt to program a write protect block 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_LOCK_UNLOCK_FAILED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_LOCK_UNLOCK_FAILED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa093949ff310e17d6596e686804cd0e1e"/>SD_LOCK_UNLOCK_FAILED</entry><entry>
+<para>Sequence or password error has been detected in unlock command or if there was an attempt to access a locked card </para>
+</entry></row><row><entry><indexterm><primary>SD_COM_CRC_FAILED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_COM_CRC_FAILED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa01a35bd6664353a1af3b9ac093acdf94"/>SD_COM_CRC_FAILED</entry><entry>
+<para>CRC check of the previous command failed 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_ILLEGAL_CMD</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_ILLEGAL_CMD</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa7fefea39264d07dd179b12be8bf2e51c"/>SD_ILLEGAL_CMD</entry><entry>
+<para>Command is not legal for the card state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_ECC_FAILED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_ECC_FAILED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa283091b73f40d5c229c2c3f3d0f4cb74"/>SD_CARD_ECC_FAILED</entry><entry>
+<para>Card internal ECC was applied but failed to correct the data </para>
+</entry></row><row><entry><indexterm><primary>SD_CC_ERROR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CC_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa2c6401e2495de3d9fd3b41c273fda150"/>SD_CC_ERROR</entry><entry>
+<para>Internal card controller error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_GENERAL_UNKNOWN_ERROR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_GENERAL_UNKNOWN_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa46c693b1502d9e2137ead7857cfe5f9b"/>SD_GENERAL_UNKNOWN_ERROR</entry><entry>
+<para>General or unknown error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_STREAM_READ_UNDERRUN</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_STREAM_READ_UNDERRUN</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aaadb3266a9761e9e3d82c1b2512ef6668"/>SD_STREAM_READ_UNDERRUN</entry><entry>
+<para>The card could not sustain data transfer in stream read operation. </para>
+</entry></row><row><entry><indexterm><primary>SD_STREAM_WRITE_OVERRUN</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_STREAM_WRITE_OVERRUN</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa3847c922ab4b7f94469768c63084af6b"/>SD_STREAM_WRITE_OVERRUN</entry><entry>
+<para>The card could not sustain data programming in stream mode 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CID_CSD_OVERWRITE</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CID_CSD_OVERWRITE</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aadc80e2b4a985f211d85fae68e15fd136"/>SD_CID_CSD_OVERWRITE</entry><entry>
+<para>CID/CSD overwrite error 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_WP_ERASE_SKIP</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_WP_ERASE_SKIP</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa07b0cc4f75330bdc7efb59f3b3492a3f"/>SD_WP_ERASE_SKIP</entry><entry>
+<para>Only partial address space was erased 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_CARD_ECC_DISABLED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_CARD_ECC_DISABLED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa4db59f403f83442543a1f1bef242efbd"/>SD_CARD_ECC_DISABLED</entry><entry>
+<para>Command has been executed without using internal ECC 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_ERASE_RESET</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_ERASE_RESET</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa59f8949439bd7871cb2cf3238c6282c5"/>SD_ERASE_RESET</entry><entry>
+<para>Erase sequence was cleared before executing because an out of erase sequence command was received </para>
+</entry></row><row><entry><indexterm><primary>SD_AKE_SEQ_ERROR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_AKE_SEQ_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aafbcf7369094d1a0fa1932c552ab45382"/>SD_AKE_SEQ_ERROR</entry><entry>
+<para>Error in sequence of authentication. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_INVALID_VOLTRANGE</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_INVALID_VOLTRANGE</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa97d498fc349b05a8945156a9f3ccdff5"/>SD_INVALID_VOLTRANGE</entry><entry></entry></row><row><entry><indexterm><primary>SD_ADDR_OUT_OF_RANGE</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_ADDR_OUT_OF_RANGE</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa82b0b9ba6052f6f2bd0bee7e79cf8ef3"/>SD_ADDR_OUT_OF_RANGE</entry><entry></entry></row><row><entry><indexterm><primary>SD_SWITCH_ERROR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_SWITCH_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa9566932cb0ad8fe80d5610da9d11fb55"/>SD_SWITCH_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>SD_SDIO_DISABLED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_SDIO_DISABLED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa9e97f8897dab543749255331f57ae1a7"/>SD_SDIO_DISABLED</entry><entry></entry></row><row><entry><indexterm><primary>SD_SDIO_FUNCTION_BUSY</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_SDIO_FUNCTION_BUSY</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae4e66b4e0f2a5f5a49b3c785d9905e8b"/>SD_SDIO_FUNCTION_BUSY</entry><entry></entry></row><row><entry><indexterm><primary>SD_SDIO_FUNCTION_FAILED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_SDIO_FUNCTION_FAILED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aaab75aa11f151a11569079c41d019ef3c"/>SD_SDIO_FUNCTION_FAILED</entry><entry></entry></row><row><entry><indexterm><primary>SD_SDIO_UNKNOWN_FUNCTION</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_SDIO_UNKNOWN_FUNCTION</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa544f7094c7417e8e3be527d83c65d024"/>SD_SDIO_UNKNOWN_FUNCTION</entry><entry></entry></row><row><entry><indexterm><primary>SD_INTERNAL_ERROR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_INTERNAL_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa3edc8995af0f0ca919abd400d01d235d"/>SD_INTERNAL_ERROR</entry><entry>
+<para>Standard error defines 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_NOT_CONFIGURED</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_NOT_CONFIGURED</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aad2334607a2604507143ebbd5fcc82876"/>SD_NOT_CONFIGURED</entry><entry></entry></row><row><entry><indexterm><primary>SD_REQUEST_PENDING</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_REQUEST_PENDING</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa48c30b9e7fbd21a2e3dc134b9d0c8bff"/>SD_REQUEST_PENDING</entry><entry></entry></row><row><entry><indexterm><primary>SD_REQUEST_NOT_APPLICABLE</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_REQUEST_NOT_APPLICABLE</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aada6e80166445f5ee6b7e808a4e7aff23"/>SD_REQUEST_NOT_APPLICABLE</entry><entry></entry></row><row><entry><indexterm><primary>SD_INVALID_PARAMETER</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_INVALID_PARAMETER</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa1111de40fd22949b14d492954755a70c"/>SD_INVALID_PARAMETER</entry><entry></entry></row><row><entry><indexterm><primary>SD_UNSUPPORTED_FEATURE</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_UNSUPPORTED_FEATURE</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa788dcef7dd77feb8a8ba97d84813a8fb"/>SD_UNSUPPORTED_FEATURE</entry><entry></entry></row><row><entry><indexterm><primary>SD_UNSUPPORTED_HW</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_UNSUPPORTED_HW</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa280d7d545d73078027a223ff35a2b696"/>SD_UNSUPPORTED_HW</entry><entry></entry></row><row><entry><indexterm><primary>SD_ERROR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aa0002d0c8feceb0fb4cd7d9fc96066c3d"/>SD_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>SD_OK</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_OK</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggab1f89a16220798bf3f8dbbd4ec5a749aae7d9e30a15fd1bc4b2cd8f10208e76a6"/>SD_OK</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__sd_8h_source_1l00192">192</link> of file <link linkend="_stm32f4xx__hal__sd_8h_source">stm32f4xx_hal_sd.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_1ga82fe633c4b9fa45bede0890e9e23d4c1"/><section>
+    <title>HAL_SD_OperationTypedef</title>
+<indexterm><primary>HAL_SD_OperationTypedef</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_OperationTypedef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___s_d_1ga82fe633c4b9fa45bede0890e9e23d4c1">HAL_SD_OperationTypedef</link></computeroutput></para><para>
+
+<para>SD Operation enumeration structure 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>SD_READ_SINGLE_BLOCK</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_READ_SINGLE_BLOCK</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1a99c20a704cce28fee37b9b0f14b2ff15"/>SD_READ_SINGLE_BLOCK</entry><entry>
+<para>Read single block operation 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_READ_MULTIPLE_BLOCK</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_READ_MULTIPLE_BLOCK</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1aa58b1d9f75b639dc1b28163988bc8aa3"/>SD_READ_MULTIPLE_BLOCK</entry><entry>
+<para>Read multiple blocks operation 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_WRITE_SINGLE_BLOCK</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_WRITE_SINGLE_BLOCK</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1adca664fbf5ff0b4d174ca21641e01004"/>SD_WRITE_SINGLE_BLOCK</entry><entry>
+<para>Write single block operation 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_WRITE_MULTIPLE_BLOCK</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_WRITE_MULTIPLE_BLOCK</secondary></indexterm>
+<anchor xml:id="_group___s_d_1gga82fe633c4b9fa45bede0890e9e23d4c1a9cd6e9c88c3989531a71015147496895"/>SD_WRITE_MULTIPLE_BLOCK</entry><entry>
+<para>Write multiple blocks operation 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__sd_8h_source_1l00277">277</link> of file <link linkend="_stm32f4xx__hal__sd_8h_source">stm32f4xx_hal_sd.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_1gaeac2ceb9473e8e4ea9cd587642d9cbca"/><section>
+    <title>HAL_SD_TransferStateTypedef</title>
+<indexterm><primary>HAL_SD_TransferStateTypedef</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_TransferStateTypedef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___s_d_1gaeac2ceb9473e8e4ea9cd587642d9cbca">HAL_SD_TransferStateTypedef</link></computeroutput></para><para>
+
+<para>SD Transfer state enumeration structure. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>SD_TRANSFER_OK</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_TRANSFER_OK</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaa52c1686845d340ee5d8c0bc0325f9af3"/>SD_TRANSFER_OK</entry><entry>
+<para>Transfer success 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>SD_TRANSFER_BUSY</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_TRANSFER_BUSY</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaaef1a870ef1c17e160d57d732328b042e"/>SD_TRANSFER_BUSY</entry><entry>
+<para>Transfer is occurring </para>
+</entry></row><row><entry><indexterm><primary>SD_TRANSFER_ERROR</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>SD_TRANSFER_ERROR</secondary></indexterm>
+<anchor xml:id="_group___s_d_1ggaeac2ceb9473e8e4ea9cd587642d9cbcaa1c06f1ea5cd5d5f2ecb715654384b047"/>SD_TRANSFER_ERROR</entry><entry>
+<para>Transfer failed 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__sd_8h_source_1l00249">249</link> of file <link linkend="_stm32f4xx__hal__sd_8h_source">stm32f4xx_hal_sd.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___s_d_1ga91b0db763b2d9360f10cc959b1c8547e"/><section>
+    <title>HAL_SD_CheckReadOperation()</title>
+<indexterm><primary>HAL_SD_CheckReadOperation</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_CheckReadOperation</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_CheckReadOperation (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga1e823fda07f8246994c13fe9397e38ae"/><section>
+    <title>HAL_SD_CheckWriteOperation()</title>
+<indexterm><primary>HAL_SD_CheckWriteOperation</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_CheckWriteOperation</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_CheckWriteOperation (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga6bba9fce639c7d476dbd443b8c9e3117"/><section>
+    <title>HAL_SD_DeInit()</title>
+<indexterm><primary>HAL_SD_DeInit</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_SD_DeInit (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga57b3c755c8430777cfe821c8a12e794e"/><section>
+    <title>HAL_SD_DMA_RxCpltCallback()</title>
+<indexterm><primary>HAL_SD_DMA_RxCpltCallback</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_DMA_RxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_DMA_RxCpltCallback (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga66cb9701bb00d0bb363ea06312ea4446"/><section>
+    <title>HAL_SD_DMA_RxErrorCallback()</title>
+<indexterm><primary>HAL_SD_DMA_RxErrorCallback</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_DMA_RxErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_DMA_RxErrorCallback (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga98f37b0096e2d3dec374321524015a1f"/><section>
+    <title>HAL_SD_DMA_TxCpltCallback()</title>
+<indexterm><primary>HAL_SD_DMA_TxCpltCallback</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_DMA_TxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_DMA_TxCpltCallback (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga45c840786fabc5ef29d887b119b01442"/><section>
+    <title>HAL_SD_DMA_TxErrorCallback()</title>
+<indexterm><primary>HAL_SD_DMA_TxErrorCallback</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_DMA_TxErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_DMA_TxErrorCallback (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * hdma)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga49d1d5c7f592addea7b36c7cf49faba4"/><section>
+    <title>HAL_SD_Erase()</title>
+<indexterm><primary>HAL_SD_Erase</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_Erase</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_Erase (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint64_t startaddr, uint64_t endaddr)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga757649bfd6987928fc7f968a881767b4"/><section>
+    <title>HAL_SD_Get_CardInfo()</title>
+<indexterm><primary>HAL_SD_Get_CardInfo</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_Get_CardInfo</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_Get_CardInfo (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, <link linkend="_struct_h_a_l___s_d___card_info_typedef">HAL_SD_CardInfoTypedef</link> * pCardInfo)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1gaa21f427748a4d59b41b45fff21342e3f"/><section>
+    <title>HAL_SD_GetCardStatus()</title>
+<indexterm><primary>HAL_SD_GetCardStatus</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_GetCardStatus</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_GetCardStatus (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, <link linkend="_struct_h_a_l___s_d___card_status_typedef">HAL_SD_CardStatusTypedef</link> * pCardStatus)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga7e359042aa28a3ceab37d70885af3051"/><section>
+    <title>HAL_SD_GetStatus()</title>
+<indexterm><primary>HAL_SD_GetStatus</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_GetStatus</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gaeac2ceb9473e8e4ea9cd587642d9cbca">HAL_SD_TransferStateTypedef</link> HAL_SD_GetStatus (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga5c1fb71046436127d873a16511b40777"/><section>
+    <title>HAL_SD_HighSpeed()</title>
+<indexterm><primary>HAL_SD_HighSpeed</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_HighSpeed</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_HighSpeed (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga55004d6b817f7e431bd97101ad2d0b62"/><section>
+    <title>HAL_SD_Init()</title>
+<indexterm><primary>HAL_SD_Init</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_Init (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, <link linkend="_struct_h_a_l___s_d___card_info_typedef">HAL_SD_CardInfoTypedef</link> * SDCardInfo)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga78f4def85126ae50eba783a6b237ec0f"/><section>
+    <title>HAL_SD_IRQHandler()</title>
+<indexterm><primary>HAL_SD_IRQHandler</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_SD_IRQHandler (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1gaad3ad0f8145fca4a29dbe8beef5db085"/><section>
+    <title>HAL_SD_MspDeInit()</title>
+<indexterm><primary>HAL_SD_MspDeInit</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_SD_MspDeInit (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga11b692d44079cb65eb037202d627ae96"/><section>
+    <title>HAL_SD_MspInit()</title>
+<indexterm><primary>HAL_SD_MspInit</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_SD_MspInit (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1gad0d930e6695258d4227f3cc85690b35e"/><section>
+    <title>HAL_SD_ReadBlocks()</title>
+<indexterm><primary>HAL_SD_ReadBlocks</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_ReadBlocks</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_ReadBlocks (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint32_t * pReadBuffer, uint64_t ReadAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga445d2fb6f83f1680ca2295ebc8fb591e"/><section>
+    <title>HAL_SD_ReadBlocks_DMA()</title>
+<indexterm><primary>HAL_SD_ReadBlocks_DMA</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_ReadBlocks_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_ReadBlocks_DMA (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint32_t * pReadBuffer, uint64_t ReadAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga0f6201bbcab5c9a4fbb059d3659a2d56"/><section>
+    <title>HAL_SD_SendSDStatus()</title>
+<indexterm><primary>HAL_SD_SendSDStatus</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_SendSDStatus</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_SendSDStatus (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint32_t * pSDstatus)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga28d4283c9c7caafe6b0f65c15d805e16"/><section>
+    <title>HAL_SD_StopTransfer()</title>
+<indexterm><primary>HAL_SD_StopTransfer</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_StopTransfer</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_StopTransfer (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga55e5d39a7a3b67b4b236e014c429e4fd"/><section>
+    <title>HAL_SD_WideBusOperation_Config()</title>
+<indexterm><primary>HAL_SD_WideBusOperation_Config</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_WideBusOperation_Config</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_WideBusOperation_Config (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint32_t WideMode)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga879dae58b5e4f8514be2d3fac5d99f2b"/><section>
+    <title>HAL_SD_WriteBlocks()</title>
+<indexterm><primary>HAL_SD_WriteBlocks</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_WriteBlocks</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_WriteBlocks (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint32_t * pWriteBuffer, uint64_t WriteAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga4e9138ffd8d54c138b21cc95e2b5955c"/><section>
+    <title>HAL_SD_WriteBlocks_DMA()</title>
+<indexterm><primary>HAL_SD_WriteBlocks_DMA</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_WriteBlocks_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_group___s_d_1gab1f89a16220798bf3f8dbbd4ec5a749a">HAL_SD_ErrorTypedef</link> HAL_SD_WriteBlocks_DMA (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd, uint32_t * pWriteBuffer, uint64_t WriteAddr, uint32_t BlockSize, uint32_t NumberOfBlocks)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1ga4d1214c3d3e6c1e5dd587592e7618177"/><section>
+    <title>HAL_SD_XferCpltCallback()</title>
+<indexterm><primary>HAL_SD_XferCpltCallback</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_XferCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_XferCpltCallback (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_1gad7d953cc31fbb7e875aef443027b3e5c"/><section>
+    <title>HAL_SD_XferErrorCallback()</title>
+<indexterm><primary>HAL_SD_XferErrorCallback</primary><secondary>SD</secondary></indexterm>
+<indexterm><primary>SD</primary><secondary>HAL_SD_XferErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_XferErrorCallback (<link linkend="_struct_s_d___handle_type_def">SD_HandleTypeDef</link> * hsd)</computeroutput></para></section>
+</section>
+</section>

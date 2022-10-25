@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__sram_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_sram.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sram.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_SRAM_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_SRAM_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00046"/>00046 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00047"/>00047 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)||&#32;defined(STM32F417xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00048"/>00048 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_stm32f4xx__ll__fsmc_8h">stm32f4xx_ll_fsmc.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00049"/>00049 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00050"/>00050 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00051"/>00051 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00052"/>00052 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_stm32f4xx__ll__fmc_8h">stm32f4xx_ll_fmc.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00053"/>00053 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00054"/>00054 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00055"/>00055 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00064"/>00064 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00065"/>00065 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00066"/>00066 <emphasis role="comment">/*&#32;Exported&#32;typedef&#32;----------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00067"/>00067 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00071"/>00071 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00072"/>00072 {
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00073"/>00073 &#32;&#32;HAL_SRAM_STATE_RESET&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00074"/>00074 &#32;&#32;HAL_SRAM_STATE_READY&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00075"/>00075 &#32;&#32;HAL_SRAM_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00076"/>00076 &#32;&#32;HAL_SRAM_STATE_ERROR&#32;&#32;&#32;&#32;&#32;=&#32;0x03,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00077"/>00077 &#32;&#32;HAL_SRAM_STATE_PROTECTED&#32;=&#32;0x04&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00079"/>00079 }HAL_SRAM_StateTypeDef;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00080"/>00080 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00084"/>00084 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00085"/>00085 {
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00086"/>00086 &#32;&#32;FMC_NORSRAM_TypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*Instance;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00088"/>00088 &#32;&#32;FMC_NORSRAM_EXTENDED_TypeDef&#32;&#32;*Extended;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00090"/>00090 &#32;&#32;FMC_NORSRAM_InitTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;Init;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00092"/>00092 &#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00094"/>00094 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;HAL_SRAM_StateTypeDef&#32;&#32;&#32;&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00096"/>00096 &#32;&#32;<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*hdma;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00098"/>00098 }SRAM_HandleTypeDef;&#32;
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00099"/>00099 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00100"/>00100 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00101"/>00101 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00102"/>00102 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00107"/>00107 <emphasis role="preprocessor">#define&#32;__HAL_SRAM_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_SRAM_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00108"/>00108 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00109"/>00109 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00110"/>00110 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00111"/>00111 <emphasis role="comment">/*&#32;Initialization/de-initialization&#32;functions&#32;&#32;**********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00112"/>00112 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Init(SRAM_HandleTypeDef&#32;*hsram,&#32;FMC_NORSRAM_TimingTypeDef&#32;*Timing,&#32;FMC_NORSRAM_TimingTypeDef&#32;*ExtTiming);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00113"/>00113 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_DeInit(SRAM_HandleTypeDef&#32;*hsram);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00114"/>00114 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SRAM_MspInit(SRAM_HandleTypeDef&#32;*hsram);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00115"/>00115 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SRAM_MspDeInit(SRAM_HandleTypeDef&#32;*hsram);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00116"/>00116 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00117"/>00117 <emphasis role="comment">/*&#32;I/O&#32;operation&#32;functions&#32;&#32;*****************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00118"/>00118 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Read_8b(SRAM_HandleTypeDef&#32;*hsram,&#32;uint32_t&#32;*pAddress,&#32;uint8_t&#32;*pDstBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00119"/>00119 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Write_8b(SRAM_HandleTypeDef&#32;*hsram,&#32;uint32_t&#32;*pAddress,&#32;uint8_t&#32;*pSrcBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00120"/>00120 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Read_16b(SRAM_HandleTypeDef&#32;*hsram,&#32;uint32_t&#32;*pAddress,&#32;uint16_t&#32;*pDstBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00121"/>00121 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Write_16b(SRAM_HandleTypeDef&#32;*hsram,&#32;uint32_t&#32;*pAddress,&#32;uint16_t&#32;*pSrcBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00122"/>00122 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Read_32b(SRAM_HandleTypeDef&#32;*hsram,&#32;uint32_t&#32;*pAddress,&#32;uint32_t&#32;*pDstBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00123"/>00123 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Write_32b(SRAM_HandleTypeDef&#32;*hsram,&#32;uint32_t&#32;*pAddress,&#32;uint32_t&#32;*pSrcBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00124"/>00124 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Read_DMA(SRAM_HandleTypeDef&#32;*hsram,&#32;uint32_t&#32;*pAddress,&#32;uint32_t&#32;*pDstBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00125"/>00125 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_Write_DMA(SRAM_HandleTypeDef&#32;*hsram,&#32;uint32_t&#32;*pAddress,&#32;uint32_t&#32;*pSrcBuffer,&#32;uint32_t&#32;BufferSize);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00126"/>00126 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00127"/>00127 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SRAM_DMA_XferCpltCallback(<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;*hdma);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00128"/>00128 <emphasis role="keywordtype">void</emphasis>&#32;HAL_SRAM_DMA_XferErrorCallback(<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;*hdma);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00129"/>00129 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00130"/>00130 <emphasis role="comment">/*&#32;SRAM&#32;Control&#32;functions&#32;&#32;******************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00131"/>00131 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_WriteOperation_Enable(SRAM_HandleTypeDef&#32;*hsram);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00132"/>00132 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_SRAM_WriteOperation_Disable(SRAM_HandleTypeDef&#32;*hsram);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00133"/>00133 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00134"/>00134 <emphasis role="comment">/*&#32;SRAM&#32;State&#32;functions&#32;*********************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00135"/>00135 HAL_SRAM_StateTypeDef&#32;HAL_SRAM_GetState(SRAM_HandleTypeDef&#32;*hsram);
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00136"/>00136 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00137"/>00137 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00146"/>00146 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00147"/>00147 }
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00148"/>00148 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00149"/>00149 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00150"/>00150 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_SRAM_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00151"/>00151 
+<anchor xml:id="_stm32f4xx__hal__sram_8h_source_1l00152"/>00152 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

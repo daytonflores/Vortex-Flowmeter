@@ -1,0 +1,71 @@
+\hypertarget{classmbed_1_1_timeout}{}\doxysection{Timeout Class Reference}
+\label{classmbed_1_1_timeout}\index{Timeout@{Timeout}}
+
+
+{\ttfamily \#include $<$Timeout.\+h$>$}
+
+Inheritance diagram for Timeout\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmbed_1_1_timeout}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classmbed_1_1_timeout_a10a5ab629c238472e20543206af37ce3}{handler}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classmbed_1_1_timeout}{Timeout}} is used to call a function at a point in the future
+
+You can use as many seperate \mbox{\hyperlink{classmbed_1_1_timeout}{Timeout}} objects as you require.
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Blink until timeout.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mbed_8h}{mbed.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Timeout timeout;}
+\DoxyCodeLine{DigitalOut led(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1adac6477842247cab1a8c02c65f431b44}{LED1}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} on = 1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} attimeout() \{}
+\DoxyCodeLine{    on = 0;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}() \{}
+\DoxyCodeLine{    timeout.attach(\&attimeout, 5);}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(on) \{}
+\DoxyCodeLine{        led = !led;}
+\DoxyCodeLine{        wait(0.2);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{_timeout_8h_source_l00051}{51}} of file \mbox{\hyperlink{_timeout_8h_source}{Timeout.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_timeout_a10a5ab629c238472e20543206af37ce3}\label{classmbed_1_1_timeout_a10a5ab629c238472e20543206af37ce3}} 
+\index{Timeout@{Timeout}!handler@{handler}}
+\index{handler@{handler}!Timeout@{Timeout}}
+\doxysubsubsection{\texorpdfstring{handler()}{handler()}}
+{\footnotesize\ttfamily virtual void handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classmbed_1_1_ticker_a10a5ab629c238472e20543206af37ce3}{Ticker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\mbox{\hyperlink{_timeout_8h}{Timeout.\+h}}\end{DoxyCompactItemize}

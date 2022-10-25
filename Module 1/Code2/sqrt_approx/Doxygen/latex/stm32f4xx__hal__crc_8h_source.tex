@@ -1,0 +1,65 @@
+\hypertarget{stm32f4xx__hal__crc_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+crc.\+h}
+\label{stm32f4xx__hal__crc_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_crc.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_crc.h}}
+\mbox{\hyperlink{stm32f4xx__hal__crc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00038}00038 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_CRC\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00040}00040 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_CRC\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00046}00046 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00047}00047 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00057}00057 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00062}\mbox{\hyperlink{group___c_r_c_ga1021d6f27a072d45f6f3b233eefd8bbe}{00062}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00063}00063 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00064}\mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97}{00064}}   \mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97}{HAL\_CRC\_STATE\_RESET}}     = 0x00,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00065}\mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbeaa47f50129543b87fac3a83df1a634474}{00065}}   \mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbeaa47f50129543b87fac3a83df1a634474}{HAL\_CRC\_STATE\_READY}}     = 0x01,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00066}\mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbea9d03b0c1d233e87e35b9c5c8353a4b70}{00066}}   \mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbea9d03b0c1d233e87e35b9c5c8353a4b70}{HAL\_CRC\_STATE\_BUSY}}      = 0x02,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00067}\mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbea5d803dcd1d578edb76b57e3d34adc5a8}{00067}}   \mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbea5d803dcd1d578edb76b57e3d34adc5a8}{HAL\_CRC\_STATE\_TIMEOUT}}   = 0x03,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00068}00068   \mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbeadb51c35f7716430bb0c893069466a1b2}{HAL\_CRC\_STATE\_ERROR}}     = 0x04   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00070}\mbox{\hyperlink{group___c_r_c_gga1021d6f27a072d45f6f3b233eefd8bbeadb51c35f7716430bb0c893069466a1b2}{00070}} \}\mbox{\hyperlink{group___c_r_c_ga1021d6f27a072d45f6f3b233eefd8bbe}{HAL\_CRC\_StateTypeDef}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00075}\mbox{\hyperlink{struct_c_r_c___handle_type_def}{00075}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00076}00076 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00077}\mbox{\hyperlink{struct_c_r_c___handle_type_def_ad47f94224843c74bd605a4299349798a}{00077}}   \mbox{\hyperlink{struct_c_r_c___type_def}{CRC\_TypeDef}}                 *\mbox{\hyperlink{struct_c_r_c___handle_type_def_ad47f94224843c74bd605a4299349798a}{Instance}};  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00079}\mbox{\hyperlink{struct_c_r_c___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}{00079}}   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             \mbox{\hyperlink{struct_c_r_c___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}{Lock}};       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00081}\mbox{\hyperlink{struct_c_r_c___handle_type_def_a5d303997b28e27531cbcff9d51113dc6}{00081}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___c_r_c_ga1021d6f27a072d45f6f3b233eefd8bbe}{HAL\_CRC\_StateTypeDef}}   \mbox{\hyperlink{struct_c_r_c___handle_type_def_a5d303997b28e27531cbcff9d51113dc6}{State}};      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00083}00083 \}\mbox{\hyperlink{struct_c_r_c___handle_type_def}{CRC\_HandleTypeDef}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00085}00085 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00086}00086 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00092}\mbox{\hyperlink{group___c_r_c_gab6ec5d74fdff177143f4b22652a18114}{00092}} \textcolor{preprocessor}{\#define \_\_HAL\_CRC\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_CRC\_STATE\_RESET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00099}\mbox{\hyperlink{group___c_r_c_ga0007a05fb01806007181e12eedc14d28}{00099}} \textcolor{preprocessor}{\#define \_\_HAL\_CRC\_DR\_RESET(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR |= CRC\_CR\_RESET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00101}00101 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00103}00103 \textcolor{comment}{/* Initialization/de-\/initialization functions  **********************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00104}\mbox{\hyperlink{group___c_r_c_ga23e7df2eaecf59615e13b2cad8b7185f}{00104}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___c_r_c_ga23e7df2eaecf59615e13b2cad8b7185f}{HAL\_CRC\_Init}}(\mbox{\hyperlink{struct_c_r_c___handle_type_def}{CRC\_HandleTypeDef}} *hcrc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00105}\mbox{\hyperlink{group___c_r_c_gac600b9a1785f2372ca40ed5449c23739}{00105}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___c_r_c_gac600b9a1785f2372ca40ed5449c23739}{HAL\_CRC\_DeInit}} (\mbox{\hyperlink{struct_c_r_c___handle_type_def}{CRC\_HandleTypeDef}} *hcrc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00106}\mbox{\hyperlink{group___c_r_c_ga5167ffd293de5d86f5873910416b36d0}{00106}} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_r_c_ga5167ffd293de5d86f5873910416b36d0}{HAL\_CRC\_MspInit}}(\mbox{\hyperlink{struct_c_r_c___handle_type_def}{CRC\_HandleTypeDef}} *hcrc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00107}\mbox{\hyperlink{group___c_r_c_gac19b8df939b3490e690bdf1e1e04ead3}{00107}} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_r_c_gac19b8df939b3490e690bdf1e1e04ead3}{HAL\_CRC\_MspDeInit}}(\mbox{\hyperlink{struct_c_r_c___handle_type_def}{CRC\_HandleTypeDef}} *hcrc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00109}00109 \textcolor{comment}{/* Peripheral Control functions  ************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00110}\mbox{\hyperlink{group___c_r_c_ga124a77d595e4982ad6e9a64c22f28b7b}{00110}} uint32\_t \mbox{\hyperlink{group___c_r_c_ga124a77d595e4982ad6e9a64c22f28b7b}{HAL\_CRC\_Accumulate}}(\mbox{\hyperlink{struct_c_r_c___handle_type_def}{CRC\_HandleTypeDef}} *hcrc, uint32\_t pBuffer[], uint32\_t BufferLength);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00111}\mbox{\hyperlink{group___c_r_c_ga298593a6fb0bbd109cdbed3851806371}{00111}} uint32\_t \mbox{\hyperlink{group___c_r_c_ga298593a6fb0bbd109cdbed3851806371}{HAL\_CRC\_Calculate}}(\mbox{\hyperlink{struct_c_r_c___handle_type_def}{CRC\_HandleTypeDef}} *hcrc, uint32\_t pBuffer[], uint32\_t BufferLength);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00113}00113 \textcolor{comment}{/* Peripheral State functions  **************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00114}\mbox{\hyperlink{group___c_r_c_ga4fb3d3460bd83853c28215bc5e14babe}{00114}} \mbox{\hyperlink{group___c_r_c_ga1021d6f27a072d45f6f3b233eefd8bbe}{HAL\_CRC\_StateTypeDef}} \mbox{\hyperlink{group___c_r_c_ga4fb3d3460bd83853c28215bc5e14babe}{HAL\_CRC\_GetState}}(\mbox{\hyperlink{struct_c_r_c___handle_type_def}{CRC\_HandleTypeDef}} *hcrc);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00124}00124 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00125}00125 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00126}00126 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00128}00128 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_CRC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__crc_8h_source_l00130}00130 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

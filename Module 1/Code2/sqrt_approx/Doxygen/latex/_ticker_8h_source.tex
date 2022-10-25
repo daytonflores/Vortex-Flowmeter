@@ -1,0 +1,66 @@
+\hypertarget{_ticker_8h_source}{}\doxysection{Ticker.\+h}
+\label{_ticker_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/Ticker.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/Ticker.h}}
+\mbox{\hyperlink{_ticker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_TICKER\_H}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_TICKER\_H}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_timer_event_8h}{TimerEvent.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00020}00020 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_function_pointer_8h}{FunctionPointer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00022}00022 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00057}\mbox{\hyperlink{classmbed_1_1_ticker}{00057}} \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_ticker}{Ticker}} : \textcolor{keyword}{public} \mbox{\hyperlink{classmbed_1_1_timer_event}{TimerEvent}} \{}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00059}00059 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00066}\mbox{\hyperlink{classmbed_1_1_ticker_a2fce5ed90836ae8136f8c14df8fd09db}{00066}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_ticker_a2fce5ed90836ae8136f8c14df8fd09db}{attach}}(\textcolor{keywordtype}{void} (*fptr)(\textcolor{keywordtype}{void}), \textcolor{keywordtype}{float} t) \{}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00067}00067         \mbox{\hyperlink{classmbed_1_1_ticker_a09702756876480fbf436505db8fe70f0}{attach\_us}}(fptr, t * 1000000.0f);}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00068}00068     \}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00076}00076     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00077}\mbox{\hyperlink{classmbed_1_1_ticker_af45345399cbfc84791370ae79d2275e3}{00077}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_ticker_af45345399cbfc84791370ae79d2275e3}{attach}}(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), \textcolor{keywordtype}{float} t) \{}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00078}00078         \mbox{\hyperlink{classmbed_1_1_ticker_a09702756876480fbf436505db8fe70f0}{attach\_us}}(tptr, mptr, t * 1000000.0f);}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00079}00079     \}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00086}\mbox{\hyperlink{classmbed_1_1_ticker_a09702756876480fbf436505db8fe70f0}{00086}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_ticker_a09702756876480fbf436505db8fe70f0}{attach\_us}}(\textcolor{keywordtype}{void} (*fptr)(\textcolor{keywordtype}{void}), \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} t) \{}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00087}00087         \mbox{\hyperlink{classmbed_1_1_ticker_a03ea04d108129fd57399a00c9b9ce8d2}{\_function}}.\mbox{\hyperlink{classmbed_1_1_function_pointer_ae8507d9ccbe0a467029ec8c126f5e711}{attach}}(fptr);}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00088}00088         \mbox{\hyperlink{classmbed_1_1_ticker_a50808a3fbc1f22a6d4a98036d001f087}{setup}}(t);}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00089}00089     \}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00097}00097     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00098}\mbox{\hyperlink{classmbed_1_1_ticker_a2e9e4b2d3e8adf447fb89af5cc14135c}{00098}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_ticker_a2e9e4b2d3e8adf447fb89af5cc14135c}{attach\_us}}(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} t) \{}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00099}00099         \mbox{\hyperlink{classmbed_1_1_ticker_a03ea04d108129fd57399a00c9b9ce8d2}{\_function}}.\mbox{\hyperlink{classmbed_1_1_function_pointer_ae8507d9ccbe0a467029ec8c126f5e711}{attach}}(tptr, mptr);}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00100}00100         \mbox{\hyperlink{classmbed_1_1_ticker_a50808a3fbc1f22a6d4a98036d001f087}{setup}}(t);}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00101}00101     \}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00105}\mbox{\hyperlink{classmbed_1_1_ticker_ac295bade8aee589f6718dfa79edc2a34}{00105}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_ticker_ac295bade8aee589f6718dfa79edc2a34}{detach}}();}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00107}00107 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00108}\mbox{\hyperlink{classmbed_1_1_ticker_a50808a3fbc1f22a6d4a98036d001f087}{00108}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_ticker_a50808a3fbc1f22a6d4a98036d001f087}{setup}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} t);}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00109}\mbox{\hyperlink{classmbed_1_1_ticker_a10a5ab629c238472e20543206af37ce3}{00109}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_ticker_a10a5ab629c238472e20543206af37ce3}{handler}}();}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00111}\mbox{\hyperlink{classmbed_1_1_ticker_a68b93a57027743d01e29a8e08779316a}{00111}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_ticker_a68b93a57027743d01e29a8e08779316a}{\_delay}};}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00112}\mbox{\hyperlink{classmbed_1_1_ticker_a03ea04d108129fd57399a00c9b9ce8d2}{00112}}     \mbox{\hyperlink{classmbed_1_1_function_pointer}{FunctionPointer}} \mbox{\hyperlink{classmbed_1_1_ticker_a03ea04d108129fd57399a00c9b9ce8d2}{\_function}};}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00113}00113 \};}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00115}00115 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_ticker_8h_source_l00117}00117 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

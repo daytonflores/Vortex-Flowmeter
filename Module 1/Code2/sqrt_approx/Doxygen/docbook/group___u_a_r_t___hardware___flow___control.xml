@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_a_r_t___hardware___flow___control" xml:lang="en-US">
+<title>UART_Hardware_Flow_Control</title>
+<indexterm><primary>UART_Hardware_Flow_Control</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___hardware___flow___control_1gae0569001c06b7760cd38c481f84116cf">UART_HWCONTROL_NONE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___hardware___flow___control_1ga6d5dad09c6abf30f252084ba0f8c0b7d">UART_HWCONTROL_RTS</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga7c5d6fcd84a4728cda578a0339b4cac2">USART_CR3_RTSE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___hardware___flow___control_1ga352f517245986e3b86bc75f8472c51ea">UART_HWCONTROL_CTS</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaa125f026b1ca2d76eab48b191baed265">USART_CR3_CTSE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___hardware___flow___control_1ga7c91698e8f08ba7ed3f2a0ba9aa27d73">UART_HWCONTROL_RTS_CTS</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga7c5d6fcd84a4728cda578a0339b4cac2">USART_CR3_RTSE</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa125f026b1ca2d76eab48b191baed265">USART_CR3_CTSE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___hardware___flow___control_1ga4da792d3bbb8e04d97dd45b963ac2464">IS_UART_HARDWARE_FLOW_CONTROL</link>(CONTROL)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___u_a_r_t___hardware___flow___control_1ga4da792d3bbb8e04d97dd45b963ac2464"/><section>
+    <title>IS_UART_HARDWARE_FLOW_CONTROL</title>
+<indexterm><primary>IS_UART_HARDWARE_FLOW_CONTROL</primary><secondary>UART_Hardware_Flow_Control</secondary></indexterm>
+<indexterm><primary>UART_Hardware_Flow_Control</primary><secondary>IS_UART_HARDWARE_FLOW_CONTROL</secondary></indexterm>
+<para><computeroutput>#define IS_UART_HARDWARE_FLOW_CONTROL( CONTROL)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((CONTROL)&#32;==&#32;<link linkend="_group___u_a_r_t___hardware___flow___control_1gae0569001c06b7760cd38c481f84116cf">UART_HWCONTROL_NONE</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CONTROL)&#32;==&#32;<link linkend="_group___u_a_r_t___hardware___flow___control_1ga6d5dad09c6abf30f252084ba0f8c0b7d">UART_HWCONTROL_RTS</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CONTROL)&#32;==&#32;<link linkend="_group___u_a_r_t___hardware___flow___control_1ga352f517245986e3b86bc75f8472c51ea">UART_HWCONTROL_CTS</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CONTROL)&#32;==&#32;<link linkend="_group___u_a_r_t___hardware___flow___control_1ga7c91698e8f08ba7ed3f2a0ba9aa27d73">UART_HWCONTROL_RTS_CTS</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00202">202</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_a_r_t___hardware___flow___control_1ga352f517245986e3b86bc75f8472c51ea"/><section>
+    <title>UART_HWCONTROL_CTS</title>
+<indexterm><primary>UART_HWCONTROL_CTS</primary><secondary>UART_Hardware_Flow_Control</secondary></indexterm>
+<indexterm><primary>UART_Hardware_Flow_Control</primary><secondary>UART_HWCONTROL_CTS</secondary></indexterm>
+<para><computeroutput>#define UART_HWCONTROL_CTS   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaa125f026b1ca2d76eab48b191baed265">USART_CR3_CTSE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00200">200</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_a_r_t___hardware___flow___control_1gae0569001c06b7760cd38c481f84116cf"/><section>
+    <title>UART_HWCONTROL_NONE</title>
+<indexterm><primary>UART_HWCONTROL_NONE</primary><secondary>UART_Hardware_Flow_Control</secondary></indexterm>
+<indexterm><primary>UART_Hardware_Flow_Control</primary><secondary>UART_HWCONTROL_NONE</secondary></indexterm>
+<para><computeroutput>#define UART_HWCONTROL_NONE   ((uint32_t)0x00000000)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00198">198</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_a_r_t___hardware___flow___control_1ga6d5dad09c6abf30f252084ba0f8c0b7d"/><section>
+    <title>UART_HWCONTROL_RTS</title>
+<indexterm><primary>UART_HWCONTROL_RTS</primary><secondary>UART_Hardware_Flow_Control</secondary></indexterm>
+<indexterm><primary>UART_Hardware_Flow_Control</primary><secondary>UART_HWCONTROL_RTS</secondary></indexterm>
+<para><computeroutput>#define UART_HWCONTROL_RTS   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga7c5d6fcd84a4728cda578a0339b4cac2">USART_CR3_RTSE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00199">199</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_a_r_t___hardware___flow___control_1ga7c91698e8f08ba7ed3f2a0ba9aa27d73"/><section>
+    <title>UART_HWCONTROL_RTS_CTS</title>
+<indexterm><primary>UART_HWCONTROL_RTS_CTS</primary><secondary>UART_Hardware_Flow_Control</secondary></indexterm>
+<indexterm><primary>UART_Hardware_Flow_Control</primary><secondary>UART_HWCONTROL_RTS_CTS</secondary></indexterm>
+<para><computeroutput>#define UART_HWCONTROL_RTS_CTS   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga7c5d6fcd84a4728cda578a0339b4cac2">USART_CR3_RTSE</link> | <link linkend="_group___peripheral___registers___bits___definition_1gaa125f026b1ca2d76eab48b191baed265">USART_CR3_CTSE</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00201">201</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+</section>
+</section>

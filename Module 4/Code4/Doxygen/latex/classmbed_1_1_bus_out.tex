@@ -1,0 +1,97 @@
+\hypertarget{classmbed_1_1_bus_out}{}\doxysection{mbed\+::Bus\+Out Class Reference}
+\label{classmbed_1_1_bus_out}\index{mbed::BusOut@{mbed::BusOut}}
+
+
+{\ttfamily \#include $<$Bus\+Out.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmbed_1_1_bus_out_a05733cb6ed754af032de0be4d02c4604}{Bus\+Out}} (Pin\+Name p0, Pin\+Name p1=NC, Pin\+Name p2=NC, Pin\+Name p3=NC, Pin\+Name p4=NC, Pin\+Name p5=NC, Pin\+Name p6=NC, Pin\+Name p7=NC, Pin\+Name p8=NC, Pin\+Name p9=NC, Pin\+Name p10=NC, Pin\+Name p11=NC, Pin\+Name p12=NC, Pin\+Name p13=NC, Pin\+Name p14=NC, Pin\+Name p15=NC)
+\item 
+\mbox{\Hypertarget{classmbed_1_1_bus_out_adf835a7d7d6f901a96b2d07c9ba495d8}\label{classmbed_1_1_bus_out_adf835a7d7d6f901a96b2d07c9ba495d8}} 
+{\bfseries Bus\+Out} (Pin\+Name pins\mbox{[}16\mbox{]})
+\item 
+void \mbox{\hyperlink{classmbed_1_1_bus_out_a907cb408dae3f4808ed5d580da4dcae9}{write}} (int value)
+\item 
+int \mbox{\hyperlink{classmbed_1_1_bus_out_afd5c1c6fe1697c32f8976bec51d6c7e7}{read}} ()
+\item 
+\mbox{\hyperlink{classmbed_1_1_bus_out}{Bus\+Out}} \& \mbox{\hyperlink{classmbed_1_1_bus_out_a321888c93bd709d1fb3f2ccbf301bb62}{operator=}} (int v)
+\item 
+\mbox{\Hypertarget{classmbed_1_1_bus_out_a52be1f0b046f4c9e4883633541095342}\label{classmbed_1_1_bus_out_a52be1f0b046f4c9e4883633541095342}} 
+\mbox{\hyperlink{classmbed_1_1_bus_out}{Bus\+Out}} \& {\bfseries operator=} (\mbox{\hyperlink{classmbed_1_1_bus_out}{Bus\+Out}} \&rhs)
+\item 
+\mbox{\hyperlink{classmbed_1_1_bus_out_aea2726eb3c2774945f4e79114839fe75}{operator int}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmbed_1_1_bus_out_aebb26dee44094ccbea4a66351bad1a9d}\label{classmbed_1_1_bus_out_aebb26dee44094ccbea4a66351bad1a9d}} 
+\mbox{\hyperlink{classmbed_1_1_digital_out}{Digital\+Out}} $\ast$ {\bfseries \+\_\+pin} \mbox{[}16\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A digital output bus, used for setting the state of a collection of pins 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmbed_1_1_bus_out_a05733cb6ed754af032de0be4d02c4604}\label{classmbed_1_1_bus_out_a05733cb6ed754af032de0be4d02c4604}} 
+\index{mbed::BusOut@{mbed::BusOut}!BusOut@{BusOut}}
+\index{BusOut@{BusOut}!mbed::BusOut@{mbed::BusOut}}
+\doxysubsubsection{\texorpdfstring{BusOut()}{BusOut()}}
+{\footnotesize\ttfamily mbed\+::\+Bus\+Out\+::\+Bus\+Out (\begin{DoxyParamCaption}\item[{Pin\+Name}]{p0,  }\item[{Pin\+Name}]{p1 = {\ttfamily NC},  }\item[{Pin\+Name}]{p2 = {\ttfamily NC},  }\item[{Pin\+Name}]{p3 = {\ttfamily NC},  }\item[{Pin\+Name}]{p4 = {\ttfamily NC},  }\item[{Pin\+Name}]{p5 = {\ttfamily NC},  }\item[{Pin\+Name}]{p6 = {\ttfamily NC},  }\item[{Pin\+Name}]{p7 = {\ttfamily NC},  }\item[{Pin\+Name}]{p8 = {\ttfamily NC},  }\item[{Pin\+Name}]{p9 = {\ttfamily NC},  }\item[{Pin\+Name}]{p10 = {\ttfamily NC},  }\item[{Pin\+Name}]{p11 = {\ttfamily NC},  }\item[{Pin\+Name}]{p12 = {\ttfamily NC},  }\item[{Pin\+Name}]{p13 = {\ttfamily NC},  }\item[{Pin\+Name}]{p14 = {\ttfamily NC},  }\item[{Pin\+Name}]{p15 = {\ttfamily NC} }\end{DoxyParamCaption})}
+
+Create an \mbox{\hyperlink{classmbed_1_1_bus_out}{Bus\+Out}}, connected to the specified pins
+
+
+\begin{DoxyParams}{Parameters}
+{\em p$<$n$>$} & \mbox{\hyperlink{classmbed_1_1_digital_out}{Digital\+Out}} pin to connect to bus bit $<$n$>$ (p5-\/p30, NC)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It is only required to specify as many pin variables as is required for the bus; the rest will default to NC (not connected) 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_bus_out_aea2726eb3c2774945f4e79114839fe75}\label{classmbed_1_1_bus_out_aea2726eb3c2774945f4e79114839fe75}} 
+\index{mbed::BusOut@{mbed::BusOut}!operator int@{operator int}}
+\index{operator int@{operator int}!mbed::BusOut@{mbed::BusOut}}
+\doxysubsubsection{\texorpdfstring{operator int()}{operator int()}}
+{\footnotesize\ttfamily mbed\+::\+Bus\+Out\+::operator int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A shorthand for \mbox{\hyperlink{classmbed_1_1_bus_out_afd5c1c6fe1697c32f8976bec51d6c7e7}{read()}} \mbox{\Hypertarget{classmbed_1_1_bus_out_a321888c93bd709d1fb3f2ccbf301bb62}\label{classmbed_1_1_bus_out_a321888c93bd709d1fb3f2ccbf301bb62}} 
+\index{mbed::BusOut@{mbed::BusOut}!operator=@{operator=}}
+\index{operator=@{operator=}!mbed::BusOut@{mbed::BusOut}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmbed_1_1_bus_out}{Bus\+Out}} \& mbed\+::\+Bus\+Out\+::operator= (\begin{DoxyParamCaption}\item[{int}]{v }\end{DoxyParamCaption})}
+
+A shorthand for \mbox{\hyperlink{classmbed_1_1_bus_out_a907cb408dae3f4808ed5d580da4dcae9}{write()}} \mbox{\Hypertarget{classmbed_1_1_bus_out_afd5c1c6fe1697c32f8976bec51d6c7e7}\label{classmbed_1_1_bus_out_afd5c1c6fe1697c32f8976bec51d6c7e7}} 
+\index{mbed::BusOut@{mbed::BusOut}!read@{read}}
+\index{read@{read}!mbed::BusOut@{mbed::BusOut}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int mbed\+::\+Bus\+Out\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read the value currently output on the bus
+
+\begin{DoxyReturn}{Returns}
+An integer with each bit corresponding to associated \mbox{\hyperlink{classmbed_1_1_digital_out}{Digital\+Out}} pin setting 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmbed_1_1_bus_out_a907cb408dae3f4808ed5d580da4dcae9}\label{classmbed_1_1_bus_out_a907cb408dae3f4808ed5d580da4dcae9}} 
+\index{mbed::BusOut@{mbed::BusOut}!write@{write}}
+\index{write@{write}!mbed::BusOut@{mbed::BusOut}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void mbed\+::\+Bus\+Out\+::write (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+Write the value to the output bus
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & An integer specifying a bit to write for every corresponding \mbox{\hyperlink{classmbed_1_1_digital_out}{Digital\+Out}} pin \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/Bus\+Out.\+h\end{DoxyCompactItemize}

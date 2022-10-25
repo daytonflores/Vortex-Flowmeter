@@ -1,0 +1,109 @@
+\hypertarget{stm32f4xx__hal__iwdg_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+iwdg.\+h}
+\label{stm32f4xx__hal__iwdg_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_iwdg.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_iwdg.h}}
+\mbox{\hyperlink{stm32f4xx__hal__iwdg_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00038}00038 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_IWDG\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00040}00040 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_IWDG\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00046}00046 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00047}00047 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00057}00057 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00062}\mbox{\hyperlink{group___i_w_d_g_ga61699dc6f24a3edecddd16018560d0e5}{00062}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00063}00063 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00064}\mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5afc0696c27fdaa4f7dbe7f08a9b5d6030}{00064}}   \mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5afc0696c27fdaa4f7dbe7f08a9b5d6030}{HAL\_IWDG\_STATE\_RESET}}     = 0x00,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00065}\mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5a8aad8fa61ebdbad5411e17f7fdd35803}{00065}}   \mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5a8aad8fa61ebdbad5411e17f7fdd35803}{HAL\_IWDG\_STATE\_READY}}     = 0x01,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00066}\mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5a4ba9c9db0e319b41d19d5ad7e5b51c77}{00066}}   \mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5a4ba9c9db0e319b41d19d5ad7e5b51c77}{HAL\_IWDG\_STATE\_BUSY}}      = 0x02,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00067}\mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5a415081e774deff4c59801adf358e2683}{00067}}   \mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5a415081e774deff4c59801adf358e2683}{HAL\_IWDG\_STATE\_TIMEOUT}}   = 0x03,  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00068}00068   \mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5a79340b932fb1f3b536fd37ebdf7b6fb6}{HAL\_IWDG\_STATE\_ERROR}}     = 0x04   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00070}\mbox{\hyperlink{group___i_w_d_g_gga61699dc6f24a3edecddd16018560d0e5a79340b932fb1f3b536fd37ebdf7b6fb6}{00070}} \}\mbox{\hyperlink{group___i_w_d_g_ga61699dc6f24a3edecddd16018560d0e5}{HAL\_IWDG\_StateTypeDef}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00075}\mbox{\hyperlink{struct_i_w_d_g___init_type_def}{00075}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00076}00076 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00077}\mbox{\hyperlink{struct_i_w_d_g___init_type_def_affb82025da5b8d4a06e61f1690460f4d}{00077}}   uint32\_t \mbox{\hyperlink{struct_i_w_d_g___init_type_def_affb82025da5b8d4a06e61f1690460f4d}{Prescaler}};  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00080}\mbox{\hyperlink{struct_i_w_d_g___init_type_def_ac1853930373a5a969bec345ba2810360}{00080}}   uint32\_t \mbox{\hyperlink{struct_i_w_d_g___init_type_def_ac1853930373a5a969bec345ba2810360}{Reload}};     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00083}00083 \}\mbox{\hyperlink{struct_i_w_d_g___init_type_def}{IWDG\_InitTypeDef}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00088}\mbox{\hyperlink{struct_i_w_d_g___handle_type_def}{00088}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00089}00089 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00090}\mbox{\hyperlink{struct_i_w_d_g___handle_type_def_a94413f7ca8c547a5182ec3b56c2935d2}{00090}}   \mbox{\hyperlink{struct_i_w_d_g___type_def}{IWDG\_TypeDef}}                 *\mbox{\hyperlink{struct_i_w_d_g___handle_type_def_a94413f7ca8c547a5182ec3b56c2935d2}{Instance}};  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00092}\mbox{\hyperlink{struct_i_w_d_g___handle_type_def_ae9d38c6cdd89c9f89262f567bbae0f67}{00092}}   \mbox{\hyperlink{struct_i_w_d_g___init_type_def}{IWDG\_InitTypeDef}}             \mbox{\hyperlink{struct_i_w_d_g___handle_type_def_ae9d38c6cdd89c9f89262f567bbae0f67}{Init}};       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00094}\mbox{\hyperlink{struct_i_w_d_g___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}{00094}}   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}              \mbox{\hyperlink{struct_i_w_d_g___handle_type_def_ad4cf225029dbefe8d3fe660c33b8bb6b}{Lock}};       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00096}\mbox{\hyperlink{struct_i_w_d_g___handle_type_def_abd466592b2ae5a2ac908f6c1c22a3e3e}{00096}}   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___i_w_d_g_ga61699dc6f24a3edecddd16018560d0e5}{HAL\_IWDG\_StateTypeDef}}   \mbox{\hyperlink{struct_i_w_d_g___handle_type_def_abd466592b2ae5a2ac908f6c1c22a3e3e}{State}};      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00098}00098 \}\mbox{\hyperlink{struct_i_w_d_g___handle_type_def}{IWDG\_HandleTypeDef}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00100}00100 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00108}00108 \textcolor{comment}{/* -\/-\/-\/ KR Register -\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00109}00109 \textcolor{comment}{/* KR register bit mask */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00110}\mbox{\hyperlink{group___i_w_d_g___registers___bit_mask_ga830a9a1bad16c7043c86545f4c159a50}{00110}} \textcolor{preprocessor}{\#define KR\_KEY\_RELOAD   ((uint32\_t)0xAAAA)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00111}\mbox{\hyperlink{group___i_w_d_g___registers___bit_mask_gaeaa0dd2da3f9d0cce0d708cfff1df545}{00111}} \textcolor{preprocessor}{\#define KR\_KEY\_ENABLE   ((uint32\_t)0xCCCC)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00112}\mbox{\hyperlink{group___i_w_d_g___registers___bit_mask_gadf1ad39b6aa3d426f6e7fbf29d088aa5}{00112}} \textcolor{preprocessor}{\#define KR\_KEY\_EWA      ((uint32\_t)0x5555)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00113}\mbox{\hyperlink{group___i_w_d_g___registers___bit_mask_gae9cf62ac0d5eda2dd2417c280237e446}{00113}} \textcolor{preprocessor}{\#define KR\_KEY\_DWA      ((uint32\_t)0x0000)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00122}\mbox{\hyperlink{group___i_w_d_g___flag__definition_gae20afcf399fad1534e79a8d30ea86c9c}{00122}} \textcolor{preprocessor}{\#define IWDG\_FLAG\_PVU   ((uint32\_t)0x0001)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00123}\mbox{\hyperlink{group___i_w_d_g___flag__definition_ga3731bf2711c234ffe5b405fb6634ebca}{00123}} \textcolor{preprocessor}{\#define IWDG\_FLAG\_RVU   ((uint32\_t)0x0002)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00125}\mbox{\hyperlink{group___i_w_d_g___flag__definition_ga5be9ae9ba267cf09a00523ef3e219293}{00125}} \textcolor{preprocessor}{\#define IS\_IWDG\_FLAG(FLAG) (((FLAG) == IWDG\_FLAG\_PVU) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00126}00126 \textcolor{preprocessor}{                            ((FLAG) == IWDG\_FLAG\_RVU))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00135}\mbox{\hyperlink{group___i_w_d_g___prescaler_ga470bb195d35ef7a0b75164c228b4ee69}{00135}} \textcolor{preprocessor}{\#define IWDG\_PRESCALER\_4     ((uint8\_t)0x00)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00136}\mbox{\hyperlink{group___i_w_d_g___prescaler_ga5f00866f823ee700005e8a753b28ad75}{00136}} \textcolor{preprocessor}{\#define IWDG\_PRESCALER\_8     ((uint8\_t)0x01)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00137}\mbox{\hyperlink{group___i_w_d_g___prescaler_gab3eb3c6a10facc8b0dc7c33608f6e129}{00137}} \textcolor{preprocessor}{\#define IWDG\_PRESCALER\_16    ((uint8\_t)0x02)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00138}\mbox{\hyperlink{group___i_w_d_g___prescaler_gac3f33494fb7aaa2845ac106858394e03}{00138}} \textcolor{preprocessor}{\#define IWDG\_PRESCALER\_32    ((uint8\_t)0x03)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00139}\mbox{\hyperlink{group___i_w_d_g___prescaler_ga52a956c645ce59312c84cbe37b2b20e4}{00139}} \textcolor{preprocessor}{\#define IWDG\_PRESCALER\_64    ((uint8\_t)0x04)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00140}\mbox{\hyperlink{group___i_w_d_g___prescaler_ga17901d4e3e52af620acbbb146fd79264}{00140}} \textcolor{preprocessor}{\#define IWDG\_PRESCALER\_128   ((uint8\_t)0x05)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00141}\mbox{\hyperlink{group___i_w_d_g___prescaler_ga885221d5bb09157c9e953a1be38556f0}{00141}} \textcolor{preprocessor}{\#define IWDG\_PRESCALER\_256   ((uint8\_t)0x06)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00143}\mbox{\hyperlink{group___i_w_d_g___prescaler_gab1e0695c1a22840d5be7c7fad283f4ba}{00143}} \textcolor{preprocessor}{\#define IS\_IWDG\_PRESCALER(PRESCALER) (((PRESCALER) == IWDG\_PRESCALER\_4)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00144}00144 \textcolor{preprocessor}{                                      ((PRESCALER) == IWDG\_PRESCALER\_8)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00145}00145 \textcolor{preprocessor}{                                      ((PRESCALER) == IWDG\_PRESCALER\_16) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00146}00146 \textcolor{preprocessor}{                                      ((PRESCALER) == IWDG\_PRESCALER\_32) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00147}00147 \textcolor{preprocessor}{                                      ((PRESCALER) == IWDG\_PRESCALER\_64) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00148}00148 \textcolor{preprocessor}{                                      ((PRESCALER) == IWDG\_PRESCALER\_128)|| \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00149}00149 \textcolor{preprocessor}{                                      ((PRESCALER) == IWDG\_PRESCALER\_256))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00158}\mbox{\hyperlink{group___i_w_d_g___reload___value_ga7c319e96bded8e3c38c6a42a1b335c68}{00158}} \textcolor{preprocessor}{\#define IS\_IWDG\_RELOAD(RELOAD) ((RELOAD) <= 0xFFF)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00168}00168 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00174}\mbox{\hyperlink{group___i_w_d_g_ga9990235f5c32f26ed6455a30bc14ee65}{00174}} \textcolor{preprocessor}{\#define \_\_HAL\_IWDG\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_IWDG\_STATE\_RESET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00181}\mbox{\hyperlink{group___i_w_d_g_ga5914aff5b85e3151bb75377a32d83d6a}{00181}} \textcolor{preprocessor}{\#define \_\_HAL\_IWDG\_START(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>KR |=  KR\_KEY\_ENABLE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00189}\mbox{\hyperlink{group___i_w_d_g_gac0eaf381e60a654d6b51c43f645e088f}{00189}} \textcolor{preprocessor}{\#define \_\_HAL\_IWDG\_RELOAD\_COUNTER(\_\_HANDLE\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>KR) |= KR\_KEY\_RELOAD)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00196}\mbox{\hyperlink{group___i_w_d_g_ga425b3021a67a13ce98cf58dd277b5d5b}{00196}} \textcolor{preprocessor}{\#define \_\_HAL\_IWDG\_ENABLE\_WRITE\_ACCESS(\_\_HANDLE\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>KR) |= KR\_KEY\_EWA)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00203}\mbox{\hyperlink{group___i_w_d_g_ga03e0f29f0f6f15c2615b471d67d80a44}{00203}} \textcolor{preprocessor}{\#define \_\_HAL\_IWDG\_DISABLE\_WRITE\_ACCESS(\_\_HANDLE\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>KR) |= KR\_KEY\_DWA)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00214}\mbox{\hyperlink{group___i_w_d_g_gae13d68bc29e7d7798cecf9360ac79fed}{00214}} \textcolor{preprocessor}{\#define \_\_HAL\_IWDG\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>SR \& (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00225}\mbox{\hyperlink{group___i_w_d_g_ga6e4e701321ad8037d4e2feab85d49a8b}{00225}} \textcolor{preprocessor}{\#define \_\_HAL\_IWDG\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>SR \&= \string~(\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00228}00228 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00230}00230 \textcolor{comment}{/* Initialization/de-\/initialization functions  ********************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00231}\mbox{\hyperlink{group___i_w_d_g_ga2e1669e60f2dc298fecaed919e7ae810}{00231}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___i_w_d_g_ga2e1669e60f2dc298fecaed919e7ae810}{HAL\_IWDG\_Init}}(\mbox{\hyperlink{struct_i_w_d_g___handle_type_def}{IWDG\_HandleTypeDef}} *hiwdg);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00232}\mbox{\hyperlink{group___i_w_d_g_gaf26b08d1a805d1dd515cafd0278c240c}{00232}} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___i_w_d_g_gaf26b08d1a805d1dd515cafd0278c240c}{HAL\_IWDG\_MspInit}}(\mbox{\hyperlink{struct_i_w_d_g___handle_type_def}{IWDG\_HandleTypeDef}} *hiwdg);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00233}00233 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00234}00234 \textcolor{comment}{/* I/O operation functions ****************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00235}\mbox{\hyperlink{group___i_w_d_g_gaaa540681b7a6a4f7cc6b0b5497e6de46}{00235}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___i_w_d_g_gaaa540681b7a6a4f7cc6b0b5497e6de46}{HAL\_IWDG\_Start}}(\mbox{\hyperlink{struct_i_w_d_g___handle_type_def}{IWDG\_HandleTypeDef}} *hiwdg);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00236}\mbox{\hyperlink{group___i_w_d_g_ga7e86236aea6d2f3638397fdf90333e4a}{00236}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___i_w_d_g_ga7e86236aea6d2f3638397fdf90333e4a}{HAL\_IWDG\_Refresh}}(\mbox{\hyperlink{struct_i_w_d_g___handle_type_def}{IWDG\_HandleTypeDef}} *hiwdg);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00237}00237 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00238}00238 \textcolor{comment}{/* Peripheral State functions  ************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00239}\mbox{\hyperlink{group___i_w_d_g_ga4b2f32b043612fdd1b68f806115d8de4}{00239}} \mbox{\hyperlink{group___i_w_d_g_ga61699dc6f24a3edecddd16018560d0e5}{HAL\_IWDG\_StateTypeDef}} \mbox{\hyperlink{group___i_w_d_g_ga4b2f32b043612fdd1b68f806115d8de4}{HAL\_IWDG\_GetState}}(\mbox{\hyperlink{struct_i_w_d_g___handle_type_def}{IWDG\_HandleTypeDef}} *hiwdg);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00249}00249 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00250}00250 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00251}00251 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00253}00253 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_IWDG\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__iwdg_8h_source_l00255}00255 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

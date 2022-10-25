@@ -1,0 +1,2329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s__core___debug_functions" xml:lang="en-US">
+<title>ITM Functions</title>
+<indexterm><primary>ITM Functions</primary></indexterm>
+<para>
+
+<para>Functions that access the ITM debug interface. </para>
+ 
+</para>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:27</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a">Q</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:27</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a">Q</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaebefeb6e08b9352dd3007ab5fd69e82f">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2e72aff2ccc3b26798caef5e5a3387ea">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga76485660fe8ad98cdc71ddd7cb0ed777">IT</link>:2</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a">Q</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:15</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga76485660fe8ad98cdc71ddd7cb0ed777">IT</link>:2</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a">Q</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaef3c33fac78a7b8a4bfdb41f28b74299">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2518558c090f60161ba4e718a54ee468">FPCA</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:29</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2518558c090f60161ba4e718a54ee468">FPCA</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:29</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga75e65979c5e495541e12945e4ba1baa2">b</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gab61000be19b0293ea14009224fc34fe3">IABR</link> [8]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint8_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga38c377984f751265667317981f101bb4">IP</link> [240]</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga46aeb40348124934bf802f01806b4f7f">RESERVED5</link> [644]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga471c399bb79454dcdfb342a31a5684ae">STIR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaaf388a921a016cae590cfcf1e43b1cdf">VTOR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint8_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga17dc9f83c53cbf7fa249e79a2d2a43f8">SHP</link> [12]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae6b1e9cde3f94195206c016214cf3936">CFSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga87aadbc5e1ffb76d755cf13f4721ae71">HFSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga415598d9009bb3ffe9f35e03e5a386fe">DFSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga88820a178974aa7b7927155cee5c47ed">MMFAR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gad49f99b1c83dcab356579af171bfa475">BFAR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gab9176079ea223dd8902589da91af63a2">AFSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga0c3c74d90886d6f470882c63c0e60bfe">PFR</link> [2]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga1b9a71780ae327f1f337a2176b777618">DFR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga5c0e2e1c7195d4dc09a5ca077c596318">ADR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga037095d7dc8c30536cab793e28329c45">MMFR</link> [4]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gabdeaebf965a4ca1dfde816cab85f1156">ISAR</link> [5]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gacccaf5688449c8253e9952ddc2161528">CPACR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga3bc109a372d05329e22cb7e3bf2b84ba">RESERVED0</link> [1]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga5bb2c6795b90f12077534825cc844b56">ICTR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga3e94488b04b41e4c165bbfe6932f4a92">RESERVED1</link> [1]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint8_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga0374c0b98ab9de6f71fabff7412df832">u8</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint16_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae8d499140220fa6d4eab1da7262bf08e">u16</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gacaf6d0e14a3d4b541c624913b4a1931e">u32</link></para>
+</listitem>
+            <listitem><para>union {</para>
+        <itemizedlist>
+            <listitem><para>   <link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint8_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga0374c0b98ab9de6f71fabff7412df832">u8</link></para>
+</listitem>
+            <listitem><para>   <link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint16_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae8d499140220fa6d4eab1da7262bf08e">u16</link></para>
+</listitem>
+            <listitem><para>   <link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gacaf6d0e14a3d4b541c624913b4a1931e">u32</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaac185c3215457883396ae15f47be9bec">PORT</link> [32]</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga63deb05e7a614fd290562e511a2979ff">RESERVED0</link> [864]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga8ffb3c6b706b03334f6fe37ef5d8b165">TER</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga162d8d4bcf80ad9b8f01af570ed81058">RESERVED1</link> [15]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga72bb9b7d61fe3262cd2a6070a7bd5b69">TPR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gade93d21b11103a1e89c36b9120b4cbf0">RESERVED2</link> [15]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae9dd9282fab299d0cd6e119564688e53">TCR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga5f6279765c35211755691cab040f7cbd">RESERVED3</link> [29]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae13374b53589f16b2fc2c868d779a9c7">IWR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga5f1859b657556cbeeb743b0da2e71654">IRR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa75460116777434aebcd8698b46514cd">IMCR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga1f593ff98d0afd4a9f02de33304fe38d">RESERVED4</link> [43]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa2c0f411bbcc7b7c7a558a964996dc11">LAR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga8387dc0dc9f45c8a81cfc98bfff7ae32">LSR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2e4356b97fabed41bcbf29ec48cdb3de">RESERVED5</link> [6]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gad75960b83ea47a469e6a1406dd9eefa6">PID4</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga7276a30c464f0b34944b6eb16d3df077">PID5</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae5d83564471b76d88088a949ca67ac9b">PID6</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga247fae2f4a140d4da5e8a044370dedec">PID7</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gad6c87ae4ca1aa56b4369a97fca639926">PID0</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae554433b6f6c4733d222bcb2c75ccb39">PID1</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaf07d9a44e0188d55742f5d6a8752cd2c">PID2</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga510fcf8ad6966fdfb0767e624b74c64f">PID3</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gad613e91338bb994bde578b1a2fcbc1ec">CID0</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga67f499e16728f744c73dad3784d898d7">CID1</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gab36bf4236041f727b3e5cf2cfaa2aa04">CID2</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gacb2fedfd1da6ff2a57d25fec513ffe25">CID3</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga15fc8d35f045f329b80c544bef35ff64">CTRL</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gacf6d1c3e5f5cef92986fd9cfae5c7224">CYCCNT</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga49a1dced8d644fa6f4128570f102212e">CPICNT</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae6edad4ef9f92b3ce206dac61621871a">EXCCNT</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga720f3795a53a8d8f275df636fee1aee7">SLEEPCNT</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gab1d62b8e1a69bead9717d5a02f741811">LSUCNT</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga11e6aebbf2c7bedc29059ff023891b82">FOLDCNT</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaccef6b622c8a41342ed32345b0922bea">PCSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga00be2e0bf3e38ab6f33f8349d9e7a200">COMP0</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gab3f06e2cb3a76edc6f3fc90af88671ba">MASK0</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga7eb6189fbcdf2ad9d0d28dad691f3fe8">FUNCTION0</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga3bc109a372d05329e22cb7e3bf2b84ba">RESERVED0</link> [1]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga711f336367372393a5f874e5c46e2b95">COMP1</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gad55962dd61d94bd029f6927adc48bc31">MASK1</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gafbea004f9e2860b9f450bcea21eec318">FUNCTION1</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga9b85a62ba1c4cf0e4ca2b1ff8e5bc85c">RESERVED1</link> [1]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga5f159cd97def70baad2faa8d250bb86a">COMP2</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga860e7bcdcf674491835d91189bda3c61">MASK2</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga93d1f9f928292854f16333500e554c41">FUNCTION2</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa4de71b2a578cce3a67229dde3c6b52d">RESERVED2</link> [1]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga923d50abd92dbc50ef2983770489eafd">COMP3</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga541b20e412d5586312fa4dac4a151660">MASK3</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gad3bf90012b7b60cd030c54ed0ec0442d">FUNCTION3</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gad6abd8c7878d64e5e8e442de842f9de8">SSPSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga473c1ca66cec890b536d9c9a13a2d8c2">CSPSR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaf2c92c7cb13569aaff6b4f5a25de5056">RESERVED0</link> [2]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga4bdbe4ff58983d940ca72d8733feaedd">ACPR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gab90aea487bf1662e59617af05b30f253">RESERVED1</link> [55]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga102814b254904beb9060757a93fe526c">SPPR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga4e4e19be116d8ccdcb242401cfb3048b">RESERVED2</link> [131]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gab1bcdedfb12eaebecde53a7add7f9f84">FFSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga511d496d51cf81ccef6e97fd1d5abe31">FFCR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga3030960fcac362026459469bc2ff3178">FSCR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12053bc8429f36ac5045e18bc436ef82">RESERVED3</link> [759]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa3adfea70bff38242f8231737a7fa2dd">TRIGGER</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gafaaebd439123255be4d82536f8bda272">FIFO0</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga89c5da21240d76e6b873144202deffa3">ITATBCTR2</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga2280438c0b38d74e14edd06c4569d419">RESERVED4</link> [1]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gafa3718bbb523ffb294402f58896592e6">ITATBCTR0</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaf9289020546ed8dfae56b59506dfb29c">FIFO1</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gad987483f555c0f6034ef24a8840f337d">ITCTRL</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga4cf403d6d314453bf19d2b73be98367a">RESERVED5</link> [39]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga72a4fb10cf406fa6af1740e3bf6c2e41">CLAIMSET</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga9c887c45efeb6fef9b6a9ab5bc490f62">CLAIMCLR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga7055d97dce64c27cd79d6672bd41db21">RESERVED7</link> [8]</para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gac427ef592ac98a4e2d4b04d76ce02a4e">DEVID</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga67888dcdd12f305556012ba4c39cea19">DEVTYPE</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga39bc5e68dc6071187fbe2348891eabfa">DHCSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga7b49cb58573da77cc8a83a1b21262180">DCRSR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga5bcffe99d1d5471d5e5befbc6272ebf0">DCRDR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga6cdfc0a6ce3e988cc02c2d6e8107d193">DEMCR</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:16</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099">GE</link>:4</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:7</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a">Q</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:16</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099">GE</link>:4</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:7</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a">Q</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga00851734f9545a0a7e7a328226a3f5cc">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:23</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga4adb8021a7ef1568e93a46d0325de738">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:7</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099">GE</link>:4</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:4</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga76485660fe8ad98cdc71ddd7cb0ed777">IT</link>:2</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a">Q</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gad502ba7dbb2aab5f87c782b28f02622d">ISR</link>:9</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:7</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099">GE</link>:4</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga959a73d8faee56599b7e792a7c5a2d16">_reserved1</link>:4</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga6e1cf12e53a20224f6f62c001d9be972">T</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga76485660fe8ad98cdc71ddd7cb0ed777">IT</link>:2</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a">Q</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gacd4a2b64faee91e4a9eef300667fa222">V</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776">C</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga5ae954cbd9986cd64625d7fa00943c8e">Z</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gabae0610bc2a97bbf7f689e953e0b451f">N</link>:1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga331a60b885f4c78da7ca570384d4fdce">b</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2518558c090f60161ba4e718a54ee468">FPCA</link>:1</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:29</para>
+</listitem>
+            <listitem><para>struct {</para>
+        <itemizedlist>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2a6e513e8a6bf4e58db169e312172332">nPRIV</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gae185aac93686ffc78e998a9daf41415b">SPSEL</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1ga2518558c090f60161ba4e718a54ee468">FPCA</link>:1</para>
+</listitem>
+            <listitem><para>   uint32_t <link linkend="_group___c_m_s_i_s___core___sys_tick_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1">_reserved0</link>:29</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga839870b8be70ac6687709b46cc1a4281">b</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga9a73f00a0223775caeb09c5c6abb3087">ACTLR</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint8_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga0374c0b98ab9de6f71fabff7412df832">u8</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint16_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae8d499140220fa6d4eab1da7262bf08e">u16</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gacaf6d0e14a3d4b541c624913b4a1931e">u32</link></para>
+</listitem>
+            <listitem><para>union {</para>
+        <itemizedlist>
+            <listitem><para>   <link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint8_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga0374c0b98ab9de6f71fabff7412df832">u8</link></para>
+</listitem>
+            <listitem><para>   <link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint16_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae8d499140220fa6d4eab1da7262bf08e">u16</link></para>
+</listitem>
+            <listitem><para>   <link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gacaf6d0e14a3d4b541c624913b4a1931e">u32</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>} <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga533c61111d0fb3ff88d13ef4ac36b54b">PORT</link> [32]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>volatile int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link></para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gac90a497bd64286b84552c2c553d3419e">ITM_SendChar</link> (uint32_t ch)</para>
+
+<para>ITM Send Character. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gac3ee2c30a1ac4ed34c8a866a17decd53">ITM_ReceiveChar</link> (void)</para>
+
+<para>ITM Receive Character. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae61ce9ca5917735325cd93b0fb21dd29">ITM_CheckChar</link> (void)</para>
+
+<para>ITM Check Character. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa822cb398ee022b59e9e6c5d7bbb228a">ITM_RXBUFFER_EMPTY</link>   0x5AA55AA5</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>volatile int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s__core___debug_functions_1gaa822cb398ee022b59e9e6c5d7bbb228a">ITM_RXBUFFER_EMPTY</link>   0x5AA55AA5</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Functions that access the ITM debug interface. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa822cb398ee022b59e9e6c5d7bbb228a"/><section>
+    <title>ITM_RXBUFFER_EMPTY<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ITM_RXBUFFER_EMPTY</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITM_RXBUFFER_EMPTY</secondary></indexterm>
+<para><computeroutput>#define ITM_RXBUFFER_EMPTY   0x5AA55AA5</computeroutput></para>
+<para>Value identifying <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link> is ready for next character. </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01559">1559</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa822cb398ee022b59e9e6c5d7bbb228a"/><section>
+    <title>ITM_RXBUFFER_EMPTY<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ITM_RXBUFFER_EMPTY</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITM_RXBUFFER_EMPTY</secondary></indexterm>
+<para><computeroutput>#define ITM_RXBUFFER_EMPTY   0x5AA55AA5</computeroutput></para>
+<para>Value identifying <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link> is ready for next character. </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l01704">1704</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae61ce9ca5917735325cd93b0fb21dd29"/><section>
+    <title>ITM_CheckChar()</title>
+<indexterm><primary>ITM_CheckChar</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITM_CheckChar</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE int32_t ITM_CheckChar (void )</computeroutput></para><para>
+
+<para>ITM Check Character. </para>
+</para>
+
+<para>The function checks whether a character is pending for reading in the variable <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link>.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>0 No character available. </para>
+
+<para>1 Character available. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01610">1610</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac3ee2c30a1ac4ed34c8a866a17decd53"/><section>
+    <title>ITM_ReceiveChar()</title>
+<indexterm><primary>ITM_ReceiveChar</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITM_ReceiveChar</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE int32_t ITM_ReceiveChar (void )</computeroutput></para><para>
+
+<para>ITM Receive Character. </para>
+</para>
+
+<para>The function inputs a character via the external variable <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link>.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Received character. </para>
+
+<para>-1 No character pending. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01591">1591</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac90a497bd64286b84552c2c553d3419e"/><section>
+    <title>ITM_SendChar()</title>
+<indexterm><primary>ITM_SendChar</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITM_SendChar</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE uint32_t ITM_SendChar (uint32_t ch)</computeroutput></para><para>
+
+<para>ITM Send Character. </para>
+</para>
+
+<para>The function transmits a character via the ITM channel 0, and <itemizedlist>
+<listitem>
+<para>Just returns when no debugger is connected that has booked the output. </para>
+</listitem>
+<listitem>
+<para>Is blocking when a debugger is connected, but the previous character sent has not been transmitted.</para>
+</listitem>
+</itemizedlist>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>ch</entry><entry>
+<para>Character to transmit.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Character to transmit. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01572">1572</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/><section>
+    <title>_reserved0<computeroutput>[1/8]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..26 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00216">216</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/><section>
+    <title>_reserved0<computeroutput>[2/8]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00239">239</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/><section>
+    <title>_reserved0<computeroutput>[3/8]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..23 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00253">253</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/><section>
+    <title>_reserved0<computeroutput>[4/8]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 3..31 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00280">280</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/><section>
+    <title>_reserved0<computeroutput>[5/8]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 0..15 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00258">258</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/><section>
+    <title>_reserved0<computeroutput>[6/8]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..31 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00279">279</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/><section>
+    <title>_reserved0<computeroutput>[7/8]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 9..15 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00295">295</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac8a6a13838a897c8d0b8bc991bbaf7c1"/><section>
+    <title>_reserved0<computeroutput>[8/8]</computeroutput></title>
+<indexterm><primary>_reserved0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved0</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved0</computeroutput></para>
+<para>bit: 3..31 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00320">320</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/><section>
+    <title>_reserved1<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 20..26 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00260">260</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/><section>
+    <title>_reserved1<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 20..26 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00260">260</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/><section>
+    <title>_reserved1<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 20..23 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00297">297</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga959a73d8faee56599b7e792a7c5a2d16"/><section>
+    <title>_reserved1<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>_reserved1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>_reserved1</secondary></indexterm>
+<para><computeroutput>uint32_t _reserved1</computeroutput></para>
+<para>bit: 20..23 Reserved 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00297">297</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga4bdbe4ff58983d940ca72d8733feaedd"/><section>
+    <title>ACPR</title>
+<indexterm><primary>ACPR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ACPR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t ACPR</computeroutput></para>
+<para>Offset: 0x010 (R/W) Asynchronous Clock Prescaler Register </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00891">891</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga9a73f00a0223775caeb09c5c6abb3087"/><section>
+    <title>ACTLR</title>
+<indexterm><primary>ACTLR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ACTLR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t ACTLR</computeroutput></para>
+<para>Offset: 0x008 (R/W) Auxiliary Control Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00589">589</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5c0e2e1c7195d4dc09a5ca077c596318"/><section>
+    <title>ADR</title>
+<indexterm><primary>ADR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ADR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t ADR</computeroutput></para>
+<para>Offset: 0x04C (R/ ) Auxiliary Feature Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00346">346</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gab9176079ea223dd8902589da91af63a2"/><section>
+    <title>AFSR</title>
+<indexterm><primary>AFSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>AFSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t AFSR</computeroutput></para>
+<para>Offset: 0x03C (R/W) Auxiliary Fault Status Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00343">343</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaebefeb6e08b9352dd3007ab5fd69e82f"/><section>
+    <title><computeroutput>[1/8]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct  { ... }  b</computeroutput></para>
+<para>Structure used for bit access 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga2e72aff2ccc3b26798caef5e5a3387ea"/><section>
+    <title><computeroutput>[2/8]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct  { ... }  b</computeroutput></para>
+<para>Structure used for bit access 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaef3c33fac78a7b8a4bfdb41f28b74299"/><section>
+    <title><computeroutput>[3/8]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct  { ... }  b</computeroutput></para>
+<para>Structure used for bit access 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga75e65979c5e495541e12945e4ba1baa2"/><section>
+    <title><computeroutput>[4/8]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct  { ... }  b</computeroutput></para>
+<para>Structure used for bit access 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga00851734f9545a0a7e7a328226a3f5cc"/><section>
+    <title><computeroutput>[5/8]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct  { ... }  b</computeroutput></para>
+<para>Structure used for bit access 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga4adb8021a7ef1568e93a46d0325de738"/><section>
+    <title><computeroutput>[6/8]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct  { ... }  b</computeroutput></para>
+<para>Structure used for bit access 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga331a60b885f4c78da7ca570384d4fdce"/><section>
+    <title><computeroutput>[7/8]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct  { ... }  b</computeroutput></para>
+<para>Structure used for bit access 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga839870b8be70ac6687709b46cc1a4281"/><section>
+    <title><computeroutput>[8/8]</computeroutput></title>
+<indexterm><primary>b</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>b</secondary></indexterm>
+<para><computeroutput>struct  { ... }  b</computeroutput></para>
+<para>Structure used for bit access 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad49f99b1c83dcab356579af171bfa475"/><section>
+    <title>BFAR</title>
+<indexterm><primary>BFAR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>BFAR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t BFAR</computeroutput></para>
+<para>Offset: 0x038 (R/W) BusFault Address Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00342">342</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/><section>
+    <title>C<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00224">224</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/><section>
+    <title>C<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00263">263</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/><section>
+    <title>C<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00264">264</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga7a1caf92f32fe9ebd8d1fe89b06c7776"/><section>
+    <title>C<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>C</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>uint32_t C</computeroutput></para>
+<para>bit: 29 Carry condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00303">303</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae6b1e9cde3f94195206c016214cf3936"/><section>
+    <title>CFSR</title>
+<indexterm><primary>CFSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CFSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t CFSR</computeroutput></para>
+<para>Offset: 0x028 (R/W) Configurable Fault Status Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00338">338</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad613e91338bb994bde578b1a2fcbc1ec"/><section>
+    <title>CID0</title>
+<indexterm><primary>CID0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CID0</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t CID0</computeroutput></para>
+<para>Offset: 0xFF0 (R/ ) ITM Component Identification Register #0 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00670">670</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga67f499e16728f744c73dad3784d898d7"/><section>
+    <title>CID1</title>
+<indexterm><primary>CID1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CID1</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t CID1</computeroutput></para>
+<para>Offset: 0xFF4 (R/ ) ITM Component Identification Register #1 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00671">671</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gab36bf4236041f727b3e5cf2cfaa2aa04"/><section>
+    <title>CID2</title>
+<indexterm><primary>CID2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CID2</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t CID2</computeroutput></para>
+<para>Offset: 0xFF8 (R/ ) ITM Component Identification Register #2 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00672">672</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacb2fedfd1da6ff2a57d25fec513ffe25"/><section>
+    <title>CID3</title>
+<indexterm><primary>CID3</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CID3</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t CID3</computeroutput></para>
+<para>Offset: 0xFFC (R/ ) ITM Component Identification Register #3 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00673">673</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga9c887c45efeb6fef9b6a9ab5bc490f62"/><section>
+    <title>CLAIMCLR</title>
+<indexterm><primary>CLAIMCLR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CLAIMCLR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t CLAIMCLR</computeroutput></para>
+<para>Offset: 0xFA4 (R/W) Claim tag clear </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00908">908</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga72a4fb10cf406fa6af1740e3bf6c2e41"/><section>
+    <title>CLAIMSET</title>
+<indexterm><primary>CLAIMSET</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CLAIMSET</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t CLAIMSET</computeroutput></para>
+<para>Offset: 0xFA0 (R/W) Claim tag set </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00907">907</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga00be2e0bf3e38ab6f33f8349d9e7a200"/><section>
+    <title>COMP0</title>
+<indexterm><primary>COMP0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>COMP0</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t COMP0</computeroutput></para>
+<para>Offset: 0x020 (R/W) Comparator Register 0 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00751">751</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga711f336367372393a5f874e5c46e2b95"/><section>
+    <title>COMP1</title>
+<indexterm><primary>COMP1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>COMP1</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t COMP1</computeroutput></para>
+<para>Offset: 0x030 (R/W) Comparator Register 1 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00755">755</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5f159cd97def70baad2faa8d250bb86a"/><section>
+    <title>COMP2</title>
+<indexterm><primary>COMP2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>COMP2</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t COMP2</computeroutput></para>
+<para>Offset: 0x040 (R/W) Comparator Register 2 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00759">759</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga923d50abd92dbc50ef2983770489eafd"/><section>
+    <title>COMP3</title>
+<indexterm><primary>COMP3</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>COMP3</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t COMP3</computeroutput></para>
+<para>Offset: 0x050 (R/W) Comparator Register 3 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00763">763</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacccaf5688449c8253e9952ddc2161528"/><section>
+    <title>CPACR</title>
+<indexterm><primary>CPACR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CPACR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t CPACR</computeroutput></para>
+<para>Offset: 0x088 (R/W) Coprocessor Access Control Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00350">350</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga49a1dced8d644fa6f4128570f102212e"/><section>
+    <title>CPICNT</title>
+<indexterm><primary>CPICNT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CPICNT</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t CPICNT</computeroutput></para>
+<para>Offset: 0x008 (R/W) CPI Count Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00745">745</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga473c1ca66cec890b536d9c9a13a2d8c2"/><section>
+    <title>CSPSR</title>
+<indexterm><primary>CSPSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CSPSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t CSPSR</computeroutput></para>
+<para>Offset: 0x004 (R/W) Current Parallel Port Size Register </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00889">889</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga15fc8d35f045f329b80c544bef35ff64"/><section>
+    <title>CTRL</title>
+<indexterm><primary>CTRL</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CTRL</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t CTRL</computeroutput></para>
+<para>Offset: 0x000 (R/W) Control Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00743">743</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacf6d1c3e5f5cef92986fd9cfae5c7224"/><section>
+    <title>CYCCNT</title>
+<indexterm><primary>CYCCNT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>CYCCNT</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t CYCCNT</computeroutput></para>
+<para>Offset: 0x004 (R/W) Cycle Count Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00744">744</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5bcffe99d1d5471d5e5befbc6272ebf0"/><section>
+    <title>DCRDR</title>
+<indexterm><primary>DCRDR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>DCRDR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t DCRDR</computeroutput></para>
+<para>Offset: 0x008 (R/W) Debug Core Register Data Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01136">1136</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga7b49cb58573da77cc8a83a1b21262180"/><section>
+    <title>DCRSR</title>
+<indexterm><primary>DCRSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>DCRSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t DCRSR</computeroutput></para>
+<para>Offset: 0x004 ( /W) Debug Core Register Selector Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01135">1135</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga6cdfc0a6ce3e988cc02c2d6e8107d193"/><section>
+    <title>DEMCR</title>
+<indexterm><primary>DEMCR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>DEMCR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t DEMCR</computeroutput></para>
+<para>Offset: 0x00C (R/W) Debug Exception and Monitor Control Register </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01137">1137</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac427ef592ac98a4e2d4b04d76ce02a4e"/><section>
+    <title>DEVID</title>
+<indexterm><primary>DEVID</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>DEVID</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t DEVID</computeroutput></para>
+<para>Offset: 0xFC8 (R/ ) TPIU_DEVID </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00910">910</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga67888dcdd12f305556012ba4c39cea19"/><section>
+    <title>DEVTYPE</title>
+<indexterm><primary>DEVTYPE</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>DEVTYPE</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t DEVTYPE</computeroutput></para>
+<para>Offset: 0xFCC (R/ ) TPIU_DEVTYPE </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00911">911</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga1b9a71780ae327f1f337a2176b777618"/><section>
+    <title>DFR</title>
+<indexterm><primary>DFR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>DFR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t DFR</computeroutput></para>
+<para>Offset: 0x048 (R/ ) Debug Feature Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00345">345</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga415598d9009bb3ffe9f35e03e5a386fe"/><section>
+    <title>DFSR</title>
+<indexterm><primary>DFSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>DFSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t DFSR</computeroutput></para>
+<para>Offset: 0x030 (R/W) Debug Fault Status Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00340">340</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga39bc5e68dc6071187fbe2348891eabfa"/><section>
+    <title>DHCSR</title>
+<indexterm><primary>DHCSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>DHCSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t DHCSR</computeroutput></para>
+<para>Offset: 0x000 (R/W) Debug Halting Control and Status Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01134">1134</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae6edad4ef9f92b3ce206dac61621871a"/><section>
+    <title>EXCCNT</title>
+<indexterm><primary>EXCCNT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>EXCCNT</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t EXCCNT</computeroutput></para>
+<para>Offset: 0x00C (R/W) Exception Overhead Count Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00746">746</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga511d496d51cf81ccef6e97fd1d5abe31"/><section>
+    <title>FFCR</title>
+<indexterm><primary>FFCR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FFCR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t FFCR</computeroutput></para>
+<para>Offset: 0x304 (R/W) Formatter and Flush Control Register </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00896">896</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gab1bcdedfb12eaebecde53a7add7f9f84"/><section>
+    <title>FFSR</title>
+<indexterm><primary>FFSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FFSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t FFSR</computeroutput></para>
+<para>Offset: 0x300 (R/ ) Formatter and Flush Status Register </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00895">895</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gafaaebd439123255be4d82536f8bda272"/><section>
+    <title>FIFO0</title>
+<indexterm><primary>FIFO0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FIFO0</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t FIFO0</computeroutput></para>
+<para>Offset: 0xEEC (R/ ) Integration ETM Data </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00900">900</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaf9289020546ed8dfae56b59506dfb29c"/><section>
+    <title>FIFO1</title>
+<indexterm><primary>FIFO1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FIFO1</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t FIFO1</computeroutput></para>
+<para>Offset: 0xEFC (R/ ) Integration ITM Data </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00904">904</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga11e6aebbf2c7bedc29059ff023891b82"/><section>
+    <title>FOLDCNT</title>
+<indexterm><primary>FOLDCNT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FOLDCNT</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t FOLDCNT</computeroutput></para>
+<para>Offset: 0x018 (R/W) Folded-instruction Count Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00749">749</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga2518558c090f60161ba4e718a54ee468"/><section>
+    <title>FPCA<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>FPCA</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FPCA</secondary></indexterm>
+<para><computeroutput>uint32_t FPCA</computeroutput></para>
+<para>bit: 2 FP extension active flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00279">279</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga2518558c090f60161ba4e718a54ee468"/><section>
+    <title>FPCA<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>FPCA</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FPCA</secondary></indexterm>
+<para><computeroutput>uint32_t FPCA</computeroutput></para>
+<para>bit: 2 FP extension active flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00319">319</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga3030960fcac362026459469bc2ff3178"/><section>
+    <title>FSCR</title>
+<indexterm><primary>FSCR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FSCR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t FSCR</computeroutput></para>
+<para>Offset: 0x308 (R/ ) Formatter Synchronization Counter Register </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00897">897</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga7eb6189fbcdf2ad9d0d28dad691f3fe8"/><section>
+    <title>FUNCTION0</title>
+<indexterm><primary>FUNCTION0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FUNCTION0</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t FUNCTION0</computeroutput></para>
+<para>Offset: 0x028 (R/W) Function Register 0 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00753">753</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gafbea004f9e2860b9f450bcea21eec318"/><section>
+    <title>FUNCTION1</title>
+<indexterm><primary>FUNCTION1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FUNCTION1</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t FUNCTION1</computeroutput></para>
+<para>Offset: 0x038 (R/W) Function Register 1 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00757">757</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga93d1f9f928292854f16333500e554c41"/><section>
+    <title>FUNCTION2</title>
+<indexterm><primary>FUNCTION2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FUNCTION2</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t FUNCTION2</computeroutput></para>
+<para>Offset: 0x048 (R/W) Function Register 2 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00761">761</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad3bf90012b7b60cd030c54ed0ec0442d"/><section>
+    <title>FUNCTION3</title>
+<indexterm><primary>FUNCTION3</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>FUNCTION3</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t FUNCTION3</computeroutput></para>
+<para>Offset: 0x058 (R/W) Function Register 3 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00765">765</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099"/><section>
+    <title>GE<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>GE</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>GE</secondary></indexterm>
+<para><computeroutput>uint32_t GE</computeroutput></para>
+<para>bit: 16..19 Greater than or Equal flags 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00259">259</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099"/><section>
+    <title>GE<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>GE</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>GE</secondary></indexterm>
+<para><computeroutput>uint32_t GE</computeroutput></para>
+<para>bit: 16..19 Greater than or Equal flags 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00259">259</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099"/><section>
+    <title>GE<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>GE</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>GE</secondary></indexterm>
+<para><computeroutput>uint32_t GE</computeroutput></para>
+<para>bit: 16..19 Greater than or Equal flags 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00296">296</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa91800ec6e90e457c7a1acd1f2e17099"/><section>
+    <title>GE<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>GE</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>GE</secondary></indexterm>
+<para><computeroutput>uint32_t GE</computeroutput></para>
+<para>bit: 16..19 Greater than or Equal flags 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00296">296</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga87aadbc5e1ffb76d755cf13f4721ae71"/><section>
+    <title>HFSR</title>
+<indexterm><primary>HFSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>HFSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t HFSR</computeroutput></para>
+<para>Offset: 0x02C (R/W) HardFault Status Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00339">339</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gab61000be19b0293ea14009224fc34fe3"/><section>
+    <title>IABR</title>
+<indexterm><primary>IABR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>IABR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t IABR</computeroutput></para>
+<para>Offset: 0x200 (R/W) Interrupt Active bit Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00306">306</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5bb2c6795b90f12077534825cc844b56"/><section>
+    <title>ICTR</title>
+<indexterm><primary>ICTR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ICTR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t ICTR</computeroutput></para>
+<para>Offset: 0x004 (R/ ) Interrupt Controller Type Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00556">556</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa75460116777434aebcd8698b46514cd"/><section>
+    <title>IMCR</title>
+<indexterm><primary>IMCR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>IMCR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t IMCR</computeroutput></para>
+<para>Offset: 0xF00 (R/W) ITM Integration Mode Control Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00657">657</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga38c377984f751265667317981f101bb4"/><section>
+    <title>IP</title>
+<indexterm><primary>IP</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>IP</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint8_t IP[240]</computeroutput></para>
+<para>Offset: 0x300 (R/W) Interrupt Priority Register (8Bit wide) </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00308">308</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5f1859b657556cbeeb743b0da2e71654"/><section>
+    <title>IRR</title>
+<indexterm><primary>IRR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>IRR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t IRR</computeroutput></para>
+<para>Offset: 0xEFC (R/ ) ITM Integration Read Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00656">656</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gabdeaebf965a4ca1dfde816cab85f1156"/><section>
+    <title>ISAR</title>
+<indexterm><primary>ISAR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ISAR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t ISAR</computeroutput></para>
+<para>Offset: 0x060 (R/ ) Instruction Set Attributes Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00348">348</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/><section>
+    <title>ISR<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00238">238</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/><section>
+    <title>ISR<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00251">251</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/><section>
+    <title>ISR<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00278">278</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad502ba7dbb2aab5f87c782b28f02622d"/><section>
+    <title>ISR<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>ISR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ISR</secondary></indexterm>
+<para><computeroutput>uint32_t ISR</computeroutput></para>
+<para>bit: 0.. 8 Exception number 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00291">291</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga76485660fe8ad98cdc71ddd7cb0ed777"/><section>
+    <title>IT<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>IT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>IT</secondary></indexterm>
+<para><computeroutput>uint32_t IT</computeroutput></para>
+<para>bit: 25..26 saved IT state (read 0) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00260">260</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga76485660fe8ad98cdc71ddd7cb0ed777"/><section>
+    <title>IT<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>IT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>IT</secondary></indexterm>
+<para><computeroutput>uint32_t IT</computeroutput></para>
+<para>bit: 25..26 saved IT state (read 0) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00300">300</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gafa3718bbb523ffb294402f58896592e6"/><section>
+    <title>ITATBCTR0</title>
+<indexterm><primary>ITATBCTR0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITATBCTR0</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t ITATBCTR0</computeroutput></para>
+<para>Offset: 0xEF8 (R/ ) ITATBCTR0 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00903">903</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga89c5da21240d76e6b873144202deffa3"/><section>
+    <title>ITATBCTR2</title>
+<indexterm><primary>ITATBCTR2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITATBCTR2</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t ITATBCTR2</computeroutput></para>
+<para>Offset: 0xEF0 (R/ ) ITATBCTR2 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00901">901</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad987483f555c0f6034ef24a8840f337d"/><section>
+    <title>ITCTRL</title>
+<indexterm><primary>ITCTRL</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITCTRL</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t ITCTRL</computeroutput></para>
+<para>Offset: 0xF00 (R/W) Integration Mode Control </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00905">905</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8"/><section>
+    <title>ITM_RxBuffer<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ITM_RxBuffer</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITM_RxBuffer</secondary></indexterm>
+<para><computeroutput>volatile int32_t ITM_RxBuffer<computeroutput>[extern]</computeroutput></computeroutput></para>
+<para>External variable to receive characters. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8"/><section>
+    <title>ITM_RxBuffer<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ITM_RxBuffer</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>ITM_RxBuffer</secondary></indexterm>
+<para><computeroutput>volatile int32_t ITM_RxBuffer<computeroutput>[extern]</computeroutput></computeroutput></para>
+<para>External variable to receive characters. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae13374b53589f16b2fc2c868d779a9c7"/><section>
+    <title>IWR</title>
+<indexterm><primary>IWR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>IWR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t IWR</computeroutput></para>
+<para>Offset: 0xEF8 ( /W) ITM Integration Write Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00655">655</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa2c0f411bbcc7b7c7a558a964996dc11"/><section>
+    <title>LAR</title>
+<indexterm><primary>LAR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>LAR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t LAR</computeroutput></para>
+<para>Offset: 0xFB0 ( /W) ITM Lock Access Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00659">659</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga8387dc0dc9f45c8a81cfc98bfff7ae32"/><section>
+    <title>LSR</title>
+<indexterm><primary>LSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>LSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t LSR</computeroutput></para>
+<para>Offset: 0xFB4 (R/ ) ITM Lock Status Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00660">660</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gab1d62b8e1a69bead9717d5a02f741811"/><section>
+    <title>LSUCNT</title>
+<indexterm><primary>LSUCNT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>LSUCNT</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t LSUCNT</computeroutput></para>
+<para>Offset: 0x014 (R/W) LSU Count Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00748">748</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gab3f06e2cb3a76edc6f3fc90af88671ba"/><section>
+    <title>MASK0</title>
+<indexterm><primary>MASK0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>MASK0</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t MASK0</computeroutput></para>
+<para>Offset: 0x024 (R/W) Mask Register 0 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00752">752</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad55962dd61d94bd029f6927adc48bc31"/><section>
+    <title>MASK1</title>
+<indexterm><primary>MASK1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>MASK1</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t MASK1</computeroutput></para>
+<para>Offset: 0x034 (R/W) Mask Register 1 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00756">756</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga860e7bcdcf674491835d91189bda3c61"/><section>
+    <title>MASK2</title>
+<indexterm><primary>MASK2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>MASK2</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t MASK2</computeroutput></para>
+<para>Offset: 0x044 (R/W) Mask Register 2 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00760">760</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga541b20e412d5586312fa4dac4a151660"/><section>
+    <title>MASK3</title>
+<indexterm><primary>MASK3</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>MASK3</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t MASK3</computeroutput></para>
+<para>Offset: 0x054 (R/W) Mask Register 3 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00764">764</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga88820a178974aa7b7927155cee5c47ed"/><section>
+    <title>MMFAR</title>
+<indexterm><primary>MMFAR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>MMFAR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t MMFAR</computeroutput></para>
+<para>Offset: 0x034 (R/W) MemManage Fault Address Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00341">341</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga037095d7dc8c30536cab793e28329c45"/><section>
+    <title>MMFR</title>
+<indexterm><primary>MMFR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>MMFR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t MMFR</computeroutput></para>
+<para>Offset: 0x050 (R/ ) Memory Model Feature Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00347">347</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/><section>
+    <title>N<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00226">226</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/><section>
+    <title>N<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00265">265</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/><section>
+    <title>N<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00266">266</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gabae0610bc2a97bbf7f689e953e0b451f"/><section>
+    <title>N<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>N</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>N</secondary></indexterm>
+<para><computeroutput>uint32_t N</computeroutput></para>
+<para>bit: 31 Negative condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00305">305</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga2a6e513e8a6bf4e58db169e312172332"/><section>
+    <title>nPRIV<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>nPRIV</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>nPRIV</secondary></indexterm>
+<para><computeroutput>uint32_t nPRIV</computeroutput></para>
+<para>bit: 0 Execution privilege in Thread mode </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00277">277</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga2a6e513e8a6bf4e58db169e312172332"/><section>
+    <title>nPRIV<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>nPRIV</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>nPRIV</secondary></indexterm>
+<para><computeroutput>uint32_t nPRIV</computeroutput></para>
+<para>bit: 0 Execution privilege in Thread mode </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00317">317</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaccef6b622c8a41342ed32345b0922bea"/><section>
+    <title>PCSR</title>
+<indexterm><primary>PCSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PCSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PCSR</computeroutput></para>
+<para>Offset: 0x01C (R/ ) Program Counter Sample Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00750">750</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga0c3c74d90886d6f470882c63c0e60bfe"/><section>
+    <title>PFR</title>
+<indexterm><primary>PFR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PFR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PFR</computeroutput></para>
+<para>Offset: 0x040 (R/ ) Processor Feature Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00344">344</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad6c87ae4ca1aa56b4369a97fca639926"/><section>
+    <title>PID0</title>
+<indexterm><primary>PID0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PID0</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PID0</computeroutput></para>
+<para>Offset: 0xFE0 (R/ ) ITM Peripheral Identification Register #0 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00666">666</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae554433b6f6c4733d222bcb2c75ccb39"/><section>
+    <title>PID1</title>
+<indexterm><primary>PID1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PID1</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PID1</computeroutput></para>
+<para>Offset: 0xFE4 (R/ ) ITM Peripheral Identification Register #1 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00667">667</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaf07d9a44e0188d55742f5d6a8752cd2c"/><section>
+    <title>PID2</title>
+<indexterm><primary>PID2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PID2</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PID2</computeroutput></para>
+<para>Offset: 0xFE8 (R/ ) ITM Peripheral Identification Register #2 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00668">668</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga510fcf8ad6966fdfb0767e624b74c64f"/><section>
+    <title>PID3</title>
+<indexterm><primary>PID3</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PID3</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PID3</computeroutput></para>
+<para>Offset: 0xFEC (R/ ) ITM Peripheral Identification Register #3 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00669">669</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad75960b83ea47a469e6a1406dd9eefa6"/><section>
+    <title>PID4</title>
+<indexterm><primary>PID4</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PID4</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PID4</computeroutput></para>
+<para>Offset: 0xFD0 (R/ ) ITM Peripheral Identification Register #4 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00662">662</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga7276a30c464f0b34944b6eb16d3df077"/><section>
+    <title>PID5</title>
+<indexterm><primary>PID5</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PID5</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PID5</computeroutput></para>
+<para>Offset: 0xFD4 (R/ ) ITM Peripheral Identification Register #5 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00663">663</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae5d83564471b76d88088a949ca67ac9b"/><section>
+    <title>PID6</title>
+<indexterm><primary>PID6</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PID6</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PID6</computeroutput></para>
+<para>Offset: 0xFD8 (R/ ) ITM Peripheral Identification Register #6 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00664">664</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga247fae2f4a140d4da5e8a044370dedec"/><section>
+    <title>PID7</title>
+<indexterm><primary>PID7</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PID7</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t PID7</computeroutput></para>
+<para>Offset: 0xFDC (R/ ) ITM Peripheral Identification Register #7 </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00665">665</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaac185c3215457883396ae15f47be9bec"/><section>
+    <title><computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>PORT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PORT</secondary></indexterm>
+<para><computeroutput>__O union  { ... }  PORT[32]</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port Registers 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga533c61111d0fb3ff88d13ef4ac36b54b"/><section>
+    <title><computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>PORT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>PORT</secondary></indexterm>
+<para><computeroutput>__O union  { ... }  PORT[32]</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port Registers 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a"/><section>
+    <title>Q<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>Q</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>Q</secondary></indexterm>
+<para><computeroutput>uint32_t Q</computeroutput></para>
+<para>bit: 27 Saturation condition flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00222">222</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a"/><section>
+    <title>Q<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>Q</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>Q</secondary></indexterm>
+<para><computeroutput>uint32_t Q</computeroutput></para>
+<para>bit: 27 Saturation condition flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00261">261</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a"/><section>
+    <title>Q<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>Q</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>Q</secondary></indexterm>
+<para><computeroutput>uint32_t Q</computeroutput></para>
+<para>bit: 27 Saturation condition flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00262">262</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga65f27ddc4f7e09c14ce7c5211b2e000a"/><section>
+    <title>Q<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>Q</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>Q</secondary></indexterm>
+<para><computeroutput>uint32_t Q</computeroutput></para>
+<para>bit: 27 Saturation condition flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00301">301</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga3bc109a372d05329e22cb7e3bf2b84ba"/><section>
+    <title>RESERVED0<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>RESERVED0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED0</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED0</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00555">555</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga3bc109a372d05329e22cb7e3bf2b84ba"/><section>
+    <title>RESERVED0<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>RESERVED0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED0</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED0</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00754">754</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaf2c92c7cb13569aaff6b4f5a25de5056"/><section>
+    <title>RESERVED0<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>RESERVED0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED0</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED0</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00890">890</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga63deb05e7a614fd290562e511a2979ff"/><section>
+    <title>RESERVED0<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>RESERVED0</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED0</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED0</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00648">648</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga162d8d4bcf80ad9b8f01af570ed81058"/><section>
+    <title>RESERVED1<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>RESERVED1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED1</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED1</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00650">650</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga3e94488b04b41e4c165bbfe6932f4a92"/><section>
+    <title>RESERVED1<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>RESERVED1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED1</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED1[1]</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00560">560</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga9b85a62ba1c4cf0e4ca2b1ff8e5bc85c"/><section>
+    <title>RESERVED1<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>RESERVED1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED1</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED1</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00758">758</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gab90aea487bf1662e59617af05b30f253"/><section>
+    <title>RESERVED1<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>RESERVED1</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED1</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED1</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00892">892</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga4e4e19be116d8ccdcb242401cfb3048b"/><section>
+    <title>RESERVED2<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>RESERVED2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED2</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED2</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00894">894</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gade93d21b11103a1e89c36b9120b4cbf0"/><section>
+    <title>RESERVED2<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>RESERVED2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED2</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED2</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00652">652</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa4de71b2a578cce3a67229dde3c6b52d"/><section>
+    <title>RESERVED2<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>RESERVED2</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED2</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED2</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00762">762</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5f6279765c35211755691cab040f7cbd"/><section>
+    <title>RESERVED3<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>RESERVED3</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED3</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED3</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00654">654</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga12053bc8429f36ac5045e18bc436ef82"/><section>
+    <title>RESERVED3<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>RESERVED3</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED3</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED3</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00898">898</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga2280438c0b38d74e14edd06c4569d419"/><section>
+    <title>RESERVED4<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>RESERVED4</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED4</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED4</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00902">902</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga1f593ff98d0afd4a9f02de33304fe38d"/><section>
+    <title>RESERVED4<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>RESERVED4</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED4</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED4</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00658">658</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga4cf403d6d314453bf19d2b73be98367a"/><section>
+    <title>RESERVED5<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>RESERVED5</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED5</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED5</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00906">906</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga46aeb40348124934bf802f01806b4f7f"/><section>
+    <title>RESERVED5<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>RESERVED5</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED5</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED5</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00309">309</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga2e4356b97fabed41bcbf29ec48cdb3de"/><section>
+    <title>RESERVED5<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>RESERVED5</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED5</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED5</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00661">661</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga7055d97dce64c27cd79d6672bd41db21"/><section>
+    <title>RESERVED7</title>
+<indexterm><primary>RESERVED7</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>RESERVED7</secondary></indexterm>
+<para><computeroutput>uint32_t RESERVED7</computeroutput></para><para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00909">909</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga17dc9f83c53cbf7fa249e79a2d2a43f8"/><section>
+    <title>SHP</title>
+<indexterm><primary>SHP</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>SHP</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint8_t SHP[12]</computeroutput></para>
+<para>Offset: 0x018 (R/W) System Handlers Priority Registers (4-7, 8-11, 12-15) </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00336">336</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga720f3795a53a8d8f275df636fee1aee7"/><section>
+    <title>SLEEPCNT</title>
+<indexterm><primary>SLEEPCNT</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>SLEEPCNT</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t SLEEPCNT</computeroutput></para>
+<para>Offset: 0x010 (R/W) Sleep Count Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00747">747</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga102814b254904beb9060757a93fe526c"/><section>
+    <title>SPPR</title>
+<indexterm><primary>SPPR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>SPPR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t SPPR</computeroutput></para>
+<para>Offset: 0x0F0 (R/W) Selected Pin Protocol Register </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00893">893</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae185aac93686ffc78e998a9daf41415b"/><section>
+    <title>SPSEL<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack to be used 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00278">278</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae185aac93686ffc78e998a9daf41415b"/><section>
+    <title>SPSEL<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>SPSEL</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>SPSEL</secondary></indexterm>
+<para><computeroutput>uint32_t SPSEL</computeroutput></para>
+<para>bit: 1 Stack to be used 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00318">318</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gad6abd8c7878d64e5e8e442de842f9de8"/><section>
+    <title>SSPSR</title>
+<indexterm><primary>SSPSR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>SSPSR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t SSPSR</computeroutput></para>
+<para>Offset: 0x000 (R/ ) Supported Parallel Port Size Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00888">888</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga471c399bb79454dcdfb342a31a5684ae"/><section>
+    <title>STIR</title>
+<indexterm><primary>STIR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>STIR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t STIR</computeroutput></para>
+<para>Offset: 0xE00 ( /W) Software Trigger Interrupt Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00310">310</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/><section>
+    <title>T<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00259">259</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga6e1cf12e53a20224f6f62c001d9be972"/><section>
+    <title>T<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>T</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>T</secondary></indexterm>
+<para><computeroutput>uint32_t T</computeroutput></para>
+<para>bit: 24 Thumb bit (read 0) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00299">299</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae9dd9282fab299d0cd6e119564688e53"/><section>
+    <title>TCR</title>
+<indexterm><primary>TCR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>TCR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t TCR</computeroutput></para>
+<para>Offset: 0xE80 (R/W) ITM Trace Control Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00653">653</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga8ffb3c6b706b03334f6fe37ef5d8b165"/><section>
+    <title>TER</title>
+<indexterm><primary>TER</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>TER</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t TER</computeroutput></para>
+<para>Offset: 0xE00 (R/W) ITM Trace Enable Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00649">649</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga72bb9b7d61fe3262cd2a6070a7bd5b69"/><section>
+    <title>TPR</title>
+<indexterm><primary>TPR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>TPR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t TPR</computeroutput></para>
+<para>Offset: 0xE40 (R/W) ITM Trace Privilege Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00651">651</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaa3adfea70bff38242f8231737a7fa2dd"/><section>
+    <title>TRIGGER</title>
+<indexterm><primary>TRIGGER</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>TRIGGER</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1af63697ed9952cc71e1225efe205f6cd3">__I</link> uint32_t TRIGGER</computeroutput></para>
+<para>Offset: 0xEE8 (R/ ) TRIGGER </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00899">899</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae8d499140220fa6d4eab1da7262bf08e"/><section>
+    <title>u16<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>u16</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u16</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint16_t u16</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00645">645</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae8d499140220fa6d4eab1da7262bf08e"/><section>
+    <title>u16<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>u16</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u16</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint16_t u16</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00645">645</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae8d499140220fa6d4eab1da7262bf08e"/><section>
+    <title>u16<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>u16</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u16</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint16_t u16</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 16-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00678">678</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacaf6d0e14a3d4b541c624913b4a1931e"/><section>
+    <title>u32<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>u32</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u32</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t u32</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00646">646</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacaf6d0e14a3d4b541c624913b4a1931e"/><section>
+    <title>u32<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>u32</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u32</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t u32</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00646">646</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacaf6d0e14a3d4b541c624913b4a1931e"/><section>
+    <title>u32<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>u32</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u32</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint32_t u32</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 32-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00679">679</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga0374c0b98ab9de6f71fabff7412df832"/><section>
+    <title>u8<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>u8</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u8</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint8_t u8</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00644">644</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga0374c0b98ab9de6f71fabff7412df832"/><section>
+    <title>u8<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>u8</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u8</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint8_t u8</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00644">644</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga0374c0b98ab9de6f71fabff7412df832"/><section>
+    <title>u8<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>u8</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>u8</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1a7e25d9380f9ef903923964322e71f2f6">__O</link> uint8_t u8</computeroutput></para>
+<para>Offset: 0x000 ( /W) ITM Stimulus Port 8-bit 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00677">677</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacd4a2b64faee91e4a9eef300667fa222"/><section>
+    <title>V<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00223">223</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacd4a2b64faee91e4a9eef300667fa222"/><section>
+    <title>V<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00262">262</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacd4a2b64faee91e4a9eef300667fa222"/><section>
+    <title>V<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00263">263</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gacd4a2b64faee91e4a9eef300667fa222"/><section>
+    <title>V<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>V</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>V</secondary></indexterm>
+<para><computeroutput>uint32_t V</computeroutput></para>
+<para>bit: 28 Overflow condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00302">302</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gaaf388a921a016cae590cfcf1e43b1cdf"/><section>
+    <title>VTOR</title>
+<indexterm><primary>VTOR</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>VTOR</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t VTOR</computeroutput></para>
+<para>Offset: 0x008 (R/W) Vector Table Offset Register 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00332">332</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/><section>
+    <title>Z<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00225">225</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/><section>
+    <title>Z<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00264">264</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/><section>
+    <title>Z<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00265">265</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1ga5ae954cbd9986cd64625d7fa00943c8e"/><section>
+    <title>Z<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>Z</primary><secondary>ITM Functions</secondary></indexterm>
+<indexterm><primary>ITM Functions</primary><secondary>Z</secondary></indexterm>
+<para><computeroutput>uint32_t Z</computeroutput></para>
+<para>bit: 30 Zero condition code flag 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00304">304</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+</section>
+</section>

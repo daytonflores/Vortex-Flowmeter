@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__can_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_can.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_can.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_CAN_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_CAN_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00047"/>00047 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00048"/>00048 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00049"/>00049 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00058"/>00058 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00059"/>00059 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00063"/>00063 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00064"/>00064 {
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00065"/>00065 &#32;&#32;HAL_CAN_STATE_RESET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00066"/>00066 &#32;&#32;HAL_CAN_STATE_READY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00067"/>00067 &#32;&#32;HAL_CAN_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00068"/>00068 &#32;&#32;HAL_CAN_STATE_BUSY_TX&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x12,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00069"/>00069 &#32;&#32;HAL_CAN_STATE_BUSY_RX&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x22,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00070"/>00070 &#32;&#32;HAL_CAN_STATE_BUSY_TX_RX&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x32,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00071"/>00071 &#32;&#32;HAL_CAN_STATE_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x03,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00072"/>00072 &#32;&#32;HAL_CAN_STATE_ERROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x04&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00074"/>00074 }HAL_CAN_StateTypeDef;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00075"/>00075 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00079"/>00079 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00080"/>00080 {
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00081"/>00081 &#32;&#32;uint32_t&#32;Prescaler;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00084"/>00084 &#32;&#32;uint32_t&#32;Mode;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00087"/>00087 &#32;&#32;uint32_t&#32;SJW;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00092"/>00092 &#32;&#32;uint32_t&#32;BS1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00095"/>00095 &#32;&#32;uint32_t&#32;BS2;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00098"/>00098 &#32;&#32;uint32_t&#32;TTCM;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00101"/>00101 &#32;&#32;uint32_t&#32;ABOM;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00104"/>00104 &#32;&#32;uint32_t&#32;AWUM;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00107"/>00107 &#32;&#32;uint32_t&#32;NART;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00110"/>00110 &#32;&#32;uint32_t&#32;RFLM;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00113"/>00113 &#32;&#32;uint32_t&#32;TXFP;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00115"/>00115 }CAN_InitTypeDef;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00116"/>00116 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00120"/>00120 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00121"/>00121 {
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00122"/>00122 &#32;&#32;uint32_t&#32;FilterIdHigh;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00126"/>00126 &#32;&#32;uint32_t&#32;FilterIdLow;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00130"/>00130 &#32;&#32;uint32_t&#32;FilterMaskIdHigh;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00135"/>00135 &#32;&#32;uint32_t&#32;FilterMaskIdLow;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00140"/>00140 &#32;&#32;uint32_t&#32;FilterFIFOAssignment;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00143"/>00143 &#32;&#32;uint32_t&#32;FilterNumber;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00146"/>00146 &#32;&#32;uint32_t&#32;FilterMode;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00149"/>00149 &#32;&#32;uint32_t&#32;FilterScale;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00152"/>00152 &#32;&#32;uint32_t&#32;FilterActivation;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00155"/>00155 &#32;&#32;uint32_t&#32;BankNumber;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00158"/>00158 }CAN_FilterConfTypeDef;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00159"/>00159 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00163"/>00163 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00164"/>00164 {
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00165"/>00165 &#32;&#32;uint32_t&#32;StdId;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00168"/>00168 &#32;&#32;uint32_t&#32;ExtId;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00171"/>00171 &#32;&#32;uint32_t&#32;IDE;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00174"/>00174 &#32;&#32;uint32_t&#32;RTR;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00177"/>00177 &#32;&#32;uint32_t&#32;DLC;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00180"/>00180 &#32;&#32;uint32_t&#32;Data[8];&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00183"/>00183 }CanTxMsgTypeDef;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00184"/>00184 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00188"/>00188 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00189"/>00189 {
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00190"/>00190 &#32;&#32;uint32_t&#32;StdId;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00193"/>00193 &#32;&#32;uint32_t&#32;ExtId;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00196"/>00196 &#32;&#32;uint32_t&#32;IDE;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00199"/>00199 &#32;&#32;uint32_t&#32;RTR;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00202"/>00202 &#32;&#32;uint32_t&#32;DLC;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00205"/>00205 &#32;&#32;uint32_t&#32;Data[8];&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00208"/>00208 &#32;&#32;uint32_t&#32;FMI;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00211"/>00211 &#32;&#32;uint32_t&#32;FIFONumber;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00214"/>00214 }CanRxMsgTypeDef;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00215"/>00215 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00219"/>00219 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00220"/>00220 {
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00221"/>00221 &#32;&#32;CAN_TypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*Instance;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00223"/>00223 &#32;&#32;CAN_InitTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Init;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00225"/>00225 &#32;&#32;CanTxMsgTypeDef*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pTxMsg;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00227"/>00227 &#32;&#32;CanRxMsgTypeDef*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pRxMsg;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00229"/>00229 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;HAL_CAN_StateTypeDef&#32;&#32;&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00231"/>00231 &#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00233"/>00233 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ErrorCode;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00235"/>00235 }CAN_HandleTypeDef;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00236"/>00236 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00237"/>00237 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00238"/>00238 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00246"/>00246 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_NONE&#32;&#32;&#32;&#32;&#32;&#32;0x00&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00247"/>00247 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_EWG&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x01&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00248"/>00248 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_EPV&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x02&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00249"/>00249 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_BOF&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x04&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00250"/>00250 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_STF&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x08&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00251"/>00251 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_FOR&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x10&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00252"/>00252 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_ACK&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x20&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00253"/>00253 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_BR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x40&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00254"/>00254 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_BD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x80&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00255"/>00255 <emphasis role="preprocessor">#define&#32;&#32;&#32;HAL_CAN_ERROR_CRC&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x100&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00264"/>00264 <emphasis role="preprocessor">#define&#32;CAN_INITSTATUS_FAILED&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00265"/>00265 <emphasis role="preprocessor">#define&#32;CAN_INITSTATUS_SUCCESS&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00273"/>00273 <emphasis role="preprocessor">#define&#32;CAN_MODE_NORMAL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00274"/>00274 <emphasis role="preprocessor">#define&#32;CAN_MODE_LOOPBACK&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_LBKM)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00275"/>00275 <emphasis role="preprocessor">#define&#32;CAN_MODE_SILENT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_SILM)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00276"/>00276 <emphasis role="preprocessor">#define&#32;CAN_MODE_SILENT_LOOPBACK&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_LBKM&#32;|&#32;CAN_BTR_SILM))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00278"/>00278 <emphasis role="preprocessor">#define&#32;IS_CAN_MODE(MODE)&#32;(((MODE)&#32;==&#32;CAN_MODE_NORMAL)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00279"/>00279 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;CAN_MODE_LOOPBACK)||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00280"/>00280 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;CAN_MODE_SILENT)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00281"/>00281 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;CAN_MODE_SILENT_LOOPBACK))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00290"/>00290 <emphasis role="preprocessor">#define&#32;CAN_SJW_1TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00291"/>00291 <emphasis role="preprocessor">#define&#32;CAN_SJW_2TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_SJW_0)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00292"/>00292 <emphasis role="preprocessor">#define&#32;CAN_SJW_3TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_SJW_1)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00293"/>00293 <emphasis role="preprocessor">#define&#32;CAN_SJW_4TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_SJW)&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00295"/>00295 <emphasis role="preprocessor">#define&#32;IS_CAN_SJW(SJW)&#32;(((SJW)&#32;==&#32;CAN_SJW_1TQ)&#32;||&#32;((SJW)&#32;==&#32;CAN_SJW_2TQ)||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00296"/>00296 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((SJW)&#32;==&#32;CAN_SJW_3TQ)&#32;||&#32;((SJW)&#32;==&#32;CAN_SJW_4TQ))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00304"/>00304 <emphasis role="preprocessor">#define&#32;CAN_BS1_1TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00305"/>00305 <emphasis role="preprocessor">#define&#32;CAN_BS1_2TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS1_0)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00306"/>00306 <emphasis role="preprocessor">#define&#32;CAN_BS1_3TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS1_1)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00307"/>00307 <emphasis role="preprocessor">#define&#32;CAN_BS1_4TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_1&#32;|&#32;CAN_BTR_TS1_0))&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00308"/>00308 <emphasis role="preprocessor">#define&#32;CAN_BS1_5TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS1_2)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00309"/>00309 <emphasis role="preprocessor">#define&#32;CAN_BS1_6TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_2&#32;|&#32;CAN_BTR_TS1_0))&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00310"/>00310 <emphasis role="preprocessor">#define&#32;CAN_BS1_7TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_2&#32;|&#32;CAN_BTR_TS1_1))&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00311"/>00311 <emphasis role="preprocessor">#define&#32;CAN_BS1_8TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_2&#32;|&#32;CAN_BTR_TS1_1&#32;|&#32;CAN_BTR_TS1_0))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00312"/>00312 <emphasis role="preprocessor">#define&#32;CAN_BS1_9TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS1_3)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00313"/>00313 <emphasis role="preprocessor">#define&#32;CAN_BS1_10TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_3&#32;|&#32;CAN_BTR_TS1_0))&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00314"/>00314 <emphasis role="preprocessor">#define&#32;CAN_BS1_11TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_3&#32;|&#32;CAN_BTR_TS1_1))&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00315"/>00315 <emphasis role="preprocessor">#define&#32;CAN_BS1_12TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_3&#32;|&#32;CAN_BTR_TS1_1&#32;|&#32;CAN_BTR_TS1_0))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00316"/>00316 <emphasis role="preprocessor">#define&#32;CAN_BS1_13TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_3&#32;|&#32;CAN_BTR_TS1_2))&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00317"/>00317 <emphasis role="preprocessor">#define&#32;CAN_BS1_14TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_3&#32;|&#32;CAN_BTR_TS1_2&#32;|&#32;CAN_BTR_TS1_0))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00318"/>00318 <emphasis role="preprocessor">#define&#32;CAN_BS1_15TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS1_3&#32;|&#32;CAN_BTR_TS1_2&#32;|&#32;CAN_BTR_TS1_1))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00319"/>00319 <emphasis role="preprocessor">#define&#32;CAN_BS1_16TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS1)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00321"/>00321 <emphasis role="preprocessor">#define&#32;IS_CAN_BS1(BS1)&#32;((BS1)&#32;&lt;=&#32;CAN_BS1_16TQ)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00329"/>00329 <emphasis role="preprocessor">#define&#32;CAN_BS2_1TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00330"/>00330 <emphasis role="preprocessor">#define&#32;CAN_BS2_2TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS2_0)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00331"/>00331 <emphasis role="preprocessor">#define&#32;CAN_BS2_3TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS2_1)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00332"/>00332 <emphasis role="preprocessor">#define&#32;CAN_BS2_4TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS2_1&#32;|&#32;CAN_BTR_TS2_0))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00333"/>00333 <emphasis role="preprocessor">#define&#32;CAN_BS2_5TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS2_2)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00334"/>00334 <emphasis role="preprocessor">#define&#32;CAN_BS2_6TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS2_2&#32;|&#32;CAN_BTR_TS2_0))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00335"/>00335 <emphasis role="preprocessor">#define&#32;CAN_BS2_7TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(CAN_BTR_TS2_2&#32;|&#32;CAN_BTR_TS2_1))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00336"/>00336 <emphasis role="preprocessor">#define&#32;CAN_BS2_8TQ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_BTR_TS2)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00338"/>00338 <emphasis role="preprocessor">#define&#32;IS_CAN_BS2(BS2)&#32;((BS2)&#32;&lt;=&#32;CAN_BS2_8TQ)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00346"/>00346 <emphasis role="preprocessor">#define&#32;IS_CAN_PRESCALER(PRESCALER)&#32;(((PRESCALER)&#32;&gt;=&#32;1)&#32;&amp;&amp;&#32;((PRESCALER)&#32;&lt;=&#32;1024))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00354"/>00354 <emphasis role="preprocessor">#define&#32;IS_CAN_FILTER_NUMBER(NUMBER)&#32;((NUMBER)&#32;&lt;=&#32;27)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00362"/>00362 <emphasis role="preprocessor">#define&#32;CAN_FILTERMODE_IDMASK&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00363"/>00363 <emphasis role="preprocessor">#define&#32;CAN_FILTERMODE_IDLIST&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00365"/>00365 <emphasis role="preprocessor">#define&#32;IS_CAN_FILTER_MODE(MODE)&#32;(((MODE)&#32;==&#32;CAN_FILTERMODE_IDMASK)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00366"/>00366 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;CAN_FILTERMODE_IDLIST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00374"/>00374 <emphasis role="preprocessor">#define&#32;CAN_FILTERSCALE_16BIT&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00375"/>00375 <emphasis role="preprocessor">#define&#32;CAN_FILTERSCALE_32BIT&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00377"/>00377 <emphasis role="preprocessor">#define&#32;IS_CAN_FILTER_SCALE(SCALE)&#32;(((SCALE)&#32;==&#32;CAN_FILTERSCALE_16BIT)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00378"/>00378 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((SCALE)&#32;==&#32;CAN_FILTERSCALE_32BIT))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00386"/>00386 <emphasis role="preprocessor">#define&#32;CAN_FILTER_FIFO0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00387"/>00387 <emphasis role="preprocessor">#define&#32;CAN_FILTER_FIFO1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00389"/>00389 <emphasis role="preprocessor">#define&#32;IS_CAN_FILTER_FIFO(FIFO)&#32;(((FIFO)&#32;==&#32;CAN_FILTER_FIFO0)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00390"/>00390 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FIFO)&#32;==&#32;CAN_FILTER_FIFO1))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00391"/>00391 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00392"/>00392 <emphasis role="comment">/*&#32;Legacy&#32;defines&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00393"/>00393 <emphasis role="preprocessor">#define&#32;CAN_FilterFIFO0&#32;&#32;CAN_FILTER_FIFO0</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00394"/>00394 <emphasis role="preprocessor">#define&#32;CAN_FilterFIFO1&#32;&#32;CAN_FILTER_FIFO1</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00402"/>00402 <emphasis role="preprocessor">#define&#32;IS_CAN_BANKNUMBER(BANKNUMBER)&#32;((BANKNUMBER)&#32;&lt;=&#32;28)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00410"/>00410 <emphasis role="preprocessor">#define&#32;IS_CAN_TRANSMITMAILBOX(TRANSMITMAILBOX)&#32;((TRANSMITMAILBOX)&#32;&lt;=&#32;((uint8_t)0x02))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00411"/>00411 <emphasis role="preprocessor">#define&#32;IS_CAN_STDID(STDID)&#32;&#32;&#32;((STDID)&#32;&lt;=&#32;((uint32_t)0x7FF))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00412"/>00412 <emphasis role="preprocessor">#define&#32;IS_CAN_EXTID(EXTID)&#32;&#32;&#32;((EXTID)&#32;&lt;=&#32;((uint32_t)0x1FFFFFFF))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00413"/>00413 <emphasis role="preprocessor">#define&#32;IS_CAN_DLC(DLC)&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DLC)&#32;&lt;=&#32;((uint8_t)0x08))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00421"/>00421 <emphasis role="preprocessor">#define&#32;CAN_ID_STD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00422"/>00422 <emphasis role="preprocessor">#define&#32;CAN_ID_EXT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000004)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00423"/>00423 <emphasis role="preprocessor">#define&#32;IS_CAN_IDTYPE(IDTYPE)&#32;&#32;(((IDTYPE)&#32;==&#32;CAN_ID_STD)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00424"/>00424 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IDTYPE)&#32;==&#32;CAN_ID_EXT))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00432"/>00432 <emphasis role="preprocessor">#define&#32;CAN_RTR_DATA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00433"/>00433 <emphasis role="preprocessor">#define&#32;CAN_RTR_REMOTE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000002)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00434"/>00434 <emphasis role="preprocessor">#define&#32;IS_CAN_RTR(RTR)&#32;(((RTR)&#32;==&#32;CAN_RTR_DATA)&#32;||&#32;((RTR)&#32;==&#32;CAN_RTR_REMOTE))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00435"/>00435 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00443"/>00443 <emphasis role="preprocessor">#define&#32;CAN_TXSTATUS_FAILED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00444"/>00444 <emphasis role="preprocessor">#define&#32;CAN_TXSTATUS_OK&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00445"/>00445 <emphasis role="preprocessor">#define&#32;CAN_TXSTATUS_PENDING&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x02)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00446"/>00446 <emphasis role="preprocessor">#define&#32;CAN_TXSTATUS_NOMAILBOX&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x04)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00455"/>00455 <emphasis role="preprocessor">#define&#32;CAN_FIFO0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00456"/>00456 <emphasis role="preprocessor">#define&#32;CAN_FIFO1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00458"/>00458 <emphasis role="preprocessor">#define&#32;IS_CAN_FIFO(FIFO)&#32;(((FIFO)&#32;==&#32;CAN_FIFO0)&#32;||&#32;((FIFO)&#32;==&#32;CAN_FIFO1))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00466"/>00466 <emphasis role="comment">/*&#32;If&#32;the&#32;flag&#32;is&#32;0x3XXXXXXX,&#32;it&#32;means&#32;that&#32;it&#32;can&#32;be&#32;used&#32;with&#32;CAN_GetFlagStatus()</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00467"/>00467 <emphasis role="comment">&#32;&#32;&#32;and&#32;CAN_ClearFlag()&#32;functions.&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00468"/>00468 <emphasis role="comment">/*&#32;If&#32;the&#32;flag&#32;is&#32;0x1XXXXXXX,&#32;it&#32;means&#32;that&#32;it&#32;can&#32;only&#32;be&#32;used&#32;with&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00469"/>00469 <emphasis role="comment">&#32;&#32;&#32;CAN_GetFlagStatus()&#32;function.&#32;&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00470"/>00470 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00471"/>00471 <emphasis role="comment">/*&#32;Transmit&#32;Flags&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00472"/>00472 <emphasis role="preprocessor">#define&#32;CAN_FLAG_RQCP0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000500)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00473"/>00473 <emphasis role="preprocessor">#define&#32;CAN_FLAG_RQCP1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000508)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00474"/>00474 <emphasis role="preprocessor">#define&#32;CAN_FLAG_RQCP2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000510)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00475"/>00475 <emphasis role="preprocessor">#define&#32;CAN_FLAG_TXOK0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000501)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00476"/>00476 <emphasis role="preprocessor">#define&#32;CAN_FLAG_TXOK1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000509)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00477"/>00477 <emphasis role="preprocessor">#define&#32;CAN_FLAG_TXOK2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000511)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00478"/>00478 <emphasis role="preprocessor">#define&#32;CAN_FLAG_TME0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x0000051A)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00479"/>00479 <emphasis role="preprocessor">#define&#32;CAN_FLAG_TME1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x0000051B)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00480"/>00480 <emphasis role="preprocessor">#define&#32;CAN_FLAG_TME2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x0000051C)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00482"/>00482 <emphasis role="comment">/*&#32;Receive&#32;Flags&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00483"/>00483 <emphasis role="preprocessor">#define&#32;CAN_FLAG_FF0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000203)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00484"/>00484 <emphasis role="preprocessor">#define&#32;CAN_FLAG_FOV0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000204)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00486"/>00486 <emphasis role="preprocessor">#define&#32;CAN_FLAG_FF1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000403)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00487"/>00487 <emphasis role="preprocessor">#define&#32;CAN_FLAG_FOV1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000404)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00489"/>00489 <emphasis role="comment">/*&#32;Operating&#32;Mode&#32;Flags&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00490"/>00490 <emphasis role="preprocessor">#define&#32;CAN_FLAG_WKU&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000103)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00491"/>00491 <emphasis role="preprocessor">#define&#32;CAN_FLAG_SLAK&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000101)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00492"/>00492 <emphasis role="preprocessor">#define&#32;CAN_FLAG_SLAKI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000104)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00493"/>00493 <emphasis role="comment">/*&#32;@note&#32;When&#32;SLAK&#32;interrupt&#32;is&#32;disabled&#32;(SLKIE=0),&#32;no&#32;polling&#32;on&#32;SLAKI&#32;is&#32;possible.&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00494"/>00494 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;In&#32;this&#32;case&#32;the&#32;SLAK&#32;bit&#32;can&#32;be&#32;polled.*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00495"/>00495 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00496"/>00496 <emphasis role="comment">/*&#32;Error&#32;Flags&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00497"/>00497 <emphasis role="preprocessor">#define&#32;CAN_FLAG_EWG&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000300)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00498"/>00498 <emphasis role="preprocessor">#define&#32;CAN_FLAG_EPV&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000301)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00499"/>00499 <emphasis role="preprocessor">#define&#32;CAN_FLAG_BOF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000302)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00501"/>00501 <emphasis role="preprocessor">#define&#32;IS_CAN_GET_FLAG(FLAG)&#32;(((FLAG)&#32;==&#32;CAN_FLAG_RQCP2)&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_BOF)&#32;&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00502"/>00502 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_EPV)&#32;&#32;&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_EWG)&#32;&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00503"/>00503 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_WKU)&#32;&#32;&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_FOV0)&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00504"/>00504 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_FF0)&#32;&#32;&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_SLAK)&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00505"/>00505 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_FOV1)&#32;&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_FF1)&#32;&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00506"/>00506 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_RQCP1)&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_RQCP0))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00507"/>00507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00508"/>00508 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00509"/>00509 <emphasis role="preprocessor">#define&#32;IS_CAN_CLEAR_FLAG(FLAG)(((FLAG)&#32;==&#32;CAN_FLAG_SLAK)&#32;&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_RQCP2)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00510"/>00510 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_RQCP1)&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_RQCP0)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00511"/>00511 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_FF0)&#32;&#32;&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_FOV0)&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00512"/>00512 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_FF1)&#32;&#32;&#32;||&#32;((FLAG)&#32;==&#32;CAN_FLAG_FOV1)&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00513"/>00513 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;CAN_FLAG_WKU))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00522"/>00522 <emphasis role="preprocessor">#define&#32;CAN_IT_TME&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_TMEIE)&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00524"/>00524 <emphasis role="comment">/*&#32;Receive&#32;Interrupts&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00525"/>00525 <emphasis role="preprocessor">#define&#32;CAN_IT_FMP0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_FMPIE0)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00526"/>00526 <emphasis role="preprocessor">#define&#32;CAN_IT_FF0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_FFIE0)&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00527"/>00527 <emphasis role="preprocessor">#define&#32;CAN_IT_FOV0&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_FOVIE0)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00528"/>00528 <emphasis role="preprocessor">#define&#32;CAN_IT_FMP1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_FMPIE1)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00529"/>00529 <emphasis role="preprocessor">#define&#32;CAN_IT_FF1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_FFIE1)&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00530"/>00530 <emphasis role="preprocessor">#define&#32;CAN_IT_FOV1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_FOVIE1)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00532"/>00532 <emphasis role="comment">/*&#32;Operating&#32;Mode&#32;Interrupts&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00533"/>00533 <emphasis role="preprocessor">#define&#32;CAN_IT_WKU&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_WKUIE)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00534"/>00534 <emphasis role="preprocessor">#define&#32;CAN_IT_SLK&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_SLKIE)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00536"/>00536 <emphasis role="comment">/*&#32;Error&#32;Interrupts&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00537"/>00537 <emphasis role="preprocessor">#define&#32;CAN_IT_EWG&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_EWGIE)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00538"/>00538 <emphasis role="preprocessor">#define&#32;CAN_IT_EPV&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_EPVIE)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00539"/>00539 <emphasis role="preprocessor">#define&#32;CAN_IT_BOF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_BOFIE)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00540"/>00540 <emphasis role="preprocessor">#define&#32;CAN_IT_LEC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_LECIE)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00541"/>00541 <emphasis role="preprocessor">#define&#32;CAN_IT_ERR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CAN_IER_ERRIE)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00543"/>00543 <emphasis role="comment">/*&#32;Flags&#32;named&#32;as&#32;Interrupts&#32;:&#32;kept&#32;only&#32;for&#32;FW&#32;compatibility&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00544"/>00544 <emphasis role="preprocessor">#define&#32;CAN_IT_RQCP0&#32;&#32;&#32;CAN_IT_TME</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00545"/>00545 <emphasis role="preprocessor">#define&#32;CAN_IT_RQCP1&#32;&#32;&#32;CAN_IT_TME</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00546"/>00546 <emphasis role="preprocessor">#define&#32;CAN_IT_RQCP2&#32;&#32;&#32;CAN_IT_TME</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00547"/>00547 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00548"/>00548 <emphasis role="preprocessor">#define&#32;IS_CAN_IT(IT)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((IT)&#32;==&#32;CAN_IT_TME)&#32;||&#32;((IT)&#32;==&#32;CAN_IT_FMP0)&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00549"/>00549 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_FF0)&#32;&#32;||&#32;((IT)&#32;==&#32;CAN_IT_FOV0)&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00550"/>00550 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_FMP1)&#32;||&#32;((IT)&#32;==&#32;CAN_IT_FF1)&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00551"/>00551 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_FOV1)&#32;||&#32;((IT)&#32;==&#32;CAN_IT_EWG)&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00552"/>00552 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_EPV)&#32;&#32;||&#32;((IT)&#32;==&#32;CAN_IT_BOF)&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00553"/>00553 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_LEC)&#32;&#32;||&#32;((IT)&#32;==&#32;CAN_IT_ERR)&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00554"/>00554 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_WKU)&#32;&#32;||&#32;((IT)&#32;==&#32;CAN_IT_SLK))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00555"/>00555 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00556"/>00556 <emphasis role="preprocessor">#define&#32;IS_CAN_CLEAR_IT(IT)&#32;(((IT)&#32;==&#32;CAN_IT_TME)&#32;||&#32;((IT)&#32;==&#32;CAN_IT_FF0)&#32;&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00557"/>00557 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_FOV0)||&#32;((IT)&#32;==&#32;CAN_IT_FF1)&#32;&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00558"/>00558 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_FOV1)||&#32;((IT)&#32;==&#32;CAN_IT_EWG)&#32;&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00559"/>00559 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_EPV)&#32;||&#32;((IT)&#32;==&#32;CAN_IT_BOF)&#32;&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00560"/>00560 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_LEC)&#32;||&#32;((IT)&#32;==&#32;CAN_IT_ERR)&#32;&#32;&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00561"/>00561 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;CAN_IT_WKU)&#32;||&#32;((IT)&#32;==&#32;CAN_IT_SLK))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00566"/>00566 <emphasis role="comment">/*&#32;Time&#32;out&#32;for&#32;INAK&#32;bit&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00567"/>00567 <emphasis role="preprocessor">#define&#32;INAK_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x0000FFFF)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00568"/>00568 <emphasis role="comment">/*&#32;Time&#32;out&#32;for&#32;SLAK&#32;bit&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00569"/>00569 <emphasis role="preprocessor">#define&#32;SLAK_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x0000FFFF)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00570"/>00570 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00571"/>00571 <emphasis role="comment">/*&#32;Mailboxes&#32;definition&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00572"/>00572 <emphasis role="preprocessor">#define&#32;CAN_TXMAILBOX_0&#32;&#32;&#32;((uint8_t)0x00)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00573"/>00573 <emphasis role="preprocessor">#define&#32;CAN_TXMAILBOX_1&#32;&#32;&#32;((uint8_t)0x01)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00574"/>00574 <emphasis role="preprocessor">#define&#32;CAN_TXMAILBOX_2&#32;&#32;&#32;((uint8_t)0x02)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00575"/>00575 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00580"/>00580 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00581"/>00581 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00586"/>00586 <emphasis role="preprocessor">#define&#32;__HAL_CAN_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_CAN_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00587"/>00587 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00594"/>00594 <emphasis role="preprocessor">#define&#32;__HAL_CAN_ENABLE_IT(__HANDLE__,&#32;__INTERRUPT__)&#32;(((__HANDLE__)-&gt;Instance-&gt;IER)&#32;|=&#32;(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00595"/>00595 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00602"/>00602 <emphasis role="preprocessor">#define&#32;__HAL_CAN_DISABLE_IT(__HANDLE__,&#32;__INTERRUPT__)&#32;(((__HANDLE__)-&gt;Instance-&gt;IER)&#32;&amp;=&#32;~(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00603"/>00603 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00610"/>00610 <emphasis role="preprocessor">#define&#32;__HAL_CAN_MSG_PENDING(__HANDLE__,&#32;__FIFONUMBER__)&#32;(((__FIFONUMBER__)&#32;==&#32;CAN_FIFO0)?&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00611"/>00611 <emphasis role="preprocessor">((uint8_t)((__HANDLE__)-&gt;Instance-&gt;RF0R&amp;(uint32_t)0x03))&#32;:&#32;((uint8_t)((__HANDLE__)-&gt;Instance-&gt;RF1R&amp;(uint32_t)0x03)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00612"/>00612 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00640"/>00640 <emphasis role="preprocessor">#define&#32;CAN_FLAG_MASK&#32;&#32;((uint32_t)0x000000FF)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00641"/>00641 <emphasis role="preprocessor">#define&#32;__HAL_CAN_GET_FLAG(__HANDLE__,&#32;__FLAG__)&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00642"/>00642 <emphasis role="preprocessor">((((__FLAG__)&#32;&gt;&gt;&#32;8)&#32;==&#32;5)?&#32;((((__HANDLE__)-&gt;Instance-&gt;TSR)&#32;&amp;&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK)))&#32;==&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00643"/>00643 <emphasis role="preprocessor">&#32;(((__FLAG__)&#32;&gt;&gt;&#32;8)&#32;==&#32;2)?&#32;((((__HANDLE__)-&gt;Instance-&gt;RF0R)&#32;&amp;&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK)))&#32;==&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00644"/>00644 <emphasis role="preprocessor">&#32;(((__FLAG__)&#32;&gt;&gt;&#32;8)&#32;==&#32;4)?&#32;((((__HANDLE__)-&gt;Instance-&gt;RF1R)&#32;&amp;&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK)))&#32;==&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00645"/>00645 <emphasis role="preprocessor">&#32;(((__FLAG__)&#32;&gt;&gt;&#32;8)&#32;==&#32;1)?&#32;((((__HANDLE__)-&gt;Instance-&gt;MSR)&#32;&amp;&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK)))&#32;==&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00646"/>00646 <emphasis role="preprocessor">&#32;((((__HANDLE__)-&gt;Instance-&gt;ESR)&#32;&amp;&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK)))&#32;==&#32;(1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00647"/>00647 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00675"/>00675 <emphasis role="preprocessor">#define&#32;__HAL_CAN_CLEAR_FLAG(__HANDLE__,&#32;__FLAG__)&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00676"/>00676 <emphasis role="preprocessor">((((__FLAG__)&#32;&gt;&gt;&#32;8)&#32;==&#32;5)?&#32;(((__HANDLE__)-&gt;Instance-&gt;TSR)&#32;&amp;=&#32;~((uint32_t)1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00677"/>00677 <emphasis role="preprocessor">&#32;(((__FLAG__)&#32;&gt;&gt;&#32;8)&#32;==&#32;2)?&#32;(((__HANDLE__)-&gt;Instance-&gt;RF0R)&#32;&amp;=&#32;~((uint32_t)1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00678"/>00678 <emphasis role="preprocessor">&#32;(((__FLAG__)&#32;&gt;&gt;&#32;8)&#32;==&#32;4)?&#32;(((__HANDLE__)-&gt;Instance-&gt;RF1R)&#32;&amp;=&#32;~((uint32_t)1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00679"/>00679 <emphasis role="preprocessor">&#32;(((__FLAG__)&#32;&gt;&gt;&#32;8)&#32;==&#32;1)?&#32;(((__HANDLE__)-&gt;Instance-&gt;MSR)&#32;&amp;=&#32;~((uint32_t)1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00680"/>00680 <emphasis role="preprocessor">&#32;(((__HANDLE__)-&gt;Instance-&gt;ESR)&#32;&amp;=&#32;~((uint32_t)1&#32;&lt;&lt;&#32;((__FLAG__)&#32;&amp;&#32;CAN_FLAG_MASK))))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00681"/>00681 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00691"/>00691 <emphasis role="preprocessor">#define&#32;__HAL_CAN_GET_IT_SOURCE(__HANDLE__,&#32;__INTERRUPT__)&#32;((((__HANDLE__)-&gt;Instance-&gt;IER&#32;&amp;&#32;(__INTERRUPT__))&#32;==&#32;(__INTERRUPT__))&#32;?&#32;SET&#32;:&#32;RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00692"/>00692 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00699"/>00699 <emphasis role="preprocessor">#define&#32;__HAL_CAN_TRANSMIT_STATUS(__HANDLE__,&#32;__TRANSMITMAILBOX__)\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00700"/>00700 <emphasis role="preprocessor">(((__TRANSMITMAILBOX__)&#32;==&#32;CAN_TXMAILBOX_0)?&#32;((((__HANDLE__)-&gt;Instance-&gt;TSR)&#32;&amp;&#32;(CAN_TSR_RQCP0&#32;|&#32;CAN_TSR_TXOK0&#32;|&#32;CAN_TSR_TME0))&#32;==&#32;(CAN_TSR_RQCP0&#32;|&#32;CAN_TSR_TXOK0&#32;|&#32;CAN_TSR_TME0))&#32;:\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00701"/>00701 <emphasis role="preprocessor">&#32;((__TRANSMITMAILBOX__)&#32;==&#32;CAN_TXMAILBOX_1)?&#32;((((__HANDLE__)-&gt;Instance-&gt;TSR)&#32;&amp;&#32;(CAN_TSR_RQCP1&#32;|&#32;CAN_TSR_TXOK1&#32;|&#32;CAN_TSR_TME1))&#32;==&#32;(CAN_TSR_RQCP1&#32;|&#32;CAN_TSR_TXOK1&#32;|&#32;CAN_TSR_TME1))&#32;:\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00702"/>00702 <emphasis role="preprocessor">&#32;((((__HANDLE__)-&gt;Instance-&gt;TSR)&#32;&amp;&#32;(CAN_TSR_RQCP2&#32;|&#32;CAN_TSR_TXOK2&#32;|&#32;CAN_TSR_TME2))&#32;==&#32;(CAN_TSR_RQCP2&#32;|&#32;CAN_TSR_TXOK2&#32;|&#32;CAN_TSR_TME2)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00703"/>00703 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00704"/>00704 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00705"/>00705 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00712"/>00712 <emphasis role="preprocessor">#define&#32;__HAL_CAN_FIFO_RELEASE(__HANDLE__,&#32;__FIFONUMBER__)&#32;(((__FIFONUMBER__)&#32;==&#32;CAN_FIFO0)?&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00713"/>00713 <emphasis role="preprocessor">((__HANDLE__)-&gt;Instance-&gt;RF0R&#32;|=&#32;CAN_RF0R_RFOM0)&#32;:&#32;((__HANDLE__)-&gt;Instance-&gt;RF1R&#32;|=&#32;CAN_RF1R_RFOM1))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00714"/>00714 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00721"/>00721 <emphasis role="preprocessor">#define&#32;__HAL_CAN_CANCEL_TRANSMIT(__HANDLE__,&#32;__TRANSMITMAILBOX__)\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00722"/>00722 <emphasis role="preprocessor">(((__TRANSMITMAILBOX__)&#32;==&#32;CAN_TXMAILBOX_0)?&#32;((__HANDLE__)-&gt;Instance-&gt;TSR&#32;|=&#32;CAN_TSR_ABRQ0)&#32;:\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00723"/>00723 <emphasis role="preprocessor">&#32;((__TRANSMITMAILBOX__)&#32;==&#32;CAN_TXMAILBOX_1)?&#32;((__HANDLE__)-&gt;Instance-&gt;TSR&#32;|=&#32;CAN_TSR_ABRQ1)&#32;:\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00724"/>00724 <emphasis role="preprocessor">&#32;((__HANDLE__)-&gt;Instance-&gt;TSR&#32;|=&#32;CAN_TSR_ABRQ2))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00725"/>00725 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00735"/>00735 <emphasis role="preprocessor">#define&#32;__HAL_CAN_DBG_FREEZE(__HANDLE__,&#32;__NEWSTATE__)&#32;(((__NEWSTATE__)&#32;==&#32;ENABLE)?&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00736"/>00736 <emphasis role="preprocessor">((__HANDLE__)-&gt;Instance-&gt;MCR&#32;|=&#32;CAN_MCR_DBF)&#32;:&#32;((__HANDLE__)-&gt;Instance-&gt;MCR&#32;&amp;=&#32;~CAN_MCR_DBF))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00737"/>00737 &#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00738"/>00738 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00739"/>00739 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00740"/>00740 <emphasis role="comment">/*&#32;Initialization/de-initialization&#32;functions&#32;***********************************/</emphasis>&#32;
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00741"/>00741 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_Init(CAN_HandleTypeDef*&#32;hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00742"/>00742 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_ConfigFilter(CAN_HandleTypeDef*&#32;hcan,&#32;CAN_FilterConfTypeDef*&#32;sFilterConfig);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00743"/>00743 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_DeInit(CAN_HandleTypeDef*&#32;hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00744"/>00744 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CAN_MspInit(CAN_HandleTypeDef*&#32;hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00745"/>00745 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CAN_MspDeInit(CAN_HandleTypeDef*&#32;hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00746"/>00746 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00747"/>00747 <emphasis role="comment">/*&#32;I/O&#32;operation&#32;functions&#32;******************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00748"/>00748 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_Transmit(CAN_HandleTypeDef&#32;*hcan,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00749"/>00749 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_Transmit_IT(CAN_HandleTypeDef&#32;*hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00750"/>00750 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_Receive(CAN_HandleTypeDef&#32;*hcan,&#32;uint8_t&#32;FIFONumber,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00751"/>00751 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_Receive_IT(CAN_HandleTypeDef&#32;*hcan,&#32;uint8_t&#32;FIFONumber);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00752"/>00752 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_Sleep(CAN_HandleTypeDef&#32;*hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00753"/>00753 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CAN_WakeUp(CAN_HandleTypeDef&#32;*hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00754"/>00754 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00755"/>00755 <emphasis role="comment">/*&#32;Peripheral&#32;State&#32;functions&#32;***************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00756"/>00756 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CAN_IRQHandler(CAN_HandleTypeDef*&#32;hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00757"/>00757 uint32_t&#32;HAL_CAN_GetError(CAN_HandleTypeDef&#32;*hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00758"/>00758 HAL_CAN_StateTypeDef&#32;HAL_CAN_GetState(CAN_HandleTypeDef*&#32;hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00759"/>00759 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00760"/>00760 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CAN_TxCpltCallback(CAN_HandleTypeDef*&#32;hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00761"/>00761 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CAN_RxCpltCallback(CAN_HandleTypeDef*&#32;hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00762"/>00762 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CAN_ErrorCallback(CAN_HandleTypeDef&#32;*hcan);
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00763"/>00763 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00764"/>00764 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00765"/>00765 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00774"/>00774 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00775"/>00775 }
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00776"/>00776 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00777"/>00777 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00778"/>00778 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_CAN_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00779"/>00779 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00780"/>00780 
+<anchor xml:id="_stm32f4xx__hal__can_8h_source_1l00781"/>00781 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

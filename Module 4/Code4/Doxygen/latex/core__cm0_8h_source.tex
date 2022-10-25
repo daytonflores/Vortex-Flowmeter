@@ -1,0 +1,435 @@
+\hypertarget{core__cm0_8h_source}{}\doxysection{core\+\_\+cm0.\+h}
+\label{core__cm0_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/core\_cm0.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/core\_cm0.h}}
+\mbox{\hyperlink{core__cm0_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{10 \textcolor{comment}{/* Copyright (c) 2009 -\/ 2013 ARM LIMITED}}
+\DoxyCodeLine{11 \textcolor{comment}{}}
+\DoxyCodeLine{12 \textcolor{comment}{   All rights reserved.}}
+\DoxyCodeLine{13 \textcolor{comment}{   Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{14 \textcolor{comment}{   modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{15 \textcolor{comment}{   -\/ Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{16 \textcolor{comment}{     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{17 \textcolor{comment}{   -\/ Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{18 \textcolor{comment}{     notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{19 \textcolor{comment}{     documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{20 \textcolor{comment}{   -\/ Neither the name of ARM nor the names of its contributors may be used}}
+\DoxyCodeLine{21 \textcolor{comment}{     to endorse or promote products derived from this software without}}
+\DoxyCodeLine{22 \textcolor{comment}{     specific prior written permission.}}
+\DoxyCodeLine{23 \textcolor{comment}{   *}}
+\DoxyCodeLine{24 \textcolor{comment}{   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{25 \textcolor{comment}{   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{26 \textcolor{comment}{   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE}}
+\DoxyCodeLine{27 \textcolor{comment}{   ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE}}
+\DoxyCodeLine{28 \textcolor{comment}{   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR}}
+\DoxyCodeLine{29 \textcolor{comment}{   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF}}
+\DoxyCodeLine{30 \textcolor{comment}{   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{31 \textcolor{comment}{   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN}}
+\DoxyCodeLine{32 \textcolor{comment}{   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)}}
+\DoxyCodeLine{33 \textcolor{comment}{   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{34 \textcolor{comment}{   POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{35 \textcolor{comment}{   -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#if defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{ \#pragma system\_include  }\textcolor{comment}{/* treat file as system include file for MISRA check */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CM0\_H\_GENERIC}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define \_\_CORE\_CM0\_H\_GENERIC}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{63 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{64 \textcolor{comment}{ *                 CMSIS definitions}}
+\DoxyCodeLine{65 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{70 \textcolor{comment}{/*  CMSIS CM0 definitions */}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define \_\_CM0\_CMSIS\_VERSION\_MAIN  (0x03)                                   }}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define \_\_CM0\_CMSIS\_VERSION\_SUB   (0x20)                                   }}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define \_\_CM0\_CMSIS\_VERSION       ((\_\_CM0\_CMSIS\_VERSION\_MAIN << 16) | \(\backslash\)}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{                                    \_\_CM0\_CMSIS\_VERSION\_SUB          )     }}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define \_\_CORTEX\_M                (0x00)                                   }}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#if   defined ( \_\_CC\_ARM )}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{  \#define \_\_ASM            \_\_asm                                      }}
+\DoxyCodeLine{81 \textcolor{preprocessor}{  \#define \_\_INLINE         \_\_inline                                   }}
+\DoxyCodeLine{82 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE  static \_\_inline}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#elif defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{  \#define \_\_ASM            \_\_asm                                      }}
+\DoxyCodeLine{86 \textcolor{preprocessor}{  \#define \_\_INLINE         inline                                     }}
+\DoxyCodeLine{87 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE  static inline}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#elif defined ( \_\_GNUC\_\_ )}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{  \#define \_\_ASM            \_\_asm                                      }}
+\DoxyCodeLine{91 \textcolor{preprocessor}{  \#define \_\_INLINE         inline                                     }}
+\DoxyCodeLine{92 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE  static inline}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#elif defined ( \_\_TASKING\_\_ )}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{  \#define \_\_ASM            \_\_asm                                      }}
+\DoxyCodeLine{96 \textcolor{preprocessor}{  \#define \_\_INLINE         inline                                     }}
+\DoxyCodeLine{97 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE  static inline}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define \_\_FPU\_USED       0}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#if defined ( \_\_CC\_ARM )}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{  \#if defined \_\_TARGET\_FPU\_VFP}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{    \#warning "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#elif defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{  \#if defined \_\_ARMVFP\_\_}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{    \#warning "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#elif defined ( \_\_GNUC\_\_ )}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{  \#if defined (\_\_VFP\_FP\_\_) \&\& !defined(\_\_SOFTFP\_\_)}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{    \#warning "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#elif defined ( \_\_TASKING\_\_ )}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{  \#if defined \_\_FPU\_VFP\_\_}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{    \#error "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#include <stdint.h>}                      \textcolor{comment}{/* standard types definitions                      */}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{core__cm_instr_8h}{core\_cmInstr.h}}>}                \textcolor{comment}{/* Core Instruction Access                         */}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{core__cm_func_8h}{core\_cmFunc.h}}>}                 \textcolor{comment}{/* Core Function Access                            */}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CM0\_H\_GENERIC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#ifndef \_\_CMSIS\_GENERIC}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CM0\_H\_DEPENDANT}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define \_\_CORE\_CM0\_H\_DEPENDANT}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{comment}{/* check device defines and use defaults */}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#if defined \_\_CHECK\_DEVICE\_DEFINES}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{  \#ifndef \_\_CM0\_REV}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{    \#define \_\_CM0\_REV               0x0000}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{    \#warning "{}\_\_CM0\_REV not defined in device header file; using default!"{}}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{preprocessor}{  \#ifndef \_\_NVIC\_PRIO\_BITS}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{    \#define \_\_NVIC\_PRIO\_BITS          2}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{    \#warning "{}\_\_NVIC\_PRIO\_BITS not defined in device header file; using default!"{}}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{preprocessor}{  \#ifndef \_\_Vendor\_SysTickConfig}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{    \#define \_\_Vendor\_SysTickConfig    0}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{    \#warning "{}\_\_Vendor\_SysTickConfig not defined in device header file; using default!"{}}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155 \textcolor{comment}{/* IO definitions (access restrictions to peripheral registers) */}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{  \#define   \_\_I     volatile             }}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{  \#define   \_\_I     volatile const       }}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define     \_\_O     volatile             }}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define     \_\_IO    volatile             }}
+\DoxyCodeLine{175 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{176 \textcolor{comment}{ *                 Register Abstraction}}
+\DoxyCodeLine{177 \textcolor{comment}{  Core Register contain:}}
+\DoxyCodeLine{178 \textcolor{comment}{  -\/ Core Register}}
+\DoxyCodeLine{179 \textcolor{comment}{  -\/ Core NVIC Register}}
+\DoxyCodeLine{180 \textcolor{comment}{  -\/ Core SCB Register}}
+\DoxyCodeLine{181 \textcolor{comment}{  -\/ Core SysTick Register}}
+\DoxyCodeLine{182 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{195 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{196 \{}
+\DoxyCodeLine{197   \textcolor{keyword}{struct}}
+\DoxyCodeLine{198   \{}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#if (\_\_CORTEX\_M != 0x04)}}
+\DoxyCodeLine{200     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafbce95646fd514c10aa85ec0a33db728}{\_reserved0}}:27;              }
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{202     uint32\_t \_reserved0:16;              }
+\DoxyCodeLine{203     uint32\_t GE:4;                       }
+\DoxyCodeLine{204     uint32\_t \_reserved1:7;               }
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{206     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga22d10913489d24ab08bd83457daa88de}{Q}}:1;                        }
+\DoxyCodeLine{207     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8004d224aacb78ca37774c35f9156e7e}{V}}:1;                        }
+\DoxyCodeLine{208     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga86e2c5b891ecef1ab55b1edac0da79a6}{C}}:1;                        }
+\DoxyCodeLine{209     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3b04d58738b66a28ff13f23d8b0ba7e5}{Z}}:1;                        }
+\DoxyCodeLine{210     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7e7bbba9b00b0bb3283dc07f1abe37e0}{N}}:1;                        }
+\DoxyCodeLine{211   \} b;                                   }
+\DoxyCodeLine{212   uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gae4c2ef8c9430d7b7bef5cbfbbaed3a94}{w}};                            }
+\DoxyCodeLine{213 \} \mbox{\hyperlink{union_a_p_s_r___type}{APSR\_Type}};}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 }
+\DoxyCodeLine{218 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{219 \{}
+\DoxyCodeLine{220   \textcolor{keyword}{struct}}
+\DoxyCodeLine{221   \{}
+\DoxyCodeLine{222     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gab46e5f1b2f4d17cfb9aca4fffcbb2fa5}{ISR}}:9;                      }
+\DoxyCodeLine{223     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gad2eb0a06de4f03f58874a727716aa9aa}{\_reserved0}}:23;              }
+\DoxyCodeLine{224   \} b;                                   }
+\DoxyCodeLine{225   uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga4adca999d3a0bc1ae682d73ea7cfa879}{w}};                            }
+\DoxyCodeLine{226 \} \mbox{\hyperlink{union_i_p_s_r___type}{IPSR\_Type}};}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228 }
+\DoxyCodeLine{231 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{232 \{}
+\DoxyCodeLine{233   \textcolor{keyword}{struct}}
+\DoxyCodeLine{234   \{}
+\DoxyCodeLine{235     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3e9120dcf1a829fc8d2302b4d0673970}{ISR}}:9;                      }
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#if (\_\_CORTEX\_M != 0x04)}}
+\DoxyCodeLine{237     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf438e0f407357e914a70b5bd4d6a97c5}{\_reserved0}}:15;              }
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{239     uint32\_t \_reserved0:7;               }
+\DoxyCodeLine{240     uint32\_t GE:4;                       }
+\DoxyCodeLine{241     uint32\_t \_reserved1:4;               }
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{243     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga7eed9fe24ae8d354cd76ae1c1110a658}{T}}:1;                        }
+\DoxyCodeLine{244     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3200966922a194d84425e2807a7f1328}{IT}}:2;                       }
+\DoxyCodeLine{245     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gadd7cbd2b0abd8954d62cd7831796ac7c}{Q}}:1;                        }
+\DoxyCodeLine{246     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf14df16ea0690070c45b95f2116b7a0a}{V}}:1;                        }
+\DoxyCodeLine{247     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga40213a6b5620410cac83b0d89564609d}{C}}:1;                        }
+\DoxyCodeLine{248     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga1e5d9801013d5146f2e02d9b7b3da562}{Z}}:1;                        }
+\DoxyCodeLine{249     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga2db9a52f6d42809627d1a7a607c5dbc5}{N}}:1;                        }
+\DoxyCodeLine{250   \} b;                                   }
+\DoxyCodeLine{251   uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga1a47176768f45f79076c4f5b1b534bc2}{w}};                            }
+\DoxyCodeLine{252 \} \mbox{\hyperlink{unionx_p_s_r___type}{xPSR\_Type}};}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254 }
+\DoxyCodeLine{257 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{258 \{}
+\DoxyCodeLine{259   \textcolor{keyword}{struct}}
+\DoxyCodeLine{260   \{}
+\DoxyCodeLine{261     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga35c1732cf153b7b5c4bd321cf1de9605}{nPRIV}}:1;                    }
+\DoxyCodeLine{262     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga8cc085fea1c50a8bd9adea63931ee8e2}{SPSEL}}:1;                    }
+\DoxyCodeLine{263     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gac62cfff08e6f055e0101785bad7094cd}{FPCA}}:1;                     }
+\DoxyCodeLine{264     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf8c314273a1e4970a5671bd7f8184f50}{\_reserved0}}:29;              }
+\DoxyCodeLine{265   \} b;                                   }
+\DoxyCodeLine{266   uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga6b642cca3d96da660b1198c133ca2a1f}{w}};                            }
+\DoxyCodeLine{267 \} \mbox{\hyperlink{union_c_o_n_t_r_o_l___type}{CONTROL\_Type}};}
+\DoxyCodeLine{268 }
+\DoxyCodeLine{280 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{281 \{}
+\DoxyCodeLine{282   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t ISER[1];                 }
+\DoxyCodeLine{283        uint32\_t RESERVED0[31];}
+\DoxyCodeLine{284   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t ICER[1];                 }
+\DoxyCodeLine{285        uint32\_t RSERVED1[31];}
+\DoxyCodeLine{286   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t ISPR[1];                 }
+\DoxyCodeLine{287        uint32\_t RESERVED2[31];}
+\DoxyCodeLine{288   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t ICPR[1];                 }
+\DoxyCodeLine{289        uint32\_t RESERVED3[31];}
+\DoxyCodeLine{290        uint32\_t RESERVED4[64];}
+\DoxyCodeLine{291   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t IP[8];                   }
+\DoxyCodeLine{292 \}  \mbox{\hyperlink{struct_n_v_i_c___type}{NVIC\_Type}};}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{305 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{306 \{}
+\DoxyCodeLine{307   \mbox{\hyperlink{core__cm0_8h_af63697ed9952cc71e1225efe205f6cd3}{\_\_I}}  uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gafa7a9ee34dfa1da0b60b4525da285032}{CPUID}};                   }
+\DoxyCodeLine{308   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga3e66570ab689d28aebefa7e84e85dc4a}{ICSR}};                    }
+\DoxyCodeLine{309        uint32\_t RESERVED0;}
+\DoxyCodeLine{310   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga6ed3c9064013343ea9fd0a73a734f29d}{AIRCR}};                   }
+\DoxyCodeLine{311   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gabfad14e7b4534d73d329819625d77a16}{SCR}};                     }
+\DoxyCodeLine{312   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga6d273c6b90bad15c91dfbbad0f6e92d8}{CCR}};                     }
+\DoxyCodeLine{313        uint32\_t RESERVED1;}
+\DoxyCodeLine{314   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t SHP[2];                  }
+\DoxyCodeLine{315   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gae9891a59abbe51b0b2067ca507ca212f}{SHCSR}};                   }
+\DoxyCodeLine{316 \} \mbox{\hyperlink{struct_s_c_b___type}{SCB\_Type}};}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{318 \textcolor{comment}{/* SCB CPUID Register Definitions */}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#define SCB\_CPUID\_IMPLEMENTER\_Pos          24                                             }}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#define SCB\_CPUID\_IMPLEMENTER\_Msk          (0xFFUL << SCB\_CPUID\_IMPLEMENTER\_Pos)          }}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define SCB\_CPUID\_VARIANT\_Pos              20                                             }}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#define SCB\_CPUID\_VARIANT\_Msk              (0xFUL << SCB\_CPUID\_VARIANT\_Pos)               }}
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#define SCB\_CPUID\_ARCHITECTURE\_Pos         16                                             }}
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#define SCB\_CPUID\_ARCHITECTURE\_Msk         (0xFUL << SCB\_CPUID\_ARCHITECTURE\_Pos)          }}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#define SCB\_CPUID\_PARTNO\_Pos                4                                             }}
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#define SCB\_CPUID\_PARTNO\_Msk               (0xFFFUL << SCB\_CPUID\_PARTNO\_Pos)              }}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#define SCB\_CPUID\_REVISION\_Pos              0                                             }}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define SCB\_CPUID\_REVISION\_Msk             (0xFUL << SCB\_CPUID\_REVISION\_Pos)              }}
+\DoxyCodeLine{334 \textcolor{comment}{/* SCB Interrupt Control State Register Definitions */}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define SCB\_ICSR\_NMIPENDSET\_Pos            31                                             }}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define SCB\_ICSR\_NMIPENDSET\_Msk            (1UL << SCB\_ICSR\_NMIPENDSET\_Pos)               }}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVSET\_Pos             28                                             }}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVSET\_Msk             (1UL << SCB\_ICSR\_PENDSVSET\_Pos)                }}
+\DoxyCodeLine{341 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVCLR\_Pos             27                                             }}
+\DoxyCodeLine{342 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVCLR\_Msk             (1UL << SCB\_ICSR\_PENDSVCLR\_Pos)                }}
+\DoxyCodeLine{344 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTSET\_Pos             26                                             }}
+\DoxyCodeLine{345 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTSET\_Msk             (1UL << SCB\_ICSR\_PENDSTSET\_Pos)                }}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTCLR\_Pos             25                                             }}
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTCLR\_Msk             (1UL << SCB\_ICSR\_PENDSTCLR\_Pos)                }}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPREEMPT\_Pos            23                                             }}
+\DoxyCodeLine{351 \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPREEMPT\_Msk            (1UL << SCB\_ICSR\_ISRPREEMPT\_Pos)               }}
+\DoxyCodeLine{353 \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPENDING\_Pos            22                                             }}
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPENDING\_Msk            (1UL << SCB\_ICSR\_ISRPENDING\_Pos)               }}
+\DoxyCodeLine{356 \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTPENDING\_Pos           12                                             }}
+\DoxyCodeLine{357 \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTPENDING\_Msk           (0x1FFUL << SCB\_ICSR\_VECTPENDING\_Pos)          }}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTACTIVE\_Pos             0                                             }}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTACTIVE\_Msk            (0x1FFUL << SCB\_ICSR\_VECTACTIVE\_Pos)           }}
+\DoxyCodeLine{362 \textcolor{comment}{/* SCB Application Interrupt and Reset Control Register Definitions */}}
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEY\_Pos              16                                             }}
+\DoxyCodeLine{364 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEY\_Msk              (0xFFFFUL << SCB\_AIRCR\_VECTKEY\_Pos)            }}
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEYSTAT\_Pos          16                                             }}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEYSTAT\_Msk          (0xFFFFUL << SCB\_AIRCR\_VECTKEYSTAT\_Pos)        }}
+\DoxyCodeLine{369 \textcolor{preprocessor}{\#define SCB\_AIRCR\_ENDIANESS\_Pos            15                                             }}
+\DoxyCodeLine{370 \textcolor{preprocessor}{\#define SCB\_AIRCR\_ENDIANESS\_Msk            (1UL << SCB\_AIRCR\_ENDIANESS\_Pos)               }}
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#define SCB\_AIRCR\_SYSRESETREQ\_Pos           2                                             }}
+\DoxyCodeLine{373 \textcolor{preprocessor}{\#define SCB\_AIRCR\_SYSRESETREQ\_Msk          (1UL << SCB\_AIRCR\_SYSRESETREQ\_Pos)             }}
+\DoxyCodeLine{375 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTCLRACTIVE\_Pos         1                                             }}
+\DoxyCodeLine{376 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTCLRACTIVE\_Msk        (1UL << SCB\_AIRCR\_VECTCLRACTIVE\_Pos)           }}
+\DoxyCodeLine{378 \textcolor{comment}{/* SCB System Control Register Definitions */}}
+\DoxyCodeLine{379 \textcolor{preprocessor}{\#define SCB\_SCR\_SEVONPEND\_Pos               4                                             }}
+\DoxyCodeLine{380 \textcolor{preprocessor}{\#define SCB\_SCR\_SEVONPEND\_Msk              (1UL << SCB\_SCR\_SEVONPEND\_Pos)                 }}
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPDEEP\_Pos               2                                             }}
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPDEEP\_Msk              (1UL << SCB\_SCR\_SLEEPDEEP\_Pos)                 }}
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPONEXIT\_Pos             1                                             }}
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPONEXIT\_Msk            (1UL << SCB\_SCR\_SLEEPONEXIT\_Pos)               }}
+\DoxyCodeLine{388 \textcolor{comment}{/* SCB Configuration Control Register Definitions */}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{\#define SCB\_CCR\_STKALIGN\_Pos                9                                             }}
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#define SCB\_CCR\_STKALIGN\_Msk               (1UL << SCB\_CCR\_STKALIGN\_Pos)                  }}
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#define SCB\_CCR\_UNALIGN\_TRP\_Pos             3                                             }}
+\DoxyCodeLine{393 \textcolor{preprocessor}{\#define SCB\_CCR\_UNALIGN\_TRP\_Msk            (1UL << SCB\_CCR\_UNALIGN\_TRP\_Pos)               }}
+\DoxyCodeLine{395 \textcolor{comment}{/* SCB System Handler Control and State Register Definitions */}}
+\DoxyCodeLine{396 \textcolor{preprocessor}{\#define SCB\_SHCSR\_SVCALLPENDED\_Pos         15                                             }}
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#define SCB\_SHCSR\_SVCALLPENDED\_Msk         (1UL << SCB\_SHCSR\_SVCALLPENDED\_Pos)            }}
+\DoxyCodeLine{410 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{411 \{}
+\DoxyCodeLine{412   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gaf2ad94ac83e5d40fc6e34884bc1bec5f}{CTRL}};                    }
+\DoxyCodeLine{413   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_gae7bc9d3eac1147f3bba8d73a8395644f}{LOAD}};                    }
+\DoxyCodeLine{414   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga0997ff20f11817f8246e8f0edac6f4e4}{VAL}};                     }
+\DoxyCodeLine{415   \mbox{\hyperlink{core__cm0_8h_af63697ed9952cc71e1225efe205f6cd3}{\_\_I}}  uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions_ga9c9eda0ea6f6a7c904d2d75a6963e238}{CALIB}};                   }
+\DoxyCodeLine{416 \} \mbox{\hyperlink{struct_sys_tick___type}{SysTick\_Type}};}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418 \textcolor{comment}{/* SysTick Control / Status Register Definitions */}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#define SysTick\_CTRL\_COUNTFLAG\_Pos         16                                             }}
+\DoxyCodeLine{420 \textcolor{preprocessor}{\#define SysTick\_CTRL\_COUNTFLAG\_Msk         (1UL << SysTick\_CTRL\_COUNTFLAG\_Pos)            }}
+\DoxyCodeLine{422 \textcolor{preprocessor}{\#define SysTick\_CTRL\_CLKSOURCE\_Pos          2                                             }}
+\DoxyCodeLine{423 \textcolor{preprocessor}{\#define SysTick\_CTRL\_CLKSOURCE\_Msk         (1UL << SysTick\_CTRL\_CLKSOURCE\_Pos)            }}
+\DoxyCodeLine{425 \textcolor{preprocessor}{\#define SysTick\_CTRL\_TICKINT\_Pos            1                                             }}
+\DoxyCodeLine{426 \textcolor{preprocessor}{\#define SysTick\_CTRL\_TICKINT\_Msk           (1UL << SysTick\_CTRL\_TICKINT\_Pos)              }}
+\DoxyCodeLine{428 \textcolor{preprocessor}{\#define SysTick\_CTRL\_ENABLE\_Pos             0                                             }}
+\DoxyCodeLine{429 \textcolor{preprocessor}{\#define SysTick\_CTRL\_ENABLE\_Msk            (1UL << SysTick\_CTRL\_ENABLE\_Pos)               }}
+\DoxyCodeLine{431 \textcolor{comment}{/* SysTick Reload Register Definitions */}}
+\DoxyCodeLine{432 \textcolor{preprocessor}{\#define SysTick\_LOAD\_RELOAD\_Pos             0                                             }}
+\DoxyCodeLine{433 \textcolor{preprocessor}{\#define SysTick\_LOAD\_RELOAD\_Msk            (0xFFFFFFUL << SysTick\_LOAD\_RELOAD\_Pos)        }}
+\DoxyCodeLine{435 \textcolor{comment}{/* SysTick Current Register Definitions */}}
+\DoxyCodeLine{436 \textcolor{preprocessor}{\#define SysTick\_VAL\_CURRENT\_Pos             0                                             }}
+\DoxyCodeLine{437 \textcolor{preprocessor}{\#define SysTick\_VAL\_CURRENT\_Msk            (0xFFFFFFUL << SysTick\_VAL\_CURRENT\_Pos)        }}
+\DoxyCodeLine{439 \textcolor{comment}{/* SysTick Calibration Register Definitions */}}
+\DoxyCodeLine{440 \textcolor{preprocessor}{\#define SysTick\_CALIB\_NOREF\_Pos            31                                             }}
+\DoxyCodeLine{441 \textcolor{preprocessor}{\#define SysTick\_CALIB\_NOREF\_Msk            (1UL << SysTick\_CALIB\_NOREF\_Pos)               }}
+\DoxyCodeLine{443 \textcolor{preprocessor}{\#define SysTick\_CALIB\_SKEW\_Pos             30                                             }}
+\DoxyCodeLine{444 \textcolor{preprocessor}{\#define SysTick\_CALIB\_SKEW\_Msk             (1UL << SysTick\_CALIB\_SKEW\_Pos)                }}
+\DoxyCodeLine{446 \textcolor{preprocessor}{\#define SysTick\_CALIB\_TENMS\_Pos             0                                             }}
+\DoxyCodeLine{447 \textcolor{preprocessor}{\#define SysTick\_CALIB\_TENMS\_Msk            (0xFFFFFFUL << SysTick\_VAL\_CURRENT\_Pos)        }}
+\DoxyCodeLine{468 \textcolor{comment}{/* Memory mapping of Cortex-\/M0 Hardware */}}
+\DoxyCodeLine{469 \textcolor{preprocessor}{\#define SCS\_BASE            (0xE000E000UL)                            }}
+\DoxyCodeLine{470 \textcolor{preprocessor}{\#define SysTick\_BASE        (SCS\_BASE +  0x0010UL)                    }}
+\DoxyCodeLine{471 \textcolor{preprocessor}{\#define NVIC\_BASE           (SCS\_BASE +  0x0100UL)                    }}
+\DoxyCodeLine{472 \textcolor{preprocessor}{\#define SCB\_BASE            (SCS\_BASE +  0x0D00UL)                    }}
+\DoxyCodeLine{474 \textcolor{preprocessor}{\#define SCB                 ((SCB\_Type       *)     SCB\_BASE      )   }}
+\DoxyCodeLine{475 \textcolor{preprocessor}{\#define SysTick             ((SysTick\_Type   *)     SysTick\_BASE  )   }}
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#define NVIC                ((NVIC\_Type      *)     NVIC\_BASE     )   }}
+\DoxyCodeLine{483 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{484 \textcolor{comment}{ *                Hardware Abstraction Layer}}
+\DoxyCodeLine{485 \textcolor{comment}{  Core Function Interface contains:}}
+\DoxyCodeLine{486 \textcolor{comment}{  -\/ Core NVIC Functions}}
+\DoxyCodeLine{487 \textcolor{comment}{  -\/ Core SysTick Functions}}
+\DoxyCodeLine{488 \textcolor{comment}{  -\/ Core Register Access Functions}}
+\DoxyCodeLine{489 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{495 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#   NVIC functions  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{502 \textcolor{comment}{/* Interrupt Priorities are WORD accessible only under ARMv6M                   */}}
+\DoxyCodeLine{503 \textcolor{comment}{/* The following MACROS handle generation of the register offset and byte masks */}}
+\DoxyCodeLine{504 \textcolor{preprocessor}{\#define \_BIT\_SHIFT(IRQn)         (  (((uint32\_t)(IRQn)       )    \&  0x03) * 8 )}}
+\DoxyCodeLine{505 \textcolor{preprocessor}{\#define \_SHP\_IDX(IRQn)           ( ((((uint32\_t)(IRQn) \& 0x0F)-\/8) >>    2)     )}}
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#define \_IP\_IDX(IRQn)            (   ((uint32\_t)(IRQn)            >>    2)     )}}
+\DoxyCodeLine{507 }
+\DoxyCodeLine{508 }
+\DoxyCodeLine{515 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga3349f2e3580d7ce22d6530b7294e5921}{NVIC\_EnableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{516 \{}
+\DoxyCodeLine{517   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISER[0] = (1 << ((uint32\_t)(IRQn) \& 0x1F));}
+\DoxyCodeLine{518 \}}
+\DoxyCodeLine{519 }
+\DoxyCodeLine{520 }
+\DoxyCodeLine{527 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga260fba04ac8346855c57f091d4ee1e71}{NVIC\_DisableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{528 \{}
+\DoxyCodeLine{529   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ICER[0] = (1 << ((uint32\_t)(IRQn) \& 0x1F));}
+\DoxyCodeLine{530 \}}
+\DoxyCodeLine{531 }
+\DoxyCodeLine{532 }
+\DoxyCodeLine{543 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gafec8042db64c0f8ed432b6c8386a05d8}{NVIC\_GetPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{544 \{}
+\DoxyCodeLine{545   \textcolor{keywordflow}{return}((uint32\_t) ((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISPR[0] \& (1 << ((uint32\_t)(IRQn) \& 0x1F)))?1:0));}
+\DoxyCodeLine{546 \}}
+\DoxyCodeLine{547 }
+\DoxyCodeLine{548 }
+\DoxyCodeLine{555 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga3ecf446519da33e1690deffbf5be505f}{NVIC\_SetPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{556 \{}
+\DoxyCodeLine{557   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISPR[0] = (1 << ((uint32\_t)(IRQn) \& 0x1F));}
+\DoxyCodeLine{558 \}}
+\DoxyCodeLine{559 }
+\DoxyCodeLine{560 }
+\DoxyCodeLine{567 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga332e10ef9605dc6eb10b9e14511930f8}{NVIC\_ClearPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{568 \{}
+\DoxyCodeLine{569   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ICPR[0] = (1 << ((uint32\_t)(IRQn) \& 0x1F)); \textcolor{comment}{/* Clear pending interrupt */}}
+\DoxyCodeLine{570 \}}
+\DoxyCodeLine{571 }
+\DoxyCodeLine{572 }
+\DoxyCodeLine{582 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga2305cbd44aaad792e3a4e538bdaf14f9}{NVIC\_SetPriority}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn, uint32\_t priority)}
+\DoxyCodeLine{583 \{}
+\DoxyCodeLine{584   \textcolor{keywordflow}{if}(IRQn < 0) \{}
+\DoxyCodeLine{585     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHP[\_SHP\_IDX(IRQn)] = (\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHP[\_SHP\_IDX(IRQn)] \& \string~(0xFF << \_BIT\_SHIFT(IRQn))) |}
+\DoxyCodeLine{586         (((priority << (8 -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) \& 0xFF) << \_BIT\_SHIFT(IRQn)); \}}
+\DoxyCodeLine{587   \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{588     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IP[\_IP\_IDX(IRQn)] = (\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IP[\_IP\_IDX(IRQn)] \& \string~(0xFF << \_BIT\_SHIFT(IRQn))) |}
+\DoxyCodeLine{589         (((priority << (8 -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) \& 0xFF) << \_BIT\_SHIFT(IRQn)); \}}
+\DoxyCodeLine{590 \}}
+\DoxyCodeLine{591 }
+\DoxyCodeLine{592 }
+\DoxyCodeLine{604 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga1cbaf8e6abd4aa4885828e7f24fcfeb4}{NVIC\_GetPriority}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{605 \{}
+\DoxyCodeLine{606 }
+\DoxyCodeLine{607   \textcolor{keywordflow}{if}(IRQn < 0) \{}
+\DoxyCodeLine{608     \textcolor{keywordflow}{return}((uint32\_t)(((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHP[\_SHP\_IDX(IRQn)] >> \_BIT\_SHIFT(IRQn) ) \& 0xFF) >> (8 -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})));  \} \textcolor{comment}{/* get priority for Cortex-\/M0 system interrupts */}}
+\DoxyCodeLine{609   \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{610     \textcolor{keywordflow}{return}((uint32\_t)(((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IP[ \_IP\_IDX(IRQn)] >> \_BIT\_SHIFT(IRQn) ) \& 0xFF) >> (8 -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})));  \} \textcolor{comment}{/* get priority for device specific interrupts  */}}
+\DoxyCodeLine{611 \}}
+\DoxyCodeLine{612 }
+\DoxyCodeLine{613 }
+\DoxyCodeLine{618 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga1143dec48d60a3d6f238c4798a87759c}{NVIC\_SystemReset}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{619 \{}
+\DoxyCodeLine{620   \_\_DSB();                                                     \textcolor{comment}{/* Ensure all outstanding memory accesses included}}
+\DoxyCodeLine{621 \textcolor{comment}{                                                                  buffered write are completed before reset */}}
+\DoxyCodeLine{622   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>AIRCR  = ((0x5FA << \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaaa27c0ba600bf82c3da08c748845b640}{SCB\_AIRCR\_VECTKEY\_Pos}})      |}
+\DoxyCodeLine{623                  \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaae1181119559a5bd36e62afa373fa720}{SCB\_AIRCR\_SYSRESETREQ\_Msk}});}
+\DoxyCodeLine{624   \_\_DSB();                                                     \textcolor{comment}{/* Ensure completion of memory access */}}
+\DoxyCodeLine{625   \textcolor{keywordflow}{while}(1);                                                    \textcolor{comment}{/* wait until reset */}}
+\DoxyCodeLine{626 \}}
+\DoxyCodeLine{627 }
+\DoxyCodeLine{632 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#    SysTick function  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{639 \textcolor{preprocessor}{\#if (\_\_Vendor\_SysTickConfig == 0)}}
+\DoxyCodeLine{640 }
+\DoxyCodeLine{656 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gae4e8f0238527c69f522029b93c8e5b78}{SysTick\_Config}}(uint32\_t ticks)}
+\DoxyCodeLine{657 \{}
+\DoxyCodeLine{658   \textcolor{keywordflow}{if} ((ticks -\/ 1) > \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga265912a7962f0e1abd170336e579b1b1}{SysTick\_LOAD\_RELOAD\_Msk}})  \textcolor{keywordflow}{return} (1);      \textcolor{comment}{/* Reload value impossible */}}
+\DoxyCodeLine{659 }
+\DoxyCodeLine{660   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>LOAD  = ticks -\/ 1;                                  \textcolor{comment}{/* set reload register */}}
+\DoxyCodeLine{661   \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga2305cbd44aaad792e3a4e538bdaf14f9}{NVIC\_SetPriority}} (\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6dbff8f8543325f3474cbae2446776e7}{SysTick\_IRQn}}, (1<<\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}}) -\/ 1);  \textcolor{comment}{/* set Priority for Systick Interrupt */}}
+\DoxyCodeLine{662   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>VAL   = 0;                                          \textcolor{comment}{/* Load the SysTick Counter Value */}}
+\DoxyCodeLine{663   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL  = \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gaa41d06039797423a46596bd313d57373}{SysTick\_CTRL\_CLKSOURCE\_Msk}} |}
+\DoxyCodeLine{664                    \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga95bb984266ca764024836a870238a027}{SysTick\_CTRL\_TICKINT\_Msk}}   |}
+\DoxyCodeLine{665                    \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga16c9fee0ed0235524bdeb38af328fd1f}{SysTick\_CTRL\_ENABLE\_Msk}};                    \textcolor{comment}{/* Enable SysTick IRQ and SysTick Timer */}}
+\DoxyCodeLine{666   \textcolor{keywordflow}{return} (0);                                                  \textcolor{comment}{/* Function successful */}}
+\DoxyCodeLine{667 \}}
+\DoxyCodeLine{668 }
+\DoxyCodeLine{669 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{670 }
+\DoxyCodeLine{676 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CM0\_H\_DEPENDANT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{677 }
+\DoxyCodeLine{678 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CMSIS\_GENERIC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{679 }
+\DoxyCodeLine{680 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{681 \}}
+\DoxyCodeLine{682 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

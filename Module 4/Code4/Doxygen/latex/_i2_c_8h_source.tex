@@ -1,0 +1,76 @@
+\hypertarget{_i2_c_8h_source}{}\doxysection{I2\+C.\+h}
+\label{_i2_c_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/I2C.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/I2C.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_I2C\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_I2C\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#if DEVICE\_I2C}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}i2c\_api.h"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{44 \textcolor{keyword}{class }I2C \{}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{public}:}
+\DoxyCodeLine{47     \textcolor{keyword}{enum} RxStatus \{}
+\DoxyCodeLine{48         NoData,}
+\DoxyCodeLine{49         MasterGeneralCall,}
+\DoxyCodeLine{50         MasterWrite,}
+\DoxyCodeLine{51         MasterRead}
+\DoxyCodeLine{52     \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keyword}{enum} Acknowledge \{}
+\DoxyCodeLine{55         NoACK = 0,}
+\DoxyCodeLine{56         ACK   = 1}
+\DoxyCodeLine{57     \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{64     I2C(PinName sda, PinName scl);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} frequency(\textcolor{keywordtype}{int} hz);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} read(\textcolor{keywordtype}{int} address, \textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{int} length, \textcolor{keywordtype}{bool} repeated = \textcolor{keyword}{false});}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} read(\textcolor{keywordtype}{int} ack);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{int} write(\textcolor{keywordtype}{int} address, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{int} length, \textcolor{keywordtype}{bool} repeated = \textcolor{keyword}{false});}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{int} write(\textcolor{keywordtype}{int} data);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} start(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{130     \textcolor{keywordtype}{void} stop(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{133     \textcolor{keywordtype}{void} aquire();}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     i2c\_t \_i2c;}
+\DoxyCodeLine{136     \textcolor{keyword}{static} I2C  *\_owner;}
+\DoxyCodeLine{137     \textcolor{keywordtype}{int}         \_hz;}
+\DoxyCodeLine{138 \};}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

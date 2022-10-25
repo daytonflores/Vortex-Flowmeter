@@ -1,0 +1,110 @@
+\hypertarget{struct_i_r_d_a___init_type_def}{}\doxysection{IRDA\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_i_r_d_a___init_type_def}\index{IRDA\_InitTypeDef@{IRDA\_InitTypeDef}}
+
+
+IRDA Init Structure definition ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+irda.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_i_r_d_a___init_type_def_aaad609733f3fd8146c8745e953a91b2a}{Baud\+Rate}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_i_r_d_a___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}{Word\+Length}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_i_r_d_a___init_type_def_a1d60a99b8f3965f01ab23444b154ba79}{Parity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_i_r_d_a___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_i_r_d_a___init_type_def_a5c9d1e760b400d2502c03b0391606f90}{Prescaler}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_i_r_d_a___init_type_def_a0b7970d2b2d5adb32bd1a8dc76a820fd}{Ir\+DAMode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+IRDA Init Structure definition ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source_l00062}{62}} of file \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source}{stm32f4xx\+\_\+hal\+\_\+irda.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_i_r_d_a___init_type_def_aaad609733f3fd8146c8745e953a91b2a}\label{struct_i_r_d_a___init_type_def_aaad609733f3fd8146c8745e953a91b2a}} 
+\index{IRDA\_InitTypeDef@{IRDA\_InitTypeDef}!BaudRate@{BaudRate}}
+\index{BaudRate@{BaudRate}!IRDA\_InitTypeDef@{IRDA\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{BaudRate}{BaudRate}}
+{\footnotesize\ttfamily uint32\+\_\+t Baud\+Rate}
+
+This member configures the IRDA communication baud rate. The baud rate is computed using the following formula\+:
+\begin{DoxyItemize}
+\item Integer\+Divider = ((PCLKx) / (8 $\ast$ (hirda-\/\texorpdfstring{$>$}{>}Init.\+Baud\+Rate)))
+\item Fractional\+Divider = ((Integer\+Divider -\/ ((uint32\+\_\+t) Integer\+Divider)) $\ast$ 8) + 0.\+5 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source_l00064}{64}} of file \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source}{stm32f4xx\+\_\+hal\+\_\+irda.\+h}}.
+
+\mbox{\Hypertarget{struct_i_r_d_a___init_type_def_a0b7970d2b2d5adb32bd1a8dc76a820fd}\label{struct_i_r_d_a___init_type_def_a0b7970d2b2d5adb32bd1a8dc76a820fd}} 
+\index{IRDA\_InitTypeDef@{IRDA\_InitTypeDef}!IrDAMode@{IrDAMode}}
+\index{IrDAMode@{IrDAMode}!IRDA\_InitTypeDef@{IRDA\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{IrDAMode}{IrDAMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Ir\+DAMode}
+
+Specifies the Ir\+DA mode This parameter can be a value of \mbox{\hyperlink{group___ir_d_a___low___power}{Ir\+DA\+\_\+\+Low\+\_\+\+Power}} 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source_l00085}{85}} of file \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source}{stm32f4xx\+\_\+hal\+\_\+irda.\+h}}.
+
+\mbox{\Hypertarget{struct_i_r_d_a___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}\label{struct_i_r_d_a___init_type_def_a0ffc93ec511ed9cf1663f6939bd3e839}} 
+\index{IRDA\_InitTypeDef@{IRDA\_InitTypeDef}!Mode@{Mode}}
+\index{Mode@{Mode}!IRDA\_InitTypeDef@{IRDA\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily uint32\+\_\+t Mode}
+
+Specifies wether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of \mbox{\hyperlink{group___i_r_d_a___mode}{IRDA\+\_\+\+Mode}} 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source_l00080}{80}} of file \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source}{stm32f4xx\+\_\+hal\+\_\+irda.\+h}}.
+
+\mbox{\Hypertarget{struct_i_r_d_a___init_type_def_a1d60a99b8f3965f01ab23444b154ba79}\label{struct_i_r_d_a___init_type_def_a1d60a99b8f3965f01ab23444b154ba79}} 
+\index{IRDA\_InitTypeDef@{IRDA\_InitTypeDef}!Parity@{Parity}}
+\index{Parity@{Parity}!IRDA\_InitTypeDef@{IRDA\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Parity}{Parity}}
+{\footnotesize\ttfamily uint32\+\_\+t Parity}
+
+Specifies the parity mode. This parameter can be a value of \mbox{\hyperlink{group___i_r_d_a___parity}{IRDA\+\_\+\+Parity}} \begin{DoxyNote}{Note}
+When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits). 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source_l00073}{73}} of file \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source}{stm32f4xx\+\_\+hal\+\_\+irda.\+h}}.
+
+\mbox{\Hypertarget{struct_i_r_d_a___init_type_def_a5c9d1e760b400d2502c03b0391606f90}\label{struct_i_r_d_a___init_type_def_a5c9d1e760b400d2502c03b0391606f90}} 
+\index{IRDA\_InitTypeDef@{IRDA\_InitTypeDef}!Prescaler@{Prescaler}}
+\index{Prescaler@{Prescaler}!IRDA\_InitTypeDef@{IRDA\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Prescaler}{Prescaler}}
+{\footnotesize\ttfamily uint8\+\_\+t Prescaler}
+
+Specifies the Prescaler 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source_l00083}{83}} of file \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source}{stm32f4xx\+\_\+hal\+\_\+irda.\+h}}.
+
+\mbox{\Hypertarget{struct_i_r_d_a___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}\label{struct_i_r_d_a___init_type_def_ae5e60b9a021fe0009588fc86c7584a5a}} 
+\index{IRDA\_InitTypeDef@{IRDA\_InitTypeDef}!WordLength@{WordLength}}
+\index{WordLength@{WordLength}!IRDA\_InitTypeDef@{IRDA\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{WordLength}{WordLength}}
+{\footnotesize\ttfamily uint32\+\_\+t Word\+Length}
+
+Specifies the number of data bits transmitted or received in a frame. This parameter can be a value of \mbox{\hyperlink{group___i_r_d_a___word___length}{IRDA\+\_\+\+Word\+\_\+\+Length}} 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source_l00069}{69}} of file \mbox{\hyperlink{stm32f4xx__hal__irda_8h_source}{stm32f4xx\+\_\+hal\+\_\+irda.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\+TARGET\+\_\+\+NUCLEO\+\_\+\+F401\+RE/\mbox{\hyperlink{stm32f4xx__hal__irda_8h}{stm32f4xx\+\_\+hal\+\_\+irda.\+h}}\end{DoxyCompactItemize}

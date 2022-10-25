@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___a_d_c_ex" xml:lang="en-US">
+<title>ADCEx</title>
+<indexterm><primary>ADCEx</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___a_d_c_ex___exported___constants">ADCEx_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_a_d_c___injection_conf_type_def">ADC_InjectionConfTypeDef</link></para>
+
+<para>ADC Configuration injected Channel structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_a_d_c___multi_mode_type_def">ADC_MultiModeTypeDef</link></para>
+
+<para>ADC Configuration multi-mode structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___a_d_c_ex_1ga3b38fee3316d47ec7918248e0aada0ca">__HAL_ADC_JSQR</link>(_CHANNELNB_,  _RANKNB_,  _JSQR_JL_)   ((_CHANNELNB_) &lt;&lt; (5 * (uint8_t)(((_RANKNB_) + 3) - (_JSQR_JL_))))</para>
+
+<para>Set the selected injected Channel rank. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1ga91f6c85ae910e9baaf578a346c30c7c1">HAL_ADCEx_InjectedStop</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1ga5e11b306be79f36c71a73f2e465ad613">HAL_ADCEx_InjectedPollForConversion</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gae032f41136f4dc4b3f3c2476b96a21f5">HAL_ADCEx_InjectedStop_IT</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gaa666882ff772df8a5140090422825ed6">HAL_ADCEx_InjectedStart</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gaf55cd28b1394a0564f99e1f5069c0ed1">HAL_ADCEx_InjectedStart_IT</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___a_d_c_ex_1ga7996668b61263f91c76d5f55551f3a07">HAL_ADCEx_InjectedGetValue</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t InjectedRank)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gab36a3508a06430d7c7d0def79ec61b08">HAL_ADCEx_MultiModeStart_DMA</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t *pData, uint32_t Length)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1ga6a114ff60985be225d621a5c3be8ddf2">HAL_ADCEx_MultiModeStop_DMA</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___a_d_c_ex_1ga5ab7c06d2f0b5f9de1f86de5713d68d2">HAL_ADCEx_MultiModeGetValue</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_ex_1gaed7815e8b636ff1c1f456ecbaffe1942">HAL_ADCEx_InjectedConvCpltCallback</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1ga5736a78398eb51ddeb09dd83d1243045">HAL_ADCEx_InjectedConfigChannel</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, <link linkend="_struct_a_d_c___injection_conf_type_def">ADC_InjectionConfTypeDef</link> *sConfigInjected)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_ex_1gabfe8b04f9cfda94bc8aad912470122f5">HAL_ADCEx_MultiModeConfigChannel</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, <link linkend="_struct_a_d_c___multi_mode_type_def">ADC_MultiModeTypeDef</link> *multimode)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___a_d_c_ex_1ga3b38fee3316d47ec7918248e0aada0ca"/><section>
+    <title>__HAL_ADC_JSQR</title>
+<indexterm><primary>__HAL_ADC_JSQR</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>__HAL_ADC_JSQR</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_JSQR( _CHANNELNB_,  _RANKNB_,  _JSQR_JL_)   ((_CHANNELNB_) &lt;&lt; (5 * (uint8_t)(((_RANKNB_) + 3) - (_JSQR_JL_))))</computeroutput></para><para>
+
+<para>Set the selected injected Channel rank. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_CHANNELNB_</entry><entry>
+<para>Channel number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_RANKNB_</entry><entry>
+<para>Rank number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_JSQR_JL_</entry><entry>
+<para>Sequence length. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc__ex_8h_source_1l00292">292</link> of file <link linkend="_stm32f4xx__hal__adc__ex_8h_source">stm32f4xx_hal_adc_ex.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___a_d_c_ex_1ga5736a78398eb51ddeb09dd83d1243045"/><section>
+    <title>HAL_ADCEx_InjectedConfigChannel()</title>
+<indexterm><primary>HAL_ADCEx_InjectedConfigChannel</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_InjectedConfigChannel</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_InjectedConfigChannel (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, <link linkend="_struct_a_d_c___injection_conf_type_def">ADC_InjectionConfTypeDef</link> * sConfigInjected)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1gaed7815e8b636ff1c1f456ecbaffe1942"/><section>
+    <title>HAL_ADCEx_InjectedConvCpltCallback()</title>
+<indexterm><primary>HAL_ADCEx_InjectedConvCpltCallback</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_InjectedConvCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_ADCEx_InjectedConvCpltCallback (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1ga7996668b61263f91c76d5f55551f3a07"/><section>
+    <title>HAL_ADCEx_InjectedGetValue()</title>
+<indexterm><primary>HAL_ADCEx_InjectedGetValue</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_InjectedGetValue</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_ADCEx_InjectedGetValue (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, uint32_t InjectedRank)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1ga5e11b306be79f36c71a73f2e465ad613"/><section>
+    <title>HAL_ADCEx_InjectedPollForConversion()</title>
+<indexterm><primary>HAL_ADCEx_InjectedPollForConversion</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_InjectedPollForConversion</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_InjectedPollForConversion (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1gaa666882ff772df8a5140090422825ed6"/><section>
+    <title>HAL_ADCEx_InjectedStart()</title>
+<indexterm><primary>HAL_ADCEx_InjectedStart</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_InjectedStart</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_InjectedStart (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1gaf55cd28b1394a0564f99e1f5069c0ed1"/><section>
+    <title>HAL_ADCEx_InjectedStart_IT()</title>
+<indexterm><primary>HAL_ADCEx_InjectedStart_IT</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_InjectedStart_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_InjectedStart_IT (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1ga91f6c85ae910e9baaf578a346c30c7c1"/><section>
+    <title>HAL_ADCEx_InjectedStop()</title>
+<indexterm><primary>HAL_ADCEx_InjectedStop</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_InjectedStop</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_InjectedStop (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1gae032f41136f4dc4b3f3c2476b96a21f5"/><section>
+    <title>HAL_ADCEx_InjectedStop_IT()</title>
+<indexterm><primary>HAL_ADCEx_InjectedStop_IT</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_InjectedStop_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_InjectedStop_IT (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1gabfe8b04f9cfda94bc8aad912470122f5"/><section>
+    <title>HAL_ADCEx_MultiModeConfigChannel()</title>
+<indexterm><primary>HAL_ADCEx_MultiModeConfigChannel</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_MultiModeConfigChannel</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_MultiModeConfigChannel (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, <link linkend="_struct_a_d_c___multi_mode_type_def">ADC_MultiModeTypeDef</link> * multimode)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1ga5ab7c06d2f0b5f9de1f86de5713d68d2"/><section>
+    <title>HAL_ADCEx_MultiModeGetValue()</title>
+<indexterm><primary>HAL_ADCEx_MultiModeGetValue</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_MultiModeGetValue</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_ADCEx_MultiModeGetValue (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1gab36a3508a06430d7c7d0def79ec61b08"/><section>
+    <title>HAL_ADCEx_MultiModeStart_DMA()</title>
+<indexterm><primary>HAL_ADCEx_MultiModeStart_DMA</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_MultiModeStart_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_MultiModeStart_DMA (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, uint32_t * pData, uint32_t Length)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_ex_1ga6a114ff60985be225d621a5c3be8ddf2"/><section>
+    <title>HAL_ADCEx_MultiModeStop_DMA()</title>
+<indexterm><primary>HAL_ADCEx_MultiModeStop_DMA</primary><secondary>ADCEx</secondary></indexterm>
+<indexterm><primary>ADCEx</primary><secondary>HAL_ADCEx_MultiModeStop_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADCEx_MultiModeStop_DMA (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+</section>
+</section>

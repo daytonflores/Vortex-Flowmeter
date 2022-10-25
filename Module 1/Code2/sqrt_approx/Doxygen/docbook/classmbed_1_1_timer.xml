@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_timer" xml:lang="en-US">
+<title>Timer Class Reference</title>
+<indexterm><primary>Timer</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Timer.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmbed_1_1_timer_1a6a8bc5014802d569f6d01c4f36121a81">Timer</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_timer_1a60de64d75454385b23995437f1d72669">start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_timer_1a8c528baf37154d347366083f0f816846">stop</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_timer_1ad20897c5c8bd47f5d4005989bead0e55">reset</link> ()</para>
+</listitem>
+            <listitem><para>float <link linkend="_classmbed_1_1_timer_1a868d9d1513fbaf34c4d5d15a7fa4baa8">read</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_timer_1a38a24fea60aa73f6998a95f9fd1fe2e3">read_ms</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_timer_1a51b422fd7d12542497eabe92eecc9c57">read_us</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classmbed_1_1_timer_1a5da5fe89e1ef3be42d473952d55db574">operator float</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_classmbed_1_1_timer_1a350185b1eefd911df905adc62e103d23">slicetime</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_classmbed_1_1_timer_1aab1928c8feeb06c575e468f8a9b92c7d">_running</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classmbed_1_1_timer_1a0db75ca46f6d8668854d17a49f749f55">_start</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_timer_1a8edd95b8c67bbcc681266737a72e5a0e">_time</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A general purpose timer</para>
+
+<para>Example: <literallayout><computeroutput><emphasis role="comment">//&#32;Count&#32;the&#32;time&#32;to&#32;toggle&#32;a&#32;LED</emphasis>
+
+<emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed_8h">mbed.h</link>&quot;</emphasis>
+
+<link linkend="_classmbed_1_1_timer_1a6a8bc5014802d569f6d01c4f36121a81">Timer</link>&#32;timer;
+DigitalOut&#32;led(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1adac6477842247cab1a8c02c65f431b44">LED1</link>);
+<emphasis role="keywordtype">int</emphasis>&#32;begin,&#32;end;
+
+<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>()&#32;{
+&#32;&#32;&#32;&#32;timer.start();
+&#32;&#32;&#32;&#32;begin&#32;=&#32;timer.read_us();
+&#32;&#32;&#32;&#32;led&#32;=&#32;!led;
+&#32;&#32;&#32;&#32;end&#32;=&#32;timer.read_us();
+&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Toggle&#32;the&#32;led&#32;takes&#32;%d&#32;us&quot;</emphasis>,&#32;end&#32;-&#32;begin);
+}
+</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__timer_8h_source_1l00044">44</link> of file <link linkend="__timer_8h_source">Timer.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmbed_1_1_timer_1a6a8bc5014802d569f6d01c4f36121a81"/><section>
+    <title>Timer()</title>
+<indexterm><primary>Timer</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>Timer</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_timer">Timer</link> ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_timer_1a5da5fe89e1ef3be42d473952d55db574"/><section>
+    <title>operator float()</title>
+<indexterm><primary>operator float</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>operator float</secondary></indexterm>
+<para><computeroutput>operator float ( )</computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_timer_1a868d9d1513fbaf34c4d5d15a7fa4baa8"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>float read ( )</computeroutput></para>
+<para>Get the time passed in seconds </para>
+</section>
+<anchor xml:id="_classmbed_1_1_timer_1a38a24fea60aa73f6998a95f9fd1fe2e3"/><section>
+    <title>read_ms()</title>
+<indexterm><primary>read_ms</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>read_ms</secondary></indexterm>
+<para><computeroutput>int read_ms ( )</computeroutput></para>
+<para>Get the time passed in mili-seconds </para>
+</section>
+<anchor xml:id="_classmbed_1_1_timer_1a51b422fd7d12542497eabe92eecc9c57"/><section>
+    <title>read_us()</title>
+<indexterm><primary>read_us</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>read_us</secondary></indexterm>
+<para><computeroutput>int read_us ( )</computeroutput></para>
+<para>Get the time passed in micro-seconds </para>
+</section>
+<anchor xml:id="_classmbed_1_1_timer_1ad20897c5c8bd47f5d4005989bead0e55"/><section>
+    <title>reset()</title>
+<indexterm><primary>reset</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>reset</secondary></indexterm>
+<para><computeroutput>void reset ( )</computeroutput></para>
+<para>Reset the timer to 0.</para>
+
+<para>If it was already counting, it will continue </para>
+</section>
+<anchor xml:id="_classmbed_1_1_timer_1a350185b1eefd911df905adc62e103d23"/><section>
+    <title>slicetime()</title>
+<indexterm><primary>slicetime</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>slicetime</secondary></indexterm>
+<para><computeroutput>int slicetime ( )<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_timer_1a60de64d75454385b23995437f1d72669"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void start ( )</computeroutput></para>
+<para>Start the timer </para>
+</section>
+<anchor xml:id="_classmbed_1_1_timer_1a8c528baf37154d347366083f0f816846"/><section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>stop</secondary></indexterm>
+<para><computeroutput>void stop ( )</computeroutput></para>
+<para>Stop the timer </para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classmbed_1_1_timer_1aab1928c8feeb06c575e468f8a9b92c7d"/><section>
+    <title>_running</title>
+<indexterm><primary>_running</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>_running</secondary></indexterm>
+<para><computeroutput>int _running<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__timer_8h_source_1l00081">81</link> of file <link linkend="__timer_8h_source">Timer.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_timer_1a0db75ca46f6d8668854d17a49f749f55"/><section>
+    <title>_start</title>
+<indexterm><primary>_start</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>_start</secondary></indexterm>
+<para><computeroutput>unsigned int _start<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__timer_8h_source_1l00082">82</link> of file <link linkend="__timer_8h_source">Timer.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_timer_1a8edd95b8c67bbcc681266737a72e5a0e"/><section>
+    <title>_time</title>
+<indexterm><primary>_time</primary><secondary>Timer</secondary></indexterm>
+<indexterm><primary>Timer</primary><secondary>_time</secondary></indexterm>
+<para><computeroutput>int _time<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__timer_8h_source_1l00083">83</link> of file <link linkend="__timer_8h_source">Timer.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__timer_8h">Timer.h</link></section>
+</section>

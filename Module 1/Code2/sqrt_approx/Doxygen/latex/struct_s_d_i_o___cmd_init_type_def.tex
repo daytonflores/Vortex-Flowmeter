@@ -1,0 +1,94 @@
+\hypertarget{struct_s_d_i_o___cmd_init_type_def}{}\doxysection{SDIO\+\_\+\+Cmd\+Init\+Type\+Def Struct Reference}
+\label{struct_s_d_i_o___cmd_init_type_def}\index{SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}}
+
+
+SDIO Command Control structure.  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+ll\+\_\+sdmmc.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_s_d_i_o___cmd_init_type_def_afa6635c2ff94756b33097676d91356a4}{Argument}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_s_d_i_o___cmd_init_type_def_ab84004187fbb4eea106067813227c0f4}{Cmd\+Index}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_s_d_i_o___cmd_init_type_def_a06a91c388ef5069ed2f3e32f7c053074}{Response}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_s_d_i_o___cmd_init_type_def_ac37d56d54ca6d7fefeaafb8e545252df}{Wait\+For\+Interrupt}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_s_d_i_o___cmd_init_type_def_a5ad3eeff3271020673d95019e57089ca}{CPSM}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+SDIO Command Control structure. 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source_l00090}{90}} of file \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source}{stm32f4xx\+\_\+ll\+\_\+sdmmc.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_s_d_i_o___cmd_init_type_def_afa6635c2ff94756b33097676d91356a4}\label{struct_s_d_i_o___cmd_init_type_def_afa6635c2ff94756b33097676d91356a4}} 
+\index{SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}!Argument@{Argument}}
+\index{Argument@{Argument}!SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Argument}{Argument}}
+{\footnotesize\ttfamily uint32\+\_\+t Argument}
+
+Specifies the SDIO command argument which is sent to a card as part of a command message. If a command contains an argument, it must be loaded into this register before writing the command to the command register. ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source_l00092}{92}} of file \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source}{stm32f4xx\+\_\+ll\+\_\+sdmmc.\+h}}.
+
+\mbox{\Hypertarget{struct_s_d_i_o___cmd_init_type_def_ab84004187fbb4eea106067813227c0f4}\label{struct_s_d_i_o___cmd_init_type_def_ab84004187fbb4eea106067813227c0f4}} 
+\index{SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}!CmdIndex@{CmdIndex}}
+\index{CmdIndex@{CmdIndex}!SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{CmdIndex}{CmdIndex}}
+{\footnotesize\ttfamily uint32\+\_\+t Cmd\+Index}
+
+Specifies the SDIO command index. It must be Min\+\_\+\+Data = 0 and Max\+\_\+\+Data = 64 ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source_l00097}{97}} of file \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source}{stm32f4xx\+\_\+ll\+\_\+sdmmc.\+h}}.
+
+\mbox{\Hypertarget{struct_s_d_i_o___cmd_init_type_def_a5ad3eeff3271020673d95019e57089ca}\label{struct_s_d_i_o___cmd_init_type_def_a5ad3eeff3271020673d95019e57089ca}} 
+\index{SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}!CPSM@{CPSM}}
+\index{CPSM@{CPSM}!SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{CPSM}{CPSM}}
+{\footnotesize\ttfamily uint32\+\_\+t CPSM}
+
+Specifies whether SDIO Command path state machine (CPSM) is enabled or disabled. This parameter can be a value of \mbox{\hyperlink{group___s_d_i_o___c_p_s_m___state}{SDIO\+\_\+\+CPSM\+\_\+\+State}} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source_l00107}{107}} of file \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source}{stm32f4xx\+\_\+ll\+\_\+sdmmc.\+h}}.
+
+\mbox{\Hypertarget{struct_s_d_i_o___cmd_init_type_def_a06a91c388ef5069ed2f3e32f7c053074}\label{struct_s_d_i_o___cmd_init_type_def_a06a91c388ef5069ed2f3e32f7c053074}} 
+\index{SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}!Response@{Response}}
+\index{Response@{Response}!SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Response}{Response}}
+{\footnotesize\ttfamily uint32\+\_\+t Response}
+
+Specifies the SDIO response type. This parameter can be a value of \mbox{\hyperlink{group___s_d_i_o___response___type}{SDIO\+\_\+\+Response\+\_\+\+Type}} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source_l00100}{100}} of file \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source}{stm32f4xx\+\_\+ll\+\_\+sdmmc.\+h}}.
+
+\mbox{\Hypertarget{struct_s_d_i_o___cmd_init_type_def_ac37d56d54ca6d7fefeaafb8e545252df}\label{struct_s_d_i_o___cmd_init_type_def_ac37d56d54ca6d7fefeaafb8e545252df}} 
+\index{SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}!WaitForInterrupt@{WaitForInterrupt}}
+\index{WaitForInterrupt@{WaitForInterrupt}!SDIO\_CmdInitTypeDef@{SDIO\_CmdInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{WaitForInterrupt}{WaitForInterrupt}}
+{\footnotesize\ttfamily uint32\+\_\+t Wait\+For\+Interrupt}
+
+Specifies whether SDIO wait for interrupt request is enabled or disabled. This parameter can be a value of \mbox{\hyperlink{group___s_d_i_o___wait___interrupt___state}{SDIO\+\_\+\+Wait\+\_\+\+Interrupt\+\_\+\+State}} ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source_l00103}{103}} of file \mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h_source}{stm32f4xx\+\_\+ll\+\_\+sdmmc.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\+TARGET\+\_\+\+NUCLEO\+\_\+\+F401\+RE/\mbox{\hyperlink{stm32f4xx__ll__sdmmc_8h}{stm32f4xx\+\_\+ll\+\_\+sdmmc.\+h}}\end{DoxyCompactItemize}

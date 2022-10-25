@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def" xml:lang="en-US">
+<title>SMARTCARD_InitTypeDef Struct Reference</title>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary></indexterm>
+<para>
+
+<para>SMARTCARD Init Structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f4xx_hal_smartcard.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1aaad609733f3fd8146c8745e953a91b2a">BaudRate</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1ae5e60b9a021fe0009588fc86c7584a5a">WordLength</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a8394ba239444e3e5fe1ada1c37cb1019">StopBits</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a1d60a99b8f3965f01ab23444b154ba79">Parity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839">Mode</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a83f278c9d173d3cd021644692bf3c435">CLKPolarity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1aba7183911cbc41063270dab182de768f">CLKPhase</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1abf58d9d3c7c5f08ad9624410d22d04c8">CLKLastBit</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1affb82025da5b8d4a06e61f1690460f4d">Prescaler</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1ac931b822471eeaeb5adf699bc1aaeb68">GuardTime</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a6d7513624f51308e761f4e59bc9d62d9">NACKState</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>SMARTCARD Init Structure definition. </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00061">61</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1aaad609733f3fd8146c8745e953a91b2a"/><section>
+    <title>BaudRate</title>
+<indexterm><primary>BaudRate</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>BaudRate</secondary></indexterm>
+<para><computeroutput>uint32_t BaudRate</computeroutput></para>
+<para>This member configures the SmartCard communication baud rate. The baud rate is computed using the following formula:<itemizedlist>
+<listitem>
+<para>IntegerDivider = ((PCLKx) / (8 * (hirda-&gt;Init.BaudRate)))</para>
+</listitem><listitem>
+<para>FractionalDivider = ((IntegerDivider - ((uint32_t) IntegerDivider)) * 8) + 0.5 </para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00063">63</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1abf58d9d3c7c5f08ad9624410d22d04c8"/><section>
+    <title>CLKLastBit</title>
+<indexterm><primary>CLKLastBit</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>CLKLastBit</secondary></indexterm>
+<para><computeroutput>uint32_t CLKLastBit</computeroutput></para>
+<para>Specifies whether the clock pulse corresponding to the last transmitted data bit (MSB) has to be output on the SCLK pin in synchronous mode. This parameter can be a value of <link linkend="_group___s_m_a_r_t_c_a_r_d___last___bit">SMARTCARD_Last_Bit</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00090">90</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1aba7183911cbc41063270dab182de768f"/><section>
+    <title>CLKPhase</title>
+<indexterm><primary>CLKPhase</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>CLKPhase</secondary></indexterm>
+<para><computeroutput>uint32_t CLKPhase</computeroutput></para>
+<para>Specifies the clock transition on which the bit capture is made. This parameter can be a value of <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___phase">SMARTCARD_Clock_Phase</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00087">87</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a83f278c9d173d3cd021644692bf3c435"/><section>
+    <title>CLKPolarity</title>
+<indexterm><primary>CLKPolarity</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>CLKPolarity</secondary></indexterm>
+<para><computeroutput>uint32_t CLKPolarity</computeroutput></para>
+<para>Specifies the steady state of the serial clock. This parameter can be a value of <link linkend="_group___s_m_a_r_t_c_a_r_d___clock___polarity">SMARTCARD_Clock_Polarity</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00084">84</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1ac931b822471eeaeb5adf699bc1aaeb68"/><section>
+    <title>GuardTime</title>
+<indexterm><primary>GuardTime</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>GuardTime</secondary></indexterm>
+<para><computeroutput>uint32_t GuardTime</computeroutput></para>
+<para>Specifies the SmartCard Guard Time. This parameter must be a number between Min_Data = 0 and Max_Data = 255 </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00097">97</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839"/><section>
+    <title>Mode</title>
+<indexterm><primary>Mode</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>Mode</secondary></indexterm>
+<para><computeroutput>uint32_t Mode</computeroutput></para>
+<para>Specifies wether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of <link linkend="_group___s_m_a_r_t_c_a_r_d___mode">SMARTCARD_Mode</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00081">81</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a6d7513624f51308e761f4e59bc9d62d9"/><section>
+    <title>NACKState</title>
+<indexterm><primary>NACKState</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>NACKState</secondary></indexterm>
+<para><computeroutput>uint32_t NACKState</computeroutput></para>
+<para>Specifies the SmartCard NACK Transmission state. This parameter can be a value of <link linkend="_group___smart_card___n_a_c_k___state">SmartCard_NACK_State</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00100">100</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a1d60a99b8f3965f01ab23444b154ba79"/><section>
+    <title>Parity</title>
+<indexterm><primary>Parity</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>Parity</secondary></indexterm>
+<para><computeroutput>uint32_t Parity</computeroutput></para>
+<para>Specifies the parity mode. This parameter can be a value of <link linkend="_group___s_m_a_r_t_c_a_r_d___parity">SMARTCARD_Parity</link> <note><title>Note</title>
+
+<para>When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits). </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00074">74</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1affb82025da5b8d4a06e61f1690460f4d"/><section>
+    <title>Prescaler</title>
+<indexterm><primary>Prescaler</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>Prescaler</secondary></indexterm>
+<para><computeroutput>uint32_t Prescaler</computeroutput></para>
+<para>Specifies the SmartCard Prescaler. This parameter must be a number between Min_Data = 0 and Max_Data = 255 </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00094">94</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1a8394ba239444e3e5fe1ada1c37cb1019"/><section>
+    <title>StopBits</title>
+<indexterm><primary>StopBits</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>StopBits</secondary></indexterm>
+<para><computeroutput>uint32_t StopBits</computeroutput></para>
+<para>Specifies the number of stop bits transmitted. This parameter can be a value of <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits">SMARTCARD_Stop_Bits</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00071">71</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_m_a_r_t_c_a_r_d___init_type_def_1ae5e60b9a021fe0009588fc86c7584a5a"/><section>
+    <title>WordLength</title>
+<indexterm><primary>WordLength</primary><secondary>SMARTCARD_InitTypeDef</secondary></indexterm>
+<indexterm><primary>SMARTCARD_InitTypeDef</primary><secondary>WordLength</secondary></indexterm>
+<para><computeroutput>uint32_t WordLength</computeroutput></para>
+<para>Specifies the number of data bits transmitted or received in a frame. This parameter can be a value of <link linkend="_group___s_m_a_r_t_c_a_r_d___word___length">SMARTCARD_Word_Length</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00068">68</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/<link linkend="_stm32f4xx__hal__smartcard_8h">stm32f4xx_hal_smartcard.h</link></section>
+</section>

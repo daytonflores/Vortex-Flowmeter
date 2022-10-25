@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_us__ticker__api_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/us_ticker_api.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/us_ticker_api.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdint.h&gt;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structticker__event__s">ticker_event_s</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef void(* <link linkend="_us__ticker__api_8h_1a7d6a730d0ce9f55e8cecb734d0455c7d">ticker_event_handler</link>) (uint32_t id)</para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_structticker__event__s">ticker_event_s</link> <link linkend="_us__ticker__api_8h_1a72ca2ef9e5e60ec062b314f8f8e5cf47">ticker_event_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_us__ticker__api_8h_1a023920c1e5030a84aa39d0be1de0aa0b">us_ticker_read</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_us__ticker__api_8h_1aa8f429ca585b985f98b52b152f7cb574">us_ticker_set_handler</link> (<link linkend="_us__ticker__api_8h_1a7d6a730d0ce9f55e8cecb734d0455c7d">ticker_event_handler</link> handler)</para>
+</listitem>
+            <listitem><para>void <link linkend="_us__ticker__api_8h_1a829955267433ca8d04ac71f4e89c0404">us_ticker_init</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_us__ticker__api_8h_1ac9c4169782e75770b9ce4bbedd2e6015">us_ticker_set_interrupt</link> (unsigned int timestamp)</para>
+</listitem>
+            <listitem><para>void <link linkend="_us__ticker__api_8h_1a75e46157b1bbfe4f5594e33b49ff2605">us_ticker_disable_interrupt</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_us__ticker__api_8h_1a373846a3122f86d7decbea5fab0590a9">us_ticker_clear_interrupt</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_us__ticker__api_8h_1a52d2b2c47d792442573e34403f9a10b1">us_ticker_irq_handler</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_us__ticker__api_8h_1a8d781edab7255043a9c82f40ba907a92">us_ticker_insert_event</link> (<link linkend="_us__ticker__api_8h_1a72ca2ef9e5e60ec062b314f8f8e5cf47">ticker_event_t</link> *obj, unsigned int timestamp, uint32_t id)</para>
+</listitem>
+            <listitem><para>void <link linkend="_us__ticker__api_8h_1a3d65ad35621dff366f06766eee1b09c8">us_ticker_remove_event</link> (<link linkend="_us__ticker__api_8h_1a72ca2ef9e5e60ec062b314f8f8e5cf47">ticker_event_t</link> *obj)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_us__ticker__api_8h_1a7d6a730d0ce9f55e8cecb734d0455c7d"/><section>
+    <title>ticker_event_handler</title>
+<indexterm><primary>ticker_event_handler</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>ticker_event_handler</secondary></indexterm>
+<para><computeroutput>typedef void(* ticker_event_handler) (uint32_t id)</computeroutput></para><para>
+Definition at line <link linkend="_us__ticker__api_8h_source_1l00027">27</link> of file <link linkend="_us__ticker__api_8h_source">us_ticker_api.h</link>.</para>
+</section>
+<anchor xml:id="_us__ticker__api_8h_1a72ca2ef9e5e60ec062b314f8f8e5cf47"/><section>
+    <title>ticker_event_t</title>
+<indexterm><primary>ticker_event_t</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>ticker_event_t</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_structticker__event__s">ticker_event_s</link> <link linkend="_us__ticker__api_8h_1a72ca2ef9e5e60ec062b314f8f8e5cf47">ticker_event_t</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_us__ticker__api_8h_1a373846a3122f86d7decbea5fab0590a9"/><section>
+    <title>us_ticker_clear_interrupt()</title>
+<indexterm><primary>us_ticker_clear_interrupt</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_clear_interrupt</secondary></indexterm>
+<para><computeroutput>void us_ticker_clear_interrupt (void )</computeroutput></para></section>
+<anchor xml:id="_us__ticker__api_8h_1a75e46157b1bbfe4f5594e33b49ff2605"/><section>
+    <title>us_ticker_disable_interrupt()</title>
+<indexterm><primary>us_ticker_disable_interrupt</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_disable_interrupt</secondary></indexterm>
+<para><computeroutput>void us_ticker_disable_interrupt (void )</computeroutput></para></section>
+<anchor xml:id="_us__ticker__api_8h_1a829955267433ca8d04ac71f4e89c0404"/><section>
+    <title>us_ticker_init()</title>
+<indexterm><primary>us_ticker_init</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_init</secondary></indexterm>
+<para><computeroutput>void us_ticker_init (void )</computeroutput></para></section>
+<anchor xml:id="_us__ticker__api_8h_1a8d781edab7255043a9c82f40ba907a92"/><section>
+    <title>us_ticker_insert_event()</title>
+<indexterm><primary>us_ticker_insert_event</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_insert_event</secondary></indexterm>
+<para><computeroutput>void us_ticker_insert_event (<link linkend="_us__ticker__api_8h_1a72ca2ef9e5e60ec062b314f8f8e5cf47">ticker_event_t</link> * obj, unsigned int timestamp, uint32_t id)</computeroutput></para></section>
+<anchor xml:id="_us__ticker__api_8h_1a52d2b2c47d792442573e34403f9a10b1"/><section>
+    <title>us_ticker_irq_handler()</title>
+<indexterm><primary>us_ticker_irq_handler</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_irq_handler</secondary></indexterm>
+<para><computeroutput>void us_ticker_irq_handler (void )</computeroutput></para></section>
+<anchor xml:id="_us__ticker__api_8h_1a023920c1e5030a84aa39d0be1de0aa0b"/><section>
+    <title>us_ticker_read()</title>
+<indexterm><primary>us_ticker_read</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_read</secondary></indexterm>
+<para><computeroutput>uint32_t us_ticker_read (void )</computeroutput></para></section>
+<anchor xml:id="_us__ticker__api_8h_1a3d65ad35621dff366f06766eee1b09c8"/><section>
+    <title>us_ticker_remove_event()</title>
+<indexterm><primary>us_ticker_remove_event</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_remove_event</secondary></indexterm>
+<para><computeroutput>void us_ticker_remove_event (<link linkend="_us__ticker__api_8h_1a72ca2ef9e5e60ec062b314f8f8e5cf47">ticker_event_t</link> * obj)</computeroutput></para></section>
+<anchor xml:id="_us__ticker__api_8h_1aa8f429ca585b985f98b52b152f7cb574"/><section>
+    <title>us_ticker_set_handler()</title>
+<indexterm><primary>us_ticker_set_handler</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_set_handler</secondary></indexterm>
+<para><computeroutput>void us_ticker_set_handler (<link linkend="_us__ticker__api_8h_1a7d6a730d0ce9f55e8cecb734d0455c7d">ticker_event_handler</link> handler)</computeroutput></para></section>
+<anchor xml:id="_us__ticker__api_8h_1ac9c4169782e75770b9ce4bbedd2e6015"/><section>
+    <title>us_ticker_set_interrupt()</title>
+<indexterm><primary>us_ticker_set_interrupt</primary><secondary>us_ticker_api.h</secondary></indexterm>
+<indexterm><primary>us_ticker_api.h</primary><secondary>us_ticker_set_interrupt</secondary></indexterm>
+<para><computeroutput>void us_ticker_set_interrupt (unsigned int timestamp)</computeroutput></para></section>
+</section>
+</section>

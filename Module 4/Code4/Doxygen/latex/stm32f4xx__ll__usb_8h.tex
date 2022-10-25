@@ -1,0 +1,311 @@
+\hypertarget{stm32f4xx__ll__usb_8h}{}\doxysection{C\+:/\+Users/dayton.flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/\+TARGET\+\_\+\+NUCLEO\+\_\+\+F401\+RE/stm32f4xx\+\_\+ll\+\_\+usb.h File Reference}
+\label{stm32f4xx__ll__usb_8h}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_ll\_usb.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_ll\_usb.h}}
+
+
+Header file of USB Core HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_u_s_b___o_t_g___cfg_type_def}{USB\+\_\+\+OTG\+\_\+\+Cfg\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em PCD Initialization Structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}}
+\item 
+struct \mbox{\hyperlink{struct_u_s_b___o_t_g___h_c_type_def}{USB\+\_\+\+OTG\+\_\+\+HCType\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+DEVICE}~0
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+HOST}~1
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+MODE\+\_\+\+DRD}~2
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+SPEED\+\_\+\+HIGH}~0
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+SPEED\+\_\+\+HIGH\+\_\+\+IN\+\_\+\+FULL}~1
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+SPEED\+\_\+\+LOW}~2
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+SPEED\+\_\+\+FULL}~3
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+ULPI\+\_\+\+PHY}~1
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+EMBEDDED\+\_\+\+PHY}~2
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+HS\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE}~512
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+FS\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE}~64
+\item 
+\#define {\bfseries USB\+\_\+\+OTG\+\_\+\+MAX\+\_\+\+EP0\+\_\+\+SIZE}~64
+\item 
+\#define {\bfseries DSTS\+\_\+\+ENUMSPD\+\_\+\+HS\+\_\+\+PHY\+\_\+30\+MHZ\+\_\+\+OR\+\_\+60\+MHZ}~(0 $<$$<$ 1)
+\item 
+\#define {\bfseries DSTS\+\_\+\+ENUMSPD\+\_\+\+FS\+\_\+\+PHY\+\_\+30\+MHZ\+\_\+\+OR\+\_\+60\+MHZ}~(1 $<$$<$ 1)
+\item 
+\#define {\bfseries DSTS\+\_\+\+ENUMSPD\+\_\+\+LS\+\_\+\+PHY\+\_\+6\+MHZ}~(2 $<$$<$ 1)
+\item 
+\#define {\bfseries DSTS\+\_\+\+ENUMSPD\+\_\+\+FS\+\_\+\+PHY\+\_\+48\+MHZ}~(3 $<$$<$ 1)
+\item 
+\#define {\bfseries DCFG\+\_\+\+FRAME\+\_\+\+INTERVAL\+\_\+80}~0
+\item 
+\#define {\bfseries DCFG\+\_\+\+FRAME\+\_\+\+INTERVAL\+\_\+85}~1
+\item 
+\#define {\bfseries DCFG\+\_\+\+FRAME\+\_\+\+INTERVAL\+\_\+90}~2
+\item 
+\#define {\bfseries DCFG\+\_\+\+FRAME\+\_\+\+INTERVAL\+\_\+95}~3
+\item 
+\#define {\bfseries DEP0\+CTL\+\_\+\+MPS\+\_\+64}~0
+\item 
+\#define {\bfseries DEP0\+CTL\+\_\+\+MPS\+\_\+32}~1
+\item 
+\#define {\bfseries DEP0\+CTL\+\_\+\+MPS\+\_\+16}~2
+\item 
+\#define {\bfseries DEP0\+CTL\+\_\+\+MPS\+\_\+8}~3
+\item 
+\#define {\bfseries EP\+\_\+\+SPEED\+\_\+\+LOW}~0
+\item 
+\#define {\bfseries EP\+\_\+\+SPEED\+\_\+\+FULL}~1
+\item 
+\#define {\bfseries EP\+\_\+\+SPEED\+\_\+\+HIGH}~2
+\item 
+\#define {\bfseries EP\+\_\+\+TYPE\+\_\+\+CTRL}~0
+\item 
+\#define {\bfseries EP\+\_\+\+TYPE\+\_\+\+ISOC}~1
+\item 
+\#define {\bfseries EP\+\_\+\+TYPE\+\_\+\+BULK}~2
+\item 
+\#define {\bfseries EP\+\_\+\+TYPE\+\_\+\+INTR}~3
+\item 
+\#define {\bfseries EP\+\_\+\+TYPE\+\_\+\+MSK}~3
+\item 
+\#define {\bfseries STS\+\_\+\+GOUT\+\_\+\+NAK}~1
+\item 
+\#define {\bfseries STS\+\_\+\+DATA\+\_\+\+UPDT}~2
+\item 
+\#define {\bfseries STS\+\_\+\+XFER\+\_\+\+COMP}~3
+\item 
+\#define {\bfseries STS\+\_\+\+SETUP\+\_\+\+COMP}~4
+\item 
+\#define {\bfseries STS\+\_\+\+SETUP\+\_\+\+UPDT}~6
+\item 
+\#define {\bfseries HCFG\+\_\+30\+\_\+60\+\_\+\+MHZ}~0
+\item 
+\#define {\bfseries HCFG\+\_\+48\+\_\+\+MHZ}~1
+\item 
+\#define {\bfseries HCFG\+\_\+6\+\_\+\+MHZ}~2
+\item 
+\#define {\bfseries HPRT0\+\_\+\+PRTSPD\+\_\+\+HIGH\+\_\+\+SPEED}~0
+\item 
+\#define {\bfseries HPRT0\+\_\+\+PRTSPD\+\_\+\+FULL\+\_\+\+SPEED}~1
+\item 
+\#define {\bfseries HPRT0\+\_\+\+PRTSPD\+\_\+\+LOW\+\_\+\+SPEED}~2
+\item 
+\#define {\bfseries HCCHAR\+\_\+\+CTRL}~0
+\item 
+\#define {\bfseries HCCHAR\+\_\+\+ISOC}~1
+\item 
+\#define {\bfseries HCCHAR\+\_\+\+BULK}~2
+\item 
+\#define {\bfseries HCCHAR\+\_\+\+INTR}~3
+\item 
+\#define {\bfseries HC\+\_\+\+PID\+\_\+\+DATA0}~0
+\item 
+\#define {\bfseries HC\+\_\+\+PID\+\_\+\+DATA2}~1
+\item 
+\#define {\bfseries HC\+\_\+\+PID\+\_\+\+DATA1}~2
+\item 
+\#define {\bfseries HC\+\_\+\+PID\+\_\+\+SETUP}~3
+\item 
+\#define {\bfseries GRXSTS\+\_\+\+PKTSTS\+\_\+\+IN}~2
+\item 
+\#define {\bfseries GRXSTS\+\_\+\+PKTSTS\+\_\+\+IN\+\_\+\+XFER\+\_\+\+COMP}~3
+\item 
+\#define {\bfseries GRXSTS\+\_\+\+PKTSTS\+\_\+\+DATA\+\_\+\+TOGGLE\+\_\+\+ERR}~5
+\item 
+\#define {\bfseries GRXSTS\+\_\+\+PKTSTS\+\_\+\+CH\+\_\+\+HALTED}~7
+\item 
+\#define {\bfseries USBx\+\_\+\+PCGCCTL}~$\ast$(\mbox{\hyperlink{core__cm4_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$)((uint32\+\_\+t)USBx + USB\+\_\+\+OTG\+\_\+\+PCGCCTL\+\_\+\+BASE)
+\item 
+\#define {\bfseries USBx\+\_\+\+HPRT0}~$\ast$(\mbox{\hyperlink{core__cm4_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$)((uint32\+\_\+t)USBx + USB\+\_\+\+OTG\+\_\+\+HOST\+\_\+\+PORT\+\_\+\+BASE)
+\item 
+\#define {\bfseries USBx\+\_\+\+DEVICE}~((\mbox{\hyperlink{struct_u_s_b___o_t_g___device_type_def}{USB\+\_\+\+OTG\+\_\+\+Device\+Type\+Def}} $\ast$)((uint32\+\_\+t )USBx + USB\+\_\+\+OTG\+\_\+\+DEVICE\+\_\+\+BASE))
+\item 
+\#define {\bfseries USBx\+\_\+\+INEP}(i)~((\mbox{\hyperlink{struct_u_s_b___o_t_g___i_n_endpoint_type_def}{USB\+\_\+\+OTG\+\_\+\+INEndpoint\+Type\+Def}} $\ast$)((uint32\+\_\+t)USBx + USB\+\_\+\+OTG\+\_\+\+IN\+\_\+\+ENDPOINT\+\_\+\+BASE + (i)$\ast$USB\+\_\+\+OTG\+\_\+\+EP\+\_\+\+REG\+\_\+\+SIZE))
+\item 
+\#define {\bfseries USBx\+\_\+\+OUTEP}(i)~((\mbox{\hyperlink{struct_u_s_b___o_t_g___o_u_t_endpoint_type_def}{USB\+\_\+\+OTG\+\_\+\+OUTEndpoint\+Type\+Def}} $\ast$)((uint32\+\_\+t)USBx + USB\+\_\+\+OTG\+\_\+\+OUT\+\_\+\+ENDPOINT\+\_\+\+BASE + (i)$\ast$USB\+\_\+\+OTG\+\_\+\+EP\+\_\+\+REG\+\_\+\+SIZE))
+\item 
+\#define {\bfseries USBx\+\_\+\+DFIFO}(i)~$\ast$(\mbox{\hyperlink{core__cm4_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$)((uint32\+\_\+t)USBx + USB\+\_\+\+OTG\+\_\+\+FIFO\+\_\+\+BASE + (i) $\ast$ USB\+\_\+\+OTG\+\_\+\+FIFO\+\_\+\+SIZE)
+\item 
+\#define {\bfseries USBx\+\_\+\+HOST}~((\mbox{\hyperlink{struct_u_s_b___o_t_g___host_type_def}{USB\+\_\+\+OTG\+\_\+\+Host\+Type\+Def}} $\ast$)((uint32\+\_\+t )USBx + USB\+\_\+\+OTG\+\_\+\+HOST\+\_\+\+BASE))
+\item 
+\#define {\bfseries USBx\+\_\+\+HC}(i)~((\mbox{\hyperlink{struct_u_s_b___o_t_g___host_channel_type_def}{USB\+\_\+\+OTG\+\_\+\+Host\+Channel\+Type\+Def}} $\ast$)((uint32\+\_\+t)USBx + USB\+\_\+\+OTG\+\_\+\+HOST\+\_\+\+CHANNEL\+\_\+\+BASE + (i)$\ast$USB\+\_\+\+OTG\+\_\+\+HOST\+\_\+\+CHANNEL\+\_\+\+SIZE))
+\item 
+\#define {\bfseries USB\+\_\+\+MASK\+\_\+\+INTERRUPT}(\+\_\+\+\_\+\+INSTANCE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+INSTANCE\+\_\+\+\_\+)-\/$>$GINTMSK \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define {\bfseries USB\+\_\+\+UNMASK\+\_\+\+INTERRUPT}(\+\_\+\+\_\+\+INSTANCE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+INSTANCE\+\_\+\+\_\+)-\/$>$GINTMSK $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define {\bfseries CLEAR\+\_\+\+IN\+\_\+\+EP\+\_\+\+INTR}(\+\_\+\+\_\+\+EPNUM\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(USBx\+\_\+\+INEP(\+\_\+\+\_\+\+EPNUM\+\_\+\+\_\+)-\/$>$DIEPINT = (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define {\bfseries CLEAR\+\_\+\+OUT\+\_\+\+EP\+\_\+\+INTR}(\+\_\+\+\_\+\+EPNUM\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(USBx\+\_\+\+OUTEP(\+\_\+\+\_\+\+EPNUM\+\_\+\+\_\+)-\/$>$DOEPINT = (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___u_s_b___core_gaee615ae9689e28e7618b73dbe76f5b95}\label{group___u_s_b___core_gaee615ae9689e28e7618b73dbe76f5b95}} 
+enum \mbox{\hyperlink{group___u_s_b___core_gaee615ae9689e28e7618b73dbe76f5b95}{USB\+\_\+\+OTG\+\_\+\+Mode\+Type\+Def}} \{ {\bfseries USB\+\_\+\+OTG\+\_\+\+DEVICE\+\_\+\+MODE} = 0
+, {\bfseries USB\+\_\+\+OTG\+\_\+\+HOST\+\_\+\+MODE} = 1
+, {\bfseries USB\+\_\+\+OTG\+\_\+\+DRD\+\_\+\+MODE} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em USB Mode definition ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_s_b___core_ga04b2bca306495588fec3a5245daa5221}\label{group___u_s_b___core_ga04b2bca306495588fec3a5245daa5221}} 
+enum \mbox{\hyperlink{group___u_s_b___core_ga04b2bca306495588fec3a5245daa5221}{USB\+\_\+\+OTG\+\_\+\+URBState\+Type\+Def}} \{ \newline
+{\bfseries URB\+\_\+\+IDLE} = 0
+, {\bfseries URB\+\_\+\+DONE}
+, {\bfseries URB\+\_\+\+NOTREADY}
+, {\bfseries URB\+\_\+\+NYET}
+, \newline
+{\bfseries URB\+\_\+\+ERROR}
+, {\bfseries URB\+\_\+\+STALL}
+ \}
+\begin{DoxyCompactList}\small\item\em URB States definition ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_s_b___core_ga8fa88c2e8e5fe41147028ba11af65294}\label{group___u_s_b___core_ga8fa88c2e8e5fe41147028ba11af65294}} 
+enum \mbox{\hyperlink{group___u_s_b___core_ga8fa88c2e8e5fe41147028ba11af65294}{USB\+\_\+\+OTG\+\_\+\+HCState\+Type\+Def}} \{ \newline
+{\bfseries HC\+\_\+\+IDLE} = 0
+, {\bfseries HC\+\_\+\+XFRC}
+, {\bfseries HC\+\_\+\+HALTED}
+, {\bfseries HC\+\_\+\+NAK}
+, \newline
+{\bfseries HC\+\_\+\+NYET}
+, {\bfseries HC\+\_\+\+STALL}
+, {\bfseries HC\+\_\+\+XACTERR}
+, {\bfseries HC\+\_\+\+BBLERR}
+, \newline
+{\bfseries HC\+\_\+\+DATATGLERR}
+ \}
+\begin{DoxyCompactList}\small\item\em Host channel States definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Core\+Init} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___cfg_type_def}{USB\+\_\+\+OTG\+\_\+\+Cfg\+Type\+Def}} Init)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Dev\+Init} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___cfg_type_def}{USB\+\_\+\+OTG\+\_\+\+Cfg\+Type\+Def}} Init)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Enable\+Global\+Int} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Disable\+Global\+Int} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Set\+Current\+Mode} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{group___u_s_b___core_gaee615ae9689e28e7618b73dbe76f5b95}{USB\+\_\+\+OTG\+\_\+\+Mode\+Type\+Def}} mode)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Set\+Dev\+Speed} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t speed)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Flush\+Rx\+Fifo} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Flush\+Tx\+Fifo} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint32\+\_\+t num)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Activate\+Endpoint} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}} $\ast$ep)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Deactivate\+Endpoint} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}} $\ast$ep)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Activate\+Dedicated\+Endpoint} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}} $\ast$ep)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Deactivate\+Dedicated\+Endpoint} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}} $\ast$ep)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+EPStart\+Xfer} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}} $\ast$ep, uint8\+\_\+t dma)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+EP0\+Start\+Xfer} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}} $\ast$ep, uint8\+\_\+t dma)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Write\+Packet} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t $\ast$src, uint8\+\_\+t ch\+\_\+ep\+\_\+num, uint16\+\_\+t len, uint8\+\_\+t dma)
+\item 
+void $\ast$ {\bfseries USB\+\_\+\+Read\+Packet} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t $\ast$dest, uint16\+\_\+t len)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+EPSet\+Stall} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}} $\ast$ep)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+EPClear\+Stall} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___e_p_type_def}{USB\+\_\+\+OTG\+\_\+\+EPType\+Def}} $\ast$ep)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Set\+Dev\+Address} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t address)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Dev\+Connect} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Dev\+Disconnect} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Stop\+Device} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Activate\+Setup} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+EP0\+\_\+\+Out\+Start} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t dma, uint8\+\_\+t $\ast$psetup)
+\item 
+uint8\+\_\+t {\bfseries USB\+\_\+\+Get\+Dev\+Speed} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+Get\+Mode} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+Read\+Interrupts} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+Read\+Dev\+All\+Out\+Ep\+Interrupt} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+Read\+Dev\+Out\+EPInterrupt} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t epnum)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+Read\+Dev\+All\+In\+Ep\+Interrupt} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+Read\+Dev\+In\+EPInterrupt} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t epnum)
+\item 
+void {\bfseries USB\+\_\+\+Clear\+Interrupts} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint32\+\_\+t interrupt)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Host\+Init} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___cfg_type_def}{USB\+\_\+\+OTG\+\_\+\+Cfg\+Type\+Def}} cfg)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Init\+FSLSPClk\+Sel} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t freq)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Reset\+Port} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Drive\+Vbus} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t state)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+Get\+Host\+Speed} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+Get\+Current\+Frame} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+HC\+\_\+\+Init} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t ch\+\_\+num, uint8\+\_\+t epnum, uint8\+\_\+t dev\+\_\+address, uint8\+\_\+t speed, uint8\+\_\+t ep\+\_\+type, uint16\+\_\+t mps)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+HC\+\_\+\+Start\+Xfer} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, \mbox{\hyperlink{struct_u_s_b___o_t_g___h_c_type_def}{USB\+\_\+\+OTG\+\_\+\+HCType\+Def}} $\ast$hc, uint8\+\_\+t dma)
+\item 
+uint32\+\_\+t {\bfseries USB\+\_\+\+HC\+\_\+\+Read\+Interrupt} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+HC\+\_\+\+Halt} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t hc\+\_\+num)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Do\+Ping} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx, uint8\+\_\+t ch\+\_\+num)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries USB\+\_\+\+Stop\+Host} (\mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} $\ast$USBx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of USB Core HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0\+RC2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/May-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

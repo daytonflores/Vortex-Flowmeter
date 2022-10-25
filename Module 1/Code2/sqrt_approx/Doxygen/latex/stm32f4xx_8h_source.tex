@@ -1,0 +1,122 @@
+\hypertarget{stm32f4xx_8h_source}{}\doxysection{stm32f4xx.\+h}
+\label{stm32f4xx_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx.h}}
+\mbox{\hyperlink{stm32f4xx_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00056}00056 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00057}00057 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00059}00059 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00060}00060  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00061}00061 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_cplusplus */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00062}00062    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00067}00067 \textcolor{comment}{/* Uncomment the line below according to the target STM32 device used in your}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00068}00068 \textcolor{comment}{   application }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00069}00069 \textcolor{comment}{  */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00071}00071 \textcolor{preprocessor}{\#if !defined (STM32F405xx) \&\& !defined (STM32F415xx) \&\& !defined (STM32F407xx) \&\& !defined (STM32F417xx) \&\& \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00072}00072 \textcolor{preprocessor}{    !defined (STM32F427xx) \&\& !defined (STM32F437xx) \&\& !defined (STM32F429xx) \&\& !defined (STM32F439xx) \&\& \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00073}00073 \textcolor{preprocessor}{    !defined (STM32F401xC) \&\& !defined (STM32F401xE) \&\& !defined (STM32F411xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00074}00074   \textcolor{comment}{/* \#define STM32F405xx */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00075}00075   \textcolor{comment}{/* \#define STM32F415xx */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00076}00076   \textcolor{comment}{/* \#define STM32F407xx */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00077}00077   \textcolor{comment}{/* \#define STM32F417xx */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00078}00078   \textcolor{comment}{/* \#define STM32F427xx */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00079}00079   \textcolor{comment}{/* \#define STM32F437xx */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00080}00080   \textcolor{comment}{/* \#define STM32F429xx */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00082}00082   \textcolor{comment}{/* \#define STM32F439xx */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00084}00084   \textcolor{comment}{/* \#define STM32F401xC */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00085}\mbox{\hyperlink{group___library__configuration__section_ga4b150144bb57e6f25e7e2b03cb42b86c}{00085}} \textcolor{preprocessor}{\#define STM32F401xE           }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00086}00086   \textcolor{comment}{/* \#define STM32F411xE */}   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00087}00087 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00088}00088    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00089}00089 \textcolor{comment}{/*  Tip: To avoid modifying this file each time you need to switch between these}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00090}00090 \textcolor{comment}{        devices, you can define the device in your toolchain compiler preprocessor.}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00091}00091 \textcolor{comment}{  */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00092}00092 \textcolor{preprocessor}{\#if !defined  (USE\_HAL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00098}\mbox{\hyperlink{group___library__configuration__section_ga13fde7eed89250511adafbc8bbedcc62}{00098}} \textcolor{preprocessor}{\#define USE\_HAL\_DRIVER}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00099}00099 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00104}\mbox{\hyperlink{group___library__configuration__section_ga802582d9b7b4dea8c8c53f6ce296dad2}{00104}} \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION\_MAIN   (0x02) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00105}\mbox{\hyperlink{group___library__configuration__section_gaa840ca8cc59044a45c604b95c546666b}{00105}} \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION\_SUB1   (0x01) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00106}\mbox{\hyperlink{group___library__configuration__section_ga5697f6bbcd478565105f00c06dc97a96}{00106}} \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION\_SUB2   (0x00) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00107}\mbox{\hyperlink{group___library__configuration__section_ga99153b788b5b5ef1d65a748495e5c4ca}{00107}} \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION\_RC     (0x02) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00108}\mbox{\hyperlink{group___library__configuration__section_gab71225daca4a310275d65a487422b1f7}{00108}} \textcolor{preprocessor}{\#define \_\_STM32F4xx\_CMSIS\_DEVICE\_VERSION        ((\_\_CMSIS\_DEVICE\_VERSION\_MAIN     << 24)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00109}00109 \textcolor{preprocessor}{                                      |(\_\_CMSIS\_DEVICE\_HAL\_VERSION\_SUB1 << 16)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00110}00110 \textcolor{preprocessor}{                                      |(\_\_CMSIS\_DEVICE\_HAL\_VERSION\_SUB2 << 8 )\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00111}00111 \textcolor{preprocessor}{                                      |(\_\_CMSIS\_DEVICE\_HAL\_VERSION\_RC))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00112}00112                                              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00121}00121 \textcolor{preprocessor}{\#if defined(STM32F405xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00122}00122 \textcolor{preprocessor}{  \#include "{}stm32f405xx.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00123}00123 \textcolor{preprocessor}{\#elif defined(STM32F415xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00124}00124 \textcolor{preprocessor}{  \#include "{}stm32f415xx.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00125}00125 \textcolor{preprocessor}{\#elif defined(STM32F407xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00126}00126 \textcolor{preprocessor}{  \#include "{}stm32f407xx.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00127}00127 \textcolor{preprocessor}{\#elif defined(STM32F417xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00128}00128 \textcolor{preprocessor}{  \#include "{}stm32f417xx.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00129}00129 \textcolor{preprocessor}{\#elif defined(STM32F427xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00130}00130 \textcolor{preprocessor}{  \#include "{}stm32f427xx.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00131}00131 \textcolor{preprocessor}{\#elif defined(STM32F437xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00132}00132 \textcolor{preprocessor}{  \#include "{}stm32f437xx.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00133}00133 \textcolor{preprocessor}{\#elif defined(STM32F429xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00134}00134 \textcolor{preprocessor}{  \#include "{}stm32f429xx.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00135}00135 \textcolor{preprocessor}{\#elif defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00136}00136 \textcolor{preprocessor}{  \#include "{}stm32f439xx.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00137}00137 \textcolor{preprocessor}{\#elif defined(STM32F401xC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00138}00138 \textcolor{preprocessor}{  \#include "{}stm32f401xc.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00139}00139 \textcolor{preprocessor}{\#elif defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00140}00140 \textcolor{preprocessor}{  \#include "{}\mbox{\hyperlink{stm32f401xe_8h}{stm32f401xe.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00141}00141 \textcolor{preprocessor}{\#elif defined(STM32F411xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00142}00142 \textcolor{preprocessor}{  \#include "{}stm32f411xe.h"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00143}00143 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00144}00144 \textcolor{preprocessor}{ \#error "{}Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00145}00145 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00154}\mbox{\hyperlink{group___exported__types_ga89136caac2e14c55151f527ac02daaff}{00154}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00155}00155 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00156}\mbox{\hyperlink{group___exported__types_gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05}{00156}}   \mbox{\hyperlink{group___exported__types_gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05}{RESET}} = 0, }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00157}00157   \mbox{\hyperlink{group___exported__types_gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792}{SET}} = !\mbox{\hyperlink{group___exported__types_gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05}{RESET}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00158}\mbox{\hyperlink{group___exported__types_ga39d4411201fb731279ad5a409b2b80d7}{00158}} \} \mbox{\hyperlink{group___exported__types_ga89136caac2e14c55151f527ac02daaff}{FlagStatus}}, \mbox{\hyperlink{group___exported__types_ga39d4411201fb731279ad5a409b2b80d7}{ITStatus}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00160}\mbox{\hyperlink{group___exported__types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{00160}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00161}00161 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00162}\mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d}{00162}}   \mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d}{DISABLE}} = 0, }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00163}00163   \mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf}{ENABLE}} = !\mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d}{DISABLE}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00164}\mbox{\hyperlink{group___exported__types_ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf}{00164}} \} \mbox{\hyperlink{group___exported__types_gac9a7e9a35d2513ec15c3b537aaa4fba1}{FunctionalState}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00165}\mbox{\hyperlink{group___exported__types_gaffaf7c3f537d7a3370b1bbdda67a2bf6}{00165}} \textcolor{preprocessor}{\#define IS\_FUNCTIONAL\_STATE(STATE) (((STATE) == DISABLE) || ((STATE) == ENABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00167}\mbox{\hyperlink{group___exported__types_ga8333b96c67f83cba354b3407fcbb6ee8}{00167}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00168}00168 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00169}\mbox{\hyperlink{group___exported__types_gga8333b96c67f83cba354b3407fcbb6ee8a2fd6f336d08340583bd620a7f5694c90}{00169}}   \mbox{\hyperlink{group___exported__types_gga8333b96c67f83cba354b3407fcbb6ee8a2fd6f336d08340583bd620a7f5694c90}{ERROR}} = 0, }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00170}00170   \mbox{\hyperlink{group___exported__types_gga8333b96c67f83cba354b3407fcbb6ee8ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}} = !\mbox{\hyperlink{group___exported__types_gga8333b96c67f83cba354b3407fcbb6ee8a2fd6f336d08340583bd620a7f5694c90}{ERROR}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00171}\mbox{\hyperlink{group___exported__types_gga8333b96c67f83cba354b3407fcbb6ee8ac7f69f7c9e5aea9b8f54cf02870e2bf8}{00171}} \} \mbox{\hyperlink{group___exported__types_ga8333b96c67f83cba354b3407fcbb6ee8}{ErrorStatus}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00181}\mbox{\hyperlink{group___exported__macro_ga26474f43799fbade9cf300e21dd3a91a}{00181}} \textcolor{preprocessor}{\#define SET\_BIT(REG, BIT)     ((REG) |= (BIT))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00183}\mbox{\hyperlink{group___exported__macro_ga133aae6fc0d41bffab39ab223a7001de}{00183}} \textcolor{preprocessor}{\#define CLEAR\_BIT(REG, BIT)   ((REG) \&= \string~(BIT))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00185}\mbox{\hyperlink{group___exported__macro_ga822bb1bb9710d5f2fa6396b84e583c33}{00185}} \textcolor{preprocessor}{\#define READ\_BIT(REG, BIT)    ((REG) \& (BIT))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00187}\mbox{\hyperlink{group___exported__macro_ga1378fbdda39f40b85420df55f41460ef}{00187}} \textcolor{preprocessor}{\#define CLEAR\_REG(REG)        ((REG) = (0x0))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00189}\mbox{\hyperlink{group___exported__macro_ga32f78bffcaf6d13023dcd7f05e0c4d57}{00189}} \textcolor{preprocessor}{\#define WRITE\_REG(REG, VAL)   ((REG) = (VAL))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00191}\mbox{\hyperlink{group___exported__macro_gae7f188a4d26c9e713a48414783421071}{00191}} \textcolor{preprocessor}{\#define READ\_REG(REG)         ((REG))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00193}\mbox{\hyperlink{group___exported__macro_ga6553c99f510c3bab8cc0a91602053247}{00193}} \textcolor{preprocessor}{\#define MODIFY\_REG(REG, CLEARMASK, SETMASK)  WRITE\_REG((REG), (((READ\_REG(REG)) \& (\string~(CLEARMASK))) | (SETMASK)))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00195}\mbox{\hyperlink{group___exported__macro_ga47a8870d71d55cefb3df47cd8c815ec8}{00195}} \textcolor{preprocessor}{\#define POSITION\_VAL(VAL)     (\_\_CLZ(\_\_RBIT(VAL))) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00202}00202 \textcolor{preprocessor}{\#if defined (USE\_HAL\_DRIVER)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00203}00203 \textcolor{preprocessor}{ \#include "{}\mbox{\hyperlink{stm32f4xx__hal_8h}{stm32f4xx\_hal.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00204}00204 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00206}00206 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00207}00207 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00208}00208 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_cplusplus */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00209}00209 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00210}00210 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx_8h_source_l00222}00222 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___w_w_d_g" xml:lang="en-US">
+<title>WWDG</title>
+<indexterm><primary>WWDG</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___w_w_d_g___bit_address___alias_region">WWDG_BitAddress_AliasRegion</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___w_w_d_g___interrupt__definition">WWDG_Interrupt_definition</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___w_w_d_g___flag__definition">WWDG_Flag_definition</link></para>
+
+<para>WWDG Flag definition. </para>
+</listitem>
+            <listitem><para><link linkend="_group___w_w_d_g___prescaler">WWDG_Prescaler</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___w_w_d_g___window">WWDG_Window</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___w_w_d_g___counter">WWDG_Counter</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_w_w_d_g___init_type_def">WWDG_InitTypeDef</link></para>
+
+<para>WWDG Init structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link></para>
+
+<para>WWDG handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1gadb7c147b55b6386d487d717b20cd1070">__HAL_WWDG_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5">HAL_WWDG_STATE_RESET</link>)</para>
+
+<para>Reset WWDG handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1gaad04976da12e2c801c72668b8e100d80">__HAL_WWDG_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  <link linkend="_group___peripheral___registers___bits___definition_1gab647e9997b8b8e67de72af1aaea3f52f">WWDG_CR_WDGA</link>)</para>
+
+<para>Enables the WWDG peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1ga60a99447a00a7d95c18637c38147063a">__HAL_WWDG_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Gets the selected WWDG&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1gae9c3b916e244deffc6a673d97df63671">__HAL_WWDG_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR) &amp;= ~(__FLAG__))</para>
+
+<para>Clears the WWDG&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1gab29dd54283dfafa9ae09d0b54fde06b4">__HAL_WWDG_ENABLE_IT</link>(__INTERRUPT__)   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___w_w_d_g___bit_address___alias_region_1gad6422afd041f823ff1ea65e442355783">CFR_BASE</link> |= (__INTERRUPT__))</para>
+
+<para>Enables the WWDG early wakeup interrupt. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___w_w_d_g_1ga0dbbade5e745711745e5f9cc10991301">HAL_WWDG_StateTypeDef</link> { 
+<link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5">HAL_WWDG_STATE_RESET</link> = 0x00
+, <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301a4dc3b206181127388e44b6b7838e39fb">HAL_WWDG_STATE_READY</link> = 0x01
+, <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ad0b871d6d748df57f9c354ecf04d9821">HAL_WWDG_STATE_BUSY</link> = 0x02
+, <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ac35fbcc9e083869cd3410dfff314e985">HAL_WWDG_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301a41c392c0097e126977c5b980c4f2e227">HAL_WWDG_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>WWDG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1ga72706a378ad2f79cba4324c1b328715a">HAL_WWDG_Init</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1gaa2a353f5e9d3d00f6cbf251770cb3259">HAL_WWDG_DeInit</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___w_w_d_g_1ga9871643c1868c37613b89d1acf010cd6">HAL_WWDG_MspInit</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___w_w_d_g_1gaf7a0f80dfa5dc7832a3240a8004f113d">HAL_WWDG_MspDeInit</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___w_w_d_g_1gac59114721456ab7cefb8bd3dffdc2c8c">HAL_WWDG_WakeupCallback</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1ga6d56ddea267609ae162392f725c22ffc">HAL_WWDG_Start</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1ga67ae975315e3bf0ff2252b2cd32686ef">HAL_WWDG_Start_IT</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1ga33c30c69b966b353572a2d36a702efc3">HAL_WWDG_Refresh</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg, uint32_t Counter)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___w_w_d_g_1ga6521c5a0ff3184f951561302fb540fde">HAL_WWDG_IRQHandler</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_group___w_w_d_g_1ga0dbbade5e745711745e5f9cc10991301">HAL_WWDG_StateTypeDef</link> <link linkend="_group___w_w_d_g_1ga893774ecf63a6f78ef41f414db80ee46">HAL_WWDG_GetState</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___w_w_d_g_1gae9c3b916e244deffc6a673d97df63671"/><section>
+    <title>__HAL_WWDG_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_WWDG_CLEAR_FLAG</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>__HAL_WWDG_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_WWDG_CLEAR_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR) &amp;= ~(__FLAG__))</computeroutput></para><para>
+
+<para>Clears the WWDG&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>WWDG handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to clear. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>WWDG_FLAG_EWIF: Early wakeup interrupt flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__wwdg_8h_source_1l00208">208</link> of file <link linkend="_stm32f4xx__hal__wwdg_8h_source">stm32f4xx_hal_wwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___w_w_d_g_1gaad04976da12e2c801c72668b8e100d80"/><section>
+    <title>__HAL_WWDG_ENABLE</title>
+<indexterm><primary>__HAL_WWDG_ENABLE</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>__HAL_WWDG_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_WWDG_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  <link linkend="_group___peripheral___registers___bits___definition_1gab647e9997b8b8e67de72af1aaea3f52f">WWDG_CR_WDGA</link>)</computeroutput></para><para>
+
+<para>Enables the WWDG peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>WWDG handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__wwdg_8h_source_1l00188">188</link> of file <link linkend="_stm32f4xx__hal__wwdg_8h_source">stm32f4xx_hal_wwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___w_w_d_g_1gab29dd54283dfafa9ae09d0b54fde06b4"/><section>
+    <title>__HAL_WWDG_ENABLE_IT</title>
+<indexterm><primary>__HAL_WWDG_ENABLE_IT</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>__HAL_WWDG_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_WWDG_ENABLE_IT( __INTERRUPT__)   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___w_w_d_g___bit_address___alias_region_1gad6422afd041f823ff1ea65e442355783">CFR_BASE</link> |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enables the WWDG early wakeup interrupt. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Once enabled this interrupt cannot be disabled except by a system reset. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__wwdg_8h_source_1l00215">215</link> of file <link linkend="_stm32f4xx__hal__wwdg_8h_source">stm32f4xx_hal_wwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___w_w_d_g_1ga60a99447a00a7d95c18637c38147063a"/><section>
+    <title>__HAL_WWDG_GET_FLAG</title>
+<indexterm><primary>__HAL_WWDG_GET_FLAG</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>__HAL_WWDG_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_WWDG_GET_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Gets the selected WWDG&apos;s flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>WWDG handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>WWDG_FLAG_EWIF: Early wakeup interrupt flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of WWDG_FLAG (SET or RESET). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__wwdg_8h_source_1l00198">198</link> of file <link linkend="_stm32f4xx__hal__wwdg_8h_source">stm32f4xx_hal_wwdg.h</link>.</para>
+</section>
+<anchor xml:id="_group___w_w_d_g_1gadb7c147b55b6386d487d717b20cd1070"/><section>
+    <title>__HAL_WWDG_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_WWDG_RESET_HANDLE_STATE</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>__HAL_WWDG_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_WWDG_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5">HAL_WWDG_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset WWDG handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>WWDG handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__wwdg_8h_source_1l00181">181</link> of file <link linkend="_stm32f4xx__hal__wwdg_8h_source">stm32f4xx_hal_wwdg.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___w_w_d_g_1ga0dbbade5e745711745e5f9cc10991301"/><section>
+    <title>HAL_WWDG_StateTypeDef</title>
+<indexterm><primary>HAL_WWDG_StateTypeDef</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___w_w_d_g_1ga0dbbade5e745711745e5f9cc10991301">HAL_WWDG_StateTypeDef</link></computeroutput></para><para>
+
+<para>WWDG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_WWDG_STATE_RESET</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5"/>HAL_WWDG_STATE_RESET</entry><entry>
+<para>WWDG not yet initialized or disabled </para>
+</entry></row><row><entry><indexterm><primary>HAL_WWDG_STATE_READY</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301a4dc3b206181127388e44b6b7838e39fb"/>HAL_WWDG_STATE_READY</entry><entry>
+<para>WWDG initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_WWDG_STATE_BUSY</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ad0b871d6d748df57f9c354ecf04d9821"/>HAL_WWDG_STATE_BUSY</entry><entry>
+<para>WWDG internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_WWDG_STATE_TIMEOUT</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ac35fbcc9e083869cd3410dfff314e985"/>HAL_WWDG_STATE_TIMEOUT</entry><entry>
+<para>WWDG timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_WWDG_STATE_ERROR</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301a41c392c0097e126977c5b980c4f2e227"/>HAL_WWDG_STATE_ERROR</entry><entry>
+<para>WWDG error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__wwdg_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__wwdg_8h_source">stm32f4xx_hal_wwdg.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___w_w_d_g_1gaa2a353f5e9d3d00f6cbf251770cb3259"/><section>
+    <title>HAL_WWDG_DeInit()</title>
+<indexterm><primary>HAL_WWDG_DeInit</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_WWDG_DeInit (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1ga893774ecf63a6f78ef41f414db80ee46"/><section>
+    <title>HAL_WWDG_GetState()</title>
+<indexterm><primary>HAL_WWDG_GetState</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___w_w_d_g_1ga0dbbade5e745711745e5f9cc10991301">HAL_WWDG_StateTypeDef</link> HAL_WWDG_GetState (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1ga72706a378ad2f79cba4324c1b328715a"/><section>
+    <title>HAL_WWDG_Init()</title>
+<indexterm><primary>HAL_WWDG_Init</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_WWDG_Init (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1ga6521c5a0ff3184f951561302fb540fde"/><section>
+    <title>HAL_WWDG_IRQHandler()</title>
+<indexterm><primary>HAL_WWDG_IRQHandler</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_WWDG_IRQHandler (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1gaf7a0f80dfa5dc7832a3240a8004f113d"/><section>
+    <title>HAL_WWDG_MspDeInit()</title>
+<indexterm><primary>HAL_WWDG_MspDeInit</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_WWDG_MspDeInit (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1ga9871643c1868c37613b89d1acf010cd6"/><section>
+    <title>HAL_WWDG_MspInit()</title>
+<indexterm><primary>HAL_WWDG_MspInit</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_WWDG_MspInit (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1ga33c30c69b966b353572a2d36a702efc3"/><section>
+    <title>HAL_WWDG_Refresh()</title>
+<indexterm><primary>HAL_WWDG_Refresh</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_Refresh</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_WWDG_Refresh (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg, uint32_t Counter)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1ga6d56ddea267609ae162392f725c22ffc"/><section>
+    <title>HAL_WWDG_Start()</title>
+<indexterm><primary>HAL_WWDG_Start</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_Start</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_WWDG_Start (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1ga67ae975315e3bf0ff2252b2cd32686ef"/><section>
+    <title>HAL_WWDG_Start_IT()</title>
+<indexterm><primary>HAL_WWDG_Start_IT</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_Start_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_WWDG_Start_IT (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+<anchor xml:id="_group___w_w_d_g_1gac59114721456ab7cefb8bd3dffdc2c8c"/><section>
+    <title>HAL_WWDG_WakeupCallback()</title>
+<indexterm><primary>HAL_WWDG_WakeupCallback</primary><secondary>WWDG</secondary></indexterm>
+<indexterm><primary>WWDG</primary><secondary>HAL_WWDG_WakeupCallback</secondary></indexterm>
+<para><computeroutput>void HAL_WWDG_WakeupCallback (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> * hwwdg)</computeroutput></para></section>
+</section>
+</section>

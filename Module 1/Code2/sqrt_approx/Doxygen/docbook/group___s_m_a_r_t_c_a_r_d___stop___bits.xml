@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___s_m_a_r_t_c_a_r_d___stop___bits" xml:lang="en-US">
+<title>SMARTCARD_Stop_Bits</title>
+<indexterm><primary>SMARTCARD_Stop_Bits</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gaad1a5a08d00d268990232301b9f2c828">SMARTCARD_STOPBITS_1</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gacb1f23b1dd63c60d9823d1ec65475ae0">SMARTCARD_STOPBITS_0_5</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaee6ee01c6e5325b378b2209ef20d0a61">USART_CR2_STOP_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gab777f0e142c5d29e7b83e4b1a18bdecc">SMARTCARD_STOPBITS_2</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga2b24d14f0e5d1c76c878b08aad44d02b">USART_CR2_STOP_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1ga60cf2b59a8e70d1039e8ce1dcdb7c97b">SMARTCARD_STOPBITS_1_5</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gaee6ee01c6e5325b378b2209ef20d0a61">USART_CR2_STOP_0</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2b24d14f0e5d1c76c878b08aad44d02b">USART_CR2_STOP_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1ga55a0c0a41cc21f1c11d34457bf45b97b">IS_SMARTCARD_STOPBITS</link>(STOPBITS)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d___stop___bits_1ga55a0c0a41cc21f1c11d34457bf45b97b"/><section>
+    <title>IS_SMARTCARD_STOPBITS</title>
+<indexterm><primary>IS_SMARTCARD_STOPBITS</primary><secondary>SMARTCARD_Stop_Bits</secondary></indexterm>
+<indexterm><primary>SMARTCARD_Stop_Bits</primary><secondary>IS_SMARTCARD_STOPBITS</secondary></indexterm>
+<para><computeroutput>#define IS_SMARTCARD_STOPBITS( STOPBITS)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((STOPBITS)&#32;==&#32;<link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gaad1a5a08d00d268990232301b9f2c828">SMARTCARD_STOPBITS_1</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((STOPBITS)&#32;==&#32;<link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gacb1f23b1dd63c60d9823d1ec65475ae0">SMARTCARD_STOPBITS_0_5</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((STOPBITS)&#32;==&#32;<link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1ga60cf2b59a8e70d1039e8ce1dcdb7c97b">SMARTCARD_STOPBITS_1_5</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((STOPBITS)&#32;==&#32;<link linkend="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gab777f0e142c5d29e7b83e4b1a18bdecc">SMARTCARD_STOPBITS_2</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00187">187</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gacb1f23b1dd63c60d9823d1ec65475ae0"/><section>
+    <title>SMARTCARD_STOPBITS_0_5</title>
+<indexterm><primary>SMARTCARD_STOPBITS_0_5</primary><secondary>SMARTCARD_Stop_Bits</secondary></indexterm>
+<indexterm><primary>SMARTCARD_Stop_Bits</primary><secondary>SMARTCARD_STOPBITS_0_5</secondary></indexterm>
+<para><computeroutput>#define SMARTCARD_STOPBITS_0_5   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gaee6ee01c6e5325b378b2209ef20d0a61">USART_CR2_STOP_0</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00184">184</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gaad1a5a08d00d268990232301b9f2c828"/><section>
+    <title>SMARTCARD_STOPBITS_1</title>
+<indexterm><primary>SMARTCARD_STOPBITS_1</primary><secondary>SMARTCARD_Stop_Bits</secondary></indexterm>
+<indexterm><primary>SMARTCARD_Stop_Bits</primary><secondary>SMARTCARD_STOPBITS_1</secondary></indexterm>
+<para><computeroutput>#define SMARTCARD_STOPBITS_1   ((uint32_t)0x00000000)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00183">183</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d___stop___bits_1ga60cf2b59a8e70d1039e8ce1dcdb7c97b"/><section>
+    <title>SMARTCARD_STOPBITS_1_5</title>
+<indexterm><primary>SMARTCARD_STOPBITS_1_5</primary><secondary>SMARTCARD_Stop_Bits</secondary></indexterm>
+<indexterm><primary>SMARTCARD_Stop_Bits</primary><secondary>SMARTCARD_STOPBITS_1_5</secondary></indexterm>
+<para><computeroutput>#define SMARTCARD_STOPBITS_1_5   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gaee6ee01c6e5325b378b2209ef20d0a61">USART_CR2_STOP_0</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2b24d14f0e5d1c76c878b08aad44d02b">USART_CR2_STOP_1</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00186">186</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_m_a_r_t_c_a_r_d___stop___bits_1gab777f0e142c5d29e7b83e4b1a18bdecc"/><section>
+    <title>SMARTCARD_STOPBITS_2</title>
+<indexterm><primary>SMARTCARD_STOPBITS_2</primary><secondary>SMARTCARD_Stop_Bits</secondary></indexterm>
+<indexterm><primary>SMARTCARD_Stop_Bits</primary><secondary>SMARTCARD_STOPBITS_2</secondary></indexterm>
+<para><computeroutput>#define SMARTCARD_STOPBITS_2   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga2b24d14f0e5d1c76c878b08aad44d02b">USART_CR2_STOP_1</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__smartcard_8h_source_1l00185">185</link> of file <link linkend="_stm32f4xx__hal__smartcard_8h_source">stm32f4xx_hal_smartcard.h</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__ll__sdmmc_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_sdmmc.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_sdmmc.h</primary></indexterm>
+<para>
+
+<para>Header file of SDMMC HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_s_d_i_o___init_type_def">SDIO_InitTypeDef</link></para>
+
+<para>SDMMC Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_d_i_o___cmd_init_type_def">SDIO_CmdInitTypeDef</link></para>
+
+<para>SDIO Command Control structure. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_d_i_o___data_init_type_def">SDIO_DataInitTypeDef</link></para>
+
+<para>SDIO Data Control structure. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___edge_1gaae575ae899dc27f107bf0ab49528697b">SDIO_CLOCK_EDGE_RISING</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___edge_1ga69b602faf34eb16fd0c801f3e759a6a6">SDIO_CLOCK_EDGE_FALLING</link>   ((uint32_t)0x00002000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___edge_1ga63420b10a52e3d82a89a45f20dc41786">IS_SDIO_CLOCK_EDGE</link>(EDGE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___bypass_1gab7ab9ebbbd0240584602612b4c77b9de">SDIO_CLOCK_BYPASS_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___bypass_1gafd4d0457f5c894cbafb8ec05c8192c13">SDIO_CLOCK_BYPASS_ENABLE</link>   ((uint32_t)0x00000400)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___bypass_1ga5d5a2fcdd3150e4a89c5aa1efd738dec">IS_SDIO_CLOCK_BYPASS</link>(BYPASS)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___power___save_1gab6370666b56e3412c21bb2a81b6753d1">SDIO_CLOCK_POWER_SAVE_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___power___save_1ga2c7342b336f224e925a9abb5e2befa50">SDIO_CLOCK_POWER_SAVE_ENABLE</link>   ((uint32_t)0x00000200)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___power___save_1ga41988203e5d4e35a755aa604f1876cd3">IS_SDIO_CLOCK_POWER_SAVE</link>(SAVE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___bus___wide_1ga744d3cd0a3233f126accd651adc2dcfd">SDIO_BUS_WIDE_1B</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___bus___wide_1ga01b76cfc3a048fb305d91321b76c8f1c">SDIO_BUS_WIDE_4B</link>   ((uint32_t)0x00000800)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___bus___wide_1ga36f413c4eab12cd1cecbcbc957032288">SDIO_BUS_WIDE_8B</link>   ((uint32_t)0x00001000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___bus___wide_1gaa5c6ad922117d5df3213631bf68fde5b">IS_SDIO_BUS_WIDE</link>(WIDE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___hardware___flow___control_1ga8966d3f1270c7f6e4b48420fba8b4867">SDIO_HARDWARE_FLOW_CONTROL_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___hardware___flow___control_1ga80a86cce4956cc4a96feb578cb66d580">SDIO_HARDWARE_FLOW_CONTROL_ENABLE</link>   ((uint32_t)0x00004000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___hardware___flow___control_1gad8be549f8348479d064dff21343ae411">IS_SDIO_HARDWARE_FLOW_CONTROL</link>(CONTROL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___clock___division_1gafda76359b5a06588839d7433af6f7d2a">IS_SDIO_CLKDIV</link>(DIV)   ((DIV) &lt;= 0xFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___command___index_1gae988f9f37c4ebb5f5f9866acb30f2880">IS_SDIO_CMD_INDEX</link>(INDEX)   ((INDEX) &lt; 0x40)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___type_1gadbbbde762dc8e55eddf2c658eb54d316">SDIO_RESPONSE_NO</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___type_1ga797dbac5cb222daa4382afc93c20ee44">SDIO_RESPONSE_SHORT</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___type_1gac6046fd93c81500547300e8ded2204fe">SDIO_RESPONSE_LONG</link>   ((uint32_t)0x000000C0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___type_1gae4df2359c9b637694b9baa220c16e062">IS_SDIO_RESPONSE</link>(RESPONSE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___wait___interrupt___state_1gaaa2c9077c6d7ead3ce743357a8621937">SDIO_WAIT_NO</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___wait___interrupt___state_1ga60501697355a207e444a950e5da9cf68">SDIO_WAIT_IT</link>   ((uint32_t)0x00000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___wait___interrupt___state_1ga638167f3b879d6c00559186ea98ae479">SDIO_WAIT_PEND</link>   ((uint32_t)0x00000200)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___wait___interrupt___state_1ga7ee5c289c8e06a76b849808d15b03810">IS_SDIO_WAIT</link>(WAIT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___c_p_s_m___state_1gae9016d83e5c42b298fa2ac97274b6627">SDIO_CPSM_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___c_p_s_m___state_1ga5d42fd91c15ce84dce966eff20235a4c">SDIO_CPSM_ENABLE</link>   ((uint32_t)0x00000400)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___c_p_s_m___state_1ga58cf04903dab015106e4e0937bef443b">IS_SDIO_CPSM</link>(CPSM)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___registers_1ga9d78943952cf0e36736313d949520a2d">SDIO_RESP1</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___registers_1gabd551272af4161844b5358fd3c3c379c">SDIO_RESP2</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___registers_1gae9887669a72395d54d600829a959d2f4">SDIO_RESP3</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___registers_1ga57c3f6414198e5497736e398c02a1d9e">SDIO_RESP4</link>   ((uint32_t)0x0000000C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___response___registers_1gaea6a7f75a5e677d50ba5c9ae2d3a7839">IS_SDIO_RESP</link>(RESP)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___length_1ga57dd64db3f69d18625ea8ca82c009fad">IS_SDIO_DATA_LENGTH</link>(LENGTH)   ((LENGTH) &lt;= 0x01FFFFFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1gaaf62bfdea9e5c700420b86442372e1bc">SDIO_DATABLOCK_SIZE_1B</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1ga80e70bca61b235fbecc100d0225b7e06">SDIO_DATABLOCK_SIZE_2B</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1gae2f4174dab373210ab2bc47869ecdfa4">SDIO_DATABLOCK_SIZE_4B</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1gaa32fe414a15e353a219426ad36be8abc">SDIO_DATABLOCK_SIZE_8B</link>   ((uint32_t)0x00000030)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1gaefff93a9e7ecaeb6b8a458666202b936">SDIO_DATABLOCK_SIZE_16B</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1ga2f7dc228457fc853692f58deae9aa863">SDIO_DATABLOCK_SIZE_32B</link>   ((uint32_t)0x00000050)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1ga81d36cfccc504e1c30ad23e73e9b7072">SDIO_DATABLOCK_SIZE_64B</link>   ((uint32_t)0x00000060)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1ga46cef807ffe209ef8aea1b409567846b">SDIO_DATABLOCK_SIZE_128B</link>   ((uint32_t)0x00000070)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1gad041ebe99d4a5137b0f88862e99512df">SDIO_DATABLOCK_SIZE_256B</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1gae4e29a8b5c3b2267187c74f1aa1b9fff">SDIO_DATABLOCK_SIZE_512B</link>   ((uint32_t)0x00000090)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1gab6189dc3c5c42720569eae0fb91ece3b">SDIO_DATABLOCK_SIZE_1024B</link>   ((uint32_t)0x000000A0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1ga8bfef7f5ff35122448508df0a9a4d4c3">SDIO_DATABLOCK_SIZE_2048B</link>   ((uint32_t)0x000000B0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1gae93c4745ffe48790e21ae14d5bfe0834">SDIO_DATABLOCK_SIZE_4096B</link>   ((uint32_t)0x000000C0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1ga57990c3494df327abe1419b30db2f26c">SDIO_DATABLOCK_SIZE_8192B</link>   ((uint32_t)0x000000D0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1ga50d0bd444e7c4edc80cbbadbaeb32760">SDIO_DATABLOCK_SIZE_16384B</link>   ((uint32_t)0x000000E0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___data___block___size_1ga25ce8d64134659c479d61aa681761948">IS_SDIO_BLOCK_SIZE</link>(SIZE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___transfer___direction_1ga834bb607ac95c4312d5139d0bdc76ce7">SDIO_TRANSFER_DIR_TO_CARD</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___transfer___direction_1gaae0cf7898718ec44e3a98c6d4f73db56">SDIO_TRANSFER_DIR_TO_SDIO</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___transfer___direction_1gaf84b8004cfef6a5a525b20db8a83c2f7">IS_SDIO_TRANSFER_DIR</link>(<link linkend="__dir_handle_8h_1a7d5f081155cbd798e6c01a4f37a62698">DIR</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___transfer___type_1ga8eac4d5311327797789c9f75988b3209">SDIO_TRANSFER_MODE_BLOCK</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___transfer___type_1gae6a31263ebc1d2cc0b02cb089c2d9be9">SDIO_TRANSFER_MODE_STREAM</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___transfer___type_1gaf7565ea93f9ed01558bdc9ad80dac763">IS_SDIO_TRANSFER_MODE</link>(MODE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___d_p_s_m___state_1gad6f5aab6faef12a209e4ef8baad61b67">SDIO_DPSM_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___d_p_s_m___state_1ga334b34c4ede95147ea18ba8438f0d3a3">SDIO_DPSM_ENABLE</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___d_p_s_m___state_1gac87a2d7a8fc417a4514d733be50e6d63">IS_SDIO_DPSM</link>(DPSM)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___read___wait___mode_1ga57b0adf794dfd396d19d68be2e68692e">SDIO_READ_WAIT_MODE_CLK</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___read___wait___mode_1gae6b7205077c899b163bbf4d39e2227e1">SDIO_READ_WAIT_MODE_DATA2</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___read___wait___mode_1ga35144093f5b3553a62c2248896eead4d">IS_SDIO_READWAIT_MODE</link>(MODE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gabb076105e18355a260c40a379511e72f">SDIO_IT_CCRCFAIL</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gaf3321305cb4e24419185a4b92ead299a">SDIO_IT_DCRCFAIL</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga3c2fdef0993f10e65d4fddbdf71febed">SDIO_IT_CTIMEOUT</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gaf5ce4bfa8459ccbe892791e5cdc26a6f">SDIO_IT_DTIMEOUT</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga93d4dbe3162b8507b2834a3e29e6c648">SDIO_IT_TXUNDERR</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga272953292e1b43b2108b00e75db76512">SDIO_IT_RXOVERR</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga6df3bb694dc00e250cd22e16a03d6910">SDIO_IT_CMDREND</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gaf9d8fc4651c4b7555fb9ee4e5af6ca63">SDIO_IT_CMDSENT</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga6cc1c521b64fc57b844336f7f175dd1e">SDIO_IT_DATAEND</link>   ((uint32_t)0x00000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga55f7e65ed1b70d5a6abdc3cc41b55766">SDIO_IT_STBITERR</link>   ((uint32_t)0x00000200)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gaa1b1fb453a3ce3b10928aaeada2b2186">SDIO_IT_DBCKEND</link>   ((uint32_t)0x00000400)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gae73ae9bc72eaeedc2a37221697bc33e2">SDIO_IT_CMDACT</link>   ((uint32_t)0x00000800)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga811e683588ab887abb0101defafdb51e">SDIO_IT_TXACT</link>   ((uint32_t)0x00001000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga1d9a59a2415b57bdf9827423cb6ce3a0">SDIO_IT_RXACT</link>   ((uint32_t)0x00002000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gaf538ae7dd73d55e76069e8710858038a">SDIO_IT_TXFIFOHE</link>   ((uint32_t)0x00004000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gadcbc1a0de8b9df83b5c6c839b4739c87">SDIO_IT_RXFIFOHF</link>   ((uint32_t)0x00008000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga3ec471bd9233561d6e929ebac6362b75">SDIO_IT_TXFIFOF</link>   ((uint32_t)0x00010000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gae60a1d8e5a7caff85d84e513b093b8a8">SDIO_IT_RXFIFOF</link>   ((uint32_t)0x00020000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gabff1466c2f2effbe30b80a11c132d7c0">SDIO_IT_TXFIFOE</link>   ((uint32_t)0x00040000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga80b01aaf64c873d21bfa95e5d98d8766">SDIO_IT_RXFIFOE</link>   ((uint32_t)0x00080000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gac8e5744e6d977182a6fc7484a6f1195e">SDIO_IT_TXDAVL</link>   ((uint32_t)0x00100000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gaf236079642db95772334d1e9b9b27570">SDIO_IT_RXDAVL</link>   ((uint32_t)0x00200000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gaf5d7559460a9ff1fccc82d815de25cb4">SDIO_IT_SDIOIT</link>   ((uint32_t)0x00400000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1gae045cd5ba681d2df8b1031b8f659139a">SDIO_IT_CEATAEND</link>   ((uint32_t)0x00800000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt__sources_1ga0e413e92ec50bab73042e8965acc3e6c">IS_SDIO_IT</link>(IT)   ((((IT) &amp; (uint32_t)0xFF000000) == 0x00) &amp;&amp; ((IT) != (uint32_t)0x00))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga8ff1f3960378e05ec3c949940e1c49d0">SDIO_FLAG_CCRCFAIL</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga6de936ea11cbc79444d519268ad9f9bd">SDIO_FLAG_DCRCFAIL</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga7389f64ff6cfa4f459bf852b5faede30">SDIO_FLAG_CTIMEOUT</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga2d2fd219dd9fea522862195ab9568345">SDIO_FLAG_DTIMEOUT</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gabd18f8e5d5387a38dccbe1bf28ae5dbc">SDIO_FLAG_TXUNDERR</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gad49d60039e40d31b734cfacf90caa84f">SDIO_FLAG_RXOVERR</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga083531db75a1e4c05c47578763d53af1">SDIO_FLAG_CMDREND</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gac81f3837aac17a6aed7310a8ea460f17">SDIO_FLAG_CMDSENT</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gaaacb2f6207c149e05f8bdd70e5d49926">SDIO_FLAG_DATAEND</link>   ((uint32_t)0x00000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gae83f7cb3fa1183898131f3de47c2333e">SDIO_FLAG_STBITERR</link>   ((uint32_t)0x00000200)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga5452d8033567821709bd7d5f06547b70">SDIO_FLAG_DBCKEND</link>   ((uint32_t)0x00000400)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gad12a9b2bd30e7b907cbabfd92fc645b3">SDIO_FLAG_CMDACT</link>   ((uint32_t)0x00000800)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gad5d075c98012586b169ec131aab2eeb5">SDIO_FLAG_TXACT</link>   ((uint32_t)0x00001000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gacc935dd830338970890a05922dff8ab7">SDIO_FLAG_RXACT</link>   ((uint32_t)0x00002000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gae9277461d3c8984dc31af318e2df1959">SDIO_FLAG_TXFIFOHE</link>   ((uint32_t)0x00004000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga8c5942ae3df21efad2d7c61a46015758">SDIO_FLAG_RXFIFOHF</link>   ((uint32_t)0x00008000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gad3ca936300ef251639a4cfbe2f63b6b8">SDIO_FLAG_TXFIFOF</link>   ((uint32_t)0x00010000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gaf92cb783f000b8d946fe8ace81b51df2">SDIO_FLAG_RXFIFOF</link>   ((uint32_t)0x00020000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gac41ef05773abad79b4b0c443a77733db">SDIO_FLAG_TXFIFOE</link>   ((uint32_t)0x00040000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga59ea7e2dc22df742053c5e525b98599d">SDIO_FLAG_RXFIFOE</link>   ((uint32_t)0x00080000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga9c6620d6b16b6af19d3e14f40e688631">SDIO_FLAG_TXDAVL</link>   ((uint32_t)0x00100000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga7558b354658171bb6aa1b6f1e16d8e21">SDIO_FLAG_RXDAVL</link>   ((uint32_t)0x00200000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gae888ec1c9885c35a5f8e01bcffe324a1">SDIO_FLAG_SDIOIT</link>   ((uint32_t)0x00400000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga3c8d09a405944948e7a1c5493d49aff1">SDIO_FLAG_CEATAEND</link>   ((uint32_t)0x00800000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga04b3c3c316e112172abacbf5e316f24a">IS_SDIO_FLAG</link>(FLAG)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1ga8a093bc0b51901676fd5da7087d8ab3a">IS_SDIO_CLEAR_FLAG</link>(FLAG)   ((((FLAG) &amp; (uint32_t)0xFF3FF800) == 0x00) &amp;&amp; ((FLAG) != (uint32_t)0x00))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gaef42c81f1f6250d8f9f438f4e16d1e98">IS_SDIO_GET_IT</link>(IT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___flags_1gaf829b01d8c3e9a1e4e04d39abdc8c355">IS_SDIO_CLEAR_IT</link>(IT)   ((((IT) &amp; (uint32_t)0xFF3FF800) == 0x00) &amp;&amp; ((IT) != (uint32_t)0x00))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___instance__definition_1ga73932cb2c83be6be1884d3cba2fc0063">IS_SDIO_ALL_INSTANCE</link>(INSTANCE)   ((INSTANCE) == <link linkend="_group___peripheral__declaration_1ga8149aa2760fffac16bc75216d5fd9331">SDIO</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link>   (<link linkend="_group___peripheral__registers__structures_1ga95dd0abbc6767893b4b02935fa846f52">SDIO_BASE</link> - <link linkend="_group___peripheral__registers__structures_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gac5d642be874338519fdec175204ca8ed">CLKCR_OFFSET</link>   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga6ad1da47f9d84c54eb620b9231ebec86">CLKEN_BitNumber</link>   0x08</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gabfb5772b9b734972b576309f7ca8bf92">CLKCR_CLKEN_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gac5d642be874338519fdec175204ca8ed">CLKCR_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga6ad1da47f9d84c54eb620b9231ebec86">CLKEN_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link>   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x0C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gaf88f03a42d76974b55dfb8bda65ade97">SDIOSUSPEND_BitNumber</link>   0x0B</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga931e48aa282e2a937308f57f807e0781">CMD_SDIOSUSPEND_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gaf88f03a42d76974b55dfb8bda65ade97">SDIOSUSPEND_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga1d1112c7b804791a0fffd8b317085aeb">ENCMDCOMPL_BitNumber</link>   0x0C</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gade06098d1616639ce5f1b70675280b7c">CMD_ENCMDCOMPL_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga1d1112c7b804791a0fffd8b317085aeb">ENCMDCOMPL_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gab6d83a7ccd4a0d9ea9a09fec263fb25f">NIEN_BitNumber</link>   0x0D</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga08623f1d053677de8b20a6f5f5090edd">CMD_NIEN_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gab6d83a7ccd4a0d9ea9a09fec263fb25f">NIEN_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gabd4fd3bb700b879f843ccc867db1832e">ATACMD_BitNumber</link>   0x0E</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gabb7e537f931b6fdd3b49e826f2e19d7c">CMD_ATACMD_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gabd4fd3bb700b879f843ccc867db1832e">ATACMD_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link>   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x2C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gab2af311e327213503f0dbf3d013b7944">DMAEN_BitNumber</link>   0x03</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga43f7336d4f955c6cf1f676ccbc043fe9">DCTRL_DMAEN_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gab2af311e327213503f0dbf3d013b7944">DMAEN_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga773045c51d3e8daee0c181517c44a2df">RWSTART_BitNumber</link>   0x08</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gac776c39dfac0e1ed007217133e1145c3">DCTRL_RWSTART_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga773045c51d3e8daee0c181517c44a2df">RWSTART_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gae8c0654ad5cba23281bcfa77ef19b9cf">RWSTOP_BitNumber</link>   0x09</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga678da1db835676b0fb1976cf3408e2d1">DCTRL_RWSTOP_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gae8c0654ad5cba23281bcfa77ef19b9cf">RWSTOP_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gad7b722671f65e79d1be2899b643278ad">RWMOD_BitNumber</link>   0x0A</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gad34bfe8650534ce24320ae83886c91e3">DCTRL_RWMOD_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gad7b722671f65e79d1be2899b643278ad">RWMOD_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga37f3e1612e0dae8160be978ebfa54301">SDIOEN_BitNumber</link>   0x0B</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga894f7da62b89ddd9f4b79d066056a3c7">DCTRL_SDIOEN_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga37f3e1612e0dae8160be978ebfa54301">SDIOEN_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gac8d10dd1e49ca9e8a6954146654e9a01">CLKCR_CLEAR_MASK</link>   ((uint32_t)0xFFFF8100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga7e6ec7be68d0fbb8fb4e3725cca9a05c">PWR_PWRCTRL_MASK</link>   ((uint32_t)0xFFFFFFFC)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga9e9fc7810b95805aeeb760bbdd87fa9b">DCTRL_CLEAR_MASK</link>   ((uint32_t)0xFFFFFF08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga2325d77090e44221b07f8fba5bc9217e">CMD_CLEAR_MASK</link>   ((uint32_t)0xFFFFF800)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga4285ce49b005e3d03ddf9fdc491c4d70">SDIO_RESP_ADDR</link>   ((uint32_t)(<link linkend="_group___peripheral__registers__structures_1ga95dd0abbc6767893b4b02935fa846f52">SDIO_BASE</link> + 0x14))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga50b379bbcb59f027be37e9e787d3aa94">SDIO_FIFO_ADDRESS</link>   ((uint32_t)0x40012C80)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga3afd2159b8f378c90ccd48a4afab3691">SDIO_INIT_CLK_DIV</link>   ((uint8_t)0x76)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gad37fe2cf88496122b5fdf14ae7f529b5">SDIO_TRANSFER_CLK_DIV</link>   ((uint8_t)0x0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga25d754a9f19a69345b6af096f1f5b2a2">__SDIO_ENABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)<link linkend="_group___s_d_m_m_c_1gabfb5772b9b734972b576309f7ca8bf92">CLKCR_CLKEN_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>)</para>
+
+<para>Enable the SDIO device. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gad3078138e51a29cf0f1c69c078347d80">__SDIO_DISABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)<link linkend="_group___s_d_m_m_c_1gabfb5772b9b734972b576309f7ca8bf92">CLKCR_CLKEN_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>)</para>
+
+<para>Disable the SDIO device. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga6bda6c5413d3924024b84c98547233fa">__SDIO_DMA_ENABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)<link linkend="_group___s_d_m_m_c_1ga43f7336d4f955c6cf1f676ccbc043fe9">DCTRL_DMAEN_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>)</para>
+
+<para>Enable the SDIO DMA transfer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga001ffe6053dc5141eb08980da3851c42">__SDIO_DMA_DISABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)<link linkend="_group___s_d_m_m_c_1ga43f7336d4f955c6cf1f676ccbc043fe9">DCTRL_DMAEN_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>)</para>
+
+<para>Disable the SDIO DMA transfer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gaa9e3afaf168e4ca1e0db3384ec19e1b2">__SDIO_ENABLE_IT</link>(__INSTANCE__,  __INTERRUPT__)   ((__INSTANCE__)-&gt;MASK |= (__INTERRUPT__))</para>
+
+<para>Enable the SDIO device interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gaaf2ed87824de8d4506734a5d1676cc9a">__SDIO_DISABLE_IT</link>(__INSTANCE__,  __INTERRUPT__)   ((__INSTANCE__)-&gt;MASK &amp;= ~(__INTERRUPT__))</para>
+
+<para>Disable the SDIO device interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gad758b5b751fca4580841ee7a790fcce7">__SDIO_GET_FLAG</link>(__INSTANCE__,  __FLAG__)   (((__INSTANCE__)-&gt;STA &amp;(__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Checks whether the specified SDIO flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga087683825553ad90ae5a84912fb2596f">__SDIO_CLEAR_FLAG</link>(__INSTANCE__,  __FLAG__)   ((__INSTANCE__)-&gt;ICR = (__FLAG__))</para>
+
+<para>Clears the SDIO&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga813e28dac36317a9b302ddf3ce59d36c">__SDIO_GET_IT</link>   (__INSTANCE__, __INTERRUPT__)   (((__INSTANCE__)-&gt;STA &amp;(__INTERRUPT__)) == (__INTERRUPT__))</para>
+
+<para>Checks whether the specified SDIO interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gad93c671a251adeeeaabbc30ed9c49fe4">__SDIO_CLEAR_IT</link>(__INSTANCE__,  __INTERRUPT__)   ((__INSTANCE__)-&gt;ICR = (__INTERRUPT__))</para>
+
+<para>Clears the SDIO&apos;s interrupt pending bits. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga4fa51db0706642889e424baea68cebbd">__SDIO_START_READWAIT_ENABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1gac776c39dfac0e1ed007217133e1145c3">DCTRL_RWSTART_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>)</para>
+
+<para>Enable Start the SD I/O Read Wait operation. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga8956e49532802f7b56606dc618ad3f14">__SDIO_START_READWAIT_DISABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1gac776c39dfac0e1ed007217133e1145c3">DCTRL_RWSTART_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>)</para>
+
+<para>Disable Start the SD I/O Read Wait operations. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga2ea775c7ca459015fb99c16acf3052d4">__SDIO_STOP_READWAIT_ENABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1ga678da1db835676b0fb1976cf3408e2d1">DCTRL_RWSTOP_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>)</para>
+
+<para>Enable Start the SD I/O Read Wait operation. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga9009c516ab41025c09c4e69cd585cc47">__SDIO_STOP_READWAIT_DISABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1ga678da1db835676b0fb1976cf3408e2d1">DCTRL_RWSTOP_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>)</para>
+
+<para>Disable Stop the SD I/O Read Wait operations. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga4120d9386ab66509dec2c98955720ba5">__SDIO_OPERATION_ENABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1ga894f7da62b89ddd9f4b79d066056a3c7">DCTRL_SDIOEN_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>)</para>
+
+<para>Enable the SD I/O Mode Operation. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga9249a178a8353c1dd851d794c3fedb0e">__SDIO_OPERATION_DISABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1ga894f7da62b89ddd9f4b79d066056a3c7">DCTRL_SDIOEN_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>)</para>
+
+<para>Disable the SD I/O Mode Operation. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga99032ee66d0e6c1eaa0ac4a78d769cbf">__SDIO_SUSPEND_CMD_ENABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1ga931e48aa282e2a937308f57f807e0781">CMD_SDIOSUSPEND_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>)</para>
+
+<para>Enable the SD I/O Suspend command sending. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga7cfca795ba8a4a68b2a00dba4d81b243">__SDIO_SUSPEND_CMD_DISABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1ga931e48aa282e2a937308f57f807e0781">CMD_SDIOSUSPEND_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>)</para>
+
+<para>Disable the SD I/O Suspend command sending. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga3c30ddb66cb268431f13ce2bb1a8013c">__SDIO_CEATA_CMD_COMPLETION_ENABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1gade06098d1616639ce5f1b70675280b7c">CMD_ENCMDCOMPL_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>)</para>
+
+<para>Enable the command completion signal. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gaff7be6d6e71a9857ab99a121d75e65e3">__SDIO_CEATA_CMD_COMPLETION_DISABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1gade06098d1616639ce5f1b70675280b7c">CMD_ENCMDCOMPL_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>)</para>
+
+<para>Disable the command completion signal. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gaaac661a6c74687fb348b4de5503168c3">__SDIO_CEATA_ENABLE_IT</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1ga08623f1d053677de8b20a6f5f5090edd">CMD_NIEN_BB</link> = (uint32_t)0)</para>
+
+<para>Enable the CE-ATA interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1ga6526c46ef91d13f230ec35f03a69d196">__SDIO_CEATA_DISABLE_IT</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1ga08623f1d053677de8b20a6f5f5090edd">CMD_NIEN_BB</link> = (uint32_t)1)</para>
+
+<para>Disable the CE-ATA interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gaed1d0441c3daaf6c0ebb3b54fa9de9f7">__SDIO_CEATA_SENDCMD_ENABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1gabb7e537f931b6fdd3b49e826f2e19d7c">CMD_ATACMD_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>)</para>
+
+<para>Enable send CE-ATA command (CMD61). </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_i_o___interrupt___clock_1gaddcc2515dfadbeaa63c6538c15bcfedb">__SDIO_CEATA_SENDCMD_DISABLE</link>()   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___s_d_m_m_c_1gabb7e537f931b6fdd3b49e826f2e19d7c">CMD_ATACMD_BB</link> = <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>)</para>
+
+<para>Disable send CE-ATA command (CMD61). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga19c1f35bc992e008b4a4bd812561b757">SDIO_Init</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx, <link linkend="_struct_s_d_i_o___init_type_def">SDIO_InitTypeDef</link> Init)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1ga47b3aea3560c00fccb5b6967eb8fdf9f">SDIO_ReadFIFO</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga86ea7c549d5034f14b4ba4b52f707a57">SDIO_WriteFIFO</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx, uint32_t *pWriteData)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga6245d444d06f38176437446f7b4ad047">SDIO_PowerState_ON</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga162f9bf71abaaa3d0be637c9718f0beb">SDIO_PowerState_OFF</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1ga2079f67b0c5b7bc5f745828f6e83ee29">SDIO_GetPowerState</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga5b0b3b1cf9fe9c2201b7fc6f69c62377">SDIO_SendCommand</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx, <link linkend="_struct_s_d_i_o___cmd_init_type_def">SDIO_CmdInitTypeDef</link> *SDIO_CmdInitStruct)</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___s_d_m_m_c_1ga6cd11d4e0eb89568585ddc3224f27f40">SDIO_GetCommandResponse</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1ga5c1e859511840e8cca6a9a768bce220b">SDIO_GetResponse</link> (uint32_t SDIO_RESP)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga4be023f80f0a1700e0a5886d24bf3293">SDIO_DataConfig</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx, <link linkend="_struct_s_d_i_o___data_init_type_def">SDIO_DataInitTypeDef</link> *SDIO_DataInitStruct)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1gad9ecd1a1192eeda227481ce0d06da031">SDIO_GetDataCounter</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1gad13ed8c07a08d91f90eb0ec5bece72a4">SDIO_GetFIFOCount</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga2bc047e7958ae43455a40ce629665b63">SDIO_SetSDIOReadWaitMode</link> (uint32_t SDIO_ReadWaitMode)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of SDMMC HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+</section>

@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_ticker" xml:lang="en-US">
+<title>Ticker Class Reference</title>
+<indexterm><primary>Ticker</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Ticker.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Ticker:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmbed_1_1_ticker.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classmbed_1_1_ticker_1a2fce5ed90836ae8136f8c14df8fd09db">attach</link> (void(*fptr)(void), float t)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_classmbed_1_1_ticker_1af45345399cbfc84791370ae79d2275e3">attach</link> (T *tptr, void(T::*mptr)(void), float t)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_ticker_1a09702756876480fbf436505db8fe70f0">attach_us</link> (void(*fptr)(void), unsigned int t)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_classmbed_1_1_ticker_1a2e9e4b2d3e8adf447fb89af5cc14135c">attach_us</link> (T *tptr, void(T::*mptr)(void), unsigned int t)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_ticker_1ac295bade8aee589f6718dfa79edc2a34">detach</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classmbed_1_1_ticker_1a50808a3fbc1f22a6d4a98036d001f087">setup</link> (unsigned int t)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classmbed_1_1_ticker_1a10a5ab629c238472e20543206af37ce3">handler</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_classmbed_1_1_ticker_1a68b93a57027743d01e29a8e08779316a">_delay</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link> <link linkend="_classmbed_1_1_ticker_1a03ea04d108129fd57399a00c9b9ce8d2">_function</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A <link linkend="_classmbed_1_1_ticker">Ticker</link> is used to call a function at a recurring interval</para>
+
+<para>You can use as many seperate <link linkend="_classmbed_1_1_ticker">Ticker</link> objects as you require.</para>
+
+<para>Example: <literallayout><computeroutput><emphasis role="comment">//&#32;Toggle&#32;the&#32;blinking&#32;led&#32;after&#32;5&#32;seconds</emphasis>
+
+<emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed_8h">mbed.h</link>&quot;</emphasis>
+
+Ticker&#32;timer;
+DigitalOut&#32;led1(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1adac6477842247cab1a8c02c65f431b44">LED1</link>);
+DigitalOut&#32;led2(<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1a8379bbaa96d151e6adac488b2a147b7a">LED2</link>);
+
+<emphasis role="keywordtype">int</emphasis>&#32;flip&#32;=&#32;0;
+
+<emphasis role="keywordtype">void</emphasis>&#32;attime()&#32;{
+&#32;&#32;&#32;&#32;flip&#32;=&#32;!flip;
+}
+
+<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>()&#32;{
+&#32;&#32;&#32;&#32;timer.attach(&amp;attime,&#32;5);
+&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(1)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(flip&#32;==&#32;0)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;led1&#32;=&#32;!led1;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;led2&#32;=&#32;!led2;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(0.2);
+&#32;&#32;&#32;&#32;}
+}
+</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__ticker_8h_source_1l00057">57</link> of file <link linkend="__ticker_8h_source">Ticker.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_ticker_1af45345399cbfc84791370ae79d2275e3"/><section>
+    <title>attach()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>attach</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>attach</secondary></indexterm>
+<para><computeroutput>void attach (T * tptr, void(T::*)(void) mptr, float t)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Attach a member function to be called by the <link linkend="_classmbed_1_1_ticker">Ticker</link>, specifiying the interval in seconds</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tptr</entry><entry>
+<para>pointer to the object to call the member function on </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mptr</entry><entry>
+<para>pointer to the member function to be called </para>
+</entry>
+                            </row>
+                            <row>
+<entry>t</entry><entry>
+<para>the time between calls in seconds </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__ticker_8h_source_1l00077">77</link> of file <link linkend="__ticker_8h_source">Ticker.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_ticker_1a2fce5ed90836ae8136f8c14df8fd09db"/><section>
+    <title>attach()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>attach</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>attach</secondary></indexterm>
+<para><computeroutput>void attach (void(*)(void) fptr, float t)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Attach a function to be called by the <link linkend="_classmbed_1_1_ticker">Ticker</link>, specifiying the interval in seconds</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fptr</entry><entry>
+<para>pointer to the function to be called </para>
+</entry>
+                            </row>
+                            <row>
+<entry>t</entry><entry>
+<para>the time between calls in seconds </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__ticker_8h_source_1l00066">66</link> of file <link linkend="__ticker_8h_source">Ticker.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_ticker_1a2e9e4b2d3e8adf447fb89af5cc14135c"/><section>
+    <title>attach_us()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>attach_us</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>attach_us</secondary></indexterm>
+<para><computeroutput>void attach_us (T * tptr, void(T::*)(void) mptr, unsigned int t)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Attach a member function to be called by the <link linkend="_classmbed_1_1_ticker">Ticker</link>, specifiying the interval in micro-seconds</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tptr</entry><entry>
+<para>pointer to the object to call the member function on </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mptr</entry><entry>
+<para>pointer to the member function to be called </para>
+</entry>
+                            </row>
+                            <row>
+<entry>t</entry><entry>
+<para>the time between calls in micro-seconds </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__ticker_8h_source_1l00098">98</link> of file <link linkend="__ticker_8h_source">Ticker.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_ticker_1a09702756876480fbf436505db8fe70f0"/><section>
+    <title>attach_us()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>attach_us</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>attach_us</secondary></indexterm>
+<para><computeroutput>void attach_us (void(*)(void) fptr, unsigned int t)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Attach a function to be called by the <link linkend="_classmbed_1_1_ticker">Ticker</link>, specifiying the interval in micro-seconds</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fptr</entry><entry>
+<para>pointer to the function to be called </para>
+</entry>
+                            </row>
+                            <row>
+<entry>t</entry><entry>
+<para>the time between calls in micro-seconds </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__ticker_8h_source_1l00086">86</link> of file <link linkend="__ticker_8h_source">Ticker.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_ticker_1ac295bade8aee589f6718dfa79edc2a34"/><section>
+    <title>detach()</title>
+<indexterm><primary>detach</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>detach</secondary></indexterm>
+<para><computeroutput>void detach ( )</computeroutput></para>
+<para>Detach the function </para>
+</section>
+<anchor xml:id="_classmbed_1_1_ticker_1a10a5ab629c238472e20543206af37ce3"/><section>
+    <title>handler()</title>
+<indexterm><primary>handler</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>handler</secondary></indexterm>
+<para><computeroutput>virtual void handler ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classmbed_1_1_timer_event_1a5cb82440540ffc0e041f54dbb66e3f98">TimerEvent</link>.</para>
+<para>
+Reimplemented in <link linkend="_classmbed_1_1_timeout_1a10a5ab629c238472e20543206af37ce3">Timeout</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_ticker_1a50808a3fbc1f22a6d4a98036d001f087"/><section>
+    <title>setup()</title>
+<indexterm><primary>setup</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>setup</secondary></indexterm>
+<para><computeroutput>void setup (unsigned int t)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classmbed_1_1_ticker_1a68b93a57027743d01e29a8e08779316a"/><section>
+    <title>_delay</title>
+<indexterm><primary>_delay</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>_delay</secondary></indexterm>
+<para><computeroutput>unsigned int _delay<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ticker_8h_source_1l00111">111</link> of file <link linkend="__ticker_8h_source">Ticker.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_ticker_1a03ea04d108129fd57399a00c9b9ce8d2"/><section>
+    <title>_function</title>
+<indexterm><primary>_function</primary><secondary>Ticker</secondary></indexterm>
+<indexterm><primary>Ticker</primary><secondary>_function</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link> _function<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__ticker_8h_source_1l00112">112</link> of file <link linkend="__ticker_8h_source">Ticker.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__ticker_8h">Ticker.h</link></section>
+</section>

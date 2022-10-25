@@ -1,0 +1,35 @@
+\hypertarget{group___s_m_a_r_t_c_a_r_d___parity}{}\doxysection{SMARTCARD\+\_\+\+Parity}
+\label{group___s_m_a_r_t_c_a_r_d___parity}\index{SMARTCARD\_Parity@{SMARTCARD\_Parity}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___parity_gabdf3059c7a116ab8a104954a1a4ec5b6}\label{group___s_m_a_r_t_c_a_r_d___parity_gabdf3059c7a116ab8a104954a1a4ec5b6}} 
+\#define {\bfseries SMARTCARD\+\_\+\+PARITY\+\_\+\+NONE}~((uint32\+\_\+t)0x00000000)
+\item 
+\mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___parity_ga94ae871b29c18b59dab9a045443d11c8}\label{group___s_m_a_r_t_c_a_r_d___parity_ga94ae871b29c18b59dab9a045443d11c8}} 
+\#define {\bfseries SMARTCARD\+\_\+\+PARITY\+\_\+\+EVEN}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}})
+\item 
+\mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___parity_gaef2239030beeb07577e43965b013f65d}\label{group___s_m_a_r_t_c_a_r_d___parity_gaef2239030beeb07577e43965b013f65d}} 
+\#define {\bfseries SMARTCARD\+\_\+\+PARITY\+\_\+\+ODD}~((uint32\+\_\+t)(\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}} $\vert$ \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2e159d36ab2c93a2c1942df60e9eebbe}{USART\+\_\+\+CR1\+\_\+\+PS}}))
+\item 
+\#define \mbox{\hyperlink{group___s_m_a_r_t_c_a_r_d___parity_ga958995a8f043b3057cee33a8098ca095}{IS\+\_\+\+SMARTCARD\+\_\+\+PARITY}}(PARITY)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_m_a_r_t_c_a_r_d___parity_ga958995a8f043b3057cee33a8098ca095}\label{group___s_m_a_r_t_c_a_r_d___parity_ga958995a8f043b3057cee33a8098ca095}} 
+\index{SMARTCARD\_Parity@{SMARTCARD\_Parity}!IS\_SMARTCARD\_PARITY@{IS\_SMARTCARD\_PARITY}}
+\index{IS\_SMARTCARD\_PARITY@{IS\_SMARTCARD\_PARITY}!SMARTCARD\_Parity@{SMARTCARD\_Parity}}
+\doxysubsubsection{\texorpdfstring{IS\_SMARTCARD\_PARITY}{IS\_SMARTCARD\_PARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SMARTCARD\+\_\+\+PARITY(\begin{DoxyParamCaption}\item[{}]{PARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((PARITY) == SMARTCARD\_PARITY\_NONE) || \(\backslash\)}
+\DoxyCodeLine{                                     ((PARITY) == SMARTCARD\_PARITY\_EVEN) || \(\backslash\)}
+\DoxyCodeLine{                                     ((PARITY) == SMARTCARD\_PARITY\_ODD))}
+
+\end{DoxyCode}

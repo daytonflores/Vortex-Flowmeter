@@ -1,0 +1,163 @@
+\hypertarget{stm32f4xx__hal__dac_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+dac.\+h}
+\label{stm32f4xx__hal__dac_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_dac.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_dac.h}}
+\mbox{\hyperlink{stm32f4xx__hal__dac_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_DAC\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_DAC\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{59 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{64 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66   HAL\_DAC\_STATE\_RESET             = 0x00,  }
+\DoxyCodeLine{67   HAL\_DAC\_STATE\_READY             = 0x01,  }
+\DoxyCodeLine{68   HAL\_DAC\_STATE\_BUSY              = 0x02,  }
+\DoxyCodeLine{69   HAL\_DAC\_STATE\_TIMEOUT           = 0x03,  }
+\DoxyCodeLine{70   HAL\_DAC\_STATE\_ERROR             = 0x04   }
+\DoxyCodeLine{71 \}HAL\_DAC\_StateTypeDef;}
+\DoxyCodeLine{72  }
+\DoxyCodeLine{76 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{77 \{}
+\DoxyCodeLine{78   DAC\_TypeDef                 *Instance;     }
+\DoxyCodeLine{80   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_DAC\_StateTypeDef   State;         }
+\DoxyCodeLine{82   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             Lock;          }
+\DoxyCodeLine{84   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}           *DMA\_Handle1;  }
+\DoxyCodeLine{86   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}           *DMA\_Handle2;  }
+\DoxyCodeLine{88   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               ErrorCode;     }
+\DoxyCodeLine{90 \}DAC\_HandleTypeDef;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{95 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{96 \{}
+\DoxyCodeLine{97   uint32\_t DAC\_Trigger;       }
+\DoxyCodeLine{100   uint32\_t DAC\_OutputBuffer;  }
+\DoxyCodeLine{102 \}DAC\_ChannelConfTypeDef;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define  HAL\_DAC\_ERROR\_NONE              0x00    }}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define  HAL\_DAC\_ERROR\_DMAUNDERRUNCH1    0x01    }}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define  HAL\_DAC\_ERROR\_DMAUNDERRUNCH2    0x02    }}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define  HAL\_DAC\_ERROR\_DMA               0x04    }}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_NONE                   ((uint32\_t)0x00000000) }}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_T2\_TRGO                ((uint32\_t)(DAC\_CR\_TSEL1\_2 | DAC\_CR\_TEN1)) }}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_T4\_TRGO                ((uint32\_t)(DAC\_CR\_TSEL1\_2 | DAC\_CR\_TSEL1\_0 | DAC\_CR\_TEN1)) }}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_T5\_TRGO                ((uint32\_t)(DAC\_CR\_TSEL1\_1 | DAC\_CR\_TSEL1\_0 | DAC\_CR\_TEN1)) }}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_T6\_TRGO                ((uint32\_t)DAC\_CR\_TEN1) }}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_T7\_TRGO                ((uint32\_t)(DAC\_CR\_TSEL1\_1 | DAC\_CR\_TEN1)) }}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_T8\_TRGO                ((uint32\_t)(DAC\_CR\_TSEL1\_0 | DAC\_CR\_TEN1)) }}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_EXT\_IT9                ((uint32\_t)(DAC\_CR\_TSEL1\_2 | DAC\_CR\_TSEL1\_1 | DAC\_CR\_TEN1)) }}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define DAC\_TRIGGER\_SOFTWARE               ((uint32\_t)(DAC\_CR\_TSEL1 | DAC\_CR\_TEN1)) }}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define IS\_DAC\_TRIGGER(TRIGGER) (((TRIGGER) == DAC\_TRIGGER\_NONE) || \(\backslash\)}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{                                 ((TRIGGER) == DAC\_TRIGGER\_T2\_TRGO) || \(\backslash\)}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{                                 ((TRIGGER) == DAC\_TRIGGER\_T8\_TRGO) || \(\backslash\)}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{                                 ((TRIGGER) == DAC\_TRIGGER\_T7\_TRGO) || \(\backslash\)}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{                                 ((TRIGGER) == DAC\_TRIGGER\_T5\_TRGO) || \(\backslash\)}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{                                 ((TRIGGER) == DAC\_TRIGGER\_T6\_TRGO) || \(\backslash\)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{                                 ((TRIGGER) == DAC\_TRIGGER\_T4\_TRGO) || \(\backslash\)}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{                                 ((TRIGGER) == DAC\_TRIGGER\_EXT\_IT9) || \(\backslash\)}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{                                 ((TRIGGER) == DAC\_TRIGGER\_SOFTWARE))}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define DAC\_OUTPUTBUFFER\_ENABLE            ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define DAC\_OUTPUTBUFFER\_DISABLE           ((uint32\_t)DAC\_CR\_BOFF1)}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define IS\_DAC\_OUTPUT\_BUFFER\_STATE(STATE) (((STATE) == DAC\_OUTPUTBUFFER\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{                                           ((STATE) == DAC\_OUTPUTBUFFER\_DISABLE))}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define DAC\_CHANNEL\_1                      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define DAC\_CHANNEL\_2                      ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define IS\_DAC\_CHANNEL(CHANNEL) (((CHANNEL) == DAC\_CHANNEL\_1) || \(\backslash\)}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{                                 ((CHANNEL) == DAC\_CHANNEL\_2))}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define DAC\_ALIGN\_12B\_R                    ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define DAC\_ALIGN\_12B\_L                    ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define DAC\_ALIGN\_8B\_R                     ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define IS\_DAC\_ALIGN(ALIGN) (((ALIGN) == DAC\_ALIGN\_12B\_R) || \(\backslash\)}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{                             ((ALIGN) == DAC\_ALIGN\_12B\_L) || \(\backslash\)}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{                             ((ALIGN) == DAC\_ALIGN\_8B\_R))}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define IS\_DAC\_DATA(DATA) ((DATA) <= 0xFFF0)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define DAC\_FLAG\_DMAUDR1                   ((uint32\_t)DAC\_SR\_DMAUDR1)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#define DAC\_FLAG\_DMAUDR2                   ((uint32\_t)DAC\_SR\_DMAUDR2)}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define IS\_DAC\_FLAG(FLAG) (((FLAG) == DAC\_FLAG\_DMAUDR1) || \(\backslash\)}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{                           ((FLAG) == DAC\_FLAG\_DMAUDR2))  }}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define DAC\_IT\_DMAUDR1                   ((uint32\_t)DAC\_SR\_DMAUDR1)}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#define DAC\_IT\_DMAUDR2                   ((uint32\_t)DAC\_SR\_DMAUDR2)}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define IS\_DAC\_IT(IT) (((IT) == DAC\_IT\_DMAUDR1) || \(\backslash\)}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{                       ((IT) == DAC\_IT\_DMAUDR2))  }}
+\DoxyCodeLine{216 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define \_\_HAL\_DAC\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_DAC\_STATE\_RESET)}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{229 \textcolor{preprocessor}{\#define \_\_HAL\_DAC\_ENABLE(\_\_HANDLE\_\_, \_\_DAC\_Channel\_\_) \(\backslash\)}}
+\DoxyCodeLine{230 \textcolor{preprocessor}{((\_\_HANDLE\_\_)-\/>Instance-\/>CR |=  (DAC\_CR\_EN1 << (\_\_DAC\_Channel\_\_)))}}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define \_\_HAL\_DAC\_DISABLE(\_\_HANDLE\_\_, \_\_DAC\_Channel\_\_) \(\backslash\)}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{((\_\_HANDLE\_\_)-\/>Instance-\/>CR \&=  \string~(DAC\_CR\_EN1 << (\_\_DAC\_Channel\_\_)))}}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define \_\_HAL\_DHR12R1\_ALIGNEMENT(\_\_ALIGNEMENT\_\_) (((uint32\_t)0x00000008) + (\_\_ALIGNEMENT\_\_))}}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define \_\_HAL\_DHR12R2\_ALIGNEMENT(\_\_ALIGNEMENT\_\_) (((uint32\_t)0x00000014) + (\_\_ALIGNEMENT\_\_))}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#define \_\_HAL\_DHR12RD\_ALIGNEMENT(\_\_ALIGNEMENT\_\_) (((uint32\_t)0x00000020) + (\_\_ALIGNEMENT\_\_))}}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define \_\_HAL\_DAC\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>CR) |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#define \_\_HAL\_DAC\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>CR) \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define \_\_HAL\_DAC\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((((\_\_HANDLE\_\_)-\/>Instance-\/>SR) \& (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#define \_\_HAL\_DAC\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>SR) |= (\_\_FLAG\_\_))}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284 \textcolor{comment}{/* Include DAC HAL Extension module */}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#include "{}stm32f4xx\_hal\_dac\_ex.h"{}}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{288 \textcolor{comment}{/* Initialization/de-\/initialization functions *********************************/}}
+\DoxyCodeLine{289 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DAC\_Init(DAC\_HandleTypeDef* hdac);}
+\DoxyCodeLine{290 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DAC\_DeInit(DAC\_HandleTypeDef* hdac);}
+\DoxyCodeLine{291 \textcolor{keywordtype}{void} HAL\_DAC\_MspInit(DAC\_HandleTypeDef* hdac);}
+\DoxyCodeLine{292 \textcolor{keywordtype}{void} HAL\_DAC\_MspDeInit(DAC\_HandleTypeDef* hdac);}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294 \textcolor{comment}{/* I/O operation functions ****************************************************/}}
+\DoxyCodeLine{295 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DAC\_Start(DAC\_HandleTypeDef* hdac, uint32\_t Channel);}
+\DoxyCodeLine{296 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DAC\_Stop(DAC\_HandleTypeDef* hdac, uint32\_t Channel);}
+\DoxyCodeLine{297 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DAC\_Start\_DMA(DAC\_HandleTypeDef* hdac, uint32\_t Channel, uint32\_t* pData, uint32\_t Length, uint32\_t Alignment);}
+\DoxyCodeLine{298 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DAC\_Stop\_DMA(DAC\_HandleTypeDef* hdac, uint32\_t Channel);}
+\DoxyCodeLine{299 uint32\_t HAL\_DAC\_GetValue(DAC\_HandleTypeDef* hdac, uint32\_t Channel);}
+\DoxyCodeLine{300 }
+\DoxyCodeLine{301 \textcolor{comment}{/* Peripheral Control functions ***********************************************/}}
+\DoxyCodeLine{302 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DAC\_ConfigChannel(DAC\_HandleTypeDef* hdac, DAC\_ChannelConfTypeDef* sConfig, uint32\_t Channel);}
+\DoxyCodeLine{303 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DAC\_SetValue(DAC\_HandleTypeDef* hdac, uint32\_t Channel, uint32\_t Alignment, uint32\_t Data);}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305 \textcolor{comment}{/* Peripheral State functions *************************************************/}}
+\DoxyCodeLine{306 HAL\_DAC\_StateTypeDef HAL\_DAC\_GetState(DAC\_HandleTypeDef* hdac);}
+\DoxyCodeLine{307 \textcolor{keywordtype}{void} HAL\_DAC\_IRQHandler(DAC\_HandleTypeDef* hdac);}
+\DoxyCodeLine{308 uint32\_t HAL\_DAC\_GetError(DAC\_HandleTypeDef *hdac);}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310 \textcolor{keywordtype}{void} HAL\_DAC\_ConvCpltCallbackCh1(DAC\_HandleTypeDef* hdac);}
+\DoxyCodeLine{311 \textcolor{keywordtype}{void} HAL\_DAC\_ConvHalfCpltCallbackCh1(DAC\_HandleTypeDef* hdac);}
+\DoxyCodeLine{312 \textcolor{keywordtype}{void} HAL\_DAC\_ErrorCallbackCh1(DAC\_HandleTypeDef *hdac);}
+\DoxyCodeLine{313 \textcolor{keywordtype}{void} HAL\_DAC\_DMAUnderrunCallbackCh1(DAC\_HandleTypeDef *hdac);}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{315 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{326 \}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*\_\_STM32F4xx\_HAL\_DAC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{330 }
+\DoxyCodeLine{331 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

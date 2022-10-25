@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_system__stm32f4xx_8h_source" xml:lang="en-US">
+<title>system_stm32f4xx.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/system_stm32f4xx.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_system__stm32f4xx_8h_source_1l00001"/>00001 
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00049"/>00049 <emphasis role="preprocessor">#ifndef&#32;__SYSTEM_STM32F4XX_H</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00050"/>00050 <emphasis role="preprocessor">#define&#32;__SYSTEM_STM32F4XX_H</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00051"/>00051 
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00052"/>00052 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00053"/>00053 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00054"/>00054 <emphasis role="preprocessor">#endif&#32;</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00055"/>00055 
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00068"/>00068 &#32;&#32;<emphasis role="comment">/*&#32;This&#32;variable&#32;is&#32;updated&#32;in&#32;three&#32;ways:</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00069"/>00069 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;1)&#32;by&#32;calling&#32;CMSIS&#32;function&#32;SystemCoreClockUpdate()</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00070"/>00070 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;2)&#32;by&#32;calling&#32;HAL&#32;API&#32;function&#32;HAL_RCC_GetSysClockFreq()</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00071"/>00071 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;3)&#32;each&#32;time&#32;HAL_RCC_ClockConfig()&#32;is&#32;called&#32;to&#32;configure&#32;the&#32;system&#32;clock&#32;frequency&#32;</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00072"/>00072 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Note:&#32;If&#32;you&#32;use&#32;this&#32;function&#32;to&#32;configure&#32;the&#32;system&#32;clock;&#32;then&#32;there</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00073"/>00073 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;is&#32;no&#32;need&#32;to&#32;call&#32;the&#32;2&#32;first&#32;functions&#32;listed&#32;above,&#32;since&#32;SystemCoreClock</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00074"/>00074 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;variable&#32;is&#32;updated&#32;automatically.</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00075"/>00075 <emphasis role="comment">&#32;&#32;*/</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00076"/>00076 <emphasis role="keyword">extern</emphasis>&#32;uint32_t&#32;<link linkend="_group___s_t_m32_f4xx___system___exported__types_1gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00103"/><link linkend="_group___s_t_m32_f4xx___system___exported___functions_1ga93f514700ccf00d08dbdcff7f1224eb2">00103</link> <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___s_t_m32_f4xx___system___exported___functions_1ga93f514700ccf00d08dbdcff7f1224eb2">SystemInit</link>(<emphasis role="keywordtype">void</emphasis>);
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00104"/><link linkend="_group___s_t_m32_f4xx___system___exported___functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f">00104</link> <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___s_t_m32_f4xx___system___exported___functions_1gae0c36a9591fe6e9c45ecb21a794f0f0f">SystemCoreClockUpdate</link>(<emphasis role="keywordtype">void</emphasis>);
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00105"/><link linkend="_group___s_t_m32_f4xx___system___exported___functions_1ga32e8ef92fb7d8e24d780cf0635f3217e">00105</link> <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___s_t_m32_f4xx___system___exported___functions_1ga32e8ef92fb7d8e24d780cf0635f3217e">SetSysClock</link>(<emphasis role="keywordtype">void</emphasis>);
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00106"/>00106 
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00111"/>00111 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00112"/>00112 }
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00113"/>00113 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00114"/>00114 
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00115"/>00115 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*__SYSTEM_STM32F4XX_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00116"/>00116 
+<anchor xml:id="_system__stm32f4xx_8h_source_1l00124"/>00124 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

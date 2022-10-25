@@ -1,0 +1,101 @@
+\hypertarget{_serial_base_8h_source}{}\doxysection{Serial\+Base.\+h}
+\label{_serial_base_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/SerialBase.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/SerialBase.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_SERIALBASE\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_SERIALBASE\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#if DEVICE\_SERIAL}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}Stream.h"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}FunctionPointer.h"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}serial\_api.h"{}}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }SerialBase \{}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} baud(\textcolor{keywordtype}{int} baudrate);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{enum} Parity \{}
+\DoxyCodeLine{42         None = 0,}
+\DoxyCodeLine{43         Odd,}
+\DoxyCodeLine{44         Even,}
+\DoxyCodeLine{45         Forced1,}
+\DoxyCodeLine{46         Forced0}
+\DoxyCodeLine{47     \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keyword}{enum} IrqType \{}
+\DoxyCodeLine{50         RxIrq = 0,}
+\DoxyCodeLine{51         TxIrq}
+\DoxyCodeLine{52     \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keyword}{enum} Flow \{}
+\DoxyCodeLine{55         Disabled = 0,}
+\DoxyCodeLine{56         RTS,}
+\DoxyCodeLine{57         CTS,}
+\DoxyCodeLine{58         RTSCTS}
+\DoxyCodeLine{59     \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} format(\textcolor{keywordtype}{int} bits=8, Parity parity=SerialBase::None, \textcolor{keywordtype}{int} stop\_bits=1);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{int} readable();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} writeable();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} attach(\textcolor{keywordtype}{void} (*fptr)(\textcolor{keywordtype}{void}), IrqType type=RxIrq);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{98     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} attach(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), IrqType type=RxIrq) \{}
+\DoxyCodeLine{100         \textcolor{keywordflow}{if}((mptr != NULL) \&\& (tptr != NULL)) \{}
+\DoxyCodeLine{101             \_irq[type].attach(tptr, mptr);}
+\DoxyCodeLine{102             serial\_irq\_set(\&\_serial, (SerialIrq)type, 1);}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} send\_break();}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#if DEVICE\_SERIAL\_FC}}
+\DoxyCodeLine{117     \textcolor{keywordtype}{void} set\_flow\_control(Flow type, PinName flow1=NC, PinName flow2=NC);}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \_irq\_handler(uint32\_t \textcolor{keywordtype}{id}, SerialIrq irq\_type);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{123     SerialBase(PinName tx, PinName rx);}
+\DoxyCodeLine{124     \textcolor{keyword}{virtual} \string~SerialBase() \{}
+\DoxyCodeLine{125     \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{int} \_base\_getc();}
+\DoxyCodeLine{128     \textcolor{keywordtype}{int} \_base\_putc(\textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130     serial\_t        \_serial;}
+\DoxyCodeLine{131     FunctionPointer \_irq[2];}
+\DoxyCodeLine{132     \textcolor{keywordtype}{int}             \_baud;}
+\DoxyCodeLine{133 \};}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

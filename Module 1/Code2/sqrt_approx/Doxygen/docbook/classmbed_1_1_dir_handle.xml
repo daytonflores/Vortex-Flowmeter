@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_dir_handle" xml:lang="en-US">
+<title>DirHandle Class Reference</title>
+<indexterm><primary>DirHandle</primary></indexterm>
+<para>
+<computeroutput>#include &lt;DirHandle.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_dir_handle_1abfcbbd1da4e5837c9ca1a3c568f52d23">closedir</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual struct <link linkend="_structdirent">dirent</link> * <link linkend="_classmbed_1_1_dir_handle_1aa49ff2ef9ccb8c6fbed92cddf9909bd1">readdir</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classmbed_1_1_dir_handle_1a7de4203fc3947d4191c0ec5ab75c0de9">rewinddir</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual off_t <link linkend="_classmbed_1_1_dir_handle_1a4c8b5ba35659cafddcc85b280854d215">telldir</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classmbed_1_1_dir_handle_1af6ac114f379a7a8da1dce8843a601820">seekdir</link> (off_t location)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classmbed_1_1_dir_handle_1a9eab46a6c55a45f5d5e28586a89ab4b6">~DirHandle</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a directory stream. Objects of this type are returned by a <link linkend="_classmbed_1_1_file_system_like">FileSystemLike</link>&apos;s opendir method. Implementations must define at least closedir, readdir and rewinddir.</para>
+
+<para>If a <link linkend="_classmbed_1_1_file_system_like">FileSystemLike</link> class defines the opendir method, then the directories of an object of that type can be accessed by DIR *d = opendir(&quot;/example/directory&quot;) (or opendir(&quot;/example&quot;) to open the root of the filesystem), and then using readdir(d) etc.</para>
+
+<para>The root directory is considered to contain all <link linkend="_classmbed_1_1_file_like">FileLike</link> and <link linkend="_classmbed_1_1_file_system_like">FileSystemLike</link> objects, so the DIR* returned by opendir(&quot;/&quot;) will reflect this. </para>
+<para>
+Definition at line <link linkend="__dir_handle_8h_source_1l00048">48</link> of file <link linkend="__dir_handle_8h_source">DirHandle.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmbed_1_1_dir_handle_1a9eab46a6c55a45f5d5e28586a89ab4b6"/><section>
+    <title>~DirHandle()</title>
+<indexterm><primary>~DirHandle</primary><secondary>DirHandle</secondary></indexterm>
+<indexterm><primary>DirHandle</primary><secondary>~DirHandle</secondary></indexterm>
+<para><computeroutput>virtual ~<link linkend="_classmbed_1_1_dir_handle">DirHandle</link> ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__dir_handle_8h_source_1l00087">87</link> of file <link linkend="__dir_handle_8h_source">DirHandle.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_dir_handle_1abfcbbd1da4e5837c9ca1a3c568f52d23"/><section>
+    <title>closedir()</title>
+<indexterm><primary>closedir</primary><secondary>DirHandle</secondary></indexterm>
+<indexterm><primary>DirHandle</primary><secondary>closedir</secondary></indexterm>
+<para><computeroutput>virtual int closedir ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Closes the directory.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>0 on success, -1 on error. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmbed_1_1_dir_handle_1aa49ff2ef9ccb8c6fbed92cddf9909bd1"/><section>
+    <title>readdir()</title>
+<indexterm><primary>readdir</primary><secondary>DirHandle</secondary></indexterm>
+<indexterm><primary>DirHandle</primary><secondary>readdir</secondary></indexterm>
+<para><computeroutput>virtual struct <link linkend="_structdirent">dirent</link> * readdir ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Return the directory entry at the current position, and advances the position to the next entry.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to a dirent structure representing the directory entry at the current position, or NULL on reaching end of directory or error. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmbed_1_1_dir_handle_1a7de4203fc3947d4191c0ec5ab75c0de9"/><section>
+    <title>rewinddir()</title>
+<indexterm><primary>rewinddir</primary><secondary>DirHandle</secondary></indexterm>
+<indexterm><primary>DirHandle</primary><secondary>rewinddir</secondary></indexterm>
+<para><computeroutput>virtual void rewinddir ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Resets the position to the beginning of the directory. </para>
+</section>
+<anchor xml:id="_classmbed_1_1_dir_handle_1af6ac114f379a7a8da1dce8843a601820"/><section>
+    <title>seekdir()</title>
+<indexterm><primary>seekdir</primary><secondary>DirHandle</secondary></indexterm>
+<indexterm><primary>DirHandle</primary><secondary>seekdir</secondary></indexterm>
+<para><computeroutput>virtual void seekdir (off_t location)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Sets the position of the <link linkend="_classmbed_1_1_dir_handle">DirHandle</link>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>location</entry><entry>
+<para>The location to seek to. Must be a value returned by telldir. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__dir_handle_8h_source_1l00085">85</link> of file <link linkend="__dir_handle_8h_source">DirHandle.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_dir_handle_1a4c8b5ba35659cafddcc85b280854d215"/><section>
+    <title>telldir()</title>
+<indexterm><primary>telldir</primary><secondary>DirHandle</secondary></indexterm>
+<indexterm><primary>DirHandle</primary><secondary>telldir</secondary></indexterm>
+<para><computeroutput>virtual off_t telldir ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Returns the current position of the <link linkend="_classmbed_1_1_dir_handle">DirHandle</link>.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>the current position, -1 on error. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__dir_handle_8h_source_1l00079">79</link> of file <link linkend="__dir_handle_8h_source">DirHandle.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__dir_handle_8h">DirHandle.h</link></section>
+</section>

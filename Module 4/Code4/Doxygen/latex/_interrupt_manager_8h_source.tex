@@ -1,0 +1,77 @@
+\hypertarget{_interrupt_manager_8h_source}{}\doxysection{Interrupt\+Manager.\+h}
+\label{_interrupt_manager_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/InterruptManager.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/InterruptManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MBED\_INTERRUPTMANAGER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MBED\_INTERRUPTMANAGER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}cmsis.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}CallChain.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{36 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}} \{}
+\DoxyCodeLine{37 \textcolor{keyword}{public}:}
+\DoxyCodeLine{40     \textcolor{keyword}{static} \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}* \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a6904301fe4252da37e8a5ddb8df0a998}{get}}();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{44     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a39fe3c021afee8a248309a2a6034b8df}{destroy}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{54     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a17e717ff89d096a000f674b46ca7e849}{add\_handler}}(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq) \{}
+\DoxyCodeLine{55         \textcolor{keywordflow}{return} add\_common(function, irq);}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{66     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_ad7250442830a84d34ee2fcd84664fe9d}{add\_handler\_front}}(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq) \{}
+\DoxyCodeLine{67         \textcolor{keywordflow}{return} add\_common(function, irq, \textcolor{keyword}{true});}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{79     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{80     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_aa964e760de62ab08711dcaae40732649}{add\_handler}}(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq) \{}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} add\_common(tptr, mptr, irq);}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{93     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{94     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a9fb2a44246203de940e58ed9f696d872}{add\_handler\_front}}(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq) \{}
+\DoxyCodeLine{95         \textcolor{keywordflow}{return} add\_common(tptr, mptr, irq, \textcolor{keyword}{true});}
+\DoxyCodeLine{96     \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmbed_1_1_interrupt_manager_a298699ba52acb35e8ed07cff1c31744f}{remove\_handler}}(\mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} handler, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{keyword}{private}:}
+\DoxyCodeLine{109     \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}();}
+\DoxyCodeLine{110     \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{\string~InterruptManager}}();}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{comment}{// We declare the copy contructor and the assignment operator, but we don't}}
+\DoxyCodeLine{113     \textcolor{comment}{// implement them. This way, if someone tries to copy/assign our instance,}}
+\DoxyCodeLine{114     \textcolor{comment}{// he will get an error at compile time.}}
+\DoxyCodeLine{115     \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}\&);}
+\DoxyCodeLine{116     \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}\& operator =(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}\&);}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{119     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} add\_common(T *tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq, \textcolor{keywordtype}{bool} front=\textcolor{keyword}{false}) \{}
+\DoxyCodeLine{120         \textcolor{keywordtype}{int} irq\_pos = get\_irq\_index(irq);}
+\DoxyCodeLine{121         \textcolor{keywordtype}{bool} change = must\_replace\_vector(irq);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123         \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} pf = front ? \_chains[irq\_pos]-\/>\mbox{\hyperlink{classmbed_1_1_call_chain_a050f0042e62f8271a507ca57d19e6846}{add\_front}}(tptr, mptr) : \_chains[irq\_pos]-\/>\mbox{\hyperlink{classmbed_1_1_call_chain_a232d59392bfaff0d3950a240f2fee952}{add}}(tptr, mptr);}
+\DoxyCodeLine{124         \textcolor{keywordflow}{if} (change)}
+\DoxyCodeLine{125             NVIC\_SetVector(irq, (uint32\_t)\&InterruptManager::static\_irq\_helper);}
+\DoxyCodeLine{126         \textcolor{keywordflow}{return} pf;}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     \mbox{\hyperlink{classmbed_1_1_function_pointer}{pFunctionPointer\_t}} add\_common(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq, \textcolor{keywordtype}{bool} front=\textcolor{keyword}{false});}
+\DoxyCodeLine{130     \textcolor{keywordtype}{bool} must\_replace\_vector(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq);}
+\DoxyCodeLine{131     \textcolor{keywordtype}{int} get\_irq\_index(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq);}
+\DoxyCodeLine{132     \textcolor{keywordtype}{void} irq\_helper();}
+\DoxyCodeLine{133     \textcolor{keywordtype}{void} add\_helper(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}), \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} irq, \textcolor{keywordtype}{bool} front=\textcolor{keyword}{false});}
+\DoxyCodeLine{134     \textcolor{keyword}{static} \textcolor{keywordtype}{void} static\_irq\_helper();}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \mbox{\hyperlink{classmbed_1_1_call_chain}{CallChain}}* \_chains[NVIC\_NUM\_VECTORS];}
+\DoxyCodeLine{137     \textcolor{keyword}{static} \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{InterruptManager}}* \_instance;}
+\DoxyCodeLine{138 \};}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{143 }
+
+\end{DoxyCode}

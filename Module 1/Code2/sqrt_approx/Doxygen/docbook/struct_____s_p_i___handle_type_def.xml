@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_____s_p_i___handle_type_def" xml:lang="en-US">
+<title>__SPI_HandleTypeDef Struct Reference</title>
+<indexterm><primary>__SPI_HandleTypeDef</primary></indexterm>
+<para>
+
+<para>SPI handle Structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f4xx_hal_spi.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_s_p_i___type_def">SPI_TypeDef</link> * <link linkend="_struct_____s_p_i___handle_type_def_1aa5c715deaf693cc2dbfa90f40681ee1d">Instance</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_s_p_i___init_type_def">SPI_InitTypeDef</link> <link linkend="_struct_____s_p_i___handle_type_def_1a33f0dc84acb181a4702b30c92f007ca6">Init</link></para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_struct_____s_p_i___handle_type_def_1a5cc31f7c52dafd32f27f8f2756dbf343">pTxBuffPtr</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_____s_p_i___handle_type_def_1a80907b65d6f9541bc0dee444d16bc45b">TxXferSize</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_____s_p_i___handle_type_def_1a036cb7c739dc322aaa92d17c21da3a98">TxXferCount</link></para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_struct_____s_p_i___handle_type_def_1a7cee540cb21048ac48ba17355440e668">pRxBuffPtr</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_____s_p_i___handle_type_def_1ac12f5f1f6295b3c3327d5feabf5a96fb">RxXferSize</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_____s_p_i___handle_type_def_1a6aa23da867471025c16cb4819b6a7a8a">RxXferCount</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * <link linkend="_struct_____s_p_i___handle_type_def_1a33e13c28b1a70e6164417abb026d7a22">hdmatx</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> * <link linkend="_struct_____s_p_i___handle_type_def_1abd0aeec20298a55d89a440320e35634f">hdmarx</link></para>
+</listitem>
+            <listitem><para>void(* <link linkend="_struct_____s_p_i___handle_type_def_1ae69a57c50a44075680eb48ba13e41bf3">RxISR</link> )(struct <link linkend="_struct_____s_p_i___handle_type_def">__SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para>void(* <link linkend="_struct_____s_p_i___handle_type_def_1a445355c8080382b2d33c690e1790585f">TxISR</link> )(struct <link linkend="_struct_____s_p_i___handle_type_def">__SPI_HandleTypeDef</link> *hspi)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link> <link linkend="_struct_____s_p_i___handle_type_def_1ad4cf225029dbefe8d3fe660c33b8bb6b">Lock</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> <link linkend="_group___s_p_i_1ga8891cb64e76198a860172d94c638c9b4">HAL_SPI_StateTypeDef</link> <link linkend="_struct_____s_p_i___handle_type_def_1ac77adb7330099a917af1e9021cbb3de1">State</link></para>
+</listitem>
+            <listitem><para><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> <link linkend="_group___s_p_i_1gafabd084f961b80a2fd36388333718ed2">HAL_SPI_ErrorTypeDef</link> <link linkend="_struct_____s_p_i___handle_type_def_1a5ead36c49bc480899bbb3444df7eddee">ErrorCode</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>SPI handle Structure definition. </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00136">136</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a5ead36c49bc480899bbb3444df7eddee"/><section>
+    <title>ErrorCode</title>
+<indexterm><primary>ErrorCode</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>ErrorCode</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> <link linkend="_group___s_p_i_1gafabd084f961b80a2fd36388333718ed2">HAL_SPI_ErrorTypeDef</link> ErrorCode</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00166">166</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1abd0aeec20298a55d89a440320e35634f"/><section>
+    <title>hdmarx</title>
+<indexterm><primary>hdmarx</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>hdmarx</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link>* hdmarx</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00156">156</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a33e13c28b1a70e6164417abb026d7a22"/><section>
+    <title>hdmatx</title>
+<indexterm><primary>hdmatx</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>hdmatx</secondary></indexterm>
+<para><computeroutput><link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link>* hdmatx</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00154">154</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a33f0dc84acb181a4702b30c92f007ca6"/><section>
+    <title>Init</title>
+<indexterm><primary>Init</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s_p_i___init_type_def">SPI_InitTypeDef</link> Init</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00140">140</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1aa5c715deaf693cc2dbfa90f40681ee1d"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_s_p_i___type_def">SPI_TypeDef</link>* Instance</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00138">138</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1ad4cf225029dbefe8d3fe660c33b8bb6b"/><section>
+    <title>Lock</title>
+<indexterm><primary>Lock</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>Lock</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link> Lock</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00162">162</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a7cee540cb21048ac48ba17355440e668"/><section>
+    <title>pRxBuffPtr</title>
+<indexterm><primary>pRxBuffPtr</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>pRxBuffPtr</secondary></indexterm>
+<para><computeroutput>uint8_t* pRxBuffPtr</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00148">148</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a5cc31f7c52dafd32f27f8f2756dbf343"/><section>
+    <title>pTxBuffPtr</title>
+<indexterm><primary>pTxBuffPtr</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>pTxBuffPtr</secondary></indexterm>
+<para><computeroutput>uint8_t* pTxBuffPtr</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00142">142</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1ae69a57c50a44075680eb48ba13e41bf3"/><section>
+    <title>RxISR</title>
+<indexterm><primary>RxISR</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>RxISR</secondary></indexterm>
+<para><computeroutput>void(* RxISR) (struct <link linkend="_struct_____s_p_i___handle_type_def">__SPI_HandleTypeDef</link> *hspi)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00158">158</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a6aa23da867471025c16cb4819b6a7a8a"/><section>
+    <title>RxXferCount</title>
+<indexterm><primary>RxXferCount</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>RxXferCount</secondary></indexterm>
+<para><computeroutput>uint16_t RxXferCount</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00152">152</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1ac12f5f1f6295b3c3327d5feabf5a96fb"/><section>
+    <title>RxXferSize</title>
+<indexterm><primary>RxXferSize</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>RxXferSize</secondary></indexterm>
+<para><computeroutput>uint16_t RxXferSize</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00150">150</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1ac77adb7330099a917af1e9021cbb3de1"/><section>
+    <title>State</title>
+<indexterm><primary>State</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>State</secondary></indexterm>
+<para><computeroutput><link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> <link linkend="_group___s_p_i_1ga8891cb64e76198a860172d94c638c9b4">HAL_SPI_StateTypeDef</link> State</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00164">164</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a445355c8080382b2d33c690e1790585f"/><section>
+    <title>TxISR</title>
+<indexterm><primary>TxISR</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>TxISR</secondary></indexterm>
+<para><computeroutput>void(* TxISR) (struct <link linkend="_struct_____s_p_i___handle_type_def">__SPI_HandleTypeDef</link> *hspi)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00160">160</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a036cb7c739dc322aaa92d17c21da3a98"/><section>
+    <title>TxXferCount</title>
+<indexterm><primary>TxXferCount</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>TxXferCount</secondary></indexterm>
+<para><computeroutput>uint16_t TxXferCount</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00146">146</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<anchor xml:id="_struct_____s_p_i___handle_type_def_1a80907b65d6f9541bc0dee444d16bc45b"/><section>
+    <title>TxXferSize</title>
+<indexterm><primary>TxXferSize</primary><secondary>__SPI_HandleTypeDef</secondary></indexterm>
+<indexterm><primary>__SPI_HandleTypeDef</primary><secondary>TxXferSize</secondary></indexterm>
+<para><computeroutput>uint16_t TxXferSize</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__spi_8h_source_1l00144">144</link> of file <link linkend="_stm32f4xx__hal__spi_8h_source">stm32f4xx_hal_spi.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/<link linkend="_stm32f4xx__hal__spi_8h">stm32f4xx_hal_spi.h</link></section>
+</section>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cmsis__nvic_8h_source" xml:lang="en-US">
+<title>cmsis_nvic.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/cmsis_nvic.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_cmsis__nvic_8h_source_1l00001"/>00001 <emphasis role="comment">/*&#32;mbed&#32;Microcontroller&#32;Library</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*&#32;CMSIS-style&#32;functionality&#32;to&#32;support&#32;dynamic&#32;vectors</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*******************************************************************************</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;Copyright&#32;(c)&#32;2014,&#32;STMicroelectronics</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00006"/>00006 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00007"/>00007 <emphasis role="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00008"/>00008 <emphasis role="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions&#32;are&#32;met:</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00009"/>00009 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00010"/>00010 <emphasis role="comment">&#32;*&#32;1.&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright&#32;notice,</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00011"/>00011 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;*&#32;2.&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above&#32;copyright&#32;notice,</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer&#32;in&#32;the&#32;documentation</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;and/or&#32;other&#32;materials&#32;provided&#32;with&#32;the&#32;distribution.</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;*&#32;3.&#32;Neither&#32;the&#32;name&#32;of&#32;STMicroelectronics&#32;nor&#32;the&#32;names&#32;of&#32;its&#32;contributors</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00016"/>00016 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived&#32;from&#32;this&#32;software</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00017"/>00017 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00018"/>00018 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00019"/>00019 <emphasis role="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS&#32;&quot;AS&#32;IS&quot;</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00020"/>00020 <emphasis role="comment">&#32;*&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;THE</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00021"/>00021 <emphasis role="comment">&#32;*&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00022"/>00022 <emphasis role="comment">&#32;*&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE&#32;COPYRIGHT&#32;HOLDER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00023"/>00023 <emphasis role="comment">&#32;*&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00024"/>00024 <emphasis role="comment">&#32;*&#32;DAMAGES&#32;(INCLUDING,&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00025"/>00025 <emphasis role="comment">&#32;*&#32;SERVICES;&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00026"/>00026 <emphasis role="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT&#32;LIABILITY,</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00027"/>00027 <emphasis role="comment">&#32;*&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00028"/>00028 <emphasis role="comment">&#32;*&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00029"/>00029 <emphasis role="comment">&#32;*******************************************************************************</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00030"/>00030 <emphasis role="comment">&#32;*/</emphasis>&#32;
+<anchor xml:id="_cmsis__nvic_8h_source_1l00031"/>00031 
+<anchor xml:id="_cmsis__nvic_8h_source_1l00032"/>00032 <emphasis role="preprocessor">#ifndef&#32;MBED_CMSIS_NVIC_H</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00033"/>00033 <emphasis role="preprocessor">#define&#32;MBED_CMSIS_NVIC_H</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00034"/>00034 
+<anchor xml:id="_cmsis__nvic_8h_source_1l00035"/>00035 <emphasis role="comment">//&#32;STM32F401RE</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00036"/>00036 <emphasis role="comment">//&#32;CORE:&#32;16&#32;vectors&#32;=&#32;64&#32;bytes&#32;from&#32;0x00&#32;to&#32;0x3F</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00037"/>00037 <emphasis role="comment">//&#32;MCU&#32;Peripherals:&#32;85&#32;vectors&#32;=&#32;340&#32;bytes&#32;from&#32;0x40&#32;to&#32;...</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00038"/>00038 <emphasis role="comment">//&#32;Total:&#32;101&#32;vectors&#32;=&#32;404&#32;bytes&#32;(0x194)&#32;to&#32;be&#32;reserved&#32;in&#32;RAM</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00039"/><link linkend="_cmsis__nvic_8h_1aabda131b2f01e9aa52b49477300bddf6">00039</link> <emphasis role="preprocessor">#define&#32;NVIC_NUM_VECTORS&#32;&#32;&#32;&#32;&#32;&#32;101</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00040"/><link linkend="_cmsis__nvic_8h_1a8045d905a5ca57437d8e6f71ffcb6df5">00040</link> <emphasis role="preprocessor">#define&#32;NVIC_USER_IRQ_OFFSET&#32;&#32;16</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00041"/>00041 
+<anchor xml:id="_cmsis__nvic_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cmsis_8h">cmsis.h</link>&quot;</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00043"/>00043 
+<anchor xml:id="_cmsis__nvic_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00045"/>00045 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_cmsis__nvic_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00047"/>00047 
+<anchor xml:id="_cmsis__nvic_8h_source_1l00048"/><link linkend="_cmsis__nvic_8h_1ab43c1c59d5c081f1bc725237f4b1f916">00048</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_cmsis__nvic_8h_1ab43c1c59d5c081f1bc725237f4b1f916">NVIC_SetVector</link>(<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;IRQn,&#32;uint32_t&#32;vector);
+<anchor xml:id="_cmsis__nvic_8h_source_1l00049"/><link linkend="_cmsis__nvic_8h_1aebee9cad6724a5bac1857f0f1fb6d6af">00049</link> uint32_t&#32;<link linkend="_cmsis__nvic_8h_1aebee9cad6724a5bac1857f0f1fb6d6af">NVIC_GetVector</link>(<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;IRQn);
+<anchor xml:id="_cmsis__nvic_8h_source_1l00050"/>00050 
+<anchor xml:id="_cmsis__nvic_8h_source_1l00051"/>00051 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00052"/>00052 }
+<anchor xml:id="_cmsis__nvic_8h_source_1l00053"/>00053 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_cmsis__nvic_8h_source_1l00054"/>00054 
+<anchor xml:id="_cmsis__nvic_8h_source_1l00055"/>00055 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

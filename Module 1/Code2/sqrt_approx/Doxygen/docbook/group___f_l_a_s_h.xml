@@ -1,0 +1,884 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h" xml:lang="en-US">
+<title>FLASH</title>
+<indexterm><primary>FLASH</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___f_l_a_s_h___exported___constants">FLASH Exported Constants</link></para>
+
+<para>FLASH Error source 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___process_type_def">FLASH_ProcessTypeDef</link></para>
+
+<para>FLASH handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1gac1c9f459b798cc3700b90a6245df5a1a">__HAL_FLASH_SET_LATENCY</link>(__LATENCY__)   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint8_t *)<link linkend="_group___f_l_a_s_h___exported___constants_1gaeaca61fbcff69df08100280868bff214">ACR_BYTE0_ADDRESS</link> = (uint8_t)(__LATENCY__))</para>
+
+<para>Set the FLASH Latency. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1gad36059641057f824516303ea92734e6f">__HAL_FLASH_PREFETCH_BUFFER_ENABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga082e7e91fffee86db39676396d01a8e0">FLASH_ACR_PRFTEN</link>)</para>
+
+<para>Enable the FLASH prefetch buffer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga646a4cb92e85659334d14a8c78f0ede8">__HAL_FLASH_PREFETCH_BUFFER_DISABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga082e7e91fffee86db39676396d01a8e0">FLASH_ACR_PRFTEN</link>))</para>
+
+<para>Disable the FLASH prefetch buffer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1gaddb00cd85fe48a524fad33c7fe63e038">__HAL_FLASH_INSTRUCTION_CACHE_ENABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga51d8b1dd2c46942d377c579a38dce711">FLASH_ACR_ICEN</link>)</para>
+
+<para>Enable the FLASH instruction cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga01bf00ed6e7c0e74ed0931f3b8b033ed">__HAL_FLASH_INSTRUCTION_CACHE_DISABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga51d8b1dd2c46942d377c579a38dce711">FLASH_ACR_ICEN</link>))</para>
+
+<para>Disable the FLASH instruction cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1gad94db5b43a234c8dd3dde8fcf0e4cedd">__HAL_FLASH_DATA_CACHE_ENABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga5a9a5cc3aa05dc62264addab1008c896">FLASH_ACR_DCEN</link>)</para>
+
+<para>Enable the FLASH data cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga247f85a1fcc780be21f9fc2f1d29ee7e">__HAL_FLASH_DATA_CACHE_DISABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga5a9a5cc3aa05dc62264addab1008c896">FLASH_ACR_DCEN</link>))</para>
+
+<para>Disable the FLASH data cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga69dff538775ee23738d54eef4a259b66">__HAL_FLASH_INSTRUCTION_CACHE_RESET</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga923ff88475799eea9285f77f5383ced5">FLASH_ACR_ICRST</link>)</para>
+
+<para>Resets the FLASH instruction Cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga3b94f4f103ddab361802c8defd3a9c34">__HAL_FLASH_DATA_CACHE_RESET</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1gac53d7c85551a9829014d6027d67ce6c7">FLASH_ACR_DCRST</link>)</para>
+
+<para>Resets the FLASH data Cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga13fa137a911f02a2f94fb9fb0762a340">__HAL_FLASH_ENABLE_IT</link>(__INTERRUPT__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;CR |= (__INTERRUPT__))</para>
+
+<para>Enable the specified FLASH interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga1f40f507b5d4b3a4da68e4244a1097ee">__HAL_FLASH_DISABLE_IT</link>(__INTERRUPT__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;CR &amp;= ~(uint32_t)(__INTERRUPT__))</para>
+
+<para>Disable the specified FLASH interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga0d3dd161fecc0e47c9e109c7c28672c1">__HAL_FLASH_GET_FLAG</link>(__FLAG__)   ((<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;SR &amp; (__FLAG__)))</para>
+
+<para>Get the specified FLASH flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga68e49c4675761e2ec35153e747de7622">__HAL_FLASH_CLEAR_FLAG</link>(__FLAG__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;SR = (__FLAG__))</para>
+
+<para>Clear the specified FLASH flag. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___f_l_a_s_h_1ga0635292464d38cedf0ae05d2a0434076">FLASH_ErrorTypeDef</link> { 
+<link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076acf05509f292c5ab8f2879d63ba2665ff">FLASH_ERROR_RD</link> = 0x01
+, <link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076aee7da388d2f5c589a3cb34efea767ad2">FLASH_ERROR_PGS</link> = 0x02
+, <link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ae4f20fb81a812fb65473373c3c36765d">FLASH_ERROR_PGP</link> = 0x04
+, <link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ab2ac5838863aa3dcf727587bc3264d95">FLASH_ERROR_PGA</link> = 0x08
+, 
+<link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ac9e2d95d3ba415fb7392d72a2458f4d8">FLASH_ERROR_WRP</link> = 0x10
+, <link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076a22a777a65972676f311e20de5a0f0beb">FLASH_ERROR_OPERATION</link> = 0x20
+ }</para>
+
+<para>FLASH Error structure definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___f_l_a_s_h_1ga2b0268387bc11bcab76be9ce7c43eaaf">FLASH_ProcedureTypeDef</link> { <link linkend="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafa8d1dcf61f621d71484d13ac02f651b3d">FLASH_PROC_NONE</link> = 0
+, <link linkend="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafade0899d9d9503dc5c8d926071bffee44">FLASH_PROC_SECTERASE</link>
+, <link linkend="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafa1b046d01356b498d6675040f17362f0b">FLASH_PROC_MASSERASE</link>
+, <link linkend="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafad4f5d611b11f7ac9577d34df07dc94ea">FLASH_PROC_PROGRAM</link>
+ }</para>
+
+<para>FLASH Procedure structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1gab94b3dc16c5c6fcc30ba2cb897de8bae">HAL_FLASH_Program</link> (uint32_t TypeProgram, uint32_t Address, uint64_t Data)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga85ee0375f81ac12bf0acd013189f68d3">HAL_FLASH_Program_IT</link> (uint32_t TypeProgram, uint32_t Address, uint64_t Data)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_1ga083f13f6a000dfcb80c7a27853eba528">HAL_FLASH_IRQHandler</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_1ga71a7e85ede66fae4eadaf8854f81b5c8">HAL_FLASH_EndOfOperationCallback</link> (uint32_t ReturnValue)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_1ga237e17bd9b1d257bd8e2880227b8484e">HAL_FLASH_OperationErrorCallback</link> (uint32_t ReturnValue)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga23d4ff42a8873bac585c92ce4f633747">HAL_FLASH_Unlock</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1gae07eeca0b0aa9d5047f8df88d82f4bcd">HAL_FLASH_Lock</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga6e8f380b7a938592f0b6f05d0ebf69c3">HAL_FLASH_OB_Unlock</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga3ff599bd7eba88f7a169a537ccbf3e3f">HAL_FLASH_OB_Lock</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga046c539c76aaae3d487d59193f74c9db">HAL_FLASH_OB_Launch</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_group___f_l_a_s_h_1ga0635292464d38cedf0ae05d2a0434076">FLASH_ErrorTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga12ef94688909c4fd5b16a5d59dc52705">HAL_FLASH_GetError</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1gaf89afc110a32ac9dcf0d06b89ffd9224">FLASH_WaitForLastOperation</link> (uint32_t Timeout)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_1ga68e49c4675761e2ec35153e747de7622"/><section>
+    <title>__HAL_FLASH_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_FLASH_CLEAR_FLAG</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_CLEAR_FLAG( __FLAG__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;SR = (__FLAG__))</computeroutput></para><para>
+
+<para>Clear the specified FLASH flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the FLASH flags to clear. This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>FLASH_FLAG_EOP : FLASH End of Operation flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_OPERR : FLASH operation Error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_WRPERR: FLASH Write protected error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_PGAERR: FLASH Programming Alignment error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_PGPERR: FLASH Programming Parallelism error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_PGSERR: FLASH Programming Sequence error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_RDERR : FLASH Read Protection error flag (PCROP) 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00320">320</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga247f85a1fcc780be21f9fc2f1d29ee7e"/><section>
+    <title>__HAL_FLASH_DATA_CACHE_DISABLE</title>
+<indexterm><primary>__HAL_FLASH_DATA_CACHE_DISABLE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_DATA_CACHE_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_DATA_CACHE_DISABLE( )   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga5a9a5cc3aa05dc62264addab1008c896">FLASH_ACR_DCEN</link>))</computeroutput></para><para>
+
+<para>Disable the FLASH data cache. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00255">255</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1gad94db5b43a234c8dd3dde8fcf0e4cedd"/><section>
+    <title>__HAL_FLASH_DATA_CACHE_ENABLE</title>
+<indexterm><primary>__HAL_FLASH_DATA_CACHE_ENABLE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_DATA_CACHE_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_DATA_CACHE_ENABLE( )   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga5a9a5cc3aa05dc62264addab1008c896">FLASH_ACR_DCEN</link>)</computeroutput></para><para>
+
+<para>Enable the FLASH data cache. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00249">249</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga3b94f4f103ddab361802c8defd3a9c34"/><section>
+    <title>__HAL_FLASH_DATA_CACHE_RESET</title>
+<indexterm><primary>__HAL_FLASH_DATA_CACHE_RESET</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_DATA_CACHE_RESET</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_DATA_CACHE_RESET( )   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1gac53d7c85551a9829014d6027d67ce6c7">FLASH_ACR_DCRST</link>)</computeroutput></para><para>
+
+<para>Resets the FLASH data Cache. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function must be used only when the data Cache is disabled. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00269">269</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga1f40f507b5d4b3a4da68e4244a1097ee"/><section>
+    <title>__HAL_FLASH_DISABLE_IT</title>
+<indexterm><primary>__HAL_FLASH_DISABLE_IT</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_DISABLE_IT( __INTERRUPT__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;CR &amp;= ~(uint32_t)(__INTERRUPT__))</computeroutput></para><para>
+
+<para>Disable the specified FLASH interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>: FLASH interrupt This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>FLASH_IT_EOP: End of FLASH Operation Interrupt </para>
+</listitem>
+<listitem>
+<para>FLASH_IT_ERR: Error Interrupt 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00289">289</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga13fa137a911f02a2f94fb9fb0762a340"/><section>
+    <title>__HAL_FLASH_ENABLE_IT</title>
+<indexterm><primary>__HAL_FLASH_ENABLE_IT</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_ENABLE_IT( __INTERRUPT__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;CR |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enable the specified FLASH interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>: FLASH interrupt This parameter can be any combination of the following values: <itemizedlist>
+<listitem>
+<para>FLASH_IT_EOP: End of FLASH Operation Interrupt </para>
+</listitem>
+<listitem>
+<para>FLASH_IT_ERR: Error Interrupt 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00279">279</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga0d3dd161fecc0e47c9e109c7c28672c1"/><section>
+    <title>__HAL_FLASH_GET_FLAG</title>
+<indexterm><primary>__HAL_FLASH_GET_FLAG</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_GET_FLAG( __FLAG__)   ((<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;SR &amp; (__FLAG__)))</computeroutput></para><para>
+
+<para>Get the specified FLASH flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>specifies the FLASH flag to check. This parameter can be one of the following values: <itemizedlist>
+<listitem>
+<para>FLASH_FLAG_EOP : FLASH End of Operation flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_OPERR : FLASH operation Error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_WRPERR: FLASH Write protected error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_PGAERR: FLASH Programming Alignment error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_PGPERR: FLASH Programming Parallelism error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_PGSERR: FLASH Programming Sequence error flag </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_RDERR : FLASH Read Protection error flag (PCROP) </para>
+</listitem>
+<listitem>
+<para>FLASH_FLAG_BSY : FLASH Busy flag </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">FLAG</emphasis> (SET or RESET). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00305">305</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga01bf00ed6e7c0e74ed0931f3b8b033ed"/><section>
+    <title>__HAL_FLASH_INSTRUCTION_CACHE_DISABLE</title>
+<indexterm><primary>__HAL_FLASH_INSTRUCTION_CACHE_DISABLE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_INSTRUCTION_CACHE_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_INSTRUCTION_CACHE_DISABLE( )   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga51d8b1dd2c46942d377c579a38dce711">FLASH_ACR_ICEN</link>))</computeroutput></para><para>
+
+<para>Disable the FLASH instruction cache. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00243">243</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1gaddb00cd85fe48a524fad33c7fe63e038"/><section>
+    <title>__HAL_FLASH_INSTRUCTION_CACHE_ENABLE</title>
+<indexterm><primary>__HAL_FLASH_INSTRUCTION_CACHE_ENABLE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_INSTRUCTION_CACHE_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_INSTRUCTION_CACHE_ENABLE( )   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga51d8b1dd2c46942d377c579a38dce711">FLASH_ACR_ICEN</link>)</computeroutput></para><para>
+
+<para>Enable the FLASH instruction cache. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00237">237</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga69dff538775ee23738d54eef4a259b66"/><section>
+    <title>__HAL_FLASH_INSTRUCTION_CACHE_RESET</title>
+<indexterm><primary>__HAL_FLASH_INSTRUCTION_CACHE_RESET</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_INSTRUCTION_CACHE_RESET</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_INSTRUCTION_CACHE_RESET( )   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga923ff88475799eea9285f77f5383ced5">FLASH_ACR_ICRST</link>)</computeroutput></para><para>
+
+<para>Resets the FLASH instruction Cache. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function must be used only when the Instruction Cache is disabled. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</note>
+
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00262">262</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga646a4cb92e85659334d14a8c78f0ede8"/><section>
+    <title>__HAL_FLASH_PREFETCH_BUFFER_DISABLE</title>
+<indexterm><primary>__HAL_FLASH_PREFETCH_BUFFER_DISABLE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_PREFETCH_BUFFER_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_PREFETCH_BUFFER_DISABLE( )   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga082e7e91fffee86db39676396d01a8e0">FLASH_ACR_PRFTEN</link>))</computeroutput></para><para>
+
+<para>Disable the FLASH prefetch buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00231">231</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1gad36059641057f824516303ea92734e6f"/><section>
+    <title>__HAL_FLASH_PREFETCH_BUFFER_ENABLE</title>
+<indexterm><primary>__HAL_FLASH_PREFETCH_BUFFER_ENABLE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_PREFETCH_BUFFER_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_PREFETCH_BUFFER_ENABLE( )   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga082e7e91fffee86db39676396d01a8e0">FLASH_ACR_PRFTEN</link>)</computeroutput></para><para>
+
+<para>Enable the FLASH prefetch buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00225">225</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1gac1c9f459b798cc3700b90a6245df5a1a"/><section>
+    <title>__HAL_FLASH_SET_LATENCY</title>
+<indexterm><primary>__HAL_FLASH_SET_LATENCY</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>__HAL_FLASH_SET_LATENCY</secondary></indexterm>
+<para><computeroutput>#define __HAL_FLASH_SET_LATENCY( __LATENCY__)   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint8_t *)<link linkend="_group___f_l_a_s_h___exported___constants_1gaeaca61fbcff69df08100280868bff214">ACR_BYTE0_ADDRESS</link> = (uint8_t)(__LATENCY__))</computeroutput></para><para>
+
+<para>Set the FLASH Latency. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__LATENCY__</entry><entry>
+<para>FLASH Latency 
+<literallayout>&#160;&#xa;</literallayout>
+ The value of this parameter depend on device used within the same series </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>none</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00219">219</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_1ga0635292464d38cedf0ae05d2a0434076"/><section>
+    <title>FLASH_ErrorTypeDef</title>
+<indexterm><primary>FLASH_ErrorTypeDef</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_ErrorTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___f_l_a_s_h_1ga0635292464d38cedf0ae05d2a0434076">FLASH_ErrorTypeDef</link></computeroutput></para><para>
+
+<para>FLASH Error structure definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>FLASH_ERROR_RD</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_ERROR_RD</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076acf05509f292c5ab8f2879d63ba2665ff"/>FLASH_ERROR_RD</entry><entry></entry></row><row><entry><indexterm><primary>FLASH_ERROR_PGS</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_ERROR_PGS</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076aee7da388d2f5c589a3cb34efea767ad2"/>FLASH_ERROR_PGS</entry><entry></entry></row><row><entry><indexterm><primary>FLASH_ERROR_PGP</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_ERROR_PGP</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ae4f20fb81a812fb65473373c3c36765d"/>FLASH_ERROR_PGP</entry><entry></entry></row><row><entry><indexterm><primary>FLASH_ERROR_PGA</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_ERROR_PGA</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ab2ac5838863aa3dcf727587bc3264d95"/>FLASH_ERROR_PGA</entry><entry></entry></row><row><entry><indexterm><primary>FLASH_ERROR_WRP</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_ERROR_WRP</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ac9e2d95d3ba415fb7392d72a2458f4d8"/>FLASH_ERROR_WRP</entry><entry></entry></row><row><entry><indexterm><primary>FLASH_ERROR_OPERATION</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_ERROR_OPERATION</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076a22a777a65972676f311e20de5a0f0beb"/>FLASH_ERROR_OPERATION</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00061">61</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+<anchor xml:id="_group___f_l_a_s_h_1ga2b0268387bc11bcab76be9ce7c43eaaf"/><section>
+    <title>FLASH_ProcedureTypeDef</title>
+<indexterm><primary>FLASH_ProcedureTypeDef</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_ProcedureTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___f_l_a_s_h_1ga2b0268387bc11bcab76be9ce7c43eaaf">FLASH_ProcedureTypeDef</link></computeroutput></para><para>
+
+<para>FLASH Procedure structure definition. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>FLASH_PROC_NONE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_PROC_NONE</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafa8d1dcf61f621d71484d13ac02f651b3d"/>FLASH_PROC_NONE</entry><entry></entry></row><row><entry><indexterm><primary>FLASH_PROC_SECTERASE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_PROC_SECTERASE</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafade0899d9d9503dc5c8d926071bffee44"/>FLASH_PROC_SECTERASE</entry><entry></entry></row><row><entry><indexterm><primary>FLASH_PROC_MASSERASE</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_PROC_MASSERASE</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafa1b046d01356b498d6675040f17362f0b"/>FLASH_PROC_MASSERASE</entry><entry></entry></row><row><entry><indexterm><primary>FLASH_PROC_PROGRAM</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_PROC_PROGRAM</secondary></indexterm>
+<anchor xml:id="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafad4f5d611b11f7ac9577d34df07dc94ea"/>FLASH_PROC_PROGRAM</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__flash_8h_source_1l00074">74</link> of file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_1gaf89afc110a32ac9dcf0d06b89ffd9224"/><section>
+    <title>FLASH_WaitForLastOperation()</title>
+<indexterm><primary>FLASH_WaitForLastOperation</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>FLASH_WaitForLastOperation</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> FLASH_WaitForLastOperation (uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga71a7e85ede66fae4eadaf8854f81b5c8"/><section>
+    <title>HAL_FLASH_EndOfOperationCallback()</title>
+<indexterm><primary>HAL_FLASH_EndOfOperationCallback</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_EndOfOperationCallback</secondary></indexterm>
+<para><computeroutput>void HAL_FLASH_EndOfOperationCallback (uint32_t ReturnValue)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga12ef94688909c4fd5b16a5d59dc52705"/><section>
+    <title>HAL_FLASH_GetError()</title>
+<indexterm><primary>HAL_FLASH_GetError</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_GetError</secondary></indexterm>
+<para><computeroutput><link linkend="_group___f_l_a_s_h_1ga0635292464d38cedf0ae05d2a0434076">FLASH_ErrorTypeDef</link> HAL_FLASH_GetError (void )</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga083f13f6a000dfcb80c7a27853eba528"/><section>
+    <title>HAL_FLASH_IRQHandler()</title>
+<indexterm><primary>HAL_FLASH_IRQHandler</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_FLASH_IRQHandler (void )</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1gae07eeca0b0aa9d5047f8df88d82f4bcd"/><section>
+    <title>HAL_FLASH_Lock()</title>
+<indexterm><primary>HAL_FLASH_Lock</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_Lock</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASH_Lock (void )</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga046c539c76aaae3d487d59193f74c9db"/><section>
+    <title>HAL_FLASH_OB_Launch()</title>
+<indexterm><primary>HAL_FLASH_OB_Launch</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_OB_Launch</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASH_OB_Launch (void )</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga3ff599bd7eba88f7a169a537ccbf3e3f"/><section>
+    <title>HAL_FLASH_OB_Lock()</title>
+<indexterm><primary>HAL_FLASH_OB_Lock</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_OB_Lock</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASH_OB_Lock (void )</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga6e8f380b7a938592f0b6f05d0ebf69c3"/><section>
+    <title>HAL_FLASH_OB_Unlock()</title>
+<indexterm><primary>HAL_FLASH_OB_Unlock</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_OB_Unlock</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASH_OB_Unlock (void )</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga237e17bd9b1d257bd8e2880227b8484e"/><section>
+    <title>HAL_FLASH_OperationErrorCallback()</title>
+<indexterm><primary>HAL_FLASH_OperationErrorCallback</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_OperationErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_FLASH_OperationErrorCallback (uint32_t ReturnValue)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1gab94b3dc16c5c6fcc30ba2cb897de8bae"/><section>
+    <title>HAL_FLASH_Program()</title>
+<indexterm><primary>HAL_FLASH_Program</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_Program</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASH_Program (uint32_t TypeProgram, uint32_t Address, uint64_t Data)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga85ee0375f81ac12bf0acd013189f68d3"/><section>
+    <title>HAL_FLASH_Program_IT()</title>
+<indexterm><primary>HAL_FLASH_Program_IT</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_Program_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASH_Program_IT (uint32_t TypeProgram, uint32_t Address, uint64_t Data)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_1ga23d4ff42a8873bac585c92ce4f633747"/><section>
+    <title>HAL_FLASH_Unlock()</title>
+<indexterm><primary>HAL_FLASH_Unlock</primary><secondary>FLASH</secondary></indexterm>
+<indexterm><primary>FLASH</primary><secondary>HAL_FLASH_Unlock</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASH_Unlock (void )</computeroutput></para></section>
+</section>
+</section>

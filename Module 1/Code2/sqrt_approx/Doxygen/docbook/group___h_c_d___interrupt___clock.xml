@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_c_d___interrupt___clock" xml:lang="en-US">
+<title>HCD_Interrupt_Clock</title>
+<indexterm><primary>HCD_Interrupt_Clock</primary></indexterm>
+<para>
+
+<para>macros to handle interrupts and specific clock configurations </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1gab019adbb887485cd9893e96c86da13c1">__HAL_HCD_ENABLE</link>(__HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1gaa8938bc57ec4994b1d2a04dceb12c67a">USB_EnableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga1030fbf31ad94f0d9684339358d04df5">__HAL_HCD_DISABLE</link>(__HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1ga81380ef9f6be2f72b70284d2108b4aed">USB_DisableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga7f3604641a19c15a294c542a24ffc55f">__HAL_GET_FLAG</link>(__HANDLE__,  __INTERRUPT__)   ((<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) &amp; (__INTERRUPT__)) == (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga8459525389520201c570fd1b61b830ec">__HAL_CLEAR_FLAG</link>(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;GINTSTS) |= (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga4fe23b08c61f807591978300b6a378c6">__HAL_IS_INVALID_INTERRUPT</link>(__HANDLE__)   (<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) == 0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga5948edd0a938ae816e548e6dec0f2459">__HAL_HCD_CLEAR_HC_INT</link>(chnum,  __INTERRUPT__)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINT = (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga437a6680938a77582f041492ea10c3e9">__HAL_HCD_MASK_HALT_HC_INT</link>(chnum)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINTMSK &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga8f359b89c79fba4414e0838645f13a6b">USB_OTG_HCINTMSK_CHHM</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga81a4da11f8bbfb69a7331ff062222fd3">__HAL_HCD_UNMASK_HALT_HC_INT</link>(chnum)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINTMSK |= <link linkend="_group___peripheral___registers___bits___definition_1ga8f359b89c79fba4414e0838645f13a6b">USB_OTG_HCINTMSK_CHHM</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga666c0aa06c7ff5b3ec5853f0abfcfd4c">__HAL_HCD_MASK_ACK_HC_INT</link>(chnum)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINTMSK &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga21eb5c0fa8aafa12a725ab52f85023d1">USB_OTG_HCINTMSK_ACKM</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___interrupt___clock_1ga614399c25c8b2e6614aa7b7b4927b6bd">__HAL_HCD_UNMASK_ACK_HC_INT</link>(chnum)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINTMSK |= <link linkend="_group___peripheral___registers___bits___definition_1ga21eb5c0fa8aafa12a725ab52f85023d1">USB_OTG_HCINTMSK_ACKM</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>macros to handle interrupts and specific clock configurations </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga8459525389520201c570fd1b61b830ec"/><section>
+    <title>__HAL_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_CLEAR_FLAG</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_CLEAR_FLAG( __HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;GINTSTS) |= (__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00148">148</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga7f3604641a19c15a294c542a24ffc55f"/><section>
+    <title>__HAL_GET_FLAG</title>
+<indexterm><primary>__HAL_GET_FLAG</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_GET_FLAG( __HANDLE__,  __INTERRUPT__)   ((<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) &amp; (__INTERRUPT__)) == (__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00147">147</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga5948edd0a938ae816e548e6dec0f2459"/><section>
+    <title>__HAL_HCD_CLEAR_HC_INT</title>
+<indexterm><primary>__HAL_HCD_CLEAR_HC_INT</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_HCD_CLEAR_HC_INT</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_CLEAR_HC_INT( chnum,  __INTERRUPT__)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINT = (__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00152">152</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga1030fbf31ad94f0d9684339358d04df5"/><section>
+    <title>__HAL_HCD_DISABLE</title>
+<indexterm><primary>__HAL_HCD_DISABLE</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_HCD_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_DISABLE( __HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1ga81380ef9f6be2f72b70284d2108b4aed">USB_DisableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00145">145</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1gab019adbb887485cd9893e96c86da13c1"/><section>
+    <title>__HAL_HCD_ENABLE</title>
+<indexterm><primary>__HAL_HCD_ENABLE</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_HCD_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_ENABLE( __HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1gaa8938bc57ec4994b1d2a04dceb12c67a">USB_EnableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00144">144</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga666c0aa06c7ff5b3ec5853f0abfcfd4c"/><section>
+    <title>__HAL_HCD_MASK_ACK_HC_INT</title>
+<indexterm><primary>__HAL_HCD_MASK_ACK_HC_INT</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_HCD_MASK_ACK_HC_INT</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_MASK_ACK_HC_INT( chnum)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINTMSK &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga21eb5c0fa8aafa12a725ab52f85023d1">USB_OTG_HCINTMSK_ACKM</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00155">155</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga437a6680938a77582f041492ea10c3e9"/><section>
+    <title>__HAL_HCD_MASK_HALT_HC_INT</title>
+<indexterm><primary>__HAL_HCD_MASK_HALT_HC_INT</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_HCD_MASK_HALT_HC_INT</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_MASK_HALT_HC_INT( chnum)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINTMSK &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga8f359b89c79fba4414e0838645f13a6b">USB_OTG_HCINTMSK_CHHM</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00153">153</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga614399c25c8b2e6614aa7b7b4927b6bd"/><section>
+    <title>__HAL_HCD_UNMASK_ACK_HC_INT</title>
+<indexterm><primary>__HAL_HCD_UNMASK_ACK_HC_INT</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_HCD_UNMASK_ACK_HC_INT</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_UNMASK_ACK_HC_INT( chnum)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINTMSK |= <link linkend="_group___peripheral___registers___bits___definition_1ga21eb5c0fa8aafa12a725ab52f85023d1">USB_OTG_HCINTMSK_ACKM</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00156">156</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga81a4da11f8bbfb69a7331ff062222fd3"/><section>
+    <title>__HAL_HCD_UNMASK_HALT_HC_INT</title>
+<indexterm><primary>__HAL_HCD_UNMASK_HALT_HC_INT</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_HCD_UNMASK_HALT_HC_INT</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_UNMASK_HALT_HC_INT( chnum)   (<link linkend="_group___p_c_d___exported___constants_1gaabde8c1753d544ba0caa940a3617b09c">USBx_HC</link>(chnum)-&gt;HCINTMSK |= <link linkend="_group___peripheral___registers___bits___definition_1ga8f359b89c79fba4414e0838645f13a6b">USB_OTG_HCINTMSK_CHHM</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00154">154</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___interrupt___clock_1ga4fe23b08c61f807591978300b6a378c6"/><section>
+    <title>__HAL_IS_INVALID_INTERRUPT</title>
+<indexterm><primary>__HAL_IS_INVALID_INTERRUPT</primary><secondary>HCD_Interrupt_Clock</secondary></indexterm>
+<indexterm><primary>HCD_Interrupt_Clock</primary><secondary>__HAL_IS_INVALID_INTERRUPT</secondary></indexterm>
+<para><computeroutput>#define __HAL_IS_INVALID_INTERRUPT( __HANDLE__)   (<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) == 0)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00149">149</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+</section>
+</section>

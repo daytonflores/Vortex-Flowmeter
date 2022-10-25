@@ -1,0 +1,43 @@
+\hypertarget{main_8c}{}\doxysection{C\+:/\+Users/dayton.flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/main.c File Reference}
+\label{main_8c}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/main.c@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/main.c}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+asm int \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\+\_\+sqrt}} (int x)
+\begin{DoxyCompactList}\small\item\em Calculates truncated (integer portion) square root of an integer in the range \mbox{[}0, (2$^\wedge$31) -\/ 1\mbox{]}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00094}{94}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}\label{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}} 
+\index{main.c@{main.c}!my\_sqrt@{my\_sqrt}}
+\index{my\_sqrt@{my\_sqrt}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{my\_sqrt()}{my\_sqrt()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+asm int my\+\_\+sqrt (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Calculates truncated (integer portion) square root of an integer in the range \mbox{[}0, (2$^\wedge$31) -\/ 1\mbox{]}. 
+
+This will be done using the Bisection Method (\href{https://en.wikipedia.org/wiki/Bisection_method}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Bisection\+\_\+method}}) with range \mbox{[}a, b\mbox{]} and midpoint c. Initial values\+: a = 0 (smallest possible square root) b = 256 (largest possible square root) c = 128 The function will recursively calculate whether c is the exact root of input x. If so, then finish. Else if c$^\wedge$2 \texorpdfstring{$<$}{<} x, then set lower bound a to c. Else if c$^\wedge$2 \texorpdfstring{$>$}{>} x, then set upper bound b to c. The midpoint c will be recalculated within the new range until either\+: c is the exact square root of x \char`\"{}new\char`\"{} c == \char`\"{}old\char`\"{} c (meaning integer approximation is within 1)
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The integer number within range of \mbox{[}0, (2$^\wedge$31) -\/ 1\mbox{]} to find the truncated (integer portion) square root of \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00028}{28}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

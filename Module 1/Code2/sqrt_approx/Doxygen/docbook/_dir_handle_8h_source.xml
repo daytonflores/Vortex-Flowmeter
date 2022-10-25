@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__dir_handle_8h_source" xml:lang="en-US">
+<title>DirHandle.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/DirHandle.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__dir_handle_8h_source_1l00001"/>00001 <emphasis role="comment">/*&#32;mbed&#32;Microcontroller&#32;Library</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*&#32;Copyright&#32;(c)&#32;2006-2013&#32;ARM&#32;Limited</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;Licensed&#32;under&#32;the&#32;Apache&#32;License,&#32;Version&#32;2.0&#32;(the&#32;&quot;License&quot;);</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*&#32;you&#32;may&#32;not&#32;use&#32;this&#32;file&#32;except&#32;in&#32;compliance&#32;with&#32;the&#32;License.</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00006"/>00006 <emphasis role="comment">&#32;*&#32;You&#32;may&#32;obtain&#32;a&#32;copy&#32;of&#32;the&#32;License&#32;at</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00007"/>00007 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00008"/>00008 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;&#32;http://www.apache.org/licenses/LICENSE-2.0</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00009"/>00009 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00010"/>00010 <emphasis role="comment">&#32;*&#32;Unless&#32;required&#32;by&#32;applicable&#32;law&#32;or&#32;agreed&#32;to&#32;in&#32;writing,&#32;software</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00011"/>00011 <emphasis role="comment">&#32;*&#32;distributed&#32;under&#32;the&#32;License&#32;is&#32;distributed&#32;on&#32;an&#32;&quot;AS&#32;IS&quot;&#32;BASIS,</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;*&#32;WITHOUT&#32;WARRANTIES&#32;OR&#32;CONDITIONS&#32;OF&#32;ANY&#32;KIND,&#32;either&#32;express&#32;or&#32;implied.</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;*&#32;See&#32;the&#32;License&#32;for&#32;the&#32;specific&#32;language&#32;governing&#32;permissions&#32;and</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;*&#32;limitations&#32;under&#32;the&#32;License.</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#ifndef&#32;MBED_DIRHANDLE_H</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#define&#32;MBED_DIRHANDLE_H</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00018"/>00018 
+<anchor xml:id="__dir_handle_8h_source_1l00019"/>00019 <emphasis role="preprocessor">#if&#32;defined(__ARMCC_VERSION)&#32;||&#32;defined(__ICCARM__)</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00020"/>00020 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;NAME_MAX&#32;255</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00021"/>00021 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;mode_t;
+<anchor xml:id="__dir_handle_8h_source_1l00022"/>00022 
+<anchor xml:id="__dir_handle_8h_source_1l00023"/>00023 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00024"/>00024 <emphasis role="preprocessor">#&#32;&#32;&#32;include&#32;&lt;sys/syslimits.h&gt;</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00025"/>00025 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00026"/>00026 
+<anchor xml:id="__dir_handle_8h_source_1l00027"/>00027 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__file_handle_8h">FileHandle.h</link>&quot;</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00028"/>00028 
+<anchor xml:id="__dir_handle_8h_source_1l00029"/><link linkend="_structdirent">00029</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structdirent">dirent</link>&#32;{
+<anchor xml:id="__dir_handle_8h_source_1l00030"/><link linkend="_structdirent_1a28ed4d956394cb6d3311f13cf281b888">00030</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_structdirent_1a28ed4d956394cb6d3311f13cf281b888">d_name</link>[NAME_MAX+1];
+<anchor xml:id="__dir_handle_8h_source_1l00031"/>00031 };
+<anchor xml:id="__dir_handle_8h_source_1l00032"/>00032 
+<anchor xml:id="__dir_handle_8h_source_1l00033"/>00033 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacembed">mbed</link>&#32;{
+<anchor xml:id="__dir_handle_8h_source_1l00034"/>00034 
+<anchor xml:id="__dir_handle_8h_source_1l00048"/><link linkend="_classmbed_1_1_dir_handle">00048</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classmbed_1_1_dir_handle">DirHandle</link>&#32;{
+<anchor xml:id="__dir_handle_8h_source_1l00049"/>00049 
+<anchor xml:id="__dir_handle_8h_source_1l00050"/>00050 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__dir_handle_8h_source_1l00057"/><link linkend="_classmbed_1_1_dir_handle_1abfcbbd1da4e5837c9ca1a3c568f52d23">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classmbed_1_1_dir_handle_1abfcbbd1da4e5837c9ca1a3c568f52d23">closedir</link>()=0;
+<anchor xml:id="__dir_handle_8h_source_1l00058"/>00058 
+<anchor xml:id="__dir_handle_8h_source_1l00067"/><link linkend="_classmbed_1_1_dir_handle_1aa49ff2ef9ccb8c6fbed92cddf9909bd1">00067</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structdirent">dirent</link>&#32;*<link linkend="_classmbed_1_1_dir_handle_1aa49ff2ef9ccb8c6fbed92cddf9909bd1">readdir</link>()=0;
+<anchor xml:id="__dir_handle_8h_source_1l00068"/>00068 
+<anchor xml:id="__dir_handle_8h_source_1l00071"/><link linkend="_classmbed_1_1_dir_handle_1a7de4203fc3947d4191c0ec5ab75c0de9">00071</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmbed_1_1_dir_handle_1a7de4203fc3947d4191c0ec5ab75c0de9">rewinddir</link>()=0;
+<anchor xml:id="__dir_handle_8h_source_1l00072"/>00072 
+<anchor xml:id="__dir_handle_8h_source_1l00079"/><link linkend="_classmbed_1_1_dir_handle_1a4c8b5ba35659cafddcc85b280854d215">00079</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;off_t&#32;<link linkend="_classmbed_1_1_dir_handle_1a4c8b5ba35659cafddcc85b280854d215">telldir</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;&#32;}
+<anchor xml:id="__dir_handle_8h_source_1l00080"/>00080 
+<anchor xml:id="__dir_handle_8h_source_1l00085"/><link linkend="_classmbed_1_1_dir_handle_1af6ac114f379a7a8da1dce8843a601820">00085</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classmbed_1_1_dir_handle_1af6ac114f379a7a8da1dce8843a601820">seekdir</link>(off_t&#32;location)&#32;{&#32;}
+<anchor xml:id="__dir_handle_8h_source_1l00086"/>00086 
+<anchor xml:id="__dir_handle_8h_source_1l00087"/><link linkend="_classmbed_1_1_dir_handle_1a9eab46a6c55a45f5d5e28586a89ab4b6">00087</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classmbed_1_1_dir_handle_1a9eab46a6c55a45f5d5e28586a89ab4b6">~DirHandle</link>()&#32;{}
+<anchor xml:id="__dir_handle_8h_source_1l00088"/>00088 };
+<anchor xml:id="__dir_handle_8h_source_1l00089"/>00089 
+<anchor xml:id="__dir_handle_8h_source_1l00090"/>00090 }&#32;<emphasis role="comment">//&#32;namespace&#32;mbed</emphasis>
+<anchor xml:id="__dir_handle_8h_source_1l00091"/>00091 
+<anchor xml:id="__dir_handle_8h_source_1l00092"/><link linkend="__dir_handle_8h_1a7d5f081155cbd798e6c01a4f37a62698">00092</link> <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_classmbed_1_1_dir_handle">mbed::DirHandle</link>&#32;<link linkend="__dir_handle_8h_1a7d5f081155cbd798e6c01a4f37a62698">DIR</link>;
+<anchor xml:id="__dir_handle_8h_source_1l00093"/>00093 
+<anchor xml:id="__dir_handle_8h_source_1l00094"/>00094 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="__dir_handle_8h_source_1l00095"/><link linkend="__dir_handle_8h_1aab3004462f9600cbca87f31807214b23">00095</link> &#32;&#32;&#32;&#32;<link linkend="_classmbed_1_1_dir_handle">DIR</link>&#32;*<link linkend="__dir_handle_8h_1aab3004462f9600cbca87f31807214b23">opendir</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*);
+<anchor xml:id="__dir_handle_8h_source_1l00096"/><link linkend="__dir_handle_8h_1a7e8226cf83a9afb3578268c806fb797a">00096</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structdirent">dirent</link>&#32;*<link linkend="__dir_handle_8h_1a7e8226cf83a9afb3578268c806fb797a">readdir</link>(<link linkend="_classmbed_1_1_dir_handle">DIR</link>&#32;*);
+<anchor xml:id="__dir_handle_8h_source_1l00097"/><link linkend="__dir_handle_8h_1a008fe2cb2468b06197c2f9bc406300a4">00097</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__dir_handle_8h_1a008fe2cb2468b06197c2f9bc406300a4">closedir</link>(<link linkend="_classmbed_1_1_dir_handle">DIR</link>*);
+<anchor xml:id="__dir_handle_8h_source_1l00098"/><link linkend="__dir_handle_8h_1a3fb58a6b4088367ccb71909e80ebbb1d">00098</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__dir_handle_8h_1a3fb58a6b4088367ccb71909e80ebbb1d">rewinddir</link>(<link linkend="_classmbed_1_1_dir_handle">DIR</link>*);
+<anchor xml:id="__dir_handle_8h_source_1l00099"/><link linkend="__dir_handle_8h_1a02343c3edead3efa2926e37d340b9cbe">00099</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">long</emphasis>&#32;<link linkend="__dir_handle_8h_1a02343c3edead3efa2926e37d340b9cbe">telldir</link>(<link linkend="_classmbed_1_1_dir_handle">DIR</link>*);
+<anchor xml:id="__dir_handle_8h_source_1l00100"/><link linkend="__dir_handle_8h_1a32bca3b3ef688933b676d4511e78cb5d">00100</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__dir_handle_8h_1a32bca3b3ef688933b676d4511e78cb5d">seekdir</link>(<link linkend="_classmbed_1_1_dir_handle">DIR</link>*,&#32;<emphasis role="keywordtype">long</emphasis>);
+<anchor xml:id="__dir_handle_8h_source_1l00101"/><link linkend="__dir_handle_8h_1a62a2a28943c326ccd2abd27293002b98">00101</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__dir_handle_8h_1a62a2a28943c326ccd2abd27293002b98">mkdir</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*name,&#32;mode_t&#32;n);
+<anchor xml:id="__dir_handle_8h_source_1l00102"/>00102 };
+<anchor xml:id="__dir_handle_8h_source_1l00103"/>00103 
+<anchor xml:id="__dir_handle_8h_source_1l00104"/>00104 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;MBED_DIRHANDLE_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

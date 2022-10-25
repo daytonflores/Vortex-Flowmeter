@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rtc__time_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/rtc_time.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/rtc_time.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;time.h&gt;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_rtc__time_8h_1a5d1e10825bf4a6ecdd567e9f2f384ed1">set_time</link> (time_t t)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_rtc__time_8h_1a5d1e10825bf4a6ecdd567e9f2f384ed1"/><section>
+    <title>set_time()</title>
+<indexterm><primary>set_time</primary><secondary>rtc_time.h</secondary></indexterm>
+<indexterm><primary>rtc_time.h</primary><secondary>set_time</secondary></indexterm>
+<para><computeroutput>void set_time (time_t t)</computeroutput></para>
+<para>Implementation of the C time.h functions</para>
+
+<para>Provides mechanisms to set and read the current time, based on the microcontroller Real-Time Clock (RTC), plus some standard C manipulation and formating functions.</para>
+
+<para>Example: <literallayout><computeroutput><emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed_8h">mbed.h</link>&quot;</emphasis>
+
+<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>()&#32;{
+&#32;&#32;&#32;&#32;<link linkend="_rtc__time_8h_1a5d1e10825bf4a6ecdd567e9f2f384ed1">set_time</link>(1256729737);&#32;&#32;<emphasis role="comment">//&#32;Set&#32;RTC&#32;time&#32;to&#32;Wed,&#32;28&#32;Oct&#32;2009&#32;11:35:37</emphasis>
+
+&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(1)&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time_t&#32;seconds&#32;=&#32;time(NULL);
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Time&#32;as&#32;seconds&#32;since&#32;January&#32;1,&#32;1970&#32;=&#32;%d\n&quot;</emphasis>,&#32;seconds);
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Time&#32;as&#32;a&#32;basic&#32;string&#32;=&#32;%s&quot;</emphasis>,&#32;ctime(&amp;seconds));
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;buffer[32];
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strftime(buffer,&#32;32,&#32;<emphasis role="stringliteral">&quot;%I:%M&#32;%p\n&quot;</emphasis>,&#32;localtime(&amp;seconds));
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Time&#32;as&#32;a&#32;custom&#32;formatted&#32;string&#32;=&#32;%s&quot;</emphasis>,&#32;buffer);
+
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(1);
+&#32;&#32;&#32;&#32;}
+}
+</computeroutput></literallayout> Set the current time</para>
+
+<para>Initialises and sets the time of the microcontroller Real-Time Clock (RTC) to the time represented by the number of seconds since January 1, 1970 (the UNIX timestamp).</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>t</entry><entry>
+<para>Number of seconds since January 1, 1970 (the UNIX timestamp)</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Example: <literallayout><computeroutput><emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mbed_8h">mbed.h</link>&quot;</emphasis>
+
+<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link>()&#32;{
+&#32;&#32;&#32;&#32;<link linkend="_rtc__time_8h_1a5d1e10825bf4a6ecdd567e9f2f384ed1">set_time</link>(1256729737);&#32;<emphasis role="comment">//&#32;Set&#32;time&#32;to&#32;Wed,&#32;28&#32;Oct&#32;2009&#32;11:35:37</emphasis>
+}
+</computeroutput></literallayout> </para>
+</section>
+</section>
+</section>

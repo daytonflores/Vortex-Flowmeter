@@ -1,0 +1,774 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions" xml:lang="en-US">
+<title>NVIC Functions</title>
+<indexterm><primary>NVIC Functions</primary></indexterm>
+<para>
+
+<para>Functions that manage interrupts and exceptions via the NVIC. </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_m_s_i_s___core___sys_tick_functions">SysTick Functions</link></para>
+
+<para>Functions that configure the System. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga3349f2e3580d7ce22d6530b7294e5921">NVIC_EnableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Enable External Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga260fba04ac8346855c57f091d4ee1e71">NVIC_DisableIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Disable External Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gafec8042db64c0f8ed432b6c8386a05d8">NVIC_GetPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga3ecf446519da33e1690deffbf5be505f">NVIC_SetPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Set Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga332e10ef9605dc6eb10b9e14511930f8">NVIC_ClearPendingIRQ</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Clear Pending Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga2305cbd44aaad792e3a4e538bdaf14f9">NVIC_SetPriority</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn, uint32_t priority)</para>
+
+<para>Set Interrupt Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga1cbaf8e6abd4aa4885828e7f24fcfeb4">NVIC_GetPriority</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Interrupt Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga1143dec48d60a3d6f238c4798a87759c">NVIC_SystemReset</link> (void)</para>
+
+<para>System Reset. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gae4e8f0238527c69f522029b93c8e5b78">SysTick_Config</link> (uint32_t ticks)</para>
+
+<para>System Tick Configuration. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga53c75b28823441c6153269f0ecbed878">_BIT_SHIFT</link>(IRQn)   (  (((uint32_t)(IRQn)       )    &amp;  0x03) * 8 )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaee4f7eb5d7e770ad51489dbceabb1755">_SHP_IDX</link>(IRQn)   ( ((((uint32_t)(IRQn) &amp; 0x0F)-8) &gt;&gt;    2)     )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga370ec4b1751a6a889d849747df3763a9">_IP_IDX</link>(IRQn)   (   ((uint32_t)(IRQn)            &gt;&gt;    2)     )</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga77cfbb35a9d8027e392034321bed6904">NVIC_SetPriorityGrouping</link> (uint32_t PriorityGroup)</para>
+
+<para>Set Priority Grouping. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga394f7ce2ca826c0da26284d17ac6524d">NVIC_GetPriorityGrouping</link> (void)</para>
+
+<para>Get Priority Grouping. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga47a0f52794068d076c9147aa3cb8d8a6">NVIC_GetActive</link> (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</para>
+
+<para>Get Active Interrupt. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gadb94ac5d892b376e4f3555ae0418ebac">NVIC_EncodePriority</link> (uint32_t PriorityGroup, uint32_t PreemptPriority, uint32_t SubPriority)</para>
+
+<para>Encode Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE void <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga4f23ef94633f75d3c97670a53949003c">NVIC_DecodePriority</link> (uint32_t Priority, uint32_t PriorityGroup, uint32_t *pPreemptPriority, uint32_t *pSubPriority)</para>
+
+<para>Decode Priority. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE uint32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gac90a497bd64286b84552c2c553d3419e">ITM_SendChar</link> (uint32_t ch)</para>
+
+<para>ITM Send Character. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gac3ee2c30a1ac4ed34c8a866a17decd53">ITM_ReceiveChar</link> (void)</para>
+
+<para>ITM Receive Character. </para>
+</listitem>
+            <listitem><para>__STATIC_INLINE int32_t <link linkend="_group___c_m_s_i_s__core___debug_functions_1gae61ce9ca5917735325cd93b0fb21dd29">ITM_CheckChar</link> (void)</para>
+
+<para>ITM Check Character. </para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga53c75b28823441c6153269f0ecbed878">_BIT_SHIFT</link>(IRQn)   (  (((uint32_t)(IRQn)       )    &amp;  0x03) * 8 )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaee4f7eb5d7e770ad51489dbceabb1755">_SHP_IDX</link>(IRQn)   ( ((((uint32_t)(IRQn) &amp; 0x0F)-8) &gt;&gt;    2)     )</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga370ec4b1751a6a889d849747df3763a9">_IP_IDX</link>(IRQn)   (   ((uint32_t)(IRQn)            &gt;&gt;    2)     )</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Functions that manage interrupts and exceptions via the NVIC. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga53c75b28823441c6153269f0ecbed878"/><section>
+    <title>_BIT_SHIFT<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_BIT_SHIFT</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>_BIT_SHIFT</secondary></indexterm>
+<para><computeroutput>#define _BIT_SHIFT( IRQn)   (  (((uint32_t)(IRQn)       )    &amp;  0x03) * 8 )</computeroutput></para><para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00504">504</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga53c75b28823441c6153269f0ecbed878"/><section>
+    <title>_BIT_SHIFT<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_BIT_SHIFT</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>_BIT_SHIFT</secondary></indexterm>
+<para><computeroutput>#define _BIT_SHIFT( IRQn)   (  (((uint32_t)(IRQn)       )    &amp;  0x03) * 8 )</computeroutput></para><para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00615">615</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga370ec4b1751a6a889d849747df3763a9"/><section>
+    <title>_IP_IDX<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_IP_IDX</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>_IP_IDX</secondary></indexterm>
+<para><computeroutput>#define _IP_IDX( IRQn)   (   ((uint32_t)(IRQn)            &gt;&gt;    2)     )</computeroutput></para><para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00506">506</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga370ec4b1751a6a889d849747df3763a9"/><section>
+    <title>_IP_IDX<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_IP_IDX</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>_IP_IDX</secondary></indexterm>
+<para><computeroutput>#define _IP_IDX( IRQn)   (   ((uint32_t)(IRQn)            &gt;&gt;    2)     )</computeroutput></para><para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00617">617</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaee4f7eb5d7e770ad51489dbceabb1755"/><section>
+    <title>_SHP_IDX<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_SHP_IDX</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>_SHP_IDX</secondary></indexterm>
+<para><computeroutput>#define _SHP_IDX( IRQn)   ( ((((uint32_t)(IRQn) &amp; 0x0F)-8) &gt;&gt;    2)     )</computeroutput></para><para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00505">505</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1gaee4f7eb5d7e770ad51489dbceabb1755"/><section>
+    <title>_SHP_IDX<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_SHP_IDX</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>_SHP_IDX</secondary></indexterm>
+<para><computeroutput>#define _SHP_IDX( IRQn)   ( ((((uint32_t)(IRQn) &amp; 0x0F)-8) &gt;&gt;    2)     )</computeroutput></para><para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00616">616</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gae61ce9ca5917735325cd93b0fb21dd29"/><section>
+    <title>ITM_CheckChar()</title>
+<indexterm><primary>ITM_CheckChar</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>ITM_CheckChar</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE int32_t ITM_CheckChar (void )</computeroutput></para><para>
+
+<para>ITM Check Character. </para>
+</para>
+
+<para>The function checks whether a character is pending for reading in the variable <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link>.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>0 No character available. </para>
+
+<para>1 Character available. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01610">1610</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac3ee2c30a1ac4ed34c8a866a17decd53"/><section>
+    <title>ITM_ReceiveChar()</title>
+<indexterm><primary>ITM_ReceiveChar</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>ITM_ReceiveChar</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE int32_t ITM_ReceiveChar (void )</computeroutput></para><para>
+
+<para>ITM Receive Character. </para>
+</para>
+
+<para>The function inputs a character via the external variable <link linkend="_group___c_m_s_i_s__core___debug_functions_1ga12e68e55a7badc271b948d6c7230b2a8">ITM_RxBuffer</link>.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Received character. </para>
+
+<para>-1 No character pending. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01591">1591</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s__core___debug_functions_1gac90a497bd64286b84552c2c553d3419e"/><section>
+    <title>ITM_SendChar()</title>
+<indexterm><primary>ITM_SendChar</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>ITM_SendChar</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE uint32_t ITM_SendChar (uint32_t ch)</computeroutput></para><para>
+
+<para>ITM Send Character. </para>
+</para>
+
+<para>The function transmits a character via the ITM channel 0, and <itemizedlist>
+<listitem>
+<para>Just returns when no debugger is connected that has booked the output. </para>
+</listitem>
+<listitem>
+<para>Is blocking when a debugger is connected, but the previous character sent has not been transmitted.</para>
+</listitem>
+</itemizedlist>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>ch</entry><entry>
+<para>Character to transmit.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Character to transmit. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01572">1572</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga332e10ef9605dc6eb10b9e14511930f8"/><section>
+    <title>NVIC_ClearPendingIRQ()</title>
+<indexterm><primary>NVIC_ClearPendingIRQ</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_ClearPendingIRQ</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void NVIC_ClearPendingIRQ (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</computeroutput></para><para>
+
+<para>Clear Pending Interrupt. </para>
+</para>
+
+<para>The function clears the pending bit of an external interrupt.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>IRQn</entry><entry>
+<para>External interrupt number. Value cannot be negative. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00567">567</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga4f23ef94633f75d3c97670a53949003c"/><section>
+    <title>NVIC_DecodePriority()</title>
+<indexterm><primary>NVIC_DecodePriority</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_DecodePriority</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void NVIC_DecodePriority (uint32_t Priority, uint32_t PriorityGroup, uint32_t * pPreemptPriority, uint32_t * pSubPriority)</computeroutput></para><para>
+
+<para>Decode Priority. </para>
+</para>
+
+<para>The function decodes an interrupt priority value with a given priority group to preemptive priority value and subpriority value. In case of a conflict between priority grouping and available priority bits (__NVIC_PRIO_BITS) the samllest possible priority group is set.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>Priority</entry><entry>
+<para>Priority value, which can be retrieved with the function <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga1cbaf8e6abd4aa4885828e7f24fcfeb4">NVIC_GetPriority()</link>. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>PriorityGroup</entry><entry>
+<para>Used priority group. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>pPreemptPriority</entry><entry>
+<para>Preemptive priority value (starting from 0). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>out</entry><entry>pSubPriority</entry><entry>
+<para>Subpriority value (starting from 0). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01475">1475</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga260fba04ac8346855c57f091d4ee1e71"/><section>
+    <title>NVIC_DisableIRQ()</title>
+<indexterm><primary>NVIC_DisableIRQ</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_DisableIRQ</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void NVIC_DisableIRQ (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</computeroutput></para><para>
+
+<para>Disable External Interrupt. </para>
+</para>
+
+<para>The function disables a device-specific interrupt in the NVIC interrupt controller.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>IRQn</entry><entry>
+<para>External interrupt number. Value cannot be negative. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00527">527</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga3349f2e3580d7ce22d6530b7294e5921"/><section>
+    <title>NVIC_EnableIRQ()</title>
+<indexterm><primary>NVIC_EnableIRQ</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_EnableIRQ</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void NVIC_EnableIRQ (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</computeroutput></para><para>
+
+<para>Enable External Interrupt. </para>
+</para>
+
+<para>The function enables a device-specific interrupt in the NVIC interrupt controller.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>IRQn</entry><entry>
+<para>External interrupt number. Value cannot be negative. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00515">515</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1gadb94ac5d892b376e4f3555ae0418ebac"/><section>
+    <title>NVIC_EncodePriority()</title>
+<indexterm><primary>NVIC_EncodePriority</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_EncodePriority</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t PreemptPriority, uint32_t SubPriority)</computeroutput></para><para>
+
+<para>Encode Priority. </para>
+</para>
+
+<para>The function encodes the priority for an interrupt with the given priority group, preemptive priority value, and subpriority value. In case of a conflict between priority grouping and available priority bits (__NVIC_PRIO_BITS), the samllest possible priority group is set.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>PriorityGroup</entry><entry>
+<para>Used priority group. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>PreemptPriority</entry><entry>
+<para>Preemptive priority value (starting from 0). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>SubPriority</entry><entry>
+<para>Subpriority value (starting from 0). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Encoded priority. Value can be used in the function <link linkend="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga2305cbd44aaad792e3a4e538bdaf14f9">NVIC_SetPriority()</link>. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01447">1447</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga47a0f52794068d076c9147aa3cb8d8a6"/><section>
+    <title>NVIC_GetActive()</title>
+<indexterm><primary>NVIC_GetActive</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_GetActive</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE uint32_t NVIC_GetActive (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</computeroutput></para><para>
+
+<para>Get Active Interrupt. </para>
+</para>
+
+<para>The function reads the active register in NVIC and returns the active bit.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>IRQn</entry><entry>
+<para>Interrupt number.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 Interrupt status is not active. </para>
+
+<para>1 Interrupt status is active. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01390">1390</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1gafec8042db64c0f8ed432b6c8386a05d8"/><section>
+    <title>NVIC_GetPendingIRQ()</title>
+<indexterm><primary>NVIC_GetPendingIRQ</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_GetPendingIRQ</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE uint32_t NVIC_GetPendingIRQ (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</computeroutput></para><para>
+
+<para>Get Pending Interrupt. </para>
+</para>
+
+<para>The function reads the pending register in the NVIC and returns the pending bit for the specified interrupt.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>IRQn</entry><entry>
+<para>Interrupt number.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 Interrupt status is not pending. </para>
+
+<para>1 Interrupt status is pending. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00543">543</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga1cbaf8e6abd4aa4885828e7f24fcfeb4"/><section>
+    <title>NVIC_GetPriority()</title>
+<indexterm><primary>NVIC_GetPriority</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_GetPriority</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE uint32_t NVIC_GetPriority (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</computeroutput></para><para>
+
+<para>Get Interrupt Priority. </para>
+</para>
+
+<para>The function reads the priority of an interrupt. The interrupt number can be positive to specify an external (device specific) interrupt, or negative to specify an internal (core) interrupt.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>IRQn</entry><entry>
+<para>Interrupt number. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Interrupt Priority. Value is aligned automatically to the implemented priority bits of the microcontroller. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00604">604</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga394f7ce2ca826c0da26284d17ac6524d"/><section>
+    <title>NVIC_GetPriorityGrouping()</title>
+<indexterm><primary>NVIC_GetPriorityGrouping</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_GetPriorityGrouping</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE uint32_t NVIC_GetPriorityGrouping (void )</computeroutput></para><para>
+
+<para>Get Priority Grouping. </para>
+</para>
+
+<para>The function reads the priority grouping field from the NVIC Interrupt Controller.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Priority grouping field (SCB-&gt;AIRCR [10:8] PRIGROUP field). </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01311">1311</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga3ecf446519da33e1690deffbf5be505f"/><section>
+    <title>NVIC_SetPendingIRQ()</title>
+<indexterm><primary>NVIC_SetPendingIRQ</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_SetPendingIRQ</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void NVIC_SetPendingIRQ (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn)</computeroutput></para><para>
+
+<para>Set Pending Interrupt. </para>
+</para>
+
+<para>The function sets the pending bit of an external interrupt.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>IRQn</entry><entry>
+<para>Interrupt number. Value cannot be negative. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00555">555</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga2305cbd44aaad792e3a4e538bdaf14f9"/><section>
+    <title>NVIC_SetPriority()</title>
+<indexterm><primary>NVIC_SetPriority</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_SetPriority</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void NVIC_SetPriority (<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link> IRQn, uint32_t priority)</computeroutput></para><para>
+
+<para>Set Interrupt Priority. </para>
+</para>
+
+<para>The function sets the priority of an interrupt.</para>
+
+<para><note><title>Note</title>
+
+<para>The priority cannot be set for every core interrupt.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>IRQn</entry><entry>
+<para>Interrupt number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>priority</entry><entry>
+<para>Priority to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00582">582</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga77cfbb35a9d8027e392034321bed6904"/><section>
+    <title>NVIC_SetPriorityGrouping()</title>
+<indexterm><primary>NVIC_SetPriorityGrouping</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_SetPriorityGrouping</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void NVIC_SetPriorityGrouping (uint32_t PriorityGroup)</computeroutput></para><para>
+
+<para>Set Priority Grouping. </para>
+</para>
+
+<para>The function sets the priority grouping field using the required unlock sequence. The parameter PriorityGroup is assigned to the field SCB-&gt;AIRCR [10:8] PRIGROUP field. Only values from 0..7 are used. In case of a conflict between priority grouping and available priority bits (__NVIC_PRIO_BITS), the smallest possible priority group is set.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>PriorityGroup</entry><entry>
+<para>Priority grouping field. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l01291">1291</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1ga1143dec48d60a3d6f238c4798a87759c"/><section>
+    <title>NVIC_SystemReset()</title>
+<indexterm><primary>NVIC_SystemReset</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>NVIC_SystemReset</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE void NVIC_SystemReset (void )</computeroutput></para><para>
+
+<para>System Reset. </para>
+</para>
+
+<para>The function initiates a system reset request to reset the MCU. </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00618">618</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___core___n_v_i_c_functions_1gae4e8f0238527c69f522029b93c8e5b78"/><section>
+    <title>SysTick_Config()</title>
+<indexterm><primary>SysTick_Config</primary><secondary>NVIC Functions</secondary></indexterm>
+<indexterm><primary>NVIC Functions</primary><secondary>SysTick_Config</secondary></indexterm>
+<para><computeroutput>__STATIC_INLINE uint32_t SysTick_Config (uint32_t ticks)</computeroutput></para><para>
+
+<para>System Tick Configuration. </para>
+</para>
+
+<para>The function initializes the System Timer and its interrupt, and starts the System Tick Timer. Counter is in free running mode to generate periodic interrupts.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>ticks</entry><entry>
+<para>Number of ticks between two interrupts.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 Function succeeded. </para>
+
+<para>1 Function failed.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>When the variable <emphasis role="bold">__Vendor_SysTickConfig</emphasis> is set to 1, then the function <emphasis role="bold">SysTick_Config</emphasis> is not included. In this case, the file <emphasis role="bold"><emphasis>device</emphasis>.h</emphasis> must contain a vendor-specific implementation of this function. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00656">656</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+</section>
+</section>

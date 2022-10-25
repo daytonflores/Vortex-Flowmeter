@@ -1,0 +1,132 @@
+\hypertarget{_c_a_n_8h_source}{}\doxysection{CAN.\+h}
+\label{_c_a_n_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/CAN.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/CAN.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_CAN\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_CAN\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#if DEVICE\_CAN}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}can\_api.h"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}can\_helper.h"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}FunctionPointer.h"{}}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{31 \textcolor{keyword}{class }CANMessage : \textcolor{keyword}{public} CAN\_Message \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{public}:}
+\DoxyCodeLine{36     CANMessage() : CAN\_Message() \{}
+\DoxyCodeLine{37         len    = 8;}
+\DoxyCodeLine{38         type   = CANData;}
+\DoxyCodeLine{39         format = CANStandard;}
+\DoxyCodeLine{40         \textcolor{keywordtype}{id}     = 0;}
+\DoxyCodeLine{41         memset(data, 0, 8);}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{46     CANMessage(\textcolor{keywordtype}{int} \_id, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\_data, \textcolor{keywordtype}{char} \_len = 8, CANType \_type = CANData, CANFormat \_format = CANStandard) \{}
+\DoxyCodeLine{47       len    = \_len \& 0xF;}
+\DoxyCodeLine{48       type   = \_type;}
+\DoxyCodeLine{49       format = \_format;}
+\DoxyCodeLine{50       \textcolor{keywordtype}{id}     = \_id;}
+\DoxyCodeLine{51       memcpy(data, \_data, \_len);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{56     CANMessage(\textcolor{keywordtype}{int} \_id, CANFormat \_format = CANStandard) \{}
+\DoxyCodeLine{57       len    = 0;}
+\DoxyCodeLine{58       type   = CANRemote;}
+\DoxyCodeLine{59       format = \_format;}
+\DoxyCodeLine{60       \textcolor{keywordtype}{id}     = \_id;}
+\DoxyCodeLine{61       memset(data, 0, 8);}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 \};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{67 \textcolor{keyword}{class }CAN \{}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keyword}{public}:}
+\DoxyCodeLine{108     CAN(PinName rd, PinName td);}
+\DoxyCodeLine{109     \textcolor{keyword}{virtual} \string~CAN();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{119     \textcolor{keywordtype}{int} frequency(\textcolor{keywordtype}{int} hz);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{129     \textcolor{keywordtype}{int} write(CANMessage msg);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{140     \textcolor{keywordtype}{int} read(CANMessage \&msg, \textcolor{keywordtype}{int} handle = 0);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{146     \textcolor{keywordtype}{void} reset();}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{152     \textcolor{keywordtype}{void} monitor(\textcolor{keywordtype}{bool} silent);}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154     \textcolor{keyword}{enum} Mode \{}
+\DoxyCodeLine{155         Reset = 0,}
+\DoxyCodeLine{156         Normal,}
+\DoxyCodeLine{157         Silent,}
+\DoxyCodeLine{158         LocalTest,}
+\DoxyCodeLine{159         GlobalTest,}
+\DoxyCodeLine{160         SilentTest}
+\DoxyCodeLine{161     \};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{171     \textcolor{keywordtype}{int} mode(Mode mode);}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{184     \textcolor{keywordtype}{int} filter(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mask, CANFormat format = CANAny, \textcolor{keywordtype}{int} handle = 0);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{188     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} rderror();}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{192     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} tderror();}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194     \textcolor{keyword}{enum} IrqType \{}
+\DoxyCodeLine{195         RxIrq = 0,}
+\DoxyCodeLine{196         TxIrq,}
+\DoxyCodeLine{197         EwIrq,}
+\DoxyCodeLine{198         DoIrq,}
+\DoxyCodeLine{199         WuIrq,}
+\DoxyCodeLine{200         EpIrq,}
+\DoxyCodeLine{201         AlIrq,}
+\DoxyCodeLine{202         BeIrq,}
+\DoxyCodeLine{203         IdIrq}
+\DoxyCodeLine{204     \};}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{212     \textcolor{keywordtype}{void} attach(\textcolor{keywordtype}{void} (*fptr)(\textcolor{keywordtype}{void}), IrqType type=RxIrq);}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{221    \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{222    \textcolor{keywordtype}{void} attach(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void}), IrqType type=RxIrq) \{}
+\DoxyCodeLine{223         \textcolor{keywordflow}{if}((mptr != NULL) \&\& (tptr != NULL)) \{}
+\DoxyCodeLine{224             \_irq[type].attach(tptr, mptr);}
+\DoxyCodeLine{225             can\_irq\_set(\&\_can, (CanIrqType)type, 1);}
+\DoxyCodeLine{226         \}}
+\DoxyCodeLine{227         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{228             can\_irq\_set(\&\_can, (CanIrqType)type, 0);}
+\DoxyCodeLine{229         \}}
+\DoxyCodeLine{230     \}}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{232     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \_irq\_handler(uint32\_t \textcolor{keywordtype}{id}, CanIrqType type);}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{235     can\_t           \_can;}
+\DoxyCodeLine{236     FunctionPointer \_irq[9];}
+\DoxyCodeLine{237 \};}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#endif    }\textcolor{comment}{// MBED\_CAN\_H}}
+
+\end{DoxyCode}

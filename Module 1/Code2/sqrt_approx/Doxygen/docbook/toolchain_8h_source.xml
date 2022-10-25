@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_toolchain_8h_source" xml:lang="en-US">
+<title>toolchain.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/toolchain.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_toolchain_8h_source_1l00001"/>00001 <emphasis role="comment">/*&#32;mbed&#32;Microcontroller&#32;Library</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*&#32;Copyright&#32;(c)&#32;2006-2013&#32;ARM&#32;Limited</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;Licensed&#32;under&#32;the&#32;Apache&#32;License,&#32;Version&#32;2.0&#32;(the&#32;&quot;License&quot;);</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*&#32;you&#32;may&#32;not&#32;use&#32;this&#32;file&#32;except&#32;in&#32;compliance&#32;with&#32;the&#32;License.</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00006"/>00006 <emphasis role="comment">&#32;*&#32;You&#32;may&#32;obtain&#32;a&#32;copy&#32;of&#32;the&#32;License&#32;at</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00007"/>00007 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00008"/>00008 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;&#32;http://www.apache.org/licenses/LICENSE-2.0</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00009"/>00009 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00010"/>00010 <emphasis role="comment">&#32;*&#32;Unless&#32;required&#32;by&#32;applicable&#32;law&#32;or&#32;agreed&#32;to&#32;in&#32;writing,&#32;software</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00011"/>00011 <emphasis role="comment">&#32;*&#32;distributed&#32;under&#32;the&#32;License&#32;is&#32;distributed&#32;on&#32;an&#32;&quot;AS&#32;IS&quot;&#32;BASIS,</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;*&#32;WITHOUT&#32;WARRANTIES&#32;OR&#32;CONDITIONS&#32;OF&#32;ANY&#32;KIND,&#32;either&#32;express&#32;or&#32;implied.</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;*&#32;See&#32;the&#32;License&#32;for&#32;the&#32;specific&#32;language&#32;governing&#32;permissions&#32;and</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;*&#32;limitations&#32;under&#32;the&#32;License.</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#ifndef&#32;MBED_TOOLCHAIN_H</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#define&#32;MBED_TOOLCHAIN_H</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00018"/>00018 
+<anchor xml:id="_toolchain_8h_source_1l00019"/>00019 <emphasis role="preprocessor">#if&#32;defined(TOOLCHAIN_ARM)</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00020"/>00020 <emphasis role="preprocessor">#include&#32;&lt;rt_sys.h&gt;</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00021"/>00021 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00022"/>00022 
+<anchor xml:id="_toolchain_8h_source_1l00023"/>00023 <emphasis role="preprocessor">#ifndef&#32;FILEHANDLE</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00024"/><link linkend="_toolchain_8h_1ae3c686f9cfb2c0113bc42a8c3f7f26b6">00024</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_toolchain_8h_1ae3c686f9cfb2c0113bc42a8c3f7f26b6">FILEHANDLE</link>;
+<anchor xml:id="_toolchain_8h_source_1l00025"/>00025 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00026"/>00026 
+<anchor xml:id="_toolchain_8h_source_1l00027"/>00027 <emphasis role="preprocessor">#if&#32;defined&#32;(__ICCARM__)</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00028"/>00028 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;WEAK&#32;&#32;&#32;&#32;&#32;__weak</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00029"/>00029 <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;PACKED&#32;&#32;&#32;__packed</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00030"/>00030 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00031"/><link linkend="_toolchain_8h_1ad1480e9557edcc543498ca259cee6c7d">00031</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;WEAK&#32;&#32;&#32;&#32;&#32;__attribute__((weak))</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00032"/><link linkend="_toolchain_8h_1a36d525cf4d116b2fe4ecc00222b256f1">00032</link> <emphasis role="preprocessor">#&#32;&#32;&#32;define&#32;PACKED&#32;&#32;&#32;__attribute__((packed))</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00033"/>00033 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_toolchain_8h_source_1l00034"/>00034 
+<anchor xml:id="_toolchain_8h_source_1l00035"/>00035 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

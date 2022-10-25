@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_file_system_like" xml:lang="en-US">
+<title>FileSystemLike Class Reference</title>
+<indexterm><primary>FileSystemLike</primary></indexterm>
+<para>
+<computeroutput>#include &lt;FileSystemLike.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for FileSystemLike:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classmbed_1_1_file_system_like.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmbed_1_1_file_system_like_1acf63f803d6edb01c09d558ded9645e13">FileSystemLike</link> (const char *name)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classmbed_1_1_file_system_like_1a998fa00b85f628216af6969469d27037">~FileSystemLike</link> ()</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classmbed_1_1_file_handle">FileHandle</link> * <link linkend="_classmbed_1_1_file_system_like_1ad5f09da4a20de0e563cac31448b00612">open</link> (const char *filename, int flags)=0</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_file_system_like_1ac9e759c8eaf958266b21465878e1abfe">remove</link> (const char *filename)</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_file_system_like_1afc47638d317c3a569f94698ac84751b8">rename</link> (const char *oldname, const char *newname)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classmbed_1_1_dir_handle">DirHandle</link> * <link linkend="_classmbed_1_1_file_system_like_1a73c97910e2be90f1075a3c36f2d56a2c">opendir</link> (const char *name)</para>
+</listitem>
+            <listitem><para>virtual int <link linkend="_classmbed_1_1_file_system_like_1aa91c4d57960654fe7c518e2b51499617">mkdir</link> (const char *name, mode_t mode)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classmbed_1_1_dir_handle">DirHandle</link> * <link linkend="_classmbed_1_1_file_system_like_1aa3f0c6a5c375704a0ea188a7dba80195">opendir</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classmbed_1_1_file_system_like_1a675ca106d6ffb5f78d71d004be2166b4">BaseDirHandle</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A filesystem-like object is one that can be used to open files though it by fopen(&quot;/name/filename&quot;, mode)</para>
+
+<para>Implementations must define at least open (the default definitions of the rest of the functions just return error values). </para>
+<para>
+Definition at line <link linkend="__file_system_like_8h_source_1l00033">33</link> of file <link linkend="__file_system_like_8h_source">FileSystemLike.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmbed_1_1_file_system_like_1acf63f803d6edb01c09d558ded9645e13"/><section>
+    <title>FileSystemLike()</title>
+<indexterm><primary>FileSystemLike</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>FileSystemLike</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_file_system_like">FileSystemLike</link> (const char * name)</computeroutput></para>
+<para><link linkend="_classmbed_1_1_file_system_like">FileSystemLike</link> constructor</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name to use for the filesystem. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_system_like_1a998fa00b85f628216af6969469d27037"/><section>
+    <title>~FileSystemLike()</title>
+<indexterm><primary>~FileSystemLike</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>~FileSystemLike</secondary></indexterm>
+<para><computeroutput>virtual ~<link linkend="_classmbed_1_1_file_system_like">FileSystemLike</link> ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_file_system_like_1aa91c4d57960654fe7c518e2b51499617"/><section>
+    <title>mkdir()</title>
+<indexterm><primary>mkdir</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>mkdir</secondary></indexterm>
+<para><computeroutput>virtual int mkdir (const char * name, mode_t mode)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Creates a directory in the filesystem.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the directory to create. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mode</entry><entry>
+<para>The permissions to create the directory with.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 on success, -1 on failure. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__file_system_like_8h_source_1l00097">97</link> of file <link linkend="__file_system_like_8h_source">FileSystemLike.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_system_like_1ad5f09da4a20de0e563cac31448b00612"/><section>
+    <title>open()</title>
+<indexterm><primary>open</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>open</secondary></indexterm>
+<para><computeroutput>virtual <link linkend="_classmbed_1_1_file_handle">FileHandle</link> * open (const char * filename, int flags)<computeroutput>[pure virtual]</computeroutput></computeroutput></para>
+<para>Opens a file from the filesystem</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>The name of the file to open. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>flags</entry><entry>
+<para>One of O_RDONLY, O_WRONLY, or O_RDWR, OR&apos;d with zero or more of O_CREAT, O_TRUNC, or O_APPEND.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to a <link linkend="_classmbed_1_1_file_handle">FileHandle</link> object representing the file on success, or NULL on failure. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_system_like_1aa3f0c6a5c375704a0ea188a7dba80195"/><section>
+    <title>opendir()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>opendir</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>opendir</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classmbed_1_1_dir_handle">DirHandle</link> * opendir ( )<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmbed_1_1_file_system_like_1a73c97910e2be90f1075a3c36f2d56a2c"/><section>
+    <title>opendir()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>opendir</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>opendir</secondary></indexterm>
+<para><computeroutput>virtual <link linkend="_classmbed_1_1_dir_handle">DirHandle</link> * opendir (const char * name)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Opens a directory in the filesystem and returns a <link linkend="_classmbed_1_1_dir_handle">DirHandle</link> representing the directory stream.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the directory to open.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A <link linkend="_classmbed_1_1_dir_handle">DirHandle</link> representing the directory stream, or NULL on failure. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__file_system_like_8h_source_1l00086">86</link> of file <link linkend="__file_system_like_8h_source">FileSystemLike.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_system_like_1ac9e759c8eaf958266b21465878e1abfe"/><section>
+    <title>remove()</title>
+<indexterm><primary>remove</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>remove</secondary></indexterm>
+<para><computeroutput>virtual int remove (const char * filename)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Remove a file from the filesystem.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>the name of the file to remove. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>returns</entry><entry>
+<para>0 on success, -1 on failure. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__file_system_like_8h_source_1l00064">64</link> of file <link linkend="__file_system_like_8h_source">FileSystemLike.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_file_system_like_1afc47638d317c3a569f94698ac84751b8"/><section>
+    <title>rename()</title>
+<indexterm><primary>rename</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>rename</secondary></indexterm>
+<para><computeroutput>virtual int rename (const char * oldname, const char * newname)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Rename a file in the filesystem.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>oldname</entry><entry>
+<para>the name of the file to rename. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>newname</entry><entry>
+<para>the name to rename it to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>0 on success, -1 on failure. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__file_system_like_8h_source_1l00075">75</link> of file <link linkend="__file_system_like_8h_source">FileSystemLike.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_file_system_like_1a675ca106d6ffb5f78d71d004be2166b4"/><section>
+    <title>BaseDirHandle</title>
+<indexterm><primary>BaseDirHandle</primary><secondary>FileSystemLike</secondary></indexterm>
+<indexterm><primary>FileSystemLike</primary><secondary>BaseDirHandle</secondary></indexterm>
+<para><computeroutput>friend class BaseDirHandle<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__file_system_like_8h_source_1l00045">45</link> of file <link linkend="__file_system_like_8h_source">FileSystemLike.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__file_system_like_8h">FileSystemLike.h</link></section>
+</section>

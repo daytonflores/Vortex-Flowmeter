@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___g_p_i_o" xml:lang="en-US">
+<title>GPIO</title>
+<indexterm><primary>GPIO</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___g_p_i_o___exported___constants">GPIO_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_g_p_i_o___init_type_def">GPIO_InitTypeDef</link></para>
+
+<para>GPIO Init structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_1ga6da646a4924c5cfae3024c660476f26f">IS_GPIO_PIN_ACTION</link>(ACTION)   (((ACTION) == <link linkend="_group___g_p_i_o_1gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2">GPIO_PIN_RESET</link>) || ((ACTION) == <link linkend="_group___g_p_i_o_1gga5b3ef0486b179415581eb342e0ea6b43a746c062509db3ad1e47beed7527f9f8a">GPIO_PIN_SET</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_1gaae18fc8d92ffa4df2172c78869e712fc">__HAL_GPIO_EXTI_GET_FLAG</link>(__EXTI_LINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (__EXTI_LINE__))</para>
+
+<para>Checks whether the specified EXTI line flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_1ga2f28fc349d1812cdc55a77c68d2b278d">__HAL_GPIO_EXTI_CLEAR_FLAG</link>(__EXTI_LINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (__EXTI_LINE__))</para>
+
+<para>Clears the EXTI&apos;s line pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_1ga27f0e1f6c38745169d74620f6a178a94">__HAL_GPIO_EXTI_GET_IT</link>(__EXTI_LINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (__EXTI_LINE__))</para>
+
+<para>Checks whether the specified EXTI line is asserted or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___g_p_i_o_1ga2a086506eec826f49b200fba64beb9f1">__HAL_GPIO_EXTI_CLEAR_IT</link>(__EXTI_LINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (__EXTI_LINE__))</para>
+
+<para>Clears the EXTI&apos;s line pending bits. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___g_p_i_o_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> { <link linkend="_group___g_p_i_o_1gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2">GPIO_PIN_RESET</link> = 0
+, <link linkend="_group___g_p_i_o_1gga5b3ef0486b179415581eb342e0ea6b43a746c062509db3ad1e47beed7527f9f8a">GPIO_PIN_SET</link>
+ }</para>
+
+<para>GPIO Bit SET and Bit RESET enumeration. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1ga41bda93b6dd639e4905fdb1454eff98e">HAL_GPIO_Init</link> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, <link linkend="_struct_g_p_i_o___init_type_def">GPIO_InitTypeDef</link> *GPIO_Init)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1gafe9c756b5aa18961032a3f8aa572959b">HAL_GPIO_DeInit</link> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint32_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para><link linkend="_group___g_p_i_o_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> <link linkend="_group___g_p_i_o_1gaf2b819ea6551319ddd5670db318d2e4e">HAL_GPIO_ReadPin</link> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1gaf4b97bdf533a02f51ef696d43b6da5c4">HAL_GPIO_WritePin</link> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin, <link linkend="_group___g_p_i_o_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> PinState)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1gaf5e0c89f752de5cdedcc30db068133f6">HAL_GPIO_TogglePin</link> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___g_p_i_o_1gad03c868b4a4fb25883c1bb86d0c7e9ca">HAL_GPIO_LockPin</link> (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> *GPIOx, uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1gaa5de1ec4ebdd47e3e2b786224adaa9d0">HAL_GPIO_EXTI_IRQHandler</link> (uint16_t GPIO_Pin)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___g_p_i_o_1ga0cd91fd3a9608559c2a87a8ba6cba55f">HAL_GPIO_EXTI_Callback</link> (uint16_t GPIO_Pin)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___g_p_i_o_1ga2f28fc349d1812cdc55a77c68d2b278d"/><section>
+    <title>__HAL_GPIO_EXTI_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_GPIO_EXTI_CLEAR_FLAG</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>__HAL_GPIO_EXTI_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_GPIO_EXTI_CLEAR_FLAG( __EXTI_LINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (__EXTI_LINE__))</computeroutput></para><para>
+
+<para>Clears the EXTI&apos;s line pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__EXTI_LINE__</entry><entry>
+<para>specifies the EXTI lines flags to clear. This parameter can be any combination of GPIO_PIN_x where x can be (0..15) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__gpio_8h_source_1l00229">229</link> of file <link linkend="_stm32f4xx__hal__gpio_8h_source">stm32f4xx_hal_gpio.h</link>.</para>
+</section>
+<anchor xml:id="_group___g_p_i_o_1ga2a086506eec826f49b200fba64beb9f1"/><section>
+    <title>__HAL_GPIO_EXTI_CLEAR_IT</title>
+<indexterm><primary>__HAL_GPIO_EXTI_CLEAR_IT</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>__HAL_GPIO_EXTI_CLEAR_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_GPIO_EXTI_CLEAR_IT( __EXTI_LINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (__EXTI_LINE__))</computeroutput></para><para>
+
+<para>Clears the EXTI&apos;s line pending bits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__EXTI_LINE__</entry><entry>
+<para>specifies the EXTI lines to clear. This parameter can be any combination of GPIO_PIN_x where x can be (0..15) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__gpio_8h_source_1l00245">245</link> of file <link linkend="_stm32f4xx__hal__gpio_8h_source">stm32f4xx_hal_gpio.h</link>.</para>
+</section>
+<anchor xml:id="_group___g_p_i_o_1gaae18fc8d92ffa4df2172c78869e712fc"/><section>
+    <title>__HAL_GPIO_EXTI_GET_FLAG</title>
+<indexterm><primary>__HAL_GPIO_EXTI_GET_FLAG</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>__HAL_GPIO_EXTI_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_GPIO_EXTI_GET_FLAG( __EXTI_LINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (__EXTI_LINE__))</computeroutput></para><para>
+
+<para>Checks whether the specified EXTI line flag is set or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__EXTI_LINE__</entry><entry>
+<para>specifies the EXTI line flag to check. This parameter can be GPIO_PIN_x where x can be(0..15) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">EXTI_LINE</emphasis> (SET or RESET). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__gpio_8h_source_1l00221">221</link> of file <link linkend="_stm32f4xx__hal__gpio_8h_source">stm32f4xx_hal_gpio.h</link>.</para>
+</section>
+<anchor xml:id="_group___g_p_i_o_1ga27f0e1f6c38745169d74620f6a178a94"/><section>
+    <title>__HAL_GPIO_EXTI_GET_IT</title>
+<indexterm><primary>__HAL_GPIO_EXTI_GET_IT</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>__HAL_GPIO_EXTI_GET_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_GPIO_EXTI_GET_IT( __EXTI_LINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (__EXTI_LINE__))</computeroutput></para><para>
+
+<para>Checks whether the specified EXTI line is asserted or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__EXTI_LINE__</entry><entry>
+<para>specifies the EXTI line to check. This parameter can be GPIO_PIN_x where x can be(0..15) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">EXTI_LINE</emphasis> (SET or RESET). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__gpio_8h_source_1l00237">237</link> of file <link linkend="_stm32f4xx__hal__gpio_8h_source">stm32f4xx_hal_gpio.h</link>.</para>
+</section>
+<anchor xml:id="_group___g_p_i_o_1ga6da646a4924c5cfae3024c660476f26f"/><section>
+    <title>IS_GPIO_PIN_ACTION</title>
+<indexterm><primary>IS_GPIO_PIN_ACTION</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>IS_GPIO_PIN_ACTION</secondary></indexterm>
+<para><computeroutput>#define IS_GPIO_PIN_ACTION( ACTION)   (((ACTION) == <link linkend="_group___g_p_i_o_1gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2">GPIO_PIN_RESET</link>) || ((ACTION) == <link linkend="_group___g_p_i_o_1gga5b3ef0486b179415581eb342e0ea6b43a746c062509db3ad1e47beed7527f9f8a">GPIO_PIN_SET</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__gpio_8h_source_1l00088">88</link> of file <link linkend="_stm32f4xx__hal__gpio_8h_source">stm32f4xx_hal_gpio.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___g_p_i_o_1ga5b3ef0486b179415581eb342e0ea6b43"/><section>
+    <title>GPIO_PinState</title>
+<indexterm><primary>GPIO_PinState</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>GPIO_PinState</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___g_p_i_o_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link></computeroutput></para><para>
+
+<para>GPIO Bit SET and Bit RESET enumeration. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>GPIO_PIN_RESET</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>GPIO_PIN_RESET</secondary></indexterm>
+<anchor xml:id="_group___g_p_i_o_1gga5b3ef0486b179415581eb342e0ea6b43a90af2af95004ea61d76950ff3f2f6ec2"/>GPIO_PIN_RESET</entry><entry></entry></row><row><entry><indexterm><primary>GPIO_PIN_SET</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>GPIO_PIN_SET</secondary></indexterm>
+<anchor xml:id="_group___g_p_i_o_1gga5b3ef0486b179415581eb342e0ea6b43a746c062509db3ad1e47beed7527f9f8a"/>GPIO_PIN_SET</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__gpio_8h_source_1l00083">83</link> of file <link linkend="_stm32f4xx__hal__gpio_8h_source">stm32f4xx_hal_gpio.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___g_p_i_o_1gafe9c756b5aa18961032a3f8aa572959b"/><section>
+    <title>HAL_GPIO_DeInit()</title>
+<indexterm><primary>HAL_GPIO_DeInit</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>HAL_GPIO_DeInit</secondary></indexterm>
+<para><computeroutput>void HAL_GPIO_DeInit (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> * GPIOx, uint32_t GPIO_Pin)</computeroutput></para></section>
+<anchor xml:id="_group___g_p_i_o_1ga0cd91fd3a9608559c2a87a8ba6cba55f"/><section>
+    <title>HAL_GPIO_EXTI_Callback()</title>
+<indexterm><primary>HAL_GPIO_EXTI_Callback</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>HAL_GPIO_EXTI_Callback</secondary></indexterm>
+<para><computeroutput>void HAL_GPIO_EXTI_Callback (uint16_t GPIO_Pin)</computeroutput></para></section>
+<anchor xml:id="_group___g_p_i_o_1gaa5de1ec4ebdd47e3e2b786224adaa9d0"/><section>
+    <title>HAL_GPIO_EXTI_IRQHandler()</title>
+<indexterm><primary>HAL_GPIO_EXTI_IRQHandler</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>HAL_GPIO_EXTI_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_GPIO_EXTI_IRQHandler (uint16_t GPIO_Pin)</computeroutput></para></section>
+<anchor xml:id="_group___g_p_i_o_1ga41bda93b6dd639e4905fdb1454eff98e"/><section>
+    <title>HAL_GPIO_Init()</title>
+<indexterm><primary>HAL_GPIO_Init</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>HAL_GPIO_Init</secondary></indexterm>
+<para><computeroutput>void HAL_GPIO_Init (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> * GPIOx, <link linkend="_struct_g_p_i_o___init_type_def">GPIO_InitTypeDef</link> * GPIO_Init)</computeroutput></para></section>
+<anchor xml:id="_group___g_p_i_o_1gad03c868b4a4fb25883c1bb86d0c7e9ca"/><section>
+    <title>HAL_GPIO_LockPin()</title>
+<indexterm><primary>HAL_GPIO_LockPin</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>HAL_GPIO_LockPin</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_GPIO_LockPin (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> * GPIOx, uint16_t GPIO_Pin)</computeroutput></para></section>
+<anchor xml:id="_group___g_p_i_o_1gaf2b819ea6551319ddd5670db318d2e4e"/><section>
+    <title>HAL_GPIO_ReadPin()</title>
+<indexterm><primary>HAL_GPIO_ReadPin</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>HAL_GPIO_ReadPin</secondary></indexterm>
+<para><computeroutput><link linkend="_group___g_p_i_o_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> HAL_GPIO_ReadPin (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> * GPIOx, uint16_t GPIO_Pin)</computeroutput></para></section>
+<anchor xml:id="_group___g_p_i_o_1gaf5e0c89f752de5cdedcc30db068133f6"/><section>
+    <title>HAL_GPIO_TogglePin()</title>
+<indexterm><primary>HAL_GPIO_TogglePin</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>HAL_GPIO_TogglePin</secondary></indexterm>
+<para><computeroutput>void HAL_GPIO_TogglePin (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> * GPIOx, uint16_t GPIO_Pin)</computeroutput></para></section>
+<anchor xml:id="_group___g_p_i_o_1gaf4b97bdf533a02f51ef696d43b6da5c4"/><section>
+    <title>HAL_GPIO_WritePin()</title>
+<indexterm><primary>HAL_GPIO_WritePin</primary><secondary>GPIO</secondary></indexterm>
+<indexterm><primary>GPIO</primary><secondary>HAL_GPIO_WritePin</secondary></indexterm>
+<para><computeroutput>void HAL_GPIO_WritePin (<link linkend="_struct_g_p_i_o___type_def">GPIO_TypeDef</link> * GPIOx, uint16_t GPIO_Pin, <link linkend="_group___g_p_i_o_1ga5b3ef0486b179415581eb342e0ea6b43">GPIO_PinState</link> PinState)</computeroutput></para></section>
+</section>
+</section>

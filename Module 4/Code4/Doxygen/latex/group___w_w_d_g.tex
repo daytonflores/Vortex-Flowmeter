@@ -1,0 +1,237 @@
+\hypertarget{group___w_w_d_g}{}\doxysection{WWDG}
+\label{group___w_w_d_g}\index{WWDG@{WWDG}}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___w_w_d_g___bit_address___alias_region}{WWDG\+\_\+\+Bit\+Address\+\_\+\+Alias\+Region}}
+\item 
+\mbox{\hyperlink{group___w_w_d_g___interrupt__definition}{WWDG\+\_\+\+Interrupt\+\_\+definition}}
+\item 
+\mbox{\hyperlink{group___w_w_d_g___flag__definition}{WWDG\+\_\+\+Flag\+\_\+definition}}
+\begin{DoxyCompactList}\small\item\em WWDG Flag definition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___w_w_d_g___prescaler}{WWDG\+\_\+\+Prescaler}}
+\item 
+\mbox{\hyperlink{group___w_w_d_g___window}{WWDG\+\_\+\+Window}}
+\item 
+\mbox{\hyperlink{group___w_w_d_g___counter}{WWDG\+\_\+\+Counter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_w_w_d_g___init_type_def}{WWDG\+\_\+\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em WWDG Init structure definition ~\newline
+ \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em WWDG handle Structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___w_w_d_g_gadb7c147b55b6386d487d717b20cd1070}{\+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5}{HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+RESET}})
+\begin{DoxyCompactList}\small\item\em Reset WWDG handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___w_w_d_g_gaad04976da12e2c801c72668b8e100d80}{\+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$=  \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab647e9997b8b8e67de72af1aaea3f52f}{WWDG\+\_\+\+CR\+\_\+\+WDGA}})
+\begin{DoxyCompactList}\small\item\em Enables the WWDG peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___w_w_d_g_ga60a99447a00a7d95c18637c38147063a}{\+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Gets the selected WWDG\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___w_w_d_g_gae9c3b916e244deffc6a673d97df63671}{\+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR) \&= $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clears the WWDG\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___w_w_d_g_gab29dd54283dfafa9ae09d0b54fde06b4}{\+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~($\ast$(\mbox{\hyperlink{core__cm4_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) CFR\+\_\+\+BASE $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enables the WWDG early wakeup interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___w_w_d_g_ga0dbbade5e745711745e5f9cc10991301}{HAL\+\_\+\+WWDG\+\_\+\+State\+Type\+Def}} \{ \newline
+\mbox{\hyperlink{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5}{HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+RESET}} = 0x00
+, \mbox{\hyperlink{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301a4dc3b206181127388e44b6b7838e39fb}{HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+READY}} = 0x01
+, \mbox{\hyperlink{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ad0b871d6d748df57f9c354ecf04d9821}{HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+BUSY}} = 0x02
+, \mbox{\hyperlink{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ac35fbcc9e083869cd3410dfff314e985}{HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+TIMEOUT}} = 0x03
+, \newline
+\mbox{\hyperlink{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301a41c392c0097e126977c5b980c4f2e227}{HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+ERROR}} = 0x04
+ \}
+\begin{DoxyCompactList}\small\item\em WWDG HAL State Structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_ga72706a378ad2f79cba4324c1b328715a}\label{group___w_w_d_g_ga72706a378ad2f79cba4324c1b328715a}} 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+WWDG\+\_\+\+Init} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_gaa2a353f5e9d3d00f6cbf251770cb3259}\label{group___w_w_d_g_gaa2a353f5e9d3d00f6cbf251770cb3259}} 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+WWDG\+\_\+\+De\+Init} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_ga9871643c1868c37613b89d1acf010cd6}\label{group___w_w_d_g_ga9871643c1868c37613b89d1acf010cd6}} 
+void {\bfseries HAL\+\_\+\+WWDG\+\_\+\+Msp\+Init} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_gaf7a0f80dfa5dc7832a3240a8004f113d}\label{group___w_w_d_g_gaf7a0f80dfa5dc7832a3240a8004f113d}} 
+void {\bfseries HAL\+\_\+\+WWDG\+\_\+\+Msp\+De\+Init} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_gac59114721456ab7cefb8bd3dffdc2c8c}\label{group___w_w_d_g_gac59114721456ab7cefb8bd3dffdc2c8c}} 
+void {\bfseries HAL\+\_\+\+WWDG\+\_\+\+Wakeup\+Callback} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_ga6d56ddea267609ae162392f725c22ffc}\label{group___w_w_d_g_ga6d56ddea267609ae162392f725c22ffc}} 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+WWDG\+\_\+\+Start} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_ga67ae975315e3bf0ff2252b2cd32686ef}\label{group___w_w_d_g_ga67ae975315e3bf0ff2252b2cd32686ef}} 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+WWDG\+\_\+\+Start\+\_\+\+IT} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_ga33c30c69b966b353572a2d36a702efc3}\label{group___w_w_d_g_ga33c30c69b966b353572a2d36a702efc3}} 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+WWDG\+\_\+\+Refresh} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg, uint32\+\_\+t Counter)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_ga6521c5a0ff3184f951561302fb540fde}\label{group___w_w_d_g_ga6521c5a0ff3184f951561302fb540fde}} 
+void {\bfseries HAL\+\_\+\+WWDG\+\_\+\+IRQHandler} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\item 
+\mbox{\Hypertarget{group___w_w_d_g_ga893774ecf63a6f78ef41f414db80ee46}\label{group___w_w_d_g_ga893774ecf63a6f78ef41f414db80ee46}} 
+\mbox{\hyperlink{group___w_w_d_g_ga0dbbade5e745711745e5f9cc10991301}{HAL\+\_\+\+WWDG\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+WWDG\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_w_w_d_g___handle_type_def}{WWDG\+\_\+\+Handle\+Type\+Def}} $\ast$hwwdg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___w_w_d_g_gae9c3b916e244deffc6a673d97df63671}\label{group___w_w_d_g_gae9c3b916e244deffc6a673d97df63671}} 
+\index{WWDG@{WWDG}!\_\_HAL\_WWDG\_CLEAR\_FLAG@{\_\_HAL\_WWDG\_CLEAR\_FLAG}}
+\index{\_\_HAL\_WWDG\_CLEAR\_FLAG@{\_\_HAL\_WWDG\_CLEAR\_FLAG}!WWDG@{WWDG}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_WWDG\_CLEAR\_FLAG}{\_\_HAL\_WWDG\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR) \&= $\sim$(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Clears the WWDG\textquotesingle{}s pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & WWDG handle \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the flag to clear. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item WWDG\+\_\+\+FLAG\+\_\+\+EWIF\+: Early wakeup interrupt flag \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_w_d_g_gaad04976da12e2c801c72668b8e100d80}\label{group___w_w_d_g_gaad04976da12e2c801c72668b8e100d80}} 
+\index{WWDG@{WWDG}!\_\_HAL\_WWDG\_ENABLE@{\_\_HAL\_WWDG\_ENABLE}}
+\index{\_\_HAL\_WWDG\_ENABLE@{\_\_HAL\_WWDG\_ENABLE}!WWDG@{WWDG}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_WWDG\_ENABLE}{\_\_HAL\_WWDG\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$=  \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab647e9997b8b8e67de72af1aaea3f52f}{WWDG\+\_\+\+CR\+\_\+\+WDGA}})}
+
+
+
+Enables the WWDG peripheral. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & WWDG handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_w_d_g_gab29dd54283dfafa9ae09d0b54fde06b4}\label{group___w_w_d_g_gab29dd54283dfafa9ae09d0b54fde06b4}} 
+\index{WWDG@{WWDG}!\_\_HAL\_WWDG\_ENABLE\_IT@{\_\_HAL\_WWDG\_ENABLE\_IT}}
+\index{\_\_HAL\_WWDG\_ENABLE\_IT@{\_\_HAL\_WWDG\_ENABLE\_IT}!WWDG@{WWDG}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_WWDG\_ENABLE\_IT}{\_\_HAL\_WWDG\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~($\ast$(\mbox{\hyperlink{core__cm4_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t $\ast$) CFR\+\_\+\+BASE $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enables the WWDG early wakeup interrupt. 
+
+\begin{DoxyNote}{Note}
+Once enabled this interrupt cannot be disabled except by a system reset. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_w_d_g_ga60a99447a00a7d95c18637c38147063a}\label{group___w_w_d_g_ga60a99447a00a7d95c18637c38147063a}} 
+\index{WWDG@{WWDG}!\_\_HAL\_WWDG\_GET\_FLAG@{\_\_HAL\_WWDG\_GET\_FLAG}}
+\index{\_\_HAL\_WWDG\_GET\_FLAG@{\_\_HAL\_WWDG\_GET\_FLAG}!WWDG@{WWDG}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_WWDG\_GET\_FLAG}{\_\_HAL\_WWDG\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Gets the selected WWDG\textquotesingle{}s flag status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & WWDG handle \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the flag to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item WWDG\+\_\+\+FLAG\+\_\+\+EWIF\+: Early wakeup interrupt flag \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of WWDG\+\_\+\+FLAG (SET or RESET). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___w_w_d_g_gadb7c147b55b6386d487d717b20cd1070}\label{group___w_w_d_g_gadb7c147b55b6386d487d717b20cd1070}} 
+\index{WWDG@{WWDG}!\_\_HAL\_WWDG\_RESET\_HANDLE\_STATE@{\_\_HAL\_WWDG\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_WWDG\_RESET\_HANDLE\_STATE@{\_\_HAL\_WWDG\_RESET\_HANDLE\_STATE}!WWDG@{WWDG}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_WWDG\_RESET\_HANDLE\_STATE}{\_\_HAL\_WWDG\_RESET\_HANDLE\_STATE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5}{HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+RESET}})}
+
+
+
+Reset WWDG handle state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & WWDG handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___w_w_d_g_ga0dbbade5e745711745e5f9cc10991301}\label{group___w_w_d_g_ga0dbbade5e745711745e5f9cc10991301}} 
+\index{WWDG@{WWDG}!HAL\_WWDG\_StateTypeDef@{HAL\_WWDG\_StateTypeDef}}
+\index{HAL\_WWDG\_StateTypeDef@{HAL\_WWDG\_StateTypeDef}!WWDG@{WWDG}}
+\doxysubsubsection{\texorpdfstring{HAL\_WWDG\_StateTypeDef}{HAL\_WWDG\_StateTypeDef}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___w_w_d_g_ga0dbbade5e745711745e5f9cc10991301}{HAL\+\_\+\+WWDG\+\_\+\+State\+Type\+Def}}}
+
+
+
+WWDG HAL State Structure definition ~\newline
+ 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_WWDG\_STATE\_RESET@{HAL\_WWDG\_STATE\_RESET}!WWDG@{WWDG}}\index{WWDG@{WWDG}!HAL\_WWDG\_STATE\_RESET@{HAL\_WWDG\_STATE\_RESET}}}\mbox{\Hypertarget{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5}\label{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5}} 
+HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+RESET&WWDG not yet initialized or disabled \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_WWDG\_STATE\_READY@{HAL\_WWDG\_STATE\_READY}!WWDG@{WWDG}}\index{WWDG@{WWDG}!HAL\_WWDG\_STATE\_READY@{HAL\_WWDG\_STATE\_READY}}}\mbox{\Hypertarget{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301a4dc3b206181127388e44b6b7838e39fb}\label{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301a4dc3b206181127388e44b6b7838e39fb}} 
+HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+READY&WWDG initialized and ready for use ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_WWDG\_STATE\_BUSY@{HAL\_WWDG\_STATE\_BUSY}!WWDG@{WWDG}}\index{WWDG@{WWDG}!HAL\_WWDG\_STATE\_BUSY@{HAL\_WWDG\_STATE\_BUSY}}}\mbox{\Hypertarget{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ad0b871d6d748df57f9c354ecf04d9821}\label{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ad0b871d6d748df57f9c354ecf04d9821}} 
+HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+BUSY&WWDG internal process is ongoing ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_WWDG\_STATE\_TIMEOUT@{HAL\_WWDG\_STATE\_TIMEOUT}!WWDG@{WWDG}}\index{WWDG@{WWDG}!HAL\_WWDG\_STATE\_TIMEOUT@{HAL\_WWDG\_STATE\_TIMEOUT}}}\mbox{\Hypertarget{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ac35fbcc9e083869cd3410dfff314e985}\label{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301ac35fbcc9e083869cd3410dfff314e985}} 
+HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+TIMEOUT&WWDG timeout state ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HAL\_WWDG\_STATE\_ERROR@{HAL\_WWDG\_STATE\_ERROR}!WWDG@{WWDG}}\index{WWDG@{WWDG}!HAL\_WWDG\_STATE\_ERROR@{HAL\_WWDG\_STATE\_ERROR}}}\mbox{\Hypertarget{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301a41c392c0097e126977c5b980c4f2e227}\label{group___w_w_d_g_gga0dbbade5e745711745e5f9cc10991301a41c392c0097e126977c5b980c4f2e227}} 
+HAL\+\_\+\+WWDG\+\_\+\+STATE\+\_\+\+ERROR&WWDG error state ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}

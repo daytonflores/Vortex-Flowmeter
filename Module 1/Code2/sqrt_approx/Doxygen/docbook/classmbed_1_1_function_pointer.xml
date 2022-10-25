@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_function_pointer" xml:lang="en-US">
+<title>FunctionPointer Class Reference</title>
+<indexterm><primary>FunctionPointer</primary></indexterm>
+<para>
+<computeroutput>#include &lt;FunctionPointer.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmbed_1_1_function_pointer_1a0ccc51be605d508ff0df32d226f76c7a">FunctionPointer</link> (void(*function)(void)=0)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para><link linkend="_classmbed_1_1_function_pointer_1aeea086175529743816a9fb0d2d972834">FunctionPointer</link> (T *object, void(T::*member)(void))</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_function_pointer_1ae8507d9ccbe0a467029ec8c126f5e711">attach</link> (void(*function)(void)=0)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_classmbed_1_1_function_pointer_1acf0c3786a58620cbe4af0b00e1812b99">attach</link> (T *object, void(T::*member)(void))</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_function_pointer_1aba7af6b502e464074d3c31ff9236a22c">call</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacembed_1ac5088ada4e4cb0210a2560087fd7387a">pvoidf_t</link> <link linkend="_classmbed_1_1_function_pointer_1adc1be146f35c0125c1bb647d0f0b35d1">get_function</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A class for storing and calling a pointer to a static or member void function </para>
+<para>
+Definition at line <link linkend="__function_pointer_8h_source_1l00027">27</link> of file <link linkend="__function_pointer_8h_source">FunctionPointer.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmbed_1_1_function_pointer_1a0ccc51be605d508ff0df32d226f76c7a"/><section>
+    <title>FunctionPointer()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>FunctionPointer</primary><secondary>FunctionPointer</secondary></indexterm>
+<indexterm><primary>FunctionPointer</primary><secondary>FunctionPointer</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link> (void(*)(void) function = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para>Create a <link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link>, attaching a static function</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>function</entry><entry>
+<para>The void static function to attach (default is none) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmbed_1_1_function_pointer_1aeea086175529743816a9fb0d2d972834"/><section>
+    <title>FunctionPointer()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>FunctionPointer</primary><secondary>FunctionPointer</secondary></indexterm>
+<indexterm><primary>FunctionPointer</primary><secondary>FunctionPointer</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link> (T * object, void(T::*)(void) member)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Create a <link linkend="_classmbed_1_1_function_pointer">FunctionPointer</link>, attaching a member function</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>object</entry><entry>
+<para>The object pointer to invoke the member function on (i.e. the this pointer) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>function</entry><entry>
+<para>The address of the void member function to attach </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__function_pointer_8h_source_1l00042">42</link> of file <link linkend="__function_pointer_8h_source">FunctionPointer.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_function_pointer_1acf0c3786a58620cbe4af0b00e1812b99"/><section>
+    <title>attach()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>attach</primary><secondary>FunctionPointer</secondary></indexterm>
+<indexterm><primary>FunctionPointer</primary><secondary>attach</secondary></indexterm>
+<para><computeroutput>void attach (T * object, void(T::*)(void) member)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Attach a member function</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>object</entry><entry>
+<para>The object pointer to invoke the member function on (i.e. the this pointer) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>function</entry><entry>
+<para>The address of the void member function to attach </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__function_pointer_8h_source_1l00058">58</link> of file <link linkend="__function_pointer_8h_source">FunctionPointer.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_function_pointer_1ae8507d9ccbe0a467029ec8c126f5e711"/><section>
+    <title>attach()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>attach</primary><secondary>FunctionPointer</secondary></indexterm>
+<indexterm><primary>FunctionPointer</primary><secondary>attach</secondary></indexterm>
+<para><computeroutput>void attach (void(*)(void) function = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para>Attach a static function</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>function</entry><entry>
+<para>The void static function to attach (default is none) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmbed_1_1_function_pointer_1aba7af6b502e464074d3c31ff9236a22c"/><section>
+    <title>call()</title>
+<indexterm><primary>call</primary><secondary>FunctionPointer</secondary></indexterm>
+<indexterm><primary>FunctionPointer</primary><secondary>call</secondary></indexterm>
+<para><computeroutput>void call ( )</computeroutput></para>
+<para>Call the attached static or member function </para>
+</section>
+<anchor xml:id="_classmbed_1_1_function_pointer_1adc1be146f35c0125c1bb647d0f0b35d1"/><section>
+    <title>get_function()</title>
+<indexterm><primary>get_function</primary><secondary>FunctionPointer</secondary></indexterm>
+<indexterm><primary>FunctionPointer</primary><secondary>get_function</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1ac5088ada4e4cb0210a2560087fd7387a">pvoidf_t</link> get_function ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__function_pointer_8h_source_1l00069">69</link> of file <link linkend="__function_pointer_8h_source">FunctionPointer.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__function_pointer_8h">FunctionPointer.h</link></section>
+</section>

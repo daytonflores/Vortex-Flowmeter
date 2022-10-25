@@ -1,0 +1,281 @@
+\hypertarget{stm32f4xx__hal__i2c_8h}{}\doxysection{C\+:/\+Users/dayton.flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/\+TARGET\+\_\+\+NUCLEO\+\_\+\+F401\+RE/stm32f4xx\+\_\+hal\+\_\+i2c.h File Reference}
+\label{stm32f4xx__hal__i2c_8h}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_i2c.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_i2c.h}}
+
+
+Header file of I2C HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+i2c\+\_\+ex.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i2_c___init_type_def}{I2\+C\+\_\+\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em I2C Configuration Structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em I2C handle Structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries I2\+C\+\_\+\+DUTYCYCLE\+\_\+2}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+DUTYCYCLE\+\_\+16\+\_\+9}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga851c8a6b598d54c1a805b1632a4078e5}{I2\+C\+\_\+\+CCR\+\_\+\+DUTY}}
+\item 
+\#define \mbox{\hyperlink{group___i2_c__duty__cycle__in__fast__mode_gae9b3276d9b6ec872ee4fafa2b2fafb83}{IS\+\_\+\+I2\+C\+\_\+\+DUTY\+\_\+\+CYCLE}}(CYCLE)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+ADDRESSINGMODE\+\_\+7\+BIT}~((uint32\+\_\+t)0x00004000)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+ADDRESSINGMODE\+\_\+10\+BIT}~(\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7d8df80cd27313c896e887aae81fa639}{I2\+C\+\_\+\+OAR1\+\_\+\+ADDMODE}} $\vert$ ((uint32\+\_\+t)0x00004000))
+\item 
+\#define \mbox{\hyperlink{group___i2_c__addressing__mode_gabfbd7569fe1512aea1cf507afc05e5fe}{IS\+\_\+\+I2\+C\+\_\+\+ADDRESSING\+\_\+\+MODE}}(ADDRESS)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+DUALADDRESS\+\_\+\+DISABLED}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+DUALADDRESS\+\_\+\+ENABLED}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab83ed1ee64439cb2734a708445f37e94}{I2\+C\+\_\+\+OAR2\+\_\+\+ENDUAL}}
+\item 
+\#define \mbox{\hyperlink{group___i2_c__dual__addressing__mode_gae683c113d4088dfae90fbe6677f8296a}{IS\+\_\+\+I2\+C\+\_\+\+DUAL\+\_\+\+ADDRESS}}(ADDRESS)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+GENERALCALL\+\_\+\+DISABLED}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+GENERALCALL\+\_\+\+ENABLED}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga1d8c219193b11f8507d7b85831d14912}{I2\+C\+\_\+\+CR1\+\_\+\+ENGC}}
+\item 
+\#define \mbox{\hyperlink{group___i2_c__general__call__addressing__mode_ga36a9a7855d7f35a6b03b05c6079bf149}{IS\+\_\+\+I2\+C\+\_\+\+GENERAL\+\_\+\+CALL}}(CALL)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+NOSTRETCH\+\_\+\+DISABLED}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+NOSTRETCH\+\_\+\+ENABLED}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga197aaca79f64e832af3a0a0864c2a08c}{I2\+C\+\_\+\+CR1\+\_\+\+NOSTRETCH}}
+\item 
+\#define \mbox{\hyperlink{group___i2_c__nostretch__mode_gaf7d844f7c7f5c96067468ab47971d0fd}{IS\+\_\+\+I2\+C\+\_\+\+NO\+\_\+\+STRETCH}}(STRETCH)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+MEMADD\+\_\+\+SIZE\+\_\+8\+BIT}~((uint32\+\_\+t)0x00000001)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+MEMADD\+\_\+\+SIZE\+\_\+16\+BIT}~((uint32\+\_\+t)0x00000010)
+\item 
+\#define \mbox{\hyperlink{group___i2_c___memory___address___size_gace95d2b6add7feef5805f1fa6d2e46be}{IS\+\_\+\+I2\+C\+\_\+\+MEMADD\+\_\+\+SIZE}}(SIZE)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+IT\+\_\+\+BUF}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2efbe5d96ed0ce447a45a62e8317a68a}{I2\+C\+\_\+\+CR2\+\_\+\+ITBUFEN}}
+\item 
+\#define {\bfseries I2\+C\+\_\+\+IT\+\_\+\+EVT}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3b1ebaf8173090ec469b055b98e585d2}{I2\+C\+\_\+\+CR2\+\_\+\+ITEVTEN}}
+\item 
+\#define {\bfseries I2\+C\+\_\+\+IT\+\_\+\+ERR}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6f14ae48e4609c2b3645211234cba974}{I2\+C\+\_\+\+CR2\+\_\+\+ITERREN}}
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+SMBALERT}~((uint32\+\_\+t)0x00018000)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+TIMEOUT}~((uint32\+\_\+t)0x00014000)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+PECERR}~((uint32\+\_\+t)0x00011000)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+OVR}~((uint32\+\_\+t)0x00010800)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+AF}~((uint32\+\_\+t)0x00010400)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+ARLO}~((uint32\+\_\+t)0x00010200)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+BERR}~((uint32\+\_\+t)0x00010100)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+TXE}~((uint32\+\_\+t)0x00010080)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+RXNE}~((uint32\+\_\+t)0x00010040)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+STOPF}~((uint32\+\_\+t)0x00010010)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+ADD10}~((uint32\+\_\+t)0x00010008)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+BTF}~((uint32\+\_\+t)0x00010004)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+ADDR}~((uint32\+\_\+t)0x00010002)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+SB}~((uint32\+\_\+t)0x00010001)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+DUALF}~((uint32\+\_\+t)0x00100080)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+SMBHOST}~((uint32\+\_\+t)0x00100040)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+SMBDEFAULT}~((uint32\+\_\+t)0x00100020)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+GENCALL}~((uint32\+\_\+t)0x00100010)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+TRA}~((uint32\+\_\+t)0x00100004)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+BUSY}~((uint32\+\_\+t)0x00100002)
+\item 
+\#define {\bfseries I2\+C\+\_\+\+FLAG\+\_\+\+MSL}~((uint32\+\_\+t)0x00100001)
+\item 
+\#define \mbox{\hyperlink{group___i2_c_ga74c8fd72a78882720c28448ce8bd33d8}{\+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37a91ba08634e08d7287940f1bc5a37eeff}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+RESET}})
+\begin{DoxyCompactList}\small\item\em Reset I2C handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c_gac9d8b249b06b2d30f987acc9ceebd1d9}{\+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR2 $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable or disable the specified I2C interrupts. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+DISABLE\+\_\+\+IT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR2 \&= ($\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)))
+\item 
+\#define \mbox{\hyperlink{group___i2_c_ga932024bf4a259e0cdaf9e50b38e3d41a}{\+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR2 \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) ? SET \+: RESET)
+\begin{DoxyCompactList}\small\item\em Checks if the specified I2C interrupt source is enabled or disabled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c_gafbc0a6e4113be03100fbae1314a8b395}{I2\+C\+\_\+\+FLAG\+\_\+\+MASK}}~((uint32\+\_\+t)0x0000\+FFFF)
+\begin{DoxyCompactList}\small\item\em Checks whether the specified I2C flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c_gafbdf01a7dc3183de7af56456cab93551}{\+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___i2_c_ga933e2ea67e86db857a06b70a93be1186}{\+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$SR1 \&= $\sim$((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) \& \mbox{\hyperlink{group___i2_c_gafbc0a6e4113be03100fbae1314a8b395}{I2\+C\+\_\+\+FLAG\+\_\+\+MASK}}))
+\begin{DoxyCompactList}\small\item\em Clears the I2C pending flags which are cleared by writing 0 in a specific bit. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c_ga15a0a1a04971d44f9a1b82cab10af24f}{\+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+CLEAR\+\_\+\+ADDRFLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clears the I2C ADDR pending flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___i2_c_gae8e94c16809df16411862b11fea781db}{\+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+CLEAR\+\_\+\+STOPFLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clears the I2C STOPF pending flag. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 $\vert$=  \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga953b0d38414808db79da116842ed3262}{I2\+C\+\_\+\+CR1\+\_\+\+PE}})
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR1 \&=  $\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga953b0d38414808db79da116842ed3262}{I2\+C\+\_\+\+CR1\+\_\+\+PE}})
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+FREQRANGE}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+)~((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+)/1000000)
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+RISE\+\_\+\+TIME}(\+\_\+\+\_\+\+FREQRANGE\+\_\+\+\_\+,  \+\_\+\+\_\+\+SPEED\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $<$= 100000) ? ((\+\_\+\+\_\+\+FREQRANGE\+\_\+\+\_\+) + 1) \+: ((((\+\_\+\+\_\+\+FREQRANGE\+\_\+\+\_\+) $\ast$ 300) / 1000) + 1))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+SPEED\+\_\+\+STANDARD}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+SPEED\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+)/((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $<$$<$ 1)) \& \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5c8cb2bd83dd7dbdcf6ca4bbf4a841de}{I2\+C\+\_\+\+CCR\+\_\+\+CCR}}) $<$ 4)? 4\+:((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+) / ((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $<$$<$ 1)))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+SPEED\+\_\+\+FAST}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+SPEED\+\_\+\+\_\+,  \+\_\+\+\_\+\+DUTYCYCLE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+DUTYCYCLE\+\_\+\+\_\+) == I2\+C\+\_\+\+DUTYCYCLE\+\_\+2)? ((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+) / ((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $\ast$ 3)) \+: (((\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+) / ((\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+) $\ast$ 25)) $\vert$ I2\+C\+\_\+\+DUTYCYCLE\+\_\+16\+\_\+9))
+\item 
+\#define \mbox{\hyperlink{group___i2_c_gab249c789f95139f961313f7b0da9299d}{\+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+SPEED}}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+SPEED\+\_\+\+\_\+,  \+\_\+\+\_\+\+DUTYCYCLE\+\_\+\+\_\+)
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+7\+BIT\+\_\+\+ADD\+\_\+\+WRITE}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& ($\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8b7c20c81f79d17921718412b8fca6d7}{I2\+C\+\_\+\+OAR1\+\_\+\+ADD0}})))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+7\+BIT\+\_\+\+ADD\+\_\+\+READ}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) $\vert$ \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8b7c20c81f79d17921718412b8fca6d7}{I2\+C\+\_\+\+OAR1\+\_\+\+ADD0}}))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+10\+BIT\+\_\+\+ADDRESS}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x00\+FF))))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+10\+BIT\+\_\+\+HEADER\+\_\+\+WRITE}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x0300))) $>$$>$ 7) $\vert$ (uint16\+\_\+t)(0x\+F0))))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+10\+BIT\+\_\+\+HEADER\+\_\+\+READ}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x0300))) $>$$>$ 7) $\vert$ (uint16\+\_\+t)(0x\+F1))))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+MEM\+\_\+\+ADD\+\_\+\+MSB}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x\+FF00))) $>$$>$ 8)))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+MEM\+\_\+\+ADD\+\_\+\+LSB}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+) \& (uint16\+\_\+t)(0x00\+FF))))
+\item 
+\#define {\bfseries IS\+\_\+\+I2\+C\+\_\+\+CLOCK\+\_\+\+SPEED}(SPEED)~(((SPEED) $>$ 0) \&\& ((SPEED) $<$= 400000))
+\item 
+\#define {\bfseries IS\+\_\+\+I2\+C\+\_\+\+OWN\+\_\+\+ADDRESS1}(ADDRESS1)~(((ADDRESS1) \& (uint32\+\_\+t)(0x\+FFFFFC00)) == 0)
+\item 
+\#define {\bfseries IS\+\_\+\+I2\+C\+\_\+\+OWN\+\_\+\+ADDRESS2}(ADDRESS2)~(((ADDRESS2) \& (uint32\+\_\+t)(0x\+FFFFFF01)) == 0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___i2_c_gaef355af8eab251ae2a19ee164ad81c37}{HAL\+\_\+\+I2\+C\+\_\+\+State\+Type\+Def}} \{ \newline
+\mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37a91ba08634e08d7287940f1bc5a37eeff}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+RESET}} = 0x00
+, \mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37af859ce60c5e462b0bfde3a5010bc72d1}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+READY}} = 0x01
+, \mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37a0c503d6c0388f0d872b368557e278b5a}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+BUSY}} = 0x02
+, \mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37acb3a9e3d4d1076e0f4e65f91ca0161bc}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+TX}} = 0x12
+, \newline
+\mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37a4ea4ecc2dc3cb64c4877c123d9d73170}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+BUSY\+\_\+\+RX}} = 0x22
+, \mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37a066fa01c246e6663566170f251233d0d}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+MEM\+\_\+\+BUSY\+\_\+\+TX}} = 0x32
+, \mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37ace78b825fa91b289f6414faab26c0f5f}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+MEM\+\_\+\+BUSY\+\_\+\+RX}} = 0x42
+, \mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37a378abf24301fe7a23620fd78ff3f168b}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+TIMEOUT}} = 0x03
+, \newline
+\mbox{\hyperlink{group___i2_c_ggaef355af8eab251ae2a19ee164ad81c37afe3c9b304462901099426a0d414be2a2}{HAL\+\_\+\+I2\+C\+\_\+\+STATE\+\_\+\+ERROR}} = 0x04
+ \}
+\begin{DoxyCompactList}\small\item\em HAL State structures definition. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group___i2_c_gad384b843d04a1b0b6da7b41f9869c1c8}{HAL\+\_\+\+I2\+C\+\_\+\+Error\+Type\+Def}} \{ \newline
+\mbox{\hyperlink{group___i2_c_ggad384b843d04a1b0b6da7b41f9869c1c8a0988a63dfb4541fdb5d6fec495714dec}{HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+NONE}} = 0x00
+, \mbox{\hyperlink{group___i2_c_ggad384b843d04a1b0b6da7b41f9869c1c8a11974e9e61e9d82de28504f852e68d2b}{HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+BERR}} = 0x01
+, \mbox{\hyperlink{group___i2_c_ggad384b843d04a1b0b6da7b41f9869c1c8a94ba8165576b598d22906350720149de}{HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+ARLO}} = 0x02
+, \mbox{\hyperlink{group___i2_c_ggad384b843d04a1b0b6da7b41f9869c1c8af2df5ee36a4fc8d2b91d67bc624ebebf}{HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+AF}} = 0x04
+, \newline
+\mbox{\hyperlink{group___i2_c_ggad384b843d04a1b0b6da7b41f9869c1c8ae86993df90e9689716c4023ce1590a98}{HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+OVR}} = 0x08
+, \mbox{\hyperlink{group___i2_c_ggad384b843d04a1b0b6da7b41f9869c1c8ab17368b17831c4afc8d077103c6b42b9}{HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+DMA}} = 0x10
+, \mbox{\hyperlink{group___i2_c_ggad384b843d04a1b0b6da7b41f9869c1c8a3e0ea9661f8843e23a81d21b124a1e69}{HAL\+\_\+\+I2\+C\+\_\+\+ERROR\+\_\+\+TIMEOUT}} = 0x20
+ \}
+\begin{DoxyCompactList}\small\item\em HAL I2C Error Code structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Init} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+De\+Init} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Msp\+Init} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Msp\+De\+Init} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Transmit} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Receive} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Transmit} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Receive} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Is\+Device\+Ready} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint32\+\_\+t Trials, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Transmit\+\_\+\+IT} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Receive\+\_\+\+IT} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Transmit\+\_\+\+IT} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Receive\+\_\+\+IT} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write\+\_\+\+IT} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read\+\_\+\+IT} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Transmit\+\_\+\+DMA} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Master\+\_\+\+Receive\+\_\+\+DMA} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Transmit\+\_\+\+DMA} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Slave\+\_\+\+Receive\+\_\+\+DMA} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Write\+\_\+\+DMA} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Mem\+\_\+\+Read\+\_\+\+DMA} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c, uint16\+\_\+t Dev\+Address, uint16\+\_\+t Mem\+Address, uint16\+\_\+t Mem\+Add\+Size, uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+EV\+\_\+\+IRQHandler} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+ER\+\_\+\+IRQHandler} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+void {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Error\+Callback} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+\mbox{\hyperlink{group___i2_c_gaef355af8eab251ae2a19ee164ad81c37}{HAL\+\_\+\+I2\+C\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+I2\+C\+\_\+\+Get\+Error} (\mbox{\hyperlink{struct_i2_c___handle_type_def}{I2\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hi2c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of I2C HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0\+RC2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/May-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

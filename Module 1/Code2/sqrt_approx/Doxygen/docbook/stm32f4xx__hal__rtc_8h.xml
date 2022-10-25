@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__rtc_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rtc.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rtc.h</primary></indexterm>
+<para>
+
+<para>Header file of RTC HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+#include &quot;stm32f4xx_hal_rtc_ex.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_r_t_c___init_type_def">RTC_InitTypeDef</link></para>
+
+<para>RTC Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_t_c___time_type_def">RTC_TimeTypeDef</link></para>
+
+<para>RTC Time structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_t_c___date_type_def">RTC_DateTypeDef</link></para>
+
+<para>RTC Date structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_t_c___alarm_type_def">RTC_AlarmTypeDef</link></para>
+
+<para>RTC Alarm structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link></para>
+
+<para>Time Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_t_c___exported___constants_1gacc08d7d212e235f4b04bb88f5567fa54">RTC_TR_RESERVED_MASK</link>   ((uint32_t)0x007F7F7F)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___exported___constants_1ga16855eaae542f992c93170492822d058">RTC_DR_RESERVED_MASK</link>   ((uint32_t)0x00FFFF3F)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___exported___constants_1ga0dbaf639bc171f2055c9055d538f13df">RTC_INIT_MASK</link>   ((uint32_t)0xFFFFFFFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___exported___constants_1ga3a1033490aaf8304e1522d551bd1a7b9">RTC_RSF_MASK</link>   ((uint32_t)0xFFFFFF5F)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___exported___constants_1ga0c7513e50528d7b5a52e88340a4e7b25">RTC_FLAGS_MASK</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___exported___constants_1gaca17c243759056a49a411f6324dd6123">RTC_TIMEOUT_VALUE</link>   1000</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___hour___formats_1gab1a861fd858a55a6e815be4585c413d5">RTC_HOURFORMAT_24</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___hour___formats_1ga8da8ecb55e286c410dbf1297a81125ae">RTC_HOURFORMAT_12</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___hour___formats_1ga597042eec4479e028c32973bc69f4a26">IS_RTC_HOUR_FORMAT</link>(FORMAT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output__selection___definitions_1ga2c2347927c96e0db36e16d865a33a5e9">RTC_OUTPUT_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output__selection___definitions_1gab5decd99536cc483960c47de13d2cdf1">RTC_OUTPUT_ALARMA</link>   ((uint32_t)0x00200000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output__selection___definitions_1gad0ee3ae5e03aada25ee96ca797d94a9d">RTC_OUTPUT_ALARMB</link>   ((uint32_t)0x00400000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output__selection___definitions_1gaa670c4221f0e1d6611bc477bfcb8b124">RTC_OUTPUT_WAKEUP</link>   ((uint32_t)0x00600000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output__selection___definitions_1gabc8a868f360abe629c8d8de8b44b3b63">IS_RTC_OUTPUT</link>(OUTPUT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output___polarity___definitions_1ga093c938e6067080b264878bc99a43dd5">RTC_OUTPUT_POLARITY_HIGH</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output___polarity___definitions_1ga97a5745b07442aa338c2a3b81c93048b">RTC_OUTPUT_POLARITY_LOW</link>   ((uint32_t)0x00100000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output___polarity___definitions_1ga1bc0fee899de25a9c1bcbb6c2b21b35d">IS_RTC_OUTPUT_POL</link>(POL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output___type___a_l_a_r_m___o_u_t_1gaa2505e0038154990024b533160bd46bd">RTC_OUTPUT_TYPE_OPENDRAIN</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output___type___a_l_a_r_m___o_u_t_1ga3e0b4512d6531cb0bb428163d7bd927d">RTC_OUTPUT_TYPE_PUSHPULL</link>   ((uint32_t)0x00040000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___output___type___a_l_a_r_m___o_u_t_1ga69e263212d90ca91ccfc72e930f26cd8">IS_RTC_OUTPUT_TYPE</link>(TYPE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___asynchronous___predivider_1gac20f6c94ede2d474df8ba4acb7328d93">IS_RTC_ASYNCH_PREDIV</link>(PREDIV)   ((PREDIV) &lt;= (uint32_t)0x7F)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___synchronous___predivider_1ga32fccaa6ec65f9fceb3e6e4f31ab11cf">IS_RTC_SYNCH_PREDIV</link>(PREDIV)   ((PREDIV) &lt;= (uint32_t)0x7FFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___time___definitions_1ga6bdfe3bed0a57dfafc2d1de785d48a62">IS_RTC_HOUR12</link>(HOUR)   (((HOUR) &gt; (uint32_t)0) &amp;&amp; ((HOUR) &lt;= (uint32_t)12))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___time___definitions_1ga4883613bec76074ac62608b89e3f48a8">IS_RTC_HOUR24</link>(HOUR)   ((HOUR) &lt;= (uint32_t)23)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___time___definitions_1ga8475ceaf2d35d98be0b3401812aef445">IS_RTC_MINUTES</link>(MINUTES)   ((MINUTES) &lt;= (uint32_t)59)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___time___definitions_1gadb5a39d98fc906a8ea035bd29308bc5c">IS_RTC_SECONDS</link>(SECONDS)   ((SECONDS) &lt;= (uint32_t)59)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___a_m___p_m___definitions_1ga5be28b0dd8d5d12a6b055a70c46ce24a">RTC_HOURFORMAT12_AM</link>   ((uint8_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___a_m___p_m___definitions_1gae8662cf2f3080b992d3b119f74f60162">RTC_HOURFORMAT12_PM</link>   ((uint8_t)0x40)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___a_m___p_m___definitions_1gaac5777b612cdee4c43d4399f40b1bd3a">IS_RTC_HOURFORMAT12</link>(PM)   (((PM) == <link linkend="_group___r_t_c___a_m___p_m___definitions_1ga5be28b0dd8d5d12a6b055a70c46ce24a">RTC_HOURFORMAT12_AM</link>) || ((PM) == <link linkend="_group___r_t_c___a_m___p_m___definitions_1gae8662cf2f3080b992d3b119f74f60162">RTC_HOURFORMAT12_PM</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___day_light_saving___definitions_1ga7ccaea4cb9cb5fbd21b97dce1e2e887d">RTC_DAYLIGHTSAVING_SUB1H</link>   ((uint32_t)0x00020000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___day_light_saving___definitions_1gabd374c3ce0fb1b3ec96a3a71155151ae">RTC_DAYLIGHTSAVING_ADD1H</link>   ((uint32_t)0x00010000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___day_light_saving___definitions_1gafef31f6f6d924dededc4589d2dd16a5c">RTC_DAYLIGHTSAVING_NONE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___day_light_saving___definitions_1ga4922f8f31df54481bc002b16bc1effc3">IS_RTC_DAYLIGHT_SAVING</link>(SAVE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___store_operation___definitions_1ga0c0fb2efa26fd29872759f6162fafefa">RTC_STOREOPERATION_RESET</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___store_operation___definitions_1ga984ee81edc6b876d035683d65a5c60d8">RTC_STOREOPERATION_SET</link>   ((uint32_t)0x00040000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___store_operation___definitions_1ga550da5c8a2382badcb391507fd6f07f4">IS_RTC_STORE_OPERATION</link>(OPERATION)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___input__parameter__format__definitions_1ga1adf0882a1368a3cef0edc34dcf8d34e">FORMAT_BIN</link>   ((uint32_t)0x000000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___input__parameter__format__definitions_1ga950fc88b539cc9a8cf66aab2ee860fe1">FORMAT_BCD</link>   ((uint32_t)0x000000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___input__parameter__format__definitions_1ga05a1ca8558058d71322ccf1045b8fb1c">IS_RTC_FORMAT</link>(FORMAT)   (((FORMAT) == <link linkend="_group___r_t_c___input__parameter__format__definitions_1ga1adf0882a1368a3cef0edc34dcf8d34e">FORMAT_BIN</link>) || ((FORMAT) == <link linkend="_group___r_t_c___input__parameter__format__definitions_1ga950fc88b539cc9a8cf66aab2ee860fe1">FORMAT_BCD</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___year___date___definitions_1gae59c9cfe6f9532ab26d74c25bcbe814b">IS_RTC_YEAR</link>(YEAR)   ((YEAR) &lt;= (uint32_t)99)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1gabc94e7ef324c7d181c54302938138aab">RTC_MONTH_JANUARY</link>   ((uint8_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1gadcec3575c8a670a948a3929a2e9f1b6b">RTC_MONTH_FEBRUARY</link>   ((uint8_t)0x02)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1gaa0ebba4b64b5591cd434b076c922a164">RTC_MONTH_MARCH</link>   ((uint8_t)0x03)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1gac15a5a2164c0e536c579e7f16bd9f1b4">RTC_MONTH_APRIL</link>   ((uint8_t)0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1ga44814b4fb8311b5842675769937129ec">RTC_MONTH_MAY</link>   ((uint8_t)0x05)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1gad3439b4b8c19720c01ef6c35d9bb99fa">RTC_MONTH_JUNE</link>   ((uint8_t)0x06)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1gae710e500c34c042a263fcb47edeec29f">RTC_MONTH_JULY</link>   ((uint8_t)0x07)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1ga4118ea385d30d3f75c2f879faf019f37">RTC_MONTH_AUGUST</link>   ((uint8_t)0x08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1ga2a4d94eeb920cb994cd11e169d086d28">RTC_MONTH_SEPTEMBER</link>   ((uint8_t)0x09)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1gab4e8870c5a2fe6fc632d2050d490ef9f">RTC_MONTH_OCTOBER</link>   ((uint8_t)0x10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1ga2f04d521214ea447155faff077725212">RTC_MONTH_NOVEMBER</link>   ((uint8_t)0x11)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1gaa2d8ee14bdc0c6b01be7c72b82ae64e5">RTC_MONTH_DECEMBER</link>   ((uint8_t)0x12)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1ga7fa60f17b2ae529c35b1fa3dd4d6853f">IS_RTC_MONTH</link>(MONTH)   (((MONTH) &gt;= (uint32_t)1) &amp;&amp; ((MONTH) &lt;= (uint32_t)12))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___month___date___definitions_1ga3b6e966e144cb0495563ef0283d16510">IS_RTC_DATE</link>(DATE)   (((DATE) &gt;= (uint32_t)1) &amp;&amp; ((DATE) &lt;= (uint32_t)31))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___week_day___definitions_1ga9d74c5e20a481db4f4da69f083b768bf">RTC_WEEKDAY_MONDAY</link>   ((uint8_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___week_day___definitions_1gaf6b6e124a2e74317448abbfb1943e8cc">RTC_WEEKDAY_TUESDAY</link>   ((uint8_t)0x02)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___week_day___definitions_1ga0e8a7c338ffda7c9dd47003762d7054c">RTC_WEEKDAY_WEDNESDAY</link>   ((uint8_t)0x03)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___week_day___definitions_1gab166c84a54ace04f6849a8d0e1764107">RTC_WEEKDAY_THURSDAY</link>   ((uint8_t)0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___week_day___definitions_1ga3755707d628f4664c30d02fd2a2f0182">RTC_WEEKDAY_FRIDAY</link>   ((uint8_t)0x05)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___week_day___definitions_1ga3acccb86a8429fea22f2ac46470b5e55">RTC_WEEKDAY_SATURDAY</link>   ((uint8_t)0x06)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___week_day___definitions_1gadab2da4b8aa50c86d68781b379b75783">RTC_WEEKDAY_SUNDAY</link>   ((uint8_t)0x07)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___week_day___definitions_1gaf17712ffb0834287f23c19235d53c7ec">IS_RTC_WEEKDAY</link>(WEEKDAY)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___definitions_1ga8b6cb39fac113de7c5d2b05a93093243">IS_RTC_ALARM_DATE_WEEKDAY_DATE</link>(DATE)   (((DATE) &gt;(uint32_t) 0) &amp;&amp; ((DATE) &lt;= (uint32_t)31))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___definitions_1gabc968cd70cf33e06b8e2886c98099021">IS_RTC_ALARM_DATE_WEEKDAY_WEEKDAY</link>(WEEKDAY)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_date_week_day___definitions_1ga038032416e6bcf81e842f60dcfe91e15">RTC_ALARMDATEWEEKDAYSEL_DATE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_date_week_day___definitions_1ga3dfe8546eb760b9928900ac80a27e625">RTC_ALARMDATEWEEKDAYSEL_WEEKDAY</link>   ((uint32_t)0x40000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_date_week_day___definitions_1gac5d3e2182217ad6c5a75eba5c88cb335">IS_RTC_ALARM_DATE_WEEKDAY_SEL</link>(SEL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_mask___definitions_1ga051c19c4a3c3f12bcf672f35d03254ae">RTC_ALARMMASK_NONE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_mask___definitions_1ga0bcc63ed1fe29a90fa8745cd3b98f73c">RTC_ALARMMASK_DATEWEEKDAY</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga8ed557e4451ffd3e869bb9ca393d47f9">RTC_ALRMAR_MSK4</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_mask___definitions_1gaa8bfd0f98f4f53930a34a43af093af37">RTC_ALARMMASK_HOURS</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga337fba397cab4beb204f4f6e6ddc4bf3">RTC_ALRMAR_MSK3</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_mask___definitions_1gafe9215f55d86f2f959af686539c5aa0a">RTC_ALARMMASK_MINUTES</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga478d62d55a42779c558e9ba16aec74cc">RTC_ALRMAR_MSK2</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_mask___definitions_1gad404276351a285f7ede5a1ec53009353">RTC_ALARMMASK_SECONDS</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga8862250866a358ff3095852f45a160c1">RTC_ALRMAR_MSK1</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_mask___definitions_1gae5a5dc7b33c51c572ebc9cb58723fdd3">RTC_ALARMMASK_ALL</link>   ((uint32_t)0x80808080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm_mask___definitions_1gac119b97b072bf9c12e008011ff202a19">IS_ALARM_MASK</link>(MASK)   (((MASK) &amp; 0x7F7F7F7F) == (uint32_t)<link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarms___definitions_1ga916bcb75517157e284344f96ac275639">RTC_ALARM_A</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga8a8cdeac61f06e4737800b64a901d584">RTC_CR_ALRAE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarms___definitions_1ga55b831e961f8f4b91ec17939eb78b440">RTC_ALARM_B</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga17d0850002ed42742ff75a82dc4e8586">RTC_CR_ALRBE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarms___definitions_1gadc485747888fdc6e36b163661a5b7a2c">IS_ALARM</link>(ALARM)   (((ALARM) == <link linkend="_group___r_t_c___alarms___definitions_1ga916bcb75517157e284344f96ac275639">RTC_ALARM_A</link>) || ((ALARM) == <link linkend="_group___r_t_c___alarms___definitions_1ga55b831e961f8f4b91ec17939eb78b440">RTC_ALARM_B</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___value_1gae7cd07c18cdb2946a2b06f6606ede93c">IS_RTC_ALARM_SUB_SECOND_VALUE</link>(VALUE)   ((VALUE) &lt;= (uint32_t)0x00007FFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1gaf96ae2bcfc62e92473372c4510d517d5">RTC_ALARMSUBSECONDMASK_ALL</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga382ddfaca27c4b547c69878a320aab43">RTC_ALARMSUBSECONDMASK_SS14_1</link>   ((uint32_t)0x01000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1gad627f4e6c83537e1d5b8c657f91d6bcf">RTC_ALARMSUBSECONDMASK_SS14_2</link>   ((uint32_t)0x02000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1gaeb5fb21c4ef0d54ca1515564563c0487">RTC_ALARMSUBSECONDMASK_SS14_3</link>   ((uint32_t)0x03000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga6f9b0a78f9723a20b1f94b5581e04194">RTC_ALARMSUBSECONDMASK_SS14_4</link>   ((uint32_t)0x04000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1gafc0252b2f8a935811dadd3d6b8ea3574">RTC_ALARMSUBSECONDMASK_SS14_5</link>   ((uint32_t)0x05000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga60fab8d647e6f8500926a0db2dff94d8">RTC_ALARMSUBSECONDMASK_SS14_6</link>   ((uint32_t)0x06000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1gac0f57cb99c0a40708e3dd44eafa7f8e6">RTC_ALARMSUBSECONDMASK_SS14_7</link>   ((uint32_t)0x07000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga0f7cdfed3ad8bbe33fc2c4c2b8d5d2ce">RTC_ALARMSUBSECONDMASK_SS14_8</link>   ((uint32_t)0x08000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga173d153f6543cd34062d8ca14fb04975">RTC_ALARMSUBSECONDMASK_SS14_9</link>   ((uint32_t)0x09000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga7cb4d4abdac134b508cbb6e9b5d21638">RTC_ALARMSUBSECONDMASK_SS14_10</link>   ((uint32_t)0x0A000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1gaf67fcaa5c58e46e47d97be746c9dec24">RTC_ALARMSUBSECONDMASK_SS14_11</link>   ((uint32_t)0x0B000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga37c03d1ef098287fa559af1a28bd8ba5">RTC_ALARMSUBSECONDMASK_SS14_12</link>   ((uint32_t)0x0C000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1gada3b5b45dbdabf604340b0c09bdbdc2c">RTC_ALARMSUBSECONDMASK_SS14_13</link>   ((uint32_t)0x0D000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga91e1225dc11de4ce4bd74eb18fc155f7">RTC_ALARMSUBSECONDMASK_SS14</link>   ((uint32_t)0x0E000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1ga242adf20d2422fd1ae7715b8acd82623">RTC_ALARMSUBSECONDMASK_None</link>   ((uint32_t)0x0F000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___alarm___sub___seconds___masks___definitions_1gae6814af31d0cc72b784bc85f63ec4de7">IS_RTC_ALARM_SUB_SECOND_MASK</link>(MASK)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___interrupts___definitions_1ga2c4632667c515e366a79df6341d5f3d1">RTC_IT_TS</link>   ((uint32_t)0x00008000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___interrupts___definitions_1gadc90686ace99992f4775c0198a1c6591">RTC_IT_WUT</link>   ((uint32_t)0x00004000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___interrupts___definitions_1gaeb47520af65e995ddad232f3a846aba8">RTC_IT_ALRB</link>   ((uint32_t)0x00002000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___interrupts___definitions_1ga0ba352559e4eb6a5430e1254851a0dfb">RTC_IT_ALRA</link>   ((uint32_t)0x00001000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___interrupts___definitions_1gada511402e0227932824cdc95711ebd55">RTC_IT_TAMP</link>   ((uint32_t)0x00000004) /* Used only to Enable the Tamper Interrupt */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___interrupts___definitions_1gaae1bc95e46b6951e45c4d857a6701a8a">RTC_IT_TAMP1</link>   ((uint32_t)0x00020000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___interrupts___definitions_1ga0d3023d6f144f75848c246a033a01485">RTC_IT_TAMP2</link>   ((uint32_t)0x00040000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga01cba90a7ca51a928f72d28b6fe0d2ac">RTC_FLAG_RECALPF</link>   ((uint32_t)0x00010000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga5ca385acdd6a179336d4ce661dd02137">RTC_FLAG_TAMP2F</link>   ((uint32_t)0x00004000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga3abf1af75c6ae88ddabe4b8a26634f99">RTC_FLAG_TAMP1F</link>   ((uint32_t)0x00002000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga74656ea8ff41be61a3734dc27367e039">RTC_FLAG_TSOVF</link>   ((uint32_t)0x00001000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga9b9ac7de7718bfe0ff77e1fd1193744b">RTC_FLAG_TSF</link>   ((uint32_t)0x00000800)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1gafcadab331b0193e82c7f6b037044f194">RTC_FLAG_WUTF</link>   ((uint32_t)0x00000400)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1gabb7bd65e83b346f42e28091ef1e643f5">RTC_FLAG_ALRBF</link>   ((uint32_t)0x00000200)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1gaf9e1a4b5eedd674d7b35ae334877ba12">RTC_FLAG_ALRAF</link>   ((uint32_t)0x00000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga8d973d7f6b07e80743e05d6822ff2147">RTC_FLAG_INITF</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga78c4245996bef8d5f39226b6e37ed9c0">RTC_FLAG_RSF</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1gae6a2d26d4b10670f6506b14971f52fd2">RTC_FLAG_INITS</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga8fd11878d6285ab5d35966d598d5e6f9">RTC_FLAG_SHPF</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1ga24648116b32442d30da74c497e2e88ae">RTC_FLAG_WUTWF</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1gae9dd4b5b8059937c3422bc1e3eae3ced">RTC_FLAG_ALRBWF</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c___flags___definitions_1gaf4913efa96d03ded991b1cdddd6b7823">RTC_FLAG_ALRAWF</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1gaf20c09cfca416d79777562ccf7c994a2">__HAL_RTC_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___r_t_c_1gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba69cd05758f5129525749b65bee6f939f">HAL_RTC_STATE_RESET</link>)</para>
+
+<para>Reset RTC handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1gae150645fb78c1d175b9e0f88fc3f4ad4">__HAL_RTC_WRITEPROTECTION_DISABLE</link>(__HANDLE__)</para>
+
+<para>Disable the write protection for RTC registers. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga9eaed4a4db3b3232c1ca5d8ffa6ff4d8">__HAL_RTC_WRITEPROTECTION_ENABLE</link>(__HANDLE__)</para>
+
+<para>Enable the write protection for RTC registers. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga88aa460d4d8a7a65acf4b3dbcd0a2813">__HAL_RTC_ALARMA_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga8a8cdeac61f06e4737800b64a901d584">RTC_CR_ALRAE</link>))</para>
+
+<para>Enable the RTC ALARMA peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga8679ec8def03e05fa39474d83b156699">__HAL_RTC_ALARMA_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga8a8cdeac61f06e4737800b64a901d584">RTC_CR_ALRAE</link>))</para>
+
+<para>Disable the RTC ALARMA peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1gad643ef2342067f140114d49f28709e92">__HAL_RTC_ALARMB_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (<link linkend="_group___peripheral___registers___bits___definition_1ga17d0850002ed42742ff75a82dc4e8586">RTC_CR_ALRBE</link>))</para>
+
+<para>Enable the RTC ALARMB peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga09c7dd312682d270a8b74bcac3450f8b">__HAL_RTC_ALARMB_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga17d0850002ed42742ff75a82dc4e8586">RTC_CR_ALRBE</link>))</para>
+
+<para>Disable the RTC ALARMB peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1gab40f07ff2cdf6fc98ccfdd856ba934e4">__HAL_RTC_ALARM_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= (__INTERRUPT__))</para>
+
+<para>Enable the RTC Alarm interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1gadc2d6dc4a75136bdd2b67c1b35d04b10">__HAL_RTC_ALARM_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp;= ~(__INTERRUPT__))</para>
+
+<para>Disable the RTC Alarm interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1gaf47dbdee0d0f259d09362ca66367b29c">__HAL_RTC_ALARM_GET_IT</link>(__HANDLE__,  __FLAG__)   ((((((__HANDLE__)-&gt;Instance-&gt;ISR)&amp; ((__FLAG__)&gt;&gt; 4)) &amp; 0x0000FFFF) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Check whether the specified RTC Alarm interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga9f908cb1fd0f270c66f5deed82e019de">__HAL_RTC_ALARM_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((((__HANDLE__)-&gt;Instance-&gt;ISR) &amp; (__FLAG__)) != <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Get the selected RTC Alarm&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga93d88df67428f617157346d7cbdb4069">__HAL_RTC_ALARM_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;ISR) = (~(((__FLAG__) | <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>)&amp; 0x0000FFFF)|((__HANDLE__)-&gt;Instance-&gt;ISR &amp; <link linkend="_group___peripheral___registers___bits___definition_1gae0eb2f998cd3e7325974347cb2a3d25a">RTC_ISR_INIT</link>))</para>
+
+<para>Clear the RTC Alarm&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1gaeffe9b89372b06df1c0eff2f4346682b">RTC_EXTI_LINE_ALARM_EVENT</link>   ((uint32_t)0x00020000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1gaffa3448885f1dec216899aef7f49471f">RTC_EXTI_LINE_TAMPER_TIMESTAMP_EVENT</link>   ((uint32_t)0x00200000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga1a1a58e244663850786c387bfa5474f2">RTC_EXTI_LINE_WAKEUPTIMER_EVENT</link>   ((uint32_t)0x00400000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga8b60c6bc1ce8241b0e2a0f39090d93b0">__HAL_RTC_ENABLE_IT</link>(__EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= (__EXTILINE__))</para>
+
+<para>Enable the RTC Exti line. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga39703b4953d078196b733d3a81be396d">__HAL_RTC_DISABLE_IT</link>(__EXTILINE__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(__EXTILINE__))</para>
+
+<para>Disable the RTC Exti line. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_1ga2279c1a83635e0515c6760f34faf174f">__HAL_RTC_CLEAR_FLAG</link>(__FLAG__)   (<link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (__FLAG__))</para>
+
+<para>Clear the RTC Exti flags. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___r_t_c_1ga1e2460a2d13c4efc7a2a1ab2a1ebd32b">HAL_RTCStateTypeDef</link> { 
+<link linkend="_group___r_t_c_1gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba69cd05758f5129525749b65bee6f939f">HAL_RTC_STATE_RESET</link> = 0x00
+, <link linkend="_group___r_t_c_1gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba466484cd22333d8c8758ae12890b862f">HAL_RTC_STATE_READY</link> = 0x01
+, <link linkend="_group___r_t_c_1gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba5e0a8c8e4731ac8f80e9a219413d6f9b">HAL_RTC_STATE_BUSY</link> = 0x02
+, <link linkend="_group___r_t_c_1gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba062e7947b5f5f0c2acb7be96207e3d58">HAL_RTC_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___r_t_c_1gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba21f381f99f437c340f79407e3d71bb31">HAL_RTC_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1gaa6b53830aa3e2efaf210c0b1d3e5f4a4">HAL_RTC_Init</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1ga24a8aac7bd6d9bac9f211d24ff6930ec">HAL_RTC_DeInit</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_1gaee6eddaa309c8c9829f1ca794d8f99c5">HAL_RTC_MspInit</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_1ga8767bc3a4d472d39a688090ab10ba6ce">HAL_RTC_MspDeInit</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1gafe0fed98171a564decd2a6c9be9781d8">HAL_RTC_SetTime</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___time_type_def">RTC_TimeTypeDef</link> *sTime, uint32_t Format)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1gae478ca2647e8d2f7dd1828ce43889a9e">HAL_RTC_GetTime</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___time_type_def">RTC_TimeTypeDef</link> *sTime, uint32_t Format)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1ga6cf6c70227337a564ccef82f64d6268f">HAL_RTC_SetDate</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___date_type_def">RTC_DateTypeDef</link> *sDate, uint32_t Format)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1ga07ec2e43a305aa55e8c2442a349fc505">HAL_RTC_GetDate</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___date_type_def">RTC_DateTypeDef</link> *sDate, uint32_t Format)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1gafd78015b93b16dcb9e41a4655a7ea972">HAL_RTC_SetAlarm</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___alarm_type_def">RTC_AlarmTypeDef</link> *sAlarm, uint32_t Format)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1gab66a7fec05e9d9374de95d5f61e16c16">HAL_RTC_SetAlarm_IT</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___alarm_type_def">RTC_AlarmTypeDef</link> *sAlarm, uint32_t Format)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1ga186d852f8aee8a4d0dfeec778be35482">HAL_RTC_DeactivateAlarm</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t Alarm)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1ga4786b652ffee2d59da2c65dd78646405">HAL_RTC_GetAlarm</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, <link linkend="_struct_r_t_c___alarm_type_def">RTC_AlarmTypeDef</link> *sAlarm, uint32_t Alarm, uint32_t Format)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_1gac185f2ce34fe566418d0978a48e0c199">HAL_RTC_AlarmIRQHandler</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1gaedc27fe412f45d999d74a0b98dce4d09">HAL_RTC_PollForAlarmAEvent</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___r_t_c_1ga11aeff83fd498cddbed3bcddcf017e0a">HAL_RTC_AlarmAEventCallback</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1ga62efc08017f7dc4db0bc72f7c68085ad">HAL_RTC_WaitForSynchro</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_group___r_t_c_1ga1e2460a2d13c4efc7a2a1ab2a1ebd32b">HAL_RTCStateTypeDef</link> <link linkend="_group___r_t_c_1ga527ac04240b47a22bf5ff469609eaa4d">HAL_RTC_GetState</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___r_t_c_1ga50b2ead8d1755be360de2d624beaf9a0">RTC_EnterInitMode</link> (<link linkend="_struct_r_t_c___handle_type_def">RTC_HandleTypeDef</link> *hrtc)</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___r_t_c_1ga8c33f1358a98db0c7c829c38538bf7ba">RTC_ByteToBcd2</link> (uint8_t Value)</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___r_t_c_1gaf1bcb309bb9e7ac4a1b4e95a11cfb26f">RTC_Bcd2ToByte</link> (uint8_t Value)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of RTC HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__rtc_8h_source">stm32f4xx_hal_rtc.h</link>.</para>
+</section>
+</section>

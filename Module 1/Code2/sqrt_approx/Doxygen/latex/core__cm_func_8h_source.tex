@@ -1,0 +1,392 @@
+\hypertarget{core__cm_func_8h_source}{}\doxysection{core\+\_\+cm\+Func.\+h}
+\label{core__cm_func_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/core\_cmFunc.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/core\_cmFunc.h}}
+\mbox{\hyperlink{core__cm_func_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00001}00001 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00010}00010 \textcolor{comment}{/* Copyright (c) 2009 -\/ 2013 ARM LIMITED}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00011}00011 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00012}00012 \textcolor{comment}{   All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00013}00013 \textcolor{comment}{   Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00014}00014 \textcolor{comment}{   modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00015}00015 \textcolor{comment}{   -\/ Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00016}00016 \textcolor{comment}{     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00017}00017 \textcolor{comment}{   -\/ Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00018}00018 \textcolor{comment}{     notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00019}00019 \textcolor{comment}{     documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00020}00020 \textcolor{comment}{   -\/ Neither the name of ARM nor the names of its contributors may be used}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00021}00021 \textcolor{comment}{     to endorse or promote products derived from this software without}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00022}00022 \textcolor{comment}{     specific prior written permission.}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00023}00023 \textcolor{comment}{   *}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00024}00024 \textcolor{comment}{   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00025}00025 \textcolor{comment}{   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00026}00026 \textcolor{comment}{   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00027}00027 \textcolor{comment}{   ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00028}00028 \textcolor{comment}{   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00029}00029 \textcolor{comment}{   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00030}00030 \textcolor{comment}{   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00031}00031 \textcolor{comment}{   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00032}00032 \textcolor{comment}{   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00033}00033 \textcolor{comment}{   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00034}00034 \textcolor{comment}{   POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00035}00035 \textcolor{comment}{   -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00038}00038 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CMFUNC\_H}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00039}00039 \textcolor{preprocessor}{\#define \_\_CORE\_CMFUNC\_H}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00042}00042 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  Core Function Access  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00048}00048 \textcolor{preprocessor}{\#if   defined ( \_\_CC\_ARM ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/RealView Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00049}00049 \textcolor{comment}{/* ARM armcc specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00051}00051 \textcolor{preprocessor}{\#if (\_\_ARMCC\_VERSION < 400677)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00052}00052 \textcolor{preprocessor}{  \#error "{}Please use ARM Compiler Toolchain V4.0.677 or later!"{}}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00053}00053 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00055}00055 \textcolor{comment}{/* intrinsic void \_\_enable\_irq();     */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00056}00056 \textcolor{comment}{/* intrinsic void \_\_disable\_irq();    */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00064}00064 \_\_STATIC\_INLINE uint32\_t \_\_get\_CONTROL(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00065}00065 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00066}00066   \textcolor{keyword}{register} uint32\_t \_\_regControl         \_\_ASM(\textcolor{stringliteral}{"{}control"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00067}00067   \textcolor{keywordflow}{return}(\_\_regControl);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00068}00068 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00077}00077 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_CONTROL(uint32\_t control)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00078}00078 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00079}00079   \textcolor{keyword}{register} uint32\_t \_\_regControl         \_\_ASM(\textcolor{stringliteral}{"{}control"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00080}00080   \_\_regControl = control;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00090}00090 \_\_STATIC\_INLINE uint32\_t \_\_get\_IPSR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00091}00091 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00092}00092   \textcolor{keyword}{register} uint32\_t \_\_regIPSR          \_\_ASM(\textcolor{stringliteral}{"{}ipsr"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00093}00093   \textcolor{keywordflow}{return}(\_\_regIPSR);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00094}00094 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00103}00103 \_\_STATIC\_INLINE uint32\_t \_\_get\_APSR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00104}00104 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00105}00105   \textcolor{keyword}{register} uint32\_t \_\_regAPSR          \_\_ASM(\textcolor{stringliteral}{"{}apsr"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00106}00106   \textcolor{keywordflow}{return}(\_\_regAPSR);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00107}00107 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00116}00116 \_\_STATIC\_INLINE uint32\_t \_\_get\_xPSR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00117}00117 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00118}00118   \textcolor{keyword}{register} uint32\_t \_\_regXPSR          \_\_ASM(\textcolor{stringliteral}{"{}xpsr"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00119}00119   \textcolor{keywordflow}{return}(\_\_regXPSR);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00120}00120 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00129}00129 \_\_STATIC\_INLINE uint32\_t \_\_get\_PSP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00130}00130 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00131}00131   \textcolor{keyword}{register} uint32\_t \_\_regProcessStackPointer  \_\_ASM(\textcolor{stringliteral}{"{}psp"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00132}00132   \textcolor{keywordflow}{return}(\_\_regProcessStackPointer);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00133}00133 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00142}00142 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_PSP(uint32\_t topOfProcStack)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00143}00143 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00144}00144   \textcolor{keyword}{register} uint32\_t \_\_regProcessStackPointer  \_\_ASM(\textcolor{stringliteral}{"{}psp"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00145}00145   \_\_regProcessStackPointer = topOfProcStack;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00146}00146 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00148}00148 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00155}00155 \_\_STATIC\_INLINE uint32\_t \_\_get\_MSP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00156}00156 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00157}00157   \textcolor{keyword}{register} uint32\_t \_\_regMainStackPointer     \_\_ASM(\textcolor{stringliteral}{"{}msp"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00158}00158   \textcolor{keywordflow}{return}(\_\_regMainStackPointer);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00159}00159 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00168}00168 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_MSP(uint32\_t topOfMainStack)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00169}00169 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00170}00170   \textcolor{keyword}{register} uint32\_t \_\_regMainStackPointer     \_\_ASM(\textcolor{stringliteral}{"{}msp"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00171}00171   \_\_regMainStackPointer = topOfMainStack;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00172}00172 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00181}00181 \_\_STATIC\_INLINE uint32\_t \_\_get\_PRIMASK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00182}00182 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00183}00183   \textcolor{keyword}{register} uint32\_t \_\_regPriMask         \_\_ASM(\textcolor{stringliteral}{"{}primask"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00184}00184   \textcolor{keywordflow}{return}(\_\_regPriMask);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00185}00185 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00194}00194 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_PRIMASK(uint32\_t priMask)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00195}00195 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00196}00196   \textcolor{keyword}{register} uint32\_t \_\_regPriMask         \_\_ASM(\textcolor{stringliteral}{"{}primask"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00197}00197   \_\_regPriMask = (priMask);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00198}00198 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00201}00201 \textcolor{preprocessor}{\#if       (\_\_CORTEX\_M >= 0x03)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00202}00202 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00208}00208 \textcolor{preprocessor}{\#define \_\_enable\_fault\_irq                \_\_enable\_fiq}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00209}00209 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00216}00216 \textcolor{preprocessor}{\#define \_\_disable\_fault\_irq               \_\_disable\_fiq}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00218}00218 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00225}00225 \_\_STATIC\_INLINE uint32\_t  \_\_get\_BASEPRI(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00226}00226 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00227}00227   \textcolor{keyword}{register} uint32\_t \_\_regBasePri         \_\_ASM(\textcolor{stringliteral}{"{}basepri"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00228}00228   \textcolor{keywordflow}{return}(\_\_regBasePri);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00229}00229 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00230}00230 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00238}00238 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_BASEPRI(uint32\_t basePri)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00239}00239 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00240}00240   \textcolor{keyword}{register} uint32\_t \_\_regBasePri         \_\_ASM(\textcolor{stringliteral}{"{}basepri"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00241}00241   \_\_regBasePri = (basePri \& 0xff);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00242}00242 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00243}00243 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00251}00251 \_\_STATIC\_INLINE uint32\_t \_\_get\_FAULTMASK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00252}00252 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00253}00253   \textcolor{keyword}{register} uint32\_t \_\_regFaultMask       \_\_ASM(\textcolor{stringliteral}{"{}faultmask"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00254}00254   \textcolor{keywordflow}{return}(\_\_regFaultMask);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00255}00255 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00256}00256 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00264}00264 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_FAULTMASK(uint32\_t faultMask)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00265}00265 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00266}00266   \textcolor{keyword}{register} uint32\_t \_\_regFaultMask       \_\_ASM(\textcolor{stringliteral}{"{}faultmask"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00267}00267   \_\_regFaultMask = (faultMask \& (uint32\_t)1);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00268}00268 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00270}00270 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* (\_\_CORTEX\_M >= 0x03) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00271}00271 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00272}00272 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00273}00273 \textcolor{preprocessor}{\#if       (\_\_CORTEX\_M == 0x04)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00274}00274 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00281}00281 \_\_STATIC\_INLINE uint32\_t \_\_get\_FPSCR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00282}00282 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00283}00283 \textcolor{preprocessor}{\#if (\_\_FPU\_PRESENT == 1) \&\& (\_\_FPU\_USED == 1)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00284}00284   \textcolor{keyword}{register} uint32\_t \_\_regfpscr         \_\_ASM(\textcolor{stringliteral}{"{}fpscr"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00285}00285   \textcolor{keywordflow}{return}(\_\_regfpscr);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00286}00286 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00287}00287    \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00288}00288 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00289}00289 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00290}00290 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00291}00291 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00298}00298 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_FPSCR(uint32\_t fpscr)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00299}00299 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00300}00300 \textcolor{preprocessor}{\#if (\_\_FPU\_PRESENT == 1) \&\& (\_\_FPU\_USED == 1)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00301}00301   \textcolor{keyword}{register} uint32\_t \_\_regfpscr         \_\_ASM(\textcolor{stringliteral}{"{}fpscr"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00302}00302   \_\_regfpscr = (fpscr);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00303}00303 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00304}00304 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00306}00306 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* (\_\_CORTEX\_M == 0x04) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00307}00307 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00308}00308 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00309}00309 \textcolor{preprocessor}{\#elif defined ( \_\_ICCARM\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ ICC Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00310}00310 \textcolor{comment}{/* IAR iccarm specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00311}00311 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00312}00312 \textcolor{preprocessor}{\#include <cmsis\_iar.h>}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00313}00313 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00315}00315 \textcolor{preprocessor}{\#elif defined ( \_\_TMS470\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ TI CCS Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00316}00316 \textcolor{comment}{/* TI CCS specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00317}00317 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00318}00318 \textcolor{preprocessor}{\#include <cmsis\_ccs.h>}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00319}00319 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00320}00320 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00321}00321 \textcolor{preprocessor}{\#elif defined ( \_\_GNUC\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ GNU Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00322}00322 \textcolor{comment}{/* GNU gcc specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00323}00323 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00329}00329 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_enable\_irq(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00330}00330 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00331}00331   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}cpsie i"{}} : : : \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00332}00332 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00333}00333 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00334}00334 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00340}00340 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_disable\_irq(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00341}00341 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00342}00342   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}cpsid i"{}} : : : \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00343}00343 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00344}00344 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00345}00345 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00352}00352 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_CONTROL(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00353}00353 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00354}00354   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00355}00355 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00356}00356   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, control"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00357}00357   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00358}00358 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00359}00359 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00360}00360 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00367}00367 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_CONTROL(uint32\_t control)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00368}00368 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00369}00369   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MSR control, \%0"{}} : : \textcolor{stringliteral}{"{}r"{}} (control) : \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00370}00370 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00371}00371 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00372}00372 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00379}00379 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_IPSR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00380}00380 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00381}00381   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00382}00382 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00383}00383   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, ipsr"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00384}00384   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00385}00385 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00386}00386 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00387}00387 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00394}00394 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_APSR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00395}00395 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00396}00396   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00397}00397 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00398}00398   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, apsr"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00399}00399   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00400}00400 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00401}00401 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00402}00402 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00409}00409 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_xPSR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00410}00410 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00411}00411   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00412}00412 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00413}00413   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, xpsr"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00414}00414   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00415}00415 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00416}00416 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00417}00417 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00424}00424 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_PSP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00425}00425 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00426}00426   \textcolor{keyword}{register} uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00427}00427 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00428}00428   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, psp\(\backslash\)n"{}}  : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00429}00429   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00430}00430 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00431}00431 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00432}00432 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00439}00439 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_PSP(uint32\_t topOfProcStack)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00440}00440 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00441}00441   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MSR psp, \%0\(\backslash\)n"{}} : : \textcolor{stringliteral}{"{}r"{}} (topOfProcStack) : \textcolor{stringliteral}{"{}sp"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00442}00442 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00443}00443 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00444}00444 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00451}00451 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_MSP(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00452}00452 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00453}00453   \textcolor{keyword}{register} uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00454}00454 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00455}00455   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, msp\(\backslash\)n"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00456}00456   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00457}00457 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00458}00458 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00459}00459 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00466}00466 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_MSP(uint32\_t topOfMainStack)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00467}00467 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00468}00468   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MSR msp, \%0\(\backslash\)n"{}} : : \textcolor{stringliteral}{"{}r"{}} (topOfMainStack) : \textcolor{stringliteral}{"{}sp"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00469}00469 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00470}00470 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00471}00471 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00478}00478 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_PRIMASK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00479}00479 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00480}00480   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00481}00481 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00482}00482   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, primask"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00483}00483   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00484}00484 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00485}00485 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00486}00486 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00493}00493 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_PRIMASK(uint32\_t priMask)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00494}00494 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00495}00495   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MSR primask, \%0"{}} : : \textcolor{stringliteral}{"{}r"{}} (priMask) : \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00496}00496 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00497}00497 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00498}00498 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00499}00499 \textcolor{preprocessor}{\#if       (\_\_CORTEX\_M >= 0x03)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00500}00500 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00506}00506 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_enable\_fault\_irq(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00507}00507 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00508}00508   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}cpsie f"{}} : : : \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00509}00509 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00510}00510 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00511}00511 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00517}00517 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_disable\_fault\_irq(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00518}00518 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00519}00519   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}cpsid f"{}} : : : \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00520}00520 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00521}00521 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00522}00522 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00529}00529 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_BASEPRI(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00530}00530 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00531}00531   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00532}00532 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00533}00533   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, basepri\_max"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00534}00534   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00535}00535 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00536}00536 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00537}00537 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00544}00544 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_BASEPRI(uint32\_t value)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00545}00545 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00546}00546   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MSR basepri, \%0"{}} : : \textcolor{stringliteral}{"{}r"{}} (value) : \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00547}00547 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00548}00548 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00549}00549 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00556}00556 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_FAULTMASK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00557}00557 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00558}00558   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00559}00559 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00560}00560   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MRS \%0, faultmask"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00561}00561   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00562}00562 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00563}00563 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00564}00564 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00571}00571 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_FAULTMASK(uint32\_t faultMask)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00572}00572 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00573}00573   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}MSR faultmask, \%0"{}} : : \textcolor{stringliteral}{"{}r"{}} (faultMask) : \textcolor{stringliteral}{"{}memory"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00574}00574 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00575}00575 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00576}00576 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* (\_\_CORTEX\_M >= 0x03) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00577}00577 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00578}00578 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00579}00579 \textcolor{preprocessor}{\#if       (\_\_CORTEX\_M == 0x04)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00580}00580 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00587}00587 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_get\_FPSCR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00588}00588 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00589}00589 \textcolor{preprocessor}{\#if (\_\_FPU\_PRESENT == 1) \&\& (\_\_FPU\_USED == 1)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00590}00590   uint32\_t result;}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00591}00591 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00592}00592   \textcolor{comment}{/* Empty asm statement works as a scheduling barrier */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00593}00593   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00594}00594   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}VMRS \%0, fpscr"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) );}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00595}00595   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00596}00596   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00597}00597 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00598}00598    \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00599}00599 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00600}00600 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00601}00601 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00602}00602 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00609}00609 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_FPSCR(uint32\_t fpscr)}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00610}00610 \{}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00611}00611 \textcolor{preprocessor}{\#if (\_\_FPU\_PRESENT == 1) \&\& (\_\_FPU\_USED == 1)}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00612}00612   \textcolor{comment}{/* Empty asm statement works as a scheduling barrier */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00613}00613   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00614}00614   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}VMSR fpscr, \%0"{}} : : \textcolor{stringliteral}{"{}r"{}} (fpscr) : \textcolor{stringliteral}{"{}vfpcc"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00615}00615   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00616}00616 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00617}00617 \}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00618}00618 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00619}00619 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* (\_\_CORTEX\_M == 0x04) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00620}00620 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00621}00621 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00622}00622 \textcolor{preprocessor}{\#elif defined ( \_\_TASKING\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ TASKING Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00623}00623 \textcolor{comment}{/* TASKING carm specific functions */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00624}00624 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00625}00625 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00626}00626 \textcolor{comment}{ * The CMSIS functions have been implemented as intrinsics in the compiler.}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00627}00627 \textcolor{comment}{ * Please use "{}carm -\/?i"{} to get an up to date list of all instrinsics,}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00628}00628 \textcolor{comment}{ * Including the CMSIS ones.}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00629}00629 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00630}00630 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00631}00631 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00632}00632 }
+\DoxyCodeLine{\Hypertarget{core__cm_func_8h_source_l00636}00636 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CMFUNC\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

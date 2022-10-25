@@ -1,0 +1,59 @@
+\hypertarget{can__helper_8h_source}{}\doxysection{can\+\_\+helper.\+h}
+\label{can__helper_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/can\_helper.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/can\_helper.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_CAN\_HELPER\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_CAN\_HELPER\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#if DEVICE\_CAN}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{22 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{enum} CANFormat \{}
+\DoxyCodeLine{26     CANStandard = 0,}
+\DoxyCodeLine{27     CANExtended = 1,}
+\DoxyCodeLine{28     CANAny = 2}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} CANFormat CANFormat;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{enum} CANType \{}
+\DoxyCodeLine{33     CANData   = 0,}
+\DoxyCodeLine{34     CANRemote = 1}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} CANType CANType;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{struct }CAN\_Message \{}
+\DoxyCodeLine{39     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}   id;                 \textcolor{comment}{// 29 bit identifier}}
+\DoxyCodeLine{40     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}  data[8];            \textcolor{comment}{// Data field}}
+\DoxyCodeLine{41     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}  len;                \textcolor{comment}{// Length of data field in bytes}}
+\DoxyCodeLine{42     CANFormat      format;             \textcolor{comment}{// 0 -\/ STANDARD, 1-\/ EXTENDED IDENTIFIER}}
+\DoxyCodeLine{43     CANType        type;               \textcolor{comment}{// 0 -\/ DATA FRAME, 1 -\/ REMOTE FRAME}}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }CAN\_Message CAN\_Message;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{48 \};}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MBED\_CAN\_HELPER\_H}}
+
+\end{DoxyCode}

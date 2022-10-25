@@ -1,0 +1,31 @@
+\hypertarget{group___s_p_i__mode}{}\doxysection{SPI\+\_\+mode}
+\label{group___s_p_i__mode}\index{SPI\_mode@{SPI\_mode}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_p_i__mode_ga75f094fee5a9dc10b88401ccd17925d3}\label{group___s_p_i__mode_ga75f094fee5a9dc10b88401ccd17925d3}} 
+\#define {\bfseries SPI\+\_\+\+MODE\+\_\+\+SLAVE}~((uint32\+\_\+t)0x00000000)
+\item 
+\mbox{\Hypertarget{group___s_p_i__mode_gaa335c2abdfad9e6f6c2677719d93b64e}\label{group___s_p_i__mode_gaa335c2abdfad9e6f6c2677719d93b64e}} 
+\#define {\bfseries SPI\+\_\+\+MODE\+\_\+\+MASTER}~(\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5b3b6ae107fc37bf18e14506298d7a55}{SPI\+\_\+\+CR1\+\_\+\+MSTR}} $\vert$ \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5f154374b58c0234f82ea326cb303a1e}{SPI\+\_\+\+CR1\+\_\+\+SSI}})
+\item 
+\#define \mbox{\hyperlink{group___s_p_i__mode_gad5135300763c75dbb446861536359f12}{IS\+\_\+\+SPI\+\_\+\+MODE}}(MODE)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_p_i__mode_gad5135300763c75dbb446861536359f12}\label{group___s_p_i__mode_gad5135300763c75dbb446861536359f12}} 
+\index{SPI\_mode@{SPI\_mode}!IS\_SPI\_MODE@{IS\_SPI\_MODE}}
+\index{IS\_SPI\_MODE@{IS\_SPI\_MODE}!SPI\_mode@{SPI\_mode}}
+\doxysubsubsection{\texorpdfstring{IS\_SPI\_MODE}{IS\_SPI\_MODE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SPI\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                           (((MODE) == SPI\_MODE\_SLAVE) || \(\backslash\)}
+\DoxyCodeLine{                           ((MODE) == SPI\_MODE\_MASTER))}
+
+\end{DoxyCode}

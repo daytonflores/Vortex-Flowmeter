@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_c_d___instance__definition" xml:lang="en-US">
+<title>HCD_Instance_definition</title>
+<indexterm><primary>HCD_Instance_definition</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___h_c_d___instance__definition_1gac88bf63750919b21f644840103db807b">__HAL_HCD_GET_FLAG</link>(__HANDLE__,  __INTERRUPT__)   ((<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) &amp; (__INTERRUPT__)) == (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___instance__definition_1ga3d4d13a8205789990dd59dc7a8fe5cb2">__HAL_HCD_CLEAR_FLAG</link>(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;GINTSTS) |= (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___instance__definition_1gaa51008d7ca3f27922440ffe336115372">__HAL_HCD_IS_INVALID_INTERRUPT</link>(__HANDLE__)   (<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) == 0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_c_d___instance__definition_1ga6696ebd1aea007a19e831517f3e1f497">IS_HCD_ALL_INSTANCE</link>(INSTANCE)   (((INSTANCE) == <link linkend="_group___peripheral__declaration_1ga9ebb053ee138fb47cdfede0e3371123d">USB_OTG_FS</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___h_c_d___instance__definition_1ga3d4d13a8205789990dd59dc7a8fe5cb2"/><section>
+    <title>__HAL_HCD_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_HCD_CLEAR_FLAG</primary><secondary>HCD_Instance_definition</secondary></indexterm>
+<indexterm><primary>HCD_Instance_definition</primary><secondary>__HAL_HCD_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_CLEAR_FLAG( __HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;GINTSTS) |= (__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00100">100</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___instance__definition_1gac88bf63750919b21f644840103db807b"/><section>
+    <title>__HAL_HCD_GET_FLAG</title>
+<indexterm><primary>__HAL_HCD_GET_FLAG</primary><secondary>HCD_Instance_definition</secondary></indexterm>
+<indexterm><primary>HCD_Instance_definition</primary><secondary>__HAL_HCD_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_GET_FLAG( __HANDLE__,  __INTERRUPT__)   ((<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) &amp; (__INTERRUPT__)) == (__INTERRUPT__))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00099">99</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___instance__definition_1gaa51008d7ca3f27922440ffe336115372"/><section>
+    <title>__HAL_HCD_IS_INVALID_INTERRUPT</title>
+<indexterm><primary>__HAL_HCD_IS_INVALID_INTERRUPT</primary><secondary>HCD_Instance_definition</secondary></indexterm>
+<indexterm><primary>HCD_Instance_definition</primary><secondary>__HAL_HCD_IS_INVALID_INTERRUPT</secondary></indexterm>
+<para><computeroutput>#define __HAL_HCD_IS_INVALID_INTERRUPT( __HANDLE__)   (<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) == 0)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00101">101</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d___instance__definition_1ga6696ebd1aea007a19e831517f3e1f497"/><section>
+    <title>IS_HCD_ALL_INSTANCE</title>
+<indexterm><primary>IS_HCD_ALL_INSTANCE</primary><secondary>HCD_Instance_definition</secondary></indexterm>
+<indexterm><primary>HCD_Instance_definition</primary><secondary>IS_HCD_ALL_INSTANCE</secondary></indexterm>
+<para><computeroutput>#define IS_HCD_ALL_INSTANCE( INSTANCE)   (((INSTANCE) == <link linkend="_group___peripheral__declaration_1ga9ebb053ee138fb47cdfede0e3371123d">USB_OTG_FS</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00108">108</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+</section>
+</section>

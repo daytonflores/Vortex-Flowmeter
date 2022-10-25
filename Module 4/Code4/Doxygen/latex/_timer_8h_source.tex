@@ -1,0 +1,59 @@
+\hypertarget{_timer_8h_source}{}\doxysection{Timer.\+h}
+\label{_timer_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/Timer.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/Timer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_TIMER\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_TIMER\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{44 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_timer}{Timer}} \{}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{public}:}
+\DoxyCodeLine{47     \mbox{\hyperlink{classmbed_1_1_timer}{Timer}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_timer_aa9e4096c9e6a416f42e0ae3a85604caa}{start}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_timer_a4a687e8a871c6fd29d4b74bdef3c52a2}{stop}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_timer_a6b7f2334eb9533efb72fc29314f4fa02}{reset}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{float} \mbox{\hyperlink{classmbed_1_1_timer_a121d69d1b058f0ac809dea2df5143bfc}{read}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_timer_a2bc063758527437192a555b35ca73d6c}{read\_ms}}();}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_timer_a97735f708d71171d2905df675dc64091}{read\_us}}();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{76     \textcolor{keyword}{operator} float();}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{80     \textcolor{keywordtype}{int} slicetime();}
+\DoxyCodeLine{81     \textcolor{keywordtype}{int} \_running;          \textcolor{comment}{// whether the timer is running}}
+\DoxyCodeLine{82     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \_start;   \textcolor{comment}{// the start time of the latest slice}}
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} \_time;             \textcolor{comment}{// any accumulated time from previous slices}}
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

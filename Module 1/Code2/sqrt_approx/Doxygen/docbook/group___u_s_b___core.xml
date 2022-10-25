@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b___core" xml:lang="en-US">
+<title>USB_Core</title>
+<indexterm><primary>USB_Core</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___p_c_d___exported___constants">PCD_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_u_s_b___o_t_g___cfg_type_def">USB_OTG_CfgTypeDef</link></para>
+
+<para>PCD Initialization Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_s_b___o_t_g___e_p_type_def">USB_OTG_EPTypeDef</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_s_b___o_t_g___h_c_type_def">USB_OTG_HCTypeDef</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___u_s_b___core_1gaee615ae9689e28e7618b73dbe76f5b95">USB_OTG_ModeTypeDef</link> { <link linkend="_group___u_s_b___core_1ggaee615ae9689e28e7618b73dbe76f5b95abe8249bdbe7a4203d7a1993c61750831">USB_OTG_DEVICE_MODE</link> = 0
+, <link linkend="_group___u_s_b___core_1ggaee615ae9689e28e7618b73dbe76f5b95ae3ce8f1b6b2b91c3008e3fe00de1d799">USB_OTG_HOST_MODE</link> = 1
+, <link linkend="_group___u_s_b___core_1ggaee615ae9689e28e7618b73dbe76f5b95a5e000853dd643af91cdf9515df494e53">USB_OTG_DRD_MODE</link> = 2
+ }</para>
+
+<para>USB Mode definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">USB_OTG_URBStateTypeDef</link> { 
+<link linkend="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221a3d62a44f8c2ff61d32e014eeb68ca1ad">URB_IDLE</link> = 0
+, <link linkend="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221a89b831c73a03df3adb1db9f9ea6dd383">URB_DONE</link>
+, <link linkend="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221afc9be95cae97851083c29fba7a76c429">URB_NOTREADY</link>
+, <link linkend="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221a53a167498a0a71be87d46ed17a8b3a1f">URB_NYET</link>
+, 
+<link linkend="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221ac64ce5e59f99b31274ebbec86d33afb2">URB_ERROR</link>
+, <link linkend="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221af19023a3840fc87352f2c7108feb4f8e">URB_STALL</link>
+ }</para>
+
+<para>URB States definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___u_s_b___core_1ga8fa88c2e8e5fe41147028ba11af65294">USB_OTG_HCStateTypeDef</link> { 
+<link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294af636bb8335a7bd4b2cd57dc41d105d9c">HC_IDLE</link> = 0
+, <link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a323751d52ea7fde5b0399b480666b3eb">HC_XFRC</link>
+, <link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294ad3806642bc9a2a49bf930f44a8a01918">HC_HALTED</link>
+, <link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294aead6a914271aec37bb91e63949567391">HC_NAK</link>
+, 
+<link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294ac7a2e369496480be172bc2b290d65c24">HC_NYET</link>
+, <link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a007bef68e5e5170ea5055d553c64ec87">HC_STALL</link>
+, <link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a13ced3cf247e734c6be97235e18cfa33">HC_XACTERR</link>
+, <link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a557e1dbc3f7c65270c2bc42784299a13">HC_BBLERR</link>
+, 
+<link linkend="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a3b001e51f8c3d77947867fb1a9b959be">HC_DATATGLERR</link>
+ }</para>
+
+<para>Host channel States definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___u_s_b___core_1ga8fa88c2e8e5fe41147028ba11af65294"/><section>
+    <title>USB_OTG_HCStateTypeDef</title>
+<indexterm><primary>USB_OTG_HCStateTypeDef</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>USB_OTG_HCStateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___u_s_b___core_1ga8fa88c2e8e5fe41147028ba11af65294">USB_OTG_HCStateTypeDef</link></computeroutput></para><para>
+
+<para>Host channel States definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HC_IDLE</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_IDLE</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294af636bb8335a7bd4b2cd57dc41d105d9c"/>HC_IDLE</entry><entry></entry></row><row><entry><indexterm><primary>HC_XFRC</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_XFRC</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a323751d52ea7fde5b0399b480666b3eb"/>HC_XFRC</entry><entry></entry></row><row><entry><indexterm><primary>HC_HALTED</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_HALTED</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294ad3806642bc9a2a49bf930f44a8a01918"/>HC_HALTED</entry><entry></entry></row><row><entry><indexterm><primary>HC_NAK</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_NAK</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294aead6a914271aec37bb91e63949567391"/>HC_NAK</entry><entry></entry></row><row><entry><indexterm><primary>HC_NYET</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_NYET</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294ac7a2e369496480be172bc2b290d65c24"/>HC_NYET</entry><entry></entry></row><row><entry><indexterm><primary>HC_STALL</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_STALL</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a007bef68e5e5170ea5055d553c64ec87"/>HC_STALL</entry><entry></entry></row><row><entry><indexterm><primary>HC_XACTERR</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_XACTERR</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a13ced3cf247e734c6be97235e18cfa33"/>HC_XACTERR</entry><entry></entry></row><row><entry><indexterm><primary>HC_BBLERR</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_BBLERR</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a557e1dbc3f7c65270c2bc42784299a13"/>HC_BBLERR</entry><entry></entry></row><row><entry><indexterm><primary>HC_DATATGLERR</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>HC_DATATGLERR</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga8fa88c2e8e5fe41147028ba11af65294a3b001e51f8c3d77947867fb1a9b959be"/>HC_DATATGLERR</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__usb_8h_source_1l00086">86</link> of file <link linkend="_stm32f4xx__ll__usb_8h_source">stm32f4xx_ll_usb.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_s_b___core_1gaee615ae9689e28e7618b73dbe76f5b95"/><section>
+    <title>USB_OTG_ModeTypeDef</title>
+<indexterm><primary>USB_OTG_ModeTypeDef</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>USB_OTG_ModeTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___u_s_b___core_1gaee615ae9689e28e7618b73dbe76f5b95">USB_OTG_ModeTypeDef</link></computeroutput></para><para>
+
+<para>USB Mode definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>USB_OTG_DEVICE_MODE</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>USB_OTG_DEVICE_MODE</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1ggaee615ae9689e28e7618b73dbe76f5b95abe8249bdbe7a4203d7a1993c61750831"/>USB_OTG_DEVICE_MODE</entry><entry></entry></row><row><entry><indexterm><primary>USB_OTG_HOST_MODE</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>USB_OTG_HOST_MODE</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1ggaee615ae9689e28e7618b73dbe76f5b95ae3ce8f1b6b2b91c3008e3fe00de1d799"/>USB_OTG_HOST_MODE</entry><entry></entry></row><row><entry><indexterm><primary>USB_OTG_DRD_MODE</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>USB_OTG_DRD_MODE</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1ggaee615ae9689e28e7618b73dbe76f5b95a5e000853dd643af91cdf9515df494e53"/>USB_OTG_DRD_MODE</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__usb_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__ll__usb_8h_source">stm32f4xx_ll_usb.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221"/><section>
+    <title>USB_OTG_URBStateTypeDef</title>
+<indexterm><primary>USB_OTG_URBStateTypeDef</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>USB_OTG_URBStateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">USB_OTG_URBStateTypeDef</link></computeroutput></para><para>
+
+<para>URB States definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>URB_IDLE</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>URB_IDLE</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221a3d62a44f8c2ff61d32e014eeb68ca1ad"/>URB_IDLE</entry><entry></entry></row><row><entry><indexterm><primary>URB_DONE</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>URB_DONE</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221a89b831c73a03df3adb1db9f9ea6dd383"/>URB_DONE</entry><entry></entry></row><row><entry><indexterm><primary>URB_NOTREADY</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>URB_NOTREADY</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221afc9be95cae97851083c29fba7a76c429"/>URB_NOTREADY</entry><entry></entry></row><row><entry><indexterm><primary>URB_NYET</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>URB_NYET</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221a53a167498a0a71be87d46ed17a8b3a1f"/>URB_NYET</entry><entry></entry></row><row><entry><indexterm><primary>URB_ERROR</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>URB_ERROR</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221ac64ce5e59f99b31274ebbec86d33afb2"/>URB_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>URB_STALL</primary><secondary>USB_Core</secondary></indexterm>
+<indexterm><primary>USB_Core</primary><secondary>URB_STALL</secondary></indexterm>
+<anchor xml:id="_group___u_s_b___core_1gga04b2bca306495588fec3a5245daa5221af19023a3840fc87352f2c7108feb4f8e"/>URB_STALL</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__usb_8h_source_1l00073">73</link> of file <link linkend="_stm32f4xx__ll__usb_8h_source">stm32f4xx_ll_usb.h</link>.</para>
+</section>
+</section>
+</section>

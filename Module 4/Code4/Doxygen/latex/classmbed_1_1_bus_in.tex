@@ -1,0 +1,86 @@
+\hypertarget{classmbed_1_1_bus_in}{}\doxysection{mbed\+::Bus\+In Class Reference}
+\label{classmbed_1_1_bus_in}\index{mbed::BusIn@{mbed::BusIn}}
+
+
+{\ttfamily \#include $<$Bus\+In.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmbed_1_1_bus_in_a60e8a1d93b93bb565d7f6fafacdf6a4b}{Bus\+In}} (Pin\+Name p0, Pin\+Name p1=NC, Pin\+Name p2=NC, Pin\+Name p3=NC, Pin\+Name p4=NC, Pin\+Name p5=NC, Pin\+Name p6=NC, Pin\+Name p7=NC, Pin\+Name p8=NC, Pin\+Name p9=NC, Pin\+Name p10=NC, Pin\+Name p11=NC, Pin\+Name p12=NC, Pin\+Name p13=NC, Pin\+Name p14=NC, Pin\+Name p15=NC)
+\item 
+\mbox{\Hypertarget{classmbed_1_1_bus_in_ae48033f85c46aa99f9693a0b890e65b8}\label{classmbed_1_1_bus_in_ae48033f85c46aa99f9693a0b890e65b8}} 
+{\bfseries Bus\+In} (Pin\+Name pins\mbox{[}16\mbox{]})
+\item 
+int \mbox{\hyperlink{classmbed_1_1_bus_in_aad43475895a43bca659aef8a81dc4478}{read}} ()
+\item 
+void \mbox{\hyperlink{classmbed_1_1_bus_in_a93eed47467fec29854399cb7606a123b}{mode}} (Pin\+Mode pull)
+\item 
+\mbox{\hyperlink{classmbed_1_1_bus_in_adb47444fdd5d8928923b39edaa247963}{operator int}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmbed_1_1_bus_in_a44b9ec611a79d62de2be00c04ee034a1}\label{classmbed_1_1_bus_in_a44b9ec611a79d62de2be00c04ee034a1}} 
+\mbox{\hyperlink{classmbed_1_1_digital_in}{Digital\+In}} $\ast$ {\bfseries \+\_\+pin} \mbox{[}16\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A digital input bus, used for reading the state of a collection of pins 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmbed_1_1_bus_in_a60e8a1d93b93bb565d7f6fafacdf6a4b}\label{classmbed_1_1_bus_in_a60e8a1d93b93bb565d7f6fafacdf6a4b}} 
+\index{mbed::BusIn@{mbed::BusIn}!BusIn@{BusIn}}
+\index{BusIn@{BusIn}!mbed::BusIn@{mbed::BusIn}}
+\doxysubsubsection{\texorpdfstring{BusIn()}{BusIn()}}
+{\footnotesize\ttfamily mbed\+::\+Bus\+In\+::\+Bus\+In (\begin{DoxyParamCaption}\item[{Pin\+Name}]{p0,  }\item[{Pin\+Name}]{p1 = {\ttfamily NC},  }\item[{Pin\+Name}]{p2 = {\ttfamily NC},  }\item[{Pin\+Name}]{p3 = {\ttfamily NC},  }\item[{Pin\+Name}]{p4 = {\ttfamily NC},  }\item[{Pin\+Name}]{p5 = {\ttfamily NC},  }\item[{Pin\+Name}]{p6 = {\ttfamily NC},  }\item[{Pin\+Name}]{p7 = {\ttfamily NC},  }\item[{Pin\+Name}]{p8 = {\ttfamily NC},  }\item[{Pin\+Name}]{p9 = {\ttfamily NC},  }\item[{Pin\+Name}]{p10 = {\ttfamily NC},  }\item[{Pin\+Name}]{p11 = {\ttfamily NC},  }\item[{Pin\+Name}]{p12 = {\ttfamily NC},  }\item[{Pin\+Name}]{p13 = {\ttfamily NC},  }\item[{Pin\+Name}]{p14 = {\ttfamily NC},  }\item[{Pin\+Name}]{p15 = {\ttfamily NC} }\end{DoxyParamCaption})}
+
+Create an \mbox{\hyperlink{classmbed_1_1_bus_in}{Bus\+In}}, connected to the specified pins
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$n$>$} & \mbox{\hyperlink{classmbed_1_1_digital_in}{Digital\+In}} pin to connect to bus bit $<$n$>$ (p5-\/p30, NC)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It is only required to specify as many pin variables as is required for the bus; the rest will default to NC (not connected) 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_bus_in_a93eed47467fec29854399cb7606a123b}\label{classmbed_1_1_bus_in_a93eed47467fec29854399cb7606a123b}} 
+\index{mbed::BusIn@{mbed::BusIn}!mode@{mode}}
+\index{mode@{mode}!mbed::BusIn@{mbed::BusIn}}
+\doxysubsubsection{\texorpdfstring{mode()}{mode()}}
+{\footnotesize\ttfamily void mbed\+::\+Bus\+In\+::mode (\begin{DoxyParamCaption}\item[{Pin\+Mode}]{pull }\end{DoxyParamCaption})}
+
+Set the input pin mode
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Pull\+Up, Pull\+Down, Pull\+None \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmbed_1_1_bus_in_adb47444fdd5d8928923b39edaa247963}\label{classmbed_1_1_bus_in_adb47444fdd5d8928923b39edaa247963}} 
+\index{mbed::BusIn@{mbed::BusIn}!operator int@{operator int}}
+\index{operator int@{operator int}!mbed::BusIn@{mbed::BusIn}}
+\doxysubsubsection{\texorpdfstring{operator int()}{operator int()}}
+{\footnotesize\ttfamily mbed\+::\+Bus\+In\+::operator int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A shorthand for \mbox{\hyperlink{classmbed_1_1_bus_in_aad43475895a43bca659aef8a81dc4478}{read()}} \mbox{\Hypertarget{classmbed_1_1_bus_in_aad43475895a43bca659aef8a81dc4478}\label{classmbed_1_1_bus_in_aad43475895a43bca659aef8a81dc4478}} 
+\index{mbed::BusIn@{mbed::BusIn}!read@{read}}
+\index{read@{read}!mbed::BusIn@{mbed::BusIn}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int mbed\+::\+Bus\+In\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read the value of the input bus
+
+\begin{DoxyReturn}{Returns}
+An integer with each bit corresponding to the value read from the associated \mbox{\hyperlink{classmbed_1_1_digital_in}{Digital\+In}} pin 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/Bus\+In.\+h\end{DoxyCompactItemize}

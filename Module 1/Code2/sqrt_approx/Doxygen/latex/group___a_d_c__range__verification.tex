@@ -1,0 +1,31 @@
+\hypertarget{group___a_d_c__range__verification}{}\doxysection{ADC\+\_\+range\+\_\+verification}
+\label{group___a_d_c__range__verification}\index{ADC\_range\_verification@{ADC\_range\_verification}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___a_d_c__range__verification_gadee1b27b756df7927be40709e96218c0}{IS\+\_\+\+ADC\+\_\+\+RANGE}}(RESOLUTION,  ADC\+\_\+\+VALUE)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___a_d_c__range__verification_gadee1b27b756df7927be40709e96218c0}\label{group___a_d_c__range__verification_gadee1b27b756df7927be40709e96218c0}} 
+\index{ADC\_range\_verification@{ADC\_range\_verification}!IS\_ADC\_RANGE@{IS\_ADC\_RANGE}}
+\index{IS\_ADC\_RANGE@{IS\_ADC\_RANGE}!ADC\_range\_verification@{ADC\_range\_verification}}
+\doxysubsubsection{\texorpdfstring{IS\_ADC\_RANGE}{IS\_ADC\_RANGE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+ADC\+\_\+\+RANGE(\begin{DoxyParamCaption}\item[{}]{RESOLUTION,  }\item[{}]{ADC\+\_\+\+VALUE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   ((((RESOLUTION) == \mbox{\hyperlink{group___a_d_c___resolution_ga6d328c588ea6f273ca698d48441a2a71}{ADC\_RESOLUTION12b}}) \&\& ((ADC\_VALUE) <= ((uint32\_t)0x0FFF))) || \(\backslash\)}
+\DoxyCodeLine{    (((RESOLUTION) == \mbox{\hyperlink{group___a_d_c___resolution_gaa695d7ca46602fd4317d5f6a7a2ee071}{ADC\_RESOLUTION10b}}) \&\& ((ADC\_VALUE) <= ((uint32\_t)0x03FF))) || \(\backslash\)}
+\DoxyCodeLine{    (((RESOLUTION) == \mbox{\hyperlink{group___a_d_c___resolution_ga96b87d1645b3ae2e4af88daa006decc4}{ADC\_RESOLUTION8b}})  \&\& ((ADC\_VALUE) <= ((uint32\_t)0x00FF))) || \(\backslash\)}
+\DoxyCodeLine{    (((RESOLUTION) == \mbox{\hyperlink{group___a_d_c___resolution_gaeaba9f99d20e7305507044f975925622}{ADC\_RESOLUTION6b}})  \&\& ((ADC\_VALUE) <= ((uint32\_t)0x003F))))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__adc_8h_source_l00487}{487}} of file \mbox{\hyperlink{stm32f4xx__hal__adc_8h_source}{stm32f4xx\+\_\+hal\+\_\+adc.\+h}}.
+

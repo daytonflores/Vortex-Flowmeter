@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__pccard_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_pccard.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pccard.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_PCCARD_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_PCCARD_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00046"/>00046 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00047"/>00047 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)||&#32;defined(STM32F417xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00048"/>00048 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_stm32f4xx__ll__fsmc_8h">stm32f4xx_ll_fsmc.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00049"/>00049 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00050"/>00050 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00051"/>00051 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00052"/>00052 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_stm32f4xx__ll__fmc_8h">stm32f4xx_ll_fmc.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00053"/>00053 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00054"/>00054 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00063"/>00063 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00064"/>00064 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00065"/>00065 <emphasis role="comment">/*&#32;Exported&#32;typedef&#32;----------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00066"/>00066 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00070"/>00070 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00071"/>00071 {
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00072"/>00072 &#32;&#32;HAL_PCCARD_STATE_RESET&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00073"/>00073 &#32;&#32;HAL_PCCARD_STATE_READY&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00074"/>00074 &#32;&#32;HAL_PCCARD_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00075"/>00075 &#32;&#32;HAL_PCCARD_STATE_ERROR&#32;&#32;&#32;&#32;&#32;=&#32;0x04&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00076"/>00076 }HAL_PCCARD_StateTypeDef;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00077"/>00077 &#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00078"/>00078 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00079"/>00079 {
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00080"/>00080 &#32;&#32;CF_SUCCESS&#32;=&#32;0,
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00081"/>00081 &#32;&#32;CF_ONGOING,
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00082"/>00082 &#32;&#32;CF_ERROR,
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00083"/>00083 &#32;&#32;CF_TIMEOUT
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00084"/>00084 }CF_StatusTypedef;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00085"/>00085 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00089"/>00089 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00090"/>00090 {
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00091"/>00091 &#32;&#32;FMC_PCCARD_TypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*Instance;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00093"/>00093 &#32;&#32;FMC_PCCARD_InitTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;Init;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00095"/>00095 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;HAL_PCCARD_StateTypeDef&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00097"/>00097 &#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00099"/>00099 }PCCARD_HandleTypeDef;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00100"/>00100 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00101"/>00101 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00102"/>00102 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00107"/>00107 <emphasis role="preprocessor">#define&#32;CF_DEVICE_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x90000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00108"/>00108 <emphasis role="preprocessor">#define&#32;CF_ATTRIBUTE_SPACE_ADDRESS&#32;&#32;&#32;&#32;((uint32_t)0x98000000)&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Attribute&#32;space&#32;size&#32;to&#32;@0x9BFF&#32;FFFF&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00109"/>00109 <emphasis role="preprocessor">#define&#32;CF_COMMON_SPACE_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;CF_DEVICE_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Common&#32;space&#32;size&#32;to&#32;@0x93FF&#32;FFFF&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00110"/>00110 <emphasis role="preprocessor">#define&#32;CF_IO_SPACE_ADDRESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x9C000000)&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;IO&#32;space&#32;size&#32;to&#32;@0x9FFF&#32;FFFF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00111"/>00111 <emphasis role="preprocessor">#define&#32;CF_IO_SPACE_PRIMARY_ADDR&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x9C0001F0)&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;IO&#32;space&#32;size&#32;to&#32;@0x9FFF&#32;FFFF&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00112"/>00112 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00113"/>00113 <emphasis role="comment">/*&#32;Compact&#32;Flash-ATA&#32;registers&#32;description&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00114"/>00114 <emphasis role="preprocessor">#define&#32;CF_DATA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Data&#32;register&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00115"/>00115 <emphasis role="preprocessor">#define&#32;CF_SECTOR_COUNT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x02)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Sector&#32;Count&#32;register&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00116"/>00116 <emphasis role="preprocessor">#define&#32;CF_SECTOR_NUMBER&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x03)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Sector&#32;Number&#32;register&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00117"/>00117 <emphasis role="preprocessor">#define&#32;CF_CYLINDER_LOW&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x04)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Cylinder&#32;low&#32;register&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00118"/>00118 <emphasis role="preprocessor">#define&#32;CF_CYLINDER_HIGH&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x05)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Cylinder&#32;high&#32;register&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00119"/>00119 <emphasis role="preprocessor">#define&#32;CF_CARD_HEAD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x06)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Card/Head&#32;register&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00120"/>00120 <emphasis role="preprocessor">#define&#32;CF_STATUS_CMD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x07)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Status(read)/Command(write)&#32;register&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00121"/>00121 <emphasis role="preprocessor">#define&#32;CF_STATUS_CMD_ALTERNATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x0E)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Alternate&#32;Status(read)/Command(write)&#32;register&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00122"/>00122 <emphasis role="preprocessor">#define&#32;CF_COMMON_DATA_AREA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0400)&#32;</emphasis><emphasis role="comment">/*&#32;Start&#32;of&#32;data&#32;area&#32;(for&#32;Common&#32;access&#32;only!)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00123"/>00123 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00124"/>00124 <emphasis role="comment">/*&#32;Compact&#32;Flash-ATA&#32;commands&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00125"/>00125 <emphasis role="preprocessor">#define&#32;CF_READ_SECTOR_CMD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x20)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00126"/>00126 <emphasis role="preprocessor">#define&#32;CF_WRITE_SECTOR_CMD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x30)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00127"/>00127 <emphasis role="preprocessor">#define&#32;CF_ERASE_SECTOR_CMD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0xC0)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00128"/>00128 <emphasis role="preprocessor">#define&#32;CF_IDENTIFY_CMD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0xEC)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00129"/>00129 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00130"/>00130 <emphasis role="comment">/*&#32;Compact&#32;Flash&#32;status&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00131"/>00131 <emphasis role="preprocessor">#define&#32;CF_TIMEOUT_ERROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x60)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00132"/>00132 <emphasis role="preprocessor">#define&#32;CF_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x80)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00133"/>00133 <emphasis role="preprocessor">#define&#32;CF_PROGR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00134"/>00134 <emphasis role="preprocessor">#define&#32;CF_READY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x40)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00135"/>00135 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00136"/>00136 <emphasis role="preprocessor">#define&#32;CF_SECTOR_SIZE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)255)&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;In&#32;half&#32;words&#32;*/</emphasis><emphasis role="preprocessor">&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00137"/>00137 &#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00141"/>00141 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00142"/>00142 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00147"/>00147 <emphasis role="preprocessor">#define&#32;__HAL_PCCARD_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_PCCARD_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00148"/>00148 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00149"/>00149 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00150"/>00150 <emphasis role="comment">/*&#32;Initialization/de-initialization&#32;functions&#32;&#32;**********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00151"/>00151 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;HAL_PCCARD_Init(PCCARD_HandleTypeDef&#32;*hpccard,&#32;FMC_NAND_PCC_TimingTypeDef&#32;*ComSpaceTiming,&#32;FMC_NAND_PCC_TimingTypeDef&#32;*AttSpaceTiming,&#32;FMC_NAND_PCC_TimingTypeDef&#32;*IOSpaceTiming);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00152"/>00152 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;HAL_PCCARD_DeInit(PCCARD_HandleTypeDef&#32;*hpccard);&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00153"/>00153 <emphasis role="keywordtype">void</emphasis>&#32;HAL_PCCARD_MspInit(PCCARD_HandleTypeDef&#32;*hpccard);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00154"/>00154 <emphasis role="keywordtype">void</emphasis>&#32;HAL_PCCARD_MspDeInit(PCCARD_HandleTypeDef&#32;*hpccard);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00155"/>00155 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00156"/>00156 <emphasis role="comment">/*&#32;IO&#32;operation&#32;functions&#32;&#32;*****************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00157"/>00157 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;HAL_CF_Read_ID(PCCARD_HandleTypeDef&#32;*hpccard,&#32;uint8_t&#32;CompactFlash_ID[],&#32;uint8_t&#32;*pStatus);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00158"/>00158 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;HAL_CF_Write_Sector(PCCARD_HandleTypeDef&#32;*hpccard,&#32;uint16_t&#32;*pBuffer,&#32;uint16_t&#32;SectorAddress,&#32;&#32;uint8_t&#32;*pStatus);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00159"/>00159 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;HAL_CF_Read_Sector(PCCARD_HandleTypeDef&#32;*hpccard,&#32;uint16_t&#32;*pBuffer,&#32;uint16_t&#32;SectorAddress,&#32;uint8_t&#32;*pStatus);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00160"/>00160 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;HAL_CF_Erase_Sector(PCCARD_HandleTypeDef&#32;*hpccard,&#32;uint16_t&#32;SectorAddress,&#32;uint8_t&#32;*pStatus);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00161"/>00161 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;HAL_CF_Reset(PCCARD_HandleTypeDef&#32;*hpccard);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00162"/>00162 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_PCCARD_IRQHandler(PCCARD_HandleTypeDef&#32;*hpccard);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00163"/>00163 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_PCCARD_ITCallback(PCCARD_HandleTypeDef&#32;*hpccard);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00164"/>00164 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00165"/>00165 <emphasis role="comment">/*&#32;PCCARD&#32;State&#32;functions&#32;*******************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00166"/>00166 HAL_PCCARD_StateTypeDef&#32;HAL_PCCARD_GetState(PCCARD_HandleTypeDef&#32;*hpccard);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00167"/>00167 CF_StatusTypedef&#32;HAL_CF_GetStatus(PCCARD_HandleTypeDef&#32;*hpccard);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00168"/>00168 CF_StatusTypedef&#32;HAL_CF_ReadStatus(PCCARD_HandleTypeDef&#32;*hpccard);
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00169"/>00169 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00170"/>00170 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00179"/>00179 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00180"/>00180 }
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00181"/>00181 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00182"/>00182 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00183"/>00183 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_PCCARD_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00184"/>00184 
+<anchor xml:id="_stm32f4xx__hal__pccard_8h_source_1l00185"/>00185 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

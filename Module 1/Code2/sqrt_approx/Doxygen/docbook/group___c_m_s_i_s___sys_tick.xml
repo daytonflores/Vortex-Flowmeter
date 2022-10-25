@@ -1,0 +1,840 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_m_s_i_s___sys_tick" xml:lang="en-US">
+<title>System Tick Timer (SysTick)</title>
+<indexterm><primary>System Tick Timer (SysTick)</primary></indexterm>
+<para>
+
+<para>Type definitions for the System Timer Registers. </para>
+ 
+</para>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___c_m_s_i_s___core_debug">Core Debug Registers (CoreDebug)</link></para>
+
+<para>Cortex-M0 Core Debug Registers (DCB registers, SHCSR, and DFSR) are only accessible over DAP and not via processor. Therefore they are not covered by the Cortex-M0 header file. </para>
+</listitem>
+            <listitem><para><link linkend="_group___c_m_s_i_s___i_t_m">Instrumentation Trace Macrocell (ITM)</link></para>
+
+<para>Type definitions for the Instrumentation Trace Macrocell (ITM) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_sys_tick___type">SysTick_Type</link></para>
+
+<para>Structure type to access the System Timer (SysTick). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c">SysTick_CTRL_COUNTFLAG_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373">SysTick_CTRL_CLKSOURCE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027">SysTick_CTRL_TICKINT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f">SysTick_CTRL_ENABLE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1">SysTick_LOAD_RELOAD_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45">SysTick_VAL_CURRENT_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>   31</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6">SysTick_CALIB_NOREF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>   30</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431">SysTick_CALIB_SKEW_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e">SysTick_CALIB_TENMS_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c">SysTick_CTRL_COUNTFLAG_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373">SysTick_CTRL_CLKSOURCE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027">SysTick_CTRL_TICKINT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f">SysTick_CTRL_ENABLE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1">SysTick_LOAD_RELOAD_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45">SysTick_VAL_CURRENT_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>   31</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6">SysTick_CALIB_NOREF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>   30</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431">SysTick_CALIB_SKEW_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e">SysTick_CALIB_TENMS_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c">SysTick_CTRL_COUNTFLAG_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373">SysTick_CTRL_CLKSOURCE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027">SysTick_CTRL_TICKINT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f">SysTick_CTRL_ENABLE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1">SysTick_LOAD_RELOAD_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45">SysTick_VAL_CURRENT_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>   31</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6">SysTick_CALIB_NOREF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>   30</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431">SysTick_CALIB_SKEW_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e">SysTick_CALIB_TENMS_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+        </itemizedlist>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c">SysTick_CTRL_COUNTFLAG_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373">SysTick_CTRL_CLKSOURCE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027">SysTick_CTRL_TICKINT_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f">SysTick_CTRL_ENABLE_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1">SysTick_LOAD_RELOAD_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45">SysTick_VAL_CURRENT_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>   31</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6">SysTick_CALIB_NOREF_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>   30</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431">SysTick_CALIB_SKEW_Msk</link>   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e">SysTick_CALIB_TENMS_Pos</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e">SysTick_CALIB_TENMS_Msk</link>   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Type definitions for the System Timer Registers. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6"/><section>
+    <title>SysTick_CALIB_NOREF_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_NOREF_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_NOREF_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_NOREF_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: NOREF Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00441">441</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6"/><section>
+    <title>SysTick_CALIB_NOREF_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_NOREF_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_NOREF_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_NOREF_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: NOREF Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00462">462</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6"/><section>
+    <title>SysTick_CALIB_NOREF_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_NOREF_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_NOREF_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_NOREF_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: NOREF Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00621">621</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga3af0d891fdd99bcc8d8912d37830edb6"/><section>
+    <title>SysTick_CALIB_NOREF_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_NOREF_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_NOREF_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_NOREF_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409">SysTick_CALIB_NOREF_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: NOREF Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00654">654</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409"/><section>
+    <title>SysTick_CALIB_NOREF_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_NOREF_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_NOREF_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_NOREF_Pos   31</computeroutput></para>
+<para>SysTick CALIB: NOREF Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00440">440</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409"/><section>
+    <title>SysTick_CALIB_NOREF_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_NOREF_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_NOREF_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_NOREF_Pos   31</computeroutput></para>
+<para>SysTick CALIB: NOREF Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00461">461</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409"/><section>
+    <title>SysTick_CALIB_NOREF_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_NOREF_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_NOREF_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_NOREF_Pos   31</computeroutput></para>
+<para>SysTick CALIB: NOREF Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00620">620</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga534dbe414e7a46a6ce4c1eca1fbff409"/><section>
+    <title>SysTick_CALIB_NOREF_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_NOREF_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_NOREF_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_NOREF_Pos   31</computeroutput></para>
+<para>SysTick CALIB: NOREF Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00653">653</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431"/><section>
+    <title>SysTick_CALIB_SKEW_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_SKEW_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_SKEW_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_SKEW_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: SKEW Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00444">444</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431"/><section>
+    <title>SysTick_CALIB_SKEW_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_SKEW_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_SKEW_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_SKEW_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: SKEW Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00465">465</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431"/><section>
+    <title>SysTick_CALIB_SKEW_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_SKEW_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_SKEW_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_SKEW_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: SKEW Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00624">624</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga8a6a85a87334776f33d77fd147587431"/><section>
+    <title>SysTick_CALIB_SKEW_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_SKEW_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_SKEW_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_SKEW_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860">SysTick_CALIB_SKEW_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: SKEW Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00657">657</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860"/><section>
+    <title>SysTick_CALIB_SKEW_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_SKEW_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_SKEW_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_SKEW_Pos   30</computeroutput></para>
+<para>SysTick CALIB: SKEW Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00443">443</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860"/><section>
+    <title>SysTick_CALIB_SKEW_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_SKEW_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_SKEW_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_SKEW_Pos   30</computeroutput></para>
+<para>SysTick CALIB: SKEW Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00464">464</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860"/><section>
+    <title>SysTick_CALIB_SKEW_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_SKEW_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_SKEW_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_SKEW_Pos   30</computeroutput></para>
+<para>SysTick CALIB: SKEW Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00623">623</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gadd0c9cd6641b9f6a0c618e7982954860"/><section>
+    <title>SysTick_CALIB_SKEW_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_SKEW_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_SKEW_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_SKEW_Pos   30</computeroutput></para>
+<para>SysTick CALIB: SKEW Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00656">656</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e"/><section>
+    <title>SysTick_CALIB_TENMS_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_TENMS_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_TENMS_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_TENMS_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: TENMS Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00447">447</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e"/><section>
+    <title>SysTick_CALIB_TENMS_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_TENMS_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_TENMS_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_TENMS_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: TENMS Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00468">468</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e"/><section>
+    <title>SysTick_CALIB_TENMS_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_TENMS_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_TENMS_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_TENMS_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: TENMS Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00627">627</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaf1e68865c5aece2ad58971225bd3e95e"/><section>
+    <title>SysTick_CALIB_TENMS_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_TENMS_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_TENMS_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_TENMS_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</computeroutput></para>
+<para>SysTick CALIB: TENMS Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00660">660</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e"/><section>
+    <title>SysTick_CALIB_TENMS_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_TENMS_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_TENMS_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_TENMS_Pos   0</computeroutput></para>
+<para>SysTick CALIB: TENMS Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00446">446</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e"/><section>
+    <title>SysTick_CALIB_TENMS_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_TENMS_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_TENMS_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_TENMS_Pos   0</computeroutput></para>
+<para>SysTick CALIB: TENMS Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00467">467</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e"/><section>
+    <title>SysTick_CALIB_TENMS_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_TENMS_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_TENMS_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_TENMS_Pos   0</computeroutput></para>
+<para>SysTick CALIB: TENMS Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00626">626</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gacae558f6e75a0bed5d826f606d8e695e"/><section>
+    <title>SysTick_CALIB_TENMS_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CALIB_TENMS_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CALIB_TENMS_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CALIB_TENMS_Pos   0</computeroutput></para>
+<para>SysTick CALIB: TENMS Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00659">659</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373"/><section>
+    <title>SysTick_CTRL_CLKSOURCE_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_CLKSOURCE_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_CLKSOURCE_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_CLKSOURCE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: CLKSOURCE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00423">423</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373"/><section>
+    <title>SysTick_CTRL_CLKSOURCE_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_CLKSOURCE_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_CLKSOURCE_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_CLKSOURCE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: CLKSOURCE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00444">444</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373"/><section>
+    <title>SysTick_CTRL_CLKSOURCE_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_CLKSOURCE_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_CLKSOURCE_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_CLKSOURCE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: CLKSOURCE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00603">603</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaa41d06039797423a46596bd313d57373"/><section>
+    <title>SysTick_CTRL_CLKSOURCE_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_CLKSOURCE_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_CLKSOURCE_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_CLKSOURCE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1">SysTick_CTRL_CLKSOURCE_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: CLKSOURCE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00636">636</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1"/><section>
+    <title>SysTick_CTRL_CLKSOURCE_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_CLKSOURCE_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_CLKSOURCE_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_CLKSOURCE_Pos   2</computeroutput></para>
+<para>SysTick CTRL: CLKSOURCE Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00422">422</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1"/><section>
+    <title>SysTick_CTRL_CLKSOURCE_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_CLKSOURCE_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_CLKSOURCE_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_CLKSOURCE_Pos   2</computeroutput></para>
+<para>SysTick CTRL: CLKSOURCE Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00443">443</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1"/><section>
+    <title>SysTick_CTRL_CLKSOURCE_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_CLKSOURCE_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_CLKSOURCE_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_CLKSOURCE_Pos   2</computeroutput></para>
+<para>SysTick CTRL: CLKSOURCE Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00602">602</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga24fbc69a5f0b78d67fda2300257baff1"/><section>
+    <title>SysTick_CTRL_CLKSOURCE_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_CLKSOURCE_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_CLKSOURCE_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_CLKSOURCE_Pos   2</computeroutput></para>
+<para>SysTick CTRL: CLKSOURCE Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00635">635</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c"/><section>
+    <title>SysTick_CTRL_COUNTFLAG_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_COUNTFLAG_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_COUNTFLAG_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_COUNTFLAG_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: COUNTFLAG Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00420">420</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c"/><section>
+    <title>SysTick_CTRL_COUNTFLAG_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_COUNTFLAG_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_COUNTFLAG_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_COUNTFLAG_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: COUNTFLAG Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00441">441</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c"/><section>
+    <title>SysTick_CTRL_COUNTFLAG_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_COUNTFLAG_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_COUNTFLAG_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_COUNTFLAG_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: COUNTFLAG Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00600">600</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga1bf3033ecccf200f59baefe15dbb367c"/><section>
+    <title>SysTick_CTRL_COUNTFLAG_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_COUNTFLAG_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_COUNTFLAG_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_COUNTFLAG_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60">SysTick_CTRL_COUNTFLAG_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: COUNTFLAG Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00633">633</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60"/><section>
+    <title>SysTick_CTRL_COUNTFLAG_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_COUNTFLAG_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_COUNTFLAG_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_COUNTFLAG_Pos   16</computeroutput></para>
+<para>SysTick CTRL: COUNTFLAG Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00419">419</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60"/><section>
+    <title>SysTick_CTRL_COUNTFLAG_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_COUNTFLAG_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_COUNTFLAG_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_COUNTFLAG_Pos   16</computeroutput></para>
+<para>SysTick CTRL: COUNTFLAG Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00440">440</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60"/><section>
+    <title>SysTick_CTRL_COUNTFLAG_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_COUNTFLAG_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_COUNTFLAG_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_COUNTFLAG_Pos   16</computeroutput></para>
+<para>SysTick CTRL: COUNTFLAG Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00599">599</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gadbb65d4a815759649db41df216ed4d60"/><section>
+    <title>SysTick_CTRL_COUNTFLAG_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_COUNTFLAG_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_COUNTFLAG_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_COUNTFLAG_Pos   16</computeroutput></para>
+<para>SysTick CTRL: COUNTFLAG Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00632">632</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f"/><section>
+    <title>SysTick_CTRL_ENABLE_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_ENABLE_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_ENABLE_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_ENABLE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: ENABLE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00429">429</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f"/><section>
+    <title>SysTick_CTRL_ENABLE_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_ENABLE_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_ENABLE_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_ENABLE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: ENABLE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00450">450</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f"/><section>
+    <title>SysTick_CTRL_ENABLE_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_ENABLE_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_ENABLE_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_ENABLE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: ENABLE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00609">609</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga16c9fee0ed0235524bdeb38af328fd1f"/><section>
+    <title>SysTick_CTRL_ENABLE_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_ENABLE_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_ENABLE_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_ENABLE_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810">SysTick_CTRL_ENABLE_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: ENABLE Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00642">642</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810"/><section>
+    <title>SysTick_CTRL_ENABLE_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_ENABLE_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_ENABLE_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_ENABLE_Pos   0</computeroutput></para>
+<para>SysTick CTRL: ENABLE Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00428">428</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810"/><section>
+    <title>SysTick_CTRL_ENABLE_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_ENABLE_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_ENABLE_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_ENABLE_Pos   0</computeroutput></para>
+<para>SysTick CTRL: ENABLE Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00449">449</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810"/><section>
+    <title>SysTick_CTRL_ENABLE_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_ENABLE_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_ENABLE_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_ENABLE_Pos   0</computeroutput></para>
+<para>SysTick CTRL: ENABLE Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00608">608</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga0b48cc1e36d92a92e4bf632890314810"/><section>
+    <title>SysTick_CTRL_ENABLE_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_ENABLE_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_ENABLE_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_ENABLE_Pos   0</computeroutput></para>
+<para>SysTick CTRL: ENABLE Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00641">641</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027"/><section>
+    <title>SysTick_CTRL_TICKINT_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_TICKINT_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_TICKINT_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_TICKINT_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: TICKINT Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00426">426</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027"/><section>
+    <title>SysTick_CTRL_TICKINT_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_TICKINT_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_TICKINT_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_TICKINT_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: TICKINT Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00447">447</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027"/><section>
+    <title>SysTick_CTRL_TICKINT_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_TICKINT_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_TICKINT_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_TICKINT_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: TICKINT Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00606">606</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga95bb984266ca764024836a870238a027"/><section>
+    <title>SysTick_CTRL_TICKINT_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_TICKINT_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_TICKINT_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_TICKINT_Msk   (1UL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214">SysTick_CTRL_TICKINT_Pos</link>)</computeroutput></para>
+<para>SysTick CTRL: TICKINT Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00639">639</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214"/><section>
+    <title>SysTick_CTRL_TICKINT_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_TICKINT_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_TICKINT_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_TICKINT_Pos   1</computeroutput></para>
+<para>SysTick CTRL: TICKINT Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00425">425</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214"/><section>
+    <title>SysTick_CTRL_TICKINT_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_TICKINT_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_TICKINT_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_TICKINT_Pos   1</computeroutput></para>
+<para>SysTick CTRL: TICKINT Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00446">446</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214"/><section>
+    <title>SysTick_CTRL_TICKINT_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_TICKINT_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_TICKINT_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_TICKINT_Pos   1</computeroutput></para>
+<para>SysTick CTRL: TICKINT Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00605">605</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga88f45bbb89ce8df3cd2b2613c7b48214"/><section>
+    <title>SysTick_CTRL_TICKINT_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_CTRL_TICKINT_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_CTRL_TICKINT_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_CTRL_TICKINT_Pos   1</computeroutput></para>
+<para>SysTick CTRL: TICKINT Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00638">638</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1"/><section>
+    <title>SysTick_LOAD_RELOAD_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_LOAD_RELOAD_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_LOAD_RELOAD_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_LOAD_RELOAD_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</computeroutput></para>
+<para>SysTick LOAD: RELOAD Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00433">433</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1"/><section>
+    <title>SysTick_LOAD_RELOAD_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_LOAD_RELOAD_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_LOAD_RELOAD_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_LOAD_RELOAD_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</computeroutput></para>
+<para>SysTick LOAD: RELOAD Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00454">454</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1"/><section>
+    <title>SysTick_LOAD_RELOAD_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_LOAD_RELOAD_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_LOAD_RELOAD_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_LOAD_RELOAD_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</computeroutput></para>
+<para>SysTick LOAD: RELOAD Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00613">613</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga265912a7962f0e1abd170336e579b1b1"/><section>
+    <title>SysTick_LOAD_RELOAD_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_LOAD_RELOAD_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_LOAD_RELOAD_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_LOAD_RELOAD_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2">SysTick_LOAD_RELOAD_Pos</link>)</computeroutput></para>
+<para>SysTick LOAD: RELOAD Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00646">646</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2"/><section>
+    <title>SysTick_LOAD_RELOAD_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_LOAD_RELOAD_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_LOAD_RELOAD_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_LOAD_RELOAD_Pos   0</computeroutput></para>
+<para>SysTick LOAD: RELOAD Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00432">432</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2"/><section>
+    <title>SysTick_LOAD_RELOAD_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_LOAD_RELOAD_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_LOAD_RELOAD_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_LOAD_RELOAD_Pos   0</computeroutput></para>
+<para>SysTick LOAD: RELOAD Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00453">453</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2"/><section>
+    <title>SysTick_LOAD_RELOAD_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_LOAD_RELOAD_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_LOAD_RELOAD_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_LOAD_RELOAD_Pos   0</computeroutput></para>
+<para>SysTick LOAD: RELOAD Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00612">612</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gaf44d10df359dc5bf5752b0894ae3bad2"/><section>
+    <title>SysTick_LOAD_RELOAD_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_LOAD_RELOAD_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_LOAD_RELOAD_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_LOAD_RELOAD_Pos   0</computeroutput></para>
+<para>SysTick LOAD: RELOAD Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00645">645</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45"/><section>
+    <title>SysTick_VAL_CURRENT_Msk<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_VAL_CURRENT_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_VAL_CURRENT_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_VAL_CURRENT_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</computeroutput></para>
+<para>SysTick VAL: CURRENT Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00437">437</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45"/><section>
+    <title>SysTick_VAL_CURRENT_Msk<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_VAL_CURRENT_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_VAL_CURRENT_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_VAL_CURRENT_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</computeroutput></para>
+<para>SysTick VAL: CURRENT Mask </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00458">458</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45"/><section>
+    <title>SysTick_VAL_CURRENT_Msk<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_VAL_CURRENT_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_VAL_CURRENT_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_VAL_CURRENT_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</computeroutput></para>
+<para>SysTick VAL: CURRENT Mask </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00617">617</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1gafc77b56d568930b49a2474debc75ab45"/><section>
+    <title>SysTick_VAL_CURRENT_Msk<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_VAL_CURRENT_Msk</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_VAL_CURRENT_Msk</secondary></indexterm>
+<para><computeroutput>#define SysTick_VAL_CURRENT_Msk   (0xFFFFFFUL &lt;&lt; <link linkend="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd">SysTick_VAL_CURRENT_Pos</link>)</computeroutput></para>
+<para>SysTick VAL: CURRENT Mask </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00650">650</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd"/><section>
+    <title>SysTick_VAL_CURRENT_Pos<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>SysTick_VAL_CURRENT_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_VAL_CURRENT_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_VAL_CURRENT_Pos   0</computeroutput></para>
+<para>SysTick VAL: CURRENT Position </para>
+<para>
+Definition at line <link linkend="_core__cm0_8h_source_1l00436">436</link> of file <link linkend="_core__cm0_8h_source">core_cm0.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd"/><section>
+    <title>SysTick_VAL_CURRENT_Pos<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>SysTick_VAL_CURRENT_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_VAL_CURRENT_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_VAL_CURRENT_Pos   0</computeroutput></para>
+<para>SysTick VAL: CURRENT Position </para>
+<para>
+Definition at line <link linkend="_core__cm0plus_8h_source_1l00457">457</link> of file <link linkend="_core__cm0plus_8h_source">core_cm0plus.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd"/><section>
+    <title>SysTick_VAL_CURRENT_Pos<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>SysTick_VAL_CURRENT_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_VAL_CURRENT_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_VAL_CURRENT_Pos   0</computeroutput></para>
+<para>SysTick VAL: CURRENT Position </para>
+<para>
+Definition at line <link linkend="_core__cm3_8h_source_1l00616">616</link> of file <link linkend="_core__cm3_8h_source">core_cm3.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_m_s_i_s___sys_tick_1ga3208104c3b019b5de35ae8c21d5c34dd"/><section>
+    <title>SysTick_VAL_CURRENT_Pos<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>SysTick_VAL_CURRENT_Pos</primary><secondary>System Tick Timer (SysTick)</secondary></indexterm>
+<indexterm><primary>System Tick Timer (SysTick)</primary><secondary>SysTick_VAL_CURRENT_Pos</secondary></indexterm>
+<para><computeroutput>#define SysTick_VAL_CURRENT_Pos   0</computeroutput></para>
+<para>SysTick VAL: CURRENT Position </para>
+<para>
+Definition at line <link linkend="_core__cm4_8h_source_1l00649">649</link> of file <link linkend="_core__cm4_8h_source">core_cm4.h</link>.</para>
+</section>
+</section>
+</section>

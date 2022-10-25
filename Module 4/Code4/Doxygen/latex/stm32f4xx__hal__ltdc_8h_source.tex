@@ -1,0 +1,241 @@
+\hypertarget{stm32f4xx__hal__ltdc_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+ltdc.\+h}
+\label{stm32f4xx__hal__ltdc_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_ltdc.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_ltdc.h}}
+\mbox{\hyperlink{stm32f4xx__hal__ltdc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_LTDC\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_LTDC\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#if defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{59 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define MAX\_LAYER  2}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{67 \{}
+\DoxyCodeLine{68   uint8\_t Blue;                    }
+\DoxyCodeLine{71   uint8\_t Green;                   }
+\DoxyCodeLine{74   uint8\_t Red;                     }
+\DoxyCodeLine{77   uint8\_t Reserved;                }
+\DoxyCodeLine{78 \} LTDC\_ColorTypeDef;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{83 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{84 \{}
+\DoxyCodeLine{85   uint32\_t            HSPolarity;                }
+\DoxyCodeLine{88   uint32\_t            VSPolarity;                }
+\DoxyCodeLine{91   uint32\_t            DEPolarity;                }
+\DoxyCodeLine{94   uint32\_t            PCPolarity;                }
+\DoxyCodeLine{97   uint32\_t            HorizontalSync;            }
+\DoxyCodeLine{100   uint32\_t            VerticalSync;              }
+\DoxyCodeLine{103   uint32\_t            AccumulatedHBP;            }
+\DoxyCodeLine{106   uint32\_t            AccumulatedVBP;            }
+\DoxyCodeLine{109   uint32\_t            AccumulatedActiveW;        }
+\DoxyCodeLine{112   uint32\_t            AccumulatedActiveH;        }
+\DoxyCodeLine{115   uint32\_t            TotalWidth;                }
+\DoxyCodeLine{118   uint32\_t            TotalHeigh;                }
+\DoxyCodeLine{121   LTDC\_ColorTypeDef   Backcolor;                 }
+\DoxyCodeLine{122 \} LTDC\_InitTypeDef;}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 }
+\DoxyCodeLine{128 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{129 \{}
+\DoxyCodeLine{130   uint32\_t WindowX0;                   }
+\DoxyCodeLine{133   uint32\_t WindowX1;                   }
+\DoxyCodeLine{136   uint32\_t WindowY0;                   }
+\DoxyCodeLine{139   uint32\_t WindowY1;                   }
+\DoxyCodeLine{142   uint32\_t PixelFormat;                }
+\DoxyCodeLine{145   uint32\_t Alpha;                      }
+\DoxyCodeLine{148   uint32\_t Alpha0;                     }
+\DoxyCodeLine{151   uint32\_t BlendingFactor1;            }
+\DoxyCodeLine{154   uint32\_t BlendingFactor2;            }
+\DoxyCodeLine{157   uint32\_t FBStartAdress;              }
+\DoxyCodeLine{159   uint32\_t ImageWidth;                 }
+\DoxyCodeLine{162   uint32\_t ImageHeight;                }
+\DoxyCodeLine{165   LTDC\_ColorTypeDef   Backcolor;       }
+\DoxyCodeLine{166 \} LTDC\_LayerCfgTypeDef;}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{171 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{172 \{}
+\DoxyCodeLine{173   HAL\_LTDC\_STATE\_RESET             = 0x00,    }
+\DoxyCodeLine{174   HAL\_LTDC\_STATE\_READY             = 0x01,    }
+\DoxyCodeLine{175   HAL\_LTDC\_STATE\_BUSY              = 0x02,    }
+\DoxyCodeLine{176   HAL\_LTDC\_STATE\_TIMEOUT           = 0x03,    }
+\DoxyCodeLine{177   HAL\_LTDC\_STATE\_ERROR             = 0x04     }
+\DoxyCodeLine{178 \}HAL\_LTDC\_StateTypeDef;}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{183 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{184 \{}
+\DoxyCodeLine{185   LTDC\_TypeDef                *Instance;                }
+\DoxyCodeLine{187   LTDC\_InitTypeDef            Init;                     }
+\DoxyCodeLine{189   LTDC\_LayerCfgTypeDef        LayerCfg[MAX\_LAYER];      }
+\DoxyCodeLine{191   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             Lock;                     }
+\DoxyCodeLine{193   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_LTDC\_StateTypeDef  State;                    }
+\DoxyCodeLine{195   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               ErrorCode;                }
+\DoxyCodeLine{197 \} LTDC\_HandleTypeDef;}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define IS\_LTDC\_LAYER(LAYER) ((LAYER) <= MAX\_LAYER)}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#define HAL\_LTDC\_ERROR\_NONE      ((uint32\_t)0x00000000)    }}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define HAL\_LTDC\_ERROR\_TE        ((uint32\_t)0x00000001)    }}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#define HAL\_LTDC\_ERROR\_FU        ((uint32\_t)0x00000002)    }}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define HAL\_LTDC\_ERROR\_TIMEOUT   ((uint32\_t)0x00000020)    }}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define LTDC\_HSPOLARITY\_AL                ((uint32\_t)0x00000000)                }}
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#define LTDC\_HSPOLARITY\_AH                LTDC\_GCR\_HSPOL                        }}
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define IS\_LTDC\_HSPOL(HSPOL) (((HSPOL) == LTDC\_HSPOLARITY\_AL) || \(\backslash\)}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{                              ((HSPOL) == LTDC\_HSPOLARITY\_AH))  }}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define LTDC\_VSPOLARITY\_AL                ((uint32\_t)0x00000000)                }}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define LTDC\_VSPOLARITY\_AH                LTDC\_GCR\_VSPOL                        }}
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#define IS\_LTDC\_VSPOL(VSPOL) (((VSPOL) == LTDC\_VSPOLARITY\_AL) || \(\backslash\)}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{                              ((VSPOL) == LTDC\_VSPOLARITY\_AH))}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define LTDC\_DEPOLARITY\_AL                ((uint32\_t)0x00000000)                }}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#define LTDC\_DEPOLARITY\_AH                LTDC\_GCR\_DEPOL                        }}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define IS\_LTDC\_DEPOL(DEPOL) (((DEPOL) ==  LTDC\_DEPOLARITY\_AL) || \(\backslash\)}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{                              ((DEPOL) ==  LTDC\_DEPOLARITY\_AH))}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define LTDC\_PCPOLARITY\_IPC               ((uint32\_t)0x00000000)                }}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define LTDC\_PCPOLARITY\_IIPC              LTDC\_GCR\_PCPOL                        }}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#define IS\_LTDC\_PCPOL(PCPOL) (((PCPOL) ==  LTDC\_PCPOLARITY\_IPC) || \(\backslash\)}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{                              ((PCPOL) ==  LTDC\_PCPOLARITY\_IIPC))}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define LTDC\_HORIZONTALSYNC               (LTDC\_SSCR\_HSW >> 16)                 }}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define LTDC\_VERTICALSYNC                 LTDC\_SSCR\_VSH                         }}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define IS\_LTDC\_HSYNC(HSYNC)   ((HSYNC)  <= LTDC\_HORIZONTALSYNC)}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#define IS\_LTDC\_VSYNC(VSYNC)   ((VSYNC)  <= LTDC\_VERTICALSYNC)}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#define IS\_LTDC\_AHBP(AHBP)     ((AHBP)   <= LTDC\_HORIZONTALSYNC)}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#define IS\_LTDC\_AVBP(AVBP)     ((AVBP)   <= LTDC\_VERTICALSYNC)}}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#define IS\_LTDC\_AAW(AAW)       ((AAW)    <= LTDC\_HORIZONTALSYNC)}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#define IS\_LTDC\_AAH(AAH)       ((AAH)    <= LTDC\_VERTICALSYNC)}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#define IS\_LTDC\_TOTALW(TOTALW) ((TOTALW) <= LTDC\_HORIZONTALSYNC)}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#define IS\_LTDC\_TOTALH(TOTALH) ((TOTALH) <= LTDC\_VERTICALSYNC)}}
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#define LTDC\_COLOR                   ((uint32\_t)0x000000FF)                     }}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define IS\_LTDC\_BLUEVALUE(BBLUE)    ((BBLUE)  <= LTDC\_COLOR)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define IS\_LTDC\_GREENVALUE(BGREEN)  ((BGREEN) <= LTDC\_COLOR)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define IS\_LTDC\_REDVALUE(BRED)      ((BRED)   <= LTDC\_COLOR) }}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#define LTDC\_BLENDING\_FACTOR1\_CA                       ((uint32\_t)0x00000400)   }}
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#define LTDC\_BLENDING\_FACTOR1\_PAxCA                    ((uint32\_t)0x00000600)   }}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#define IS\_LTDC\_BLENDING\_FACTOR1(BlendingFactor1) (((BlendingFactor1) == LTDC\_BLENDING\_FACTOR1\_CA) || \(\backslash\)}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{                                                   ((BlendingFactor1) == LTDC\_BLENDING\_FACTOR1\_PAxCA))}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{\#define LTDC\_BLENDING\_FACTOR2\_CA                       ((uint32\_t)0x00000005)   }}
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#define LTDC\_BLENDING\_FACTOR2\_PAxCA                    ((uint32\_t)0x00000007)   }}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#define IS\_LTDC\_BLENDING\_FACTOR2(BlendingFactor2) (((BlendingFactor2) == LTDC\_BLENDING\_FACTOR2\_CA) || \(\backslash\)}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{                                                   ((BlendingFactor2) == LTDC\_BLENDING\_FACTOR2\_PAxCA))}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_ARGB8888                  ((uint32\_t)0x00000000)      }}
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_RGB888                    ((uint32\_t)0x00000001)      }}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_RGB565                    ((uint32\_t)0x00000002)      }}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_ARGB1555                  ((uint32\_t)0x00000003)      }}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_ARGB4444                  ((uint32\_t)0x00000004)      }}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_L8                        ((uint32\_t)0x00000005)      }}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_AL44                      ((uint32\_t)0x00000006)      }}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define LTDC\_PIXEL\_FORMAT\_AL88                      ((uint32\_t)0x00000007)      }}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define IS\_LTDC\_PIXEL\_FORMAT(Pixelformat) (((Pixelformat) == LTDC\_PIXEL\_FORMAT\_ARGB8888) || ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_RGB888)   || \(\backslash\)}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{                                           ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_RGB565)   || ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_ARGB1555) || \(\backslash\)}}
+\DoxyCodeLine{340 \textcolor{preprocessor}{                                           ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_ARGB4444) || ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_L8)       || \(\backslash\)}}
+\DoxyCodeLine{341 \textcolor{preprocessor}{                                           ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_AL44)     || ((Pixelformat) == LTDC\_PIXEL\_FORMAT\_AL88))}}
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define LTDC\_ALPHA               LTDC\_LxCACR\_CONSTA                             }}
+\DoxyCodeLine{351 \textcolor{preprocessor}{\#define IS\_LTDC\_ALPHA(ALPHA) ((ALPHA) <= LTDC\_ALPHA)}}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define LTDC\_STOPPOSITION                 (LTDC\_LxWHPCR\_WHSPPOS >> 16)          }}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#define LTDC\_STARTPOSITION                LTDC\_LxWHPCR\_WHSTPOS                  }}
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#define LTDC\_COLOR\_FRAME\_BUFFER           LTDC\_LxCFBLR\_CFBLL                    }}
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#define LTDC\_LINE\_NUMBER                  LTDC\_LxCFBLNR\_CFBLNBR                 }}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#define IS\_LTDC\_HCONFIGST(HCONFIGST) ((HCONFIGST) <= LTDC\_STARTPOSITION)}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#define IS\_LTDC\_HCONFIGSP(HCONFIGSP) ((HCONFIGSP) <= LTDC\_STOPPOSITION)}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#define IS\_LTDC\_VCONFIGST(VCONFIGST)  ((VCONFIGST) <= LTDC\_STARTPOSITION)}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define IS\_LTDC\_VCONFIGSP(VCONFIGSP) ((VCONFIGSP) <= LTDC\_STOPPOSITION)}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{370 \textcolor{preprocessor}{\#define IS\_LTDC\_CFBP(CFBP) ((CFBP) <= LTDC\_COLOR\_FRAME\_BUFFER)}}
+\DoxyCodeLine{371 \textcolor{preprocessor}{\#define IS\_LTDC\_CFBLL(CFBLL) ((CFBLL) <= LTDC\_COLOR\_FRAME\_BUFFER)}}
+\DoxyCodeLine{372 }
+\DoxyCodeLine{373 \textcolor{preprocessor}{\#define IS\_LTDC\_CFBLNBR(CFBLNBR) ((CFBLNBR) <= LTDC\_LINE\_NUMBER)}}
+\DoxyCodeLine{381 \textcolor{preprocessor}{\#define IS\_LTDC\_LIPOS(LIPOS) ((LIPOS) <= 0x7FF)}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{\#define LTDC\_IT\_LI                      LTDC\_IER\_LIE}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#define LTDC\_IT\_FU                      LTDC\_IER\_FUIE}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{\#define LTDC\_IT\_TE                      LTDC\_IER\_TERRIE}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#define LTDC\_IT\_RR                      LTDC\_IER\_RRIE}}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{394 \textcolor{preprocessor}{\#define IS\_LTDC\_IT(IT) ((((IT) \& (uint32\_t)0xFFFFFFF0) == 0x00) \&\& ((IT) != 0x00))}}
+\DoxyCodeLine{402 \textcolor{preprocessor}{\#define LTDC\_FLAG\_LI                     LTDC\_ISR\_LIF}}
+\DoxyCodeLine{403 \textcolor{preprocessor}{\#define LTDC\_FLAG\_FU                     LTDC\_ISR\_FUIF}}
+\DoxyCodeLine{404 \textcolor{preprocessor}{\#define LTDC\_FLAG\_TE                     LTDC\_ISR\_TERRIF}}
+\DoxyCodeLine{405 \textcolor{preprocessor}{\#define LTDC\_FLAG\_RR                     LTDC\_ISR\_RRIF}}
+\DoxyCodeLine{406 }
+\DoxyCodeLine{407 \textcolor{preprocessor}{\#define IS\_LTDC\_FLAG(FLAG) (((FLAG) == LTDC\_FLAG\_LI) || ((FLAG) == LTDC\_FLAG\_FU) || \(\backslash\)}}
+\DoxyCodeLine{408 \textcolor{preprocessor}{                               ((FLAG) == LTDC\_FLAG\_TERR) || ((FLAG) == LTDC\_FLAG\_RR))}}
+\DoxyCodeLine{417 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{418 }
+\DoxyCodeLine{423 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_LTDC\_STATE\_RESET)}}
+\DoxyCodeLine{424 }
+\DoxyCodeLine{430 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_ENABLE(\_\_HANDLE\_\_)    ((\_\_HANDLE\_\_)-\/>Instance-\/>GCR |= LTDC\_GCR\_LTDCEN)}}
+\DoxyCodeLine{431 }
+\DoxyCodeLine{437 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_DISABLE(\_\_HANDLE\_\_)   ((\_\_HANDLE\_\_)-\/>Instance-\/>GCR \&= \string~(LTDC\_GCR\_LTDCEN))}}
+\DoxyCodeLine{438 }
+\DoxyCodeLine{446 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_LAYER(\_\_HANDLE\_\_, \_\_LAYER\_\_)   ((LTDC\_Layer\_TypeDef *)(((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance)) + 0x84 + (0x80*(\_\_LAYER\_\_))))}}
+\DoxyCodeLine{447 }
+\DoxyCodeLine{448 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_LAYER\_ENABLE(\_\_HANDLE\_\_, \_\_LAYER\_\_)  ((\_\_HAL\_LTDC\_LAYER((\_\_HANDLE\_\_), (\_\_LAYER\_\_)))-\/>CR |= (uint32\_t)LTDC\_LxCR\_LEN)}}
+\DoxyCodeLine{449 }
+\DoxyCodeLine{457 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_LAYER\_DISABLE(\_\_HANDLE\_\_, \_\_LAYER\_\_) ((\_\_HAL\_LTDC\_LAYER((\_\_HANDLE\_\_), (\_\_LAYER\_\_)))-\/>CR \&= \string~(uint32\_t)LTDC\_LxCR\_LEN)}}
+\DoxyCodeLine{458 }
+\DoxyCodeLine{464 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_RELOAD\_CONFIG(\_\_HANDLE\_\_)   ((\_\_HANDLE\_\_)-\/>Instance-\/>SRCR |= LTDC\_SRCR\_IMR)}}
+\DoxyCodeLine{465 }
+\DoxyCodeLine{466 \textcolor{comment}{/* Interrupt \& Flag management */}}
+\DoxyCodeLine{478 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>ISR \& (\_\_FLAG\_\_))}}
+\DoxyCodeLine{479 }
+\DoxyCodeLine{491 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>ICR |= (\_\_FLAG\_\_))}}
+\DoxyCodeLine{492 }
+\DoxyCodeLine{504 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>IER |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{505 }
+\DoxyCodeLine{517 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>IER \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{518 }
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#define \_\_HAL\_LTDC\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>ISR \& (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{531 }
+\DoxyCodeLine{532 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{533 }
+\DoxyCodeLine{534 \textcolor{comment}{/* Initialization and de-\/initialization functions *****************************/}}
+\DoxyCodeLine{535 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_Init(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{536 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_DeInit(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{537 \textcolor{keywordtype}{void} HAL\_LTDC\_MspInit(LTDC\_HandleTypeDef* hltdc);}
+\DoxyCodeLine{538 \textcolor{keywordtype}{void} HAL\_LTDC\_MspDeInit(LTDC\_HandleTypeDef* hltdc);}
+\DoxyCodeLine{539 \textcolor{keywordtype}{void} HAL\_LTDC\_ErrorCallback(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{540 \textcolor{keywordtype}{void} HAL\_LTDC\_LineEvenCallback(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{541 }
+\DoxyCodeLine{542 \textcolor{comment}{/* IO operation functions *****************************************************/}}
+\DoxyCodeLine{543 \textcolor{keywordtype}{void}  HAL\_LTDC\_IRQHandler(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{544 }
+\DoxyCodeLine{545 \textcolor{comment}{/* Peripheral Control functions ***********************************************/}}
+\DoxyCodeLine{546 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_ConfigLayer(LTDC\_HandleTypeDef *hltdc, LTDC\_LayerCfgTypeDef *pLayerCfg, uint32\_t LayerIdx);}
+\DoxyCodeLine{547 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetWindowSize(LTDC\_HandleTypeDef *hltdc, uint32\_t XSize, uint32\_t YSize, uint32\_t LayerIdx);}
+\DoxyCodeLine{548 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetWindowPosition(LTDC\_HandleTypeDef *hltdc, uint32\_t X0, uint32\_t Y0, uint32\_t LayerIdx);}
+\DoxyCodeLine{549 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetPixelFormat(LTDC\_HandleTypeDef *hltdc, uint32\_t Pixelformat, uint32\_t LayerIdx);}
+\DoxyCodeLine{550 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetAlpha(LTDC\_HandleTypeDef *hltdc, uint32\_t Alpha, uint32\_t LayerIdx);}
+\DoxyCodeLine{551 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_SetAddress(LTDC\_HandleTypeDef *hltdc, uint32\_t Address, uint32\_t LayerIdx);}
+\DoxyCodeLine{552 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_ConfigColorKeying(LTDC\_HandleTypeDef *hltdc, uint32\_t RGBValue, uint32\_t LayerIdx);}
+\DoxyCodeLine{553 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_ConfigCLUT(LTDC\_HandleTypeDef *hltdc, uint32\_t *pCLUT, uint32\_t CLUTSize, uint32\_t LayerIdx);}
+\DoxyCodeLine{554 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_EnableColorKeying(LTDC\_HandleTypeDef *hltdc, uint32\_t LayerIdx);}
+\DoxyCodeLine{555 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_DisableColorKeying(LTDC\_HandleTypeDef *hltdc, uint32\_t LayerIdx);}
+\DoxyCodeLine{556 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_EnableCLUT(LTDC\_HandleTypeDef *hltdc, uint32\_t LayerIdx);}
+\DoxyCodeLine{557 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_DisableCLUT(LTDC\_HandleTypeDef *hltdc, uint32\_t LayerIdx);}
+\DoxyCodeLine{558 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_ProgramLineEvent(LTDC\_HandleTypeDef *hltdc, uint32\_t Line);}
+\DoxyCodeLine{559 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_EnableDither(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{560 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_LTDC\_DisableDither(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562 \textcolor{comment}{/* Peripheral State functions *************************************************/}}
+\DoxyCodeLine{563 HAL\_LTDC\_StateTypeDef HAL\_LTDC\_GetState(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{564 uint32\_t              HAL\_LTDC\_GetError(LTDC\_HandleTypeDef *hltdc);}
+\DoxyCodeLine{565 }
+\DoxyCodeLine{566 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{567 }
+\DoxyCodeLine{576 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{577 \}}
+\DoxyCodeLine{578 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{579 }
+\DoxyCodeLine{580 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_LTDC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{581 }
+\DoxyCodeLine{582 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

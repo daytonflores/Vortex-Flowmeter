@@ -1,0 +1,89 @@
+\hypertarget{stm32f4xx__hal__sdram_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+sdram.\+h}
+\label{stm32f4xx__hal__sdram_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_sdram.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_sdram.h}}
+\mbox{\hyperlink{stm32f4xx__hal__sdram_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_SDRAM\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_SDRAM\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__ll__fmc_8h}{stm32f4xx\_ll\_fmc.h}}"{}}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{59 \textcolor{comment}{/* Exported typedef -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}   }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{64 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66   HAL\_SDRAM\_STATE\_RESET             = 0x00,  }
+\DoxyCodeLine{67   HAL\_SDRAM\_STATE\_READY             = 0x01,  }
+\DoxyCodeLine{68   HAL\_SDRAM\_STATE\_BUSY              = 0x02,  }
+\DoxyCodeLine{69   HAL\_SDRAM\_STATE\_ERROR             = 0x03,  }
+\DoxyCodeLine{70   HAL\_SDRAM\_STATE\_WRITE\_PROTECTED   = 0x04,  }
+\DoxyCodeLine{71   HAL\_SDRAM\_STATE\_PRECHARGED        = 0x05   }
+\DoxyCodeLine{73 \}HAL\_SDRAM\_StateTypeDef;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{78 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{79 \{}
+\DoxyCodeLine{80   FMC\_SDRAM\_TypeDef             *Instance;  }
+\DoxyCodeLine{82   FMC\_SDRAM\_InitTypeDef         Init;       }
+\DoxyCodeLine{84   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_SDRAM\_StateTypeDef   State;      }
+\DoxyCodeLine{86   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}               Lock;       }
+\DoxyCodeLine{88   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}             *hdma;      }
+\DoxyCodeLine{90 \}SDRAM\_HandleTypeDef;}
+\DoxyCodeLine{91          }
+\DoxyCodeLine{92 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{93 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define \_\_HAL\_SDRAM\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_SDRAM\_STATE\_RESET)}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \textcolor{comment}{/* Initialization/de-\/initialization functions  **********************************/}}
+\DoxyCodeLine{104 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Init(SDRAM\_HandleTypeDef *hsdram, FMC\_SDRAM\_TimingTypeDef *Timing);}
+\DoxyCodeLine{105 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_DeInit(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{106 \textcolor{keywordtype}{void} HAL\_SDRAM\_MspInit(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{107 \textcolor{keywordtype}{void} HAL\_SDRAM\_MspDeInit(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{keywordtype}{void} HAL\_SDRAM\_IRQHandler(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{110 \textcolor{keywordtype}{void} HAL\_SDRAM\_RefreshErrorCallback(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{111 \textcolor{keywordtype}{void} HAL\_SDRAM\_DMA\_XferCpltCallback(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma);}
+\DoxyCodeLine{112 \textcolor{keywordtype}{void} HAL\_SDRAM\_DMA\_XferErrorCallback(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{comment}{/* I/O operation functions  *****************************************************/}}
+\DoxyCodeLine{115 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Read\_8b(SDRAM\_HandleTypeDef *hsdram, uint32\_t *pAddress, uint8\_t *pDstBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{116 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Write\_8b(SDRAM\_HandleTypeDef *hsdram, uint32\_t *pAddress, uint8\_t *pSrcBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{117 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Read\_16b(SDRAM\_HandleTypeDef *hsdram, uint32\_t *pAddress, uint16\_t *pDstBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{118 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Write\_16b(SDRAM\_HandleTypeDef *hsdram, uint32\_t *pAddress, uint16\_t *pSrcBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{119 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Read\_32b(SDRAM\_HandleTypeDef *hsdram, uint32\_t *pAddress, uint32\_t *pDstBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{120 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Write\_32b(SDRAM\_HandleTypeDef *hsdram, uint32\_t *pAddress, uint32\_t *pSrcBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Read\_DMA(SDRAM\_HandleTypeDef *hsdram, uint32\_t * pAddress, uint32\_t *pDstBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{123 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_Write\_DMA(SDRAM\_HandleTypeDef *hsdram, uint32\_t *pAddress, uint32\_t *pSrcBuffer, uint32\_t BufferSize);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{comment}{/* SDRAM Control functions  *****************************************************/}}
+\DoxyCodeLine{126 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_WriteProtection\_Enable(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{127 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_WriteProtection\_Disable(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{128 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_SendCommand(SDRAM\_HandleTypeDef *hsdram, FMC\_SDRAM\_CommandTypeDef *Command, uint32\_t Timeout);}
+\DoxyCodeLine{129 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_ProgramRefreshRate(SDRAM\_HandleTypeDef *hsdram, uint32\_t RefreshRate);}
+\DoxyCodeLine{130 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_SDRAM\_SetAutoRefreshNumber(SDRAM\_HandleTypeDef *hsdram, uint32\_t AutoRefreshNumber);}
+\DoxyCodeLine{131 uint32\_t          HAL\_SDRAM\_GetModeStatus(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \textcolor{comment}{/* SDRAM State functions ********************************************************/}}
+\DoxyCodeLine{134 HAL\_SDRAM\_StateTypeDef  HAL\_SDRAM\_GetState(SDRAM\_HandleTypeDef *hsdram);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{146 \}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_SDRAM\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

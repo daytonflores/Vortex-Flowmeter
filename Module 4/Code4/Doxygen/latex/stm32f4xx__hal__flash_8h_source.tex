@@ -1,0 +1,156 @@
+\hypertarget{stm32f4xx__hal__flash_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+flash.\+h}
+\label{stm32f4xx__hal__flash_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_flash.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_flash.h}}
+\mbox{\hyperlink{stm32f4xx__hal__flash_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_FLASH\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_FLASH\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{57 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{61 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{62 \{ }
+\DoxyCodeLine{63   FLASH\_ERROR\_RD =  0x01,}
+\DoxyCodeLine{64   FLASH\_ERROR\_PGS = 0x02,}
+\DoxyCodeLine{65   FLASH\_ERROR\_PGP = 0x04,}
+\DoxyCodeLine{66   FLASH\_ERROR\_PGA = 0x08,}
+\DoxyCodeLine{67   FLASH\_ERROR\_WRP = 0x10,}
+\DoxyCodeLine{68   FLASH\_ERROR\_OPERATION = 0x20}
+\DoxyCodeLine{69 \}\mbox{\hyperlink{group___f_l_a_s_h_ga0635292464d38cedf0ae05d2a0434076}{FLASH\_ErrorTypeDef}};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} }
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76   FLASH\_PROC\_NONE = 0, }
+\DoxyCodeLine{77   FLASH\_PROC\_SECTERASE,}
+\DoxyCodeLine{78   FLASH\_PROC\_MASSERASE,}
+\DoxyCodeLine{79   FLASH\_PROC\_PROGRAM}
+\DoxyCodeLine{80 \} \mbox{\hyperlink{group___f_l_a_s_h_ga2b0268387bc11bcab76be9ce7c43eaaf}{FLASH\_ProcedureTypeDef}};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{87 \{}
+\DoxyCodeLine{88   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___f_l_a_s_h_ga2b0268387bc11bcab76be9ce7c43eaaf}{FLASH\_ProcedureTypeDef}} ProcedureOnGoing;   \textcolor{comment}{/*Internal variable to indicate which procedure is ongoing or not in IT context*/}}
+\DoxyCodeLine{89   }
+\DoxyCodeLine{90   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               NbSectorsToErase;   \textcolor{comment}{/*Internal variable to save the remaining sectors to erase in IT context*/}}
+\DoxyCodeLine{91   }
+\DoxyCodeLine{92   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint8\_t                VoltageForErase;    \textcolor{comment}{/*Internal variable to provide voltange range selected by user in IT context*/}}
+\DoxyCodeLine{93   }
+\DoxyCodeLine{94   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               Sector;             \textcolor{comment}{/*Internal variable to define the current sector which is erasing*/}}
+\DoxyCodeLine{95   }
+\DoxyCodeLine{96   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               Bank;               \textcolor{comment}{/*Internal variable to save current bank selected during mass erase*/}}
+\DoxyCodeLine{97   }
+\DoxyCodeLine{98   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               Address;            \textcolor{comment}{/*Internal variable to save address selected for program*/}}
+\DoxyCodeLine{99   }
+\DoxyCodeLine{100   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             Lock;               \textcolor{comment}{/* FLASH locking object                */}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___f_l_a_s_h_ga0635292464d38cedf0ae05d2a0434076}{FLASH\_ErrorTypeDef}}     ErrorCode;          \textcolor{comment}{/* FLASH error code                    */}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \}\mbox{\hyperlink{struct_f_l_a_s_h___process_type_def}{FLASH\_ProcessTypeDef}};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{109 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define TYPEPROGRAM\_BYTE        ((uint32\_t)0x00)  }}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define TYPEPROGRAM\_HALFWORD    ((uint32\_t)0x01)  }}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define TYPEPROGRAM\_WORD        ((uint32\_t)0x02)  }}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define TYPEPROGRAM\_DOUBLEWORD  ((uint32\_t)0x03)  }}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define IS\_TYPEPROGRAM(VALUE)(((VALUE) == TYPEPROGRAM\_BYTE) || \(\backslash\)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{                              ((VALUE) == TYPEPROGRAM\_HALFWORD) || \(\backslash\)}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{                              ((VALUE) == TYPEPROGRAM\_WORD) || \(\backslash\)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{                              ((VALUE) == TYPEPROGRAM\_DOUBLEWORD))  }}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define FLASH\_FLAG\_EOP                 FLASH\_SR\_EOP            }}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define FLASH\_FLAG\_OPERR               FLASH\_SR\_SOP            }}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define FLASH\_FLAG\_WRPERR              FLASH\_SR\_WRPERR         }}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define FLASH\_FLAG\_PGAERR              FLASH\_SR\_PGAERR         }}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define FLASH\_FLAG\_PGPERR              FLASH\_SR\_PGPERR         }}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define FLASH\_FLAG\_PGSERR              FLASH\_SR\_PGSERR         }}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define FLASH\_FLAG\_RDERR               ((uint32\_t)0x00000100)  }}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define FLASH\_FLAG\_BSY                 FLASH\_SR\_BSY            }}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define FLASH\_IT\_EOP                   FLASH\_CR\_EOPIE          }}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define FLASH\_IT\_ERR                   ((uint32\_t)0x02000000)  }}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define FLASH\_PSIZE\_BYTE           ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define FLASH\_PSIZE\_HALF\_WORD      ((uint32\_t)0x00000100)}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define FLASH\_PSIZE\_WORD           ((uint32\_t)0x00000200)}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define FLASH\_PSIZE\_DOUBLE\_WORD    ((uint32\_t)0x00000300)}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define CR\_PSIZE\_MASK              ((uint32\_t)0xFFFFFCFF)}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define RDP\_KEY                  ((uint16\_t)0x00A5)}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define FLASH\_KEY1               ((uint32\_t)0x45670123)}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define FLASH\_KEY2               ((uint32\_t)0xCDEF89AB)}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define FLASH\_OPT\_KEY1           ((uint32\_t)0x08192A3B)}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define FLASH\_OPT\_KEY2           ((uint32\_t)0x4C5D6E7F)}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define ACR\_BYTE0\_ADDRESS           ((uint32\_t)0x40023C00) }}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define OPTCR\_BYTE0\_ADDRESS         ((uint32\_t)0x40023C14)}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define OPTCR\_BYTE1\_ADDRESS         ((uint32\_t)0x40023C15)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define OPTCR\_BYTE2\_ADDRESS         ((uint32\_t)0x40023C16)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define OPTCR\_BYTE3\_ADDRESS         ((uint32\_t)0x40023C17)}}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{211 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_SET\_LATENCY(\_\_LATENCY\_\_) (*(\_\_IO uint8\_t *)ACR\_BYTE0\_ADDRESS = (uint8\_t)(\_\_LATENCY\_\_))}}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_PREFETCH\_BUFFER\_ENABLE()  (FLASH-\/>ACR |= FLASH\_ACR\_PRFTEN)}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_PREFETCH\_BUFFER\_DISABLE()   (FLASH-\/>ACR \&= (\string~FLASH\_ACR\_PRFTEN))}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_INSTRUCTION\_CACHE\_ENABLE()  (FLASH-\/>ACR |= FLASH\_ACR\_ICEN)}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_INSTRUCTION\_CACHE\_DISABLE()   (FLASH-\/>ACR \&= (\string~FLASH\_ACR\_ICEN))}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_DATA\_CACHE\_ENABLE()  (FLASH-\/>ACR |= FLASH\_ACR\_DCEN)}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_DATA\_CACHE\_DISABLE()   (FLASH-\/>ACR \&= (\string~FLASH\_ACR\_DCEN))}}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_INSTRUCTION\_CACHE\_RESET()  (FLASH-\/>ACR |= FLASH\_ACR\_ICRST)}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_DATA\_CACHE\_RESET()  (FLASH-\/>ACR |= FLASH\_ACR\_DCRST)}}
+\DoxyCodeLine{270 }
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_ENABLE\_IT(\_\_INTERRUPT\_\_)  (FLASH-\/>CR |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{289 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_DISABLE\_IT(\_\_INTERRUPT\_\_)  (FLASH-\/>CR \&= \string~(uint32\_t)(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_GET\_FLAG(\_\_FLAG\_\_)   ((FLASH-\/>SR \& (\_\_FLAG\_\_)))}}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_CLEAR\_FLAG(\_\_FLAG\_\_)   (FLASH-\/>SR = (\_\_FLAG\_\_))}}
+\DoxyCodeLine{321 }
+\DoxyCodeLine{322 \textcolor{comment}{/* Include FLASH HAL Extension module */}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__flash__ex_8h}{stm32f4xx\_hal\_flash\_ex.h}}"{}}}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{325 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{326 \textcolor{comment}{/* Program operation functions  ***********************************************/}}
+\DoxyCodeLine{327 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_FLASH\_Program(uint32\_t TypeProgram, uint32\_t Address, uint64\_t Data);}
+\DoxyCodeLine{328 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_FLASH\_Program\_IT(uint32\_t TypeProgram, uint32\_t Address, uint64\_t Data);}
+\DoxyCodeLine{329 \textcolor{comment}{/* FLASH IRQ handler method */}}
+\DoxyCodeLine{330 \textcolor{keywordtype}{void}                HAL\_FLASH\_IRQHandler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{331 \textcolor{comment}{/* Callbacks in non blocking modes */} }
+\DoxyCodeLine{332 \textcolor{keywordtype}{void}         HAL\_FLASH\_EndOfOperationCallback(uint32\_t ReturnValue);}
+\DoxyCodeLine{333 \textcolor{keywordtype}{void}         HAL\_FLASH\_OperationErrorCallback(uint32\_t ReturnValue);}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335 \textcolor{comment}{/* Peripheral Control functions  **********************************************/}}
+\DoxyCodeLine{336 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_FLASH\_Unlock(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{337 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_FLASH\_Lock(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{338 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_FLASH\_OB\_Unlock(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{339 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_FLASH\_OB\_Lock(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{340 \textcolor{comment}{/* Option bytes control */}}
+\DoxyCodeLine{341 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_FLASH\_OB\_Launch(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343 \textcolor{comment}{/* Peripheral State functions  ************************************************/}}
+\DoxyCodeLine{344 \mbox{\hyperlink{group___f_l_a_s_h_ga0635292464d38cedf0ae05d2a0434076}{FLASH\_ErrorTypeDef}}  HAL\_FLASH\_GetError(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{345 }
+\DoxyCodeLine{346 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} FLASH\_WaitForLastOperation(uint32\_t Timeout);}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{356 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{357 \}}
+\DoxyCodeLine{358 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_FLASH\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{362 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

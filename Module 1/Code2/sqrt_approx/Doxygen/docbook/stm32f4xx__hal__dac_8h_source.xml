@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__dac_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_dac.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dac.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_DAC_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_DAC_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00047"/>00047 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00048"/>00048 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00049"/>00049 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00050"/>00050 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00059"/>00059 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00060"/>00060 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00064"/>00064 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00065"/>00065 {
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00066"/>00066 &#32;&#32;HAL_DAC_STATE_RESET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00067"/>00067 &#32;&#32;HAL_DAC_STATE_READY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00068"/>00068 &#32;&#32;HAL_DAC_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00069"/>00069 &#32;&#32;HAL_DAC_STATE_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x03,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00070"/>00070 &#32;&#32;HAL_DAC_STATE_ERROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x04&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00071"/>00071 }HAL_DAC_StateTypeDef;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00072"/>00072 &#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00076"/>00076 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00077"/>00077 {
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00078"/>00078 &#32;&#32;DAC_TypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*Instance;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00080"/>00080 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;HAL_DAC_StateTypeDef&#32;&#32;&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00082"/>00082 &#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00084"/>00084 &#32;&#32;<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*DMA_Handle1;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00086"/>00086 &#32;&#32;<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*DMA_Handle2;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00088"/>00088 &#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ErrorCode;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00090"/>00090 }DAC_HandleTypeDef;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00091"/>00091 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00095"/>00095 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00096"/>00096 {
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00097"/>00097 &#32;&#32;uint32_t&#32;DAC_Trigger;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00100"/>00100 &#32;&#32;uint32_t&#32;DAC_OutputBuffer;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00102"/>00102 }DAC_ChannelConfTypeDef;
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00103"/>00103 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00104"/>00104 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00105"/>00105 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00109"/>00109 <emphasis role="preprocessor">#define&#32;&#32;HAL_DAC_ERROR_NONE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00110"/>00110 <emphasis role="preprocessor">#define&#32;&#32;HAL_DAC_ERROR_DMAUNDERRUNCH1&#32;&#32;&#32;&#32;0x01&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00111"/>00111 <emphasis role="preprocessor">#define&#32;&#32;HAL_DAC_ERROR_DMAUNDERRUNCH2&#32;&#32;&#32;&#32;0x02&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00112"/>00112 <emphasis role="preprocessor">#define&#32;&#32;HAL_DAC_ERROR_DMA&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x04&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00121"/>00121 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_NONE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00123"/>00123 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_T2_TRGO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(DAC_CR_TSEL1_2&#32;|&#32;DAC_CR_TEN1))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00124"/>00124 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_T4_TRGO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(DAC_CR_TSEL1_2&#32;|&#32;DAC_CR_TSEL1_0&#32;|&#32;DAC_CR_TEN1))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00125"/>00125 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_T5_TRGO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(DAC_CR_TSEL1_1&#32;|&#32;DAC_CR_TSEL1_0&#32;|&#32;DAC_CR_TEN1))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00126"/>00126 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_T6_TRGO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)DAC_CR_TEN1)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00127"/>00127 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_T7_TRGO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(DAC_CR_TSEL1_1&#32;|&#32;DAC_CR_TEN1))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00128"/>00128 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_T8_TRGO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(DAC_CR_TSEL1_0&#32;|&#32;DAC_CR_TEN1))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00130"/>00130 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_EXT_IT9&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(DAC_CR_TSEL1_2&#32;|&#32;DAC_CR_TSEL1_1&#32;|&#32;DAC_CR_TEN1))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00131"/>00131 <emphasis role="preprocessor">#define&#32;DAC_TRIGGER_SOFTWARE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)(DAC_CR_TSEL1&#32;|&#32;DAC_CR_TEN1))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00133"/>00133 <emphasis role="preprocessor">#define&#32;IS_DAC_TRIGGER(TRIGGER)&#32;(((TRIGGER)&#32;==&#32;DAC_TRIGGER_NONE)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00134"/>00134 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((TRIGGER)&#32;==&#32;DAC_TRIGGER_T2_TRGO)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00135"/>00135 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((TRIGGER)&#32;==&#32;DAC_TRIGGER_T8_TRGO)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00136"/>00136 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((TRIGGER)&#32;==&#32;DAC_TRIGGER_T7_TRGO)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00137"/>00137 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((TRIGGER)&#32;==&#32;DAC_TRIGGER_T5_TRGO)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00138"/>00138 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((TRIGGER)&#32;==&#32;DAC_TRIGGER_T6_TRGO)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00139"/>00139 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((TRIGGER)&#32;==&#32;DAC_TRIGGER_T4_TRGO)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00140"/>00140 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((TRIGGER)&#32;==&#32;DAC_TRIGGER_EXT_IT9)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00141"/>00141 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((TRIGGER)&#32;==&#32;DAC_TRIGGER_SOFTWARE))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00149"/>00149 <emphasis role="preprocessor">#define&#32;DAC_OUTPUTBUFFER_ENABLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00150"/>00150 <emphasis role="preprocessor">#define&#32;DAC_OUTPUTBUFFER_DISABLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)DAC_CR_BOFF1)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00151"/>00151 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00152"/>00152 <emphasis role="preprocessor">#define&#32;IS_DAC_OUTPUT_BUFFER_STATE(STATE)&#32;(((STATE)&#32;==&#32;DAC_OUTPUTBUFFER_ENABLE)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00153"/>00153 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((STATE)&#32;==&#32;DAC_OUTPUTBUFFER_DISABLE))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00161"/>00161 <emphasis role="preprocessor">#define&#32;DAC_CHANNEL_1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00162"/>00162 <emphasis role="preprocessor">#define&#32;DAC_CHANNEL_2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000010)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00163"/>00163 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00164"/>00164 <emphasis role="preprocessor">#define&#32;IS_DAC_CHANNEL(CHANNEL)&#32;(((CHANNEL)&#32;==&#32;DAC_CHANNEL_1)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00165"/>00165 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((CHANNEL)&#32;==&#32;DAC_CHANNEL_2))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00173"/>00173 <emphasis role="preprocessor">#define&#32;DAC_ALIGN_12B_R&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00174"/>00174 <emphasis role="preprocessor">#define&#32;DAC_ALIGN_12B_L&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000004)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00175"/>00175 <emphasis role="preprocessor">#define&#32;DAC_ALIGN_8B_R&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000008)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00176"/>00176 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00177"/>00177 <emphasis role="preprocessor">#define&#32;IS_DAC_ALIGN(ALIGN)&#32;(((ALIGN)&#32;==&#32;DAC_ALIGN_12B_R)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00178"/>00178 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ALIGN)&#32;==&#32;DAC_ALIGN_12B_L)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00179"/>00179 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((ALIGN)&#32;==&#32;DAC_ALIGN_8B_R))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00187"/>00187 <emphasis role="preprocessor">#define&#32;IS_DAC_DATA(DATA)&#32;((DATA)&#32;&lt;=&#32;0xFFF0)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00195"/>00195 <emphasis role="preprocessor">#define&#32;DAC_FLAG_DMAUDR1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)DAC_SR_DMAUDR1)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00196"/>00196 <emphasis role="preprocessor">#define&#32;DAC_FLAG_DMAUDR2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)DAC_SR_DMAUDR2)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00197"/>00197 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00198"/>00198 <emphasis role="preprocessor">#define&#32;IS_DAC_FLAG(FLAG)&#32;(((FLAG)&#32;==&#32;DAC_FLAG_DMAUDR1)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00199"/>00199 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((FLAG)&#32;==&#32;DAC_FLAG_DMAUDR2))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00207"/>00207 <emphasis role="preprocessor">#define&#32;DAC_IT_DMAUDR1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)DAC_SR_DMAUDR1)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00208"/>00208 <emphasis role="preprocessor">#define&#32;DAC_IT_DMAUDR2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)DAC_SR_DMAUDR2)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00209"/>00209 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00210"/>00210 <emphasis role="preprocessor">#define&#32;IS_DAC_IT(IT)&#32;(((IT)&#32;==&#32;DAC_IT_DMAUDR1)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00211"/>00211 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((IT)&#32;==&#32;DAC_IT_DMAUDR2))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00216"/>00216 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00217"/>00217 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00222"/>00222 <emphasis role="preprocessor">#define&#32;__HAL_DAC_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_DAC_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00223"/>00223 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00229"/>00229 <emphasis role="preprocessor">#define&#32;__HAL_DAC_ENABLE(__HANDLE__,&#32;__DAC_Channel__)&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00230"/>00230 <emphasis role="preprocessor">((__HANDLE__)-&gt;Instance-&gt;CR&#32;|=&#32;&#32;(DAC_CR_EN1&#32;&lt;&lt;&#32;(__DAC_Channel__)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00231"/>00231 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00237"/>00237 <emphasis role="preprocessor">#define&#32;__HAL_DAC_DISABLE(__HANDLE__,&#32;__DAC_Channel__)&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00238"/>00238 <emphasis role="preprocessor">((__HANDLE__)-&gt;Instance-&gt;CR&#32;&amp;=&#32;&#32;~(DAC_CR_EN1&#32;&lt;&lt;&#32;(__DAC_Channel__)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00239"/>00239 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00244"/>00244 <emphasis role="preprocessor">#define&#32;__HAL_DHR12R1_ALIGNEMENT(__ALIGNEMENT__)&#32;(((uint32_t)0x00000008)&#32;+&#32;(__ALIGNEMENT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00245"/>00245 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00250"/>00250 <emphasis role="preprocessor">#define&#32;__HAL_DHR12R2_ALIGNEMENT(__ALIGNEMENT__)&#32;(((uint32_t)0x00000014)&#32;+&#32;(__ALIGNEMENT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00251"/>00251 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00256"/>00256 <emphasis role="preprocessor">#define&#32;__HAL_DHR12RD_ALIGNEMENT(__ALIGNEMENT__)&#32;(((uint32_t)0x00000020)&#32;+&#32;(__ALIGNEMENT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00257"/>00257 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00263"/>00263 <emphasis role="preprocessor">#define&#32;__HAL_DAC_ENABLE_IT(__HANDLE__,&#32;__INTERRUPT__)&#32;(((__HANDLE__)-&gt;Instance-&gt;CR)&#32;|=&#32;(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00264"/>00264 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00270"/>00270 <emphasis role="preprocessor">#define&#32;__HAL_DAC_DISABLE_IT(__HANDLE__,&#32;__INTERRUPT__)&#32;(((__HANDLE__)-&gt;Instance-&gt;CR)&#32;&amp;=&#32;~(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00271"/>00271 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00276"/>00276 <emphasis role="preprocessor">#define&#32;__HAL_DAC_GET_FLAG(__HANDLE__,&#32;__FLAG__)&#32;((((__HANDLE__)-&gt;Instance-&gt;SR)&#32;&amp;&#32;(__FLAG__))&#32;==&#32;(__FLAG__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00277"/>00277 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00282"/>00282 <emphasis role="preprocessor">#define&#32;__HAL_DAC_CLEAR_FLAG(__HANDLE__,&#32;__FLAG__)&#32;(((__HANDLE__)-&gt;Instance-&gt;SR)&#32;|=&#32;(__FLAG__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00283"/>00283 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00284"/>00284 <emphasis role="comment">/*&#32;Include&#32;DAC&#32;HAL&#32;Extension&#32;module&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00285"/>00285 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__dac__ex_8h">stm32f4xx_hal_dac_ex.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00286"/>00286 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00287"/>00287 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00288"/>00288 <emphasis role="comment">/*&#32;Initialization/de-initialization&#32;functions&#32;*********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00289"/>00289 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_DAC_Init(DAC_HandleTypeDef*&#32;hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00290"/>00290 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_DAC_DeInit(DAC_HandleTypeDef*&#32;hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00291"/>00291 <emphasis role="keywordtype">void</emphasis>&#32;HAL_DAC_MspInit(DAC_HandleTypeDef*&#32;hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00292"/>00292 <emphasis role="keywordtype">void</emphasis>&#32;HAL_DAC_MspDeInit(DAC_HandleTypeDef*&#32;hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00293"/>00293 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00294"/>00294 <emphasis role="comment">/*&#32;I/O&#32;operation&#32;functions&#32;****************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00295"/>00295 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_DAC_Start(DAC_HandleTypeDef*&#32;hdac,&#32;uint32_t&#32;Channel);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00296"/>00296 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_DAC_Stop(DAC_HandleTypeDef*&#32;hdac,&#32;uint32_t&#32;Channel);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00297"/>00297 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_DAC_Start_DMA(DAC_HandleTypeDef*&#32;hdac,&#32;uint32_t&#32;Channel,&#32;uint32_t*&#32;pData,&#32;uint32_t&#32;Length,&#32;uint32_t&#32;Alignment);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00298"/>00298 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_DAC_Stop_DMA(DAC_HandleTypeDef*&#32;hdac,&#32;uint32_t&#32;Channel);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00299"/>00299 uint32_t&#32;HAL_DAC_GetValue(DAC_HandleTypeDef*&#32;hdac,&#32;uint32_t&#32;Channel);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00300"/>00300 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00301"/>00301 <emphasis role="comment">/*&#32;Peripheral&#32;Control&#32;functions&#32;***********************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00302"/>00302 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_DAC_ConfigChannel(DAC_HandleTypeDef*&#32;hdac,&#32;DAC_ChannelConfTypeDef*&#32;sConfig,&#32;uint32_t&#32;Channel);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00303"/>00303 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_DAC_SetValue(DAC_HandleTypeDef*&#32;hdac,&#32;uint32_t&#32;Channel,&#32;uint32_t&#32;Alignment,&#32;uint32_t&#32;Data);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00304"/>00304 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00305"/>00305 <emphasis role="comment">/*&#32;Peripheral&#32;State&#32;functions&#32;*************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00306"/>00306 HAL_DAC_StateTypeDef&#32;HAL_DAC_GetState(DAC_HandleTypeDef*&#32;hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00307"/>00307 <emphasis role="keywordtype">void</emphasis>&#32;HAL_DAC_IRQHandler(DAC_HandleTypeDef*&#32;hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00308"/>00308 uint32_t&#32;HAL_DAC_GetError(DAC_HandleTypeDef&#32;*hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00309"/>00309 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00310"/>00310 <emphasis role="keywordtype">void</emphasis>&#32;HAL_DAC_ConvCpltCallbackCh1(DAC_HandleTypeDef*&#32;hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00311"/>00311 <emphasis role="keywordtype">void</emphasis>&#32;HAL_DAC_ConvHalfCpltCallbackCh1(DAC_HandleTypeDef*&#32;hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00312"/>00312 <emphasis role="keywordtype">void</emphasis>&#32;HAL_DAC_ErrorCallbackCh1(DAC_HandleTypeDef&#32;*hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00313"/>00313 <emphasis role="keywordtype">void</emphasis>&#32;HAL_DAC_DMAUnderrunCallbackCh1(DAC_HandleTypeDef&#32;*hdac);
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00314"/>00314 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00315"/>00315 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00316"/>00316 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00325"/>00325 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00326"/>00326 }
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00327"/>00327 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00328"/>00328 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00329"/>00329 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*__STM32F4xx_HAL_DAC_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00330"/>00330 
+<anchor xml:id="_stm32f4xx__hal__dac_8h_source_1l00331"/>00331 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

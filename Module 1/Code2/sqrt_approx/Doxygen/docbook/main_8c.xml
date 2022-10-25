@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8c" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/main.c File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/main.c</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>__asm int <link linkend="_main_8c_1ab530b5c5abd6ec3f886f2b48e3905ee1">my_sqrt</link> (int x)</para>
+
+<para>Calculates truncated (integer portion) square root of an integer in the range [0, (2^31) - 1]. </para>
+</listitem>
+            <listitem><para>int <link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (void )</computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00094">94</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_main_8c_1ab530b5c5abd6ec3f886f2b48e3905ee1"/><section>
+    <title>my_sqrt()</title>
+<indexterm><primary>my_sqrt</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>my_sqrt</secondary></indexterm>
+<para><computeroutput>__asm int my_sqrt (int x)</computeroutput></para><para>
+
+<para>Calculates truncated (integer portion) square root of an integer in the range [0, (2^31) - 1]. </para>
+</para>
+
+<para>This will be done using the Bisection Method (<link xlink:href="https://en.wikipedia.org/wiki/Bisection_method">https://en.wikipedia.org/wiki/Bisection_method</link>) with range [a, b] and midpoint c. Initial values: a = 0 (smallest possible square root) b = 256 (largest possible square root) c = 128 The function will recursively calculate whether c is the exact root of input x. If so, then finish. Else if c^2 &lt; x, then set lower bound a to c. Else if c^2 &gt; x, then set upper bound b to c. The midpoint c will be recalculated within the new range until either: c is the exact square root of x &quot;new&quot; c == &quot;old&quot; c (meaning integer approximation is within 1)</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>x</entry><entry>
+<para>The integer number within range of [0, (2^31) - 1] to find the truncated (integer portion) square root of </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_main_8c_source_1l00028">28</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+</section>
+</section>

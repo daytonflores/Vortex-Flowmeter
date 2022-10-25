@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___p_c_d" xml:lang="en-US">
+<title>PCD</title>
+<indexterm><primary>PCD</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___p_c_d___exported___constants">PCD_Exported_Constants</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___p_c_d___interrupt___clock">PCD_Interrupt_Clock</link></para>
+
+<para>macros to handle interrupts and specific clock configurations </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link></para>
+
+<para>PCD Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___global_type_def">USB_OTG_GlobalTypeDef</link> <link linkend="_group___p_c_d_1gaf09cbbcafa2647859e3e2b2cb7f10a81">PCD_TypeDef</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___cfg_type_def">USB_OTG_CfgTypeDef</link> <link linkend="_group___p_c_d_1gac44a4798a1e04e4ffb147abacc3dfc6b">PCD_InitTypeDef</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___e_p_type_def">USB_OTG_EPTypeDef</link> <link linkend="_group___p_c_d_1ga99220a9a8b825cb34d5359d0bf609290">PCD_EPTypeDef</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___p_c_d_1ga78b8f0aa4eea3865fb695a732b26be96">PCD_StateTypeDef</link> { <link linkend="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96aea219cd5e02a6c02e4cfe36541f34334">PCD_READY</link> = 0x00
+, <link linkend="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96a10b1128a23c105eea9874cbf61b2a912">PCD_ERROR</link> = 0x01
+, <link linkend="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96ad929b72edb829b32ee9a169f1dc18c39">PCD_BUSY</link> = 0x02
+, <link linkend="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96a6def1c151295a644475ec4981807c161">PCD_TIMEOUT</link> = 0x03
+ }</para>
+
+<para>PCD State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gae9ae02615c7a4badf2357e392ec66cd9">HAL_PCD_Init</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaf16d6b4eab71321e49998f13d00e38f0">HAL_PCD_DeInit</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga73af972b44ba2890202363cd8b197dad">HAL_PCD_MspInit</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga8194c593b1db635b225c4b6294f31e47">HAL_PCD_MspDeInit</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaed7a0a21ca81a2fcdd4db87606dee381">HAL_PCD_Start</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gad2e6055aea6458c0aec7df9c8ab7abab">HAL_PCD_Stop</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga502da86920d2beb8284c4c2d3dbac0c6">HAL_PCD_IRQHandler</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga2f1ac834d9677dcae7d8973828f81149">HAL_PCD_DataOutStageCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t epnum)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga1679f5c50539a3dfca1391557e7a757b">HAL_PCD_DataInStageCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t epnum)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga9d72aa4d3d984b164047b081d4566f6d">HAL_PCD_SetupStageCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga85c99eeb4aa17d8ff5298efff92ac28e">HAL_PCD_SOFCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1gaf4fbef977092aa525c6b1668ffbec77b">HAL_PCD_ResetCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga0e14acd4564979743bc0a89aa5f15428">HAL_PCD_SuspendCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga0386a36b921cd51dd6e50103c3cd33b1">HAL_PCD_ResumeCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga4274f129d782f0a3c9a10b5bbe022cd4">HAL_PCD_ISOOUTIncompleteCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t epnum)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga8f4041d553ef2fb326c6e483797f99a8">HAL_PCD_ISOINIncompleteCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t epnum)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga0c449541523759cf62be9c9d47540c5d">HAL_PCD_ConnectCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga25f930b5fe696224f8e71dacf5f324b4">HAL_PCD_DisconnectCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga89ca79760ba1c490c2d526e2590d9c8a">HAL_PCD_DevConnect</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaa7cb70cf9891c6e22cad3930ba2d5f99">HAL_PCD_DevDisconnect</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga66397fbae1dd4b6f4b5225b23345ea30">HAL_PCD_SetAddress</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t address)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gab377a41f91fb7c12c12886d94bd765f2">HAL_PCD_EP_Open</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr, uint16_t ep_mps, uint8_t ep_type)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga439d45b17aa238f68e43b60783836849">HAL_PCD_EP_Close</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga0029fe7a8d3db91b13637e2507fba60c">HAL_PCD_EP_Receive</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr, uint8_t *pBuf, uint32_t len)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga116ada543442c8f7a1003c4d4c211618">HAL_PCD_EP_Transmit</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr, uint8_t *pBuf, uint32_t len)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_group___p_c_d_1gaee30320d48c739cce717a7c0f4b717cc">HAL_PCD_EP_GetRxCount</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaecee197a59aacc015742c62b74881b6f">HAL_PCD_EP_SetStall</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga56466fbd2aa05a80c924b18ddc2ac3ca">HAL_PCD_EP_ClrStall</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaf245d7a10c697f4591c144596cb2df0f">HAL_PCD_EP_Flush</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga082c4b929ab79cf77f035a987f7cd77b">HAL_PCD_SetTxFiFo</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t fifo, uint16_t size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga1cd5f7987b929260fcf5e3f7843881b3">HAL_PCD_SetRxFiFo</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint16_t size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gafcec8440d73356162313a70233531779">HAL_PCD_ActiveRemoteWakeup</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga5885d295a1ff56cc9b6e95a1f716653f">HAL_PCD_DeActiveRemoteWakeup</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___p_c_d_1ga78b8f0aa4eea3865fb695a732b26be96">PCD_StateTypeDef</link> <link linkend="_group___p_c_d_1ga63732e60894249f910c31a5bb336b698">HAL_PCD_GetState</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_group___p_c_d_1ga99220a9a8b825cb34d5359d0bf609290"/><section>
+    <title>PCD_EPTypeDef</title>
+<indexterm><primary>PCD_EPTypeDef</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>PCD_EPTypeDef</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_struct_u_s_b___o_t_g___e_p_type_def">USB_OTG_EPTypeDef</link> <link linkend="_group___p_c_d_1ga99220a9a8b825cb34d5359d0bf609290">PCD_EPTypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00073">73</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d_1gac44a4798a1e04e4ffb147abacc3dfc6b"/><section>
+    <title>PCD_InitTypeDef</title>
+<indexterm><primary>PCD_InitTypeDef</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>PCD_InitTypeDef</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_struct_u_s_b___o_t_g___cfg_type_def">USB_OTG_CfgTypeDef</link> <link linkend="_group___p_c_d_1gac44a4798a1e04e4ffb147abacc3dfc6b">PCD_InitTypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00072">72</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___p_c_d_1gaf09cbbcafa2647859e3e2b2cb7f10a81"/><section>
+    <title>PCD_TypeDef</title>
+<indexterm><primary>PCD_TypeDef</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>PCD_TypeDef</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_struct_u_s_b___o_t_g___global_type_def">USB_OTG_GlobalTypeDef</link> <link linkend="_group___p_c_d_1gaf09cbbcafa2647859e3e2b2cb7f10a81">PCD_TypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00071">71</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___p_c_d_1ga78b8f0aa4eea3865fb695a732b26be96"/><section>
+    <title>PCD_StateTypeDef</title>
+<indexterm><primary>PCD_StateTypeDef</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>PCD_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___p_c_d_1ga78b8f0aa4eea3865fb695a732b26be96">PCD_StateTypeDef</link></computeroutput></para><para>
+
+<para>PCD State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>PCD_READY</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>PCD_READY</secondary></indexterm>
+<anchor xml:id="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96aea219cd5e02a6c02e4cfe36541f34334"/>PCD_READY</entry><entry></entry></row><row><entry><indexterm><primary>PCD_ERROR</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>PCD_ERROR</secondary></indexterm>
+<anchor xml:id="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96a10b1128a23c105eea9874cbf61b2a912"/>PCD_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>PCD_BUSY</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>PCD_BUSY</secondary></indexterm>
+<anchor xml:id="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96ad929b72edb829b32ee9a169f1dc18c39"/>PCD_BUSY</entry><entry></entry></row><row><entry><indexterm><primary>PCD_TIMEOUT</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>PCD_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96a6def1c151295a644475ec4981807c161"/>PCD_TIMEOUT</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__pcd_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___p_c_d_1gafcec8440d73356162313a70233531779"/><section>
+    <title>HAL_PCD_ActiveRemoteWakeup()</title>
+<indexterm><primary>HAL_PCD_ActiveRemoteWakeup</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_ActiveRemoteWakeup</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_ActiveRemoteWakeup (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga0c449541523759cf62be9c9d47540c5d"/><section>
+    <title>HAL_PCD_ConnectCallback()</title>
+<indexterm><primary>HAL_PCD_ConnectCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_ConnectCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ConnectCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga1679f5c50539a3dfca1391557e7a757b"/><section>
+    <title>HAL_PCD_DataInStageCallback()</title>
+<indexterm><primary>HAL_PCD_DataInStageCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_DataInStageCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_DataInStageCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t epnum)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga2f1ac834d9677dcae7d8973828f81149"/><section>
+    <title>HAL_PCD_DataOutStageCallback()</title>
+<indexterm><primary>HAL_PCD_DataOutStageCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_DataOutStageCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_DataOutStageCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t epnum)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga5885d295a1ff56cc9b6e95a1f716653f"/><section>
+    <title>HAL_PCD_DeActiveRemoteWakeup()</title>
+<indexterm><primary>HAL_PCD_DeActiveRemoteWakeup</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_DeActiveRemoteWakeup</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_DeActiveRemoteWakeup (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gaf16d6b4eab71321e49998f13d00e38f0"/><section>
+    <title>HAL_PCD_DeInit()</title>
+<indexterm><primary>HAL_PCD_DeInit</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_DeInit (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga89ca79760ba1c490c2d526e2590d9c8a"/><section>
+    <title>HAL_PCD_DevConnect()</title>
+<indexterm><primary>HAL_PCD_DevConnect</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_DevConnect</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_DevConnect (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gaa7cb70cf9891c6e22cad3930ba2d5f99"/><section>
+    <title>HAL_PCD_DevDisconnect()</title>
+<indexterm><primary>HAL_PCD_DevDisconnect</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_DevDisconnect</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_DevDisconnect (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga25f930b5fe696224f8e71dacf5f324b4"/><section>
+    <title>HAL_PCD_DisconnectCallback()</title>
+<indexterm><primary>HAL_PCD_DisconnectCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_DisconnectCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_DisconnectCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga439d45b17aa238f68e43b60783836849"/><section>
+    <title>HAL_PCD_EP_Close()</title>
+<indexterm><primary>HAL_PCD_EP_Close</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_EP_Close</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_EP_Close (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t ep_addr)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga56466fbd2aa05a80c924b18ddc2ac3ca"/><section>
+    <title>HAL_PCD_EP_ClrStall()</title>
+<indexterm><primary>HAL_PCD_EP_ClrStall</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_EP_ClrStall</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_EP_ClrStall (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t ep_addr)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gaf245d7a10c697f4591c144596cb2df0f"/><section>
+    <title>HAL_PCD_EP_Flush()</title>
+<indexterm><primary>HAL_PCD_EP_Flush</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_EP_Flush</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_EP_Flush (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t ep_addr)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gaee30320d48c739cce717a7c0f4b717cc"/><section>
+    <title>HAL_PCD_EP_GetRxCount()</title>
+<indexterm><primary>HAL_PCD_EP_GetRxCount</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_EP_GetRxCount</secondary></indexterm>
+<para><computeroutput>uint16_t HAL_PCD_EP_GetRxCount (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t ep_addr)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gab377a41f91fb7c12c12886d94bd765f2"/><section>
+    <title>HAL_PCD_EP_Open()</title>
+<indexterm><primary>HAL_PCD_EP_Open</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_EP_Open</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_EP_Open (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t ep_addr, uint16_t ep_mps, uint8_t ep_type)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga0029fe7a8d3db91b13637e2507fba60c"/><section>
+    <title>HAL_PCD_EP_Receive()</title>
+<indexterm><primary>HAL_PCD_EP_Receive</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_EP_Receive</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_EP_Receive (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t ep_addr, uint8_t * pBuf, uint32_t len)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gaecee197a59aacc015742c62b74881b6f"/><section>
+    <title>HAL_PCD_EP_SetStall()</title>
+<indexterm><primary>HAL_PCD_EP_SetStall</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_EP_SetStall</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_EP_SetStall (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t ep_addr)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga116ada543442c8f7a1003c4d4c211618"/><section>
+    <title>HAL_PCD_EP_Transmit()</title>
+<indexterm><primary>HAL_PCD_EP_Transmit</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_EP_Transmit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_EP_Transmit (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t ep_addr, uint8_t * pBuf, uint32_t len)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga63732e60894249f910c31a5bb336b698"/><section>
+    <title>HAL_PCD_GetState()</title>
+<indexterm><primary>HAL_PCD_GetState</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___p_c_d_1ga78b8f0aa4eea3865fb695a732b26be96">PCD_StateTypeDef</link> HAL_PCD_GetState (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gae9ae02615c7a4badf2357e392ec66cd9"/><section>
+    <title>HAL_PCD_Init()</title>
+<indexterm><primary>HAL_PCD_Init</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_Init (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga502da86920d2beb8284c4c2d3dbac0c6"/><section>
+    <title>HAL_PCD_IRQHandler()</title>
+<indexterm><primary>HAL_PCD_IRQHandler</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_IRQHandler (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga8f4041d553ef2fb326c6e483797f99a8"/><section>
+    <title>HAL_PCD_ISOINIncompleteCallback()</title>
+<indexterm><primary>HAL_PCD_ISOINIncompleteCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_ISOINIncompleteCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ISOINIncompleteCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t epnum)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga4274f129d782f0a3c9a10b5bbe022cd4"/><section>
+    <title>HAL_PCD_ISOOUTIncompleteCallback()</title>
+<indexterm><primary>HAL_PCD_ISOOUTIncompleteCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_ISOOUTIncompleteCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ISOOUTIncompleteCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t epnum)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga8194c593b1db635b225c4b6294f31e47"/><section>
+    <title>HAL_PCD_MspDeInit()</title>
+<indexterm><primary>HAL_PCD_MspDeInit</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_MspDeInit (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga73af972b44ba2890202363cd8b197dad"/><section>
+    <title>HAL_PCD_MspInit()</title>
+<indexterm><primary>HAL_PCD_MspInit</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_MspInit (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gaf4fbef977092aa525c6b1668ffbec77b"/><section>
+    <title>HAL_PCD_ResetCallback()</title>
+<indexterm><primary>HAL_PCD_ResetCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_ResetCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ResetCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga0386a36b921cd51dd6e50103c3cd33b1"/><section>
+    <title>HAL_PCD_ResumeCallback()</title>
+<indexterm><primary>HAL_PCD_ResumeCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_ResumeCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ResumeCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga66397fbae1dd4b6f4b5225b23345ea30"/><section>
+    <title>HAL_PCD_SetAddress()</title>
+<indexterm><primary>HAL_PCD_SetAddress</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_SetAddress</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_SetAddress (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t address)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga1cd5f7987b929260fcf5e3f7843881b3"/><section>
+    <title>HAL_PCD_SetRxFiFo()</title>
+<indexterm><primary>HAL_PCD_SetRxFiFo</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_SetRxFiFo</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_SetRxFiFo (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint16_t size)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga082c4b929ab79cf77f035a987f7cd77b"/><section>
+    <title>HAL_PCD_SetTxFiFo()</title>
+<indexterm><primary>HAL_PCD_SetTxFiFo</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_SetTxFiFo</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_SetTxFiFo (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd, uint8_t fifo, uint16_t size)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga9d72aa4d3d984b164047b081d4566f6d"/><section>
+    <title>HAL_PCD_SetupStageCallback()</title>
+<indexterm><primary>HAL_PCD_SetupStageCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_SetupStageCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_SetupStageCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga85c99eeb4aa17d8ff5298efff92ac28e"/><section>
+    <title>HAL_PCD_SOFCallback()</title>
+<indexterm><primary>HAL_PCD_SOFCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_SOFCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_SOFCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gaed7a0a21ca81a2fcdd4db87606dee381"/><section>
+    <title>HAL_PCD_Start()</title>
+<indexterm><primary>HAL_PCD_Start</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_Start</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_Start (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1gad2e6055aea6458c0aec7df9c8ab7abab"/><section>
+    <title>HAL_PCD_Stop()</title>
+<indexterm><primary>HAL_PCD_Stop</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_Stop</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_PCD_Stop (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+<anchor xml:id="_group___p_c_d_1ga0e14acd4564979743bc0a89aa5f15428"/><section>
+    <title>HAL_PCD_SuspendCallback()</title>
+<indexterm><primary>HAL_PCD_SuspendCallback</primary><secondary>PCD</secondary></indexterm>
+<indexterm><primary>PCD</primary><secondary>HAL_PCD_SuspendCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_SuspendCallback (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> * hpcd)</computeroutput></para></section>
+</section>
+</section>

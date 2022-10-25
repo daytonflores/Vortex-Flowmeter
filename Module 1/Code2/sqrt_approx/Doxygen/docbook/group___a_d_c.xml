@@ -1,0 +1,1515 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___a_d_c" xml:lang="en-US">
+<title>ADC</title>
+<indexterm><primary>ADC</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___a_d_c___exported___constants">ADC_Exported_Constants</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_a_d_c___init_type_def">ADC_InitTypeDef</link></para>
+
+<para>ADC Init structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link></para>
+
+<para>ADC handle Structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_a_d_c___channel_conf_type_def">ADC_ChannelConfTypeDef</link></para>
+
+<para>ADC Configuration regular Channel structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_a_d_c___analog_w_d_g_conf_type_def">ADC_AnalogWDGConfTypeDef</link></para>
+
+<para>ADC Configuration multi-mode structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gacb290bae25b972942021331122a3600f">__HAL_ADC_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea0a8dc247045fffb859639f78670970bd">HAL_ADC_STATE_RESET</link>)</para>
+
+<para>Reset ADC handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gaadf16862da7593def189559423c287f4">__HAL_ADC_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga89b646f092b052d8488d2016f6290f0e">ADC_CR2_ADON</link>)</para>
+
+<para>Enable the ADC peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1ga8afd5963c41c0a30c5cf1fec5c5710b3">__HAL_ADC_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga89b646f092b052d8488d2016f6290f0e">ADC_CR2_ADON</link>)</para>
+
+<para>Disable the ADC peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1ga6e1756271e8f00ac5c2e7a8ee4b835a6">__HAL_ADC_SQR1</link>(_NbrOfConversion_)   (((_NbrOfConversion_) - (uint8_t)1) &lt;&lt; 20)</para>
+
+<para>Set ADC Regular channel sequence length. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1ga6bcd12583a0e208953e0276f39783b2e">__HAL_ADC_SMPR1</link>(_SAMPLETIME_,  _CHANNELNB_)   ((_SAMPLETIME_) &lt;&lt; (3 * ((_CHANNELNB_) - 10)))</para>
+
+<para>Set the ADC&apos;s sample time for channel numbers between 10 and 18. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gae7d6eeb053107275269ecdce61df400d">__HAL_ADC_SMPR2</link>(_SAMPLETIME_,  _CHANNELNB_)   ((_SAMPLETIME_) &lt;&lt; (3 * (_CHANNELNB_)))</para>
+
+<para>Set the ADC&apos;s sample time for channel numbers between 0 and 9. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gae643f225084b306cdc7e1eb46a0a0e83">__HAL_ADC_SQR3_RK</link>(_CHANNELNB_,  _RANKNB_)   ((_CHANNELNB_) &lt;&lt; (5 * ((_RANKNB_) - 1)))</para>
+
+<para>Set the selected regular channel rank for rank between 1 and 6. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gaf9fca46b52fafbfe0dbf00e6b2fe126d">__HAL_ADC_SQR2_RK</link>(_CHANNELNB_,  _RANKNB_)   ((_CHANNELNB_) &lt;&lt; (5 * ((_RANKNB_) - 7)))</para>
+
+<para>Set the selected regular channel rank for rank between 7 and 12. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gaa8a4ac0dc1439d8881aade8e6d51d58b">__HAL_ADC_SQR1_RK</link>(_CHANNELNB_,  _RANKNB_)   ((_CHANNELNB_) &lt;&lt; (5 * ((_RANKNB_) - 13)))</para>
+
+<para>Set the selected regular channel rank for rank between 13 and 16. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1ga9976975f21b094c4a467ab5f05ff52dc">__HAL_ADC_CR2_CONTINUOUS</link>(_CONTINUOUS_MODE_)   ((_CONTINUOUS_MODE_) &lt;&lt; 1)</para>
+
+<para>Enable ADC continuous conversion mode. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1ga195df308e26bffbc6072b749f22a3f46">__HAL_ADC_CR1_DISCONTINUOUS</link>(_NBR_DISCONTINUOUSCONV_)   (((_NBR_DISCONTINUOUSCONV_) - 1) &lt;&lt; 13)</para>
+
+<para>Configures the number of discontinuous conversions for the regular group channels. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1ga4e3b6b5a98c4291da1a1b873ae60849f">__HAL_ADC_CR1_SCANCONV</link>(_SCANCONV_MODE_)   ((_SCANCONV_MODE_) &lt;&lt; 8)</para>
+
+<para>Enable ADC scan mode. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gad40e8f8a6cfdb7dfeb7c869a975f3335">__HAL_ADC_CR2_EOCSelection</link>(_EOCSelection_MODE_)   ((_EOCSelection_MODE_) &lt;&lt; 10)</para>
+
+<para>Enable the ADC end of conversion selection. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gab5b2bdb59da47a9a894636911dbf67e4">__HAL_ADC_CR2_DMAContReq</link>(_DMAContReq_MODE_)   ((_DMAContReq_MODE_) &lt;&lt; 9)</para>
+
+<para>Enable the ADC DMA continuous request. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1ga650073de508d335d0a1c7bf9b4d07afe">__HAL_ADC_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;CR1) |= (__INTERRUPT__))</para>
+
+<para>Enable the ADC end of conversion interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gadcec48b44a2133effd20f41ab227edb9">__HAL_ADC_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;CR1) &amp;= ~(__INTERRUPT__))</para>
+
+<para>Disable the ADC end of conversion interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gaf29cd943cb451e4ed1f07bd7d4854fb0">__HAL_ADC_GET_IT_SOURCE</link>(__HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR1 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Check if the specified ADC interrupt source is enabled or disabled. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gafe44e1e66141bca3665bb82981a81a17">__HAL_ADC_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR) &amp;= ~(__FLAG__))</para>
+
+<para>Clear the ADC&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1gaff951862689bb92173f803577cf2d447">__HAL_ADC_GET_FLAG</link>(__HANDLE__,  __FLAG__)   ((((__HANDLE__)-&gt;Instance-&gt;SR) &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Get the selected ADC&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___a_d_c_1ga504fe740d4eea75cae5ff566759940e3">__HAL_ADC_GET_RESOLUTION</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;CR1) &amp; <link linkend="_group___peripheral___registers___bits___definition_1ga71e4a4c233895a2e7b6dd3ca6ca849e5">ADC_CR1_RES</link>)</para>
+
+<para>Return resolution bits in CR1 register. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___a_d_c_1gafd66db22d830742b403c1f7f32d4630e">HAL_ADC_StateTypeDef</link> { 
+<link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea0a8dc247045fffb859639f78670970bd">HAL_ADC_STATE_RESET</link> = 0x00
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea80ed6f45e533fb9b25313197743df45f">HAL_ADC_STATE_READY</link> = 0x01
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ead1b790ee536ba17dc1dc8e1810a61369">HAL_ADC_STATE_BUSY</link> = 0x02
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eae41abc22307997e2c99410e749bba59c">HAL_ADC_STATE_BUSY_REG</link> = 0x12
+, 
+<link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eac3a54423cfd0d83901bd17c6696d81eb">HAL_ADC_STATE_BUSY_INJ</link> = 0x22
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eab7aba96942579addd8506609317094e7">HAL_ADC_STATE_BUSY_INJ_REG</link> = 0x32
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea3baf09bb91e728be72bfe236208d20c3">HAL_ADC_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea8cb47a47374f50216663d39c58683d3a">HAL_ADC_STATE_ERROR</link> = 0x04
+, 
+<link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eadf8131952ee3a76a31f833fc70c9acc2">HAL_ADC_STATE_EOC</link> = 0x05
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea2ef0a3c19e949a247549ac4274361e87">HAL_ADC_STATE_EOC_REG</link> = 0x15
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea6ef78197eb20289a8b664bdf83256fca">HAL_ADC_STATE_EOC_INJ</link> = 0x25
+, <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea39ef50d09363cf94db58782b8eb0b801">HAL_ADC_STATE_EOC_INJ_REG</link> = 0x35
+, 
+<link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eaedb3b42980def95403baae66c3b5a0c9">HAL_ADC_STATE_AWD</link> = 0x06
+ }</para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1ga33ddb73d4880bd425aaa43c5c52bb13a">HAL_ADC_Init</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1ga165940b437c6a8843c6032199adbf0a8">HAL_ADC_DeInit</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_1gaa30863492d5c3103e3e8ce8a63dadd07">HAL_ADC_MspInit</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_1ga39b0f8e80268ab3e660ead921ad4b22f">HAL_ADC_MspDeInit</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1ga193666e3bde978627c9ee1e2073c69c0">HAL_ADC_Start</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1ga1b00cb85fc6c0f40fabd02701528711d">HAL_ADC_Stop</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1gad9c0b5763ab75357407e22d310befc30">HAL_ADC_PollForConversion</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1ga139d1a4ab69bea84cb39918840e1a64e">HAL_ADC_PollForEvent</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t EventType, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1gaeb53035f47a937d54de2164d6c939a04">HAL_ADC_Start_IT</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1gae44e6d3d0d9c60897daa7ccfd368952c">HAL_ADC_Stop_IT</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_1ga28aaa5662eced92c5a4d23d8bd6b29ca">HAL_ADC_IRQHandler</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1ga7c3ef5532dddebe7fd76bb8f589d11fd">HAL_ADC_Start_DMA</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, uint32_t *pData, uint32_t Length)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1gae113bcf7fc3d8ce07d68403bb5a11560">HAL_ADC_Stop_DMA</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___a_d_c_1ga421008ca3885339acb12f400958ffbe4">HAL_ADC_GetValue</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_1gaf20a88180db1113be1e89266917d148b">HAL_ADC_ConvCpltCallback</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_1gad7e3dafc08886b97b9c9e23267645b9e">HAL_ADC_ConvHalfCpltCallback</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_1ga8cf5c59c6355fe7cf3c10816c761b9c2">HAL_ADC_LevelOutOfWindowCallback</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___a_d_c_1gadea1a55c5199d5cb4cfc1fdcd32be1b2">HAL_ADC_ErrorCallback</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1gac6f70c4927204d6f50ab44c8e4800106">HAL_ADC_ConfigChannel</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, <link linkend="_struct_a_d_c___channel_conf_type_def">ADC_ChannelConfTypeDef</link> *sConfig)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___a_d_c_1gaebd9d3c15de8c92e92e18ee38d1bd998">HAL_ADC_AnalogWDGConfig</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc, <link linkend="_struct_a_d_c___analog_w_d_g_conf_type_def">ADC_AnalogWDGConfTypeDef</link> *AnalogWDGConfig)</para>
+</listitem>
+            <listitem><para><link linkend="_group___a_d_c_1gafd66db22d830742b403c1f7f32d4630e">HAL_ADC_StateTypeDef</link> <link linkend="_group___a_d_c_1gab890563da42bb22b95755506869dd452">HAL_ADC_GetState</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___a_d_c_1ga3a546afb96f473f266573783f37ee8af">HAL_ADC_GetError</link> (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> *hadc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___a_d_c_1gafe44e1e66141bca3665bb82981a81a17"/><section>
+    <title>__HAL_ADC_CLEAR_FLAG</title>
+<indexterm><primary>__HAL_ADC_CLEAR_FLAG</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_CLEAR_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_CLEAR_FLAG( __HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR) &amp;= ~(__FLAG__))</computeroutput></para><para>
+
+<para>Clear the ADC&apos;s pending flags. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the ADC Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>ADC flag. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00633">633</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1ga195df308e26bffbc6072b749f22a3f46"/><section>
+    <title>__HAL_ADC_CR1_DISCONTINUOUS</title>
+<indexterm><primary>__HAL_ADC_CR1_DISCONTINUOUS</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_CR1_DISCONTINUOUS</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_CR1_DISCONTINUOUS( _NBR_DISCONTINUOUSCONV_)   (((_NBR_DISCONTINUOUSCONV_) - 1) &lt;&lt; 13)</computeroutput></para><para>
+
+<para>Configures the number of discontinuous conversions for the regular group channels. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_NBR_DISCONTINUOUSCONV_</entry><entry>
+<para>Number of discontinuous conversions. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00581">581</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1ga4e3b6b5a98c4291da1a1b873ae60849f"/><section>
+    <title>__HAL_ADC_CR1_SCANCONV</title>
+<indexterm><primary>__HAL_ADC_CR1_SCANCONV</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_CR1_SCANCONV</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_CR1_SCANCONV( _SCANCONV_MODE_)   ((_SCANCONV_MODE_) &lt;&lt; 8)</computeroutput></para><para>
+
+<para>Enable ADC scan mode. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_SCANCONV_MODE_</entry><entry>
+<para>Scan conversion mode. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00588">588</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1ga9976975f21b094c4a467ab5f05ff52dc"/><section>
+    <title>__HAL_ADC_CR2_CONTINUOUS</title>
+<indexterm><primary>__HAL_ADC_CR2_CONTINUOUS</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_CR2_CONTINUOUS</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_CR2_CONTINUOUS( _CONTINUOUS_MODE_)   ((_CONTINUOUS_MODE_) &lt;&lt; 1)</computeroutput></para><para>
+
+<para>Enable ADC continuous conversion mode. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_CONTINUOUS_MODE_</entry><entry>
+<para>Continuous mode. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00574">574</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gab5b2bdb59da47a9a894636911dbf67e4"/><section>
+    <title>__HAL_ADC_CR2_DMAContReq</title>
+<indexterm><primary>__HAL_ADC_CR2_DMAContReq</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_CR2_DMAContReq</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_CR2_DMAContReq( _DMAContReq_MODE_)   ((_DMAContReq_MODE_) &lt;&lt; 9)</computeroutput></para><para>
+
+<para>Enable the ADC DMA continuous request. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_DMAContReq_MODE_</entry><entry>
+<para>DMA continuous request mode. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00602">602</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gad40e8f8a6cfdb7dfeb7c869a975f3335"/><section>
+    <title>__HAL_ADC_CR2_EOCSelection</title>
+<indexterm><primary>__HAL_ADC_CR2_EOCSelection</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_CR2_EOCSelection</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_CR2_EOCSelection( _EOCSelection_MODE_)   ((_EOCSelection_MODE_) &lt;&lt; 10)</computeroutput></para><para>
+
+<para>Enable the ADC end of conversion selection. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_EOCSelection_MODE_</entry><entry>
+<para>End of conversion selection mode. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00595">595</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1ga8afd5963c41c0a30c5cf1fec5c5710b3"/><section>
+    <title>__HAL_ADC_DISABLE</title>
+<indexterm><primary>__HAL_ADC_DISABLE</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_DISABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_DISABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga89b646f092b052d8488d2016f6290f0e">ADC_CR2_ADON</link>)</computeroutput></para><para>
+
+<para>Disable the ADC peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>ADC handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00520">520</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gadcec48b44a2133effd20f41ab227edb9"/><section>
+    <title>__HAL_ADC_DISABLE_IT</title>
+<indexterm><primary>__HAL_ADC_DISABLE_IT</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_DISABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_DISABLE_IT( __HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;CR1) &amp;= ~(__INTERRUPT__))</computeroutput></para><para>
+
+<para>Disable the ADC end of conversion interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the ADC Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>ADC interrupt. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00618">618</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gaadf16862da7593def189559423c287f4"/><section>
+    <title>__HAL_ADC_ENABLE</title>
+<indexterm><primary>__HAL_ADC_ENABLE</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_ENABLE</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_ENABLE( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga89b646f092b052d8488d2016f6290f0e">ADC_CR2_ADON</link>)</computeroutput></para><para>
+
+<para>Enable the ADC peripheral. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>ADC handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00513">513</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1ga650073de508d335d0a1c7bf9b4d07afe"/><section>
+    <title>__HAL_ADC_ENABLE_IT</title>
+<indexterm><primary>__HAL_ADC_ENABLE_IT</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_ENABLE_IT</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_ENABLE_IT( __HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;CR1) |= (__INTERRUPT__))</computeroutput></para><para>
+
+<para>Enable the ADC end of conversion interrupt. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the ADC Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>ADC Interrupt. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00610">610</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gaff951862689bb92173f803577cf2d447"/><section>
+    <title>__HAL_ADC_GET_FLAG</title>
+<indexterm><primary>__HAL_ADC_GET_FLAG</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_GET_FLAG</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_GET_FLAG( __HANDLE__,  __FLAG__)   ((((__HANDLE__)-&gt;Instance-&gt;SR) &amp; (__FLAG__)) == (__FLAG__))</computeroutput></para><para>
+
+<para>Get the selected ADC&apos;s flag status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the ADC Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__FLAG__</entry><entry>
+<para>ADC flag. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00641">641</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gaf29cd943cb451e4ed1f07bd7d4854fb0"/><section>
+    <title>__HAL_ADC_GET_IT_SOURCE</title>
+<indexterm><primary>__HAL_ADC_GET_IT_SOURCE</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_GET_IT_SOURCE</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_GET_IT_SOURCE( __HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR1 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</computeroutput></para><para>
+
+<para>Check if the specified ADC interrupt source is enabled or disabled. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>specifies the ADC Handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>__INTERRUPT__</entry><entry>
+<para>specifies the ADC interrupt source to check. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>The</entry><entry>
+<para>new state of <emphasis role="bold">IT</emphasis> (TRUE or FALSE). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00625">625</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1ga504fe740d4eea75cae5ff566759940e3"/><section>
+    <title>__HAL_ADC_GET_RESOLUTION</title>
+<indexterm><primary>__HAL_ADC_GET_RESOLUTION</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_GET_RESOLUTION</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_GET_RESOLUTION( __HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;CR1) &amp; <link linkend="_group___peripheral___registers___bits___definition_1ga71e4a4c233895a2e7b6dd3ca6ca849e5">ADC_CR1_RES</link>)</computeroutput></para><para>
+
+<para>Return resolution bits in CR1 register. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>ADC handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00648">648</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gacb290bae25b972942021331122a3600f"/><section>
+    <title>__HAL_ADC_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_ADC_RESET_HANDLE_STATE</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea0a8dc247045fffb859639f78670970bd">HAL_ADC_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset ADC handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>ADC handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00506">506</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1ga6bcd12583a0e208953e0276f39783b2e"/><section>
+    <title>__HAL_ADC_SMPR1</title>
+<indexterm><primary>__HAL_ADC_SMPR1</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_SMPR1</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_SMPR1( _SAMPLETIME_,  _CHANNELNB_)   ((_SAMPLETIME_) &lt;&lt; (3 * ((_CHANNELNB_) - 10)))</computeroutput></para><para>
+
+<para>Set the ADC&apos;s sample time for channel numbers between 10 and 18. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_SAMPLETIME_</entry><entry>
+<para>Sample time parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_CHANNELNB_</entry><entry>
+<para>Channel number. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00535">535</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gae7d6eeb053107275269ecdce61df400d"/><section>
+    <title>__HAL_ADC_SMPR2</title>
+<indexterm><primary>__HAL_ADC_SMPR2</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_SMPR2</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_SMPR2( _SAMPLETIME_,  _CHANNELNB_)   ((_SAMPLETIME_) &lt;&lt; (3 * (_CHANNELNB_)))</computeroutput></para><para>
+
+<para>Set the ADC&apos;s sample time for channel numbers between 0 and 9. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_SAMPLETIME_</entry><entry>
+<para>Sample time parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_CHANNELNB_</entry><entry>
+<para>Channel number. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00543">543</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1ga6e1756271e8f00ac5c2e7a8ee4b835a6"/><section>
+    <title>__HAL_ADC_SQR1</title>
+<indexterm><primary>__HAL_ADC_SQR1</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_SQR1</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_SQR1( _NbrOfConversion_)   (((_NbrOfConversion_) - (uint8_t)1) &lt;&lt; 20)</computeroutput></para><para>
+
+<para>Set ADC Regular channel sequence length. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_NbrOfConversion_</entry><entry>
+<para>Regular channel sequence length. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00527">527</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gaa8a4ac0dc1439d8881aade8e6d51d58b"/><section>
+    <title>__HAL_ADC_SQR1_RK</title>
+<indexterm><primary>__HAL_ADC_SQR1_RK</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_SQR1_RK</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_SQR1_RK( _CHANNELNB_,  _RANKNB_)   ((_CHANNELNB_) &lt;&lt; (5 * ((_RANKNB_) - 13)))</computeroutput></para><para>
+
+<para>Set the selected regular channel rank for rank between 13 and 16. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_CHANNELNB_</entry><entry>
+<para>Channel number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_RANKNB_</entry><entry>
+<para>Rank number. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00567">567</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gaf9fca46b52fafbfe0dbf00e6b2fe126d"/><section>
+    <title>__HAL_ADC_SQR2_RK</title>
+<indexterm><primary>__HAL_ADC_SQR2_RK</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_SQR2_RK</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_SQR2_RK( _CHANNELNB_,  _RANKNB_)   ((_CHANNELNB_) &lt;&lt; (5 * ((_RANKNB_) - 7)))</computeroutput></para><para>
+
+<para>Set the selected regular channel rank for rank between 7 and 12. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_CHANNELNB_</entry><entry>
+<para>Channel number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_RANKNB_</entry><entry>
+<para>Rank number. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00559">559</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+<anchor xml:id="_group___a_d_c_1gae643f225084b306cdc7e1eb46a0a0e83"/><section>
+    <title>__HAL_ADC_SQR3_RK</title>
+<indexterm><primary>__HAL_ADC_SQR3_RK</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>__HAL_ADC_SQR3_RK</secondary></indexterm>
+<para><computeroutput>#define __HAL_ADC_SQR3_RK( _CHANNELNB_,  _RANKNB_)   ((_CHANNELNB_) &lt;&lt; (5 * ((_RANKNB_) - 1)))</computeroutput></para><para>
+
+<para>Set the selected regular channel rank for rank between 1 and 6. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_CHANNELNB_</entry><entry>
+<para>Channel number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_RANKNB_</entry><entry>
+<para>Rank number. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00551">551</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___a_d_c_1gafd66db22d830742b403c1f7f32d4630e"/><section>
+    <title>HAL_ADC_StateTypeDef</title>
+<indexterm><primary>HAL_ADC_StateTypeDef</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___a_d_c_1gafd66db22d830742b403c1f7f32d4630e">HAL_ADC_StateTypeDef</link></computeroutput></para><para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_ADC_STATE_RESET</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea0a8dc247045fffb859639f78670970bd"/>HAL_ADC_STATE_RESET</entry><entry>
+<para>ADC not yet initialized or disabled </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_READY</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea80ed6f45e533fb9b25313197743df45f"/>HAL_ADC_STATE_READY</entry><entry>
+<para>ADC peripheral ready for use </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_BUSY</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ead1b790ee536ba17dc1dc8e1810a61369"/>HAL_ADC_STATE_BUSY</entry><entry>
+<para>An internal process is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_BUSY_REG</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_BUSY_REG</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eae41abc22307997e2c99410e749bba59c"/>HAL_ADC_STATE_BUSY_REG</entry><entry>
+<para>Regular conversion is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_BUSY_INJ</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_BUSY_INJ</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eac3a54423cfd0d83901bd17c6696d81eb"/>HAL_ADC_STATE_BUSY_INJ</entry><entry>
+<para>Injected conversion is ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_BUSY_INJ_REG</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_BUSY_INJ_REG</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eab7aba96942579addd8506609317094e7"/>HAL_ADC_STATE_BUSY_INJ_REG</entry><entry>
+<para>Injected and regular conversion are ongoing </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_TIMEOUT</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea3baf09bb91e728be72bfe236208d20c3"/>HAL_ADC_STATE_TIMEOUT</entry><entry>
+<para>Timeout state </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_ERROR</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea8cb47a47374f50216663d39c58683d3a"/>HAL_ADC_STATE_ERROR</entry><entry>
+<para>ADC state error </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_EOC</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_EOC</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eadf8131952ee3a76a31f833fc70c9acc2"/>HAL_ADC_STATE_EOC</entry><entry>
+<para>Conversion is completed </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_EOC_REG</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_EOC_REG</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea2ef0a3c19e949a247549ac4274361e87"/>HAL_ADC_STATE_EOC_REG</entry><entry>
+<para>Regular conversion is completed </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_EOC_INJ</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_EOC_INJ</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea6ef78197eb20289a8b664bdf83256fca"/>HAL_ADC_STATE_EOC_INJ</entry><entry>
+<para>Injected conversion is completed </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_EOC_INJ_REG</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_EOC_INJ_REG</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630ea39ef50d09363cf94db58782b8eb0b801"/>HAL_ADC_STATE_EOC_INJ_REG</entry><entry>
+<para>Injected and regular conversion are completed </para>
+</entry></row><row><entry><indexterm><primary>HAL_ADC_STATE_AWD</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_STATE_AWD</secondary></indexterm>
+<anchor xml:id="_group___a_d_c_1ggafd66db22d830742b403c1f7f32d4630eaedb3b42980def95403baae66c3b5a0c9"/>HAL_ADC_STATE_AWD</entry><entry>
+<para>ADC state analog watchdog </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__adc_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__adc_8h_source">stm32f4xx_hal_adc.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___a_d_c_1gaebd9d3c15de8c92e92e18ee38d1bd998"/><section>
+    <title>HAL_ADC_AnalogWDGConfig()</title>
+<indexterm><primary>HAL_ADC_AnalogWDGConfig</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_AnalogWDGConfig</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_AnalogWDGConfig (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, <link linkend="_struct_a_d_c___analog_w_d_g_conf_type_def">ADC_AnalogWDGConfTypeDef</link> * AnalogWDGConfig)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gac6f70c4927204d6f50ab44c8e4800106"/><section>
+    <title>HAL_ADC_ConfigChannel()</title>
+<indexterm><primary>HAL_ADC_ConfigChannel</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_ConfigChannel</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_ConfigChannel (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, <link linkend="_struct_a_d_c___channel_conf_type_def">ADC_ChannelConfTypeDef</link> * sConfig)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gaf20a88180db1113be1e89266917d148b"/><section>
+    <title>HAL_ADC_ConvCpltCallback()</title>
+<indexterm><primary>HAL_ADC_ConvCpltCallback</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_ConvCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_ConvCpltCallback (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gad7e3dafc08886b97b9c9e23267645b9e"/><section>
+    <title>HAL_ADC_ConvHalfCpltCallback()</title>
+<indexterm><primary>HAL_ADC_ConvHalfCpltCallback</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_ConvHalfCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_ConvHalfCpltCallback (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga165940b437c6a8843c6032199adbf0a8"/><section>
+    <title>HAL_ADC_DeInit()</title>
+<indexterm><primary>HAL_ADC_DeInit</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_DeInit (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gadea1a55c5199d5cb4cfc1fdcd32be1b2"/><section>
+    <title>HAL_ADC_ErrorCallback()</title>
+<indexterm><primary>HAL_ADC_ErrorCallback</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_ErrorCallback</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_ErrorCallback (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga3a546afb96f473f266573783f37ee8af"/><section>
+    <title>HAL_ADC_GetError()</title>
+<indexterm><primary>HAL_ADC_GetError</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_GetError</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_ADC_GetError (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gab890563da42bb22b95755506869dd452"/><section>
+    <title>HAL_ADC_GetState()</title>
+<indexterm><primary>HAL_ADC_GetState</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___a_d_c_1gafd66db22d830742b403c1f7f32d4630e">HAL_ADC_StateTypeDef</link> HAL_ADC_GetState (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga421008ca3885339acb12f400958ffbe4"/><section>
+    <title>HAL_ADC_GetValue()</title>
+<indexterm><primary>HAL_ADC_GetValue</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_GetValue</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_ADC_GetValue (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga33ddb73d4880bd425aaa43c5c52bb13a"/><section>
+    <title>HAL_ADC_Init()</title>
+<indexterm><primary>HAL_ADC_Init</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_Init (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga28aaa5662eced92c5a4d23d8bd6b29ca"/><section>
+    <title>HAL_ADC_IRQHandler()</title>
+<indexterm><primary>HAL_ADC_IRQHandler</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_IRQHandler (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga8cf5c59c6355fe7cf3c10816c761b9c2"/><section>
+    <title>HAL_ADC_LevelOutOfWindowCallback()</title>
+<indexterm><primary>HAL_ADC_LevelOutOfWindowCallback</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_LevelOutOfWindowCallback</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_LevelOutOfWindowCallback (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga39b0f8e80268ab3e660ead921ad4b22f"/><section>
+    <title>HAL_ADC_MspDeInit()</title>
+<indexterm><primary>HAL_ADC_MspDeInit</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_MspDeInit (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gaa30863492d5c3103e3e8ce8a63dadd07"/><section>
+    <title>HAL_ADC_MspInit()</title>
+<indexterm><primary>HAL_ADC_MspInit</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_MspInit (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gad9c0b5763ab75357407e22d310befc30"/><section>
+    <title>HAL_ADC_PollForConversion()</title>
+<indexterm><primary>HAL_ADC_PollForConversion</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_PollForConversion</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_PollForConversion (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga139d1a4ab69bea84cb39918840e1a64e"/><section>
+    <title>HAL_ADC_PollForEvent()</title>
+<indexterm><primary>HAL_ADC_PollForEvent</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_PollForEvent</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_PollForEvent (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, uint32_t EventType, uint32_t Timeout)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga193666e3bde978627c9ee1e2073c69c0"/><section>
+    <title>HAL_ADC_Start()</title>
+<indexterm><primary>HAL_ADC_Start</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_Start</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_Start (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga7c3ef5532dddebe7fd76bb8f589d11fd"/><section>
+    <title>HAL_ADC_Start_DMA()</title>
+<indexterm><primary>HAL_ADC_Start_DMA</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_Start_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_Start_DMA (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc, uint32_t * pData, uint32_t Length)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gaeb53035f47a937d54de2164d6c939a04"/><section>
+    <title>HAL_ADC_Start_IT()</title>
+<indexterm><primary>HAL_ADC_Start_IT</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_Start_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_Start_IT (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1ga1b00cb85fc6c0f40fabd02701528711d"/><section>
+    <title>HAL_ADC_Stop()</title>
+<indexterm><primary>HAL_ADC_Stop</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_Stop</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_Stop (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gae113bcf7fc3d8ce07d68403bb5a11560"/><section>
+    <title>HAL_ADC_Stop_DMA()</title>
+<indexterm><primary>HAL_ADC_Stop_DMA</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_Stop_DMA</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_Stop_DMA (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+<anchor xml:id="_group___a_d_c_1gae44e6d3d0d9c60897daa7ccfd368952c"/><section>
+    <title>HAL_ADC_Stop_IT()</title>
+<indexterm><primary>HAL_ADC_Stop_IT</primary><secondary>ADC</secondary></indexterm>
+<indexterm><primary>ADC</primary><secondary>HAL_ADC_Stop_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_ADC_Stop_IT (<link linkend="_struct_a_d_c___handle_type_def">ADC_HandleTypeDef</link> * hadc)</computeroutput></para></section>
+</section>
+</section>

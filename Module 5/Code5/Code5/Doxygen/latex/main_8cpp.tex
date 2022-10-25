@@ -1,0 +1,108 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include \char`\"{}shared.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}NHD\+\_\+0216\+HZ.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pindef.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f401xe.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a34b04bd23b07b485921a728ad0805ac4}\label{main_8cpp_a34b04bd23b07b485921a728ad0805ac4}} 
+\#define {\bfseries MAIN}
+\item 
+\mbox{\Hypertarget{main_8cpp_add1c370cc3193ef37474f000a2b982bb}\label{main_8cpp_add1c370cc3193ef37474f000a2b982bb}} 
+\#define {\bfseries PWM1}~PA\+\_\+8
+\item 
+\mbox{\Hypertarget{main_8cpp_a8c197a7808240f8f825237f4bf97a987}\label{main_8cpp_a8c197a7808240f8f825237f4bf97a987}} 
+\#define {\bfseries PWM2}~PB\+\_\+10
+\item 
+\mbox{\Hypertarget{main_8cpp_a173be812217c5c06e6ba1dda15fe3d00}\label{main_8cpp_a173be812217c5c06e6ba1dda15fe3d00}} 
+\#define {\bfseries ADC\+\_\+\+IN0}~PA\+\_\+0
+\item 
+\mbox{\Hypertarget{main_8cpp_ab15e6207c61695ffa4b0992cf64a3b9b}\label{main_8cpp_ab15e6207c61695ffa4b0992cf64a3b9b}} 
+\#define {\bfseries ADC\+\_\+\+IN1}~PA\+\_\+1
+\item 
+\mbox{\Hypertarget{main_8cpp_a37171bacca2b042cee8012000f431ef0}\label{main_8cpp_a37171bacca2b042cee8012000f431ef0}} 
+\#define {\bfseries ADC\+\_\+\+IN2}~PA\+\_\+4
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_aa8ec57b9932c343362ddae26e07364ac}\label{main_8cpp_aa8ec57b9932c343362ddae26e07364ac}} 
+NHD\+\_\+0216\+HZ {\bfseries lcd} (SPI\+\_\+\+CS, SPI\+\_\+\+MOSI, SPI\+\_\+\+SCLK)
+\item 
+\mbox{\Hypertarget{main_8cpp_af89661b56163682db67ba15be37ce8bb}\label{main_8cpp_af89661b56163682db67ba15be37ce8bb}} 
+Analog\+In {\bfseries vref} (ADC\+\_\+\+IN0)
+\item 
+\mbox{\Hypertarget{main_8cpp_ae08ac341e24f05e8e16d481112b828af}\label{main_8cpp_ae08ac341e24f05e8e16d481112b828af}} 
+Analog\+In {\bfseries virt} (ADC\+\_\+\+IN1)
+\item 
+\mbox{\Hypertarget{main_8cpp_a20eefa09c1d3173ef26b86439b84e618}\label{main_8cpp_a20eefa09c1d3173ef26b86439b84e618}} 
+Analog\+In {\bfseries int\+\_\+temp} (ADC\+\_\+\+IN2)
+\item 
+\mbox{\Hypertarget{main_8cpp_a88ea1243a39f85b37516ec71507b04f5}\label{main_8cpp_a88ea1243a39f85b37516ec71507b04f5}} 
+Pwm\+Out {\bfseries current\+\_\+loop} (PWM1)
+\item 
+\mbox{\Hypertarget{main_8cpp_ad800603085b0ffab269f029753ce0a53}\label{main_8cpp_ad800603085b0ffab269f029753ce0a53}} 
+Pwm\+Out {\bfseries pulse\+\_\+out} (PWM2)
+\item 
+\mbox{\Hypertarget{main_8cpp_a65fb9e6c0e78f4fa31deb1d1ada9134f}\label{main_8cpp_a65fb9e6c0e78f4fa31deb1d1ada9134f}} 
+void {\bfseries read\+\_\+adc} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item reads adc value from ADC1 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a25d50c6987a26c14c9f4348f82f20640}\label{main_8cpp_a25d50c6987a26c14c9f4348f82f20640}} 
+Ticker {\bfseries tick}
+\item 
+\mbox{\Hypertarget{main_8cpp_a31980cc4f25a950d2587a52323bd5f1e}\label{main_8cpp_a31980cc4f25a950d2587a52323bd5f1e}} 
+const double {\bfseries MAX\+\_\+\+FLOW} = 333
+\item 
+\mbox{\Hypertarget{main_8cpp_aff334207c00782c695a66d68a74af51d}\label{main_8cpp_aff334207c00782c695a66d68a74af51d}} 
+const double {\bfseries MAX\+\_\+\+FREQ} = 2000
+\item 
+\mbox{\Hypertarget{main_8cpp_a0c4b048d4c61a8887727c364e3f2e9ea}\label{main_8cpp_a0c4b048d4c61a8887727c364e3f2e9ea}} 
+const double {\bfseries MIN\+\_\+\+FLOW} = 1.\+7
+\item 
+\mbox{\Hypertarget{main_8cpp_a0459969589f28ca533a5ef6c017ecf8b}\label{main_8cpp_a0459969589f28ca533a5ef6c017ecf8b}} 
+const double {\bfseries MIN\+\_\+\+FREQ} = 10
+\item 
+\mbox{\Hypertarget{main_8cpp_a1bb70944bad0e4489131b56637076304}\label{main_8cpp_a1bb70944bad0e4489131b56637076304}} 
+double {\bfseries adc\+\_\+data} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_ad731baeaf0c0079f0edec08b15e46874}\label{main_8cpp_ad731baeaf0c0079f0edec08b15e46874}} 
+uint16\+\_\+t {\bfseries sample} \mbox{[}SMP\+\_\+\+CNT\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8cpp_aca704855deef9d79189f9b48785d16cd}\label{main_8cpp_aca704855deef9d79189f9b48785d16cd}} 
+uint16\+\_\+t $\ast$ {\bfseries sample\+PTR} = sample
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+
+
+\DoxyHorRuler{0}
+ -- ECEN 5803 Mastering Embedded System Architecture -- -- Project 1 Module 5 -- -- Microcontroller Firmware -- -- \mbox{\hyperlink{main_8cpp}{main.\+cpp}} -- \hypertarget{main_8cpp_autotoc_md0}{}\doxysubsubsection{–                                                                           –}\label{main_8cpp_autotoc_md0}
+-- \hypertarget{main_8cpp_autotoc_md1}{}\doxysubsubsection{–  Designed for\+:  University of Colorado at Boulder}\label{main_8cpp_autotoc_md1}
+-- ~\newline
+ -- Designed by\+: Tim Scherr \hypertarget{main_8cpp_autotoc_md2}{}\doxysubsubsection{–  Revised by\+:  Mark Sherman}\label{main_8cpp_autotoc_md2}
+-- Version\+: 3.\+0 -- Date of current revision\+: 2022-\/07-\/09 ~\newline
+ -- Target Microcontroller\+: ST STM32\+F401\+RE -- Tools used\+: ARM mbed compiler -- ARM mbed SDK \hypertarget{main_8cpp_autotoc_md3}{}\doxysubsubsection{–              ST Nucleo STM32\+F401\+RE Board}\label{main_8cpp_autotoc_md3}
+-- -- Functional Description\+: Main code file generated by mbed, and then \hypertarget{main_8cpp_autotoc_md4}{}\doxysubsubsection{–                           modified to implement a super loop bare metal OS.}\label{main_8cpp_autotoc_md4}
+\hypertarget{main_8cpp_autotoc_md5}{}\doxysubsubsection{–      Copyright (c) 2015, 2016, 2022 Tim Scherr  All rights reserved.}\label{main_8cpp_autotoc_md5}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Cyclical Executive Loop

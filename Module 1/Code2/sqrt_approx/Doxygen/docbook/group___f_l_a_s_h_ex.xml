@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___f_l_a_s_h_ex" xml:lang="en-US">
+<title>FLASHEx</title>
+<indexterm><primary>FLASHEx</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___f_l_a_s_h___exported___constants">FLASH Exported Constants</link></para>
+
+<para>FLASH Error source 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link></para>
+
+<para>FLASH Erase structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link></para>
+
+<para>FLASH Option Bytes Program structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___adv_o_b_program_init_type_def">FLASH_AdvOBProgramInitTypeDef</link></para>
+
+<para>FLASH Advanced Option Bytes Program structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1ga3e998fdfd05d4073fb9af251ad649531">HAL_FLASHEx_Erase</link> (<link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link> *pEraseInit, uint32_t *SectorError)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1gaf58c6764859e4febc21abe462dfb2615">HAL_FLASHEx_Erase_IT</link> (<link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link> *pEraseInit)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1ga001dd4a8defa9eb24a17c4df5953a41d">HAL_FLASHEx_OBProgram</link> (<link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link> *pOBInit)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_ex_1ga6d45d5442b8147533b1100ec40fe75d7">HAL_FLASHEx_OBGetConfig</link> (<link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link> *pOBInit)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1gaf5556c723d5dc6ab06ebd6faf54c6c03">HAL_FLASHEx_AdvOBProgram</link> (<link linkend="_struct_f_l_a_s_h___adv_o_b_program_init_type_def">FLASH_AdvOBProgramInitTypeDef</link> *pAdvOBInit)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_ex_1ga5f79b74133fef058a72eae9c9eea4d36">HAL_FLASHEx_AdvOBGetConfig</link> (<link linkend="_struct_f_l_a_s_h___adv_o_b_program_init_type_def">FLASH_AdvOBProgramInitTypeDef</link> *pAdvOBInit)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1ga78992850d1e2e36ec7f01c1063320499">HAL_FLASHEx_OB_SelectPCROP</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1gab642acc010e4d32e293d7c6faa70b0a3">HAL_FLASHEx_OB_DeSelectPCROP</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_ex_1ga98c9d95cedcc4bfd39cdee82d07c0792">FLASH_Erase_Sector</link> (uint32_t Sector, uint8_t VoltageRange)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___f_l_a_s_h_ex_1ga98c9d95cedcc4bfd39cdee82d07c0792"/><section>
+    <title>FLASH_Erase_Sector()</title>
+<indexterm><primary>FLASH_Erase_Sector</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>FLASH_Erase_Sector</secondary></indexterm>
+<para><computeroutput>void FLASH_Erase_Sector (uint32_t Sector, uint8_t VoltageRange)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_ex_1ga5f79b74133fef058a72eae9c9eea4d36"/><section>
+    <title>HAL_FLASHEx_AdvOBGetConfig()</title>
+<indexterm><primary>HAL_FLASHEx_AdvOBGetConfig</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>HAL_FLASHEx_AdvOBGetConfig</secondary></indexterm>
+<para><computeroutput>void HAL_FLASHEx_AdvOBGetConfig (<link linkend="_struct_f_l_a_s_h___adv_o_b_program_init_type_def">FLASH_AdvOBProgramInitTypeDef</link> * pAdvOBInit)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_ex_1gaf5556c723d5dc6ab06ebd6faf54c6c03"/><section>
+    <title>HAL_FLASHEx_AdvOBProgram()</title>
+<indexterm><primary>HAL_FLASHEx_AdvOBProgram</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>HAL_FLASHEx_AdvOBProgram</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASHEx_AdvOBProgram (<link linkend="_struct_f_l_a_s_h___adv_o_b_program_init_type_def">FLASH_AdvOBProgramInitTypeDef</link> * pAdvOBInit)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_ex_1ga3e998fdfd05d4073fb9af251ad649531"/><section>
+    <title>HAL_FLASHEx_Erase()</title>
+<indexterm><primary>HAL_FLASHEx_Erase</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>HAL_FLASHEx_Erase</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASHEx_Erase (<link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link> * pEraseInit, uint32_t * SectorError)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_ex_1gaf58c6764859e4febc21abe462dfb2615"/><section>
+    <title>HAL_FLASHEx_Erase_IT()</title>
+<indexterm><primary>HAL_FLASHEx_Erase_IT</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>HAL_FLASHEx_Erase_IT</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASHEx_Erase_IT (<link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link> * pEraseInit)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_ex_1gab642acc010e4d32e293d7c6faa70b0a3"/><section>
+    <title>HAL_FLASHEx_OB_DeSelectPCROP()</title>
+<indexterm><primary>HAL_FLASHEx_OB_DeSelectPCROP</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>HAL_FLASHEx_OB_DeSelectPCROP</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASHEx_OB_DeSelectPCROP (void )</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_ex_1ga78992850d1e2e36ec7f01c1063320499"/><section>
+    <title>HAL_FLASHEx_OB_SelectPCROP()</title>
+<indexterm><primary>HAL_FLASHEx_OB_SelectPCROP</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>HAL_FLASHEx_OB_SelectPCROP</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASHEx_OB_SelectPCROP (void )</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_ex_1ga6d45d5442b8147533b1100ec40fe75d7"/><section>
+    <title>HAL_FLASHEx_OBGetConfig()</title>
+<indexterm><primary>HAL_FLASHEx_OBGetConfig</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>HAL_FLASHEx_OBGetConfig</secondary></indexterm>
+<para><computeroutput>void HAL_FLASHEx_OBGetConfig (<link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link> * pOBInit)</computeroutput></para></section>
+<anchor xml:id="_group___f_l_a_s_h_ex_1ga001dd4a8defa9eb24a17c4df5953a41d"/><section>
+    <title>HAL_FLASHEx_OBProgram()</title>
+<indexterm><primary>HAL_FLASHEx_OBProgram</primary><secondary>FLASHEx</secondary></indexterm>
+<indexterm><primary>FLASHEx</primary><secondary>HAL_FLASHEx_OBProgram</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_FLASHEx_OBProgram (<link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link> * pOBInit)</computeroutput></para></section>
+</section>
+</section>

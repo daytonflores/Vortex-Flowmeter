@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__iwdg_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_iwdg.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_iwdg.h</primary></indexterm>
+<para>
+
+<para>Header file of IWDG HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_i_w_d_g___init_type_def">IWDG_InitTypeDef</link></para>
+
+<para>IWDG Init structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link></para>
+
+<para>IWDG handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___registers___bit_mask_1ga830a9a1bad16c7043c86545f4c159a50">KR_KEY_RELOAD</link>   ((uint32_t)0xAAAA)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___registers___bit_mask_1gaeaa0dd2da3f9d0cce0d708cfff1df545">KR_KEY_ENABLE</link>   ((uint32_t)0xCCCC)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___registers___bit_mask_1gadf1ad39b6aa3d426f6e7fbf29d088aa5">KR_KEY_EWA</link>   ((uint32_t)0x5555)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___registers___bit_mask_1gae9cf62ac0d5eda2dd2417c280237e446">KR_KEY_DWA</link>   ((uint32_t)0x0000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___flag__definition_1gae20afcf399fad1534e79a8d30ea86c9c">IWDG_FLAG_PVU</link>   ((uint32_t)0x0001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___flag__definition_1ga3731bf2711c234ffe5b405fb6634ebca">IWDG_FLAG_RVU</link>   ((uint32_t)0x0002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___flag__definition_1ga5be9ae9ba267cf09a00523ef3e219293">IS_IWDG_FLAG</link>(FLAG)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___prescaler_1ga470bb195d35ef7a0b75164c228b4ee69">IWDG_PRESCALER_4</link>   ((uint8_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___prescaler_1ga5f00866f823ee700005e8a753b28ad75">IWDG_PRESCALER_8</link>   ((uint8_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___prescaler_1gab3eb3c6a10facc8b0dc7c33608f6e129">IWDG_PRESCALER_16</link>   ((uint8_t)0x02)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___prescaler_1gac3f33494fb7aaa2845ac106858394e03">IWDG_PRESCALER_32</link>   ((uint8_t)0x03)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___prescaler_1ga52a956c645ce59312c84cbe37b2b20e4">IWDG_PRESCALER_64</link>   ((uint8_t)0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___prescaler_1ga17901d4e3e52af620acbbb146fd79264">IWDG_PRESCALER_128</link>   ((uint8_t)0x05)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___prescaler_1ga885221d5bb09157c9e953a1be38556f0">IWDG_PRESCALER_256</link>   ((uint8_t)0x06)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___prescaler_1gab1e0695c1a22840d5be7c7fad283f4ba">IS_IWDG_PRESCALER</link>(PRESCALER)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g___reload___value_1ga7c319e96bded8e3c38c6a42a1b335c68">IS_IWDG_RELOAD</link>(RELOAD)   ((RELOAD) &lt;= 0xFFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga9990235f5c32f26ed6455a30bc14ee65">__HAL_IWDG_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5afc0696c27fdaa4f7dbe7f08a9b5d6030">HAL_IWDG_STATE_RESET</link>)</para>
+
+<para>Reset IWDG handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga5914aff5b85e3151bb75377a32d83d6a">__HAL_IWDG_START</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;KR |=  <link linkend="_group___i_w_d_g___registers___bit_mask_1gaeaa0dd2da3f9d0cce0d708cfff1df545">KR_KEY_ENABLE</link>)</para>
+
+<para>Enables the IWDG peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1gac0eaf381e60a654d6b51c43f645e088f">__HAL_IWDG_RELOAD_COUNTER</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1ga830a9a1bad16c7043c86545f4c159a50">KR_KEY_RELOAD</link>)</para>
+
+<para>Reloads IWDG counter with value defined in the reload register (write access to IWDG_PR and IWDG_RLR registers disabled). </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga425b3021a67a13ce98cf58dd277b5d5b">__HAL_IWDG_ENABLE_WRITE_ACCESS</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1gadf1ad39b6aa3d426f6e7fbf29d088aa5">KR_KEY_EWA</link>)</para>
+
+<para>Enables write access to IWDG_PR and IWDG_RLR registers. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga03e0f29f0f6f15c2615b471d67d80a44">__HAL_IWDG_DISABLE_WRITE_ACCESS</link>(__HANDLE__)   (((__HANDLE__)-&gt;Instance-&gt;KR) |= <link linkend="_group___i_w_d_g___registers___bit_mask_1gae9cf62ac0d5eda2dd2417c280237e446">KR_KEY_DWA</link>)</para>
+
+<para>Disables write access to IWDG_PR and IWDG_RLR registers. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1gae13d68bc29e7d7798cecf9360ac79fed">__HAL_IWDG_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Gets the selected IWDG&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_w_d_g_1ga6e4e701321ad8037d4e2feab85d49a8b">__HAL_IWDG_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</para>
+
+<para>Clears the IWDG&apos;s pending flags. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___i_w_d_g_1ga61699dc6f24a3edecddd16018560d0e5">HAL_IWDG_StateTypeDef</link> { 
+<link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5afc0696c27fdaa4f7dbe7f08a9b5d6030">HAL_IWDG_STATE_RESET</link> = 0x00
+, <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a8aad8fa61ebdbad5411e17f7fdd35803">HAL_IWDG_STATE_READY</link> = 0x01
+, <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a4ba9c9db0e319b41d19d5ad7e5b51c77">HAL_IWDG_STATE_BUSY</link> = 0x02
+, <link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a415081e774deff4c59801adf358e2683">HAL_IWDG_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___i_w_d_g_1gga61699dc6f24a3edecddd16018560d0e5a79340b932fb1f3b536fd37ebdf7b6fb6">HAL_IWDG_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>IWDG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_w_d_g_1ga2e1669e60f2dc298fecaed919e7ae810">HAL_IWDG_Init</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_w_d_g_1gaf26b08d1a805d1dd515cafd0278c240c">HAL_IWDG_MspInit</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_w_d_g_1gaaa540681b7a6a4f7cc6b0b5497e6de46">HAL_IWDG_Start</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_w_d_g_1ga7e86236aea6d2f3638397fdf90333e4a">HAL_IWDG_Refresh</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i_w_d_g_1ga61699dc6f24a3edecddd16018560d0e5">HAL_IWDG_StateTypeDef</link> <link linkend="_group___i_w_d_g_1ga4b2f32b043612fdd1b68f806115d8de4">HAL_IWDG_GetState</link> (<link linkend="_struct_i_w_d_g___handle_type_def">IWDG_HandleTypeDef</link> *hiwdg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of IWDG HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__iwdg_8h_source">stm32f4xx_hal_iwdg.h</link>.</para>
+</section>
+</section>

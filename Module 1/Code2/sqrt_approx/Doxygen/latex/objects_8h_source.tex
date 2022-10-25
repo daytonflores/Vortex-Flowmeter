@@ -1,0 +1,111 @@
+\hypertarget{objects_8h_source}{}\doxysection{objects.\+h}
+\label{objects_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/TARGET\_STM/TARGET\_NUCLEO\_F401RE/objects.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/TARGET\_STM/TARGET\_NUCLEO\_F401RE/objects.h}}
+\mbox{\hyperlink{objects_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00002}00002 \textcolor{comment}{ *******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00003}00003 \textcolor{comment}{ * Copyright (c) 2014, STMicroelectronics}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00004}00004 \textcolor{comment}{ * All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00005}00005 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00006}00006 \textcolor{comment}{ * Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00007}00007 \textcolor{comment}{ * modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00008}00008 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00009}00009 \textcolor{comment}{ * 1. Redistributions of source code must retain the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00010}00010 \textcolor{comment}{ *    this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00011}00011 \textcolor{comment}{ * 2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00012}00012 \textcolor{comment}{ *    this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00013}00013 \textcolor{comment}{ *    and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00014}00014 \textcolor{comment}{ * 3. Neither the name of STMicroelectronics nor the names of its contributors}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00015}00015 \textcolor{comment}{ *    may be used to endorse or promote products derived from this software}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00016}00016 \textcolor{comment}{ *    without specific prior written permission.}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00017}00017 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00018}00018 \textcolor{comment}{ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00019}00019 \textcolor{comment}{ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00020}00020 \textcolor{comment}{ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00021}00021 \textcolor{comment}{ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00022}00022 \textcolor{comment}{ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00023}00023 \textcolor{comment}{ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00024}00024 \textcolor{comment}{ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00025}00025 \textcolor{comment}{ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00026}00026 \textcolor{comment}{ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00027}00027 \textcolor{comment}{ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00028}00028 \textcolor{comment}{ *******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00029}00029 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00030}00030 \textcolor{preprocessor}{\#ifndef MBED\_OBJECTS\_H}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00031}00031 \textcolor{preprocessor}{\#define MBED\_OBJECTS\_H}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00033}00033 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cmsis_8h}{cmsis.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00034}00034 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_port_names_8h}{PortNames.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00035}00035 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_peripheral_names_8h}{PeripheralNames.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00036}00036 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pin_names_8h}{PinNames.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00038}00038 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00039}00039 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00040}00040 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00042}\mbox{\hyperlink{structgpio__irq__s}{00042}} \textcolor{keyword}{struct }\mbox{\hyperlink{structgpio__irq__s}{gpio\_irq\_s}} \{}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00043}\mbox{\hyperlink{structgpio__irq__s_a05711b67574708db528a279abc67f80a}{00043}}     \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} \mbox{\hyperlink{structgpio__irq__s_a05711b67574708db528a279abc67f80a}{irq\_n}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00044}\mbox{\hyperlink{structgpio__irq__s_a3df2870f4b6ad8f90ff184a9e37bdab8}{00044}}     uint32\_t \mbox{\hyperlink{structgpio__irq__s_a3df2870f4b6ad8f90ff184a9e37bdab8}{irq\_index}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00045}\mbox{\hyperlink{structgpio__irq__s_af7c0c7abdee8faa6f35a8fb850dadbb3}{00045}}     uint32\_t \mbox{\hyperlink{structgpio__irq__s_af7c0c7abdee8faa6f35a8fb850dadbb3}{event}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00046}\mbox{\hyperlink{structgpio__irq__s_a1f46a3d0fd63bcb5591dc1db407300aa}{00046}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structgpio__irq__s_a1f46a3d0fd63bcb5591dc1db407300aa}{pin}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00047}00047 \};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00049}\mbox{\hyperlink{structport__s}{00049}} \textcolor{keyword}{struct }\mbox{\hyperlink{structport__s}{port\_s}} \{}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00050}\mbox{\hyperlink{structport__s_aee39efc434a1663ab3a030d3e1214c32}{00050}}     \mbox{\hyperlink{_port_names_8h_a59d6d8d6337e04ac7ad3dc96eb920416}{PortName}} \mbox{\hyperlink{structport__s_aee39efc434a1663ab3a030d3e1214c32}{port}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00051}\mbox{\hyperlink{structport__s_ad3bee21df6875eeccd25d3c577e0600a}{00051}}     uint32\_t \mbox{\hyperlink{structport__s_ad3bee21df6875eeccd25d3c577e0600a}{mask}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00052}\mbox{\hyperlink{structport__s_a924ab95925fc83b38cba3ac2d8d7e9aa}{00052}}     \mbox{\hyperlink{_pin_names_8h_a8ff912d511000d542e6ad34966166f38}{PinDirection}} \mbox{\hyperlink{structport__s_a924ab95925fc83b38cba3ac2d8d7e9aa}{direction}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00053}\mbox{\hyperlink{structport__s_afec2bad3c83f4575253f573be7e7434a}{00053}}     \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *\mbox{\hyperlink{structport__s_afec2bad3c83f4575253f573be7e7434a}{reg\_in}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00054}\mbox{\hyperlink{structport__s_a6fb0279fd02d93d6f62aff070eb9a93c}{00054}}     \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *\mbox{\hyperlink{structport__s_a6fb0279fd02d93d6f62aff070eb9a93c}{reg\_out}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00055}00055 \};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00057}\mbox{\hyperlink{structanalogin__s}{00057}} \textcolor{keyword}{struct }\mbox{\hyperlink{structanalogin__s}{analogin\_s}} \{}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00058}\mbox{\hyperlink{structanalogin__s_a6731f0d10bdcf87546f86583398256c2}{00058}}     \mbox{\hyperlink{_peripheral_names_8h_ad006a1e84e1ac337633cb06868e31c17}{ADCName}} \mbox{\hyperlink{structanalogin__s_a6731f0d10bdcf87546f86583398256c2}{adc}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00059}\mbox{\hyperlink{structanalogin__s_a1f46a3d0fd63bcb5591dc1db407300aa}{00059}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structanalogin__s_a1f46a3d0fd63bcb5591dc1db407300aa}{pin}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00060}00060 \};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00062}\mbox{\hyperlink{structserial__s}{00062}} \textcolor{keyword}{struct }\mbox{\hyperlink{structserial__s}{serial\_s}} \{}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00063}\mbox{\hyperlink{structserial__s_ae0f00c2ad0d833ebd0e62c00e4cf3b04}{00063}}     \mbox{\hyperlink{_peripheral_names_8h_a5eef3fdc1a1c7363ef67d4c8b94eef23}{UARTName}} \mbox{\hyperlink{structserial__s_ae0f00c2ad0d833ebd0e62c00e4cf3b04}{uart}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00064}\mbox{\hyperlink{structserial__s_a750b5d744c39a06bfb13e6eb010e35d0}{00064}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structserial__s_a750b5d744c39a06bfb13e6eb010e35d0}{index}}; \textcolor{comment}{// Used by irq}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00065}\mbox{\hyperlink{structserial__s_ac4f06ea26ed6bd7ae83b92d64ac10b78}{00065}}     uint32\_t \mbox{\hyperlink{structserial__s_ac4f06ea26ed6bd7ae83b92d64ac10b78}{baudrate}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00066}\mbox{\hyperlink{structserial__s_ac4e73d32cb273fd68e683d74a422a84a}{00066}}     uint32\_t \mbox{\hyperlink{structserial__s_ac4e73d32cb273fd68e683d74a422a84a}{databits}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00067}\mbox{\hyperlink{structserial__s_ab01ec5011e5801122f0ac112fb0bac25}{00067}}     uint32\_t \mbox{\hyperlink{structserial__s_ab01ec5011e5801122f0ac112fb0bac25}{stopbits}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00068}\mbox{\hyperlink{structserial__s_a6d43f360b3d22d80ec7f4521b1da5998}{00068}}     uint32\_t \mbox{\hyperlink{structserial__s_a6d43f360b3d22d80ec7f4521b1da5998}{parity}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00069}\mbox{\hyperlink{structserial__s_a4090ec27a3d5a498bede52d6fc60a1d1}{00069}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structserial__s_a4090ec27a3d5a498bede52d6fc60a1d1}{pin\_tx}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00070}\mbox{\hyperlink{structserial__s_a13e2f2abc46d7e450eda42eebf20314d}{00070}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structserial__s_a13e2f2abc46d7e450eda42eebf20314d}{pin\_rx}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00071}00071 \};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00073}\mbox{\hyperlink{structspi__s}{00073}} \textcolor{keyword}{struct }\mbox{\hyperlink{structspi__s}{spi\_s}} \{}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00074}\mbox{\hyperlink{structspi__s_a9d6f4e46810c7347094bdf78d0f0cd09}{00074}}     \mbox{\hyperlink{_peripheral_names_8h_a5c1a3bc20ef2aa223f65ce7a99b678dc}{SPIName}} \mbox{\hyperlink{structspi__s_a9d6f4e46810c7347094bdf78d0f0cd09}{spi}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00075}\mbox{\hyperlink{structspi__s_afeda3c90a255fe7e4b1e99b4308cce2c}{00075}}     uint32\_t \mbox{\hyperlink{structspi__s_afeda3c90a255fe7e4b1e99b4308cce2c}{bits}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00076}\mbox{\hyperlink{structspi__s_a0247600e50fd88ebd71e99f6df045f96}{00076}}     uint32\_t \mbox{\hyperlink{structspi__s_a0247600e50fd88ebd71e99f6df045f96}{cpol}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00077}\mbox{\hyperlink{structspi__s_aef633789b78444081686206b26e045c5}{00077}}     uint32\_t \mbox{\hyperlink{structspi__s_aef633789b78444081686206b26e045c5}{cpha}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00078}\mbox{\hyperlink{structspi__s_a6b29e4f37f4482274af785ad5ffe96a7}{00078}}     uint32\_t \mbox{\hyperlink{structspi__s_a6b29e4f37f4482274af785ad5ffe96a7}{mode}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00079}\mbox{\hyperlink{structspi__s_a3b65e4498650ba52607edeaba2f2fbde}{00079}}     uint32\_t \mbox{\hyperlink{structspi__s_a3b65e4498650ba52607edeaba2f2fbde}{nss}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00080}\mbox{\hyperlink{structspi__s_aa3cb4f500952c1d319dc6716cf540f5a}{00080}}     uint32\_t \mbox{\hyperlink{structspi__s_aa3cb4f500952c1d319dc6716cf540f5a}{br\_presc}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00081}\mbox{\hyperlink{structspi__s_adccc894e838555fb2a24d75d54862d59}{00081}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structspi__s_adccc894e838555fb2a24d75d54862d59}{pin\_miso}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00082}\mbox{\hyperlink{structspi__s_ae787e6d0fc7990f56004f12a52b727d9}{00082}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structspi__s_ae787e6d0fc7990f56004f12a52b727d9}{pin\_mosi}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00083}\mbox{\hyperlink{structspi__s_aad959e32c2883368f867a55c3b46cb2c}{00083}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structspi__s_aad959e32c2883368f867a55c3b46cb2c}{pin\_sclk}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00084}\mbox{\hyperlink{structspi__s_aa6d8e9578d8c4a950de7b264aa9b5dd4}{00084}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structspi__s_aa6d8e9578d8c4a950de7b264aa9b5dd4}{pin\_ssel}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00085}00085 \};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00087}\mbox{\hyperlink{structi2c__s}{00087}} \textcolor{keyword}{struct }\mbox{\hyperlink{structi2c__s}{i2c\_s}} \{}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00088}\mbox{\hyperlink{structi2c__s_a7507792682ed519b71de7cf37156f39b}{00088}}     \mbox{\hyperlink{_peripheral_names_8h_a862d0f364c14e50ed5ec6013efd7bc37}{I2CName}}  \mbox{\hyperlink{structi2c__s_a7507792682ed519b71de7cf37156f39b}{i2c}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00089}\mbox{\hyperlink{structi2c__s_a3ecf27a911a4f544415a4fefbe5f9103}{00089}}     uint32\_t \mbox{\hyperlink{structi2c__s_a3ecf27a911a4f544415a4fefbe5f9103}{slave}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00090}00090 \};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00092}\mbox{\hyperlink{structpwmout__s}{00092}} \textcolor{keyword}{struct }\mbox{\hyperlink{structpwmout__s}{pwmout\_s}} \{}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00093}\mbox{\hyperlink{structpwmout__s_abc57d71df1be863eb4c3dde0aed40792}{00093}}     \mbox{\hyperlink{_peripheral_names_8h_a82d9c7d9104cac5a0dbed541471ea395}{PWMName}} \mbox{\hyperlink{structpwmout__s_abc57d71df1be863eb4c3dde0aed40792}{pwm}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00094}\mbox{\hyperlink{structpwmout__s_a1f46a3d0fd63bcb5591dc1db407300aa}{00094}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} \mbox{\hyperlink{structpwmout__s_a1f46a3d0fd63bcb5591dc1db407300aa}{pin}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00095}\mbox{\hyperlink{structpwmout__s_a81b43df06332b4fef558297592bb7ff1}{00095}}     uint32\_t \mbox{\hyperlink{structpwmout__s_a81b43df06332b4fef558297592bb7ff1}{period}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00096}\mbox{\hyperlink{structpwmout__s_a8c3654387c1e970a4c60b809d74e344d}{00096}}     uint32\_t \mbox{\hyperlink{structpwmout__s_a8c3654387c1e970a4c60b809d74e344d}{pulse}};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00097}00097 \};}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00099}00099 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gpio__object_8h}{gpio\_object.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00101}00101 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00102}00102 \}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00103}00103 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{objects_8h_source_l00105}00105 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

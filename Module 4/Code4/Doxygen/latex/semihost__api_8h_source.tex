@@ -1,0 +1,99 @@
+\hypertarget{semihost__api_8h_source}{}\doxysection{semihost\+\_\+api.\+h}
+\label{semihost__api_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/semihost\_api.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/semihost\_api.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_SEMIHOST\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_SEMIHOST\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}device.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}toolchain.h"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{23 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#if DEVICE\_SEMIHOST}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#ifndef \_\_CC\_ARM}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#if defined(\_\_ICCARM\_\_)}}
+\DoxyCodeLine{31 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \_\_semihost(\textcolor{keywordtype}{int} reason, \textcolor{keyword}{const} \textcolor{keywordtype}{void} *arg) \{}
+\DoxyCodeLine{32     \textcolor{keywordflow}{return} \_\_semihosting(reason, (\textcolor{keywordtype}{void}*)arg);}
+\DoxyCodeLine{33 \}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#ifdef \_\_thumb\_\_}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#   define AngelSWI            0xAB}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#   define AngelSWIInsn        "{}bkpt"{}}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#   define AngelSWIAsm          bkpt}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#   define AngelSWI            0x123456}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#   define AngelSWIInsn        "{}swi"{}}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#   define AngelSWIAsm          swi}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \_\_semihost(\textcolor{keywordtype}{int} reason, \textcolor{keyword}{const} \textcolor{keywordtype}{void} *arg) \{}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} value;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keyword}{asm} \textcolor{keyword}{volatile} (}
+\DoxyCodeLine{50        \textcolor{stringliteral}{"{}mov r0, \%1"{}}          \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{51        \textcolor{stringliteral}{"{}mov r1, \%2"{}}          \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{52        AngelSWIInsn \textcolor{stringliteral}{"{} \%a3"{}}   \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{53        \textcolor{stringliteral}{"{}mov \%0, r0"{}}}
+\DoxyCodeLine{54        : \textcolor{stringliteral}{"{}=r"{}} (value)                                         \textcolor{comment}{/* output operands             */}}
+\DoxyCodeLine{55        : \textcolor{stringliteral}{"{}r"{}} (reason), \textcolor{stringliteral}{"{}r"{}} (arg), \textcolor{stringliteral}{"{}i"{}} (AngelSWI)              \textcolor{comment}{/* input operands              */}}
+\DoxyCodeLine{56        : \textcolor{stringliteral}{"{}r0"{}}, \textcolor{stringliteral}{"{}r1"{}}, \textcolor{stringliteral}{"{}r2"{}}, \textcolor{stringliteral}{"{}r3"{}}, \textcolor{stringliteral}{"{}ip"{}}, \textcolor{stringliteral}{"{}lr"{}}, \textcolor{stringliteral}{"{}memory"{}}, \textcolor{stringliteral}{"{}cc"{}}   \textcolor{comment}{/* list of clobbered registers */}}
+\DoxyCodeLine{57     );}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{60 \}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#if DEVICE\_LOCALFILESYSTEM}}
+\DoxyCodeLine{65 FILEHANDLE semihost\_open(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* name, \textcolor{keywordtype}{int} openmode);}
+\DoxyCodeLine{66 \textcolor{keywordtype}{int} semihost\_close (FILEHANDLE fh);}
+\DoxyCodeLine{67 \textcolor{keywordtype}{int} semihost\_read  (FILEHANDLE fh, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* buffer, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length, \textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{68 \textcolor{keywordtype}{int} semihost\_write (FILEHANDLE fh, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* buffer, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length, \textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{69 \textcolor{keywordtype}{int} semihost\_ensure(FILEHANDLE fh);}
+\DoxyCodeLine{70 \textcolor{keywordtype}{long} semihost\_flen (FILEHANDLE fh);}
+\DoxyCodeLine{71 \textcolor{keywordtype}{int} semihost\_seek  (FILEHANDLE fh, \textcolor{keywordtype}{long} position);}
+\DoxyCodeLine{72 \textcolor{keywordtype}{int} semihost\_istty (FILEHANDLE fh);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keywordtype}{int} semihost\_remove(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{75 \textcolor{keywordtype}{int} semihost\_rename(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *old\_name, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *new\_name);}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{keywordtype}{int} semihost\_uid(\textcolor{keywordtype}{char} *uid);}
+\DoxyCodeLine{79 \textcolor{keywordtype}{int} semihost\_reset(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{80 \textcolor{keywordtype}{int} semihost\_vbus(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{81 \textcolor{keywordtype}{int} semihost\_powerdown(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{82 \textcolor{keywordtype}{int} semihost\_exit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keywordtype}{int} semihost\_connected(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{85 \textcolor{keywordtype}{int} semihost\_disabledebug(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{90 \}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

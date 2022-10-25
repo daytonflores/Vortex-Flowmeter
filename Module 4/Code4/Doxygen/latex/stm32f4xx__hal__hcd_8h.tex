@@ -1,0 +1,151 @@
+\hypertarget{stm32f4xx__hal__hcd_8h}{}\doxysection{C\+:/\+Users/dayton.flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/\+TARGET\+\_\+\+NUCLEO\+\_\+\+F401\+RE/stm32f4xx\+\_\+hal\+\_\+hcd.h File Reference}
+\label{stm32f4xx__hal__hcd_8h}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_hcd.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_hcd.h}}
+
+
+Header file of HCD HAL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+ll\+\_\+usb.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em HCD Handle Structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((USB\+\_\+\+Read\+Interrupts((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$GINTSTS) $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+IS\+\_\+\+INVALID\+\_\+\+INTERRUPT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(USB\+\_\+\+Read\+Interrupts((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance) == 0)
+\item 
+\#define {\bfseries IS\+\_\+\+HCD\+\_\+\+ALL\+\_\+\+INSTANCE}(INSTANCE)~(((INSTANCE) == USB\+\_\+\+OTG\+\_\+\+FS))
+\item 
+\#define {\bfseries HCD\+\_\+\+SPEED\+\_\+\+HIGH}~0
+\item 
+\#define {\bfseries HCD\+\_\+\+SPEED\+\_\+\+LOW}~2
+\item 
+\#define {\bfseries HCD\+\_\+\+SPEED\+\_\+\+FULL}~3
+\item 
+\#define {\bfseries HCD\+\_\+\+PHY\+\_\+\+ULPI}~1
+\item 
+\#define {\bfseries HCD\+\_\+\+PHY\+\_\+\+EMBEDDED}~2
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+ENABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~USB\+\_\+\+Enable\+Global\+Int ((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance)
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+DISABLE}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~USB\+\_\+\+Disable\+Global\+Int ((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance)
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+GET\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((USB\+\_\+\+Read\+Interrupts((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance) \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+CLEAR\+\_\+\+FLAG}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$GINTSTS) $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+IS\+\_\+\+INVALID\+\_\+\+INTERRUPT}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~(USB\+\_\+\+Read\+Interrupts((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance) == 0)
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+CLEAR\+\_\+\+HC\+\_\+\+INT}(chnum,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(USBx\+\_\+\+HC(chnum)-\/$>$HCINT = (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+MASK\+\_\+\+HALT\+\_\+\+HC\+\_\+\+INT}(chnum)~(USBx\+\_\+\+HC(chnum)-\/$>$HCINTMSK \&= $\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8f359b89c79fba4414e0838645f13a6b}{USB\+\_\+\+OTG\+\_\+\+HCINTMSK\+\_\+\+CHHM}})
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+UNMASK\+\_\+\+HALT\+\_\+\+HC\+\_\+\+INT}(chnum)~(USBx\+\_\+\+HC(chnum)-\/$>$HCINTMSK $\vert$= \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8f359b89c79fba4414e0838645f13a6b}{USB\+\_\+\+OTG\+\_\+\+HCINTMSK\+\_\+\+CHHM}})
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+MASK\+\_\+\+ACK\+\_\+\+HC\+\_\+\+INT}(chnum)~(USBx\+\_\+\+HC(chnum)-\/$>$HCINTMSK \&= $\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga21eb5c0fa8aafa12a725ab52f85023d1}{USB\+\_\+\+OTG\+\_\+\+HCINTMSK\+\_\+\+ACKM}})
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+HCD\+\_\+\+UNMASK\+\_\+\+ACK\+\_\+\+HC\+\_\+\+INT}(chnum)~(USBx\+\_\+\+HC(chnum)-\/$>$HCINTMSK $\vert$= \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga21eb5c0fa8aafa12a725ab52f85023d1}{USB\+\_\+\+OTG\+\_\+\+HCINTMSK\+\_\+\+ACKM}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_u_s_b___o_t_g___global_type_def}{USB\+\_\+\+OTG\+\_\+\+Global\+Type\+Def}} {\bfseries HCD\+\_\+\+Type\+Def}
+\item 
+typedef \mbox{\hyperlink{struct_u_s_b___o_t_g___cfg_type_def}{USB\+\_\+\+OTG\+\_\+\+Cfg\+Type\+Def}} {\bfseries HCD\+\_\+\+Init\+Type\+Def}
+\item 
+typedef \mbox{\hyperlink{struct_u_s_b___o_t_g___h_c_type_def}{USB\+\_\+\+OTG\+\_\+\+HCType\+Def}} {\bfseries HCD\+\_\+\+HCType\+Def}
+\item 
+typedef \mbox{\hyperlink{group___u_s_b___core_ga04b2bca306495588fec3a5245daa5221}{USB\+\_\+\+OTG\+\_\+\+URBState\+Type\+Def}} {\bfseries HCD\+\_\+\+URBState\+Type\+Def}
+\item 
+typedef \mbox{\hyperlink{group___u_s_b___core_ga8fa88c2e8e5fe41147028ba11af65294}{USB\+\_\+\+OTG\+\_\+\+HCState\+Type\+Def}} {\bfseries HCD\+\_\+\+HCState\+Type\+Def}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_c_d_ga0e764aeccc0cc959f3385794d42f6a75}\label{group___h_c_d_ga0e764aeccc0cc959f3385794d42f6a75}} 
+enum \mbox{\hyperlink{group___h_c_d_ga0e764aeccc0cc959f3385794d42f6a75}{HCD\+\_\+\+State\+Type\+Def}} \{ {\bfseries HCD\+\_\+\+READY} = 0x00
+, {\bfseries HCD\+\_\+\+ERROR} = 0x01
+, {\bfseries HCD\+\_\+\+BUSY} = 0x02
+, {\bfseries HCD\+\_\+\+TIMEOUT} = 0x03
+ \}
+\begin{DoxyCompactList}\small\item\em HCD Status structures structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+Init} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+De\+Init} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+HC\+\_\+\+Init} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd, uint8\+\_\+t ch\+\_\+num, uint8\+\_\+t epnum, uint8\+\_\+t dev\+\_\+address, uint8\+\_\+t speed, uint8\+\_\+t ep\+\_\+type, uint16\+\_\+t mps)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+HC\+\_\+\+Halt} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd, uint8\+\_\+t ch\+\_\+num)
+\item 
+void {\bfseries HAL\+\_\+\+HCD\+\_\+\+Msp\+Init} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+void {\bfseries HAL\+\_\+\+HCD\+\_\+\+Msp\+De\+Init} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+HC\+\_\+\+Submit\+Request} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd, uint8\+\_\+t pipe, uint8\+\_\+t direction, uint8\+\_\+t ep\+\_\+type, uint8\+\_\+t token, uint8\+\_\+t $\ast$pbuff, uint16\+\_\+t length, uint8\+\_\+t do\+\_\+ping)
+\item 
+void {\bfseries HAL\+\_\+\+HCD\+\_\+\+IRQHandler} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+void {\bfseries HAL\+\_\+\+HCD\+\_\+\+SOF\+\_\+\+Callback} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+void {\bfseries HAL\+\_\+\+HCD\+\_\+\+Connect\+\_\+\+Callback} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+void {\bfseries HAL\+\_\+\+HCD\+\_\+\+Disconnect\+\_\+\+Callback} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+void {\bfseries HAL\+\_\+\+HCD\+\_\+\+HC\+\_\+\+Notify\+URBChange\+\_\+\+Callback} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd, uint8\+\_\+t chnum, \mbox{\hyperlink{group___u_s_b___core_ga04b2bca306495588fec3a5245daa5221}{HCD\+\_\+\+URBState\+Type\+Def}} urb\+\_\+state)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+Reset\+Port} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+Start} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+Stop} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+\mbox{\hyperlink{group___h_c_d_ga0e764aeccc0cc959f3385794d42f6a75}{HCD\+\_\+\+State\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+\mbox{\hyperlink{group___u_s_b___core_ga04b2bca306495588fec3a5245daa5221}{HCD\+\_\+\+URBState\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+HC\+\_\+\+Get\+URBState} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd, uint8\+\_\+t chnum)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+HCD\+\_\+\+HC\+\_\+\+Get\+Xfer\+Count} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd, uint8\+\_\+t chnum)
+\item 
+\mbox{\hyperlink{group___u_s_b___core_ga8fa88c2e8e5fe41147028ba11af65294}{HCD\+\_\+\+HCState\+Type\+Def}} {\bfseries HAL\+\_\+\+HCD\+\_\+\+HC\+\_\+\+Get\+State} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd, uint8\+\_\+t chnum)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+HCD\+\_\+\+Get\+Current\+Frame} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+HCD\+\_\+\+Get\+Current\+Speed} (\mbox{\hyperlink{struct_h_c_d___handle_type_def}{HCD\+\_\+\+Handle\+Type\+Def}} $\ast$hhcd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of HCD HAL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0\+RC2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/May-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 

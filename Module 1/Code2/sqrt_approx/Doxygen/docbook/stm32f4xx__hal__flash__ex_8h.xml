@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__flash__ex_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_flash_ex.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_flash_ex.h</primary></indexterm>
+<para>
+
+<para>Header file of FLASH HAL Extension module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link></para>
+
+<para>FLASH Erase structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link></para>
+
+<para>FLASH Option Bytes Program structure definition. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___adv_o_b_program_init_type_def">FLASH_AdvOBProgramInitTypeDef</link></para>
+
+<para>FLASH Advanced Option Bytes Program structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___type___erase_1ga35d1514adec0ccd2f93cfd47f844d9ee">TYPEERASE_SECTORS</link>   ((uint32_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___type___erase_1gad155d920d19e0d37f71a46dce3227209">TYPEERASE_MASSERASE</link>   ((uint32_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___type___erase_1gaaf23e19025735e3e4a8e9009e14632ff">IS_TYPEERASE</link>(VALUE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___voltage___range_1ga5a1b1ceafccd5ab37c7cfbebc9527329">VOLTAGE_RANGE_1</link>   ((uint32_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___voltage___range_1ga1c0639cea187d17c4dad607fe124a94f">VOLTAGE_RANGE_2</link>   ((uint32_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___voltage___range_1ga45c6cc06a75f9dfd18e3d182cbe1387b">VOLTAGE_RANGE_3</link>   ((uint32_t)0x02)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___voltage___range_1ga98497e19f090f03d71a1537fbcfebfe9">VOLTAGE_RANGE_4</link>   ((uint32_t)0x03)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___voltage___range_1gaa9682aea9d9ceebca83c48e53f9f6028">IS_VOLTAGERANGE</link>(RANGE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___w_r_p___state_1gafa6275edfe88cfcc063761a6394e475a">WRPSTATE_DISABLE</link>   ((uint32_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___w_r_p___state_1ga1a6d2287155d773e15bb4e5561913171">WRPSTATE_ENABLE</link>   ((uint32_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___w_r_p___state_1ga8164622401a6cacf006679166de93c21">IS_WRPSTATE</link>(VALUE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___type_1ga48712a166ea192ddcda0f2653679f9ec">OPTIONBYTE_WRP</link>   ((uint32_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___type_1ga8f0bdb21ef13bae39d5d8b6619e2df06">OPTIONBYTE_RDP</link>   ((uint32_t)0x02)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___type_1gac7d843e666e15c79688a1914e8ffe7a5">OPTIONBYTE_USER</link>   ((uint32_t)0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___type_1gaf4063216c8386467d187663190936c07">OPTIONBYTE_BOR</link>   ((uint32_t)0x08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___type_1ga87cd48c2373f47668470a38892ed07e3">IS_OPTIONBYTE</link>(VALUE)   (((VALUE) &lt; (<link linkend="_group___f_l_a_s_h_ex___option___type_1ga48712a166ea192ddcda0f2653679f9ec">OPTIONBYTE_WRP</link>|<link linkend="_group___f_l_a_s_h_ex___option___type_1ga8f0bdb21ef13bae39d5d8b6619e2df06">OPTIONBYTE_RDP</link>|<link linkend="_group___f_l_a_s_h_ex___option___type_1gac7d843e666e15c79688a1914e8ffe7a5">OPTIONBYTE_USER</link>|<link linkend="_group___f_l_a_s_h_ex___option___type_1gaf4063216c8386467d187663190936c07">OPTIONBYTE_BOR</link>)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga22c7871bda267a2844ab9ca9f7bd38e4">OB_RDP_LEVEL_0</link>   ((uint8_t)0xAA)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga778207f0d12d87bbff9d55e985aba5bc">OB_RDP_LEVEL_1</link>   ((uint8_t)0x55)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___read___protection_1ga8d602a97cd688390b3d1956d9970e712">IS_OB_RDP_LEVEL</link>(LEVEL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___i_watchdog_1ga5a357e232c955444c3f2ccb9a937ffce">OB_IWDG_SW</link>   ((uint8_t)0x20)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___i_watchdog_1gadfcbfa963d79c339ec8e2d5a7734e47a">OB_IWDG_HW</link>   ((uint8_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___i_watchdog_1gaf2871652c08e76499d9449be6556f12c">IS_OB_IWDG_SOURCE</link>(SOURCE)   (((SOURCE) == <link linkend="_group___f_l_a_s_h_ex___option___bytes___i_watchdog_1ga5a357e232c955444c3f2ccb9a937ffce">OB_IWDG_SW</link>) || ((SOURCE) == <link linkend="_group___f_l_a_s_h_ex___option___bytes___i_watchdog_1gadfcbfa963d79c339ec8e2d5a7734e47a">OB_IWDG_HW</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_o_p_1ga7344fe0ec25c5eb2d11db7c855325436">OB_STOP_NO_RST</link>   ((uint8_t)0x40)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_o_p_1gaef92c03b1f279c532bfa13d3bb074b57">OB_STOP_RST</link>   ((uint8_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_o_p_1ga131ae3434f300c8317dd6b3b349c7cab">IS_OB_STOP_SOURCE</link>(SOURCE)   (((SOURCE) == <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_o_p_1ga7344fe0ec25c5eb2d11db7c855325436">OB_STOP_NO_RST</link>) || ((SOURCE) == <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_o_p_1gaef92c03b1f279c532bfa13d3bb074b57">OB_STOP_RST</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_d_b_y_1gad776ed7b3b9a98013aac9976eedb7e94">OB_STDBY_NO_RST</link>   ((uint8_t)0x80)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_d_b_y_1ga69451a6f69247528f58735c9c83499ce">OB_STDBY_RST</link>   ((uint8_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_d_b_y_1ga8a05393df3a5e89551b4e2e1e8c5b884">IS_OB_STDBY_SOURCE</link>(SOURCE)   (((SOURCE) == <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_d_b_y_1gad776ed7b3b9a98013aac9976eedb7e94">OB_STDBY_NO_RST</link>) || ((SOURCE) == <link linkend="_group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_d_b_y_1ga69451a6f69247528f58735c9c83499ce">OB_STDBY_RST</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___b_o_r___reset___level_1ga3132b8202c0a345e9dd33d136714b046">OB_BOR_LEVEL3</link>   ((uint8_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___b_o_r___reset___level_1gad678e849fcf817f6ed2d837538e8ebc2">OB_BOR_LEVEL2</link>   ((uint8_t)0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___b_o_r___reset___level_1ga3a888b788e75f0bc1f9add85c9ccd9d6">OB_BOR_LEVEL1</link>   ((uint8_t)0x08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___b_o_r___reset___level_1gaabc231cb1d05a94fe860f67bb5a37b12">OB_BOR_OFF</link>   ((uint8_t)0x0C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___b_o_r___reset___level_1gac97ecd832fce5f4b4ff9ef7bc4493013">IS_OB_BOR_LEVEL</link>(LEVEL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___p_c_r_o_p___state_1ga09f7800119c1971e339df62f11beab14">PCROPSTATE_DISABLE</link>   ((uint32_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___p_c_r_o_p___state_1ga9e086afe58f178c3e86526666bedc217">PCROPSTATE_ENABLE</link>   ((uint32_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___p_c_r_o_p___state_1gaaea947f0dfad099da5112bbe0449ed62">IS_PCROPSTATE</link>(VALUE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___advanced___option___type_1ga1de788f8cf04b70320aaebf3388e638c">OBEX_PCROP</link>   ((uint32_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___advanced___option___type_1gac5890fc0709a4b8112a314cb0e58c5c8">IS_OBEX</link>(VALUE)   (((VALUE) == <link linkend="_group___f_l_a_s_h_ex___advanced___option___type_1ga1de788f8cf04b70320aaebf3388e638c">OBEX_PCROP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1ga1276f51e97dc9857ca261fae4eb890f3">FLASH_LATENCY_0</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga936324709ea40109331b76849da2c8b2">FLASH_ACR_LATENCY_0WS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1ga28c611f2cb4a3772ab37c538357fd5f6">FLASH_LATENCY_1</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaec66af244e6afb5bbf9816d7c76e1621">FLASH_ACR_LATENCY_1WS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1ga69d209f9cb4f625010d72555c8dceb03">FLASH_LATENCY_2</link>   <link linkend="_group___peripheral___registers___bits___definition_1gad9b09ca8db6df455d0b8f810f8521257">FLASH_ACR_LATENCY_2WS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1ga2f607c9fa7bdcd53df0e98a7b1e67496">FLASH_LATENCY_3</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga3437dcee177845a407919d3b2d9bd063">FLASH_ACR_LATENCY_3WS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1ga65fe32d2c25a3d5ee3dce89dee459fa5">FLASH_LATENCY_4</link>   <link linkend="_group___peripheral___registers___bits___definition_1gad3594f2a9e12213efe75cd7df646e1ad">FLASH_ACR_LATENCY_4WS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1ga2517d62fa71e27b3b53223bbaacd06f7">FLASH_LATENCY_5</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga67e55ca49f028a701d0c81420a6e2918">FLASH_ACR_LATENCY_5WS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1gad047485b4941997af3c55ad61ad9c13a">FLASH_LATENCY_6</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga3019ff197b4fd698e9625c9abb67f4be">FLASH_ACR_LATENCY_6WS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1ga09e9f01dd2e6e361adc9c995a5a73510">FLASH_LATENCY_7</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaa164c6e6fdfcae274a84dc87ca87b95e">FLASH_ACR_LATENCY_7WS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___latency_1gafcbd098d482318a622a58bf168547389">IS_FLASH_LATENCY</link>(LATENCY)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___banks_1ga8ac3f24496e5de6a2f6bd3ff77f0ca53">FLASH_BANK_1</link>   ((uint32_t)1)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___banks_1ga13845f67e09ef81901c6fa683f13f086">IS_FLASH_BANK</link>(BANK)   (((BANK) == <link linkend="_group___f_l_a_s_h_ex___banks_1ga8ac3f24496e5de6a2f6bd3ff77f0ca53">FLASH_BANK_1</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___mass_erase__bit_1gae8edecf268bc993ff286fa1fabb486dd">FLASH_MER_BIT</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga4a287aa5a625125301306a02fb69c53a">FLASH_CR_MER</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1ga15a8729b9c5eb83d46d5f437cd46d874">FLASH_SECTOR_0</link>   ((uint32_t)0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1ga2a85d94366030ea8328796169c1bc300">FLASH_SECTOR_1</link>   ((uint32_t)1)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1ga58999952d63fd45dd86b0817ad2a5bae">FLASH_SECTOR_2</link>   ((uint32_t)2)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1gab0a0ce95752a56b430c809a88812fed2">FLASH_SECTOR_3</link>   ((uint32_t)3)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1gac1338c8f4ab3ae74d212c59c7e9e4cc6">FLASH_SECTOR_4</link>   ((uint32_t)4)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1gad8736215a8d3ce115f4281a6d026d0f8">FLASH_SECTOR_5</link>   ((uint32_t)5)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1gaa0d1fc04e5918186ac9c228ab4172606">FLASH_SECTOR_6</link>   ((uint32_t)6)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1ga99693b9e0816fdb8706218bc845724ad">FLASH_SECTOR_7</link>   ((uint32_t)7)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1ga44d83bdaa00f69521aa42e3f2f2f8db2">FLASH_SECTOR_TOTAL</link>   8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1ga9e7722ee983a9411f59c0fdb81bc0e08">IS_FLASH_SECTOR</link>(SECTOR)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1gad0c8166ba15a0b8d458412a8bb74e2f0">IS_FLASH_ADDRESS</link>(ADDRESS)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___sectors_1ga630d392907ca6f67a1a77cefeb1000c6">IS_NBSECTORS</link>(NBSECTORS)   (((NBSECTORS) != 0) &amp;&amp; ((NBSECTORS) &lt;= <link linkend="_group___f_l_a_s_h_ex___sectors_1ga44d83bdaa00f69521aa42e3f2f2f8db2">FLASH_SECTOR_TOTAL</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1gaa9a84eab02b9e32d4d12e30eae731d0f">OB_WRP_SECTOR_0</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1ga3f57a106dc14c2b9806e5311e96031d6">OB_WRP_SECTOR_1</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1gad8b13ac3000514a6a05ff2306c657a76">OB_WRP_SECTOR_2</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1ga93c4703a5aa2f3348ca7f394e9b8ad7c">OB_WRP_SECTOR_3</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1gadcb0d55662ead30d4d92dde1ff6ecc8f">OB_WRP_SECTOR_4</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1ga53c67ee41ff1cc7df79f5c73b9b7ed96">OB_WRP_SECTOR_5</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1ga08b2867102a08b114d45598dfc7915d5">OB_WRP_SECTOR_6</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1ga7de707c6772bb3caa72e6d87759ab57e">OB_WRP_SECTOR_7</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1gaf120263891bca013cf4a9f64ac57b941">OB_WRP_SECTOR_All</link>   ((uint32_t)0x00000FFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___write___protection_1gade36d0d5f5de92caf5a5e7ee22394b87">IS_OB_WRP_SECTOR</link>(SECTOR)   ((((SECTOR) &amp; (uint32_t)0xFFFFF000) == 0x00000000) &amp;&amp; ((SECTOR) != 0x00000000))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1ga15e8470575c118dd98fd6fa744a8163c">OB_PCROP_SECTOR_0</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1ga37b79b9eb0dbeaa7ca8b04f6c8c89faa">OB_PCROP_SECTOR_1</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1gafba6661c0a4510edc55b9d08ba7b1820">OB_PCROP_SECTOR_2</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1gad93b4f27b039c007d1ed5ca79d744230">OB_PCROP_SECTOR_3</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1ga10c0d89c778f8920b40adf107eb5ffc8">OB_PCROP_SECTOR_4</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1ga1d0e173b3e184682b2c90a34e11b0a24">OB_PCROP_SECTOR_5</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1ga10d6b7983ed196511c8150c12965b407">OB_PCROP_SECTOR_6</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1ga7d74caf6e88d230f4dcdcbf9ab6d7e1e">OB_PCROP_SECTOR_7</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1gab0ae871624f4cdff9b41b3fea88a5698">OB_PCROP_SECTOR_All</link>   ((uint32_t)0x00000FFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_1ga4366c6db141b2c0024429b5808eef6e8">IS_OB_PCROP</link>(SECTOR)   ((((SECTOR) &amp; (uint32_t)0xFFFFF000) == 0x00000000) &amp;&amp; ((SECTOR) != 0x00000000))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___selection___protection___mode_1gaa11bc40819552615d0618b0df99120b1">OB_PCROP_DESELECTED</link>   ((uint8_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___selection___protection___mode_1ga7de2d3d5fc3baa922d43850a2f140dfc">OB_PCROP_SELECTED</link>   ((uint8_t)0x80)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_ex___selection___protection___mode_1ga917bc3381ebf7106868915928c3eaa2e">IS_OB_PCROP_SELECT</link>(PCROP)   (((PCROP) == <link linkend="_group___f_l_a_s_h_ex___selection___protection___mode_1ga7de2d3d5fc3baa922d43850a2f140dfc">OB_PCROP_SELECTED</link>) || ((PCROP) == <link linkend="_group___f_l_a_s_h_ex___selection___protection___mode_1gaa11bc40819552615d0618b0df99120b1">OB_PCROP_DESELECTED</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1ga3e998fdfd05d4073fb9af251ad649531">HAL_FLASHEx_Erase</link> (<link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link> *pEraseInit, uint32_t *SectorError)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1gaf58c6764859e4febc21abe462dfb2615">HAL_FLASHEx_Erase_IT</link> (<link linkend="_struct_f_l_a_s_h___erase_init_type_def">FLASH_EraseInitTypeDef</link> *pEraseInit)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1ga001dd4a8defa9eb24a17c4df5953a41d">HAL_FLASHEx_OBProgram</link> (<link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link> *pOBInit)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_ex_1ga6d45d5442b8147533b1100ec40fe75d7">HAL_FLASHEx_OBGetConfig</link> (<link linkend="_struct_f_l_a_s_h___o_b_program_init_type_def">FLASH_OBProgramInitTypeDef</link> *pOBInit)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1gaf5556c723d5dc6ab06ebd6faf54c6c03">HAL_FLASHEx_AdvOBProgram</link> (<link linkend="_struct_f_l_a_s_h___adv_o_b_program_init_type_def">FLASH_AdvOBProgramInitTypeDef</link> *pAdvOBInit)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_ex_1ga5f79b74133fef058a72eae9c9eea4d36">HAL_FLASHEx_AdvOBGetConfig</link> (<link linkend="_struct_f_l_a_s_h___adv_o_b_program_init_type_def">FLASH_AdvOBProgramInitTypeDef</link> *pAdvOBInit)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1ga78992850d1e2e36ec7f01c1063320499">HAL_FLASHEx_OB_SelectPCROP</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_ex_1gab642acc010e4d32e293d7c6faa70b0a3">HAL_FLASHEx_OB_DeSelectPCROP</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_ex_1ga98c9d95cedcc4bfd39cdee82d07c0792">FLASH_Erase_Sector</link> (uint32_t Sector, uint8_t VoltageRange)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of FLASH HAL Extension module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__flash__ex_8h_source">stm32f4xx_hal_flash_ex.h</link>.</para>
+</section>
+</section>

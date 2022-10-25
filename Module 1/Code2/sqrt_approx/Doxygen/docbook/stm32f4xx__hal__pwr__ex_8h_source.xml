@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__pwr__ex_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_pwr_ex.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pwr_ex.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_PWR_EX_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_PWR_EX_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00046"/>00046 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00047"/>00047 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00048"/>00048 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00057"/>00057 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00058"/>00058 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00059"/>00059 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>&#32;
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00060"/>00060 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00061"/>00061 <emphasis role="comment">/*&#32;-------------&#32;PWR&#32;registers&#32;bit&#32;address&#32;in&#32;the&#32;alias&#32;region&#32;---------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00062"/>00062 <emphasis role="comment">/*&#32;---&#32;CR&#32;Register&#32;---*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00063"/>00063 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00064"/>00064 <emphasis role="comment">/*&#32;Alias&#32;word&#32;address&#32;of&#32;ODEN&#32;bit&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00065"/>00065 <emphasis role="preprocessor">#define&#32;ODEN_BitNumber&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x10</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00066"/>00066 <emphasis role="preprocessor">#define&#32;CR_ODEN_BB&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(PERIPH_BB_BASE&#32;+&#32;(CR_OFFSET&#32;*&#32;32)&#32;+&#32;(ODEN_BitNumber&#32;*&#32;4))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00067"/>00067 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00068"/>00068 <emphasis role="comment">/*&#32;Alias&#32;word&#32;address&#32;of&#32;ODSWEN&#32;bit&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00069"/>00069 <emphasis role="preprocessor">#define&#32;ODSWEN_BitNumber&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x11</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00070"/>00070 <emphasis role="preprocessor">#define&#32;CR_ODSWEN_BB&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(PERIPH_BB_BASE&#32;+&#32;(CR_OFFSET&#32;*&#32;32)&#32;+&#32;(ODSWEN_BitNumber&#32;*&#32;4))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00072"/>00072 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00076"/>00076 <emphasis role="preprocessor">#define&#32;PWR_FLAG_ODRDY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PWR_CSR_ODRDY</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00077"/>00077 <emphasis role="preprocessor">#define&#32;PWR_FLAG_ODSWRDY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PWR_CSR_ODSWRDY</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00078"/>00078 <emphasis role="preprocessor">#define&#32;PWR_FLAG_UDRDY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PWR_CSR_UDSWRDY</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00087"/>00087 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00088"/>00088 &#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00092"/>00092 <emphasis role="preprocessor">#define&#32;__HAL_PWR_OVERDRIVE_ENABLE()&#32;(*(__IO&#32;uint32_t&#32;*)&#32;CR_ODEN_BB&#32;=&#32;ENABLE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00093"/>00093 <emphasis role="preprocessor">#define&#32;__HAL_PWR_OVERDRIVE_DISABLE()&#32;(*(__IO&#32;uint32_t&#32;*)&#32;CR_ODEN_BB&#32;=&#32;DISABLE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00094"/>00094 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00098"/>00098 <emphasis role="preprocessor">#define&#32;__HAL_PWR_OVERDRIVESWITCHING_ENABLE()&#32;(*(__IO&#32;uint32_t&#32;*)&#32;CR_ODSWEN_BB&#32;=&#32;ENABLE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00099"/>00099 <emphasis role="preprocessor">#define&#32;__HAL_PWR_OVERDRIVESWITCHING_DISABLE()&#32;(*(__IO&#32;uint32_t&#32;*)&#32;CR_ODSWEN_BB&#32;=&#32;DISABLE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00100"/>00100 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00111"/>00111 <emphasis role="preprocessor">#define&#32;__HAL_PWR_UNDERDRIVE_ENABLE()&#32;(PWR-&gt;CR&#32;|=&#32;(uint32_t)PWR_CR_UDEN)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00112"/>00112 <emphasis role="preprocessor">#define&#32;__HAL_PWR_UNDERDRIVE_DISABLE()&#32;(PWR-&gt;CR&#32;&amp;=&#32;(uint32_t)(~PWR_CR_UDEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00113"/>00113 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00126"/>00126 <emphasis role="preprocessor">#define&#32;__HAL_PWR_GET_ODRUDR_FLAG(__FLAG__)&#32;((PWR-&gt;CSR&#32;&amp;&#32;(__FLAG__))&#32;==&#32;(__FLAG__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00127"/>00127 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00131"/>00131 <emphasis role="preprocessor">#define&#32;__HAL_PWR_CLEAR_ODRUDR_FLAG()&#32;(PWR-&gt;CSR&#32;|=&#32;PWR_FLAG_UDRDY)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00132"/>00132 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00133"/>00133 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00134"/>00134 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00135"/>00135 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00136"/><link linkend="_group___p_w_r_ex_1ga86c72a23f89c3c335ab784f42536b106">00136</link> <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___p_w_r_ex_1ga86c72a23f89c3c335ab784f42536b106">HAL_PWREx_EnableFlashPowerDown</link>(<emphasis role="keywordtype">void</emphasis>);
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00137"/><link linkend="_group___p_w_r_ex_1ga12385932ad48ece7fde94d5c3db5cd19">00137</link> <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group___p_w_r_ex_1ga12385932ad48ece7fde94d5c3db5cd19">HAL_PWREx_DisableFlashPowerDown</link>(<emphasis role="keywordtype">void</emphasis>);&#32;
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00138"/><link linkend="_group___p_w_r_ex_1ga21165778ccc2144040c6a935c9f794a7">00138</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___p_w_r_ex_1ga21165778ccc2144040c6a935c9f794a7">HAL_PWREx_EnableBkUpReg</link>(<emphasis role="keywordtype">void</emphasis>);
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00139"/><link linkend="_group___p_w_r_ex_1gae1b50407389e3ce1132eceb013f823d1">00139</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___p_w_r_ex_1gae1b50407389e3ce1132eceb013f823d1">HAL_PWREx_DisableBkUpReg</link>(<emphasis role="keywordtype">void</emphasis>);&#32;
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00140"/>00140 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00141"/>00141 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00142"/>00142 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_PWREx_ActivateOverDrive(<emphasis role="keywordtype">void</emphasis>);
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00143"/>00143 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_PWREx_DeactivateOverDrive(<emphasis role="keywordtype">void</emphasis>);
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00144"/>00144 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00145"/>00145 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00154"/>00154 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00155"/>00155 }
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00156"/>00156 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00157"/>00157 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00158"/>00158 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00159"/>00159 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_PWR_EX_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00160"/>00160 
+<anchor xml:id="_stm32f4xx__hal__pwr__ex_8h_source_1l00161"/>00161 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

@@ -1,0 +1,78 @@
+\hypertarget{_function_pointer_8h_source}{}\doxysection{Function\+Pointer.\+h}
+\label{_function_pointer_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/FunctionPointer.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/FunctionPointer.h}}
+\mbox{\hyperlink{_function_pointer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_FUNCTIONPOINTER\_H}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_FUNCTIONPOINTER\_H}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00021}00021 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00023}\mbox{\hyperlink{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}{00023}} \textcolor{keyword}{typedef} void (*\mbox{\hyperlink{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}{pvoidf\_t}})(void);}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00027}\mbox{\hyperlink{classmbed_1_1_function_pointer}{00027}} \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_function_pointer}{FunctionPointer}} \{}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00028}00028 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00034}\mbox{\hyperlink{classmbed_1_1_function_pointer_a0ccc51be605d508ff0df32d226f76c7a}{00034}}     \mbox{\hyperlink{classmbed_1_1_function_pointer_a0ccc51be605d508ff0df32d226f76c7a}{FunctionPointer}}(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}) = 0);}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00041}00041     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00042}\mbox{\hyperlink{classmbed_1_1_function_pointer_aeea086175529743816a9fb0d2d972834}{00042}}     \mbox{\hyperlink{classmbed_1_1_function_pointer_aeea086175529743816a9fb0d2d972834}{FunctionPointer}}(T *\textcolor{keywordtype}{object}, \textcolor{keywordtype}{void} (T::*member)(\textcolor{keywordtype}{void})) \{}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00043}00043         \mbox{\hyperlink{classmbed_1_1_function_pointer_ae8507d9ccbe0a467029ec8c126f5e711}{attach}}(\textcolor{keywordtype}{object}, member);}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00050}\mbox{\hyperlink{classmbed_1_1_function_pointer_ae8507d9ccbe0a467029ec8c126f5e711}{00050}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_function_pointer_ae8507d9ccbe0a467029ec8c126f5e711}{attach}}(\textcolor{keywordtype}{void} (*function)(\textcolor{keywordtype}{void}) = 0);}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00057}00057     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00058}\mbox{\hyperlink{classmbed_1_1_function_pointer_acf0c3786a58620cbe4af0b00e1812b99}{00058}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_function_pointer_acf0c3786a58620cbe4af0b00e1812b99}{attach}}(T *\textcolor{keywordtype}{object}, \textcolor{keywordtype}{void} (T::*member)(\textcolor{keywordtype}{void})) \{}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00059}00059         \_object = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(object);}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00060}00060         memcpy(\_member, (\textcolor{keywordtype}{char}*)\&member, \textcolor{keyword}{sizeof}(member));}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00061}00061         \_membercaller = \&FunctionPointer::membercaller<T>;}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00062}00062         \_function = 0;}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00067}\mbox{\hyperlink{classmbed_1_1_function_pointer_aba7af6b502e464074d3c31ff9236a22c}{00067}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_function_pointer_aba7af6b502e464074d3c31ff9236a22c}{call}}();}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00069}\mbox{\hyperlink{classmbed_1_1_function_pointer_adc1be146f35c0125c1bb647d0f0b35d1}{00069}}     \mbox{\hyperlink{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}{pvoidf\_t}} \mbox{\hyperlink{classmbed_1_1_function_pointer_adc1be146f35c0125c1bb647d0f0b35d1}{get\_function}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00070}00070         \textcolor{keywordflow}{return} (\mbox{\hyperlink{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}{pvoidf\_t}})\_function;}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00071}00071     \}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00073}00073 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00074}00074     \textcolor{keywordtype}{void} operator ()(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00075}00075 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00077}00077 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00078}00078     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00079}00079     \textcolor{keyword}{static} \textcolor{keywordtype}{void} membercaller(\textcolor{keywordtype}{void} *\textcolor{keywordtype}{object}, \textcolor{keywordtype}{char} *member) \{}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00080}00080         T* o = \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(object);}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00081}00081         void (T::*m)(void);}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00082}00082         memcpy((\textcolor{keywordtype}{char}*)\&m, member, \textcolor{keyword}{sizeof}(m));}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00083}00083         (o-\/>*m)();}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00086}00086     void (*\_function)(void);             \textcolor{comment}{// static function pointer -\/ 0 if none attached}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00087}00087     \textcolor{keywordtype}{void} *\_object;                       \textcolor{comment}{// object this pointer -\/ 0 if none attached}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00088}00088     \textcolor{keywordtype}{char} \_member[16];                    \textcolor{comment}{// raw member function pointer storage -\/ converted back by registered \_membercaller}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00089}00089     void (*\_membercaller)(\textcolor{keywordtype}{void}*, \textcolor{keywordtype}{char}*); \textcolor{comment}{// registered membercaller function to convert back and call \_member on \_object}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00090}00090 \};}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00092}00092 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_function_pointer_8h_source_l00094}00094 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

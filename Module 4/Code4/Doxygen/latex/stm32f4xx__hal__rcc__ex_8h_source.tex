@@ -1,0 +1,504 @@
+\hypertarget{stm32f4xx__hal__rcc__ex_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+rcc\+\_\+ex.\+h}
+\label{stm32f4xx__hal__rcc__ex_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_rcc\_ex.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_rcc\_ex.h}}
+\mbox{\hyperlink{stm32f4xx__hal__rcc__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_RCC\_EX\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_RCC\_EX\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{57 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   uint32\_t PLLI2SN;    }
+\DoxyCodeLine{68   uint32\_t PLLI2SR;    }
+\DoxyCodeLine{72   uint32\_t PLLI2SQ;    }
+\DoxyCodeLine{75 \}\mbox{\hyperlink{struct_r_c_c___p_l_l_i2_s_init_type_def}{RCC\_PLLI2SInitTypeDef}};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{80 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{81 \{}
+\DoxyCodeLine{82   uint32\_t PLLSAIN;    }
+\DoxyCodeLine{86   uint32\_t PLLSAIQ;    }
+\DoxyCodeLine{90   uint32\_t PLLSAIR;    }
+\DoxyCodeLine{94 \}RCC\_PLLSAIInitTypeDef;}
+\DoxyCodeLine{98 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{99 \{}
+\DoxyCodeLine{100   uint32\_t PeriphClockSelection; }
+\DoxyCodeLine{103   \mbox{\hyperlink{struct_r_c_c___p_l_l_i2_s_init_type_def}{RCC\_PLLI2SInitTypeDef}} PLLI2S;  }
+\DoxyCodeLine{106   RCC\_PLLSAIInitTypeDef PLLSAI;  }
+\DoxyCodeLine{109   uint32\_t PLLI2SDivQ;           }
+\DoxyCodeLine{113   uint32\_t PLLSAIDivQ;           }
+\DoxyCodeLine{117   uint32\_t PLLSAIDivR;           }
+\DoxyCodeLine{120   uint32\_t RTCClockSelection;      }
+\DoxyCodeLine{123   uint8\_t TIMPresSelection;      }
+\DoxyCodeLine{126 \}\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\_PeriphCLKInitTypeDef}};}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx) || defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{133 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{134 \{}
+\DoxyCodeLine{135   uint32\_t \mbox{\hyperlink{struct_r_c_c___p_l_l_i2_s_init_type_def_a1edb776fccb621edb1405b3502ebc8eb}{PLLI2SN}};    }
+\DoxyCodeLine{139   uint32\_t \mbox{\hyperlink{struct_r_c_c___p_l_l_i2_s_init_type_def_ad49056bf464bd58c0c0692c36b70b473}{PLLI2SR}};    }
+\DoxyCodeLine{143 \}\mbox{\hyperlink{struct_r_c_c___p_l_l_i2_s_init_type_def}{RCC\_PLLI2SInitTypeDef}};}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145  }
+\DoxyCodeLine{149 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{150 \{}
+\DoxyCodeLine{151   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_a1fe6e3d75864d85b911eef15dfc35925}{PeriphClockSelection}}; }
+\DoxyCodeLine{154   \mbox{\hyperlink{struct_r_c_c___p_l_l_i2_s_init_type_def}{RCC\_PLLI2SInitTypeDef}} \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_acc2f1ab5bca1f524c6dc9f7b8dce747d}{PLLI2S}};  }
+\DoxyCodeLine{157   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_ad2c422d62b056a61d7bbb599c89dbc1e}{RTCClockSelection}};      }
+\DoxyCodeLine{160 \}\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\_PeriphCLKInitTypeDef}};}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{162 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_I2S             ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_SAI\_PLLI2S      ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_SAI\_PLLSAI      ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_LTDC            ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_TIM             ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_RTC             ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define IS\_RCC\_PERIPHCLOCK(SELECTION) ((1 <= (SELECTION)) \&\& ((SELECTION) <= 0x0000002F))}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx) || defined(STM32F401xC) || defined(STM32F401xE) }}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_I2S             ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_RTC             ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define IS\_RCC\_PERIPHCLOCK(SELECTION) ((1 <= (SELECTION)) \&\& ((SELECTION) <= 0x00000003))}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{194 \textcolor{comment}{/* -\/-\/-\/ CR Register -\/-\/-\/*/}  }
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{196 \textcolor{comment}{/* Alias word address of PLLSAION bit */}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define PLLSAION\_BitNumber        0x1C}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define CR\_PLLSAION\_BB            (PERIPH\_BB\_BASE + (RCC\_CR\_OFFSET * 32) + (PLLSAION\_BitNumber * 4))}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{comment}{/* -\/-\/-\/ DCKCFGR Register -\/-\/-\/*/}}
+\DoxyCodeLine{201 \textcolor{comment}{/* Alias word address of TIMPRE bit */}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define RCC\_DCKCFGR\_OFFSET        (RCC\_OFFSET + 0x8C)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define TIMPRE\_BitNumber          0x18}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define DCKCFGR\_TIMPRE\_BB         (PERIPH\_BB\_BASE + (RCC\_DCKCFGR\_OFFSET * 32) + (TIMPRE\_BitNumber * 4))}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#define IS\_RCC\_PLLI2SQ\_VALUE(VALUE) ((2 <= (VALUE)) \&\& ((VALUE) <= 15))}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define IS\_RCC\_PLLSAIN\_VALUE(VALUE) ((192 <= (VALUE)) \&\& ((VALUE) <= 432))}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define IS\_RCC\_PLLSAIQ\_VALUE(VALUE) ((2 <= (VALUE)) \&\& ((VALUE) <= 15))}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define IS\_RCC\_PLLSAIR\_VALUE(VALUE) ((2 <= (VALUE)) \&\& ((VALUE) <= 7))  }}
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define IS\_RCC\_PLLSAI\_DIVQ\_VALUE(VALUE) ((1 <= (VALUE)) \&\& ((VALUE) <= 32))}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define IS\_RCC\_PLLI2S\_DIVQ\_VALUE(VALUE) ((1 <= (VALUE)) \&\& ((VALUE) <= 32))}}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define RCC\_PLLSAIDIVR\_2                ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define RCC\_PLLSAIDIVR\_4                ((uint32\_t)0x00010000)}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define RCC\_PLLSAIDIVR\_8                ((uint32\_t)0x00020000)}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define RCC\_PLLSAIDIVR\_16               ((uint32\_t)0x00030000)}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define IS\_RCC\_PLLSAI\_DIVR\_VALUE(VALUE) (((VALUE) == RCC\_PLLSAIDIVR\_2) ||\(\backslash\)}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{                                         ((VALUE) == RCC\_PLLSAIDIVR\_4)  ||\(\backslash\)}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{                                         ((VALUE) == RCC\_PLLSAIDIVR\_8)  ||\(\backslash\)}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{                                         ((VALUE) == RCC\_PLLSAIDIVR\_16))}}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define RCC\_SAIACLKSOURCE\_PLLSAI             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define RCC\_SAIACLKSOURCE\_PLLI2S             ((uint32\_t)0x00100000)}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define RCC\_SAIACLKSOURCE\_EXT                ((uint32\_t)0x00200000)}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#define RCC\_SAIBCLKSOURCE\_PLLSAI             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define RCC\_SAIBCLKSOURCE\_PLLI2S             ((uint32\_t)0x00400000)}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define RCC\_SAIBCLKSOURCE\_EXT                ((uint32\_t)0x00800000)}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#define RCC\_TIMPRES\_DESACTIVATED        ((uint8\_t)0x00)}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#define RCC\_TIMPRES\_ACTIVATED           ((uint8\_t)0x01)}}
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{297 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)}}
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#define \_\_GPIOI\_CLK\_ENABLE()      (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_GPIOIEN))}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{\#define \_\_GPIOF\_CLK\_ENABLE()      (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_GPIOFEN))}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#define \_\_GPIOG\_CLK\_ENABLE()      (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_GPIOGEN))}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define \_\_ETHMAC\_CLK\_ENABLE()     (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_ETHMACEN))}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#define \_\_ETHMACTX\_CLK\_ENABLE()   (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_ETHMACTXEN))}}
+\DoxyCodeLine{311 \textcolor{preprocessor}{\#define \_\_ETHMACRX\_CLK\_ENABLE()   (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_ETHMACRXEN))}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#define \_\_ETHMACPTP\_CLK\_ENABLE()  (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_ETHMACPTPEN))}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{\#define \_\_USB\_OTG\_HS\_CLK\_ENABLE()      (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_OTGHSEN))}}
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#define \_\_USB\_OTG\_HS\_ULPI\_CLK\_ENABLE()  (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_OTGHSULPIEN))}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#define \_\_GPIOF\_CLK\_DISABLE()     (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_GPIOFEN))}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{\#define \_\_GPIOG\_CLK\_DISABLE()     (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_GPIOGEN))}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#define \_\_GPIOI\_CLK\_DISABLE()     (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_GPIOIEN))}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#define \_\_ETHMAC\_CLK\_DISABLE()    (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_ETHMACEN))}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#define \_\_ETHMACTX\_CLK\_DISABLE()  (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_ETHMACTXEN))}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define \_\_ETHMACRX\_CLK\_DISABLE()  (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_ETHMACRXEN))}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define \_\_ETHMACPTP\_CLK\_DISABLE() (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_ETHMACPTPEN))}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#define \_\_USB\_OTG\_HS\_CLK\_DISABLE()     (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_OTGHSEN))}}
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#define \_\_USB\_OTG\_HS\_ULPI\_CLK\_DISABLE() (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_OTGHSULPIEN))}}
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !(STM32F401xC \&\& STM32F401xE) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{326 }
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#define \_\_GPIOJ\_CLK\_ENABLE()      (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_GPIOJEN))}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#define \_\_GPIOK\_CLK\_ENABLE()      (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_GPIOKEN))}}
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#define \_\_DMA2D\_CLK\_ENABLE()      (RCC-\/>AHB1ENR |= (RCC\_AHB1ENR\_DMA2DEN))}}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define \_\_GPIOJ\_CLK\_DISABLE()     (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_GPIOJEN))}}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#define \_\_GPIOK\_CLK\_DISABLE()     (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_GPIOKEN))}}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define \_\_DMA2D\_CLK\_DISABLE()     (RCC-\/>AHB1ENR \&= \string~(RCC\_AHB1ENR\_DMA2DEN))}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)}}
+\DoxyCodeLine{341 \textcolor{preprocessor}{\#define \_\_ETH\_CLK\_ENABLE()       do \{                            \(\backslash\)}}
+\DoxyCodeLine{342 \textcolor{preprocessor}{                                     \_\_ETHMAC\_CLK\_ENABLE();      \(\backslash\)}}
+\DoxyCodeLine{343 \textcolor{preprocessor}{                                     \_\_ETHMACTX\_CLK\_ENABLE();    \(\backslash\)}}
+\DoxyCodeLine{344 \textcolor{preprocessor}{                                     \_\_ETHMACRX\_CLK\_ENABLE();    \(\backslash\)}}
+\DoxyCodeLine{345 \textcolor{preprocessor}{                                    \} while(0)}}
+\DoxyCodeLine{346 }
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define \_\_ETH\_CLK\_DISABLE()       do \{                             \(\backslash\)}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{                                      \_\_ETHMACTX\_CLK\_DISABLE();    \(\backslash\)}}
+\DoxyCodeLine{352 \textcolor{preprocessor}{                                      \_\_ETHMACRX\_CLK\_DISABLE();    \(\backslash\)}}
+\DoxyCodeLine{353 \textcolor{preprocessor}{                                      \_\_ETHMAC\_CLK\_DISABLE();      \(\backslash\)}}
+\DoxyCodeLine{354 \textcolor{preprocessor}{                                     \} while(0)}}
+\DoxyCodeLine{355 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !(STM32F401xC \&\& STM32F401xE) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{356  }
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)  }}
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#define \_\_DCMI\_CLK\_ENABLE()   (RCC-\/>AHB2ENR |= (RCC\_AHB2ENR\_DCMIEN))}}
+\DoxyCodeLine{364 \textcolor{preprocessor}{\#define \_\_DCMI\_CLK\_DISABLE()  (RCC-\/>AHB2ENR \&= \string~(RCC\_AHB2ENR\_DCMIEN))}}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !(STM32F401xC \&\& STM32F401xE) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{366 }
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#if defined(STM32F415xx) || defined(STM32F417xx) || defined(STM32F437xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define \_\_CRYP\_CLK\_ENABLE()   (RCC-\/>AHB2ENR |= (RCC\_AHB2ENR\_CRYPEN))}}
+\DoxyCodeLine{369 \textcolor{preprocessor}{\#define \_\_HASH\_CLK\_ENABLE()   (RCC-\/>AHB2ENR |= (RCC\_AHB2ENR\_HASHEN))}}
+\DoxyCodeLine{370 }
+\DoxyCodeLine{371 \textcolor{preprocessor}{\#define \_\_CRYP\_CLK\_DISABLE()  (RCC-\/>AHB2ENR \&= \string~(RCC\_AHB2ENR\_CRYPEN))}}
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#define \_\_HASH\_CLK\_DISABLE()  (RCC-\/>AHB2ENR \&= \string~(RCC\_AHB2ENR\_HASHEN))}}
+\DoxyCodeLine{373 }
+\DoxyCodeLine{374 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F415xx || STM32F417xx || STM32F437xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{381 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx)}}
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#define \_\_FSMC\_CLK\_ENABLE()  (RCC-\/>AHB3ENR |= (RCC\_AHB3ENR\_FSMCEN))}}
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#define \_\_FSMC\_CLK\_DISABLE() (RCC-\/>AHB3ENR \&= \string~(RCC\_AHB3ENR\_FSMCEN))}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{385 }
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#define \_\_FMC\_CLK\_ENABLE()   (RCC-\/>AHB3ENR |= (RCC\_AHB3ENR\_FMCEN))}}
+\DoxyCodeLine{388 \textcolor{preprocessor}{\#define \_\_FMC\_CLK\_DISABLE()  (RCC-\/>AHB3ENR \&= \string~(RCC\_AHB3ENR\_FMCEN))}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F415xx || STM32F417xx || STM32F437xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{390 }
+\DoxyCodeLine{391 }
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)}}
+\DoxyCodeLine{398 \textcolor{preprocessor}{\#define \_\_TIM6\_CLK\_ENABLE()    (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_TIM6EN))}}
+\DoxyCodeLine{399 \textcolor{preprocessor}{\#define \_\_TIM7\_CLK\_ENABLE()    (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_TIM7EN))}}
+\DoxyCodeLine{400 \textcolor{preprocessor}{\#define \_\_TIM12\_CLK\_ENABLE()   (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_TIM12EN))}}
+\DoxyCodeLine{401 \textcolor{preprocessor}{\#define \_\_TIM13\_CLK\_ENABLE()   (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_TIM13EN))}}
+\DoxyCodeLine{402 \textcolor{preprocessor}{\#define \_\_TIM14\_CLK\_ENABLE()   (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_TIM14EN))}}
+\DoxyCodeLine{403 \textcolor{preprocessor}{\#define \_\_WWDG\_CLK\_ENABLE()    (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_WWDGEN))}}
+\DoxyCodeLine{404 \textcolor{preprocessor}{\#define \_\_USART3\_CLK\_ENABLE()  (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_USART3EN))}}
+\DoxyCodeLine{405 \textcolor{preprocessor}{\#define \_\_UART4\_CLK\_ENABLE()   (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_UART4EN))}}
+\DoxyCodeLine{406 \textcolor{preprocessor}{\#define \_\_UART5\_CLK\_ENABLE()   (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_UART5EN))}}
+\DoxyCodeLine{407 \textcolor{preprocessor}{\#define \_\_CAN1\_CLK\_ENABLE()    (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_CAN1EN))}}
+\DoxyCodeLine{408 \textcolor{preprocessor}{\#define \_\_CAN2\_CLK\_ENABLE()    (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_CAN2EN))}}
+\DoxyCodeLine{409 \textcolor{preprocessor}{\#define \_\_DAC\_CLK\_ENABLE()     (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_DACEN))}}
+\DoxyCodeLine{410 }
+\DoxyCodeLine{411 \textcolor{preprocessor}{\#define \_\_TIM6\_CLK\_DISABLE()   (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_TIM6EN))}}
+\DoxyCodeLine{412 \textcolor{preprocessor}{\#define \_\_TIM7\_CLK\_DISABLE()   (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_TIM7EN))}}
+\DoxyCodeLine{413 \textcolor{preprocessor}{\#define \_\_TIM12\_CLK\_DISABLE()  (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_TIM12EN))}}
+\DoxyCodeLine{414 \textcolor{preprocessor}{\#define \_\_TIM13\_CLK\_DISABLE()  (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_TIM13EN))}}
+\DoxyCodeLine{415 \textcolor{preprocessor}{\#define \_\_TIM14\_CLK\_DISABLE()  (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_TIM14EN))}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{\#define \_\_WWDG\_CLK\_DISABLE()   (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_WWDGEN))}}
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#define \_\_USART3\_CLK\_DISABLE() (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_USART3EN))}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#define \_\_UART4\_CLK\_DISABLE()  (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_UART4EN))}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#define \_\_UART5\_CLK\_DISABLE()  (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_UART5EN))}}
+\DoxyCodeLine{420 \textcolor{preprocessor}{\#define \_\_CAN1\_CLK\_DISABLE()   (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_CAN1EN))}}
+\DoxyCodeLine{421 \textcolor{preprocessor}{\#define \_\_CAN2\_CLK\_DISABLE()   (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_CAN2EN))}}
+\DoxyCodeLine{422 \textcolor{preprocessor}{\#define \_\_DAC\_CLK\_DISABLE()    (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_DACEN))}}
+\DoxyCodeLine{423 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !(STM32F401xC \&\& STM32F401xE) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{424 }
+\DoxyCodeLine{425 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{426 \textcolor{preprocessor}{\#define \_\_UART7\_CLK\_ENABLE()   (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_UART7EN))}}
+\DoxyCodeLine{427 \textcolor{preprocessor}{\#define \_\_UART8\_CLK\_ENABLE()   (RCC-\/>APB1ENR |= (RCC\_APB1ENR\_UART8EN))}}
+\DoxyCodeLine{428 }
+\DoxyCodeLine{429 \textcolor{preprocessor}{\#define \_\_UART7\_CLK\_DISABLE()  (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_UART7EN))}}
+\DoxyCodeLine{430 \textcolor{preprocessor}{\#define \_\_UART8\_CLK\_DISABLE()  (RCC-\/>APB1ENR \&= \string~(RCC\_APB1ENR\_UART8EN))}}
+\DoxyCodeLine{431 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F415xx || STM32F417xx || STM32F437xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{438 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)  }}
+\DoxyCodeLine{439 \textcolor{preprocessor}{\#define \_\_TIM8\_CLK\_ENABLE()  (RCC-\/>APB2ENR |= (RCC\_APB2ENR\_TIM8EN))}}
+\DoxyCodeLine{440 \textcolor{preprocessor}{\#define \_\_ADC2\_CLK\_ENABLE()  (RCC-\/>APB2ENR |= (RCC\_APB2ENR\_ADC2EN))}}
+\DoxyCodeLine{441 \textcolor{preprocessor}{\#define \_\_ADC3\_CLK\_ENABLE()  (RCC-\/>APB2ENR |= (RCC\_APB2ENR\_ADC3EN))}}
+\DoxyCodeLine{442 }
+\DoxyCodeLine{443 \textcolor{preprocessor}{\#define \_\_TIM8\_CLK\_DISABLE() (RCC-\/>APB2ENR \&= \string~(RCC\_APB2ENR\_TIM8EN))}}
+\DoxyCodeLine{444 \textcolor{preprocessor}{\#define \_\_ADC2\_CLK\_DISABLE() (RCC-\/>APB2ENR \&= \string~(RCC\_APB2ENR\_ADC2EN))}}
+\DoxyCodeLine{445 \textcolor{preprocessor}{\#define \_\_ADC3\_CLK\_DISABLE() (RCC-\/>APB2ENR \&= \string~(RCC\_APB2ENR\_ADC3EN))}}
+\DoxyCodeLine{446 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !(STM32F401xC \&\& STM32F401xE) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{447 }
+\DoxyCodeLine{448 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{449 \textcolor{preprocessor}{\#define \_\_SPI5\_CLK\_ENABLE()  (RCC-\/>APB2ENR |= (RCC\_APB2ENR\_SPI5EN))}}
+\DoxyCodeLine{450 \textcolor{preprocessor}{\#define \_\_SPI6\_CLK\_ENABLE()  (RCC-\/>APB2ENR |= (RCC\_APB2ENR\_SPI6EN))}}
+\DoxyCodeLine{451 \textcolor{preprocessor}{\#define \_\_SAI1\_CLK\_ENABLE()  (RCC-\/>APB2ENR |= (RCC\_APB2ENR\_SAI1EN))}}
+\DoxyCodeLine{452 \textcolor{preprocessor}{\#define \_\_LTDC\_CLK\_ENABLE()  (RCC-\/>APB2ENR |= (RCC\_APB2ENR\_LTDCEN))}}
+\DoxyCodeLine{453 }
+\DoxyCodeLine{454 \textcolor{preprocessor}{\#define \_\_SPI5\_CLK\_DISABLE() (RCC-\/>APB2ENR \&= \string~(RCC\_APB2ENR\_SPI5EN))}}
+\DoxyCodeLine{455 \textcolor{preprocessor}{\#define \_\_SPI6\_CLK\_DISABLE() (RCC-\/>APB2ENR \&= \string~(RCC\_APB2ENR\_SPI6EN))}}
+\DoxyCodeLine{456 \textcolor{preprocessor}{\#define \_\_SAI1\_CLK\_DISABLE() (RCC-\/>APB2ENR \&= \string~(RCC\_APB2ENR\_SAI1EN))}}
+\DoxyCodeLine{457 \textcolor{preprocessor}{\#define \_\_LTDC\_CLK\_DISABLE() (RCC-\/>APB2ENR \&= \string~(RCC\_APB2ENR\_LTDCEN))}}
+\DoxyCodeLine{458 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{462 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)}}
+\DoxyCodeLine{463 \textcolor{preprocessor}{\#define \_\_GPIOF\_FORCE\_RESET()    (RCC-\/>AHB1RSTR |= (RCC\_AHB1RSTR\_GPIOFRST))}}
+\DoxyCodeLine{464 \textcolor{preprocessor}{\#define \_\_GPIOG\_FORCE\_RESET()    (RCC-\/>AHB1RSTR |= (RCC\_AHB1RSTR\_GPIOGRST))}}
+\DoxyCodeLine{465 \textcolor{preprocessor}{\#define \_\_GPIOI\_FORCE\_RESET()    (RCC-\/>AHB1RSTR |= (RCC\_AHB1RSTR\_GPIOIRST))}}
+\DoxyCodeLine{466 \textcolor{preprocessor}{\#define \_\_ETHMAC\_FORCE\_RESET()   (RCC-\/>AHB1RSTR |= (RCC\_AHB1RSTR\_ETHMACRST))}}
+\DoxyCodeLine{467 \textcolor{preprocessor}{\#define \_\_OTGHS\_FORCE\_RESET()    (RCC-\/>AHB1RSTR |= (RCC\_AHB1RSTR\_OTGHRST))}}
+\DoxyCodeLine{468 }
+\DoxyCodeLine{469 \textcolor{preprocessor}{\#define \_\_GPIOF\_RELEASE\_RESET()  (RCC-\/>AHB1RSTR \&= \string~(RCC\_AHB1RSTR\_GPIOFRST))}}
+\DoxyCodeLine{470 \textcolor{preprocessor}{\#define \_\_GPIOG\_RELEASE\_RESET()  (RCC-\/>AHB1RSTR \&= \string~(RCC\_AHB1RSTR\_GPIOGRST))}}
+\DoxyCodeLine{471 \textcolor{preprocessor}{\#define \_\_GPIOI\_RELEASE\_RESET()  (RCC-\/>AHB1RSTR \&= \string~(RCC\_AHB1RSTR\_GPIOIRST))}}
+\DoxyCodeLine{472 \textcolor{preprocessor}{\#define \_\_ETHMAC\_RELEASE\_RESET() (RCC-\/>AHB1RSTR \&= \string~(RCC\_AHB1RSTR\_ETHMACRST))}}
+\DoxyCodeLine{473 \textcolor{preprocessor}{\#define \_\_OTGHS\_RELEASE\_RESET()  (RCC-\/>AHB1RSTR \&= \string~(RCC\_AHB1RSTR\_OTGHRST))}}
+\DoxyCodeLine{474 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !STM32F401xC \&\& STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{475 }
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#define \_\_GPIOJ\_FORCE\_RESET()    (RCC-\/>AHB1RSTR |= (RCC\_AHB1RSTR\_GPIOJRST))}}
+\DoxyCodeLine{478 \textcolor{preprocessor}{\#define \_\_GPIOK\_FORCE\_RESET()    (RCC-\/>AHB1RSTR |= (RCC\_AHB1RSTR\_GPIOKRST))}}
+\DoxyCodeLine{479 \textcolor{preprocessor}{\#define \_\_DMA2D\_FORCE\_RESET()    (RCC-\/>AHB1RSTR |= (RCC\_AHB1RSTR\_DMA2DRST))}}
+\DoxyCodeLine{480 }
+\DoxyCodeLine{481 \textcolor{preprocessor}{\#define \_\_GPIOJ\_RELEASE\_RESET()  (RCC-\/>AHB1RSTR \&= \string~(RCC\_AHB1RSTR\_GPIOJRST))}}
+\DoxyCodeLine{482 \textcolor{preprocessor}{\#define \_\_GPIOK\_RELEASE\_RESET()  (RCC-\/>AHB1RSTR \&= \string~(RCC\_AHB1RSTR\_GPIOKRST))}}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#define \_\_DMA2D\_RELEASE\_RESET()  (RCC-\/>AHB1RSTR \&= \string~(RCC\_AHB1RSTR\_DMA2DRST))}}
+\DoxyCodeLine{484 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{485  }
+\DoxyCodeLine{488 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE) }}
+\DoxyCodeLine{489 \textcolor{preprocessor}{\#define \_\_DCMI\_FORCE\_RESET()   (RCC-\/>AHB2RSTR |= (RCC\_AHB2RSTR\_DCMIRST))}}
+\DoxyCodeLine{490 \textcolor{preprocessor}{\#define \_\_DCMI\_RELEASE\_RESET() (RCC-\/>AHB2RSTR \&= \string~(RCC\_AHB2RSTR\_DCMIRST))}}
+\DoxyCodeLine{491 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !STM32F401xC \&\& STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{492 }
+\DoxyCodeLine{493 \textcolor{preprocessor}{\#if defined(STM32F415xx) || defined(STM32F417xx) || defined(STM32F437xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{494 \textcolor{preprocessor}{\#define \_\_CRYP\_FORCE\_RESET()   (RCC-\/>AHB2RSTR |= (RCC\_AHB2RSTR\_CRYPRST))}}
+\DoxyCodeLine{495 \textcolor{preprocessor}{\#define \_\_HASH\_FORCE\_RESET()   (RCC-\/>AHB2RSTR |= (RCC\_AHB2RSTR\_HASHRST))}}
+\DoxyCodeLine{496 }
+\DoxyCodeLine{497 \textcolor{preprocessor}{\#define \_\_CRYP\_RELEASE\_RESET() (RCC-\/>AHB2RSTR \&= \string~(RCC\_AHB2RSTR\_CRYPRST))}}
+\DoxyCodeLine{498 \textcolor{preprocessor}{\#define \_\_HASH\_RELEASE\_RESET() (RCC-\/>AHB2RSTR \&= \string~(RCC\_AHB2RSTR\_HASHRST))}}
+\DoxyCodeLine{499 }
+\DoxyCodeLine{500 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F415xx || STM32F417xx || STM32F437xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{501 }
+\DoxyCodeLine{504 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx)}}
+\DoxyCodeLine{505 \textcolor{preprocessor}{\#define \_\_FSMC\_FORCE\_RESET()   (RCC-\/>AHB3RSTR |= (RCC\_AHB3RSTR\_FSMCRST))}}
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#define \_\_FSMC\_RELEASE\_RESET() (RCC-\/>AHB3RSTR \&= \string~(RCC\_AHB3RSTR\_FSMCRST))}}
+\DoxyCodeLine{507 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{508 }
+\DoxyCodeLine{509 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{510 \textcolor{preprocessor}{\#define \_\_FMC\_FORCE\_RESET()    (RCC-\/>AHB3RSTR |= (RCC\_AHB3RSTR\_FMCRST))}}
+\DoxyCodeLine{511 \textcolor{preprocessor}{\#define \_\_FMC\_RELEASE\_RESET()  (RCC-\/>AHB3RSTR \&= \string~(RCC\_AHB3RSTR\_FMCRST))}}
+\DoxyCodeLine{512 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{513  }
+\DoxyCodeLine{516 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)  }}
+\DoxyCodeLine{517 \textcolor{preprocessor}{\#define \_\_TIM6\_FORCE\_RESET()     (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_TIM6RST))}}
+\DoxyCodeLine{518 \textcolor{preprocessor}{\#define \_\_TIM7\_FORCE\_RESET()     (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_TIM7RST))}}
+\DoxyCodeLine{519 \textcolor{preprocessor}{\#define \_\_TIM12\_FORCE\_RESET()    (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_TIM12RST))}}
+\DoxyCodeLine{520 \textcolor{preprocessor}{\#define \_\_TIM13\_FORCE\_RESET()    (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_TIM13RST))}}
+\DoxyCodeLine{521 \textcolor{preprocessor}{\#define \_\_TIM14\_FORCE\_RESET()    (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_TIM14RST))}}
+\DoxyCodeLine{522 \textcolor{preprocessor}{\#define \_\_USART3\_FORCE\_RESET()   (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_USART3RST))}}
+\DoxyCodeLine{523 \textcolor{preprocessor}{\#define \_\_UART4\_FORCE\_RESET()    (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_UART4RST))}}
+\DoxyCodeLine{524 \textcolor{preprocessor}{\#define \_\_UART5\_FORCE\_RESET()    (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_UART5RST))}}
+\DoxyCodeLine{525 \textcolor{preprocessor}{\#define \_\_CAN1\_FORCE\_RESET()     (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_CAN1RST))}}
+\DoxyCodeLine{526 \textcolor{preprocessor}{\#define \_\_CAN2\_FORCE\_RESET()     (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_CAN2RST))}}
+\DoxyCodeLine{527 \textcolor{preprocessor}{\#define \_\_DAC\_FORCE\_RESET()      (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_DACRST))}}
+\DoxyCodeLine{528 }
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#define \_\_TIM6\_RELEASE\_RESET()   (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_TIM6RST))}}
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#define \_\_TIM7\_RELEASE\_RESET()   (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_TIM7RST))}}
+\DoxyCodeLine{531 \textcolor{preprocessor}{\#define \_\_TIM12\_RELEASE\_RESET()  (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_TIM12RST))}}
+\DoxyCodeLine{532 \textcolor{preprocessor}{\#define \_\_TIM13\_RELEASE\_RESET()  (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_TIM13RST))}}
+\DoxyCodeLine{533 \textcolor{preprocessor}{\#define \_\_TIM14\_RELEASE\_RESET()  (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_TIM14RST))}}
+\DoxyCodeLine{534 \textcolor{preprocessor}{\#define \_\_USART3\_RELEASE\_RESET() (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_USART3RST))}}
+\DoxyCodeLine{535 \textcolor{preprocessor}{\#define \_\_UART4\_RELEASE\_RESET()  (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_UART4RST))}}
+\DoxyCodeLine{536 \textcolor{preprocessor}{\#define \_\_UART5\_RELEASE\_RESET()  (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_UART5RST))}}
+\DoxyCodeLine{537 \textcolor{preprocessor}{\#define \_\_CAN1\_RELEASE\_RESET()   (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_CAN1RST))}}
+\DoxyCodeLine{538 \textcolor{preprocessor}{\#define \_\_CAN2\_RELEASE\_RESET()   (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_CAN2RST))}}
+\DoxyCodeLine{539 \textcolor{preprocessor}{\#define \_\_DAC\_RELEASE\_RESET()    (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_DACRST))}}
+\DoxyCodeLine{540 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !STM32F401xC \&\& STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{541 }
+\DoxyCodeLine{542 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{543 \textcolor{preprocessor}{\#define \_\_UART7\_FORCE\_RESET()   (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_UART7RST))}}
+\DoxyCodeLine{544 \textcolor{preprocessor}{\#define \_\_UART8\_FORCE\_RESET()   (RCC-\/>APB1RSTR |= (RCC\_APB1RSTR\_UART8RST))}}
+\DoxyCodeLine{545 }
+\DoxyCodeLine{546 \textcolor{preprocessor}{\#define \_\_UART7\_RELEASE\_RESET() (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_UART7RST))}}
+\DoxyCodeLine{547 \textcolor{preprocessor}{\#define \_\_UART8\_RELEASE\_RESET() (RCC-\/>APB1RSTR \&= \string~(RCC\_APB1RSTR\_UART8RST))}}
+\DoxyCodeLine{548 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{549 }
+\DoxyCodeLine{552 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE) }}
+\DoxyCodeLine{553 \textcolor{preprocessor}{\#define \_\_TIM8\_FORCE\_RESET()   (RCC-\/>APB2RSTR |= (RCC\_APB2RSTR\_TIM8RST))}}
+\DoxyCodeLine{554 \textcolor{preprocessor}{\#define \_\_TIM8\_RELEASE\_RESET() (RCC-\/>APB2RSTR \&= \string~(RCC\_APB2RSTR\_TIM8RST))}}
+\DoxyCodeLine{555 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !STM32F401xC \&\& STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{556 }
+\DoxyCodeLine{557 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{558 \textcolor{preprocessor}{\#define \_\_SPI5\_FORCE\_RESET()   (RCC-\/>APB2RSTR |= (RCC\_APB2RSTR\_SPI5RST))}}
+\DoxyCodeLine{559 \textcolor{preprocessor}{\#define \_\_SPI6\_FORCE\_RESET()   (RCC-\/>APB2RSTR |= (RCC\_APB2RSTR\_SPI6RST))}}
+\DoxyCodeLine{560 \textcolor{preprocessor}{\#define \_\_SAI1\_FORCE\_RESET()   (RCC-\/>APB2RSTR |= (RCC\_APB2RSTR\_SAI1RST))}}
+\DoxyCodeLine{561 \textcolor{preprocessor}{\#define \_\_LTDC\_FORCE\_RESET()   (RCC-\/>APB2RSTR |= (RCC\_APB2RSTR\_LTDCRST))}}
+\DoxyCodeLine{562 }
+\DoxyCodeLine{563 \textcolor{preprocessor}{\#define \_\_SPI5\_RELEASE\_RESET() (RCC-\/>APB2RSTR \&= \string~(RCC\_APB2RSTR\_SPI5RST))}}
+\DoxyCodeLine{564 \textcolor{preprocessor}{\#define \_\_SPI6\_RELEASE\_RESET() (RCC-\/>APB2RSTR \&= \string~(RCC\_APB2RSTR\_SPI6RST))}}
+\DoxyCodeLine{565 \textcolor{preprocessor}{\#define \_\_SAI1\_RELEASE\_RESET() (RCC-\/>APB2RSTR \&= \string~(RCC\_APB2RSTR\_SAI1RST))}}
+\DoxyCodeLine{566 \textcolor{preprocessor}{\#define \_\_LTDC\_RELEASE\_RESET() (RCC-\/>APB2RSTR \&= \string~(RCC\_APB2RSTR\_LTDCRST))}}
+\DoxyCodeLine{567 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{568 }
+\DoxyCodeLine{569 }
+\DoxyCodeLine{576 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)  }}
+\DoxyCodeLine{577 \textcolor{preprocessor}{\#define \_\_GPIOF\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_GPIOFLPEN))}}
+\DoxyCodeLine{578 \textcolor{preprocessor}{\#define \_\_GPIOG\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_GPIOGLPEN))}}
+\DoxyCodeLine{579 \textcolor{preprocessor}{\#define \_\_GPIOI\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_GPIOILPEN))}}
+\DoxyCodeLine{580 \textcolor{preprocessor}{\#define \_\_SRAM2\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_SRAM2LPEN))}}
+\DoxyCodeLine{581 \textcolor{preprocessor}{\#define \_\_ETHMAC\_CLK\_SLEEP\_ENABLE()     (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_ETHMACLPEN))}}
+\DoxyCodeLine{582 \textcolor{preprocessor}{\#define \_\_ETHMACTX\_CLK\_SLEEP\_ENABLE()   (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_ETHMACTXLPEN))}}
+\DoxyCodeLine{583 \textcolor{preprocessor}{\#define \_\_ETHMACRX\_CLK\_SLEEP\_ENABLE()   (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_ETHMACRXLPEN))}}
+\DoxyCodeLine{584 \textcolor{preprocessor}{\#define \_\_ETHMACPTP\_CLK\_SLEEP\_ENABLE()  (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_ETHMACPTPLPEN))}}
+\DoxyCodeLine{585 \textcolor{preprocessor}{\#define \_\_OTGHS\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_OTGHSLPEN))}}
+\DoxyCodeLine{586 \textcolor{preprocessor}{\#define \_\_OTGHSULPI\_CLK\_SLEEP\_ENABLE()  (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_OTGHSULPILPEN))}}
+\DoxyCodeLine{587 }
+\DoxyCodeLine{588 \textcolor{preprocessor}{\#define \_\_GPIOF\_CLK\_SLEEP\_DISABLE()     (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_GPIOFLPEN))}}
+\DoxyCodeLine{589 \textcolor{preprocessor}{\#define \_\_GPIOG\_CLK\_SLEEP\_DISABLE()     (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_GPIOGLPEN))}}
+\DoxyCodeLine{590 \textcolor{preprocessor}{\#define \_\_GPIOI\_CLK\_SLEEP\_DISABLE()     (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_GPIOILPEN))}}
+\DoxyCodeLine{591 \textcolor{preprocessor}{\#define \_\_SRAM2\_CLK\_SLEEP\_DISABLE()     (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_SRAM2LPEN))}}
+\DoxyCodeLine{592 \textcolor{preprocessor}{\#define \_\_ETHMAC\_CLK\_SLEEP\_DISABLE()    (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_ETHMACLPEN))}}
+\DoxyCodeLine{593 \textcolor{preprocessor}{\#define \_\_ETHMACTX\_CLK\_SLEEP\_DISABLE()  (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_ETHMACTXLPEN))}}
+\DoxyCodeLine{594 \textcolor{preprocessor}{\#define \_\_ETHMACRX\_CLK\_SLEEP\_DISABLE()  (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_ETHMACRXLPEN))}}
+\DoxyCodeLine{595 \textcolor{preprocessor}{\#define \_\_ETHMACPTP\_CLK\_SLEEP\_DISABLE() (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_ETHMACPTPLPEN))}}
+\DoxyCodeLine{596 \textcolor{preprocessor}{\#define \_\_OTGHS\_CLK\_SLEEP\_DISABLE()     (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_OTGHSLPEN))}}
+\DoxyCodeLine{597 \textcolor{preprocessor}{\#define \_\_OTGHSULPI\_CLK\_SLEEP\_DISABLE() (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_OTGHSULPILPEN))}}
+\DoxyCodeLine{598 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !STM32F401xC \&\& STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{599 }
+\DoxyCodeLine{600 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{601 \textcolor{preprocessor}{\#define \_\_GPIOJ\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_GPIOJLPEN))}}
+\DoxyCodeLine{602 \textcolor{preprocessor}{\#define \_\_GPIOK\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_GPIOKLPEN))}}
+\DoxyCodeLine{603 \textcolor{preprocessor}{\#define \_\_SRAM3\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_SRAM3LPEN))}}
+\DoxyCodeLine{604 \textcolor{preprocessor}{\#define \_\_DMA2D\_CLK\_SLEEP\_ENABLE()      (RCC-\/>AHB1LPENR |= (RCC\_AHB1LPENR\_DMA2DLPEN))}}
+\DoxyCodeLine{605 }
+\DoxyCodeLine{606 \textcolor{preprocessor}{\#define \_\_GPIOJ\_CLK\_SLEEP\_DISABLE()     (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_GPIOJLPEN))}}
+\DoxyCodeLine{607 \textcolor{preprocessor}{\#define \_\_GPIOK\_CLK\_SLEEP\_DISABLE()     (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_GPIOKLPEN))}}
+\DoxyCodeLine{608 \textcolor{preprocessor}{\#define \_\_DMA2D\_CLK\_SLEEP\_DISABLE()     (RCC-\/>AHB1LPENR \&= \string~(RCC\_AHB1LPENR\_DMA2DLPEN))}}
+\DoxyCodeLine{609 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{610 }
+\DoxyCodeLine{617 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)}}
+\DoxyCodeLine{618 \textcolor{preprocessor}{\#define \_\_DCMI\_CLK\_SLEEP\_ENABLE()  (RCC-\/>AHB2LPENR |= (RCC\_AHB2LPENR\_DCMILPEN))}}
+\DoxyCodeLine{619 \textcolor{preprocessor}{\#define \_\_DCMI\_CLK\_SLEEP\_DISABLE() (RCC-\/>AHB2LPENR \&= \string~(RCC\_AHB2LPENR\_DCMILPEN))}}
+\DoxyCodeLine{620 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !STM32F401xC \&\& STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{621 }
+\DoxyCodeLine{622 \textcolor{preprocessor}{\#if defined(STM32F415xx) || defined(STM32F417xx) || defined(STM32F437xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{623 \textcolor{preprocessor}{\#define \_\_CRYP\_CLK\_SLEEP\_ENABLE()  (RCC-\/>AHB2LPENR |= (RCC\_AHB2LPENR\_CRYPLPEN))}}
+\DoxyCodeLine{624 \textcolor{preprocessor}{\#define \_\_HASH\_CLK\_SLEEP\_ENABLE()  (RCC-\/>AHB2LPENR |= (RCC\_AHB2LPENR\_HASHLPEN))}}
+\DoxyCodeLine{625 }
+\DoxyCodeLine{626 \textcolor{preprocessor}{\#define \_\_CRYP\_CLK\_SLEEP\_DISABLE() (RCC-\/>AHB2LPENR \&= \string~(RCC\_AHB2LPENR\_CRYPLPEN))}}
+\DoxyCodeLine{627 \textcolor{preprocessor}{\#define \_\_HASH\_CLK\_SLEEP\_DISABLE() (RCC-\/>AHB2LPENR \&= \string~(RCC\_AHB2LPENR\_HASHLPEN))}}
+\DoxyCodeLine{628 }
+\DoxyCodeLine{629 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F415xx || STM32F417xx || STM32F437xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{630 }
+\DoxyCodeLine{637 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx)|| defined(STM32F417xx)}}
+\DoxyCodeLine{638 \textcolor{preprocessor}{\#define \_\_FSMC\_CLK\_SLEEP\_ENABLE()  (RCC-\/>AHB3LPENR |= (RCC\_AHB3LPENR\_FSMCLPEN))}}
+\DoxyCodeLine{639 \textcolor{preprocessor}{\#define \_\_FSMC\_CLK\_SLEEP\_DISABLE() (RCC-\/>AHB3LPENR \&= \string~(RCC\_AHB3LPENR\_FSMCLPEN))}}
+\DoxyCodeLine{640 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{641 }
+\DoxyCodeLine{642 \textcolor{preprocessor}{\#if defined(STM32F415xx) || defined(STM32F417xx) || defined(STM32F437xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{643 \textcolor{preprocessor}{\#define \_\_FMC\_CLK\_SLEEP\_ENABLE()  (RCC-\/>AHB3LPENR |= (RCC\_AHB3LPENR\_FMCLPEN))}}
+\DoxyCodeLine{644 \textcolor{preprocessor}{\#define \_\_FMC\_CLK\_SLEEP\_DISABLE() (RCC-\/>AHB3LPENR \&= \string~(RCC\_AHB3LPENR\_FMCLPEN))}}
+\DoxyCodeLine{645 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{646 }
+\DoxyCodeLine{653 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)  }}
+\DoxyCodeLine{654 \textcolor{preprocessor}{\#define \_\_TIM6\_CLK\_SLEEP\_ENABLE()    (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_TIM6LPEN))}}
+\DoxyCodeLine{655 \textcolor{preprocessor}{\#define \_\_TIM7\_CLK\_SLEEP\_ENABLE()    (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_TIM7LPEN))}}
+\DoxyCodeLine{656 \textcolor{preprocessor}{\#define \_\_TIM12\_CLK\_SLEEP\_ENABLE()   (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_TIM12LPEN))}}
+\DoxyCodeLine{657 \textcolor{preprocessor}{\#define \_\_TIM13\_CLK\_SLEEP\_ENABLE()   (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_TIM13LPEN))}}
+\DoxyCodeLine{658 \textcolor{preprocessor}{\#define \_\_TIM14\_CLK\_SLEEP\_ENABLE()   (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_TIM14LPEN))}}
+\DoxyCodeLine{659 \textcolor{preprocessor}{\#define \_\_USART3\_CLK\_SLEEP\_ENABLE()  (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_USART3LPEN))}}
+\DoxyCodeLine{660 \textcolor{preprocessor}{\#define \_\_UART4\_CLK\_SLEEP\_ENABLE()   (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_UART4LPEN))}}
+\DoxyCodeLine{661 \textcolor{preprocessor}{\#define \_\_UART5\_CLK\_SLEEP\_ENABLE()   (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_UART5LPEN))}}
+\DoxyCodeLine{662 \textcolor{preprocessor}{\#define \_\_CAN1\_CLK\_SLEEP\_ENABLE()    (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_CAN1LPEN))}}
+\DoxyCodeLine{663 \textcolor{preprocessor}{\#define \_\_CAN2\_CLK\_SLEEP\_ENABLE()    (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_CAN2LPEN))}}
+\DoxyCodeLine{664 \textcolor{preprocessor}{\#define \_\_DAC\_CLK\_SLEEP\_ENABLE()     (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_DACLPEN))}}
+\DoxyCodeLine{665 }
+\DoxyCodeLine{666 \textcolor{preprocessor}{\#define \_\_TIM6\_CLK\_SLEEP\_DISABLE()   (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_TIM6LPEN))}}
+\DoxyCodeLine{667 \textcolor{preprocessor}{\#define \_\_TIM7\_CLK\_SLEEP\_DISABLE()   (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_TIM7LPEN))}}
+\DoxyCodeLine{668 \textcolor{preprocessor}{\#define \_\_TIM12\_CLK\_SLEEP\_DISABLE()  (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_TIM12LPEN))}}
+\DoxyCodeLine{669 \textcolor{preprocessor}{\#define \_\_TIM13\_CLK\_SLEEP\_DISABLE()  (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_TIM13LPEN))}}
+\DoxyCodeLine{670 \textcolor{preprocessor}{\#define \_\_TIM14\_CLK\_SLEEP\_DISABLE()  (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_TIM14LPEN))}}
+\DoxyCodeLine{671 \textcolor{preprocessor}{\#define \_\_USART3\_CLK\_SLEEP\_DISABLE() (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_USART3LPEN))}}
+\DoxyCodeLine{672 \textcolor{preprocessor}{\#define \_\_UART4\_CLK\_SLEEP\_DISABLE()  (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_UART4LPEN))}}
+\DoxyCodeLine{673 \textcolor{preprocessor}{\#define \_\_UART5\_CLK\_SLEEP\_DISABLE()  (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_UART5LPEN))}}
+\DoxyCodeLine{674 \textcolor{preprocessor}{\#define \_\_CAN1\_CLK\_SLEEP\_DISABLE()   (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_CAN1LPEN))}}
+\DoxyCodeLine{675 \textcolor{preprocessor}{\#define \_\_CAN2\_CLK\_SLEEP\_DISABLE()   (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_CAN2LPEN))}}
+\DoxyCodeLine{676 \textcolor{preprocessor}{\#define \_\_DAC\_CLK\_SLEEP\_DISABLE()    (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_DACLPEN))}}
+\DoxyCodeLine{677 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !STM32F401xC \&\& STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{678 }
+\DoxyCodeLine{679 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{680 \textcolor{preprocessor}{\#define \_\_UART7\_CLK\_SLEEP\_ENABLE()   (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_UART7LPEN))}}
+\DoxyCodeLine{681 \textcolor{preprocessor}{\#define \_\_UART8\_CLK\_SLEEP\_ENABLE()   (RCC-\/>APB1LPENR |= (RCC\_APB1LPENR\_UART8LPEN))}}
+\DoxyCodeLine{682 }
+\DoxyCodeLine{683 \textcolor{preprocessor}{\#define \_\_UART7\_CLK\_SLEEP\_DISABLE()   (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_UART7LPEN))}}
+\DoxyCodeLine{684 \textcolor{preprocessor}{\#define \_\_UART8\_CLK\_SLEEP\_DISABLE()   (RCC-\/>APB1LPENR \&= \string~(RCC\_APB1LPENR\_UART8LPEN))}}
+\DoxyCodeLine{685 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{686 }
+\DoxyCodeLine{693 \textcolor{preprocessor}{\#if !defined(STM32F401xC) \&\& !defined(STM32F401xE)  }}
+\DoxyCodeLine{694 \textcolor{preprocessor}{\#define \_\_TIM8\_CLK\_SLEEP\_ENABLE() (RCC-\/>APB2LPENR |= (RCC\_APB2LPENR\_TIM8LPEN))}}
+\DoxyCodeLine{695 \textcolor{preprocessor}{\#define \_\_ADC2\_CLK\_SLEEP\_ENABLE() (RCC-\/>APB2LPENR |= (RCC\_APB2LPENR\_ADC2LPEN))}}
+\DoxyCodeLine{696 \textcolor{preprocessor}{\#define \_\_ADC3\_CLK\_SLEEP\_ENABLE() (RCC-\/>APB2LPENR |= (RCC\_APB2LPENR\_ADC3LPEN))}}
+\DoxyCodeLine{697 }
+\DoxyCodeLine{698 \textcolor{preprocessor}{\#define \_\_TIM8\_CLK\_SLEEP\_DISABLE() (RCC-\/>APB2LPENR \&= \string~(RCC\_APB2LPENR\_TIM8LPEN))}}
+\DoxyCodeLine{699 \textcolor{preprocessor}{\#define \_\_ADC2\_CLK\_SLEEP\_DISABLE() (RCC-\/>APB2LPENR \&= \string~(RCC\_APB2LPENR\_ADC2LPEN))}}
+\DoxyCodeLine{700 \textcolor{preprocessor}{\#define \_\_ADC3\_CLK\_SLEEP\_DISABLE() (RCC-\/>APB2LPENR \&= \string~(RCC\_APB2LPENR\_ADC3LPEN))}}
+\DoxyCodeLine{701 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* !STM32F401xC \&\& STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{702 }
+\DoxyCodeLine{703 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{704 \textcolor{preprocessor}{\#define \_\_SPI5\_CLK\_SLEEP\_ENABLE() (RCC-\/>APB2LPENR |= (RCC\_APB2LPENR\_SPI5LPEN))}}
+\DoxyCodeLine{705 \textcolor{preprocessor}{\#define \_\_SPI6\_CLK\_SLEEP\_ENABLE() (RCC-\/>APB2LPENR |= (RCC\_APB2LPENR\_SPI6LPEN))}}
+\DoxyCodeLine{706 \textcolor{preprocessor}{\#define \_\_SAI1\_CLK\_SLEEP\_ENABLE() (RCC-\/>APB2LPENR |= (RCC\_APB2LPENR\_SAI1LPEN))}}
+\DoxyCodeLine{707 \textcolor{preprocessor}{\#define \_\_LTDC\_CLK\_SLEEP\_ENABLE() (RCC-\/>APB2LPENR |= (RCC\_APB2LPENR\_LTDCLPEN))}}
+\DoxyCodeLine{708 }
+\DoxyCodeLine{709 \textcolor{preprocessor}{\#define \_\_SPI5\_CLK\_SLEEP\_DISABLE() (RCC-\/>APB2LPENR \&= \string~(RCC\_APB2LPENR\_SPI5LPEN))}}
+\DoxyCodeLine{710 \textcolor{preprocessor}{\#define \_\_SPI6\_CLK\_SLEEP\_DISABLE() (RCC-\/>APB2LPENR \&= \string~(RCC\_APB2LPENR\_SPI6LPEN))}}
+\DoxyCodeLine{711 \textcolor{preprocessor}{\#define \_\_SAI1\_CLK\_SLEEP\_DISABLE() (RCC-\/>APB2LPENR \&= \string~(RCC\_APB2LPENR\_SAI1LPEN))}}
+\DoxyCodeLine{712 \textcolor{preprocessor}{\#define \_\_LTDC\_CLK\_SLEEP\_DISABLE() (RCC-\/>APB2LPENR \&= \string~(RCC\_APB2LPENR\_LTDCLPEN))}}
+\DoxyCodeLine{713 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{714 }
+\DoxyCodeLine{715 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{716                            }
+\DoxyCodeLine{730 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_TIMCLKPRESCALER(\_\_PRESC\_\_) (*(\_\_IO uint32\_t *) DCKCFGR\_TIMPRE\_BB = (\_\_PRESC\_\_))}}
+\DoxyCodeLine{731 }
+\DoxyCodeLine{736 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_ENABLE() (*(\_\_IO uint32\_t *) CR\_PLLSAION\_BB = ENABLE)}}
+\DoxyCodeLine{737 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_DISABLE() (*(\_\_IO uint32\_t *) CR\_PLLSAION\_BB = DISABLE)}}
+\DoxyCodeLine{738 }
+\DoxyCodeLine{753 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_CONFIG(\_\_PLLSAIN\_\_, \_\_PLLSAIQ\_\_, \_\_PLLSAIR\_\_) (RCC-\/>PLLSAICFGR = ((\_\_PLLSAIN\_\_) << 6) | ((\_\_PLLSAIQ\_\_) << 24) | ((\_\_PLLSAIR\_\_) << 28))}}
+\DoxyCodeLine{754 }
+\DoxyCodeLine{772 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLI2S\_SAICLK\_CONFIG(\_\_PLLI2SN\_\_, \_\_PLLI2SQ\_\_, \_\_PLLI2SR\_\_) (RCC-\/>PLLI2SCFGR = ((\_\_PLLI2SN\_\_) << 6) | ((\_\_PLLI2SQ\_\_) << 24) | ((\_\_PLLI2SR\_\_) << 28))}}
+\DoxyCodeLine{773     }
+\DoxyCodeLine{781 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLI2S\_PLLSAICLKDIVQ\_CONFIG(\_\_PLLI2SDivQ\_\_) (MODIFY\_REG(RCC-\/>DCKCFGR, RCC\_DCKCFGR\_PLLI2SDIVQ, (\_\_PLLI2SDivQ\_\_)-\/1))}}
+\DoxyCodeLine{782 }
+\DoxyCodeLine{790 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_PLLSAICLKDIVQ\_CONFIG(\_\_PLLSAIDivQ\_\_) (MODIFY\_REG(RCC-\/>DCKCFGR, RCC\_DCKCFGR\_PLLSAIDIVQ, ((\_\_PLLSAIDivQ\_\_)-\/1)<<8))}}
+\DoxyCodeLine{791 }
+\DoxyCodeLine{800 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_PLLSAICLKDIVR\_CONFIG(\_\_PLLSAIDivR\_\_) (MODIFY\_REG(RCC-\/>DCKCFGR, RCC\_DCKCFGR\_PLLSAIDIVR, (\_\_PLLSAIDivR\_\_)))}}
+\DoxyCodeLine{801 }
+\DoxyCodeLine{815 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_SAI\_BLOCKACLKSOURCE\_CONFIG(\_\_SOURCE\_\_) (MODIFY\_REG(RCC-\/>DCKCFGR, RCC\_DCKCFGR\_SAI1ASRC, (\_\_SOURCE\_\_)))}}
+\DoxyCodeLine{816 }
+\DoxyCodeLine{830 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_SAI\_BLOCKBCLKSOURCE\_CONFIG(\_\_SOURCE\_\_) (MODIFY\_REG(RCC-\/>DCKCFGR, RCC\_DCKCFGR\_SAI1BSRC, (\_\_SOURCE\_\_)))}}
+\DoxyCodeLine{831 }
+\DoxyCodeLine{834 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_ENABLE\_IT() (RCC-\/>CIR |= (RCC\_CIR\_PLLSAIRDYIE))}}
+\DoxyCodeLine{835 }
+\DoxyCodeLine{838 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_DISABLE\_IT() (RCC-\/>CIR \&= \string~(RCC\_CIR\_PLLSAIRDYIE))}}
+\DoxyCodeLine{839 }
+\DoxyCodeLine{842 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_CLEAR\_IT() (RCC-\/>CIR |= (RCC\_CIR\_PLLSAIRDYF))}}
+\DoxyCodeLine{843 }
+\DoxyCodeLine{847 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_GET\_IT() ((RCC-\/>CIR \& (RCC\_CIR\_PLLSAIRDYIE)) == (RCC\_CIR\_PLLSAIRDYIE))}}
+\DoxyCodeLine{848 }
+\DoxyCodeLine{852 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_PLLSAI\_GET\_FLAG() ((RCC-\/>CR \& (RCC\_CR\_PLLSAIRDY)) == (RCC\_CR\_PLLSAIRDY))}}
+\DoxyCodeLine{853 }
+\DoxyCodeLine{854 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{855 }
+\DoxyCodeLine{856 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{857 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___r_c_c_ex_ga0c0f61a1e2f47cc81bc43d83ba3e0d95}{HAL\_RCCEx\_PeriphCLKConfig}}(\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\_PeriphCLKInitTypeDef}}  *PeriphClkInit);}
+\DoxyCodeLine{858 \textcolor{keywordtype}{void} HAL\_RCCEx\_GetPeriphCLKConfig(\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\_PeriphCLKInitTypeDef}}  *PeriphClkInit);}
+\DoxyCodeLine{859 }
+\DoxyCodeLine{868 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{869 \}}
+\DoxyCodeLine{870 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{871 }
+\DoxyCodeLine{872 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_RCC\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{873 }
+\DoxyCodeLine{874 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

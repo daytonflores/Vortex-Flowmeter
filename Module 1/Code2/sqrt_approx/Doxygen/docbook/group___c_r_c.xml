@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___c_r_c" xml:lang="en-US">
+<title>CRC</title>
+<indexterm><primary>CRC</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link></para>
+
+<para>CRC handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_r_c_1gab6ec5d74fdff177143f4b22652a18114">__HAL_CRC_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97">HAL_CRC_STATE_RESET</link>)</para>
+
+<para>Reset CRC handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_r_c_1ga0007a05fb01806007181e12eedc14d28">__HAL_CRC_DR_RESET</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= <link linkend="_group___peripheral___registers___bits___definition_1ga7d57481fb891a0964b40f721354c56d7">CRC_CR_RESET</link>)</para>
+
+<para>Resets CRC Data Register. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link> { 
+<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97">HAL_CRC_STATE_RESET</link> = 0x00
+, <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeaa47f50129543b87fac3a83df1a634474">HAL_CRC_STATE_READY</link> = 0x01
+, <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea9d03b0c1d233e87e35b9c5c8353a4b70">HAL_CRC_STATE_BUSY</link> = 0x02
+, <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea5d803dcd1d578edb76b57e3d34adc5a8">HAL_CRC_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeadb51c35f7716430bb0c893069466a1b2">HAL_CRC_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>CRC HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___c_r_c_1ga23e7df2eaecf59615e13b2cad8b7185f">HAL_CRC_Init</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___c_r_c_1gac600b9a1785f2372ca40ed5449c23739">HAL_CRC_DeInit</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___c_r_c_1ga5167ffd293de5d86f5873910416b36d0">HAL_CRC_MspInit</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___c_r_c_1gac19b8df939b3490e690bdf1e1e04ead3">HAL_CRC_MspDeInit</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_r_c_1ga124a77d595e4982ad6e9a64c22f28b7b">HAL_CRC_Accumulate</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc, uint32_t pBuffer[], uint32_t BufferLength)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_r_c_1ga298593a6fb0bbd109cdbed3851806371">HAL_CRC_Calculate</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc, uint32_t pBuffer[], uint32_t BufferLength)</para>
+</listitem>
+            <listitem><para><link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link> <link linkend="_group___c_r_c_1ga4fb3d3460bd83853c28215bc5e14babe">HAL_CRC_GetState</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___c_r_c_1ga0007a05fb01806007181e12eedc14d28"/><section>
+    <title>__HAL_CRC_DR_RESET</title>
+<indexterm><primary>__HAL_CRC_DR_RESET</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>__HAL_CRC_DR_RESET</secondary></indexterm>
+<para><computeroutput>#define __HAL_CRC_DR_RESET( __HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= <link linkend="_group___peripheral___registers___bits___definition_1ga7d57481fb891a0964b40f721354c56d7">CRC_CR_RESET</link>)</computeroutput></para><para>
+
+<para>Resets CRC Data Register. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>CRC handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__crc_8h_source_1l00099">99</link> of file <link linkend="_stm32f4xx__hal__crc_8h_source">stm32f4xx_hal_crc.h</link>.</para>
+</section>
+<anchor xml:id="_group___c_r_c_1gab6ec5d74fdff177143f4b22652a18114"/><section>
+    <title>__HAL_CRC_RESET_HANDLE_STATE</title>
+<indexterm><primary>__HAL_CRC_RESET_HANDLE_STATE</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>__HAL_CRC_RESET_HANDLE_STATE</secondary></indexterm>
+<para><computeroutput>#define __HAL_CRC_RESET_HANDLE_STATE( __HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97">HAL_CRC_STATE_RESET</link>)</computeroutput></para><para>
+
+<para>Reset CRC handle state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>__HANDLE__</entry><entry>
+<para>CRC handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__crc_8h_source_1l00092">92</link> of file <link linkend="_stm32f4xx__hal__crc_8h_source">stm32f4xx_hal_crc.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe"/><section>
+    <title>HAL_CRC_StateTypeDef</title>
+<indexterm><primary>HAL_CRC_StateTypeDef</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link></computeroutput></para><para>
+
+<para>CRC HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HAL_CRC_STATE_RESET</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_STATE_RESET</secondary></indexterm>
+<anchor xml:id="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97"/>HAL_CRC_STATE_RESET</entry><entry>
+<para>CRC not yet initialized or disabled </para>
+</entry></row><row><entry><indexterm><primary>HAL_CRC_STATE_READY</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_STATE_READY</secondary></indexterm>
+<anchor xml:id="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeaa47f50129543b87fac3a83df1a634474"/>HAL_CRC_STATE_READY</entry><entry>
+<para>CRC initialized and ready for use 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_CRC_STATE_BUSY</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_STATE_BUSY</secondary></indexterm>
+<anchor xml:id="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea9d03b0c1d233e87e35b9c5c8353a4b70"/>HAL_CRC_STATE_BUSY</entry><entry>
+<para>CRC internal process is ongoing 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_CRC_STATE_TIMEOUT</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_STATE_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea5d803dcd1d578edb76b57e3d34adc5a8"/>HAL_CRC_STATE_TIMEOUT</entry><entry>
+<para>CRC timeout state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row><row><entry><indexterm><primary>HAL_CRC_STATE_ERROR</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_STATE_ERROR</secondary></indexterm>
+<anchor xml:id="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeadb51c35f7716430bb0c893069466a1b2"/>HAL_CRC_STATE_ERROR</entry><entry>
+<para>CRC error state 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__crc_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__crc_8h_source">stm32f4xx_hal_crc.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___c_r_c_1ga124a77d595e4982ad6e9a64c22f28b7b"/><section>
+    <title>HAL_CRC_Accumulate()</title>
+<indexterm><primary>HAL_CRC_Accumulate</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_Accumulate</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_CRC_Accumulate (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> * hcrc, uint32_t pBuffer[], uint32_t BufferLength)</computeroutput></para></section>
+<anchor xml:id="_group___c_r_c_1ga298593a6fb0bbd109cdbed3851806371"/><section>
+    <title>HAL_CRC_Calculate()</title>
+<indexterm><primary>HAL_CRC_Calculate</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_Calculate</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_CRC_Calculate (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> * hcrc, uint32_t pBuffer[], uint32_t BufferLength)</computeroutput></para></section>
+<anchor xml:id="_group___c_r_c_1gac600b9a1785f2372ca40ed5449c23739"/><section>
+    <title>HAL_CRC_DeInit()</title>
+<indexterm><primary>HAL_CRC_DeInit</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_CRC_DeInit (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> * hcrc)</computeroutput></para></section>
+<anchor xml:id="_group___c_r_c_1ga4fb3d3460bd83853c28215bc5e14babe"/><section>
+    <title>HAL_CRC_GetState()</title>
+<indexterm><primary>HAL_CRC_GetState</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link> HAL_CRC_GetState (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> * hcrc)</computeroutput></para></section>
+<anchor xml:id="_group___c_r_c_1ga23e7df2eaecf59615e13b2cad8b7185f"/><section>
+    <title>HAL_CRC_Init()</title>
+<indexterm><primary>HAL_CRC_Init</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_CRC_Init (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> * hcrc)</computeroutput></para></section>
+<anchor xml:id="_group___c_r_c_1gac19b8df939b3490e690bdf1e1e04ead3"/><section>
+    <title>HAL_CRC_MspDeInit()</title>
+<indexterm><primary>HAL_CRC_MspDeInit</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_CRC_MspDeInit (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> * hcrc)</computeroutput></para></section>
+<anchor xml:id="_group___c_r_c_1ga5167ffd293de5d86f5873910416b36d0"/><section>
+    <title>HAL_CRC_MspInit()</title>
+<indexterm><primary>HAL_CRC_MspInit</primary><secondary>CRC</secondary></indexterm>
+<indexterm><primary>CRC</primary><secondary>HAL_CRC_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_CRC_MspInit (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> * hcrc)</computeroutput></para></section>
+</section>
+</section>

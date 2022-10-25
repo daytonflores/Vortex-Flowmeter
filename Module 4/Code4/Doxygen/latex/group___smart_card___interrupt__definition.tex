@@ -1,0 +1,35 @@
+\hypertarget{group___smart_card___interrupt__definition}{}\doxysection{Smart\+Card\+\_\+\+Interrupt\+\_\+definition}
+\label{group___smart_card___interrupt__definition}\index{SmartCard\_Interrupt\_definition@{SmartCard\_Interrupt\_definition}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___smart_card___interrupt__definition_gac56e07a71ab82a23930ad58e9a8dc806}\label{group___smart_card___interrupt__definition_gac56e07a71ab82a23930ad58e9a8dc806}} 
+\#define {\bfseries SMARTCARD\+\_\+\+IT\+\_\+\+PE}~((uint32\+\_\+t)0x10000100)
+\item 
+\mbox{\Hypertarget{group___smart_card___interrupt__definition_ga758561a96d28254dc3504cb5325dad1f}\label{group___smart_card___interrupt__definition_ga758561a96d28254dc3504cb5325dad1f}} 
+\#define {\bfseries SMARTCARD\+\_\+\+IT\+\_\+\+TXE}~((uint32\+\_\+t)0x10000080)
+\item 
+\mbox{\Hypertarget{group___smart_card___interrupt__definition_ga808ee7d7c209374af004e8bf1d2ca492}\label{group___smart_card___interrupt__definition_ga808ee7d7c209374af004e8bf1d2ca492}} 
+\#define {\bfseries SMARTCARD\+\_\+\+IT\+\_\+\+TC}~((uint32\+\_\+t)0x10000040)
+\item 
+\mbox{\Hypertarget{group___smart_card___interrupt__definition_ga75b6c6e283a114afa1130f6f1bc98da6}\label{group___smart_card___interrupt__definition_ga75b6c6e283a114afa1130f6f1bc98da6}} 
+\#define {\bfseries SMARTCARD\+\_\+\+IT\+\_\+\+RXNE}~((uint32\+\_\+t)0x10000020)
+\item 
+\mbox{\Hypertarget{group___smart_card___interrupt__definition_ga0b1a5f7e611a976c71168a5b9e3a1f0e}\label{group___smart_card___interrupt__definition_ga0b1a5f7e611a976c71168a5b9e3a1f0e}} 
+\#define {\bfseries SMARTCARD\+\_\+\+IT\+\_\+\+IDLE}~((uint32\+\_\+t)0x10000010)
+\item 
+\mbox{\Hypertarget{group___smart_card___interrupt__definition_ga751761f820948ee230b30a244ca85725}\label{group___smart_card___interrupt__definition_ga751761f820948ee230b30a244ca85725}} 
+\#define {\bfseries SMARTCARD\+\_\+\+IT\+\_\+\+ERR}~((uint32\+\_\+t)0x20000001)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Elements values convention\+: 0x\+Y000\+XXXX
+\begin{DoxyItemize}
+\item XXXX \+: Interrupt mask in the XX register
+\item Y \+: Interrupt source register (2bits)
+\begin{DoxyItemize}
+\item 01\+: CR1 register
+\item 10\+: CR3 register 
+\end{DoxyItemize}
+\end{DoxyItemize}

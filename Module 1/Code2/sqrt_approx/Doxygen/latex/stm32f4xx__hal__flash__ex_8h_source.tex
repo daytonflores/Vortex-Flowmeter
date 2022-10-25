@@ -1,0 +1,474 @@
+\hypertarget{stm32f4xx__hal__flash__ex_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h}
+\label{stm32f4xx__hal__flash__ex_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_flash\_ex.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_flash\_ex.h}}
+\mbox{\hyperlink{stm32f4xx__hal__flash__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00038}00038 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_FLASH\_EX\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00040}00040 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_FLASH\_EX\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00046}00046 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00047}00047 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00057}00057 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00062}\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{00062}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00063}00063 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00064}\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_ae2154c09320f3ef7feb8f4a84e9ac17b}{00064}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_ae2154c09320f3ef7feb8f4a84e9ac17b}{TypeErase}};   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00067}\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_aa07868a5b012861c6111322c3dccdbec}{00067}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_aa07868a5b012861c6111322c3dccdbec}{Banks}};       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00070}\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a6c86f87bb12212ce21da3aec61759a52}{00070}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a6c86f87bb12212ce21da3aec61759a52}{Sector}};      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00073}\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a0511632174dfb4c07e218a857e6a6406}{00073}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a0511632174dfb4c07e218a857e6a6406}{NbSectors}};   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00076}\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a85dd2161de6dd6ee5b24e87dcc674024}{00076}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a85dd2161de6dd6ee5b24e87dcc674024}{VoltageRange}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00079}00079 \} \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{FLASH\_EraseInitTypeDef}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00084}\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{00084}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00085}00085 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00086}\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ac5941efaeb6bd9e3c0852613f990ebd8}{00086}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ac5941efaeb6bd9e3c0852613f990ebd8}{OptionType}};   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00089}\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ab5ab320199482e9eb21dc8460501dea5}{00089}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ab5ab320199482e9eb21dc8460501dea5}{WRPState}};     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00092}\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a549b7149fc7cec7fa1235aa040b9d498}{00092}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a549b7149fc7cec7fa1235aa040b9d498}{WRPSector}};         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00095}\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_aa07868a5b012861c6111322c3dccdbec}{00095}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_aa07868a5b012861c6111322c3dccdbec}{Banks}};        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00098}\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a671880a1dafb7b92e0e2b65593407c12}{00098}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a671880a1dafb7b92e0e2b65593407c12}{RDPLevel}};     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00101}\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_af4bc744e01810b8cdef4b7c8c8e6009c}{00101}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_af4bc744e01810b8cdef4b7c8c8e6009c}{BORLevel}};     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00104}\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ac4ab84c90f7a878b0b39ec1f3dda8ded}{00104}}   uint8\_t  \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ac4ab84c90f7a878b0b39ec1f3dda8ded}{USERConfig}};   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00106}00106 \} \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{FLASH\_OBProgramInitTypeDef}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00111}00111 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) || defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00112}\mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def}{00112}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00113}00113 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00114}\mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def_ac5941efaeb6bd9e3c0852613f990ebd8}{00114}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def_ac5941efaeb6bd9e3c0852613f990ebd8}{OptionType}};     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00117}\mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def_a0a5fa0af9ed7955226f8e088fed8998f}{00117}}   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def_a0a5fa0af9ed7955226f8e088fed8998f}{PCROPState}};     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00120}00120 \textcolor{preprocessor}{\#if defined (STM32F401xC) || defined (STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00121}\mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def_a8e5644eec9342ad0ea35206b1a191b09}{00121}}   uint16\_t \mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def_a8e5644eec9342ad0ea35206b1a191b09}{Sectors}};        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00123}00123 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00124}00124 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00125}00125   uint32\_t Banks;          }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00128}00128   uint16\_t SectorsBank1;   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00131}00131   uint16\_t SectorsBank2;   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00134}00134   uint8\_t BootConfig;      }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00137}00137 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00138}00138 \} \mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def}{FLASH\_AdvOBProgramInitTypeDef}};}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00139}00139 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00141}00141 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00150}\mbox{\hyperlink{group___f_l_a_s_h_ex___type___erase_ga35d1514adec0ccd2f93cfd47f844d9ee}{00150}} \textcolor{preprocessor}{\#define TYPEERASE\_SECTORS         ((uint32\_t)0x00)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00151}\mbox{\hyperlink{group___f_l_a_s_h_ex___type___erase_gad155d920d19e0d37f71a46dce3227209}{00151}} \textcolor{preprocessor}{\#define TYPEERASE\_MASSERASE       ((uint32\_t)0x01)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00153}\mbox{\hyperlink{group___f_l_a_s_h_ex___type___erase_gaaf23e19025735e3e4a8e9009e14632ff}{00153}} \textcolor{preprocessor}{\#define IS\_TYPEERASE(VALUE)(((VALUE) == TYPEERASE\_SECTORS) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00154}00154 \textcolor{preprocessor}{                               ((VALUE) == TYPEERASE\_MASSERASE))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00163}\mbox{\hyperlink{group___f_l_a_s_h_ex___voltage___range_ga5a1b1ceafccd5ab37c7cfbebc9527329}{00163}} \textcolor{preprocessor}{\#define VOLTAGE\_RANGE\_1        ((uint32\_t)0x00)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00164}\mbox{\hyperlink{group___f_l_a_s_h_ex___voltage___range_ga1c0639cea187d17c4dad607fe124a94f}{00164}} \textcolor{preprocessor}{\#define VOLTAGE\_RANGE\_2        ((uint32\_t)0x01)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00165}\mbox{\hyperlink{group___f_l_a_s_h_ex___voltage___range_ga45c6cc06a75f9dfd18e3d182cbe1387b}{00165}} \textcolor{preprocessor}{\#define VOLTAGE\_RANGE\_3        ((uint32\_t)0x02)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00166}\mbox{\hyperlink{group___f_l_a_s_h_ex___voltage___range_ga98497e19f090f03d71a1537fbcfebfe9}{00166}} \textcolor{preprocessor}{\#define VOLTAGE\_RANGE\_4        ((uint32\_t)0x03)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00168}\mbox{\hyperlink{group___f_l_a_s_h_ex___voltage___range_gaa9682aea9d9ceebca83c48e53f9f6028}{00168}} \textcolor{preprocessor}{\#define IS\_VOLTAGERANGE(RANGE)(((RANGE) == VOLTAGE\_RANGE\_1) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00169}00169 \textcolor{preprocessor}{                               ((RANGE) == VOLTAGE\_RANGE\_2) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00170}00170 \textcolor{preprocessor}{                               ((RANGE) == VOLTAGE\_RANGE\_3) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00171}00171 \textcolor{preprocessor}{                               ((RANGE) == VOLTAGE\_RANGE\_4))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00172}00172                               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00180}\mbox{\hyperlink{group___f_l_a_s_h_ex___w_r_p___state_gafa6275edfe88cfcc063761a6394e475a}{00180}} \textcolor{preprocessor}{\#define WRPSTATE\_DISABLE       ((uint32\_t)0x00)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00181}\mbox{\hyperlink{group___f_l_a_s_h_ex___w_r_p___state_ga1a6d2287155d773e15bb4e5561913171}{00181}} \textcolor{preprocessor}{\#define WRPSTATE\_ENABLE        ((uint32\_t)0x01)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00183}\mbox{\hyperlink{group___f_l_a_s_h_ex___w_r_p___state_ga8164622401a6cacf006679166de93c21}{00183}} \textcolor{preprocessor}{\#define IS\_WRPSTATE(VALUE)(((VALUE) == WRPSTATE\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00184}00184 \textcolor{preprocessor}{                           ((VALUE) == WRPSTATE\_ENABLE))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00193}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___type_ga48712a166ea192ddcda0f2653679f9ec}{00193}} \textcolor{preprocessor}{\#define OPTIONBYTE\_WRP        ((uint32\_t)0x01)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00194}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___type_ga8f0bdb21ef13bae39d5d8b6619e2df06}{00194}} \textcolor{preprocessor}{\#define OPTIONBYTE\_RDP        ((uint32\_t)0x02)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00195}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___type_gac7d843e666e15c79688a1914e8ffe7a5}{00195}} \textcolor{preprocessor}{\#define OPTIONBYTE\_USER       ((uint32\_t)0x04)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00196}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___type_gaf4063216c8386467d187663190936c07}{00196}} \textcolor{preprocessor}{\#define OPTIONBYTE\_BOR        ((uint32\_t)0x08)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00198}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___type_ga87cd48c2373f47668470a38892ed07e3}{00198}} \textcolor{preprocessor}{\#define IS\_OPTIONBYTE(VALUE)(((VALUE) < (OPTIONBYTE\_WRP|OPTIONBYTE\_RDP|OPTIONBYTE\_USER|OPTIONBYTE\_BOR)))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00207}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___read___protection_ga22c7871bda267a2844ab9ca9f7bd38e4}{00207}} \textcolor{preprocessor}{\#define OB\_RDP\_LEVEL\_0   ((uint8\_t)0xAA)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00208}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___read___protection_ga778207f0d12d87bbff9d55e985aba5bc}{00208}} \textcolor{preprocessor}{\#define OB\_RDP\_LEVEL\_1   ((uint8\_t)0x55)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00209}00209 \textcolor{comment}{/*\#define OB\_RDP\_LEVEL\_2   ((uint8\_t)0xCC)*/} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00211}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___read___protection_ga8d602a97cd688390b3d1956d9970e712}{00211}} \textcolor{preprocessor}{\#define IS\_OB\_RDP\_LEVEL(LEVEL) (((LEVEL) == OB\_RDP\_LEVEL\_0)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00212}00212 \textcolor{preprocessor}{                                ((LEVEL) == OB\_RDP\_LEVEL\_1))}\textcolor{comment}{/*||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00213}00213 \textcolor{comment}{                                ((LEVEL) == OB\_RDP\_LEVEL\_2))*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00221}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___i_watchdog_gadfcbfa963d79c339ec8e2d5a7734e47a}{00221}} \textcolor{preprocessor}{\#define OB\_IWDG\_SW                     ((uint8\_t)0x20)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00222}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___i_watchdog_gaf2871652c08e76499d9449be6556f12c}{00222}} \textcolor{preprocessor}{\#define OB\_IWDG\_HW                     ((uint8\_t)0x00)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00223}00223 \textcolor{preprocessor}{\#define IS\_OB\_IWDG\_SOURCE(SOURCE) (((SOURCE) == OB\_IWDG\_SW) || ((SOURCE) == OB\_IWDG\_HW))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00231}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_o_p_gaef92c03b1f279c532bfa13d3bb074b57}{00231}} \textcolor{preprocessor}{\#define OB\_STOP\_NO\_RST                 ((uint8\_t)0x40) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00232}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_o_p_ga131ae3434f300c8317dd6b3b349c7cab}{00232}} \textcolor{preprocessor}{\#define OB\_STOP\_RST                    ((uint8\_t)0x00) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00233}00233 \textcolor{preprocessor}{\#define IS\_OB\_STOP\_SOURCE(SOURCE) (((SOURCE) == OB\_STOP\_NO\_RST) || ((SOURCE) == OB\_STOP\_RST))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00242}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_d_b_y_ga69451a6f69247528f58735c9c83499ce}{00242}} \textcolor{preprocessor}{\#define OB\_STDBY\_NO\_RST                ((uint8\_t)0x80) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00243}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes__n_r_s_t___s_t_d_b_y_ga8a05393df3a5e89551b4e2e1e8c5b884}{00243}} \textcolor{preprocessor}{\#define OB\_STDBY\_RST                   ((uint8\_t)0x00) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00244}00244 \textcolor{preprocessor}{\#define IS\_OB\_STDBY\_SOURCE(SOURCE) (((SOURCE) == OB\_STDBY\_NO\_RST) || ((SOURCE) == OB\_STDBY\_RST))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00252}\mbox{\hyperlink{group___f_l_a_s_h_ex___b_o_r___reset___level_gad678e849fcf817f6ed2d837538e8ebc2}{00252}} \textcolor{preprocessor}{\#define OB\_BOR\_LEVEL3          ((uint8\_t)0x00)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00253}\mbox{\hyperlink{group___f_l_a_s_h_ex___b_o_r___reset___level_ga3a888b788e75f0bc1f9add85c9ccd9d6}{00253}} \textcolor{preprocessor}{\#define OB\_BOR\_LEVEL2          ((uint8\_t)0x04)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00254}\mbox{\hyperlink{group___f_l_a_s_h_ex___b_o_r___reset___level_gaabc231cb1d05a94fe860f67bb5a37b12}{00254}} \textcolor{preprocessor}{\#define OB\_BOR\_LEVEL1          ((uint8\_t)0x08)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00255}\mbox{\hyperlink{group___f_l_a_s_h_ex___b_o_r___reset___level_gac97ecd832fce5f4b4ff9ef7bc4493013}{00255}} \textcolor{preprocessor}{\#define OB\_BOR\_OFF             ((uint8\_t)0x0C)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00256}00256 \textcolor{preprocessor}{\#define IS\_OB\_BOR\_LEVEL(LEVEL) (((LEVEL) == OB\_BOR\_LEVEL1) || ((LEVEL) == OB\_BOR\_LEVEL2) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00257}00257 \textcolor{preprocessor}{                                ((LEVEL) == OB\_BOR\_LEVEL3) || ((LEVEL) == OB\_BOR\_OFF))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00262}00262 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) || defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00266}\mbox{\hyperlink{group___f_l_a_s_h_ex___p_c_r_o_p___state_ga9e086afe58f178c3e86526666bedc217}{00266}} \textcolor{preprocessor}{\#define PCROPSTATE\_DISABLE       ((uint32\_t)0x00)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00267}00267 \textcolor{preprocessor}{\#define PCROPSTATE\_ENABLE        ((uint32\_t)0x01)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00269}00269 \textcolor{preprocessor}{\#define IS\_PCROPSTATE(VALUE)(((VALUE) == PCROPSTATE\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00270}00270 \textcolor{preprocessor}{                             ((VALUE) == PCROPSTATE\_ENABLE))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00271}00271   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00275}00275 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00276}00276 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00280}00280 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00281}00281 \textcolor{preprocessor}{\#define OBEX\_PCROP        ((uint32\_t)0x01)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00282}00282 \textcolor{preprocessor}{\#define OBEX\_BOOTCONFIG   ((uint32\_t)0x02)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00284}00284 \textcolor{preprocessor}{\#define IS\_OBEX(VALUE)(((VALUE) == OBEX\_PCROP) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00285}00285 \textcolor{preprocessor}{                       ((VALUE) == OBEX\_BOOTCONFIG))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00286}00286   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00287}00287 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00288}00288 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00289}\mbox{\hyperlink{group___f_l_a_s_h_ex___advanced___option___type_ga1de788f8cf04b70320aaebf3388e638c}{00289}} \textcolor{preprocessor}{\#if defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00290}00290 \textcolor{preprocessor}{\#define OBEX\_PCROP        ((uint32\_t)0x01)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00292}00292 \textcolor{preprocessor}{\#define IS\_OBEX(VALUE)(((VALUE) == OBEX\_PCROP))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00293}00293   }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00294}00294 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00302}00302 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00303}00303 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_0                FLASH\_ACR\_LATENCY\_0WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00304}00304 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_1                FLASH\_ACR\_LATENCY\_1WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00305}00305 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_2                FLASH\_ACR\_LATENCY\_2WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00306}00306 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_3                FLASH\_ACR\_LATENCY\_3WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00307}00307 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_4                FLASH\_ACR\_LATENCY\_4WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00308}00308 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_5                FLASH\_ACR\_LATENCY\_5WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00309}00309 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_6                FLASH\_ACR\_LATENCY\_6WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00310}00310 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_7                FLASH\_ACR\_LATENCY\_7WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00311}00311 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_8                FLASH\_ACR\_LATENCY\_8WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00312}00312 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_9                FLASH\_ACR\_LATENCY\_9WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00313}00313 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_10               FLASH\_ACR\_LATENCY\_10WS  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00314}00314 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_11               FLASH\_ACR\_LATENCY\_11WS  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00315}00315 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_12               FLASH\_ACR\_LATENCY\_12WS  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00316}00316 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_13               FLASH\_ACR\_LATENCY\_13WS  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00317}00317 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_14               FLASH\_ACR\_LATENCY\_14WS  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00318}00318 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_15               FLASH\_ACR\_LATENCY\_15WS  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00321}00321 \textcolor{preprocessor}{\#define IS\_FLASH\_LATENCY(LATENCY) (((LATENCY) == FLASH\_LATENCY\_0)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00322}00322 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_1)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00323}00323 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_2)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00324}00324 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_3)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00325}00325 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_4)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00326}00326 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_5)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00327}00327 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_6)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00328}00328 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_7)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00329}00329 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_8)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00330}00330 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_9)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00331}00331 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_10) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00332}00332 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_11) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00333}00333 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_12) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00334}00334 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_13) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00335}00335 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_14) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00336}00336 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_15))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00337}00337 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00338}00338 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00339}\mbox{\hyperlink{group___f_l_a_s_h___latency_ga1276f51e97dc9857ca261fae4eb890f3}{00339}} \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00340}\mbox{\hyperlink{group___f_l_a_s_h___latency_ga28c611f2cb4a3772ab37c538357fd5f6}{00340}} \textcolor{preprocessor}{\#define FLASH\_LATENCY\_0                FLASH\_ACR\_LATENCY\_0WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00341}\mbox{\hyperlink{group___f_l_a_s_h___latency_ga69d209f9cb4f625010d72555c8dceb03}{00341}} \textcolor{preprocessor}{\#define FLASH\_LATENCY\_1                FLASH\_ACR\_LATENCY\_1WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00342}\mbox{\hyperlink{group___f_l_a_s_h___latency_ga2f607c9fa7bdcd53df0e98a7b1e67496}{00342}} \textcolor{preprocessor}{\#define FLASH\_LATENCY\_2                FLASH\_ACR\_LATENCY\_2WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00343}\mbox{\hyperlink{group___f_l_a_s_h___latency_ga65fe32d2c25a3d5ee3dce89dee459fa5}{00343}} \textcolor{preprocessor}{\#define FLASH\_LATENCY\_3                FLASH\_ACR\_LATENCY\_3WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00344}\mbox{\hyperlink{group___f_l_a_s_h___latency_ga2517d62fa71e27b3b53223bbaacd06f7}{00344}} \textcolor{preprocessor}{\#define FLASH\_LATENCY\_4                FLASH\_ACR\_LATENCY\_4WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00345}\mbox{\hyperlink{group___f_l_a_s_h___latency_gad047485b4941997af3c55ad61ad9c13a}{00345}} \textcolor{preprocessor}{\#define FLASH\_LATENCY\_5                FLASH\_ACR\_LATENCY\_5WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00346}\mbox{\hyperlink{group___f_l_a_s_h___latency_ga09e9f01dd2e6e361adc9c995a5a73510}{00346}} \textcolor{preprocessor}{\#define FLASH\_LATENCY\_6                FLASH\_ACR\_LATENCY\_6WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00347}00347 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_7                FLASH\_ACR\_LATENCY\_7WS   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00350}00350 \textcolor{preprocessor}{\#define IS\_FLASH\_LATENCY(LATENCY) (((LATENCY) == FLASH\_LATENCY\_0)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00351}00351 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_1)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00352}00352 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_2)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00353}00353 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_3)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00354}00354 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_4)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00355}00355 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_5)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00356}00356 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_6)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00357}00357 \textcolor{preprocessor}{                                   ((LATENCY) == FLASH\_LATENCY\_7))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00358}00358 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00359}00359 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00368}00368 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00369}00369 \textcolor{preprocessor}{\#define FLASH\_BANK\_1     ((uint32\_t)1) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00370}00370 \textcolor{preprocessor}{\#define FLASH\_BANK\_2     ((uint32\_t)2) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00371}00371 \textcolor{preprocessor}{\#define FLASH\_BANK\_BOTH  ((uint32\_t)FLASH\_BANK\_1 | FLASH\_BANK\_2) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00373}00373 \textcolor{preprocessor}{\#define IS\_FLASH\_BANK(BANK) (((BANK) == FLASH\_BANK\_1)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00374}00374 \textcolor{preprocessor}{                             ((BANK) == FLASH\_BANK\_2)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00375}00375 \textcolor{preprocessor}{                             ((BANK) == FLASH\_BANK\_BOTH))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00376}00376 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00377}00377 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00378}\mbox{\hyperlink{group___f_l_a_s_h_ex___banks_ga8ac3f24496e5de6a2f6bd3ff77f0ca53}{00378}} \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00379}00379 \textcolor{preprocessor}{\#define FLASH\_BANK\_1     ((uint32\_t)1) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00381}00381 \textcolor{preprocessor}{\#define IS\_FLASH\_BANK(BANK) (((BANK) == FLASH\_BANK\_1))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00382}00382 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00390}00390 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00391}00391 \textcolor{preprocessor}{\#define FLASH\_MER\_BIT     (FLASH\_CR\_MER1 | FLASH\_CR\_MER2) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00392}00392 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00393}00393 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00394}\mbox{\hyperlink{group___f_l_a_s_h_ex___mass_erase__bit_gae8edecf268bc993ff286fa1fabb486dd}{00394}} \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00395}00395 \textcolor{preprocessor}{\#define FLASH\_MER\_BIT     (FLASH\_CR\_MER) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00396}00396 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00404}00404 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00405}00405 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_0     ((uint32\_t)0)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00406}00406 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_1     ((uint32\_t)1)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00407}00407 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_2     ((uint32\_t)2)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00408}00408 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_3     ((uint32\_t)3)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00409}00409 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_4     ((uint32\_t)4)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00410}00410 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_5     ((uint32\_t)5)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00411}00411 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_6     ((uint32\_t)6)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00412}00412 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_7     ((uint32\_t)7)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00413}00413 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_8     ((uint32\_t)8)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00414}00414 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_9     ((uint32\_t)9)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00415}00415 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_10    ((uint32\_t)10) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00416}00416 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_11    ((uint32\_t)11) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00417}00417 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_12    ((uint32\_t)12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00418}00418 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_13    ((uint32\_t)13) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00419}00419 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_14    ((uint32\_t)14) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00420}00420 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_15    ((uint32\_t)15) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00421}00421 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_16    ((uint32\_t)16) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00422}00422 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_17    ((uint32\_t)17) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00423}00423 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_18    ((uint32\_t)18) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00424}00424 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_19    ((uint32\_t)19) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00425}00425 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_20    ((uint32\_t)20) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00426}00426 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_21    ((uint32\_t)21) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00427}00427 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_22    ((uint32\_t)22) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00428}00428 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_23    ((uint32\_t)23) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00430}00430 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_TOTAL  24}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00431}00431 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00432}00432 \textcolor{preprocessor}{\#define IS\_FLASH\_SECTOR(SECTOR) ( ((SECTOR) == FLASH\_SECTOR\_0)   || ((SECTOR) == FLASH\_SECTOR\_1)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00433}00433 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_2)   || ((SECTOR) == FLASH\_SECTOR\_3)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00434}00434 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_4)   || ((SECTOR) == FLASH\_SECTOR\_5)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00435}00435 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_6)   || ((SECTOR) == FLASH\_SECTOR\_7)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00436}00436 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_8)   || ((SECTOR) == FLASH\_SECTOR\_9)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00437}00437 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_10)  || ((SECTOR) == FLASH\_SECTOR\_11)  ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00438}00438 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_12)  || ((SECTOR) == FLASH\_SECTOR\_13)  ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00439}00439 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_14)  || ((SECTOR) == FLASH\_SECTOR\_15)  ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00440}00440 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_16)  || ((SECTOR) == FLASH\_SECTOR\_17)  ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00441}00441 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_18)  || ((SECTOR) == FLASH\_SECTOR\_19)  ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00442}00442 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_20)  || ((SECTOR) == FLASH\_SECTOR\_21)  ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00443}00443 \textcolor{preprocessor}{                                  ((SECTOR) == FLASH\_SECTOR\_22)  || ((SECTOR) == FLASH\_SECTOR\_23))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00444}00444 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00445}00445 \textcolor{preprocessor}{\#define IS\_FLASH\_ADDRESS(ADDRESS) ((((ADDRESS) >= 0x08000000) \&\& ((ADDRESS) < 0x081FFFFF)) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00446}00446 \textcolor{preprocessor}{                                   (((ADDRESS) >= 0x1FFF7800) \&\& ((ADDRESS) < 0x1FFF7A0F)))  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00447}00447 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00448}00448 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00449}00449 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00450}00450 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_0     ((uint32\_t)0)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00451}00451 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_1     ((uint32\_t)1)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00452}00452 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_2     ((uint32\_t)2)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00453}00453 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_3     ((uint32\_t)3)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00454}00454 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_4     ((uint32\_t)4)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00455}00455 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_5     ((uint32\_t)5)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00456}00456 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_6     ((uint32\_t)6)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00457}00457 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_7     ((uint32\_t)7)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00458}00458 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_8     ((uint32\_t)8)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00459}00459 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_9     ((uint32\_t)9)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00460}00460 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_10    ((uint32\_t)10) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00461}00461 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_11    ((uint32\_t)11) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00463}00463 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_TOTAL  12}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00464}00464 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00465}00465 \textcolor{preprocessor}{\#define IS\_FLASH\_SECTOR(SECTOR) (((SECTOR) == FLASH\_SECTOR\_0)   || ((SECTOR) == FLASH\_SECTOR\_1)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00466}00466 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_2)   || ((SECTOR) == FLASH\_SECTOR\_3)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00467}00467 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_4)   || ((SECTOR) == FLASH\_SECTOR\_5)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00468}00468 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_6)   || ((SECTOR) == FLASH\_SECTOR\_7)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00469}00469 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_8)   || ((SECTOR) == FLASH\_SECTOR\_9)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00470}00470 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_10)  || ((SECTOR) == FLASH\_SECTOR\_11))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00471}00471 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00472}00472 \textcolor{preprocessor}{\#define IS\_FLASH\_ADDRESS(ADDRESS) ((((ADDRESS) >= 0x08000000) \&\& ((ADDRESS) < 0x080FFFFF)) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00473}00473 \textcolor{preprocessor}{                                   (((ADDRESS) >= 0x1FFF7800) \&\& ((ADDRESS) < 0x1FFF7A0F)))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00474}00474 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00475}00475 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00476}00476 \textcolor{preprocessor}{\#if defined(STM32F401xC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00477}00477 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_0     ((uint32\_t)0) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00478}00478 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_1     ((uint32\_t)1) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00479}00479 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_2     ((uint32\_t)2) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00480}00480 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_3     ((uint32\_t)3) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00481}00481 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_4     ((uint32\_t)4) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00482}00482 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_5     ((uint32\_t)5) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00484}00484 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_TOTAL  6}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00485}00485 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00486}00486 \textcolor{preprocessor}{\#define IS\_FLASH\_SECTOR(SECTOR) (((SECTOR) == FLASH\_SECTOR\_0)   || ((SECTOR) == FLASH\_SECTOR\_1)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00487}00487 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_2)   || ((SECTOR) == FLASH\_SECTOR\_3)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00488}00488 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_4)   || ((SECTOR) == FLASH\_SECTOR\_5))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00489}00489 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00490}00490 \textcolor{preprocessor}{\#define IS\_FLASH\_ADDRESS(ADDRESS) ((((ADDRESS) >= 0x08000000) \&\& ((ADDRESS) < 0x0803FFFF)) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00491}00491 \textcolor{preprocessor}{                                   (((ADDRESS) >= 0x1FFF7800) \&\& ((ADDRESS) < 0x1FFF7A0F)))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00492}00492 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F401xC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00493}00493 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00494}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_ga15a8729b9c5eb83d46d5f437cd46d874}{00494}} \textcolor{preprocessor}{\#if defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00495}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_ga2a85d94366030ea8328796169c1bc300}{00495}} \textcolor{preprocessor}{\#define FLASH\_SECTOR\_0     ((uint32\_t)0) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00496}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_ga58999952d63fd45dd86b0817ad2a5bae}{00496}} \textcolor{preprocessor}{\#define FLASH\_SECTOR\_1     ((uint32\_t)1) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00497}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_gab0a0ce95752a56b430c809a88812fed2}{00497}} \textcolor{preprocessor}{\#define FLASH\_SECTOR\_2     ((uint32\_t)2) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00498}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_gac1338c8f4ab3ae74d212c59c7e9e4cc6}{00498}} \textcolor{preprocessor}{\#define FLASH\_SECTOR\_3     ((uint32\_t)3) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00499}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_gad8736215a8d3ce115f4281a6d026d0f8}{00499}} \textcolor{preprocessor}{\#define FLASH\_SECTOR\_4     ((uint32\_t)4) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00500}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_gaa0d1fc04e5918186ac9c228ab4172606}{00500}} \textcolor{preprocessor}{\#define FLASH\_SECTOR\_5     ((uint32\_t)5) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00501}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_ga99693b9e0816fdb8706218bc845724ad}{00501}} \textcolor{preprocessor}{\#define FLASH\_SECTOR\_6     ((uint32\_t)6) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00502}00502 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_7     ((uint32\_t)7) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00504}00504 \textcolor{preprocessor}{\#define FLASH\_SECTOR\_TOTAL  8}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00505}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_ga9e7722ee983a9411f59c0fdb81bc0e08}{00505}} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00506}00506 \textcolor{preprocessor}{\#define IS\_FLASH\_SECTOR(SECTOR) (((SECTOR) == FLASH\_SECTOR\_0)   || ((SECTOR) == FLASH\_SECTOR\_1)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00507}00507 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_2)   || ((SECTOR) == FLASH\_SECTOR\_3)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00508}00508 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_4)   || ((SECTOR) == FLASH\_SECTOR\_5)   ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00509}00509 \textcolor{preprocessor}{                                 ((SECTOR) == FLASH\_SECTOR\_6)   || ((SECTOR) == FLASH\_SECTOR\_7))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00510}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_gad0c8166ba15a0b8d458412a8bb74e2f0}{00510}} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00511}00511 \textcolor{preprocessor}{\#define IS\_FLASH\_ADDRESS(ADDRESS) ((((ADDRESS) >= 0x08000000) \&\& ((ADDRESS) < 0x0807FFFF)) ||\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00512}00512 \textcolor{preprocessor}{                                   (((ADDRESS) >= 0x1FFF7800) \&\& ((ADDRESS) < 0x1FFF7A0F)))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00513}00513 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00514}\mbox{\hyperlink{group___f_l_a_s_h_ex___sectors_ga630d392907ca6f67a1a77cefeb1000c6}{00514}} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00515}00515 \textcolor{preprocessor}{\#define IS\_NBSECTORS(NBSECTORS) (((NBSECTORS) != 0) \&\& ((NBSECTORS) <= FLASH\_SECTOR\_TOTAL))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00516}00516 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00524}00524 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00525}00525 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_0       ((uint32\_t)0x00000001) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00526}00526 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_1       ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00527}00527 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_2       ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00528}00528 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_3       ((uint32\_t)0x00000008) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00529}00529 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_4       ((uint32\_t)0x00000010) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00530}00530 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_5       ((uint32\_t)0x00000020) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00531}00531 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_6       ((uint32\_t)0x00000040) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00532}00532 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_7       ((uint32\_t)0x00000080) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00533}00533 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_8       ((uint32\_t)0x00000100) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00534}00534 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_9       ((uint32\_t)0x00000200) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00535}00535 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_10      ((uint32\_t)0x00000400) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00536}00536 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_11      ((uint32\_t)0x00000800) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00537}00537 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_12      ((uint32\_t)0x00000001 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00538}00538 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_13      ((uint32\_t)0x00000002 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00539}00539 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_14      ((uint32\_t)0x00000004 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00540}00540 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_15      ((uint32\_t)0x00000008 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00541}00541 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_16      ((uint32\_t)0x00000010 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00542}00542 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_17      ((uint32\_t)0x00000020 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00543}00543 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_18      ((uint32\_t)0x00000040 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00544}00544 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_19      ((uint32\_t)0x00000080 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00545}00545 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_20      ((uint32\_t)0x00000100 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00546}00546 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_21      ((uint32\_t)0x00000200 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00547}00547 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_22      ((uint32\_t)0x00000400 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00548}00548 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_23      ((uint32\_t)0x00000800 << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00549}00549 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_All     ((uint32\_t)0x00000FFF << 12) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00551}00551 \textcolor{preprocessor}{\#define IS\_OB\_WRP\_SECTOR(SECTOR)((((SECTOR) \& (uint32\_t)0xFF000000) == 0x00000000) \&\& ((SECTOR) != 0x00000000))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00552}00552 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00553}00553 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00554}00554 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00555}00555 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_0       ((uint32\_t)0x00000001) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00556}00556 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_1       ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00557}00557 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_2       ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00558}00558 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_3       ((uint32\_t)0x00000008) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00559}00559 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_4       ((uint32\_t)0x00000010) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00560}00560 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_5       ((uint32\_t)0x00000020) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00561}00561 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_6       ((uint32\_t)0x00000040) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00562}00562 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_7       ((uint32\_t)0x00000080) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00563}00563 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_8       ((uint32\_t)0x00000100) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00564}00564 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_9       ((uint32\_t)0x00000200) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00565}00565 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_10      ((uint32\_t)0x00000400) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00566}00566 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_11      ((uint32\_t)0x00000800) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00567}00567 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_All     ((uint32\_t)0x00000FFF) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00569}00569 \textcolor{preprocessor}{\#define IS\_OB\_WRP\_SECTOR(SECTOR)((((SECTOR) \& (uint32\_t)0xFFFFF000) == 0x00000000) \&\& ((SECTOR) != 0x00000000))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00570}00570 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00571}00571 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00572}00572 \textcolor{preprocessor}{\#if defined(STM32F401xC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00573}00573 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_0       ((uint32\_t)0x00000001) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00574}00574 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_1       ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00575}00575 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_2       ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00576}00576 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_3       ((uint32\_t)0x00000008) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00577}00577 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_4       ((uint32\_t)0x00000010) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00578}00578 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_5       ((uint32\_t)0x00000020) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00579}00579 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_All     ((uint32\_t)0x00000FFF) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00581}00581 \textcolor{preprocessor}{\#define IS\_OB\_WRP\_SECTOR(SECTOR)((((SECTOR) \& (uint32\_t)0xFFFFF000) == 0x00000000) \&\& ((SECTOR) != 0x00000000))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00582}00582 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F401xC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00583}00583 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00584}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_gaa9a84eab02b9e32d4d12e30eae731d0f}{00584}} \textcolor{preprocessor}{\#if defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00585}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_ga3f57a106dc14c2b9806e5311e96031d6}{00585}} \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_0       ((uint32\_t)0x00000001) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00586}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_gad8b13ac3000514a6a05ff2306c657a76}{00586}} \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_1       ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00587}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_ga93c4703a5aa2f3348ca7f394e9b8ad7c}{00587}} \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_2       ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00588}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_gadcb0d55662ead30d4d92dde1ff6ecc8f}{00588}} \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_3       ((uint32\_t)0x00000008) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00589}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_ga53c67ee41ff1cc7df79f5c73b9b7ed96}{00589}} \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_4       ((uint32\_t)0x00000010) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00590}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_ga08b2867102a08b114d45598dfc7915d5}{00590}} \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_5       ((uint32\_t)0x00000020) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00591}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_ga7de707c6772bb3caa72e6d87759ab57e}{00591}} \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_6       ((uint32\_t)0x00000040) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00592}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___write___protection_gaf120263891bca013cf4a9f64ac57b941}{00592}} \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_7       ((uint32\_t)0x00000080) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00593}00593 \textcolor{preprocessor}{\#define OB\_WRP\_SECTOR\_All     ((uint32\_t)0x00000FFF) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00595}00595 \textcolor{preprocessor}{\#define IS\_OB\_WRP\_SECTOR(SECTOR)((((SECTOR) \& (uint32\_t)0xFFFFF000) == 0x00000000) \&\& ((SECTOR) != 0x00000000))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00596}00596 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00604}00604 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00605}00605 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_0        ((uint32\_t)0x00000001) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00606}00606 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_1        ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00607}00607 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_2        ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00608}00608 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_3        ((uint32\_t)0x00000008) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00609}00609 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_4        ((uint32\_t)0x00000010) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00610}00610 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_5        ((uint32\_t)0x00000020) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00611}00611 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_6        ((uint32\_t)0x00000040) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00612}00612 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_7        ((uint32\_t)0x00000080) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00613}00613 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_8        ((uint32\_t)0x00000100) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00614}00614 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_9        ((uint32\_t)0x00000200) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00615}00615 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_10       ((uint32\_t)0x00000400) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00616}00616 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_11       ((uint32\_t)0x00000800) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00617}00617 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_12       ((uint32\_t)0x00000001) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00618}00618 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_13       ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00619}00619 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_14       ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00620}00620 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_15       ((uint32\_t)0x00000008) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00621}00621 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_16       ((uint32\_t)0x00000010) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00622}00622 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_17       ((uint32\_t)0x00000020) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00623}00623 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_18       ((uint32\_t)0x00000040) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00624}00624 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_19       ((uint32\_t)0x00000080) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00625}00625 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_20       ((uint32\_t)0x00000100) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00626}00626 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_21       ((uint32\_t)0x00000200) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00627}00627 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_22       ((uint32\_t)0x00000400) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00628}00628 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_23       ((uint32\_t)0x00000800) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00629}00629 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_All      ((uint32\_t)0x00000FFF) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00631}00631 \textcolor{preprocessor}{\#define IS\_OB\_PCROP(SECTOR)((((SECTOR) \& (uint32\_t)0xFFFFF000) == 0x00000000) \&\& ((SECTOR) != 0x00000000))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00632}00632 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00633}00633 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00634}00634 \textcolor{preprocessor}{\#if defined(STM32F401xC)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00635}00635 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_0        ((uint32\_t)0x00000001) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00636}00636 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_1        ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00637}00637 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_2        ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00638}00638 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_3        ((uint32\_t)0x00000008) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00639}00639 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_4        ((uint32\_t)0x00000010) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00640}00640 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_5        ((uint32\_t)0x00000020) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00641}00641 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_All      ((uint32\_t)0x00000FFF) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00643}00643 \textcolor{preprocessor}{\#define IS\_OB\_PCROP(SECTOR)((((SECTOR) \& (uint32\_t)0xFFFFF000) == 0x00000000) \&\& ((SECTOR) != 0x00000000))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00644}00644 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F401xC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00645}00645 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00646}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_ga15e8470575c118dd98fd6fa744a8163c}{00646}} \textcolor{preprocessor}{\#if defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00647}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_ga37b79b9eb0dbeaa7ca8b04f6c8c89faa}{00647}} \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_0        ((uint32\_t)0x00000001) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00648}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_gafba6661c0a4510edc55b9d08ba7b1820}{00648}} \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_1        ((uint32\_t)0x00000002) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00649}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_gad93b4f27b039c007d1ed5ca79d744230}{00649}} \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_2        ((uint32\_t)0x00000004) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00650}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_ga10c0d89c778f8920b40adf107eb5ffc8}{00650}} \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_3        ((uint32\_t)0x00000008) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00651}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_ga1d0e173b3e184682b2c90a34e11b0a24}{00651}} \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_4        ((uint32\_t)0x00000010) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00652}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_ga10d6b7983ed196511c8150c12965b407}{00652}} \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_5        ((uint32\_t)0x00000020) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00653}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_ga7d74caf6e88d230f4dcdcbf9ab6d7e1e}{00653}} \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_6        ((uint32\_t)0x00000040) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00654}\mbox{\hyperlink{group___f_l_a_s_h_ex___option___bytes___p_c___read_write___protection_gab0ae871624f4cdff9b41b3fea88a5698}{00654}} \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_7        ((uint32\_t)0x00000080) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00655}00655 \textcolor{preprocessor}{\#define OB\_PCROP\_SECTOR\_All      ((uint32\_t)0x00000FFF) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00657}00657 \textcolor{preprocessor}{\#define IS\_OB\_PCROP(SECTOR)((((SECTOR) \& (uint32\_t)0xFFFFF000) == 0x00000000) \&\& ((SECTOR) != 0x00000000))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00658}00658 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00659}00659 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00667}00667 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00668}00668 \textcolor{preprocessor}{\#define OB\_DUAL\_BOOT\_ENABLE   ((uint8\_t)0x10) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00669}00669 \textcolor{preprocessor}{\#define OB\_DUAL\_BOOT\_DISABLE  ((uint8\_t)0x00) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00670}00670 \textcolor{preprocessor}{\#define IS\_OB\_BOOT(BOOT) (((BOOT) == OB\_DUAL\_BOOT\_ENABLE) || ((BOOT) == OB\_DUAL\_BOOT\_DISABLE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00671}00671 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00679}\mbox{\hyperlink{group___f_l_a_s_h_ex___selection___protection___mode_gaa11bc40819552615d0618b0df99120b1}{00679}} \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) || defined(STM32F401xC) || defined(STM32F401xE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00680}\mbox{\hyperlink{group___f_l_a_s_h_ex___selection___protection___mode_ga7de2d3d5fc3baa922d43850a2f140dfc}{00680}} \textcolor{preprocessor}{\#define OB\_PCROP\_DESELECTED     ((uint8\_t)0x00) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00681}\mbox{\hyperlink{group___f_l_a_s_h_ex___selection___protection___mode_ga917bc3381ebf7106868915928c3eaa2e}{00681}} \textcolor{preprocessor}{\#define OB\_PCROP\_SELECTED       ((uint8\_t)0x80) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00682}00682 \textcolor{preprocessor}{\#define IS\_OB\_PCROP\_SELECT(PCROP) (((PCROP) == OB\_PCROP\_SELECTED) || ((PCROP) == OB\_PCROP\_DESELECTED))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00683}00683 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00691}00691 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00692}00692 \textcolor{preprocessor}{\#define OPTCR1\_BYTE2\_ADDRESS         ((uint32\_t)0x40023C1A)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00693}00693 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00694}00694 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00699}00699 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00700}00700 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00701}00701 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00702}00702 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00703}\mbox{\hyperlink{group___f_l_a_s_h_ex_ga3e998fdfd05d4073fb9af251ad649531}{00703}} \textcolor{comment}{/* Extension Program operation functions  *************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00704}\mbox{\hyperlink{group___f_l_a_s_h_ex_gaf58c6764859e4febc21abe462dfb2615}{00704}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex_ga3e998fdfd05d4073fb9af251ad649531}{HAL\_FLASHEx\_Erase}}(\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{FLASH\_EraseInitTypeDef}} *pEraseInit, uint32\_t *SectorError);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00705}\mbox{\hyperlink{group___f_l_a_s_h_ex_ga001dd4a8defa9eb24a17c4df5953a41d}{00705}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex_gaf58c6764859e4febc21abe462dfb2615}{HAL\_FLASHEx\_Erase\_IT}}(\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{FLASH\_EraseInitTypeDef}} *pEraseInit);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00706}\mbox{\hyperlink{group___f_l_a_s_h_ex_ga6d45d5442b8147533b1100ec40fe75d7}{00706}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex_ga001dd4a8defa9eb24a17c4df5953a41d}{HAL\_FLASHEx\_OBProgram}}(\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{FLASH\_OBProgramInitTypeDef}} *pOBInit);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00707}00707 \textcolor{keywordtype}{void}              \mbox{\hyperlink{group___f_l_a_s_h_ex_ga6d45d5442b8147533b1100ec40fe75d7}{HAL\_FLASHEx\_OBGetConfig}}(\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{FLASH\_OBProgramInitTypeDef}} *pOBInit);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00708}\mbox{\hyperlink{group___f_l_a_s_h_ex_gaf5556c723d5dc6ab06ebd6faf54c6c03}{00708}} \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx) || defined(STM32F401xC) || defined(STM32F401xE) }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00709}\mbox{\hyperlink{group___f_l_a_s_h_ex_ga5f79b74133fef058a72eae9c9eea4d36}{00709}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex_gaf5556c723d5dc6ab06ebd6faf54c6c03}{HAL\_FLASHEx\_AdvOBProgram}} (\mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def}{FLASH\_AdvOBProgramInitTypeDef}} *pAdvOBInit);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00710}\mbox{\hyperlink{group___f_l_a_s_h_ex_ga78992850d1e2e36ec7f01c1063320499}{00710}} \textcolor{keywordtype}{void}              \mbox{\hyperlink{group___f_l_a_s_h_ex_ga5f79b74133fef058a72eae9c9eea4d36}{HAL\_FLASHEx\_AdvOBGetConfig}}(\mbox{\hyperlink{struct_f_l_a_s_h___adv_o_b_program_init_type_def}{FLASH\_AdvOBProgramInitTypeDef}} *pAdvOBInit);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00711}\mbox{\hyperlink{group___f_l_a_s_h_ex_gab642acc010e4d32e293d7c6faa70b0a3}{00711}} \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex_ga78992850d1e2e36ec7f01c1063320499}{HAL\_FLASHEx\_OB\_SelectPCROP}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00712}00712 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} \mbox{\hyperlink{group___f_l_a_s_h_ex_gab642acc010e4d32e293d7c6faa70b0a3}{HAL\_FLASHEx\_OB\_DeSelectPCROP}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00713}00713 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00714}00714 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00715}00715 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx)|| defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00716}00716 uint16\_t          HAL\_FLASHEx\_OB\_GetBank2WRP(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00717}00717 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx || STM32F429xx|| STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00718}\mbox{\hyperlink{group___f_l_a_s_h_ex_ga98c9d95cedcc4bfd39cdee82d07c0792}{00718}} }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00719}00719 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___f_l_a_s_h_ex_ga98c9d95cedcc4bfd39cdee82d07c0792}{FLASH\_Erase\_Sector}}(uint32\_t Sector, uint8\_t VoltageRange);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00720}00720 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00729}00729 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00730}00730 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00731}00731 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00732}00732 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00733}00733 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_FLASH\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00734}00734 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__flash__ex_8h_source_l00735}00735 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

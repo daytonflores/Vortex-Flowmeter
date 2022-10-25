@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx.h</primary></indexterm>
+<para>
+
+<para>CMSIS STM32F4xx Device Peripheral Access Layer Header File. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f401xe.h&quot;
+#include &quot;stm32f4xx_hal.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___library__configuration__section_1ga4b150144bb57e6f25e7e2b03cb42b86c">STM32F401xE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___library__configuration__section_1ga13fde7eed89250511adafbc8bbedcc62">USE_HAL_DRIVER</link></para>
+
+<para>Comment the line below if you will not use the peripherals drivers. In this case, these drivers will not be included and the application code will be based on direct access to peripherals registers. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___library__configuration__section_1ga802582d9b7b4dea8c8c53f6ce296dad2">__STM32F4xx_CMSIS_DEVICE_VERSION_MAIN</link>   (0x02)</para>
+
+<para>CMSIS Device version number V2.1.0RC2. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___library__configuration__section_1gaa840ca8cc59044a45c604b95c546666b">__STM32F4xx_CMSIS_DEVICE_VERSION_SUB1</link>   (0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___library__configuration__section_1ga5697f6bbcd478565105f00c06dc97a96">__STM32F4xx_CMSIS_DEVICE_VERSION_SUB2</link>   (0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___library__configuration__section_1ga99153b788b5b5ef1d65a748495e5c4ca">__STM32F4xx_CMSIS_DEVICE_VERSION_RC</link>   (0x02)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___library__configuration__section_1gab71225daca4a310275d65a487422b1f7">__STM32F4xx_CMSIS_DEVICE_VERSION</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__types_1gaffaf7c3f537d7a3370b1bbdda67a2bf6">IS_FUNCTIONAL_STATE</link>(STATE)   (((STATE) == <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>) || ((STATE) == <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__macro_1ga26474f43799fbade9cf300e21dd3a91a">SET_BIT</link>(REG,  BIT)   ((REG) |= (BIT))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__macro_1ga133aae6fc0d41bffab39ab223a7001de">CLEAR_BIT</link>(REG,  BIT)   ((REG) &amp;= ~(BIT))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__macro_1ga822bb1bb9710d5f2fa6396b84e583c33">READ_BIT</link>(REG,  BIT)   ((REG) &amp; (BIT))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__macro_1ga1378fbdda39f40b85420df55f41460ef">CLEAR_REG</link>(REG)   ((REG) = (0x0))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__macro_1ga32f78bffcaf6d13023dcd7f05e0c4d57">WRITE_REG</link>(REG,  VAL)   ((REG) = (VAL))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__macro_1gae7f188a4d26c9e713a48414783421071">READ_REG</link>(REG)   ((REG))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__macro_1ga6553c99f510c3bab8cc0a91602053247">MODIFY_REG</link>(REG,  CLEARMASK,  SETMASK)   <link linkend="_group___exported__macro_1ga32f78bffcaf6d13023dcd7f05e0c4d57">WRITE_REG</link>((REG), (((<link linkend="_group___exported__macro_1gae7f188a4d26c9e713a48414783421071">READ_REG</link>(REG)) &amp; (~(CLEARMASK))) | (SETMASK)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___exported__macro_1ga47a8870d71d55cefb3df47cd8c815ec8">POSITION_VAL</link>(VAL)   (__CLZ(__RBIT(VAL)))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef enum <link linkend="_group___exported__types_1ga89136caac2e14c55151f527ac02daaff">FlagStatus</link> <link linkend="_group___exported__types_1ga39d4411201fb731279ad5a409b2b80d7">ITStatus</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___exported__types_1ga89136caac2e14c55151f527ac02daaff">FlagStatus</link> { <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link> = 0
+, <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> = !RESET
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___exported__types_1gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</link> { <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link> = 0
+, <link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link> = !DISABLE
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___exported__types_1ga8333b96c67f83cba354b3407fcbb6ee8">ErrorStatus</link> { <link linkend="_group___exported__types_1gga8333b96c67f83cba354b3407fcbb6ee8a2fd6f336d08340583bd620a7f5694c90">ERROR</link> = 0
+, <link linkend="_group___exported__types_1gga8333b96c67f83cba354b3407fcbb6ee8ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link> = !ERROR
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>CMSIS STM32F4xx Device Peripheral Access Layer Header File. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V2.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014 <literallayout><computeroutput>     The file is the unique include file that the application programmer
+     is using in the C source code, usually in main.c. This file contains:
+      - Configuration section that allows to select:
+         - The STM32F4xx device used in the target application
+         - To use or not the peripheral’s drivers in application code(i.e. 
+           code will be based on direct access to peripheral’s registers 
+           rather than drivers API), this option is controlled by 
+           &quot;#define USE_HAL_DRIVER&quot;
+</computeroutput></literallayout></para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx_8h_source">stm32f4xx.h</link>.</para>
+</section>
+</section>

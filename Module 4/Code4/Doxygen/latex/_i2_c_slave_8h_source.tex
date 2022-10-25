@@ -1,0 +1,69 @@
+\hypertarget{_i2_c_slave_8h_source}{}\doxysection{I2\+CSlave.\+h}
+\label{_i2_c_slave_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/I2CSlave.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/I2CSlave.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_I2C\_SLAVE\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_I2C\_SLAVE\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#if DEVICE\_I2CSLAVE}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}i2c\_api.h"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{61 \textcolor{keyword}{class }I2CSlave \{}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keyword}{public}:}
+\DoxyCodeLine{64     \textcolor{keyword}{enum} RxStatus \{}
+\DoxyCodeLine{65         NoData         = 0,}
+\DoxyCodeLine{66         ReadAddressed  = 1,}
+\DoxyCodeLine{67         WriteGeneral   = 2,}
+\DoxyCodeLine{68         WriteAddressed = 3}
+\DoxyCodeLine{69     \};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{76     I2CSlave(PinName sda, PinName scl);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} frequency(\textcolor{keywordtype}{int} hz);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{int} receive(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{int} read(\textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{int} read(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{int} write(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{132     \textcolor{keywordtype}{int} write(\textcolor{keywordtype}{int} data);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{140     \textcolor{keywordtype}{void} address(\textcolor{keywordtype}{int} address);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{144     \textcolor{keywordtype}{void} stop(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{147     i2c\_t \_i2c;}
+\DoxyCodeLine{148 \};}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

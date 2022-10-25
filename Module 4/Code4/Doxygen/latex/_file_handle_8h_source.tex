@@ -1,0 +1,70 @@
+\hypertarget{_file_handle_8h_source}{}\doxysection{File\+Handle.\+h}
+\label{_file_handle_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FileHandle.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FileHandle.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_FILEHANDLE\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_FILEHANDLE\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} FILEHANDLE;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) || defined(\_\_ICCARM\_\_)}}
+\DoxyCodeLine{24 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} ssize\_t;}
+\DoxyCodeLine{25 \textcolor{keyword}{typedef} \textcolor{keywordtype}{long} off\_t;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#   include <sys/types.h>}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{42 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_file_handle}{FileHandle}} \{}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{keyword}{public}:}
+\DoxyCodeLine{53     \textcolor{keyword}{virtual} ssize\_t \mbox{\hyperlink{classmbed_1_1_file_handle_afecb50bd072d06e2a56dbc4f4e68bbf5}{write}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length) = 0;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{60     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_handle_ac1b885028d295f74d73ff40bf6a352a2}{close}}() = 0;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{71     \textcolor{keyword}{virtual} ssize\_t \mbox{\hyperlink{classmbed_1_1_file_handle_ae51be2d8f51d767ba8cd8c646f211f24}{read}}(\textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length) = 0;}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{80     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_handle_a7e7936ba41fb44a4f98795fba1d92e83}{isatty}}() = 0;}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{92     \textcolor{keyword}{virtual} off\_t \mbox{\hyperlink{classmbed_1_1_file_handle_a75046a7181de9902af9256302d57316a}{lseek}}(off\_t offset, \textcolor{keywordtype}{int} whence) = 0;}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{101     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_file_handle_a125e7fa0507f9b935f28852ca79190b7}{fsync}}() = 0;}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103     \textcolor{keyword}{virtual} off\_t flen() \{}
+\DoxyCodeLine{104         \textcolor{comment}{/* remember our current position */}}
+\DoxyCodeLine{105         off\_t pos = \mbox{\hyperlink{classmbed_1_1_file_handle_a75046a7181de9902af9256302d57316a}{lseek}}(0, SEEK\_CUR);}
+\DoxyCodeLine{106         \textcolor{keywordflow}{if}(pos == -\/1) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{107         \textcolor{comment}{/* seek to the end to get the file length */}}
+\DoxyCodeLine{108         off\_t res = \mbox{\hyperlink{classmbed_1_1_file_handle_a75046a7181de9902af9256302d57316a}{lseek}}(0, SEEK\_END);}
+\DoxyCodeLine{109         \textcolor{comment}{/* return to our old position */}}
+\DoxyCodeLine{110         \mbox{\hyperlink{classmbed_1_1_file_handle_a75046a7181de9902af9256302d57316a}{lseek}}(pos, SEEK\_SET);}
+\DoxyCodeLine{111         \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_file_handle}{\string~FileHandle}}();}
+\DoxyCodeLine{115 \};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

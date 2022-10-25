@@ -1,0 +1,86 @@
+\hypertarget{_file_base_8h_source}{}\doxysection{File\+Base.\+h}
+\label{_file_base_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FileBase.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/FileBase.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_FILEBASE\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_FILEBASE\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} FILEHANDLE;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) || defined(\_\_ICCARM\_\_)}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#    define O\_RDONLY 0}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#    define O\_WRONLY 1}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#    define O\_RDWR   2}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#    define O\_CREAT  0x0200}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#    define O\_TRUNC  0x0400}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#    define O\_APPEND 0x0008}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#    define NAME\_MAX 255}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} mode\_t;}
+\DoxyCodeLine{34 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} ssize\_t;}
+\DoxyCodeLine{35 \textcolor{keyword}{typedef} \textcolor{keywordtype}{long} off\_t;}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#    include <sys/fcntl.h>}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#    include <sys/types.h>}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#    include <sys/syslimits.h>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{48     FilePathType,}
+\DoxyCodeLine{49     FileSystemPathType}
+\DoxyCodeLine{50 \} PathType;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}} \{}
+\DoxyCodeLine{53 \textcolor{keyword}{public}:}
+\DoxyCodeLine{54     \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, PathType t);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_file_base}{\string~FileBase}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* getName(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{59     PathType    getPathType(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keyword}{static} \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}} *lookup(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} len);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keyword}{static} \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}} *get(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{66     \textcolor{keyword}{static} \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}} *\_head;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}}   *\_next;}
+\DoxyCodeLine{69     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\_name;}
+\DoxyCodeLine{70     PathType    \_path\_type;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{comment}{/* disallow copy constructor and assignment operators */}}
+\DoxyCodeLine{73 \textcolor{keyword}{private}:}
+\DoxyCodeLine{74     \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}}\&);}
+\DoxyCodeLine{75     \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}} \& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}}\&);}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

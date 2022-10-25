@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_d_m_a___init_type_def" xml:lang="en-US">
+<title>DMA_InitTypeDef Struct Reference</title>
+<indexterm><primary>DMA_InitTypeDef</primary></indexterm>
+<para>
+
+<para>DMA Configuration Structure definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f4xx_hal_dma.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1ae82bf9242a014164f9f6907f29782c44">Channel</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1ab94410c1333b512e271b1c135fe50916">Direction</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1a4925ca3ceb52340daddc92817dc304d9">PeriphInc</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1a831756fbcd64feb1e570a9bf743b5b8d">MemInc</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1aca5b89241171c093fd0fc6dacf72683c">PeriphDataAlignment</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1afe3adac32f5411b1a744c030f398aa5e">MemDataAlignment</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839">Mode</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1a72acf77c0b19359eb70764505ae4bd70">Priority</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1a8dc149e98014264da61675f6a0e18b88">FIFOMode</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1a28732ef5d9eae23dbd77e3034cc1bdb3">FIFOThreshold</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1a4e6e9f06e5c7903879ed29df299e4df1">MemBurst</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_d_m_a___init_type_def_1ae95b14383c9d0c86405939f4bfe2882d">PeriphBurst</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>DMA Configuration Structure definition. </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_d_m_a___init_type_def_1ae82bf9242a014164f9f6907f29782c44"/><section>
+    <title>Channel</title>
+<indexterm><primary>Channel</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>Channel</secondary></indexterm>
+<para><computeroutput>uint32_t Channel</computeroutput></para>
+<para>Specifies the channel used for the specified stream. This parameter can be a value of <link linkend="_group___d_m_a___channel__selection">DMA_Channel_selection</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00064">64</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1ab94410c1333b512e271b1c135fe50916"/><section>
+    <title>Direction</title>
+<indexterm><primary>Direction</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>Direction</secondary></indexterm>
+<para><computeroutput>uint32_t Direction</computeroutput></para>
+<para>Specifies if the data will be transferred from memory to peripheral, from memory to memory or from peripheral to memory. This parameter can be a value of <link linkend="_group___d_m_a___data__transfer__direction">DMA_Data_transfer_direction</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00067">67</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1a8dc149e98014264da61675f6a0e18b88"/><section>
+    <title>FIFOMode</title>
+<indexterm><primary>FIFOMode</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>FIFOMode</secondary></indexterm>
+<para><computeroutput>uint32_t FIFOMode</computeroutput></para>
+<para>Specifies if the FIFO mode or Direct mode will be used for the specified stream. This parameter can be a value of <link linkend="_group___d_m_a___f_i_f_o__direct__mode">DMA_FIFO_direct_mode</link> <note><title>Note</title>
+
+<para>The Direct mode (FIFO mode disabled) cannot be used if the memory-to-memory data transfer is configured on the selected stream 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00091">91</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1a28732ef5d9eae23dbd77e3034cc1bdb3"/><section>
+    <title>FIFOThreshold</title>
+<indexterm><primary>FIFOThreshold</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>FIFOThreshold</secondary></indexterm>
+<para><computeroutput>uint32_t FIFOThreshold</computeroutput></para>
+<para>Specifies the FIFO threshold level. This parameter can be a value of <link linkend="_group___d_m_a___f_i_f_o__threshold__level">DMA_FIFO_threshold_level</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00096">96</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1a4e6e9f06e5c7903879ed29df299e4df1"/><section>
+    <title>MemBurst</title>
+<indexterm><primary>MemBurst</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>MemBurst</secondary></indexterm>
+<para><computeroutput>uint32_t MemBurst</computeroutput></para>
+<para>Specifies the Burst transfer configuration for the memory transfers. It specifies the amount of data to be transferred in a single non interruptable transaction. This parameter can be a value of <link linkend="_group___d_m_a___memory__burst">DMA_Memory_burst</link> <note><title>Note</title>
+
+<para>The burst mode is possible only if the address Increment mode is enabled. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00099">99</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1afe3adac32f5411b1a744c030f398aa5e"/><section>
+    <title>MemDataAlignment</title>
+<indexterm><primary>MemDataAlignment</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>MemDataAlignment</secondary></indexterm>
+<para><computeroutput>uint32_t MemDataAlignment</computeroutput></para>
+<para>Specifies the Memory data width. This parameter can be a value of <link linkend="_group___d_m_a___memory__data__size">DMA_Memory_data_size</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00080">80</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1a831756fbcd64feb1e570a9bf743b5b8d"/><section>
+    <title>MemInc</title>
+<indexterm><primary>MemInc</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>MemInc</secondary></indexterm>
+<para><computeroutput>uint32_t MemInc</computeroutput></para>
+<para>Specifies whether the memory address register should be incremented or not. This parameter can be a value of <link linkend="_group___d_m_a___memory__incremented__mode">DMA_Memory_incremented_mode</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00074">74</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839"/><section>
+    <title>Mode</title>
+<indexterm><primary>Mode</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>Mode</secondary></indexterm>
+<para><computeroutput>uint32_t Mode</computeroutput></para>
+<para>Specifies the operation mode of the DMAy Streamx. This parameter can be a value of <link linkend="_group___d_m_a__mode">DMA_mode</link> <note><title>Note</title>
+
+<para>The circular buffer mode cannot be used if the memory-to-memory data transfer is configured on the selected Stream 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00083">83</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1ae95b14383c9d0c86405939f4bfe2882d"/><section>
+    <title>PeriphBurst</title>
+<indexterm><primary>PeriphBurst</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>PeriphBurst</secondary></indexterm>
+<para><computeroutput>uint32_t PeriphBurst</computeroutput></para>
+<para>Specifies the Burst transfer configuration for the peripheral transfers. It specifies the amount of data to be transferred in a single non interruptable transaction. This parameter can be a value of <link linkend="_group___d_m_a___peripheral__burst">DMA_Peripheral_burst</link> <note><title>Note</title>
+
+<para>The burst mode is possible only if the address Increment mode is enabled. </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00105">105</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1aca5b89241171c093fd0fc6dacf72683c"/><section>
+    <title>PeriphDataAlignment</title>
+<indexterm><primary>PeriphDataAlignment</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>PeriphDataAlignment</secondary></indexterm>
+<para><computeroutput>uint32_t PeriphDataAlignment</computeroutput></para>
+<para>Specifies the Peripheral data width. This parameter can be a value of <link linkend="_group___d_m_a___peripheral__data__size">DMA_Peripheral_data_size</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00077">77</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1a4925ca3ceb52340daddc92817dc304d9"/><section>
+    <title>PeriphInc</title>
+<indexterm><primary>PeriphInc</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>PeriphInc</secondary></indexterm>
+<para><computeroutput>uint32_t PeriphInc</computeroutput></para>
+<para>Specifies whether the Peripheral address register should be incremented or not. This parameter can be a value of <link linkend="_group___d_m_a___peripheral__incremented__mode">DMA_Peripheral_incremented_mode</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00071">71</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<anchor xml:id="_struct_d_m_a___init_type_def_1a72acf77c0b19359eb70764505ae4bd70"/><section>
+    <title>Priority</title>
+<indexterm><primary>Priority</primary><secondary>DMA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>DMA_InitTypeDef</primary><secondary>Priority</secondary></indexterm>
+<para><computeroutput>uint32_t Priority</computeroutput></para>
+<para>Specifies the software priority for the DMAy Streamx. This parameter can be a value of <link linkend="_group___d_m_a___priority__level">DMA_Priority_level</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__dma_8h_source_1l00088">88</link> of file <link linkend="_stm32f4xx__hal__dma_8h_source">stm32f4xx_hal_dma.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/<link linkend="_stm32f4xx__hal__dma_8h">stm32f4xx_hal_dma.h</link></section>
+</section>

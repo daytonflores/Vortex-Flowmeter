@@ -1,0 +1,35 @@
+\hypertarget{group___u_s_a_r_t___parity}{}\doxysection{USART\+\_\+\+Parity}
+\label{group___u_s_a_r_t___parity}\index{USART\_Parity@{USART\_Parity}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___parity_ga85bfcbeb5ba1c34bbcda3f3e3b994846}\label{group___u_s_a_r_t___parity_ga85bfcbeb5ba1c34bbcda3f3e3b994846}} 
+\#define {\bfseries USART\+\_\+\+PARITY\+\_\+\+NONE}~((uint32\+\_\+t)0x00000000)
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___parity_gae7630824c78a39366b7e5b4c55996200}\label{group___u_s_a_r_t___parity_gae7630824c78a39366b7e5b4c55996200}} 
+\#define {\bfseries USART\+\_\+\+PARITY\+\_\+\+EVEN}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}})
+\item 
+\mbox{\Hypertarget{group___u_s_a_r_t___parity_ga184f3e22cb30ea94b797b02e94e774a1}\label{group___u_s_a_r_t___parity_ga184f3e22cb30ea94b797b02e94e774a1}} 
+\#define {\bfseries USART\+\_\+\+PARITY\+\_\+\+ODD}~((uint32\+\_\+t)(\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}} $\vert$ \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2e159d36ab2c93a2c1942df60e9eebbe}{USART\+\_\+\+CR1\+\_\+\+PS}}))
+\item 
+\#define \mbox{\hyperlink{group___u_s_a_r_t___parity_gaa87b2e338e0ccc42887d3c56901bee87}{IS\+\_\+\+USART\+\_\+\+PARITY}}(PARITY)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_s_a_r_t___parity_gaa87b2e338e0ccc42887d3c56901bee87}\label{group___u_s_a_r_t___parity_gaa87b2e338e0ccc42887d3c56901bee87}} 
+\index{USART\_Parity@{USART\_Parity}!IS\_USART\_PARITY@{IS\_USART\_PARITY}}
+\index{IS\_USART\_PARITY@{IS\_USART\_PARITY}!USART\_Parity@{USART\_Parity}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_PARITY}{IS\_USART\_PARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+USART\+\_\+\+PARITY(\begin{DoxyParamCaption}\item[{}]{PARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((PARITY) == USART\_PARITY\_NONE) || \(\backslash\)}
+\DoxyCodeLine{                                     ((PARITY) == USART\_PARITY\_EVEN) || \(\backslash\)}
+\DoxyCodeLine{                                     ((PARITY) == USART\_PARITY\_ODD))}
+
+\end{DoxyCode}

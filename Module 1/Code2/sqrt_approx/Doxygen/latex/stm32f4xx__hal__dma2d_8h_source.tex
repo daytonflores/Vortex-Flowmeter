@@ -1,0 +1,213 @@
+\hypertarget{stm32f4xx__hal__dma2d_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+dma2d.\+h}
+\label{stm32f4xx__hal__dma2d_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_dma2d.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_dma2d.h}}
+\mbox{\hyperlink{stm32f4xx__hal__dma2d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00038}00038 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_DMA2D\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00040}00040 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_DMA2D\_H}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00042}00042 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00043}00043  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00046}00046 \textcolor{preprocessor}{\#if defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00047}00047 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00048}00048 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00058}00058 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00060}00060 \textcolor{preprocessor}{\#define MAX\_DMA2D\_LAYER  2}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00065}00065 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00066}00066 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00067}00067   uint32\_t Blue;               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00070}00070   uint32\_t Green;              }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00073}00073   uint32\_t Red;                }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00075}00075 \} DMA2D\_ColorTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00080}00080 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00081}00081 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00082}00082   uint32\_t *pCLUT;                  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00084}00084   uint32\_t CLUTColorMode;           }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00087}00087   uint32\_t Size;                    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00089}00089 \} DMA2D\_CLUTCfgTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00094}00094 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00095}00095 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00096}00096   uint32\_t             Mode;               }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00099}00099   uint32\_t             ColorMode;          }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00102}00102   uint32\_t             OutputOffset;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00104}00104 \} DMA2D\_InitTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00109}00109 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00110}00110 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00111}00111   uint32\_t             InputOffset;       }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00114}00114   uint32\_t             InputColorMode;    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00117}00117   uint32\_t             AlphaMode;         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00120}00120   uint32\_t             InputAlpha;        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00123}00123 \} DMA2D\_LayerCfgTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00128}00128 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00129}00129 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00130}00130   HAL\_DMA2D\_STATE\_RESET             = 0x00,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00131}00131   HAL\_DMA2D\_STATE\_READY             = 0x01,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00132}00132   HAL\_DMA2D\_STATE\_BUSY              = 0x02,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00133}00133   HAL\_DMA2D\_STATE\_TIMEOUT           = 0x03,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00134}00134   HAL\_DMA2D\_STATE\_ERROR             = 0x04,    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00135}00135   HAL\_DMA2D\_STATE\_SUSPEND           = 0x05     }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00136}00136 \}HAL\_DMA2D\_StateTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00141}00141 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\_\_DMA2D\_HandleTypeDef}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00142}00142 \{}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00143}00143   DMA2D\_TypeDef               *Instance;                                                    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00145}00145   DMA2D\_InitTypeDef           Init;                                                         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00147}00147   void                        (* XferCpltCallback)(\textcolor{keyword}{struct }\_\_DMA2D\_HandleTypeDef * hdma2d);  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00149}00149   void                        (* XferErrorCallback)(\textcolor{keyword}{struct }\_\_DMA2D\_HandleTypeDef * hdma2d); }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00151}00151   DMA2D\_LayerCfgTypeDef       LayerCfg[MAX\_DMA2D\_LAYER];                                    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00153}00153   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             Lock;                                                         }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00155}00155   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_DMA2D\_StateTypeDef State;                                                        }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00157}00157   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               ErrorCode;                                                    }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00158}00158 \} DMA2D\_HandleTypeDef;}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00161}00161 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00170}00170 \textcolor{preprocessor}{\#define IS\_DMA2D\_LAYER(LAYER) ((LAYER) <= MAX\_DMA2D\_LAYER)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00178}00178 \textcolor{preprocessor}{\#define HAL\_DMA2D\_ERROR\_NONE      ((uint32\_t)0x00000000)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00179}00179 \textcolor{preprocessor}{\#define HAL\_DMA2D\_ERROR\_TE        ((uint32\_t)0x00000001)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00180}00180 \textcolor{preprocessor}{\#define HAL\_DMA2D\_ERROR\_CE        ((uint32\_t)0x00000002)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00181}00181 \textcolor{preprocessor}{\#define HAL\_DMA2D\_ERROR\_TIMEOUT   ((uint32\_t)0x00000020)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00189}00189 \textcolor{preprocessor}{\#define DMA2D\_M2M                            ((uint32\_t)0x00000000)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00190}00190 \textcolor{preprocessor}{\#define DMA2D\_M2M\_PFC                        ((uint32\_t)0x00010000)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00191}00191 \textcolor{preprocessor}{\#define DMA2D\_M2M\_BLEND                      ((uint32\_t)0x00020000)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00192}00192 \textcolor{preprocessor}{\#define DMA2D\_R2M                            ((uint32\_t)0x00030000)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00194}00194 \textcolor{preprocessor}{\#define IS\_DMA2D\_MODE(MODE) (((MODE) == DMA2D\_M2M)       || ((MODE) == DMA2D\_M2M\_PFC) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00195}00195 \textcolor{preprocessor}{                             ((MODE) == DMA2D\_M2M\_BLEND) || ((MODE) == DMA2D\_R2M))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00203}00203 \textcolor{preprocessor}{\#define DMA2D\_ARGB8888                       ((uint32\_t)0x00000000)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00204}00204 \textcolor{preprocessor}{\#define DMA2D\_RGB888                         ((uint32\_t)0x00000001)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00205}00205 \textcolor{preprocessor}{\#define DMA2D\_RGB565                         ((uint32\_t)0x00000002)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00206}00206 \textcolor{preprocessor}{\#define DMA2D\_ARGB1555                       ((uint32\_t)0x00000003)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00207}00207 \textcolor{preprocessor}{\#define DMA2D\_ARGB4444                       ((uint32\_t)0x00000004)             }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00209}00209 \textcolor{preprocessor}{\#define IS\_DMA2D\_CMODE(MODE\_ARGB) (((MODE\_ARGB) == DMA2D\_ARGB8888) || ((MODE\_ARGB) == DMA2D\_RGB888)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00210}00210 \textcolor{preprocessor}{                                   ((MODE\_ARGB) == DMA2D\_RGB565)   || ((MODE\_ARGB) == DMA2D\_ARGB1555) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00211}00211 \textcolor{preprocessor}{                                   ((MODE\_ARGB) == DMA2D\_ARGB4444))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00220}00220 \textcolor{preprocessor}{\#define COLOR\_VALUE             ((uint32\_t)0x000000FF)                          }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00222}00222 \textcolor{preprocessor}{\#define IS\_DMA2D\_ALPHA\_VALUE(ALPHA\_VALUE) ((ALPHA\_VALUE) <= COLOR\_VALUE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00223}00223 \textcolor{preprocessor}{\#define IS\_DMA2D\_COLOR(COLOR) ((COLOR) <= COLOR\_VALUE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00231}00231 \textcolor{preprocessor}{\#define DMA2D\_PIXEL          (DMA2D\_NLR\_PL >> 16)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00232}00232 \textcolor{preprocessor}{\#define DMA2D\_LINE           DMA2D\_NLR\_NL                                       }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00234}00234 \textcolor{preprocessor}{\#define IS\_DMA2D\_LINE(LINE)  ((LINE) <= DMA2D\_LINE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00235}00235 \textcolor{preprocessor}{\#define IS\_DMA2D\_PIXEL(PIXEL) ((PIXEL) <= DMA2D\_PIXEL)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00243}00243 \textcolor{preprocessor}{\#define DMA2D\_OFFSET      DMA2D\_FGOR\_LO            }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00245}00245 \textcolor{preprocessor}{\#define IS\_DMA2D\_OFFSET(OOFFSET) ((OOFFSET) <= DMA2D\_OFFSET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00253}00253 \textcolor{preprocessor}{\#define CM\_ARGB8888        ((uint32\_t)0x00000000)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00254}00254 \textcolor{preprocessor}{\#define CM\_RGB888          ((uint32\_t)0x00000001)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00255}00255 \textcolor{preprocessor}{\#define CM\_RGB565          ((uint32\_t)0x00000002)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00256}00256 \textcolor{preprocessor}{\#define CM\_ARGB1555        ((uint32\_t)0x00000003)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00257}00257 \textcolor{preprocessor}{\#define CM\_ARGB4444        ((uint32\_t)0x00000004)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00258}00258 \textcolor{preprocessor}{\#define CM\_L8              ((uint32\_t)0x00000005)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00259}00259 \textcolor{preprocessor}{\#define CM\_AL44            ((uint32\_t)0x00000006)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00260}00260 \textcolor{preprocessor}{\#define CM\_AL88            ((uint32\_t)0x00000007)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00261}00261 \textcolor{preprocessor}{\#define CM\_L4              ((uint32\_t)0x00000008)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00262}00262 \textcolor{preprocessor}{\#define CM\_A8              ((uint32\_t)0x00000009)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00263}00263 \textcolor{preprocessor}{\#define CM\_A4              ((uint32\_t)0x0000000A)                               }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00265}00265 \textcolor{preprocessor}{\#define IS\_DMA2D\_INPUT\_COLOR\_MODE(INPUT\_CM) (((INPUT\_CM) == CM\_ARGB8888) || ((INPUT\_CM) == CM\_RGB888)   || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00266}00266 \textcolor{preprocessor}{                                             ((INPUT\_CM) == CM\_RGB565)   || ((INPUT\_CM) == CM\_ARGB1555) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00267}00267 \textcolor{preprocessor}{                                             ((INPUT\_CM) == CM\_ARGB4444) || ((INPUT\_CM) == CM\_L8)       || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00268}00268 \textcolor{preprocessor}{                                             ((INPUT\_CM) == CM\_AL44)     || ((INPUT\_CM) == CM\_AL88)     || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00269}00269 \textcolor{preprocessor}{                                             ((INPUT\_CM) == CM\_L4)       || ((INPUT\_CM) == CM\_A8)       || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00270}00270 \textcolor{preprocessor}{                                             ((INPUT\_CM) == CM\_A4))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00278}00278 \textcolor{preprocessor}{\#define DMA2D\_NO\_MODIF\_ALPHA       ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00279}00279 \textcolor{preprocessor}{\#define DMA2D\_REPLACE\_ALPHA        ((uint32\_t)0x00000001)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00280}00280 \textcolor{preprocessor}{\#define DMA2D\_COMBINE\_ALPHA        ((uint32\_t)0x00000002)  }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00283}00283 \textcolor{preprocessor}{\#define IS\_DMA2D\_ALPHA\_MODE(AlphaMode) (((AlphaMode) == DMA2D\_NO\_MODIF\_ALPHA) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00284}00284 \textcolor{preprocessor}{                                        ((AlphaMode) == DMA2D\_REPLACE\_ALPHA)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00285}00285 \textcolor{preprocessor}{                                        ((AlphaMode) == DMA2D\_COMBINE\_ALPHA))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00293}00293 \textcolor{preprocessor}{\#define DMA2D\_CCM\_ARGB8888    ((uint32\_t)0x00000000)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00294}00294 \textcolor{preprocessor}{\#define DMA2D\_CCM\_RGB888      ((uint32\_t)0x00000001)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00296}00296 \textcolor{preprocessor}{\#define IS\_DMA2D\_CLUT\_CM(CLUT\_CM) (((CLUT\_CM) == DMA2D\_CCM\_ARGB8888) || ((CLUT\_CM) == DMA2D\_CCM\_RGB888))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00304}00304 \textcolor{preprocessor}{\#define DMA2D\_CLUT\_SIZE    (DMA2D\_FGPFCCR\_CS >> 8)    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00306}00306 \textcolor{preprocessor}{\#define IS\_DMA2D\_CLUT\_SIZE(CLUT\_SIZE) ((CLUT\_SIZE) <= DMA2D\_CLUT\_SIZE)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00314}00314 \textcolor{preprocessor}{\#define LINE\_WATERMARK            DMA2D\_LWR\_LW}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00315}00315 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00316}00316 \textcolor{preprocessor}{\#define IS\_DMA2D\_LineWatermark(LineWatermark) ((LineWatermark) <= LINE\_WATERMARK)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00324}00324 \textcolor{preprocessor}{\#define DMA2D\_IT\_CE             DMA2D\_CR\_CEIE    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00325}00325 \textcolor{preprocessor}{\#define DMA2D\_IT\_CTC            DMA2D\_CR\_CTCIE   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00326}00326 \textcolor{preprocessor}{\#define DMA2D\_IT\_CAE            DMA2D\_CR\_CAEIE   }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00327}00327 \textcolor{preprocessor}{\#define DMA2D\_IT\_TW             DMA2D\_CR\_TWIE    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00328}00328 \textcolor{preprocessor}{\#define DMA2D\_IT\_TC             DMA2D\_CR\_TCIE    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00329}00329 \textcolor{preprocessor}{\#define DMA2D\_IT\_TE             DMA2D\_CR\_TEIE    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00331}00331 \textcolor{preprocessor}{\#define IS\_DMA2D\_IT(IT) (((IT) == DMA2D\_IT\_CTC) || ((IT) == DMA2D\_IT\_CAE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00332}00332 \textcolor{preprocessor}{                        ((IT) == DMA2D\_IT\_TW) || ((IT) == DMA2D\_IT\_TC) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00333}00333 \textcolor{preprocessor}{                        ((IT) == DMA2D\_IT\_TE) || ((IT) == DMA2D\_IT\_CE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00341}00341 \textcolor{preprocessor}{\#define DMA2D\_FLAG\_CE          DMA2D\_ISR\_CEIF     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00342}00342 \textcolor{preprocessor}{\#define DMA2D\_FLAG\_CTC         DMA2D\_ISR\_CTCIF    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00343}00343 \textcolor{preprocessor}{\#define DMA2D\_FLAG\_CAE         DMA2D\_ISR\_CAEIF    }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00344}00344 \textcolor{preprocessor}{\#define DMA2D\_FLAG\_TW          DMA2D\_ISR\_TWIF     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00345}00345 \textcolor{preprocessor}{\#define DMA2D\_FLAG\_TC          DMA2D\_ISR\_TCIF     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00346}00346 \textcolor{preprocessor}{\#define DMA2D\_FLAG\_TE          DMA2D\_ISR\_TEIF     }}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00348}00348 \textcolor{preprocessor}{\#define IS\_DMA2D\_GET\_FLAG(FLAG) (((FLAG) == DMA2D\_FLAG\_CTC) || ((FLAG) == DMA2D\_FLAG\_CAE) || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00349}00349 \textcolor{preprocessor}{                                ((FLAG) == DMA2D\_FLAG\_TW)   || ((FLAG) == DMA2D\_FLAG\_TC)  || \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00350}00350 \textcolor{preprocessor}{                                ((FLAG) == DMA2D\_FLAG\_TE)   || ((FLAG) == DMA2D\_FLAG\_CE))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00358}00358 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00359}00359 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00364}00364 \textcolor{preprocessor}{\#define \_\_HAL\_DMA2D\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_DMA2D\_STATE\_RESET)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00365}00365 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00371}00371 \textcolor{preprocessor}{\#define \_\_HAL\_DMA2D\_ENABLE(\_\_HANDLE\_\_)        ((\_\_HANDLE\_\_)-\/>Instance-\/>CR |= DMA2D\_CR\_START)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00372}00372 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00378}00378 \textcolor{preprocessor}{\#define \_\_HAL\_DMA2D\_DISABLE(\_\_HANDLE\_\_)        ((\_\_HANDLE\_\_)-\/>Instance-\/>CR \&= \string~DMA2D\_CR\_START)}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00379}00379 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00380}00380 \textcolor{comment}{/* Interrupt \& Flag management */}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00394}00394 \textcolor{preprocessor}{\#define \_\_HAL\_DMA2D\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>ISR \& (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00395}00395 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00409}00409 \textcolor{preprocessor}{\#define \_\_HAL\_DMA2D\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>IFCR |= (\_\_FLAG\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00410}00410 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00424}00424 \textcolor{preprocessor}{\#define \_\_HAL\_DMA2D\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00425}00425 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00439}00439 \textcolor{preprocessor}{\#define \_\_HAL\_DMA2D\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00440}00440 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00454}00454 \textcolor{preprocessor}{\#define \_\_HAL\_DMA2D\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((\_\_HANDLE\_\_)-\/>Instance-\/>CR \& (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00455}00455 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00456}00456 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00457}00457 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00458}00458 \textcolor{comment}{/* Initialization and de-\/initialization functions *******************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00459}00459 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_Init(DMA2D\_HandleTypeDef *hdma2d); }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00460}00460 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_DeInit (DMA2D\_HandleTypeDef *hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00461}00461 \textcolor{keywordtype}{void} HAL\_DMA2D\_MspInit(DMA2D\_HandleTypeDef* hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00462}00462 \textcolor{keywordtype}{void} HAL\_DMA2D\_MspDeInit(DMA2D\_HandleTypeDef* hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00463}00463 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00464}00464 \textcolor{comment}{/* IO operation functions *******************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00465}00465 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_Start(DMA2D\_HandleTypeDef *hdma2d, uint32\_t pdata, uint32\_t DstAddress, uint32\_t Width, uint32\_t Heigh);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00466}00466 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_BlendingStart(DMA2D\_HandleTypeDef *hdma2d, uint32\_t SrcAddress1, uint32\_t SrcAddress2, uint32\_t DstAddress, uint32\_t Width,  uint32\_t Heigh);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00467}00467 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_Start\_IT(DMA2D\_HandleTypeDef *hdma2d, uint32\_t pdata, uint32\_t DstAddress, uint32\_t Width, uint32\_t Heigh);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00468}00468 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_BlendingStart\_IT(DMA2D\_HandleTypeDef *hdma2d, uint32\_t SrcAddress1, uint32\_t SrcAddress2, uint32\_t DstAddress, uint32\_t Width, uint32\_t Heigh);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00469}00469 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_Suspend(DMA2D\_HandleTypeDef *hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00470}00470 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_Resume(DMA2D\_HandleTypeDef *hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00471}00471 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_Abort(DMA2D\_HandleTypeDef *hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00472}00472 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_DMA2D\_PollForTransfer(DMA2D\_HandleTypeDef *hdma2d, uint32\_t Timeout);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00473}00473 \textcolor{keywordtype}{void}              HAL\_DMA2D\_IRQHandler(DMA2D\_HandleTypeDef *hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00474}00474 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00475}00475 \textcolor{comment}{/* Peripheral Control functions *************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00476}00476 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_DMA2D\_ConfigLayer(DMA2D\_HandleTypeDef *hdma2d, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00477}00477 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_DMA2D\_ConfigCLUT(DMA2D\_HandleTypeDef *hdma2d, DMA2D\_CLUTCfgTypeDef CLUTCfg, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00478}00478 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_DMA2D\_EnableCLUT(DMA2D\_HandleTypeDef *hdma2d, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00479}00479 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_DMA2D\_DisableCLUT(DMA2D\_HandleTypeDef *hdma2d, uint32\_t LayerIdx);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00480}00480 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_DMA2D\_ProgramLineEvent(DMA2D\_HandleTypeDef *hdma2d, uint32\_t Line);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00481}00481 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00482}00482 \textcolor{comment}{/* Peripheral State functions ***************************************************/}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00483}00483 HAL\_DMA2D\_StateTypeDef HAL\_DMA2D\_GetState(DMA2D\_HandleTypeDef *hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00484}00484 uint32\_t               HAL\_DMA2D\_GetError(DMA2D\_HandleTypeDef *hdma2d);}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00485}00485 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00486}00486 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F427xx || STM32F437xx  || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00487}00487 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00496}00496 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00497}00497 \}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00498}00498 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00499}00499 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00500}00500 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_DMA2D\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00501}00501  }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00502}00502 }
+\DoxyCodeLine{\Hypertarget{stm32f4xx__hal__dma2d_8h_source_l00503}00503 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

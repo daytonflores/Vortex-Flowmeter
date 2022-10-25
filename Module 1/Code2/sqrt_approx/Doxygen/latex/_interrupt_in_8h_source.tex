@@ -1,0 +1,84 @@
+\hypertarget{_interrupt_in_8h_source}{}\doxysection{Interrupt\+In.\+h}
+\label{_interrupt_in_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/InterruptIn.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/InterruptIn.h}}
+\mbox{\hyperlink{_interrupt_in_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_INTERRUPTIN\_H}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_INTERRUPTIN\_H}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{platform_8h}{platform.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00021}00021 \textcolor{preprocessor}{\#if DEVICE\_INTERRUPTIN}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00023}00023 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gpio__api_8h}{gpio\_api.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00024}00024 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gpio__irq__api_8h}{gpio\_irq\_api.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00025}00025 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_function_pointer_8h}{FunctionPointer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00027}00027 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00053}00053 \textcolor{keyword}{class }InterruptIn \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00055}00055 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00062}00062     InterruptIn(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} pin);}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00063}00063     \textcolor{keyword}{virtual} \string~InterruptIn();}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00065}00065      \textcolor{keywordtype}{int} read();}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00066}00066 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00067}00067     \textcolor{keyword}{operator} int();}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00069}00069 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00075}00075     \textcolor{keywordtype}{void} rise(\textcolor{keywordtype}{void} (*fptr)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00082}00082     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00083}00083     \textcolor{keywordtype}{void} rise(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void})) \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00084}00084         \_rise.attach(tptr, mptr);}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00085}00085         gpio\_irq\_set(\&gpio\_irq, IRQ\_RISE, 1);}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00086}00086     \}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00092}00092     \textcolor{keywordtype}{void} fall(\textcolor{keywordtype}{void} (*fptr)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00099}00099     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00100}00100     \textcolor{keywordtype}{void} fall(T* tptr, \textcolor{keywordtype}{void} (T::*mptr)(\textcolor{keywordtype}{void})) \{}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00101}00101         \_fall.attach(tptr, mptr);}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00102}00102         gpio\_irq\_set(\&gpio\_irq, IRQ\_FALL, 1);}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00103}00103     \}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00109}00109     \textcolor{keywordtype}{void} mode(\mbox{\hyperlink{_pin_names_8h_a15c0c34a3baec6b9d2390a426bd3ba96}{PinMode}} pull);}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00114}00114     \textcolor{keywordtype}{void} enable\_irq();}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00119}00119     \textcolor{keywordtype}{void} disable\_irq();}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00121}00121     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \_irq\_handler(uint32\_t \textcolor{keywordtype}{id}, gpio\_irq\_event event);}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00123}00123 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00124}00124     \mbox{\hyperlink{structgpio__t}{gpio\_t}} gpio;}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00125}00125     gpio\_irq\_t gpio\_irq;}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00127}00127     FunctionPointer \_rise;}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00128}00128     FunctionPointer \_fall;}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00129}00129 \};}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00131}00131 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00133}00133 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{_interrupt_in_8h_source_l00135}00135 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

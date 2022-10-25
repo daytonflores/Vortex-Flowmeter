@@ -1,0 +1,50 @@
+\hypertarget{group___r_t_c_ex___wakeup___timer___definitions}{}\doxysection{RTCEx\+\_\+\+Wakeup\+\_\+\+Timer\+\_\+\+Definitions}
+\label{group___r_t_c_ex___wakeup___timer___definitions}\index{RTCEx\_Wakeup\_Timer\_Definitions@{RTCEx\_Wakeup\_Timer\_Definitions}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___wakeup___timer___definitions_ga3864a5d628a34118dfcc86e9b8958e51}\label{group___r_t_c_ex___wakeup___timer___definitions_ga3864a5d628a34118dfcc86e9b8958e51}} 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV16}~((uint32\+\_\+t)0x00000000)
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___wakeup___timer___definitions_gaaa4ec1d6b96e88b070899d0dd5d8869f}\label{group___r_t_c_ex___wakeup___timer___definitions_gaaa4ec1d6b96e88b070899d0dd5d8869f}} 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV8}~((uint32\+\_\+t)0x00000001)
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___wakeup___timer___definitions_gade098ac6e923b02c06de003f61aafd2c}\label{group___r_t_c_ex___wakeup___timer___definitions_gade098ac6e923b02c06de003f61aafd2c}} 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV4}~((uint32\+\_\+t)0x00000002)
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___wakeup___timer___definitions_gab1013526c00cfab26015267f17b6553f}\label{group___r_t_c_ex___wakeup___timer___definitions_gab1013526c00cfab26015267f17b6553f}} 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV2}~((uint32\+\_\+t)0x00000003)
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___wakeup___timer___definitions_ga2d75cf962faf3257ada7f102fccfcb62}\label{group___r_t_c_ex___wakeup___timer___definitions_ga2d75cf962faf3257ada7f102fccfcb62}} 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+CK\+\_\+\+SPRE\+\_\+16\+BITS}~((uint32\+\_\+t)0x00000004)
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___wakeup___timer___definitions_gab4ff75ad48550530f95698f269a617dd}\label{group___r_t_c_ex___wakeup___timer___definitions_gab4ff75ad48550530f95698f269a617dd}} 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+CK\+\_\+\+SPRE\+\_\+17\+BITS}~((uint32\+\_\+t)0x00000006)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___wakeup___timer___definitions_gab8e7db6943d4d03c850ef9dc20389bb3}{IS\+\_\+\+WAKEUP\+\_\+\+CLOCK}}(CLOCK)
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___wakeup___timer___definitions_ga862e77efddc4db29ce0779501b21c029}\label{group___r_t_c_ex___wakeup___timer___definitions_ga862e77efddc4db29ce0779501b21c029}} 
+\#define {\bfseries IS\+\_\+\+WAKEUP\+\_\+\+COUNTER}(COUNTER)~((COUNTER) $<$= 0x\+FFFF)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_t_c_ex___wakeup___timer___definitions_gab8e7db6943d4d03c850ef9dc20389bb3}\label{group___r_t_c_ex___wakeup___timer___definitions_gab8e7db6943d4d03c850ef9dc20389bb3}} 
+\index{RTCEx\_Wakeup\_Timer\_Definitions@{RTCEx\_Wakeup\_Timer\_Definitions}!IS\_WAKEUP\_CLOCK@{IS\_WAKEUP\_CLOCK}}
+\index{IS\_WAKEUP\_CLOCK@{IS\_WAKEUP\_CLOCK}!RTCEx\_Wakeup\_Timer\_Definitions@{RTCEx\_Wakeup\_Timer\_Definitions}}
+\doxysubsubsection{\texorpdfstring{IS\_WAKEUP\_CLOCK}{IS\_WAKEUP\_CLOCK}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+WAKEUP\+\_\+\+CLOCK(\begin{DoxyParamCaption}\item[{}]{CLOCK }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    (((CLOCK) == RTC\_WAKEUPCLOCK\_RTCCLK\_DIV16)       || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_RTCCLK\_DIV8)    || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_RTCCLK\_DIV4)    || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_RTCCLK\_DIV2)    || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_CK\_SPRE\_16BITS) || \(\backslash\)}
+\DoxyCodeLine{                                    ((CLOCK) == RTC\_WAKEUPCLOCK\_CK\_SPRE\_17BITS))}
+
+\end{DoxyCode}

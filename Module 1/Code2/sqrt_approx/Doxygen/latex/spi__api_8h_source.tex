@@ -1,0 +1,51 @@
+\hypertarget{spi__api_8h_source}{}\doxysection{spi\+\_\+api.\+h}
+\label{spi__api_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/spi\_api.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/spi\_api.h}}
+\mbox{\hyperlink{spi__api_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_SPI\_API\_H}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_SPI\_API\_H}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{device_8h}{device.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00021}00021 \textcolor{preprocessor}{\#if DEVICE\_SPI}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00023}00023 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00024}00024 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00025}00025 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00027}00027 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structspi__s}{spi\_s}} spi\_t;}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00029}00029 \textcolor{keywordtype}{void} spi\_init         (spi\_t *obj, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} mosi, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} miso, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} sclk, \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}} ssel);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00030}00030 \textcolor{keywordtype}{void} spi\_free         (spi\_t *obj);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00031}00031 \textcolor{keywordtype}{void} spi\_format       (spi\_t *obj, \textcolor{keywordtype}{int} \mbox{\hyperlink{structspi__s_afeda3c90a255fe7e4b1e99b4308cce2c}{bits}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{structspi__s_a6b29e4f37f4482274af785ad5ffe96a7}{mode}}, \textcolor{keywordtype}{int} slave);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00032}00032 \textcolor{keywordtype}{void} spi\_frequency    (spi\_t *obj, \textcolor{keywordtype}{int} hz);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00033}00033 \textcolor{keywordtype}{int}  spi\_master\_write (spi\_t *obj, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00034}00034 \textcolor{keywordtype}{int}  spi\_slave\_receive(spi\_t *obj);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00035}00035 \textcolor{keywordtype}{int}  spi\_slave\_read   (spi\_t *obj);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00036}00036 \textcolor{keywordtype}{void} spi\_slave\_write  (spi\_t *obj, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00037}00037 \textcolor{keywordtype}{int}  spi\_busy         (spi\_t *obj);}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00040}00040 \}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00041}00041 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00043}00043 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{spi__api_8h_source_l00045}00045 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

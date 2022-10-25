@@ -1,0 +1,338 @@
+\hypertarget{stm32f4xx__hal__rtc_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+rtc.\+h}
+\label{stm32f4xx__hal__rtc_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_rtc.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_rtc.h}}
+\mbox{\hyperlink{stm32f4xx__hal__rtc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_RTC\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_RTC\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{57 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/} }
+\DoxyCodeLine{61 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63   \mbox{\hyperlink{group___r_t_c_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba69cd05758f5129525749b65bee6f939f}{HAL\_RTC\_STATE\_RESET}}             = 0x00,  }
+\DoxyCodeLine{64   \mbox{\hyperlink{group___r_t_c_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba466484cd22333d8c8758ae12890b862f}{HAL\_RTC\_STATE\_READY}}             = 0x01,  }
+\DoxyCodeLine{65   \mbox{\hyperlink{group___r_t_c_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba5e0a8c8e4731ac8f80e9a219413d6f9b}{HAL\_RTC\_STATE\_BUSY}}              = 0x02,  }
+\DoxyCodeLine{66   \mbox{\hyperlink{group___r_t_c_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba062e7947b5f5f0c2acb7be96207e3d58}{HAL\_RTC\_STATE\_TIMEOUT}}           = 0x03,  }
+\DoxyCodeLine{67   \mbox{\hyperlink{group___r_t_c_gga1e2460a2d13c4efc7a2a1ab2a1ebd32ba21f381f99f437c340f79407e3d71bb31}{HAL\_RTC\_STATE\_ERROR}}             = 0x04   }
+\DoxyCodeLine{69 \}\mbox{\hyperlink{group___r_t_c_ga1e2460a2d13c4efc7a2a1ab2a1ebd32b}{HAL\_RTCStateTypeDef}};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76   uint32\_t \mbox{\hyperlink{struct_r_t_c___init_type_def_aa7dff3583cd79a5a3f9868a56ffd31ee}{HourFormat}};      }
+\DoxyCodeLine{79   uint32\_t \mbox{\hyperlink{struct_r_t_c___init_type_def_a8666a1fe64fe25f9b951219561a07a95}{AsynchPrediv}};    }
+\DoxyCodeLine{82   uint32\_t \mbox{\hyperlink{struct_r_t_c___init_type_def_ac27c42530b6ba86654ec476cd0d020fb}{SynchPrediv}};     }
+\DoxyCodeLine{85   uint32\_t \mbox{\hyperlink{struct_r_t_c___init_type_def_acd1593d55123feca6c3cae142134c294}{OutPut}};          }
+\DoxyCodeLine{88   uint32\_t \mbox{\hyperlink{struct_r_t_c___init_type_def_a14365da1f80863621341cf4a6a8d4e67}{OutPutPolarity}};  }
+\DoxyCodeLine{91   uint32\_t \mbox{\hyperlink{struct_r_t_c___init_type_def_a2c4a2bd3cfae39882e657e653e45185a}{OutPutType}};      }
+\DoxyCodeLine{93 \}\mbox{\hyperlink{struct_r_t_c___init_type_def}{RTC\_InitTypeDef}};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{99 \{}
+\DoxyCodeLine{100   uint8\_t \mbox{\hyperlink{struct_r_t_c___time_type_def_afb56ed968b4967d127517ebb4ed40d8b}{Hours}};            }
+\DoxyCodeLine{104   uint8\_t \mbox{\hyperlink{struct_r_t_c___time_type_def_a362931e6bba28836c36423197e429f29}{Minutes}};          }
+\DoxyCodeLine{107   uint8\_t \mbox{\hyperlink{struct_r_t_c___time_type_def_a297ae76c2b7de4f939d996d93240c6b2}{Seconds}};          }
+\DoxyCodeLine{110   uint32\_t \mbox{\hyperlink{struct_r_t_c___time_type_def_ae24e60a3b9549fd02b00ad6762ae5b77}{SubSeconds}};      }
+\DoxyCodeLine{113   uint8\_t \mbox{\hyperlink{struct_r_t_c___time_type_def_a701c21c52472e8caf9e23653ec2fd604}{TimeFormat}};       }
+\DoxyCodeLine{116   uint32\_t \mbox{\hyperlink{struct_r_t_c___time_type_def_ac873d19a4d99d3f447f96ecae2bf3c5d}{DayLightSaving}};  }
+\DoxyCodeLine{119   uint32\_t \mbox{\hyperlink{struct_r_t_c___time_type_def_a7628b757d7c7a4ab30b6bbc45a028b7d}{StoreOperation}};  }
+\DoxyCodeLine{122 \}\mbox{\hyperlink{struct_r_t_c___time_type_def}{RTC\_TimeTypeDef}}; }
+\DoxyCodeLine{123   }
+\DoxyCodeLine{127 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{128 \{}
+\DoxyCodeLine{129   uint8\_t \mbox{\hyperlink{struct_r_t_c___date_type_def_aff0238fae9aa5fe6dc30ca2833878e45}{WeekDay}};  }
+\DoxyCodeLine{132   uint8\_t \mbox{\hyperlink{struct_r_t_c___date_type_def_a3df66a922683acd4db5defe402c664a0}{Month}};    }
+\DoxyCodeLine{135   uint8\_t \mbox{\hyperlink{struct_r_t_c___date_type_def_a5c81723966bbed4ce8fbe68d1b590c8a}{Date}};     }
+\DoxyCodeLine{138   uint8\_t \mbox{\hyperlink{struct_r_t_c___date_type_def_a1e7d226d1da13713b7d6bbd18c00bd9b}{Year}};     }
+\DoxyCodeLine{141 \}\mbox{\hyperlink{struct_r_t_c___date_type_def}{RTC\_DateTypeDef}};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{146 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{147 \{}
+\DoxyCodeLine{148   \mbox{\hyperlink{struct_r_t_c___time_type_def}{RTC\_TimeTypeDef}} \mbox{\hyperlink{struct_r_t_c___alarm_type_def_a1e50b47e1b3cb1cf09dee1b9e61028c6}{AlarmTime}};     }
+\DoxyCodeLine{150   uint32\_t \mbox{\hyperlink{struct_r_t_c___alarm_type_def_a6d5665858df4c99e589beebe7f2d120b}{AlarmMask}};            }
+\DoxyCodeLine{153   uint32\_t \mbox{\hyperlink{struct_r_t_c___alarm_type_def_aa7f311cd270c215530acf93b454db223}{AlarmSubSecondMask}};   }
+\DoxyCodeLine{156   uint32\_t \mbox{\hyperlink{struct_r_t_c___alarm_type_def_a366ce4c7ad04d5a29550d30d93361324}{AlarmDateWeekDaySel}};  }
+\DoxyCodeLine{159   uint8\_t \mbox{\hyperlink{struct_r_t_c___alarm_type_def_a0c437cb24f8b12e753e522bf0c48a4d7}{AlarmDateWeekDay}};      }
+\DoxyCodeLine{163   uint32\_t \mbox{\hyperlink{struct_r_t_c___alarm_type_def_a2f11f60569f34b15c09096928f30ab24}{Alarm}};                }
+\DoxyCodeLine{165 \}\mbox{\hyperlink{struct_r_t_c___alarm_type_def}{RTC\_AlarmTypeDef}};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{170 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{171 \{}
+\DoxyCodeLine{172   \mbox{\hyperlink{struct_r_t_c___type_def}{RTC\_TypeDef}}                 *\mbox{\hyperlink{struct_r_t_c___handle_type_def_a6a7bc50c975a169d24ba0a174f260abc}{Instance}};  }
+\DoxyCodeLine{174   \mbox{\hyperlink{struct_r_t_c___init_type_def}{RTC\_InitTypeDef}}             \mbox{\hyperlink{struct_r_t_c___handle_type_def_ad8d1ab770e21b2ff3da405115c5933a7}{Init}};       }
+\DoxyCodeLine{176   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             \mbox{\hyperlink{struct_r_t_c___handle_type_def_ae72730d37db2c70485236bb9ff400592}{Lock}};       }
+\DoxyCodeLine{178   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___r_t_c_ga1e2460a2d13c4efc7a2a1ab2a1ebd32b}{HAL\_RTCStateTypeDef}}    \mbox{\hyperlink{struct_r_t_c___handle_type_def_ae6f4d8c6cf47f2bd0823d5b570e44774}{State}};      }
+\DoxyCodeLine{180 \}\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{187 \textcolor{comment}{/* Masks Definition */}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define RTC\_TR\_RESERVED\_MASK    ((uint32\_t)0x007F7F7F)}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define RTC\_DR\_RESERVED\_MASK    ((uint32\_t)0x00FFFF3F) }}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define RTC\_INIT\_MASK           ((uint32\_t)0xFFFFFFFF)  }}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define RTC\_RSF\_MASK            ((uint32\_t)0xFFFFFF5F)}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define RTC\_FLAGS\_MASK          ((uint32\_t)(RTC\_FLAG\_TSOVF | RTC\_FLAG\_TSF | RTC\_FLAG\_WUTF | \(\backslash\)}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{                                            RTC\_FLAG\_ALRBF | RTC\_FLAG\_ALRAF | RTC\_FLAG\_INITF | \(\backslash\)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{                                            RTC\_FLAG\_RSF | RTC\_FLAG\_INITS | RTC\_FLAG\_WUTWF | \(\backslash\)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{                                            RTC\_FLAG\_ALRBWF | RTC\_FLAG\_ALRAWF | RTC\_FLAG\_TAMP1F | \(\backslash\)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{                                            RTC\_FLAG\_RECALPF | RTC\_FLAG\_SHPF))}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define RTC\_TIMEOUT\_VALUE       1000}}
+\DoxyCodeLine{199  }
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define RTC\_HOURFORMAT\_24              ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define RTC\_HOURFORMAT\_12              ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#define IS\_RTC\_HOUR\_FORMAT(FORMAT)     (((FORMAT) == RTC\_HOURFORMAT\_12) || \(\backslash\)}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{                                        ((FORMAT) == RTC\_HOURFORMAT\_24))}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#define RTC\_OUTPUT\_DISABLE             ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define RTC\_OUTPUT\_ALARMA              ((uint32\_t)0x00200000)}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#define RTC\_OUTPUT\_ALARMB              ((uint32\_t)0x00400000)}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define RTC\_OUTPUT\_WAKEUP              ((uint32\_t)0x00600000)}}
+\DoxyCodeLine{219  }
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define IS\_RTC\_OUTPUT(OUTPUT) (((OUTPUT) == RTC\_OUTPUT\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{                               ((OUTPUT) == RTC\_OUTPUT\_ALARMA)  || \(\backslash\)}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{                               ((OUTPUT) == RTC\_OUTPUT\_ALARMB)  || \(\backslash\)}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{                               ((OUTPUT) == RTC\_OUTPUT\_WAKEUP))}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define RTC\_OUTPUT\_POLARITY\_HIGH       ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#define RTC\_OUTPUT\_POLARITY\_LOW        ((uint32\_t)0x00100000)}}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define IS\_RTC\_OUTPUT\_POL(POL) (((POL) == RTC\_OUTPUT\_POLARITY\_HIGH) || \(\backslash\)}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{                                ((POL) == RTC\_OUTPUT\_POLARITY\_LOW))}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define RTC\_OUTPUT\_TYPE\_OPENDRAIN      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define RTC\_OUTPUT\_TYPE\_PUSHPULL       ((uint32\_t)0x00040000)}}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define IS\_RTC\_OUTPUT\_TYPE(TYPE) (((TYPE) == RTC\_OUTPUT\_TYPE\_OPENDRAIN) || \(\backslash\)}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{                                  ((TYPE) == RTC\_OUTPUT\_TYPE\_PUSHPULL))}}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#define IS\_RTC\_ASYNCH\_PREDIV(PREDIV)   ((PREDIV) <= (uint32\_t)0x7F) }}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define IS\_RTC\_SYNCH\_PREDIV(PREDIV)    ((PREDIV) <= (uint32\_t)0x7FFF)}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#define IS\_RTC\_HOUR12(HOUR)            (((HOUR) > (uint32\_t)0) \&\& ((HOUR) <= (uint32\_t)12))}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define IS\_RTC\_HOUR24(HOUR)            ((HOUR) <= (uint32\_t)23)}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define IS\_RTC\_MINUTES(MINUTES)        ((MINUTES) <= (uint32\_t)59)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define IS\_RTC\_SECONDS(SECONDS)        ((SECONDS) <= (uint32\_t)59)}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#define RTC\_HOURFORMAT12\_AM            ((uint8\_t)0x00)}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#define RTC\_HOURFORMAT12\_PM            ((uint8\_t)0x40)}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287 \textcolor{preprocessor}{\#define IS\_RTC\_HOURFORMAT12(PM)  (((PM) == RTC\_HOURFORMAT12\_AM) || ((PM) == RTC\_HOURFORMAT12\_PM))}}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define RTC\_DAYLIGHTSAVING\_SUB1H       ((uint32\_t)0x00020000)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define RTC\_DAYLIGHTSAVING\_ADD1H       ((uint32\_t)0x00010000)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define RTC\_DAYLIGHTSAVING\_NONE        ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#define IS\_RTC\_DAYLIGHT\_SAVING(SAVE) (((SAVE) == RTC\_DAYLIGHTSAVING\_SUB1H) || \(\backslash\)}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{                                      ((SAVE) == RTC\_DAYLIGHTSAVING\_ADD1H) || \(\backslash\)}}
+\DoxyCodeLine{301 \textcolor{preprocessor}{                                      ((SAVE) == RTC\_DAYLIGHTSAVING\_NONE))}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define RTC\_STOREOPERATION\_RESET        ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#define RTC\_STOREOPERATION\_SET          ((uint32\_t)0x00040000)}}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#define IS\_RTC\_STORE\_OPERATION(OPERATION) (((OPERATION) == RTC\_STOREOPERATION\_RESET) || \(\backslash\)}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{                                           ((OPERATION) == RTC\_STOREOPERATION\_SET))}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define FORMAT\_BIN                      ((uint32\_t)0x000000000)}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define FORMAT\_BCD                      ((uint32\_t)0x000000001)}}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#define IS\_RTC\_FORMAT(FORMAT) (((FORMAT) == FORMAT\_BIN) || ((FORMAT) == FORMAT\_BCD))}}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define IS\_RTC\_YEAR(YEAR)              ((YEAR) <= (uint32\_t)99)}}
+\DoxyCodeLine{341 \textcolor{comment}{/* Coded in BCD format */}}
+\DoxyCodeLine{342 \textcolor{preprocessor}{\#define RTC\_MONTH\_JANUARY              ((uint8\_t)0x01)}}
+\DoxyCodeLine{343 \textcolor{preprocessor}{\#define RTC\_MONTH\_FEBRUARY             ((uint8\_t)0x02)}}
+\DoxyCodeLine{344 \textcolor{preprocessor}{\#define RTC\_MONTH\_MARCH                ((uint8\_t)0x03)}}
+\DoxyCodeLine{345 \textcolor{preprocessor}{\#define RTC\_MONTH\_APRIL                ((uint8\_t)0x04)}}
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#define RTC\_MONTH\_MAY                  ((uint8\_t)0x05)}}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#define RTC\_MONTH\_JUNE                 ((uint8\_t)0x06)}}
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#define RTC\_MONTH\_JULY                 ((uint8\_t)0x07)}}
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define RTC\_MONTH\_AUGUST               ((uint8\_t)0x08)}}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define RTC\_MONTH\_SEPTEMBER            ((uint8\_t)0x09)}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{\#define RTC\_MONTH\_OCTOBER              ((uint8\_t)0x10)}}
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#define RTC\_MONTH\_NOVEMBER             ((uint8\_t)0x11)}}
+\DoxyCodeLine{353 \textcolor{preprocessor}{\#define RTC\_MONTH\_DECEMBER             ((uint8\_t)0x12)}}
+\DoxyCodeLine{354 }
+\DoxyCodeLine{355 \textcolor{preprocessor}{\#define IS\_RTC\_MONTH(MONTH)            (((MONTH) >= (uint32\_t)1) \&\& ((MONTH) <= (uint32\_t)12))}}
+\DoxyCodeLine{356 \textcolor{preprocessor}{\#define IS\_RTC\_DATE(DATE)              (((DATE) >= (uint32\_t)1) \&\& ((DATE) <= (uint32\_t)31))}}
+\DoxyCodeLine{364 \textcolor{preprocessor}{\#define RTC\_WEEKDAY\_MONDAY             ((uint8\_t)0x01)}}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#define RTC\_WEEKDAY\_TUESDAY            ((uint8\_t)0x02)}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#define RTC\_WEEKDAY\_WEDNESDAY          ((uint8\_t)0x03)}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#define RTC\_WEEKDAY\_THURSDAY           ((uint8\_t)0x04)}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define RTC\_WEEKDAY\_FRIDAY             ((uint8\_t)0x05)}}
+\DoxyCodeLine{369 \textcolor{preprocessor}{\#define RTC\_WEEKDAY\_SATURDAY           ((uint8\_t)0x06)}}
+\DoxyCodeLine{370 \textcolor{preprocessor}{\#define RTC\_WEEKDAY\_SUNDAY             ((uint8\_t)0x07)}}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#define IS\_RTC\_WEEKDAY(WEEKDAY) (((WEEKDAY) == RTC\_WEEKDAY\_MONDAY)    || \(\backslash\)}}
+\DoxyCodeLine{373 \textcolor{preprocessor}{                                 ((WEEKDAY) == RTC\_WEEKDAY\_TUESDAY)   || \(\backslash\)}}
+\DoxyCodeLine{374 \textcolor{preprocessor}{                                 ((WEEKDAY) == RTC\_WEEKDAY\_WEDNESDAY) || \(\backslash\)}}
+\DoxyCodeLine{375 \textcolor{preprocessor}{                                 ((WEEKDAY) == RTC\_WEEKDAY\_THURSDAY)  || \(\backslash\)}}
+\DoxyCodeLine{376 \textcolor{preprocessor}{                                 ((WEEKDAY) == RTC\_WEEKDAY\_FRIDAY)    || \(\backslash\)}}
+\DoxyCodeLine{377 \textcolor{preprocessor}{                                 ((WEEKDAY) == RTC\_WEEKDAY\_SATURDAY)  || \(\backslash\)}}
+\DoxyCodeLine{378 \textcolor{preprocessor}{                                 ((WEEKDAY) == RTC\_WEEKDAY\_SUNDAY))}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#define IS\_RTC\_ALARM\_DATE\_WEEKDAY\_DATE(DATE) (((DATE) >(uint32\_t) 0) \&\& ((DATE) <= (uint32\_t)31))}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#define IS\_RTC\_ALARM\_DATE\_WEEKDAY\_WEEKDAY(WEEKDAY) (((WEEKDAY) == RTC\_WEEKDAY\_MONDAY)    || \(\backslash\)}}
+\DoxyCodeLine{388 \textcolor{preprocessor}{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_TUESDAY)   || \(\backslash\)}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_WEDNESDAY) || \(\backslash\)}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_THURSDAY)  || \(\backslash\)}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_FRIDAY)    || \(\backslash\)}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_SATURDAY)  || \(\backslash\)}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{                                                    ((WEEKDAY) == RTC\_WEEKDAY\_SUNDAY))}}
+\DoxyCodeLine{402 \textcolor{preprocessor}{\#define RTC\_ALARMDATEWEEKDAYSEL\_DATE      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{403 \textcolor{preprocessor}{\#define RTC\_ALARMDATEWEEKDAYSEL\_WEEKDAY   ((uint32\_t)0x40000000)}}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{405 \textcolor{preprocessor}{\#define IS\_RTC\_ALARM\_DATE\_WEEKDAY\_SEL(SEL) (((SEL) == RTC\_ALARMDATEWEEKDAYSEL\_DATE) || \(\backslash\)}}
+\DoxyCodeLine{406 \textcolor{preprocessor}{                                            ((SEL) == RTC\_ALARMDATEWEEKDAYSEL\_WEEKDAY))}}
+\DoxyCodeLine{415 \textcolor{preprocessor}{\#define RTC\_ALARMMASK\_NONE                ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{\#define RTC\_ALARMMASK\_DATEWEEKDAY         RTC\_ALRMAR\_MSK4}}
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#define RTC\_ALARMMASK\_HOURS               RTC\_ALRMAR\_MSK3}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#define RTC\_ALARMMASK\_MINUTES             RTC\_ALRMAR\_MSK2}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#define RTC\_ALARMMASK\_SECONDS             RTC\_ALRMAR\_MSK1}}
+\DoxyCodeLine{420 \textcolor{preprocessor}{\#define RTC\_ALARMMASK\_ALL                 ((uint32\_t)0x80808080)}}
+\DoxyCodeLine{421 }
+\DoxyCodeLine{422 \textcolor{preprocessor}{\#define IS\_ALARM\_MASK(MASK)  (((MASK) \& 0x7F7F7F7F) == (uint32\_t)RESET)}}
+\DoxyCodeLine{430 \textcolor{preprocessor}{\#define RTC\_ALARM\_A                       RTC\_CR\_ALRAE}}
+\DoxyCodeLine{431 \textcolor{preprocessor}{\#define RTC\_ALARM\_B                       RTC\_CR\_ALRBE}}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433 \textcolor{preprocessor}{\#define IS\_ALARM(ALARM)      (((ALARM) == RTC\_ALARM\_A) || ((ALARM) == RTC\_ALARM\_B))}}
+\DoxyCodeLine{441 \textcolor{preprocessor}{\#define IS\_RTC\_ALARM\_SUB\_SECOND\_VALUE(VALUE) ((VALUE) <= (uint32\_t)0x00007FFF)}}
+\DoxyCodeLine{449 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_ALL         ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{452 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_1      ((uint32\_t)0x01000000)  }}
+\DoxyCodeLine{454 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_2      ((uint32\_t)0x02000000)  }}
+\DoxyCodeLine{456 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_3      ((uint32\_t)0x03000000)  }}
+\DoxyCodeLine{458 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_4      ((uint32\_t)0x04000000)  }}
+\DoxyCodeLine{460 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_5      ((uint32\_t)0x05000000)  }}
+\DoxyCodeLine{462 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_6      ((uint32\_t)0x06000000)  }}
+\DoxyCodeLine{464 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_7      ((uint32\_t)0x07000000)  }}
+\DoxyCodeLine{466 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_8      ((uint32\_t)0x08000000)  }}
+\DoxyCodeLine{468 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_9      ((uint32\_t)0x09000000)  }}
+\DoxyCodeLine{470 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_10     ((uint32\_t)0x0A000000)  }}
+\DoxyCodeLine{472 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_11     ((uint32\_t)0x0B000000)  }}
+\DoxyCodeLine{474 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_12     ((uint32\_t)0x0C000000)  }}
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14\_13     ((uint32\_t)0x0D000000)  }}
+\DoxyCodeLine{478 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_SS14        ((uint32\_t)0x0E000000)  }}
+\DoxyCodeLine{480 \textcolor{preprocessor}{\#define RTC\_ALARMSUBSECONDMASK\_None        ((uint32\_t)0x0F000000)  }}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#define IS\_RTC\_ALARM\_SUB\_SECOND\_MASK(MASK)   (((MASK) == RTC\_ALARMSUBSECONDMASK\_ALL) || \(\backslash\)}}
+\DoxyCodeLine{484 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_1) || \(\backslash\)}}
+\DoxyCodeLine{485 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_2) || \(\backslash\)}}
+\DoxyCodeLine{486 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_3) || \(\backslash\)}}
+\DoxyCodeLine{487 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_4) || \(\backslash\)}}
+\DoxyCodeLine{488 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_5) || \(\backslash\)}}
+\DoxyCodeLine{489 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_6) || \(\backslash\)}}
+\DoxyCodeLine{490 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_7) || \(\backslash\)}}
+\DoxyCodeLine{491 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_8) || \(\backslash\)}}
+\DoxyCodeLine{492 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_9) || \(\backslash\)}}
+\DoxyCodeLine{493 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_10) || \(\backslash\)}}
+\DoxyCodeLine{494 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_11) || \(\backslash\)}}
+\DoxyCodeLine{495 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_12) || \(\backslash\)}}
+\DoxyCodeLine{496 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14\_13) || \(\backslash\)}}
+\DoxyCodeLine{497 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_SS14) || \(\backslash\)}}
+\DoxyCodeLine{498 \textcolor{preprocessor}{                                              ((MASK) == RTC\_ALARMSUBSECONDMASK\_None))}}
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#define RTC\_IT\_TS                         ((uint32\_t)0x00008000)}}
+\DoxyCodeLine{507 \textcolor{preprocessor}{\#define RTC\_IT\_WUT                        ((uint32\_t)0x00004000)}}
+\DoxyCodeLine{508 \textcolor{preprocessor}{\#define RTC\_IT\_ALRB                       ((uint32\_t)0x00002000)}}
+\DoxyCodeLine{509 \textcolor{preprocessor}{\#define RTC\_IT\_ALRA                       ((uint32\_t)0x00001000)}}
+\DoxyCodeLine{510 \textcolor{preprocessor}{\#define RTC\_IT\_TAMP                       ((uint32\_t)0x00000004) }\textcolor{comment}{/* Used only to Enable the Tamper Interrupt */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{511 \textcolor{preprocessor}{\#define RTC\_IT\_TAMP1                      ((uint32\_t)0x00020000)}}
+\DoxyCodeLine{512 \textcolor{preprocessor}{\#define RTC\_IT\_TAMP2                      ((uint32\_t)0x00040000)}}
+\DoxyCodeLine{520 \textcolor{preprocessor}{\#define RTC\_FLAG\_RECALPF                  ((uint32\_t)0x00010000)}}
+\DoxyCodeLine{521 \textcolor{preprocessor}{\#define RTC\_FLAG\_TAMP2F                   ((uint32\_t)0x00004000)}}
+\DoxyCodeLine{522 \textcolor{preprocessor}{\#define RTC\_FLAG\_TAMP1F                   ((uint32\_t)0x00002000)}}
+\DoxyCodeLine{523 \textcolor{preprocessor}{\#define RTC\_FLAG\_TSOVF                    ((uint32\_t)0x00001000)}}
+\DoxyCodeLine{524 \textcolor{preprocessor}{\#define RTC\_FLAG\_TSF                      ((uint32\_t)0x00000800)}}
+\DoxyCodeLine{525 \textcolor{preprocessor}{\#define RTC\_FLAG\_WUTF                     ((uint32\_t)0x00000400)}}
+\DoxyCodeLine{526 \textcolor{preprocessor}{\#define RTC\_FLAG\_ALRBF                    ((uint32\_t)0x00000200)}}
+\DoxyCodeLine{527 \textcolor{preprocessor}{\#define RTC\_FLAG\_ALRAF                    ((uint32\_t)0x00000100)}}
+\DoxyCodeLine{528 \textcolor{preprocessor}{\#define RTC\_FLAG\_INITF                    ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#define RTC\_FLAG\_RSF                      ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#define RTC\_FLAG\_INITS                    ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{531 \textcolor{preprocessor}{\#define RTC\_FLAG\_SHPF                     ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{532 \textcolor{preprocessor}{\#define RTC\_FLAG\_WUTWF                    ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{533 \textcolor{preprocessor}{\#define RTC\_FLAG\_ALRBWF                   ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{534 \textcolor{preprocessor}{\#define RTC\_FLAG\_ALRAWF                   ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{543 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{544 }
+\DoxyCodeLine{549 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_RTC\_STATE\_RESET)}}
+\DoxyCodeLine{550 }
+\DoxyCodeLine{556 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_WRITEPROTECTION\_DISABLE(\_\_HANDLE\_\_)             \(\backslash\)}}
+\DoxyCodeLine{557 \textcolor{preprocessor}{                        do\{                                       \(\backslash\)}}
+\DoxyCodeLine{558 \textcolor{preprocessor}{                            (\_\_HANDLE\_\_)-\/>Instance-\/>WPR = 0xCA;   \(\backslash\)}}
+\DoxyCodeLine{559 \textcolor{preprocessor}{                            (\_\_HANDLE\_\_)-\/>Instance-\/>WPR = 0x53;   \(\backslash\)}}
+\DoxyCodeLine{560 \textcolor{preprocessor}{                          \} while(0)}}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{567 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_WRITEPROTECTION\_ENABLE(\_\_HANDLE\_\_)              \(\backslash\)}}
+\DoxyCodeLine{568 \textcolor{preprocessor}{                        do\{                                       \(\backslash\)}}
+\DoxyCodeLine{569 \textcolor{preprocessor}{                            (\_\_HANDLE\_\_)-\/>Instance-\/>WPR = 0xFF;   \(\backslash\)}}
+\DoxyCodeLine{570 \textcolor{preprocessor}{                          \} while(0)                            }}
+\DoxyCodeLine{571  }
+\DoxyCodeLine{577 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARMA\_ENABLE(\_\_HANDLE\_\_)                           ((\_\_HANDLE\_\_)-\/>Instance-\/>CR |= (RTC\_CR\_ALRAE))}}
+\DoxyCodeLine{578 }
+\DoxyCodeLine{584 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARMA\_DISABLE(\_\_HANDLE\_\_)                          ((\_\_HANDLE\_\_)-\/>Instance-\/>CR \&= \string~(RTC\_CR\_ALRAE))}}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{591 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARMB\_ENABLE(\_\_HANDLE\_\_)                           ((\_\_HANDLE\_\_)-\/>Instance-\/>CR |= (RTC\_CR\_ALRBE))}}
+\DoxyCodeLine{592 }
+\DoxyCodeLine{598 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARMB\_DISABLE(\_\_HANDLE\_\_)                          ((\_\_HANDLE\_\_)-\/>Instance-\/>CR \&= \string~(RTC\_CR\_ALRBE))}}
+\DoxyCodeLine{599 }
+\DoxyCodeLine{609 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARM\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)          ((\_\_HANDLE\_\_)-\/>Instance-\/>CR |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{610 }
+\DoxyCodeLine{620 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARM\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)         ((\_\_HANDLE\_\_)-\/>Instance-\/>CR \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{621 }
+\DoxyCodeLine{631 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARM\_GET\_IT(\_\_HANDLE\_\_, \_\_FLAG\_\_)                  ((((((\_\_HANDLE\_\_)-\/>Instance-\/>ISR)\& ((\_\_FLAG\_\_)>> 4)) \& 0x0000FFFF) != RESET)? SET : RESET)}}
+\DoxyCodeLine{632 }
+\DoxyCodeLine{644 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARM\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)                (((((\_\_HANDLE\_\_)-\/>Instance-\/>ISR) \& (\_\_FLAG\_\_)) != RESET)? SET : RESET)}}
+\DoxyCodeLine{645 }
+\DoxyCodeLine{655 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ALARM\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)                  ((\_\_HANDLE\_\_)-\/>Instance-\/>ISR) = (\string~(((\_\_FLAG\_\_) | RTC\_ISR\_INIT)\& 0x0000FFFF)|((\_\_HANDLE\_\_)-\/>Instance-\/>ISR \& RTC\_ISR\_INIT))}}
+\DoxyCodeLine{656   }
+\DoxyCodeLine{657   }
+\DoxyCodeLine{658 \textcolor{preprocessor}{\#define RTC\_EXTI\_LINE\_ALARM\_EVENT             ((uint32\_t)0x00020000)  }}
+\DoxyCodeLine{659 \textcolor{preprocessor}{\#define RTC\_EXTI\_LINE\_TAMPER\_TIMESTAMP\_EVENT  ((uint32\_t)0x00200000)  }}
+\DoxyCodeLine{660 \textcolor{preprocessor}{\#define RTC\_EXTI\_LINE\_WAKEUPTIMER\_EVENT       ((uint32\_t)0x00400000)  }}
+\DoxyCodeLine{671 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_ENABLE\_IT(\_\_EXTILINE\_\_)   (EXTI-\/>IMR |= (\_\_EXTILINE\_\_))}}
+\DoxyCodeLine{672 }
+\DoxyCodeLine{682 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_DISABLE\_IT(\_\_EXTILINE\_\_)  (EXTI-\/>IMR \&= \string~(\_\_EXTILINE\_\_))}}
+\DoxyCodeLine{683 }
+\DoxyCodeLine{693 \textcolor{preprocessor}{\#define \_\_HAL\_RTC\_CLEAR\_FLAG(\_\_FLAG\_\_)  (EXTI-\/>PR = (\_\_FLAG\_\_))}}
+\DoxyCodeLine{694 }
+\DoxyCodeLine{695 \textcolor{comment}{/* Include RTC HAL Extension module */}}
+\DoxyCodeLine{696 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__rtc__ex_8h}{stm32f4xx\_hal\_rtc\_ex.h}}"{}}}
+\DoxyCodeLine{697 }
+\DoxyCodeLine{698 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{699 }
+\DoxyCodeLine{700 \textcolor{comment}{/* Initialization and de-\/initialization functions  ****************************/}}
+\DoxyCodeLine{701 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_Init(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc);}
+\DoxyCodeLine{702 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_DeInit(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc);}
+\DoxyCodeLine{703 \textcolor{keywordtype}{void}       HAL\_RTC\_MspInit(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc);}
+\DoxyCodeLine{704 \textcolor{keywordtype}{void}       HAL\_RTC\_MspDeInit(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc);}
+\DoxyCodeLine{705 }
+\DoxyCodeLine{706 \textcolor{comment}{/* RTC Time and Date functions ************************************************/}}
+\DoxyCodeLine{707 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_SetTime(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, \mbox{\hyperlink{struct_r_t_c___time_type_def}{RTC\_TimeTypeDef}} *sTime, uint32\_t Format);}
+\DoxyCodeLine{708 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_GetTime(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, \mbox{\hyperlink{struct_r_t_c___time_type_def}{RTC\_TimeTypeDef}} *sTime, uint32\_t Format);}
+\DoxyCodeLine{709 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_SetDate(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, \mbox{\hyperlink{struct_r_t_c___date_type_def}{RTC\_DateTypeDef}} *sDate, uint32\_t Format);}
+\DoxyCodeLine{710 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_GetDate(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, \mbox{\hyperlink{struct_r_t_c___date_type_def}{RTC\_DateTypeDef}} *sDate, uint32\_t Format);}
+\DoxyCodeLine{711 }
+\DoxyCodeLine{712 \textcolor{comment}{/* RTC Alarm functions ********************************************************/}}
+\DoxyCodeLine{713 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_SetAlarm(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, \mbox{\hyperlink{struct_r_t_c___alarm_type_def}{RTC\_AlarmTypeDef}} *sAlarm, uint32\_t Format);}
+\DoxyCodeLine{714 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_SetAlarm\_IT(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, \mbox{\hyperlink{struct_r_t_c___alarm_type_def}{RTC\_AlarmTypeDef}} *sAlarm, uint32\_t Format);}
+\DoxyCodeLine{715 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_DeactivateAlarm(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, uint32\_t Alarm);}
+\DoxyCodeLine{716 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RTC\_GetAlarm(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, \mbox{\hyperlink{struct_r_t_c___alarm_type_def}{RTC\_AlarmTypeDef}} *sAlarm, uint32\_t Alarm, uint32\_t Format);}
+\DoxyCodeLine{717 \textcolor{keywordtype}{void}                HAL\_RTC\_AlarmIRQHandler(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc);}
+\DoxyCodeLine{718 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_RTC\_PollForAlarmAEvent(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc, uint32\_t Timeout);}
+\DoxyCodeLine{719 \textcolor{keywordtype}{void}         HAL\_RTC\_AlarmAEventCallback(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc);}
+\DoxyCodeLine{720 }
+\DoxyCodeLine{721 \textcolor{comment}{/* Peripheral Control functions ***********************************************/}}
+\DoxyCodeLine{722 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}   HAL\_RTC\_WaitForSynchro(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}}* hrtc);}
+\DoxyCodeLine{723 }
+\DoxyCodeLine{724 \textcolor{comment}{/* Peripheral State functions *************************************************/}}
+\DoxyCodeLine{725 \mbox{\hyperlink{group___r_t_c_ga1e2460a2d13c4efc7a2a1ab2a1ebd32b}{HAL\_RTCStateTypeDef}} HAL\_RTC\_GetState(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}} *hrtc);}
+\DoxyCodeLine{726 }
+\DoxyCodeLine{727 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  RTC\_EnterInitMode(\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\_HandleTypeDef}}* hrtc);}
+\DoxyCodeLine{728 uint8\_t            RTC\_ByteToBcd2(uint8\_t Value);}
+\DoxyCodeLine{729 uint8\_t            RTC\_Bcd2ToByte(uint8\_t Value);}
+\DoxyCodeLine{730 }
+\DoxyCodeLine{739 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{740 \}}
+\DoxyCodeLine{741 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{742 }
+\DoxyCodeLine{743 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_HAL\_RTC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{744 }
+\DoxyCodeLine{745 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

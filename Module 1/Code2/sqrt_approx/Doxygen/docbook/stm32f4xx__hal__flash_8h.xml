@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__flash_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_flash.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_flash.h</primary></indexterm>
+<para>
+
+<para>Header file of FLASH HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+#include &quot;stm32f4xx_hal_flash_ex.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_f_l_a_s_h___process_type_def">FLASH_ProcessTypeDef</link></para>
+
+<para>FLASH handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1ga458b1d485bc541d4a9f2196881146026">TYPEPROGRAM_BYTE</link>   ((uint32_t)0x00)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1ga7f3aba0ba4426991096af46fb513eb4a">TYPEPROGRAM_HALFWORD</link>   ((uint32_t)0x01)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1ga30d98b2839798f48f8a6e0289ab2677a">TYPEPROGRAM_WORD</link>   ((uint32_t)0x02)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1ga12da935a6f8f2870015e55ff8aa9a7b0">TYPEPROGRAM_DOUBLEWORD</link>   ((uint32_t)0x03)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___type___program_1ga82f9990301f63110719910443dc713df">IS_TYPEPROGRAM</link>(VALUE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1gaf043ba4d8f837350bfc7754a99fae5a9">FLASH_FLAG_EOP</link>   <link linkend="_group___peripheral___registers___bits___definition_1gae1301c6b487cfefa247c54a576a0c12b">FLASH_SR_EOP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1gad8a96ceda91fcf0d1299da933b5816f1">FLASH_FLAG_OPERR</link>   <link linkend="_group___peripheral___registers___bits___definition_1gab779aa8b88258e15c183041744a846ff">FLASH_SR_SOP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1ga6abf64f916992585899369166db3f266">FLASH_FLAG_WRPERR</link>   <link linkend="_group___peripheral___registers___bits___definition_1gabf6f52f59b01530928d747cf32bd4d01">FLASH_SR_WRPERR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1ga2c3f4dbea065f8ea2987eada4dab30bd">FLASH_FLAG_PGAERR</link>   <link linkend="_group___peripheral___registers___bits___definition_1gac98c2458e114e7f419f3222673878ce0">FLASH_SR_PGAERR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1ga88a93907641f5eeb4091a26b84c94897">FLASH_FLAG_PGPERR</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga7fd2704724528be959f82089f67e3869">FLASH_SR_PGPERR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1ga25b80c716320e667162846da8be09b68">FLASH_FLAG_PGSERR</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga5d76ad3629a288bee0136b8b34f274f4">FLASH_SR_PGSERR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1ga0d1faec4c7bcca54d543ff3cd8983d3b">FLASH_FLAG_RDERR</link>   ((uint32_t)0x00000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___flag__definition_1gad3bc368f954ad7744deda3315da2fff7">FLASH_FLAG_BSY</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga4b86181a96fd2f1cc3828e9d8d83d368">FLASH_SR_BSY</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___interrupt__definition_1gaea20e80e1806d58a7544cfe8659e7f11">FLASH_IT_EOP</link>   <link linkend="_group___peripheral___registers___bits___definition_1gab9e69856f654ec430a42791a34799db0">FLASH_CR_EOPIE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___interrupt__definition_1ga4e2c23ab8c1b9a5ee49bf6d695d9ae8c">FLASH_IT_ERR</link>   ((uint32_t)0x02000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___program___parallelism_1ga83c67710aa697216193654e1e90cc953">FLASH_PSIZE_BYTE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___program___parallelism_1gad3210ba7423b45cb3063f4294cdeab16">FLASH_PSIZE_HALF_WORD</link>   ((uint32_t)0x00000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___program___parallelism_1gac3ac337ed43efc869a9f734527e44673">FLASH_PSIZE_WORD</link>   ((uint32_t)0x00000200)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___program___parallelism_1ga0fd17c4e281f199f09a6a6365e9243ee">FLASH_PSIZE_DOUBLE_WORD</link>   ((uint32_t)0x00000300)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___program___parallelism_1ga7c755f15e36221021a1438857e40365c">CR_PSIZE_MASK</link>   ((uint32_t)0xFFFFFCFF)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___keys_1gae497135e5528d69274bf8daf7f077f23">RDP_KEY</link>   ((uint16_t)0x00A5)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___keys_1gafd77e7bf91765d891ce63e2f0084b019">FLASH_KEY1</link>   ((uint32_t)0x45670123)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___keys_1gaee83d0f557e158da52f4a205db6b60a7">FLASH_KEY2</link>   ((uint32_t)0xCDEF89AB)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___keys_1gacebe54ff9ff12abcf0e4d3e697b2f116">FLASH_OPT_KEY1</link>   ((uint32_t)0x08192A3B)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___keys_1ga636d46db38e376f0483eed4b7346697c">FLASH_OPT_KEY2</link>   ((uint32_t)0x4C5D6E7F)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___exported___constants_1gaeaca61fbcff69df08100280868bff214">ACR_BYTE0_ADDRESS</link>   ((uint32_t)0x40023C00)</para>
+
+<para>ACR register byte 0 (Bits[7:0]) base address 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___exported___constants_1ga8223df020203a97af44e4b14e219d01e">OPTCR_BYTE0_ADDRESS</link>   ((uint32_t)0x40023C14)</para>
+
+<para>OPTCR register byte 0 (Bits[7:0]) base address 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___exported___constants_1ga3c08568a9b3a9d213a70eff8e87117ac">OPTCR_BYTE1_ADDRESS</link>   ((uint32_t)0x40023C15)</para>
+
+<para>OPTCR register byte 1 (Bits[15:8]) base address 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___exported___constants_1ga600e8029b876676da246a62924a294c7">OPTCR_BYTE2_ADDRESS</link>   ((uint32_t)0x40023C16)</para>
+
+<para>OPTCR register byte 2 (Bits[23:16]) base address 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h___exported___constants_1gab0cdb1b585010a65ca09ecf67055fb94">OPTCR_BYTE3_ADDRESS</link>   ((uint32_t)0x40023C17)</para>
+
+<para>OPTCR register byte 3 (Bits[31:24]) base address 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1gac1c9f459b798cc3700b90a6245df5a1a">__HAL_FLASH_SET_LATENCY</link>(__LATENCY__)   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint8_t *)<link linkend="_group___f_l_a_s_h___exported___constants_1gaeaca61fbcff69df08100280868bff214">ACR_BYTE0_ADDRESS</link> = (uint8_t)(__LATENCY__))</para>
+
+<para>Set the FLASH Latency. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1gad36059641057f824516303ea92734e6f">__HAL_FLASH_PREFETCH_BUFFER_ENABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga082e7e91fffee86db39676396d01a8e0">FLASH_ACR_PRFTEN</link>)</para>
+
+<para>Enable the FLASH prefetch buffer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga646a4cb92e85659334d14a8c78f0ede8">__HAL_FLASH_PREFETCH_BUFFER_DISABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga082e7e91fffee86db39676396d01a8e0">FLASH_ACR_PRFTEN</link>))</para>
+
+<para>Disable the FLASH prefetch buffer. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1gaddb00cd85fe48a524fad33c7fe63e038">__HAL_FLASH_INSTRUCTION_CACHE_ENABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga51d8b1dd2c46942d377c579a38dce711">FLASH_ACR_ICEN</link>)</para>
+
+<para>Enable the FLASH instruction cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga01bf00ed6e7c0e74ed0931f3b8b033ed">__HAL_FLASH_INSTRUCTION_CACHE_DISABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga51d8b1dd2c46942d377c579a38dce711">FLASH_ACR_ICEN</link>))</para>
+
+<para>Disable the FLASH instruction cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1gad94db5b43a234c8dd3dde8fcf0e4cedd">__HAL_FLASH_DATA_CACHE_ENABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga5a9a5cc3aa05dc62264addab1008c896">FLASH_ACR_DCEN</link>)</para>
+
+<para>Enable the FLASH data cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga247f85a1fcc780be21f9fc2f1d29ee7e">__HAL_FLASH_DATA_CACHE_DISABLE</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR &amp;= (~<link linkend="_group___peripheral___registers___bits___definition_1ga5a9a5cc3aa05dc62264addab1008c896">FLASH_ACR_DCEN</link>))</para>
+
+<para>Disable the FLASH data cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga69dff538775ee23738d54eef4a259b66">__HAL_FLASH_INSTRUCTION_CACHE_RESET</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1ga923ff88475799eea9285f77f5383ced5">FLASH_ACR_ICRST</link>)</para>
+
+<para>Resets the FLASH instruction Cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga3b94f4f103ddab361802c8defd3a9c34">__HAL_FLASH_DATA_CACHE_RESET</link>()   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;ACR |= <link linkend="_group___peripheral___registers___bits___definition_1gac53d7c85551a9829014d6027d67ce6c7">FLASH_ACR_DCRST</link>)</para>
+
+<para>Resets the FLASH data Cache. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga13fa137a911f02a2f94fb9fb0762a340">__HAL_FLASH_ENABLE_IT</link>(__INTERRUPT__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;CR |= (__INTERRUPT__))</para>
+
+<para>Enable the specified FLASH interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga1f40f507b5d4b3a4da68e4244a1097ee">__HAL_FLASH_DISABLE_IT</link>(__INTERRUPT__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;CR &amp;= ~(uint32_t)(__INTERRUPT__))</para>
+
+<para>Disable the specified FLASH interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga0d3dd161fecc0e47c9e109c7c28672c1">__HAL_FLASH_GET_FLAG</link>(__FLAG__)   ((<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;SR &amp; (__FLAG__)))</para>
+
+<para>Get the specified FLASH flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___f_l_a_s_h_1ga68e49c4675761e2ec35153e747de7622">__HAL_FLASH_CLEAR_FLAG</link>(__FLAG__)   (<link linkend="_group___peripheral__declaration_1ga844ea28ba1e0a5a0e497f16b61ea306b">FLASH</link>-&gt;SR = (__FLAG__))</para>
+
+<para>Clear the specified FLASH flag. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___f_l_a_s_h_1ga0635292464d38cedf0ae05d2a0434076">FLASH_ErrorTypeDef</link> { 
+<link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076acf05509f292c5ab8f2879d63ba2665ff">FLASH_ERROR_RD</link> = 0x01
+, <link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076aee7da388d2f5c589a3cb34efea767ad2">FLASH_ERROR_PGS</link> = 0x02
+, <link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ae4f20fb81a812fb65473373c3c36765d">FLASH_ERROR_PGP</link> = 0x04
+, <link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ab2ac5838863aa3dcf727587bc3264d95">FLASH_ERROR_PGA</link> = 0x08
+, 
+<link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076ac9e2d95d3ba415fb7392d72a2458f4d8">FLASH_ERROR_WRP</link> = 0x10
+, <link linkend="_group___f_l_a_s_h_1gga0635292464d38cedf0ae05d2a0434076a22a777a65972676f311e20de5a0f0beb">FLASH_ERROR_OPERATION</link> = 0x20
+ }</para>
+
+<para>FLASH Error structure definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___f_l_a_s_h_1ga2b0268387bc11bcab76be9ce7c43eaaf">FLASH_ProcedureTypeDef</link> { <link linkend="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafa8d1dcf61f621d71484d13ac02f651b3d">FLASH_PROC_NONE</link> = 0
+, <link linkend="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafade0899d9d9503dc5c8d926071bffee44">FLASH_PROC_SECTERASE</link>
+, <link linkend="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafa1b046d01356b498d6675040f17362f0b">FLASH_PROC_MASSERASE</link>
+, <link linkend="_group___f_l_a_s_h_1gga2b0268387bc11bcab76be9ce7c43eaafad4f5d611b11f7ac9577d34df07dc94ea">FLASH_PROC_PROGRAM</link>
+ }</para>
+
+<para>FLASH Procedure structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1gab94b3dc16c5c6fcc30ba2cb897de8bae">HAL_FLASH_Program</link> (uint32_t TypeProgram, uint32_t Address, uint64_t Data)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga85ee0375f81ac12bf0acd013189f68d3">HAL_FLASH_Program_IT</link> (uint32_t TypeProgram, uint32_t Address, uint64_t Data)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_1ga083f13f6a000dfcb80c7a27853eba528">HAL_FLASH_IRQHandler</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_1ga71a7e85ede66fae4eadaf8854f81b5c8">HAL_FLASH_EndOfOperationCallback</link> (uint32_t ReturnValue)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___f_l_a_s_h_1ga237e17bd9b1d257bd8e2880227b8484e">HAL_FLASH_OperationErrorCallback</link> (uint32_t ReturnValue)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga23d4ff42a8873bac585c92ce4f633747">HAL_FLASH_Unlock</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1gae07eeca0b0aa9d5047f8df88d82f4bcd">HAL_FLASH_Lock</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga6e8f380b7a938592f0b6f05d0ebf69c3">HAL_FLASH_OB_Unlock</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga3ff599bd7eba88f7a169a537ccbf3e3f">HAL_FLASH_OB_Lock</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga046c539c76aaae3d487d59193f74c9db">HAL_FLASH_OB_Launch</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_group___f_l_a_s_h_1ga0635292464d38cedf0ae05d2a0434076">FLASH_ErrorTypeDef</link> <link linkend="_group___f_l_a_s_h_1ga12ef94688909c4fd5b16a5d59dc52705">HAL_FLASH_GetError</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___f_l_a_s_h_1gaf89afc110a32ac9dcf0d06b89ffd9224">FLASH_WaitForLastOperation</link> (uint32_t Timeout)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of FLASH HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__flash_8h_source">stm32f4xx_hal_flash.h</link>.</para>
+</section>
+</section>

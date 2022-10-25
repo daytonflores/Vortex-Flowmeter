@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx_8h_source" xml:lang="en-US">
+<title>stm32f4xx.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx_8h_source_1l00056"/>00056 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_H</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00057"/>00057 <emphasis role="preprocessor">#define&#32;__STM32F4xx_H</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00058"/>00058 
+<anchor xml:id="_stm32f4xx_8h_source_1l00059"/>00059 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00060"/>00060 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx_8h_source_1l00061"/>00061 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__cplusplus&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00062"/>00062 &#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00067"/>00067 <emphasis role="comment">/*&#32;Uncomment&#32;the&#32;line&#32;below&#32;according&#32;to&#32;the&#32;target&#32;STM32&#32;device&#32;used&#32;in&#32;your</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00068"/>00068 <emphasis role="comment">&#32;&#32;&#32;application&#32;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00069"/>00069 <emphasis role="comment">&#32;&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00070"/>00070 
+<anchor xml:id="_stm32f4xx_8h_source_1l00071"/>00071 <emphasis role="preprocessor">#if&#32;!defined&#32;(STM32F405xx)&#32;&amp;&amp;&#32;!defined&#32;(STM32F415xx)&#32;&amp;&amp;&#32;!defined&#32;(STM32F407xx)&#32;&amp;&amp;&#32;!defined&#32;(STM32F417xx)&#32;&amp;&amp;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00072"/>00072 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;!defined&#32;(STM32F427xx)&#32;&amp;&amp;&#32;!defined&#32;(STM32F437xx)&#32;&amp;&amp;&#32;!defined&#32;(STM32F429xx)&#32;&amp;&amp;&#32;!defined&#32;(STM32F439xx)&#32;&amp;&amp;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00073"/>00073 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;!defined&#32;(STM32F401xC)&#32;&amp;&amp;&#32;!defined&#32;(STM32F401xE)&#32;&amp;&amp;&#32;!defined&#32;(STM32F411xE)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00074"/>00074 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F405xx&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00075"/>00075 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F415xx&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00076"/>00076 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F407xx&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00077"/>00077 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F417xx&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00078"/>00078 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F427xx&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00079"/>00079 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F437xx&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00080"/>00080 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F429xx&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00082"/>00082 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F439xx&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00084"/>00084 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F401xC&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00085"/><link linkend="_group___library__configuration__section_1ga4b150144bb57e6f25e7e2b03cb42b86c">00085</link> <emphasis role="preprocessor">#define&#32;STM32F401xE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00086"/>00086 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;STM32F411xE&#32;*/</emphasis>&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00087"/>00087 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00088"/>00088 &#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00089"/>00089 <emphasis role="comment">/*&#32;&#32;Tip:&#32;To&#32;avoid&#32;modifying&#32;this&#32;file&#32;each&#32;time&#32;you&#32;need&#32;to&#32;switch&#32;between&#32;these</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00090"/>00090 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;devices,&#32;you&#32;can&#32;define&#32;the&#32;device&#32;in&#32;your&#32;toolchain&#32;compiler&#32;preprocessor.</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00091"/>00091 <emphasis role="comment">&#32;&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00092"/>00092 <emphasis role="preprocessor">#if&#32;!defined&#32;&#32;(USE_HAL_DRIVER)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00098"/><link linkend="_group___library__configuration__section_1ga13fde7eed89250511adafbc8bbedcc62">00098</link> <emphasis role="preprocessor">#define&#32;USE_HAL_DRIVER</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00099"/>00099 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;USE_HAL_DRIVER&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00100"/>00100 
+<anchor xml:id="_stm32f4xx_8h_source_1l00104"/><link linkend="_group___library__configuration__section_1ga802582d9b7b4dea8c8c53f6ce296dad2">00104</link> <emphasis role="preprocessor">#define&#32;__STM32F4xx_CMSIS_DEVICE_VERSION_MAIN&#32;&#32;&#32;(0x02)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00105"/><link linkend="_group___library__configuration__section_1gaa840ca8cc59044a45c604b95c546666b">00105</link> <emphasis role="preprocessor">#define&#32;__STM32F4xx_CMSIS_DEVICE_VERSION_SUB1&#32;&#32;&#32;(0x01)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00106"/><link linkend="_group___library__configuration__section_1ga5697f6bbcd478565105f00c06dc97a96">00106</link> <emphasis role="preprocessor">#define&#32;__STM32F4xx_CMSIS_DEVICE_VERSION_SUB2&#32;&#32;&#32;(0x00)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00107"/><link linkend="_group___library__configuration__section_1ga99153b788b5b5ef1d65a748495e5c4ca">00107</link> <emphasis role="preprocessor">#define&#32;__STM32F4xx_CMSIS_DEVICE_VERSION_RC&#32;&#32;&#32;&#32;&#32;(0x02)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00108"/><link linkend="_group___library__configuration__section_1gab71225daca4a310275d65a487422b1f7">00108</link> <emphasis role="preprocessor">#define&#32;__STM32F4xx_CMSIS_DEVICE_VERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((__CMSIS_DEVICE_VERSION_MAIN&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;24)\</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00109"/>00109 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|(__CMSIS_DEVICE_HAL_VERSION_SUB1&#32;&lt;&lt;&#32;16)\</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00110"/>00110 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|(__CMSIS_DEVICE_HAL_VERSION_SUB2&#32;&lt;&lt;&#32;8&#32;)\</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00111"/>00111 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|(__CMSIS_DEVICE_HAL_VERSION_RC))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00121"/>00121 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00122"/>00122 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f405xx.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00123"/>00123 <emphasis role="preprocessor">#elif&#32;defined(STM32F415xx)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00124"/>00124 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f415xx.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00125"/>00125 <emphasis role="preprocessor">#elif&#32;defined(STM32F407xx)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00126"/>00126 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f407xx.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00127"/>00127 <emphasis role="preprocessor">#elif&#32;defined(STM32F417xx)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00128"/>00128 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f417xx.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00129"/>00129 <emphasis role="preprocessor">#elif&#32;defined(STM32F427xx)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00130"/>00130 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f427xx.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00131"/>00131 <emphasis role="preprocessor">#elif&#32;defined(STM32F437xx)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00132"/>00132 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f437xx.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00133"/>00133 <emphasis role="preprocessor">#elif&#32;defined(STM32F429xx)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00134"/>00134 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f429xx.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00135"/>00135 <emphasis role="preprocessor">#elif&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00136"/>00136 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f439xx.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00137"/>00137 <emphasis role="preprocessor">#elif&#32;defined(STM32F401xC)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00138"/>00138 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f401xc.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00139"/>00139 <emphasis role="preprocessor">#elif&#32;defined(STM32F401xE)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00140"/>00140 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;<link linkend="_stm32f401xe_8h">stm32f401xe.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00141"/>00141 <emphasis role="preprocessor">#elif&#32;defined(STM32F411xE)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00142"/>00142 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f411xe.h&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00143"/>00143 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00144"/>00144 <emphasis role="preprocessor">&#32;#error&#32;&quot;Please&#32;select&#32;first&#32;the&#32;target&#32;STM32F4xx&#32;device&#32;used&#32;in&#32;your&#32;application&#32;(in&#32;stm32f4xx.h&#32;file)&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00145"/>00145 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00146"/>00146 
+<anchor xml:id="_stm32f4xx_8h_source_1l00154"/><link linkend="_group___exported__types_1ga89136caac2e14c55151f527ac02daaff">00154</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00155"/>00155 {
+<anchor xml:id="_stm32f4xx_8h_source_1l00156"/><link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">00156</link> &#32;&#32;<link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>&#32;=&#32;0,&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00157"/>00157 &#32;&#32;<link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link>&#32;=&#32;!<link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>
+<anchor xml:id="_stm32f4xx_8h_source_1l00158"/><link linkend="_group___exported__types_1ga39d4411201fb731279ad5a409b2b80d7">00158</link> }&#32;<link linkend="_group___exported__types_1ga89136caac2e14c55151f527ac02daaff">FlagStatus</link>,&#32;<link linkend="_group___exported__types_1ga39d4411201fb731279ad5a409b2b80d7">ITStatus</link>;
+<anchor xml:id="_stm32f4xx_8h_source_1l00159"/>00159 
+<anchor xml:id="_stm32f4xx_8h_source_1l00160"/><link linkend="_group___exported__types_1gac9a7e9a35d2513ec15c3b537aaa4fba1">00160</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00161"/>00161 {
+<anchor xml:id="_stm32f4xx_8h_source_1l00162"/><link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">00162</link> &#32;&#32;<link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>&#32;=&#32;0,&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00163"/>00163 &#32;&#32;<link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">ENABLE</link>&#32;=&#32;!<link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1ad3a9df141be0ccf10389b640f492b26d">DISABLE</link>
+<anchor xml:id="_stm32f4xx_8h_source_1l00164"/><link linkend="_group___exported__types_1ggac9a7e9a35d2513ec15c3b537aaa4fba1a7d46875fa3ebd2c34d2756950eda83bf">00164</link> }&#32;<link linkend="_group___exported__types_1gac9a7e9a35d2513ec15c3b537aaa4fba1">FunctionalState</link>;
+<anchor xml:id="_stm32f4xx_8h_source_1l00165"/><link linkend="_group___exported__types_1gaffaf7c3f537d7a3370b1bbdda67a2bf6">00165</link> <emphasis role="preprocessor">#define&#32;IS_FUNCTIONAL_STATE(STATE)&#32;(((STATE)&#32;==&#32;DISABLE)&#32;||&#32;((STATE)&#32;==&#32;ENABLE))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00166"/>00166 
+<anchor xml:id="_stm32f4xx_8h_source_1l00167"/><link linkend="_group___exported__types_1ga8333b96c67f83cba354b3407fcbb6ee8">00167</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00168"/>00168 {
+<anchor xml:id="_stm32f4xx_8h_source_1l00169"/><link linkend="_group___exported__types_1gga8333b96c67f83cba354b3407fcbb6ee8a2fd6f336d08340583bd620a7f5694c90">00169</link> &#32;&#32;<link linkend="_group___exported__types_1gga8333b96c67f83cba354b3407fcbb6ee8a2fd6f336d08340583bd620a7f5694c90">ERROR</link>&#32;=&#32;0,&#32;
+<anchor xml:id="_stm32f4xx_8h_source_1l00170"/>00170 &#32;&#32;<link linkend="_group___exported__types_1gga8333b96c67f83cba354b3407fcbb6ee8ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</link>&#32;=&#32;!<link linkend="_group___exported__types_1gga8333b96c67f83cba354b3407fcbb6ee8a2fd6f336d08340583bd620a7f5694c90">ERROR</link>
+<anchor xml:id="_stm32f4xx_8h_source_1l00171"/><link linkend="_group___exported__types_1gga8333b96c67f83cba354b3407fcbb6ee8ac7f69f7c9e5aea9b8f54cf02870e2bf8">00171</link> }&#32;<link linkend="_group___exported__types_1ga8333b96c67f83cba354b3407fcbb6ee8">ErrorStatus</link>;
+<anchor xml:id="_stm32f4xx_8h_source_1l00172"/>00172 
+<anchor xml:id="_stm32f4xx_8h_source_1l00181"/><link linkend="_group___exported__macro_1ga26474f43799fbade9cf300e21dd3a91a">00181</link> <emphasis role="preprocessor">#define&#32;SET_BIT(REG,&#32;BIT)&#32;&#32;&#32;&#32;&#32;((REG)&#32;|=&#32;(BIT))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00182"/>00182 
+<anchor xml:id="_stm32f4xx_8h_source_1l00183"/><link linkend="_group___exported__macro_1ga133aae6fc0d41bffab39ab223a7001de">00183</link> <emphasis role="preprocessor">#define&#32;CLEAR_BIT(REG,&#32;BIT)&#32;&#32;&#32;((REG)&#32;&amp;=&#32;~(BIT))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00184"/>00184 
+<anchor xml:id="_stm32f4xx_8h_source_1l00185"/><link linkend="_group___exported__macro_1ga822bb1bb9710d5f2fa6396b84e583c33">00185</link> <emphasis role="preprocessor">#define&#32;READ_BIT(REG,&#32;BIT)&#32;&#32;&#32;&#32;((REG)&#32;&amp;&#32;(BIT))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00186"/>00186 
+<anchor xml:id="_stm32f4xx_8h_source_1l00187"/><link linkend="_group___exported__macro_1ga1378fbdda39f40b85420df55f41460ef">00187</link> <emphasis role="preprocessor">#define&#32;CLEAR_REG(REG)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((REG)&#32;=&#32;(0x0))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00188"/>00188 
+<anchor xml:id="_stm32f4xx_8h_source_1l00189"/><link linkend="_group___exported__macro_1ga32f78bffcaf6d13023dcd7f05e0c4d57">00189</link> <emphasis role="preprocessor">#define&#32;WRITE_REG(REG,&#32;VAL)&#32;&#32;&#32;((REG)&#32;=&#32;(VAL))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00190"/>00190 
+<anchor xml:id="_stm32f4xx_8h_source_1l00191"/><link linkend="_group___exported__macro_1gae7f188a4d26c9e713a48414783421071">00191</link> <emphasis role="preprocessor">#define&#32;READ_REG(REG)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((REG))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00192"/>00192 
+<anchor xml:id="_stm32f4xx_8h_source_1l00193"/><link linkend="_group___exported__macro_1ga6553c99f510c3bab8cc0a91602053247">00193</link> <emphasis role="preprocessor">#define&#32;MODIFY_REG(REG,&#32;CLEARMASK,&#32;SETMASK)&#32;&#32;WRITE_REG((REG),&#32;(((READ_REG(REG))&#32;&amp;&#32;(~(CLEARMASK)))&#32;|&#32;(SETMASK)))</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00194"/>00194 
+<anchor xml:id="_stm32f4xx_8h_source_1l00195"/><link linkend="_group___exported__macro_1ga47a8870d71d55cefb3df47cd8c815ec8">00195</link> <emphasis role="preprocessor">#define&#32;POSITION_VAL(VAL)&#32;&#32;&#32;&#32;&#32;(__CLZ(__RBIT(VAL)))&#32;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00196"/>00196 
+<anchor xml:id="_stm32f4xx_8h_source_1l00197"/>00197 
+<anchor xml:id="_stm32f4xx_8h_source_1l00202"/>00202 <emphasis role="preprocessor">#if&#32;defined&#32;(USE_HAL_DRIVER)</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00203"/>00203 <emphasis role="preprocessor">&#32;#include&#32;&quot;<link linkend="_stm32f4xx__hal_8h">stm32f4xx_hal.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00204"/>00204 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;USE_HAL_DRIVER&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00205"/>00205 
+<anchor xml:id="_stm32f4xx_8h_source_1l00206"/>00206 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00207"/>00207 }
+<anchor xml:id="_stm32f4xx_8h_source_1l00208"/>00208 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__cplusplus&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00209"/>00209 
+<anchor xml:id="_stm32f4xx_8h_source_1l00210"/>00210 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx_8h_source_1l00222"/>00222 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

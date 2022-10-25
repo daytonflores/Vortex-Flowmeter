@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__i2s_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s.h</primary></indexterm>
+<para>
+
+<para>Header file of I2S HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+#include &quot;stm32f4xx_hal_i2s_ex.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_i2_s___init_type_def">I2S_InitTypeDef</link></para>
+
+<para>I2S Init structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link></para>
+
+<para>I2S handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___i2_s___exported___constants_1ga7f7ad7e03f972cf5f24f4842fe28beca">I2SxEXT</link>(__INSTANCE__)   ((__INSTANCE__) == (<link linkend="_group___peripheral__declaration_1gaf2c3d8ce359dcfbb2261e07ed42af72b">SPI2</link>)? (<link linkend="_struct_s_p_i___type_def">SPI_TypeDef</link> *)(<link linkend="_group___peripheral__registers__structures_1gaa5f7b241ed5b756decd835300c9e7bc9">I2S2ext_BASE</link>): (<link linkend="_struct_s_p_i___type_def">SPI_TypeDef</link> *)(<link linkend="_group___peripheral__registers__structures_1ga89b61d6e6b09e94f3fccb7bef34e0263">I2S3ext_BASE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___clock___source_1ga5ea0e2b2803b77f9eff8701bec18f72c">I2S_CLOCK_PLL</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___clock___source_1ga5aeda901ff98c213b8faf4dabb15af12">I2S_CLOCK_EXTERNAL</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___clock___source_1ga2728627931f0e5febb9e584a60199543">IS_I2S_CLOCKSOURCE</link>(CLOCK)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___mode_1ga319dc7c9a746bb69bc8f0a2747b3ee0c">I2S_MODE_SLAVE_TX</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___mode_1ga0016b5776f96b393adf00ebcfec46eb7">I2S_MODE_SLAVE_RX</link>   ((uint32_t)0x00000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___mode_1ga2d70b3c9f774250186aa08c193f06c0d">I2S_MODE_MASTER_TX</link>   ((uint32_t)0x00000200)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___mode_1ga368748b1b6170fd660bfee81c83d1e3f">I2S_MODE_MASTER_RX</link>   ((uint32_t)0x00000300)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___mode_1ga942c37b2c1274c4c5773ddcf8b46d9b5">IS_I2S_MODE</link>(MODE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___standard_1ga58725c7158549d3852a3acdfe7ac83cc">I2S_STANDARD_PHILIPS</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___standard_1ga1d7e47055dc23008211ed60d0bd59bc3">I2S_STANDARD_MSB</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___standard_1gaa71f6368c1113d02da713994fe735f37">I2S_STANDARD_LSB</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___standard_1ga2d9b2e3bec0a61f345aed2698720facc">I2S_STANDARD_PCM_SHORT</link>   ((uint32_t)0x00000030)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___standard_1gae0755adecb5f500d2dfc87f91bd0c9a9">I2S_STANDARD_PCM_LONG</link>   ((uint32_t)0x000000B0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___standard_1ga826b9ddb34520b8fa64c2b65c9bfd528">IS_I2S_STANDARD</link>(STANDARD)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___legacy_1ga589f7a2d1f758277adfd369c2a3e4188">I2S_STANDARD_PHILLIPS</link>   <link linkend="_group___i2_s___standard_1ga58725c7158549d3852a3acdfe7ac83cc">I2S_STANDARD_PHILIPS</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___data___format_1ga84607e206fe566512a525b9f0e361142">I2S_DATAFORMAT_16B</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___data___format_1ga7d247401de428096b986a1c88e494d71">I2S_DATAFORMAT_16B_EXTENDED</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___data___format_1ga32b56d268efb591d0dfd437c68e21819">I2S_DATAFORMAT_24B</link>   ((uint32_t)0x00000003)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___data___format_1gac37d00c83e0bfc6dd21261cf94ff14c6">I2S_DATAFORMAT_32B</link>   ((uint32_t)0x00000005)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___data___format_1gac467da829eca4a5c4ce41a6abd2d8e81">IS_I2S_DATA_FORMAT</link>(FORMAT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___m_c_l_k___output_1gad02b0b79e2a7b8786228bbd902db6266">I2S_MCLKOUTPUT_ENABLE</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga25669c3686c0c577d2d371ac09200ff0">SPI_I2SPR_MCKOE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___m_c_l_k___output_1gad751d9da31ef7b7b63b5a4028331f36d">I2S_MCLKOUTPUT_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___m_c_l_k___output_1ga829ae526d1d11f14592e881f800fbb8a">IS_I2S_MCLK_OUTPUT</link>(OUTPUT)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1ga835e684fdb326d62c1cfc8d4b8fde944">I2S_AUDIOFREQ_192K</link>   ((uint32_t)192000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1ga0b51976937c47ce42db565ec053ce80b">I2S_AUDIOFREQ_96K</link>   ((uint32_t)96000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1ga7e33aad8b5089783d2d73771c8bd8c30">I2S_AUDIOFREQ_48K</link>   ((uint32_t)48000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1ga62c764ebc2037c6a394909a899e1d3c3">I2S_AUDIOFREQ_44K</link>   ((uint32_t)44100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1ga64bb1c92ca88c0cbf102bba816f796a5">I2S_AUDIOFREQ_32K</link>   ((uint32_t)32000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1gaec6b3447020cbf5234ac36c53474c9b5">I2S_AUDIOFREQ_22K</link>   ((uint32_t)22050)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1gac4a77b9683937fbab4b270814a280fab">I2S_AUDIOFREQ_16K</link>   ((uint32_t)16000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1gad4123d406d056ee5412f2fefc4959813">I2S_AUDIOFREQ_11K</link>   ((uint32_t)11025)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1ga111b7c5be04f5d91fbb2ef2bafe755de">I2S_AUDIOFREQ_8K</link>   ((uint32_t)8000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1gaed7cf575d5cae24315f18b38ea83310e">I2S_AUDIOFREQ_DEFAULT</link>   ((uint32_t)2)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___audio___frequency_1gaf39d917f4a38fd9916ec347fb055391c">IS_I2S_AUDIO_FREQ</link>(FREQ)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___full_duplex___mode_1ga7da4a3f7309dacfd363893dced2cea9c">I2S_FULLDUPLEXMODE_DISABLE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___full_duplex___mode_1ga48be599b5762d3c4e4c52ec3bb210938">I2S_FULLDUPLEXMODE_ENABLE</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___full_duplex___mode_1ga5be53aa8147cb6b018f9e4529a317938">IS_I2S_FULLDUPLEX_MODE</link>(MODE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___clock___polarity_1gad930e30055218df3f34d9ab96d31a3f4">I2S_CPOL_LOW</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___clock___polarity_1gab86bbe2d41b941d9949868ca3578e607">I2S_CPOL_HIGH</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga5c5be1f1c8b4689643e04cd5034e7f5f">SPI_I2SCFGR_CKPOL</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___clock___polarity_1ga6323375bf0b6fa6e2ee2a9ce6f9ef82f">IS_I2S_CPOL</link>(CPOL)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___interrupt__configuration__definition_1ga84eabe0973f1fdceecbe9ff650a2bee4">I2S_IT_TXE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga23f683a1252ccaf625cae1a978989b2c">SPI_CR2_TXEIE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___interrupt__configuration__definition_1ga09b5f25a752905586daa4cb170043f71">I2S_IT_RXNE</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaa7d4c37fbbcced7f2a0421e6ffd103ea">SPI_CR2_RXNEIE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___interrupt__configuration__definition_1ga7dc89e4d9188a5b7122f9f6948c28a00">I2S_IT_ERR</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaf18705567de7ab52a62e5ef3ba27418b">SPI_CR2_ERRIE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___flag__definition_1gab27cd9fbeceffcefd9b7cce1a87fafdd">I2S_FLAG_TXE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga5bd5d21816947fcb25ccae7d3bf8eb2c">SPI_SR_TXE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___flag__definition_1ga031025a60bf1efca05f5ad5ace442795">I2S_FLAG_RXNE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga40e14de547aa06864abcd4b0422d8b48">SPI_SR_RXNE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___flag__definition_1gaec08a8ad716bef1b87a8c8d992ab89ec">I2S_FLAG_UDR</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga13d3292e963499c0e9a36869909229e6">SPI_SR_UDR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___flag__definition_1ga02033ad3c8128ecbc74dcce213beaf0f">I2S_FLAG_OVR</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaa8d902302c5eb81ce4a57029de281232">SPI_SR_OVR</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___flag__definition_1ga8024182f5fa967ff82f10a822855f539">I2S_FLAG_FRE</link>   <link linkend="_group___peripheral___registers___bits___definition_1gace2c7cac9431231663af42e6f5aabce6">SPI_SR_FRE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___flag__definition_1gaf0d629fd522a15aff188236d3254b2ad">I2S_FLAG_CHSIDE</link>   <link linkend="_group___peripheral___registers___bits___definition_1ga81bd052f0b2e819ddd6bb16c2292a2de">SPI_SR_CHSIDE</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s___flag__definition_1gac22af2422186105d08a83a7614b54f03">I2S_FLAG_BSY</link>   <link linkend="_group___peripheral___registers___bits___definition_1gaa3498df67729ae048dc5f315ef7c16bf">SPI_SR_BSY</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1ga6c4a9d76f38d834137575776a5b7f60f">__HAL_I2S_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a2b69279eb021ef38d711edcdc5c95054">HAL_I2S_STATE_RESET</link>)</para>
+
+<para>Reset I2S handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1ga4b5ca1e0e5bf616c99d38b8f0c5bdded">__HAL_I2S_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;I2SCFGR |= <link linkend="_group___peripheral___registers___bits___definition_1ga30d76c7552c91bbd5cbac70d9c56ebb3">SPI_I2SCFGR_I2SE</link>)</para>
+
+<para>Enable or disable the specified SPI peripheral (in I2S mode). </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gac4f398db7f68fb8354bff61a9a6372b9">__HAL_I2S_DISABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;I2SCFGR &amp;= ~<link linkend="_group___peripheral___registers___bits___definition_1ga30d76c7552c91bbd5cbac70d9c56ebb3">SPI_I2SCFGR_I2SE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gad6f90125be5ad17065e5378c7580708a">__HAL_I2S_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 |= (__INTERRUPT__))</para>
+
+<para>Enable or disable the specified I2S interrupts. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gaa78db4341e43a5fb30c815b22137a9e7">__HAL_I2S_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)-&gt;Instance-&gt;CR2 &amp;= ~(__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1ga722512f6ff5e3bc5c6ef34ae2ab93f4e">__HAL_I2S_GET_IT_SOURCE</link>(__HANDLE__,  __INTERRUPT__)   ((((__HANDLE__)-&gt;Instance-&gt;CR2 &amp; (__INTERRUPT__)) == (__INTERRUPT__)) ? <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffab44c8101cc294c074709ec1b14211792">SET</link> : <link linkend="_group___exported__types_1gga89136caac2e14c55151f527ac02daaffa589b7d94a3d91d145720e2fed0eb3a05">RESET</link>)</para>
+
+<para>Checks if the specified I2S interrupt source is enabled or disabled. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gab4dcaccc00ab76a11c23a49e973df009">__HAL_I2S_GET_FLAG</link>(__HANDLE__,  __FLAG__)   ((((__HANDLE__)-&gt;Instance-&gt;SR) &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Checks whether the specified I2S flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gabe5bab581b9d997faeb0132672376444">__HAL_I2S_CLEAR_OVRFLAG</link>(__HANDLE__)</para>
+
+<para>Clears the I2S OVR pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i2_s_1gafc275594559c5c1e26c23f3246260937">__HAL_I2S_CLEAR_UDRFLAG</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;SR)</para>
+
+<para>Clears the I2S UDR pending flag. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___i2_s_1ga2588a0c71baf7cd6d2c1b9b11120bef0">HAL_I2S_StateTypeDef</link> { 
+<link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a2b69279eb021ef38d711edcdc5c95054">HAL_I2S_STATE_RESET</link> = 0x00
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0afb3efb92ef3bcfce6f4d34570b31a602">HAL_I2S_STATE_READY</link> = 0x01
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a0d9faadcd5b6010c6071905345a282e7">HAL_I2S_STATE_BUSY</link> = 0x02
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0ab8386636ae24469508b8312e7bfbc4b3">HAL_I2S_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a641d635762b2ebb2e8e16917efc13162">HAL_I2S_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a4135585ed147654154c0b7be15f3807e">HAL_I2S_STATE_BUSY_TX_RX</link> = 0x32
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a95d3eabfe7ff5d52af473e7fc96f9536">HAL_I2S_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___i2_s_1gga2588a0c71baf7cd6d2c1b9b11120bef0a011e8568b5b81c7074f2cbfa38b8a2d8">HAL_I2S_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___i2_s_1ga4edd8d1e0ae70e8eaf7235b74f159c1c">HAL_I2S_ErrorTypeDef</link> { 
+<link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1cae1841841d09bac859ee229c88c5a7c66">HAL_I2S_ERROR_NONE</link> = 0x00
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1cab2d5b6e490f69ea8d54249a13b72d9fc">HAL_I2S_ERROR_UDR</link> = 0x01
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1caf2aca8edd9e7b144cc0551fad11a651d">HAL_I2S_ERROR_OVR</link> = 0x02
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca9d350f371086ae93b82921308ab53a23">HAL_I2SEX_ERROR_UDR</link> = 0x04
+, 
+<link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca7524a96d7131a2fd4b33455d0f4051e3">HAL_I2SEX_ERROR_OVR</link> = 0x08
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca53cb4e77eadd45cfae55b024703c4361">HAL_I2S_ERROR_FRE</link> = 0x10
+, <link linkend="_group___i2_s_1gga4edd8d1e0ae70e8eaf7235b74f159c1ca511a7f86226ae6ae893f8e716fcf6eb8">HAL_I2S_ERROR_DMA</link> = 0x20
+ }</para>
+
+<para>HAL I2S Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga605f23b9dc1f0979f4b59702fb8d058d">HAL_I2S_Init</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga9119fe0f644a9f011415afaf8661232a">HAL_I2S_DeInit</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga5033142a7bf0de4513782bbee1823a97">HAL_I2S_MspInit</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga7ef92677a8ff770f754d4dfc2aceb39b">HAL_I2S_MspDeInit</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gad53c7444525547c934ee322ca1197dfb">HAL_I2S_Transmit</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga41a95495dff412204cd4c5b631c061ea">HAL_I2S_Receive</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga476c3a3540e53c0905e80bfb5d309db2">HAL_I2S_Transmit_IT</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga0018752e02b7221625aca82b532b5864">HAL_I2S_Receive_IT</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1gad5fe9157152a3c5baac47b877d534f4e">HAL_I2S_IRQHandler</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga97fa0c086e3980597e1e3962b2dfc322">HAL_I2S_Transmit_DMA</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gaadf898fd8ef5c8349c3a61c2e3e7720e">HAL_I2S_Receive_DMA</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint16_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1ga374ecf3a61ff460938af93e9b788f09b">HAL_I2S_DMAPause</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gaa86501283bd6988e4106af51cda75945">HAL_I2S_DMAResume</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gae8d79cd1625530f161cd6651ef5135a3">HAL_I2S_DMAStop</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i2_s_1ga2588a0c71baf7cd6d2c1b9b11120bef0">HAL_I2S_StateTypeDef</link> <link linkend="_group___i2_s_1ga575e5ecf94a8a288b8a07e034dcb18c8">HAL_I2S_GetState</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i2_s_1ga4edd8d1e0ae70e8eaf7235b74f159c1c">HAL_I2S_ErrorTypeDef</link> <link linkend="_group___i2_s_1ga1b0d52620b1b93914d9ef7cad845fc68">HAL_I2S_GetError</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga5bef3c73683b81e822368c9029e495bc">HAL_I2S_TxHalfCpltCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga1ef4021384eddbd41ca60454a2483bf3">HAL_I2S_TxCpltCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga6c4cd3b18c42c6de0c3f4fe7068a5b12">HAL_I2S_RxHalfCpltCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga18c33b2d429b06674ec30e5b2b81862c">HAL_I2S_RxCpltCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga8ca0ebeda8edc26d4201fe8657be294e">HAL_I2S_ErrorCallback</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga716b431b25e7fd7c359dcc0ed9ffb6e2">I2S_DMATxCplt</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1gaf2d811c698cf13db91942c5b7e0c4a85">I2S_DMATxHalfCplt</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga8d2bf0ca3ff0f11da49d3e8616c75d36">I2S_DMARxCplt</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1ga21556bd3ebfc035450de4628b5b029d8">I2S_DMARxHalfCplt</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i2_s_1gaba9556ceca0ad8bffa4946c2bb2598ae">I2S_DMAError</link> (<link linkend="_group___d_m_a_1ga41b754a906b86bce54dc79938970138b">DMA_HandleTypeDef</link> *hdma)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i2_s_1gab49e7928ef4021ca00931059b0cc3545">I2S_WaitFlagStateUntilTimeout</link> (<link linkend="_struct_i2_s___handle_type_def">I2S_HandleTypeDef</link> *hi2s, uint32_t Flag, uint32_t Status, uint32_t Timeout)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of I2S HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__i2s_8h_source">stm32f4xx_hal_i2s.h</link>.</para>
+</section>
+</section>

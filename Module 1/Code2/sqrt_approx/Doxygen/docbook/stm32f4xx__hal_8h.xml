@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal.h</primary></indexterm>
+<para>
+
+<para>This file contains all the functions prototypes for the HAL module driver. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_conf.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gae94f46d13e13b22f9a745e7bb43a96a5">__HAL_FREEZE_TIM2_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1gaae3c5b87084934a18748f5ec168f5aef">DBGMCU_APB1_FZ_DBG_TIM2_STOP</link>))</para>
+
+<para>Freeze/Unfreeze Peripherals in Debug mode. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga80ca043a15ebde5fa5ab8fc7516b7d0d">__HAL_FREEZE_TIM3_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga2fea6834f4ef9fc6b403cd079a001cec">DBGMCU_APB1_FZ_DBG_TIM3_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga93240320e1975c344710110b8326cfb9">__HAL_FREEZE_TIM4_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga7ac65bf9342bb8acbcb25938e93abc45">DBGMCU_APB1_FZ_DBG_TIM4_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gaa618551f3549a0e978832683ab255990">__HAL_FREEZE_TIM5_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga42d29d40515d36ce6ed7e5d34ed17dcf">DBGMCU_APB1_FZ_DBG_TIM5_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga0d38e5832a227798fa986371db9f2ac1">__HAL_FREEZE_TIM6_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1gadea6a1e90739bcf1d0723a0566c66de7">DBGMCU_APB1_FZ_DBG_TIM6_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga2a1d10a72ad1cacb9f07d668c2f85a58">__HAL_FREEZE_TIM7_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1gafdade78c3d28a668f9826d0b72e5844b">DBGMCU_APB1_FZ_DBG_TIM7_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gae998488501df5c9cb114b0f5399de640">__HAL_FREEZE_TIM12_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga7ca0e04ad8c94e5b7fe29d8b9c20ebff">DBGMCU_APB1_FZ_DBG_TIM12_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga5f8dc357c1ad8e3dd4e424f0f21f8c64">__HAL_FREEZE_TIM13_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga68ef63b3c086ede54396596798553299">DBGMCU_APB1_FZ_DBG_TIM13_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga63e073e7e274e175ace1a953a0362adc">__HAL_FREEZE_TIM14_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1gafd3acb3e632c74e326da7016073c7871">DBGMCU_APB1_FZ_DBG_TIM14_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gad71eabc97bf9b1ee126368a3403fd52b">__HAL_FREEZE_RTC_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga1e20246d389229ff46006b405bb56b1d">DBGMCU_APB1_FZ_DBG_RTC_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gaa8247a99404002df4e17c4ea9c4f2347">__HAL_FREEZE_WWDG_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga8a49d5e849185d09ee6c7594512ffe88">DBGMCU_APB1_FZ_DBG_WWDG_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gad86970cfaa0fe5971280714524a05900">__HAL_FREEZE_IWDG_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1gada8989cb96dd5d6dbdaaf16e1f127c6a">DBGMCU_APB1_FZ_DBG_IWDG_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga238779a7568f51907fb9bf5aead0f277">__HAL_FREEZE_I2C1_TIMEOUT_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1gae83fb5d62c6e6fa1c2fd06084528404e">DBGMCU_APB1_FZ_DBG_I2C1_SMBUS_TIMEOUT</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga97935f0dfdd76f3705fa53cfed90fce1">__HAL_FREEZE_I2C2_TIMEOUT_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga8f6320aba695f6c3f97608e478533e96">DBGMCU_APB1_FZ_DBG_I2C2_SMBUS_TIMEOUT</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gac85472fc99d3c2b4d3408dd8f6fe0b2d">__HAL_FREEZE_I2C3_TIMEOUT_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga7f7e5c708387aa1ddae35b892811b4e9">DBGMCU_APB1_FZ_DBG_I2C3_SMBUS_TIMEOUT</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga9e4185b64391d19485ee5e22764a5a78">__HAL_FREEZE_CAN1_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga1b404dcea4857bccabbb03d6cce6be8c">DBGMCU_APB1_FZ_DBG_CAN1_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gafab1f115db3b30f9ebec154900ad195d">__HAL_FREEZE_CAN2_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1gaadc3889d6b84d143c98ecbfd873a9a1a">DBGMCU_APB1_FZ_DBG_CAN2_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga5bcbe69f9fd13b2bb28de1a16060864b">__HAL_FREEZE_TIM1_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga3eb7be194b6ffb258b9e9f5ed08a931e">DBGMCU_APB2_FZ_DBG_TIM1_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga98c5cba9630c2b2aa4d8a5656ba27709">__HAL_FREEZE_TIM8_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga37128bf689254919b07f64ee41cad1cf">DBGMCU_APB2_FZ_DBG_TIM8_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gabd4ea78bb7f783ab1a917789e6262a99">__HAL_FREEZE_TIM9_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1gaf12c17533a1e3262ee11f760e44f5127">DBGMCU_APB2_FZ_DBG_TIM9_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga405dc9ab10a2f13d9323ad0b28914f72">__HAL_FREEZE_TIM10_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga24d4bbf803a65e8202b0019ed0ce0ebb">DBGMCU_APB2_FZ_DBG_TIM10_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga11ce07209e9b719b74827fadd11278ef">__HAL_FREEZE_TIM11_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ |= (<link linkend="_group___peripheral___registers___bits___definition_1ga354671c942db40e69820fd783ef955b4">DBGMCU_APB2_FZ_DBG_TIM11_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga19c4fad18aaa0f4da31092fb7067c6eb">__HAL_UNFREEZE_TIM2_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gaae3c5b87084934a18748f5ec168f5aef">DBGMCU_APB1_FZ_DBG_TIM2_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga8b9d11278a9b43a1b6504d0e46ae2057">__HAL_UNFREEZE_TIM3_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga2fea6834f4ef9fc6b403cd079a001cec">DBGMCU_APB1_FZ_DBG_TIM3_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga4649fe505d460ef51735985a49c7bf53">__HAL_UNFREEZE_TIM4_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga7ac65bf9342bb8acbcb25938e93abc45">DBGMCU_APB1_FZ_DBG_TIM4_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gac0d74fb194f12a9c939f8fcdc73ffff0">__HAL_UNFREEZE_TIM5_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga42d29d40515d36ce6ed7e5d34ed17dcf">DBGMCU_APB1_FZ_DBG_TIM5_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga8ef11089824b15b0b293f8c9c906f0aa">__HAL_UNFREEZE_TIM6_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gadea6a1e90739bcf1d0723a0566c66de7">DBGMCU_APB1_FZ_DBG_TIM6_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga73bb80c5f5ce998aa3afe6aced8fabf0">__HAL_UNFREEZE_TIM7_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gafdade78c3d28a668f9826d0b72e5844b">DBGMCU_APB1_FZ_DBG_TIM7_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga1c95dbf18c52f6fb3d9c3430294957eb">__HAL_UNFREEZE_TIM12_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga7ca0e04ad8c94e5b7fe29d8b9c20ebff">DBGMCU_APB1_FZ_DBG_TIM12_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga85305a85a589a840f92d7ae24a5d208a">__HAL_UNFREEZE_TIM13_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga68ef63b3c086ede54396596798553299">DBGMCU_APB1_FZ_DBG_TIM13_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gac44e6c209b3d5d38f00bc87956bb8d39">__HAL_UNFREEZE_TIM14_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gafd3acb3e632c74e326da7016073c7871">DBGMCU_APB1_FZ_DBG_TIM14_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga4eea11865aa798b69690d39ef99e1b1f">__HAL_UNFREEZE_RTC_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga1e20246d389229ff46006b405bb56b1d">DBGMCU_APB1_FZ_DBG_RTC_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga9b6c00e8ebd03de21b1cd1a58f4f2218">__HAL_UNFREEZE_WWDG_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga8a49d5e849185d09ee6c7594512ffe88">DBGMCU_APB1_FZ_DBG_WWDG_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga75161e4b44879ecb4f137f6eeff29ec6">__HAL_UNFREEZE_IWDG_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gada8989cb96dd5d6dbdaaf16e1f127c6a">DBGMCU_APB1_FZ_DBG_IWDG_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga1fa54398139f2ae8d341851ba83bb3cb">__HAL_UNFREEZE_I2C1_TIMEOUT_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gae83fb5d62c6e6fa1c2fd06084528404e">DBGMCU_APB1_FZ_DBG_I2C1_SMBUS_TIMEOUT</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga78efc0af370d4a5cb03b0fccc072fef5">__HAL_UNFREEZE_I2C2_TIMEOUT_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga8f6320aba695f6c3f97608e478533e96">DBGMCU_APB1_FZ_DBG_I2C2_SMBUS_TIMEOUT</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gaf1cae70c6f88210590c0b37bd35005da">__HAL_UNFREEZE_I2C3_TIMEOUT_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga7f7e5c708387aa1ddae35b892811b4e9">DBGMCU_APB1_FZ_DBG_I2C3_SMBUS_TIMEOUT</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gac8abbc1038288896517ed4a8f24fc6a9">__HAL_UNFREEZE_CAN1_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga1b404dcea4857bccabbb03d6cce6be8c">DBGMCU_APB1_FZ_DBG_CAN1_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga1fbe1ec60b7c66973ce01b1ad7c081e4">__HAL_UNFREEZE_CAN2_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB1FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gaadc3889d6b84d143c98ecbfd873a9a1a">DBGMCU_APB1_FZ_DBG_CAN2_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga6ca710542d59e1e94cc84971e8dbc8ae">__HAL_UNFREEZE_TIM1_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga3eb7be194b6ffb258b9e9f5ed08a931e">DBGMCU_APB2_FZ_DBG_TIM1_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga3699c08944fc0e47960d9fa0ae69ac85">__HAL_UNFREEZE_TIM8_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga37128bf689254919b07f64ee41cad1cf">DBGMCU_APB2_FZ_DBG_TIM8_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga444005295949c48a14cf3f69f9b2d58f">__HAL_UNFREEZE_TIM9_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1gaf12c17533a1e3262ee11f760e44f5127">DBGMCU_APB2_FZ_DBG_TIM9_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gaebe34d1cbf7d69b85a5f715baaec145a">__HAL_UNFREEZE_TIM10_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga24d4bbf803a65e8202b0019ed0ce0ebb">DBGMCU_APB2_FZ_DBG_TIM10_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gac3c15e66f4e03b567f55a01b82736691">__HAL_UNFREEZE_TIM11_DBGMCU</link>()   (<link linkend="_group___peripheral__declaration_1ga92ec6d9ec2251fda7d4ce09748cd74b4">DBGMCU</link>-&gt;APB2FZ &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga354671c942db40e69820fd783ef955b4">DBGMCU_APB2_FZ_DBG_TIM11_STOP</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gac680edf54d13c42b4efe3cff457e30f9">__HAL_REMAPMEMORY_FLASH</link>()   (<link linkend="_group___peripheral__declaration_1ga3c833fe1c486cb62250ccbca32899cb8">SYSCFG</link>-&gt;MEMRMP &amp;= ~(<link linkend="_group___peripheral___registers___bits___definition_1ga3c05039ec67573c00da29f58b914f258">SYSCFG_MEMRMP_MEM_MODE</link>))</para>
+
+<para>Main Flash memory mapped at 0x00000000. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1gae1512eafc016b01a1b19889d1aaf949e">__HAL_REMAPMEMORY_SYSTEMFLASH</link>()</para>
+
+<para>System Flash memory mapped at 0x00000000. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___h_a_l_1ga7f21740bd6fb94f36cf56f75be5e431d">__HAL_REMAPMEMORY_SRAM</link>()</para>
+
+<para>Embedded SRAM mapped at 0x00000000. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_a_l_1gaecac54d350c3730e6831eb404e557dc4">HAL_Init</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_a_l_1ga95911129a26afb05232caaaefa31956f">HAL_DeInit</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1gae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1gadd10d026ef02d00e32e80c9eab9db830">HAL_MspDeInit</link> (void)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_a_l_1ga879cdb21ef051eb81ec51c18147397d5">HAL_InitTick</link> (uint32_t TickPriority)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1gaa8361d44d76b7f6256834f828165837a">HAL_IncTick</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1gad0304dec8e33aca8c99e2836947b76d6">HAL_Delay</link> (<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t Delay)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___h_a_l_1gaf2c4f03d53e997a54e1fd5e80daa55c4">HAL_GetTick</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1gaaf651af2afe688a991c657f64f8fa5f9">HAL_SuspendTick</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1ga24e0ee9dae1ec0f9d19200f5575ff790">HAL_ResumeTick</link> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___h_a_l_1gafb139b375512ad2a234e4619b129b966">HAL_GetHalVersion</link> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___h_a_l_1gae051ef9e932404b21f5877c7186406b8">HAL_GetREVID</link> (void)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___h_a_l_1gaff785f069ed650de77ff82ac407f7c84">HAL_GetDEVID</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1ga3ed681c529de5f554597b8f7c573230b">HAL_EnableDBGSleepMode</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1gab82804d717ac78455ab32584fb660002">HAL_DisableDBGSleepMode</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1ga31fcc761f84aae6f5376b90f5eafcd68">HAL_EnableDBGStopMode</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1ga6e1045f920bbd32ca710ccdafcc674fd">HAL_DisableDBGStopMode</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1ga657f30a09fabbba2531fadfcd85de8e2">HAL_EnableDBGStandbyMode</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1ga2cf908e8075c9c6dc2baf01a368ec12b">HAL_DisableDBGStandbyMode</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1ga20b6ca07582e10aec5e15ad2fda7dfc1">HAL_EnableCompensationCell</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_a_l_1ga653f1166b0e37afd40372550d806e667">HAL_DisableCompensationCell</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This file contains all the functions prototypes for the HAL module driver. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal_8h_source">stm32f4xx_hal.h</link>.</para>
+</section>
+</section>

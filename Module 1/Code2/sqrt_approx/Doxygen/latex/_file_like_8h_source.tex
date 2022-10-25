@@ -1,0 +1,50 @@
+\hypertarget{_file_like_8h_source}{}\doxysection{File\+Like.\+h}
+\label{_file_like_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/FileLike.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/FileLike.h}}
+\mbox{\hyperlink{_file_like_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_FILELIKE\_H}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_FILELIKE\_H}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_base_8h}{FileBase.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00020}00020 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_handle_8h}{FileHandle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00022}00022 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacembed}{mbed}} \{}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00024}00024 \textcolor{comment}{/* Class FileLike}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00025}00025 \textcolor{comment}{ *  A file-\/like object is one that can be opened with fopen by}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00026}00026 \textcolor{comment}{ *  fopen("{}/name"{}, mode). It is intersection of the classes Base and}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00027}00027 \textcolor{comment}{ *  FileHandle.}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00028}00028 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00029}\mbox{\hyperlink{classmbed_1_1_file_like}{00029}} \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_file_like}{FileLike}} : \textcolor{keyword}{public} \mbox{\hyperlink{classmbed_1_1_file_handle}{FileHandle}}, \textcolor{keyword}{public} \mbox{\hyperlink{classmbed_1_1_file_base}{FileBase}} \{}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00031}00031 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00032}00032     \textcolor{comment}{/* Constructor FileLike}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00033}00033 \textcolor{comment}{     *}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00034}00034 \textcolor{comment}{     * Variables}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00035}00035 \textcolor{comment}{     *  name -\/ The name to use to open the file.}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00036}00036 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00037}\mbox{\hyperlink{classmbed_1_1_file_like_aaf45cc703e4184c52fbff3fadf766901}{00037}}     \mbox{\hyperlink{classmbed_1_1_file_like_aaf45cc703e4184c52fbff3fadf766901}{FileLike}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00039}\mbox{\hyperlink{classmbed_1_1_file_like_a07cb3905c259328473afee3b2c7cceb9}{00039}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_file_like_a07cb3905c259328473afee3b2c7cceb9}{\string~FileLike}}();}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00040}00040 \};}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00042}00042 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_file_like_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

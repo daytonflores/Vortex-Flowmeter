@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmbed_1_1_call_chain" xml:lang="en-US">
+<title>CallChain Class Reference</title>
+<indexterm><primary>CallChain</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CallChain.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmbed_1_1_call_chain_1ac0599301f7b8cbcbb337969b4f70c391">CallChain</link> (int <link linkend="_classmbed_1_1_call_chain_1af9593d4a5ff4274efaf429cb4f9e57cc">size</link>=4)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classmbed_1_1_call_chain_1ad37d5d627222cf2e0193bf80b906b399">~CallChain</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_call_chain_1a472ea4d4bff102206dabec6d29df9c6a">add</link> (void(*function)(void))</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_call_chain_1a0b74c7fd71ee928c1f5d0b2aafd59781">add</link> (T *tptr, void(T::*mptr)(void))</para>
+</listitem>
+            <listitem><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_call_chain_1a5e0dd730be3640cee8e482663d9025d7">add_front</link> (void(*function)(void))</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_call_chain_1a6bb4f38b3d8d3d3cd561e3da41b18c14">add_front</link> (T *tptr, void(T::*mptr)(void))</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_call_chain_1af9593d4a5ff4274efaf429cb4f9e57cc">size</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> <link linkend="_classmbed_1_1_call_chain_1ac9801b42474ea68068b460184dcd670b">get</link> (int i) const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classmbed_1_1_call_chain_1aaa4d81409a7ee87f9bf267fbbb2cb222">find</link> (<link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> f) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_call_chain_1ac8bb3912a3ce86b15842e79d0b421204">clear</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmbed_1_1_call_chain_1a8f9752e9cf068d97962af45b726c2158">remove</link> (<link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> f)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmbed_1_1_call_chain_1aba7af6b502e464074d3c31ff9236a22c">call</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__call_chain_8h_source_1l00062">62</link> of file <link linkend="__call_chain_8h_source">CallChain.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmbed_1_1_call_chain_1ac0599301f7b8cbcbb337969b4f70c391"/><section>
+    <title>CallChain()</title>
+<indexterm><primary>CallChain</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>CallChain</secondary></indexterm>
+<para><computeroutput><link linkend="_classmbed_1_1_call_chain">CallChain</link> (int size = <computeroutput>4</computeroutput>
+)</computeroutput></para>
+<para>Create an empty chain</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>(optional) Initial size of the chain </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1ad37d5d627222cf2e0193bf80b906b399"/><section>
+    <title>~CallChain()</title>
+<indexterm><primary>~CallChain</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>~CallChain</secondary></indexterm>
+<para><computeroutput>virtual ~<link linkend="_classmbed_1_1_call_chain">CallChain</link> ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmbed_1_1_call_chain_1a0b74c7fd71ee928c1f5d0b2aafd59781"/><section>
+    <title>add()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>add</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>add</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> add (T * tptr, void(T::*)(void) mptr)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Add a function at the end of the chain</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tptr</entry><entry>
+<para>pointer to the object to call the member function on </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mptr</entry><entry>
+<para>pointer to the member function to be called</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object created for &apos;tptr&apos; and &apos;mptr&apos; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__call_chain_8h_source_1l00089">89</link> of file <link linkend="__call_chain_8h_source">CallChain.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1a472ea4d4bff102206dabec6d29df9c6a"/><section>
+    <title>add()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>add</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>add</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> add (void(*)(void) function)</computeroutput></para>
+<para>Add a function at the end of the chain</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>function</entry><entry>
+<para>A pointer to a void function</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object created for &apos;function&apos; </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1a6bb4f38b3d8d3d3cd561e3da41b18c14"/><section>
+    <title>add_front()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>add_front</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>add_front</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> add_front (T * tptr, void(T::*)(void) mptr)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Add a function at the beginning of the chain</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tptr</entry><entry>
+<para>pointer to the object to call the member function on </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mptr</entry><entry>
+<para>pointer to the member function to be called</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object created for &apos;tptr&apos; and &apos;mptr&apos; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__call_chain_8h_source_1l00111">111</link> of file <link linkend="__call_chain_8h_source">CallChain.h</link>.</para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1a5e0dd730be3640cee8e482663d9025d7"/><section>
+    <title>add_front()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>add_front</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>add_front</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> add_front (void(*)(void) function)</computeroutput></para>
+<para>Add a function at the beginning of the chain</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>function</entry><entry>
+<para>A pointer to a void function</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object created for &apos;function&apos; </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1aba7af6b502e464074d3c31ff9236a22c"/><section>
+    <title>call()</title>
+<indexterm><primary>call</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>call</secondary></indexterm>
+<para><computeroutput>void call ( )</computeroutput></para>
+<para>Call all the functions in the chain in sequence </para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1ac8bb3912a3ce86b15842e79d0b421204"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>clear</secondary></indexterm>
+<para><computeroutput>void clear ( )</computeroutput></para>
+<para>Clear the call chain (remove all functions in the chain). </para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1aaa4d81409a7ee87f9bf267fbbb2cb222"/><section>
+    <title>find()</title>
+<indexterm><primary>find</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>find</secondary></indexterm>
+<para><computeroutput>int find (<link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> f) const</computeroutput></para>
+<para>Look for a function object in the call chain</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>f</entry><entry>
+<para>the function object to search</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The index of the function object if found, -1 otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1ac9801b42474ea68068b460184dcd670b"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>get</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> get (int i) const</computeroutput></para>
+<para>Get a function object from the chain</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>i</entry><entry>
+<para>function object index</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The function object at position &apos;i&apos; in the chain </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1a8f9752e9cf068d97962af45b726c2158"/><section>
+    <title>remove()</title>
+<indexterm><primary>remove</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>remove</secondary></indexterm>
+<para><computeroutput>bool remove (<link linkend="_namespacembed_1a73eeab55d4f68e1d4d56aafc3ad1b505">pFunctionPointer_t</link> f)</computeroutput></para>
+<para>Remove a function object from the chain</para>
+
+<para><itemizedlist>
+<listitem>
+<para>f the function object to remove</para>
+</listitem>
+</itemizedlist>
+<formalpara><title>Returns</title>
+
+<para>true if the function object was found and removed, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classmbed_1_1_call_chain_1af9593d4a5ff4274efaf429cb4f9e57cc"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>CallChain</secondary></indexterm>
+<indexterm><primary>CallChain</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>int size ( ) const</computeroutput></para>
+<para>Get the number of functions in the chain </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/<link linkend="__call_chain_8h">CallChain.h</link></section>
+</section>

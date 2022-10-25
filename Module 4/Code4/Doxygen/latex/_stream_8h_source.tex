@@ -1,0 +1,67 @@
+\hypertarget{_stream_8h_source}{}\doxysection{Stream.\+h}
+\label{_stream_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/Stream.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/Stream.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_STREAM\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_STREAM\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}FileLike.h"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_stream}{Stream}} : \textcolor{keyword}{public} \mbox{\hyperlink{classmbed_1_1_file_like}{FileLike}} \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{classmbed_1_1_stream}{Stream}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name=NULL);}
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_stream}{\string~Stream}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} putc(\textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} puts(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} getc();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{char} *gets(\textcolor{keywordtype}{char} *s, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} printf(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* format, ...);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} scanf(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* format, ...);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{operator} std::FILE*() \{\textcolor{keywordflow}{return} \_file;\}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_af6289a4ebd6e3e39e713434ee0b5ae1a}{close}}();}
+\DoxyCodeLine{41     \textcolor{keyword}{virtual} ssize\_t \mbox{\hyperlink{classmbed_1_1_stream_a1da24e639462b324eaf9a7fa4ebbe9c5}{write}}(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} ssize\_t \mbox{\hyperlink{classmbed_1_1_stream_a23d92c19945db06a616481bfdad5b41b}{read}}(\textcolor{keywordtype}{void}* buffer, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{43     \textcolor{keyword}{virtual} off\_t \mbox{\hyperlink{classmbed_1_1_stream_ab5d71558dfc46985f9b3ca66099f845e}{lseek}}(off\_t offset, \textcolor{keywordtype}{int} whence);}
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a1ad0b3f218c68d8f7aeb24f4878b6347}{isatty}}();}
+\DoxyCodeLine{45     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_stream_a9964211822494845a9ef8fe514aa5bbd}{fsync}}();}
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} off\_t flen();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \_putc(\textcolor{keywordtype}{int} c) = 0;}
+\DoxyCodeLine{49     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \_getc() = 0;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     std::FILE *\_file;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{comment}{/* disallow copy constructor and assignment operators */}}
+\DoxyCodeLine{54 \textcolor{keyword}{private}:}
+\DoxyCodeLine{55     \mbox{\hyperlink{classmbed_1_1_stream}{Stream}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_stream}{Stream}}\&);}
+\DoxyCodeLine{56     \mbox{\hyperlink{classmbed_1_1_stream}{Stream}} \& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_stream}{Stream}}\&);}
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

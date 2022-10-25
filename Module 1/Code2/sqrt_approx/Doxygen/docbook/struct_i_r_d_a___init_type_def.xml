@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_i_r_d_a___init_type_def" xml:lang="en-US">
+<title>IRDA_InitTypeDef Struct Reference</title>
+<indexterm><primary>IRDA_InitTypeDef</primary></indexterm>
+<para>
+
+<para>IRDA Init Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f4xx_hal_irda.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_i_r_d_a___init_type_def_1aaad609733f3fd8146c8745e953a91b2a">BaudRate</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_i_r_d_a___init_type_def_1ae5e60b9a021fe0009588fc86c7584a5a">WordLength</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_i_r_d_a___init_type_def_1a1d60a99b8f3965f01ab23444b154ba79">Parity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_i_r_d_a___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839">Mode</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_i_r_d_a___init_type_def_1a5c9d1e760b400d2502c03b0391606f90">Prescaler</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_i_r_d_a___init_type_def_1a0b7970d2b2d5adb32bd1a8dc76a820fd">IrDAMode</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>IRDA Init Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_i_r_d_a___init_type_def_1aaad609733f3fd8146c8745e953a91b2a"/><section>
+    <title>BaudRate</title>
+<indexterm><primary>BaudRate</primary><secondary>IRDA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>IRDA_InitTypeDef</primary><secondary>BaudRate</secondary></indexterm>
+<para><computeroutput>uint32_t BaudRate</computeroutput></para>
+<para>This member configures the IRDA communication baud rate. The baud rate is computed using the following formula:<itemizedlist>
+<listitem>
+<para>IntegerDivider = ((PCLKx) / (8 * (hirda-&gt;Init.BaudRate)))</para>
+</listitem><listitem>
+<para>FractionalDivider = ((IntegerDivider - ((uint32_t) IntegerDivider)) * 8) + 0.5 </para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00064">64</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_struct_i_r_d_a___init_type_def_1a0b7970d2b2d5adb32bd1a8dc76a820fd"/><section>
+    <title>IrDAMode</title>
+<indexterm><primary>IrDAMode</primary><secondary>IRDA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>IRDA_InitTypeDef</primary><secondary>IrDAMode</secondary></indexterm>
+<para><computeroutput>uint32_t IrDAMode</computeroutput></para>
+<para>Specifies the IrDA mode This parameter can be a value of <link linkend="_group___ir_d_a___low___power">IrDA_Low_Power</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00085">85</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_struct_i_r_d_a___init_type_def_1a0ffc93ec511ed9cf1663f6939bd3e839"/><section>
+    <title>Mode</title>
+<indexterm><primary>Mode</primary><secondary>IRDA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>IRDA_InitTypeDef</primary><secondary>Mode</secondary></indexterm>
+<para><computeroutput>uint32_t Mode</computeroutput></para>
+<para>Specifies wether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of <link linkend="_group___i_r_d_a___mode">IRDA_Mode</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00080">80</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_struct_i_r_d_a___init_type_def_1a1d60a99b8f3965f01ab23444b154ba79"/><section>
+    <title>Parity</title>
+<indexterm><primary>Parity</primary><secondary>IRDA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>IRDA_InitTypeDef</primary><secondary>Parity</secondary></indexterm>
+<para><computeroutput>uint32_t Parity</computeroutput></para>
+<para>Specifies the parity mode. This parameter can be a value of <link linkend="_group___i_r_d_a___parity">IRDA_Parity</link> <note><title>Note</title>
+
+<para>When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits). </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00073">73</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_struct_i_r_d_a___init_type_def_1a5c9d1e760b400d2502c03b0391606f90"/><section>
+    <title>Prescaler</title>
+<indexterm><primary>Prescaler</primary><secondary>IRDA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>IRDA_InitTypeDef</primary><secondary>Prescaler</secondary></indexterm>
+<para><computeroutput>uint8_t Prescaler</computeroutput></para>
+<para>Specifies the Prescaler </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00083">83</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<anchor xml:id="_struct_i_r_d_a___init_type_def_1ae5e60b9a021fe0009588fc86c7584a5a"/><section>
+    <title>WordLength</title>
+<indexterm><primary>WordLength</primary><secondary>IRDA_InitTypeDef</secondary></indexterm>
+<indexterm><primary>IRDA_InitTypeDef</primary><secondary>WordLength</secondary></indexterm>
+<para><computeroutput>uint32_t WordLength</computeroutput></para>
+<para>Specifies the number of data bits transmitted or received in a frame. This parameter can be a value of <link linkend="_group___i_r_d_a___word___length">IRDA_Word_Length</link> </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__irda_8h_source_1l00069">69</link> of file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/<link linkend="_stm32f4xx__hal__irda_8h">stm32f4xx_hal_irda.h</link></section>
+</section>

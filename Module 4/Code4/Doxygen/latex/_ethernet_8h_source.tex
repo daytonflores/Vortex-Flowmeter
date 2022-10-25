@@ -1,0 +1,66 @@
+\hypertarget{_ethernet_8h_source}{}\doxysection{Ethernet.\+h}
+\label{_ethernet_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/Ethernet.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/Ethernet.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_ETHERNET\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_ETHERNET\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#if DEVICE\_ETHERNET}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{53 \textcolor{keyword}{class }Ethernet \{}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{59     Ethernet();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{63     \textcolor{keyword}{virtual} \string~Ethernet();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{keyword}{enum} Mode \{}
+\DoxyCodeLine{66         AutoNegotiate,}
+\DoxyCodeLine{67         HalfDuplex10,}
+\DoxyCodeLine{68         FullDuplex10,}
+\DoxyCodeLine{69         HalfDuplex100,}
+\DoxyCodeLine{70         FullDuplex100}
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} write(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{int} send();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{int} receive();}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{int} read(\textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} address(\textcolor{keywordtype}{char} *mac);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{151     \textcolor{keywordtype}{int} link();}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{163     \textcolor{keywordtype}{void} set\_link(Mode mode);}
+\DoxyCodeLine{164 \};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

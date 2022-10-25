@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__crc_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_crc.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_crc.h</primary></indexterm>
+<para>
+
+<para>Header file of CRC HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link></para>
+
+<para>CRC handle Structure definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___c_r_c_1gab6ec5d74fdff177143f4b22652a18114">__HAL_CRC_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97">HAL_CRC_STATE_RESET</link>)</para>
+
+<para>Reset CRC handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___c_r_c_1ga0007a05fb01806007181e12eedc14d28">__HAL_CRC_DR_RESET</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |= <link linkend="_group___peripheral___registers___bits___definition_1ga7d57481fb891a0964b40f721354c56d7">CRC_CR_RESET</link>)</para>
+
+<para>Resets CRC Data Register. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link> { 
+<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97">HAL_CRC_STATE_RESET</link> = 0x00
+, <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeaa47f50129543b87fac3a83df1a634474">HAL_CRC_STATE_READY</link> = 0x01
+, <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea9d03b0c1d233e87e35b9c5c8353a4b70">HAL_CRC_STATE_BUSY</link> = 0x02
+, <link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbea5d803dcd1d578edb76b57e3d34adc5a8">HAL_CRC_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___c_r_c_1gga1021d6f27a072d45f6f3b233eefd8bbeadb51c35f7716430bb0c893069466a1b2">HAL_CRC_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>CRC HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___c_r_c_1ga23e7df2eaecf59615e13b2cad8b7185f">HAL_CRC_Init</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___c_r_c_1gac600b9a1785f2372ca40ed5449c23739">HAL_CRC_DeInit</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___c_r_c_1ga5167ffd293de5d86f5873910416b36d0">HAL_CRC_MspInit</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___c_r_c_1gac19b8df939b3490e690bdf1e1e04ead3">HAL_CRC_MspDeInit</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_r_c_1ga124a77d595e4982ad6e9a64c22f28b7b">HAL_CRC_Accumulate</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc, uint32_t pBuffer[], uint32_t BufferLength)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___c_r_c_1ga298593a6fb0bbd109cdbed3851806371">HAL_CRC_Calculate</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc, uint32_t pBuffer[], uint32_t BufferLength)</para>
+</listitem>
+            <listitem><para><link linkend="_group___c_r_c_1ga1021d6f27a072d45f6f3b233eefd8bbe">HAL_CRC_StateTypeDef</link> <link linkend="_group___c_r_c_1ga4fb3d3460bd83853c28215bc5e14babe">HAL_CRC_GetState</link> (<link linkend="_struct_c_r_c___handle_type_def">CRC_HandleTypeDef</link> *hcrc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of CRC HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__crc_8h_source">stm32f4xx_hal_crc.h</link>.</para>
+</section>
+</section>

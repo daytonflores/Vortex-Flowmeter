@@ -1,0 +1,75 @@
+\hypertarget{gpio__object_8h_source}{}\doxysection{gpio\+\_\+object.\+h}
+\label{gpio__object_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/TARGET\_STM/TARGET\_NUCLEO\_F401RE/gpio\_object.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/TARGET\_NUCLEO\_F401RE/TARGET\_STM/TARGET\_NUCLEO\_F401RE/gpio\_object.h}}
+\mbox{\hyperlink{gpio__object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00002}00002 \textcolor{comment}{ *******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00003}00003 \textcolor{comment}{ * Copyright (c) 2014, STMicroelectronics}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00004}00004 \textcolor{comment}{ * All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00005}00005 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00006}00006 \textcolor{comment}{ * Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00007}00007 \textcolor{comment}{ * modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00008}00008 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00009}00009 \textcolor{comment}{ * 1. Redistributions of source code must retain the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00010}00010 \textcolor{comment}{ *    this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00011}00011 \textcolor{comment}{ * 2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00012}00012 \textcolor{comment}{ *    this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00013}00013 \textcolor{comment}{ *    and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00014}00014 \textcolor{comment}{ * 3. Neither the name of STMicroelectronics nor the names of its contributors}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00015}00015 \textcolor{comment}{ *    may be used to endorse or promote products derived from this software}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00016}00016 \textcolor{comment}{ *    without specific prior written permission.}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00017}00017 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00018}00018 \textcolor{comment}{ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00019}00019 \textcolor{comment}{ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00020}00020 \textcolor{comment}{ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00021}00021 \textcolor{comment}{ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00022}00022 \textcolor{comment}{ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00023}00023 \textcolor{comment}{ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00024}00024 \textcolor{comment}{ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00025}00025 \textcolor{comment}{ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00026}00026 \textcolor{comment}{ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00027}00027 \textcolor{comment}{ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00028}00028 \textcolor{comment}{ *******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00029}00029 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00030}00030 \textcolor{preprocessor}{\#ifndef MBED\_GPIO\_OBJECT\_H}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00031}00031 \textcolor{preprocessor}{\#define MBED\_GPIO\_OBJECT\_H}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00033}00033 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mbed__assert_8h}{mbed\_assert.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00034}00034 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cmsis_8h}{cmsis.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00035}00035 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_port_names_8h}{PortNames.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00036}00036 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_peripheral_names_8h}{PeripheralNames.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00037}00037 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pin_names_8h}{PinNames.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00039}00039 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00040}00040 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00041}00041 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00043}\mbox{\hyperlink{structgpio__t}{00043}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00044}\mbox{\hyperlink{structgpio__t_a1f46a3d0fd63bcb5591dc1db407300aa}{00044}}     \mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}}  \mbox{\hyperlink{structgpio__t_a1f46a3d0fd63bcb5591dc1db407300aa}{pin}};}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00045}\mbox{\hyperlink{structgpio__t_ad3bee21df6875eeccd25d3c577e0600a}{00045}}     uint32\_t \mbox{\hyperlink{structgpio__t_ad3bee21df6875eeccd25d3c577e0600a}{mask}};}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00046}\mbox{\hyperlink{structgpio__t_afec2bad3c83f4575253f573be7e7434a}{00046}}     \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *\mbox{\hyperlink{structgpio__t_afec2bad3c83f4575253f573be7e7434a}{reg\_in}};}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00047}\mbox{\hyperlink{structgpio__t_a5be324dec7ca5caa993b6afb473065c5}{00047}}     \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint16\_t *\mbox{\hyperlink{structgpio__t_a5be324dec7ca5caa993b6afb473065c5}{reg\_set}};}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00048}\mbox{\hyperlink{structgpio__t_afb3bd7533a6f54d7fac47e44741a00e6}{00048}}     \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint16\_t *\mbox{\hyperlink{structgpio__t_afb3bd7533a6f54d7fac47e44741a00e6}{reg\_clr}};}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00049}00049 \} \mbox{\hyperlink{structgpio__t}{gpio\_t}};}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00051}00051 \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{gpio__api_8h_aedd478762e37aeafcf9ade8e255718b0}{gpio\_write}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, \textcolor{keywordtype}{int} value) \{}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00052}00052     \mbox{\hyperlink{mbed__assert_8h_a2fb68573313abfce1681c990c68fb089}{MBED\_ASSERT}}(obj-\/>\mbox{\hyperlink{structgpio__t_a1f46a3d0fd63bcb5591dc1db407300aa}{pin}} != (\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}})\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01}{NC}});}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00053}00053     \textcolor{keywordflow}{if} (value) \{}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00054}00054         *obj-\/>\mbox{\hyperlink{structgpio__t_a5be324dec7ca5caa993b6afb473065c5}{reg\_set}} = obj-\/>\mbox{\hyperlink{structgpio__t_ad3bee21df6875eeccd25d3c577e0600a}{mask}};}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00055}00055     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00056}00056         *obj-\/>\mbox{\hyperlink{structgpio__t_afb3bd7533a6f54d7fac47e44741a00e6}{reg\_clr}} = obj-\/>\mbox{\hyperlink{structgpio__t_ad3bee21df6875eeccd25d3c577e0600a}{mask}};}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00058}00058 \}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00060}00060 \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{gpio__api_8h_abb97298a1eb6f6c11b6290abe7a1823b}{gpio\_read}}(\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj) \{}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00061}00061     \mbox{\hyperlink{mbed__assert_8h_a2fb68573313abfce1681c990c68fb089}{MBED\_ASSERT}}(obj-\/>\mbox{\hyperlink{structgpio__t_a1f46a3d0fd63bcb5591dc1db407300aa}{pin}} != (\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1}{PinName}})\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1a3dbd1016ea99d087d747530418b89a01}{NC}});}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00062}00062     \textcolor{keywordflow}{return} ((*obj-\/>\mbox{\hyperlink{structgpio__t_afec2bad3c83f4575253f573be7e7434a}{reg\_in}} \& obj-\/>\mbox{\hyperlink{structgpio__t_ad3bee21df6875eeccd25d3c577e0600a}{mask}}) ? 1 : 0);}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00065}00065 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00066}00066 \}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00067}00067 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{gpio__object_8h_source_l00069}00069 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

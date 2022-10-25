@@ -1,0 +1,57 @@
+\hypertarget{gpio__api_8h_source}{}\doxysection{gpio\+\_\+api.\+h}
+\label{gpio__api_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/gpio\_api.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/gpio\_api.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_GPIO\_API\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_GPIO\_API\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}device.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{22 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{comment}{/* Set the given pin as GPIO}}
+\DoxyCodeLine{26 \textcolor{comment}{ * @param pin The pin to be set as GPIO}}
+\DoxyCodeLine{27 \textcolor{comment}{ * @return The GPIO port mask for this pin}}
+\DoxyCodeLine{28 \textcolor{comment}{ **/}}
+\DoxyCodeLine{29 uint32\_t gpio\_set(PinName pin);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{comment}{/* GPIO object */}}
+\DoxyCodeLine{32 \textcolor{keywordtype}{void} gpio\_init(\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, PinName pin);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} gpio\_mode (\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, PinMode mode);}
+\DoxyCodeLine{35 \textcolor{keywordtype}{void} gpio\_dir  (\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, PinDirection direction);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} gpio\_write(\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{38 \textcolor{keywordtype}{int}  gpio\_read (\mbox{\hyperlink{structgpio__t}{gpio\_t}} *obj);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{// the following set of functions are generic and are implemented in the common gpio.c file}}
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} gpio\_init\_in(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, PinName pin);}
+\DoxyCodeLine{42 \textcolor{keywordtype}{void} gpio\_init\_in\_ex(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, PinName pin, PinMode mode);}
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} gpio\_init\_out(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, PinName pin);}
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} gpio\_init\_out\_ex(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, PinName pin, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} gpio\_init\_inout(\mbox{\hyperlink{structgpio__t}{gpio\_t}}* gpio, PinName pin, PinDirection direction, PinMode mode, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{48 \}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

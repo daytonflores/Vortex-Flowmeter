@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__cryp_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_cryp.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_CRYP_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_CRYP_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00046"/>00046 <emphasis role="preprocessor">#if&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00047"/>00047 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00048"/>00048 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00049"/>00049 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00058"/>00058 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00059"/>00059 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00063"/>00063 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00064"/>00064 {
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00065"/>00065 &#32;&#32;uint32_t&#32;DataType;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00068"/>00068 &#32;&#32;uint32_t&#32;KeySize;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00071"/>00071 &#32;&#32;uint8_t*&#32;pKey;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00073"/>00073 &#32;&#32;uint8_t*&#32;pInitVect;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00076"/>00076 &#32;&#32;uint8_t&#32;IVSize;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00080"/>00080 &#32;&#32;uint8_t&#32;TagSize;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00084"/>00084 &#32;&#32;uint8_t*&#32;Header;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00086"/>00086 &#32;&#32;uint16_t&#32;HeaderSize;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00088"/>00088 &#32;&#32;uint8_t*&#32;pScratch;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00090"/>00090 }CRYP_InitTypeDef;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00091"/>00091 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00095"/>00095 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00096"/>00096 {
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00097"/>00097 &#32;&#32;HAL_CRYP_STATE_RESET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x00,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00098"/>00098 &#32;&#32;HAL_CRYP_STATE_READY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00099"/>00099 &#32;&#32;HAL_CRYP_STATE_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00100"/>00100 &#32;&#32;HAL_CRYP_STATE_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x03,&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00101"/>00101 &#32;&#32;HAL_CRYP_STATE_ERROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x04&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00102"/>00102 }HAL_CRYP_STATETypeDef;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00103"/>00103 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00107"/>00107 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00108"/>00108 {
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00109"/>00109 &#32;&#32;HAL_CRYP_PHASE_READY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x01,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00110"/>00110 &#32;&#32;HAL_CRYP_PHASE_PROCESS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x02,&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00111"/>00111 &#32;&#32;HAL_CRYP_PHASE_FINAL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0x03&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00113"/>00113 }HAL_PhaseTypeDef;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00114"/>00114 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00118"/>00118 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00119"/>00119 {
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;CRYP_InitTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Init;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*pCrypInBuffPtr;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*pCrypOutBuffPtr;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint16_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CrypInCount;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint16_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CrypOutCount;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Status;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;HAL_PhaseTypeDef&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Phase;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*hdmain;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_____d_m_a___handle_type_def">DMA_HandleTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*hdmaout;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stm32f4xx__hal__def_8h_1ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Lock;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00140"/>00140 &#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;&#32;HAL_CRYP_STATETypeDef&#32;State;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00141"/>00141 }CRYP_HandleTypeDef;
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00142"/>00142 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00143"/>00143 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00144"/>00144 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00152"/>00152 <emphasis role="preprocessor">#define&#32;CRYP_KEYSIZE_128B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00153"/>00153 <emphasis role="preprocessor">#define&#32;CRYP_KEYSIZE_192B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CRYP_CR_KEYSIZE_0</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00154"/>00154 <emphasis role="preprocessor">#define&#32;CRYP_KEYSIZE_256B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CRYP_CR_KEYSIZE_1</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00155"/>00155 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00156"/>00156 <emphasis role="preprocessor">#define&#32;IS_CRYP_KEYSIZE(KEYSIZE)&#32;&#32;(((KEYSIZE)&#32;==&#32;CRYP_KEYSIZE_128B)&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00157"/>00157 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((KEYSIZE)&#32;==&#32;CRYP_KEYSIZE_192B)&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00158"/>00158 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((KEYSIZE)&#32;==&#32;CRYP_KEYSIZE_256B))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00166"/>00166 <emphasis role="preprocessor">#define&#32;CRYP_DATATYPE_32B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00167"/>00167 <emphasis role="preprocessor">#define&#32;CRYP_DATATYPE_16B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CRYP_CR_DATATYPE_0</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00168"/>00168 <emphasis role="preprocessor">#define&#32;CRYP_DATATYPE_8B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CRYP_CR_DATATYPE_1</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00169"/>00169 <emphasis role="preprocessor">#define&#32;CRYP_DATATYPE_1B&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CRYP_CR_DATATYPE</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00170"/>00170 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00171"/>00171 <emphasis role="preprocessor">#define&#32;IS_CRYP_DATATYPE(DATATYPE)&#32;(((DATATYPE)&#32;==&#32;CRYP_DATATYPE_32B)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00172"/>00172 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DATATYPE)&#32;==&#32;CRYP_DATATYPE_16B)&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00173"/>00173 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DATATYPE)&#32;==&#32;CRYP_DATATYPE_8B)&#32;&#32;||&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00174"/>00174 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((DATATYPE)&#32;==&#32;CRYP_DATATYPE_1B))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00182"/>00182 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_DIRECTION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x0008003C)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00183"/>00183 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_TDES_ECB_ENCRYPT&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00184"/>00184 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_TDES_ECB_DECRYPT&#32;&#32;((uint32_t)0x00000004)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00185"/>00185 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_TDES_CBC_ENCRYPT&#32;&#32;((uint32_t)0x00000008)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00186"/>00186 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_TDES_CBC_DECRYPT&#32;&#32;((uint32_t)0x0000000C)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00187"/>00187 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_DES_ECB_ENCRYPT&#32;&#32;&#32;((uint32_t)0x00000010)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00188"/>00188 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_DES_ECB_DECRYPT&#32;&#32;&#32;((uint32_t)0x00000014)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00189"/>00189 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_DES_CBC_ENCRYPT&#32;&#32;&#32;((uint32_t)0x00000018)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00190"/>00190 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_DES_CBC_DECRYPT&#32;&#32;&#32;((uint32_t)0x0000001C)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00191"/>00191 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_AES_ECB_ENCRYPT&#32;&#32;&#32;((uint32_t)0x00000020)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00192"/>00192 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_AES_ECB_DECRYPT&#32;&#32;&#32;((uint32_t)0x00000024)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00193"/>00193 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_AES_CBC_ENCRYPT&#32;&#32;&#32;((uint32_t)0x00000028)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00194"/>00194 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_AES_CBC_DECRYPT&#32;&#32;&#32;((uint32_t)0x0000002C)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00195"/>00195 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_AES_CTR_ENCRYPT&#32;&#32;&#32;((uint32_t)0x00000030)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00196"/>00196 <emphasis role="preprocessor">#define&#32;CRYP_CR_ALGOMODE_AES_CTR_DECRYPT&#32;&#32;&#32;((uint32_t)0x00000034)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00204"/>00204 <emphasis role="preprocessor">#define&#32;CRYP_IT_INI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CRYP_IMSCR_INIM)&#32;&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00205"/>00205 <emphasis role="preprocessor">#define&#32;CRYP_IT_OUTI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)CRYP_IMSCR_OUTIM)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00214"/>00214 <emphasis role="preprocessor">#define&#32;CRYP_FLAG_BUSY&#32;&#32;&#32;((uint32_t)0x00000010)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00218"/>00218 <emphasis role="preprocessor">#define&#32;CRYP_FLAG_IFEM&#32;&#32;&#32;((uint32_t)0x00000001)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00219"/>00219 <emphasis role="preprocessor">#define&#32;CRYP_FLAG_IFNF&#32;&#32;&#32;((uint32_t)0x00000002)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00220"/>00220 <emphasis role="preprocessor">#define&#32;CRYP_FLAG_OFNE&#32;&#32;&#32;((uint32_t)0x00000004)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00221"/>00221 <emphasis role="preprocessor">#define&#32;CRYP_FLAG_OFFU&#32;&#32;&#32;((uint32_t)0x00000008)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00222"/>00222 <emphasis role="preprocessor">#define&#32;CRYP_FLAG_OUTRIS&#32;((uint32_t)0x01000002)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00224"/>00224 <emphasis role="preprocessor">#define&#32;CRYP_FLAG_INRIS&#32;&#32;((uint32_t)0x01000001)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00234"/>00234 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00235"/>00235 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00240"/>00240 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_RESET_HANDLE_STATE(__HANDLE__)&#32;((__HANDLE__)-&gt;State&#32;=&#32;HAL_CRYP_STATE_RESET)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00241"/>00241 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00247"/>00247 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_ENABLE()&#32;&#32;(CRYP-&gt;CR&#32;|=&#32;&#32;CRYP_CR_CRYPEN)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00248"/>00248 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_DISABLE()&#32;(CRYP-&gt;CR&#32;&amp;=&#32;&#32;~CRYP_CR_CRYPEN)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00249"/>00249 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00255"/>00255 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_FIFO_FLUSH()&#32;(CRYP-&gt;CR&#32;|=&#32;&#32;CRYP_CR_FFLUSH)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00256"/>00256 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00262"/>00262 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_SET_MODE(MODE)&#32;&#32;CRYP-&gt;CR&#32;|=&#32;(uint32_t)(MODE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00263"/>00263 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00277"/>00277 <emphasis role="preprocessor">#define&#32;CRYP_FLAG_MASK&#32;&#32;((uint32_t)0x0000001F)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00278"/>00278 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_GET_FLAG(__FLAG__)&#32;((((uint8_t)((__FLAG__)&#32;&gt;&gt;&#32;24))&#32;==&#32;0x01)?(((CRYP-&gt;RISR)&#32;&amp;&#32;((__FLAG__)&#32;&amp;&#32;CRYP_FLAG_MASK))&#32;==&#32;((__FLAG__)&#32;&amp;&#32;CRYP_FLAG_MASK)):&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00279"/>00279 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((CRYP-&gt;RISR)&#32;&amp;&#32;((__FLAG__)&#32;&amp;&#32;CRYP_FLAG_MASK))&#32;==&#32;((__FLAG__)&#32;&amp;&#32;CRYP_FLAG_MASK)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00280"/>00280 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00288"/>00288 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_GET_IT(__INTERRUPT__)&#32;((CRYP-&gt;MISR&#32;&amp;&#32;(__INTERRUPT__))&#32;==&#32;(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00289"/>00289 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00295"/>00295 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_ENABLE_IT(__INTERRUPT__)&#32;((CRYP-&gt;IMSCR)&#32;|=&#32;(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00296"/>00296 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00302"/>00302 <emphasis role="preprocessor">#define&#32;__HAL_CRYP_DISABLE_IT(__INTERRUPT__)&#32;((CRYP-&gt;IMSCR)&#32;&amp;=&#32;~(__INTERRUPT__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00303"/>00303 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00304"/>00304 <emphasis role="comment">/*&#32;Include&#32;CRYP&#32;HAL&#32;Extension&#32;module&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00305"/>00305 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__cryp__ex_8h">stm32f4xx_hal_cryp_ex.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00306"/>00306 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00307"/>00307 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00308"/>00308 <emphasis role="comment">/*&#32;Initialization/de-initialization&#32;functions&#32;&#32;********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00309"/>00309 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_Init(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00310"/>00310 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DeInit(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00311"/>00311 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00312"/>00312 <emphasis role="comment">/*&#32;AES&#32;encryption/decryption&#32;using&#32;polling&#32;&#32;***********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00313"/>00313 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESECB_Encrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00314"/>00314 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESECB_Decrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00315"/>00315 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCBC_Encrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00316"/>00316 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCBC_Decrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00317"/>00317 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCTR_Encrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00318"/>00318 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCTR_Decrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00319"/>00319 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00320"/>00320 <emphasis role="comment">/*&#32;AES&#32;encryption/decryption&#32;using&#32;interrupt&#32;&#32;*********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00321"/>00321 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESECB_Encrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00322"/>00322 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCBC_Encrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00323"/>00323 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCTR_Encrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00324"/>00324 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESECB_Decrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00325"/>00325 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCTR_Decrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00326"/>00326 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCBC_Decrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00327"/>00327 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00328"/>00328 <emphasis role="comment">/*&#32;AES&#32;encryption/decryption&#32;using&#32;DMA&#32;&#32;***************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00329"/>00329 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESECB_Encrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00330"/>00330 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESECB_Decrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00331"/>00331 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCBC_Encrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00332"/>00332 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCBC_Decrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00333"/>00333 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCTR_Encrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00334"/>00334 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_AESCTR_Decrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00335"/>00335 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00336"/>00336 <emphasis role="comment">/*&#32;DES&#32;encryption/decryption&#32;using&#32;polling&#32;&#32;***********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00337"/>00337 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESECB_Encrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00338"/>00338 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESCBC_Encrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00339"/>00339 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESECB_Decrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00340"/>00340 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESCBC_Decrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00341"/>00341 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00342"/>00342 <emphasis role="comment">/*&#32;DES&#32;encryption/decryption&#32;using&#32;interrupt&#32;&#32;*********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00343"/>00343 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESECB_Encrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00344"/>00344 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESECB_Decrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00345"/>00345 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESCBC_Encrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00346"/>00346 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESCBC_Decrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00347"/>00347 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00348"/>00348 <emphasis role="comment">/*&#32;DES&#32;encryption/decryption&#32;using&#32;DMA&#32;&#32;***************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00349"/>00349 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESECB_Encrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00350"/>00350 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESECB_Decrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00351"/>00351 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESCBC_Encrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00352"/>00352 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_DESCBC_Decrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00353"/>00353 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00354"/>00354 <emphasis role="comment">/*&#32;TDES&#32;encryption/decryption&#32;using&#32;polling&#32;&#32;**********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00355"/>00355 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESECB_Encrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00356"/>00356 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESCBC_Encrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00357"/>00357 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESECB_Decrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00358"/>00358 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESCBC_Decrypt(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData,&#32;uint32_t&#32;Timeout);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00359"/>00359 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00360"/>00360 <emphasis role="comment">/*&#32;TDES&#32;encryption/decryption&#32;using&#32;interrupt&#32;&#32;********************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00361"/>00361 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESECB_Encrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00362"/>00362 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESECB_Decrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00363"/>00363 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESCBC_Encrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00364"/>00364 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESCBC_Decrypt_IT(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00365"/>00365 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00366"/>00366 <emphasis role="comment">/*&#32;TDES&#32;encryption/decryption&#32;using&#32;DMA&#32;&#32;**************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00367"/>00367 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESECB_Encrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00368"/>00368 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESECB_Decrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00369"/>00369 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESCBC_Encrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pPlainData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pCypherData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00370"/>00370 <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;HAL_CRYP_TDESCBC_Decrypt_DMA(CRYP_HandleTypeDef&#32;*hcryp,&#32;uint8_t&#32;*pCypherData,&#32;uint16_t&#32;Size,&#32;uint8_t&#32;*pPlainData);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00371"/>00371 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00372"/>00372 <emphasis role="comment">/*&#32;Processing&#32;functions&#32;&#32;******************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00373"/>00373 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CRYP_IRQHandler(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00374"/>00374 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00375"/>00375 <emphasis role="comment">/*&#32;Peripheral&#32;State&#32;functions&#32;&#32;************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00376"/>00376 HAL_CRYP_STATETypeDef&#32;HAL_CRYP_GetState(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00377"/>00377 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00378"/>00378 <emphasis role="comment">/*&#32;MSP&#32;functions&#32;&#32;*************************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00379"/>00379 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CRYP_MspInit(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00380"/>00380 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CRYP_MspDeInit(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00381"/>00381 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00382"/>00382 <emphasis role="comment">/*&#32;CallBack&#32;functions&#32;&#32;********************************************************/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00383"/>00383 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CRYP_InCpltCallback(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00384"/>00384 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CRYP_OutCpltCallback(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00385"/>00385 <emphasis role="keywordtype">void</emphasis>&#32;HAL_CRYP_ErrorCallback(CRYP_HandleTypeDef&#32;*hcryp);
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00386"/>00386 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00387"/>00387 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F415xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00388"/>00388 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00397"/>00397 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00398"/>00398 }
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00399"/>00399 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00400"/>00400 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00401"/>00401 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_CRYP_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00402"/>00402 
+<anchor xml:id="_stm32f4xx__hal__cryp_8h_source_1l00403"/>00403 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

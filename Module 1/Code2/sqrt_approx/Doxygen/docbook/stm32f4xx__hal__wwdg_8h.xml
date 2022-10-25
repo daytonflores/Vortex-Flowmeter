@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__wwdg_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_wwdg.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_wwdg.h</primary></indexterm>
+<para>
+
+<para>Header file of WWDG HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_w_w_d_g___init_type_def">WWDG_InitTypeDef</link></para>
+
+<para>WWDG Init structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link></para>
+
+<para>WWDG handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___bit_address___alias_region_1gad6422afd041f823ff1ea65e442355783">CFR_BASE</link>   (uint32_t)(<link linkend="_group___peripheral__registers__structures_1ga9a5bf4728ab93dea5b569f5b972cbe62">WWDG_BASE</link> + 0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___interrupt__definition_1gaf2659a7ce6e4edd7c6d1b537dbc33362">WWDG_IT_EWI</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga931941dc5d795502371ac5dd8fbac1e9">WWDG_CFR_EWI</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___interrupt__definition_1ga305d660b860e33872cca6e7864b209c0">IS_WWDG_IT</link>(IT)   ((IT) == <link linkend="_group___w_w_d_g___interrupt__definition_1gaf2659a7ce6e4edd7c6d1b537dbc33362">WWDG_IT_EWI</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___flag__definition_1gaac081893a320f1216262be063b587edb">WWDG_FLAG_EWIF</link>   ((uint32_t)0x0001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___flag__definition_1ga00fbf872e093d9c08d4e7efa5c0fba93">IS_WWDG_FLAG</link>(FLAG)   ((FLAG) == <link linkend="_group___w_w_d_g___flag__definition_1gaac081893a320f1216262be063b587edb">WWDG_FLAG_EWIF</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___prescaler_1gac611617ca4116f9bfb55c5280abeb281">WWDG_PRESCALER_1</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___prescaler_1ga411e50531af74cfe88b5f58119e546fa">WWDG_PRESCALER_2</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___prescaler_1ga38093104d0ad7e9ef5e036f6d0dc3ca8">WWDG_PRESCALER_4</link>   ((uint32_t)0x00000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___prescaler_1ga766a9eff85955164df09186081f3cb40">WWDG_PRESCALER_8</link>   ((uint32_t)0x00000180)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___prescaler_1ga39070de0722a70f99a6fcfe8720b2dfd">IS_WWDG_PRESCALER</link>(PRESCALER)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___window_1ga79b14a134a3907e7b4fb4cd3f57a4e21">IS_WWDG_WINDOW</link>(WINDOW)   ((WINDOW) &lt;= 0x7F)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g___counter_1ga4728877128cd60494692d8f14389112e">IS_WWDG_COUNTER</link>(COUNTER)   (((COUNTER) &gt;= 0x40) &amp;&amp; ((COUNTER) &lt;= 0x7F))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1gadb7c147b55b6386d487d717b20cd1070">__HAL_WWDG_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5">HAL_WWDG_STATE_RESET</link>)</para>
+
+<para>Reset WWDG handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1gaad04976da12e2c801c72668b8e100d80">__HAL_WWDG_ENABLE</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR |=  <link linkend="_group___peripheral___registers___bits___definition_1gab647e9997b8b8e67de72af1aaea3f52f">WWDG_CR_WDGA</link>)</para>
+
+<para>Enables the WWDG peripheral. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1ga60a99447a00a7d95c18637c38147063a">__HAL_WWDG_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Gets the selected WWDG&apos;s flag status. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1gae9c3b916e244deffc6a673d97df63671">__HAL_WWDG_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR) &amp;= ~(__FLAG__))</para>
+
+<para>Clears the WWDG&apos;s pending flags. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___w_w_d_g_1gab29dd54283dfafa9ae09d0b54fde06b4">__HAL_WWDG_ENABLE_IT</link>(__INTERRUPT__)   (*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *) <link linkend="_group___w_w_d_g___bit_address___alias_region_1gad6422afd041f823ff1ea65e442355783">CFR_BASE</link> |= (__INTERRUPT__))</para>
+
+<para>Enables the WWDG early wakeup interrupt. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___w_w_d_g_1ga0dbbade5e745711745e5f9cc10991301">HAL_WWDG_StateTypeDef</link> { 
+<link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ab372108da0acc98eafe256ac1789c6a5">HAL_WWDG_STATE_RESET</link> = 0x00
+, <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301a4dc3b206181127388e44b6b7838e39fb">HAL_WWDG_STATE_READY</link> = 0x01
+, <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ad0b871d6d748df57f9c354ecf04d9821">HAL_WWDG_STATE_BUSY</link> = 0x02
+, <link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301ac35fbcc9e083869cd3410dfff314e985">HAL_WWDG_STATE_TIMEOUT</link> = 0x03
+, 
+<link linkend="_group___w_w_d_g_1gga0dbbade5e745711745e5f9cc10991301a41c392c0097e126977c5b980c4f2e227">HAL_WWDG_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>WWDG HAL State Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1ga72706a378ad2f79cba4324c1b328715a">HAL_WWDG_Init</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1gaa2a353f5e9d3d00f6cbf251770cb3259">HAL_WWDG_DeInit</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___w_w_d_g_1ga9871643c1868c37613b89d1acf010cd6">HAL_WWDG_MspInit</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___w_w_d_g_1gaf7a0f80dfa5dc7832a3240a8004f113d">HAL_WWDG_MspDeInit</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___w_w_d_g_1gac59114721456ab7cefb8bd3dffdc2c8c">HAL_WWDG_WakeupCallback</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1ga6d56ddea267609ae162392f725c22ffc">HAL_WWDG_Start</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1ga67ae975315e3bf0ff2252b2cd32686ef">HAL_WWDG_Start_IT</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___w_w_d_g_1ga33c30c69b966b353572a2d36a702efc3">HAL_WWDG_Refresh</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg, uint32_t Counter)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___w_w_d_g_1ga6521c5a0ff3184f951561302fb540fde">HAL_WWDG_IRQHandler</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+            <listitem><para><link linkend="_group___w_w_d_g_1ga0dbbade5e745711745e5f9cc10991301">HAL_WWDG_StateTypeDef</link> <link linkend="_group___w_w_d_g_1ga893774ecf63a6f78ef41f414db80ee46">HAL_WWDG_GetState</link> (<link linkend="_struct_w_w_d_g___handle_type_def">WWDG_HandleTypeDef</link> *hwwdg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of WWDG HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__wwdg_8h_source">stm32f4xx_hal_wwdg.h</link>.</para>
+</section>
+</section>

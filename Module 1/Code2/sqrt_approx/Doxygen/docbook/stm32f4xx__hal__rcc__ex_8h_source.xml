@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__rcc__ex_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_rcc_ex.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rcc_ex.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00001"/>00001 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00038"/>00038 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_RCC_EX_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_RCC_EX_H</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00041"/>00041 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00042"/>00042 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00043"/>00043 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00044"/>00044 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00045"/>00045 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00046"/>00046 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00047"/>00047 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_stm32f4xx__hal__def_8h">stm32f4xx_hal_def.h</link>&quot;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00048"/>00048 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00057"/>00057 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00058"/>00058 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00062"/>00062 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00063"/>00063 {
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00064"/>00064 &#32;&#32;uint32_t&#32;PLLI2SN;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00068"/>00068 &#32;&#32;uint32_t&#32;PLLI2SR;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00072"/>00072 &#32;&#32;uint32_t&#32;PLLI2SQ;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00075"/>00075 }<link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def">RCC_PLLI2SInitTypeDef</link>;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00076"/>00076 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00080"/>00080 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00081"/>00081 {
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00082"/>00082 &#32;&#32;uint32_t&#32;PLLSAIN;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00086"/>00086 &#32;&#32;uint32_t&#32;PLLSAIQ;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00090"/>00090 &#32;&#32;uint32_t&#32;PLLSAIR;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00094"/>00094 }RCC_PLLSAIInitTypeDef;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00098"/>00098 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00099"/>00099 {
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00100"/>00100 &#32;&#32;uint32_t&#32;PeriphClockSelection;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00103"/>00103 &#32;&#32;<link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def">RCC_PLLI2SInitTypeDef</link>&#32;PLLI2S;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00106"/>00106 &#32;&#32;RCC_PLLSAIInitTypeDef&#32;PLLSAI;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00109"/>00109 &#32;&#32;uint32_t&#32;PLLI2SDivQ;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00113"/>00113 &#32;&#32;uint32_t&#32;PLLSAIDivQ;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00117"/>00117 &#32;&#32;uint32_t&#32;PLLSAIDivR;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00120"/>00120 &#32;&#32;uint32_t&#32;RTCClockSelection;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00123"/>00123 &#32;&#32;uint8_t&#32;TIMPresSelection;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00126"/>00126 }<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link>;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00127"/>00127 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00128"/>00128 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00129"/>00129 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F401xC)&#32;||&#32;defined(STM32F401xE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00133"/><link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def">00133</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00134"/>00134 {
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00135"/><link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def_1a3f65343166ee762c58ae1cc4685585b2">00135</link> &#32;&#32;uint32_t&#32;<link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def_1a3f65343166ee762c58ae1cc4685585b2">PLLI2SN</link>;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00139"/><link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def_1aa41cb6b0bf6f8246cf6625c175705d6a">00139</link> &#32;&#32;uint32_t&#32;<link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def_1aa41cb6b0bf6f8246cf6625c175705d6a">PLLI2SR</link>;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00143"/>00143 }<link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def">RCC_PLLI2SInitTypeDef</link>;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00144"/>00144 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00145"/>00145 &#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00149"/><link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">00149</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00150"/>00150 {
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00151"/><link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a82dae3f6a5ae6c184bd1b95a88d41fc2">00151</link> &#32;&#32;uint32_t&#32;<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a82dae3f6a5ae6c184bd1b95a88d41fc2">PeriphClockSelection</link>;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00154"/><link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a9dc053ffc721e0d2c84bf94881a5fcae">00154</link> &#32;&#32;<link linkend="_struct_r_c_c___p_l_l_i2_s_init_type_def">RCC_PLLI2SInitTypeDef</link>&#32;<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a9dc053ffc721e0d2c84bf94881a5fcae">PLLI2S</link>;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00157"/><link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a831cc6023077b77683871743290aa720">00157</link> &#32;&#32;uint32_t&#32;<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def_1a831cc6023077b77683871743290aa720">RTCClockSelection</link>;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00160"/>00160 }<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link>;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00161"/>00161 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F401xC&#32;||&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00162"/>00162 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00170"/>00170 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00171"/>00171 <emphasis role="preprocessor">#define&#32;RCC_PERIPHCLK_I2S&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000001)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00172"/>00172 <emphasis role="preprocessor">#define&#32;RCC_PERIPHCLK_SAI_PLLI2S&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000002)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00173"/>00173 <emphasis role="preprocessor">#define&#32;RCC_PERIPHCLK_SAI_PLLSAI&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000004)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00174"/>00174 <emphasis role="preprocessor">#define&#32;RCC_PERIPHCLK_LTDC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000008)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00175"/>00175 <emphasis role="preprocessor">#define&#32;RCC_PERIPHCLK_TIM&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000010)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00176"/>00176 <emphasis role="preprocessor">#define&#32;RCC_PERIPHCLK_RTC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000020)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00177"/>00177 <emphasis role="preprocessor">#define&#32;IS_RCC_PERIPHCLOCK(SELECTION)&#32;((1&#32;&lt;=&#32;(SELECTION))&#32;&amp;&amp;&#32;((SELECTION)&#32;&lt;=&#32;0x0000002F))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00178"/>00178 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00179"/>00179 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00180"/>00180 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F401xC)&#32;||&#32;defined(STM32F401xE)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00181"/><link linkend="_group___r_c_c_ex___periph___clock___selection_1ga9434a99ec49907a6d2ce7ee7e29deb75">00181</link> <emphasis role="preprocessor">#define&#32;RCC_PERIPHCLK_I2S&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000001)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00182"/><link linkend="_group___r_c_c_ex___periph___clock___selection_1gaede03aaafb5319bb39767bf50182406f">00182</link> <emphasis role="preprocessor">#define&#32;RCC_PERIPHCLK_RTC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000002)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00183"/><link linkend="_group___r_c_c_ex___periph___clock___selection_1gaae1eea378ffa99c1a4186f0065c257a8">00183</link> <emphasis role="preprocessor">#define&#32;IS_RCC_PERIPHCLOCK(SELECTION)&#32;((1&#32;&lt;=&#32;(SELECTION))&#32;&amp;&amp;&#32;((SELECTION)&#32;&lt;=&#32;0x00000003))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00184"/>00184 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F401xC&#32;||&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00185"/>00185 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00194"/>00194 <emphasis role="comment">/*&#32;---&#32;CR&#32;Register&#32;---*/</emphasis>&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00195"/>00195 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00196"/>00196 <emphasis role="comment">/*&#32;Alias&#32;word&#32;address&#32;of&#32;PLLSAION&#32;bit&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00197"/>00197 <emphasis role="preprocessor">#define&#32;PLLSAION_BitNumber&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x1C</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00198"/>00198 <emphasis role="preprocessor">#define&#32;CR_PLLSAION_BB&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(PERIPH_BB_BASE&#32;+&#32;(RCC_CR_OFFSET&#32;*&#32;32)&#32;+&#32;(PLLSAION_BitNumber&#32;*&#32;4))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00199"/>00199 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00200"/>00200 <emphasis role="comment">/*&#32;---&#32;DCKCFGR&#32;Register&#32;---*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00201"/>00201 <emphasis role="comment">/*&#32;Alias&#32;word&#32;address&#32;of&#32;TIMPRE&#32;bit&#32;*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00202"/>00202 <emphasis role="preprocessor">#define&#32;RCC_DCKCFGR_OFFSET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(RCC_OFFSET&#32;+&#32;0x8C)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00203"/>00203 <emphasis role="preprocessor">#define&#32;TIMPRE_BitNumber&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x18</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00204"/>00204 <emphasis role="preprocessor">#define&#32;DCKCFGR_TIMPRE_BB&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(PERIPH_BB_BASE&#32;+&#32;(RCC_DCKCFGR_OFFSET&#32;*&#32;32)&#32;+&#32;(TIMPRE_BitNumber&#32;*&#32;4))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00212"/>00212 <emphasis role="preprocessor">#define&#32;IS_RCC_PLLI2SQ_VALUE(VALUE)&#32;((2&#32;&lt;=&#32;(VALUE))&#32;&amp;&amp;&#32;((VALUE)&#32;&lt;=&#32;15))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00220"/>00220 <emphasis role="preprocessor">#define&#32;IS_RCC_PLLSAIN_VALUE(VALUE)&#32;((192&#32;&lt;=&#32;(VALUE))&#32;&amp;&amp;&#32;((VALUE)&#32;&lt;=&#32;432))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00221"/>00221 <emphasis role="preprocessor">#define&#32;IS_RCC_PLLSAIQ_VALUE(VALUE)&#32;((2&#32;&lt;=&#32;(VALUE))&#32;&amp;&amp;&#32;((VALUE)&#32;&lt;=&#32;15))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00222"/>00222 <emphasis role="preprocessor">#define&#32;IS_RCC_PLLSAIR_VALUE(VALUE)&#32;((2&#32;&lt;=&#32;(VALUE))&#32;&amp;&amp;&#32;((VALUE)&#32;&lt;=&#32;7))&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00230"/>00230 <emphasis role="preprocessor">#define&#32;IS_RCC_PLLSAI_DIVQ_VALUE(VALUE)&#32;((1&#32;&lt;=&#32;(VALUE))&#32;&amp;&amp;&#32;((VALUE)&#32;&lt;=&#32;32))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00238"/>00238 <emphasis role="preprocessor">#define&#32;IS_RCC_PLLI2S_DIVQ_VALUE(VALUE)&#32;((1&#32;&lt;=&#32;(VALUE))&#32;&amp;&amp;&#32;((VALUE)&#32;&lt;=&#32;32))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00239"/>00239 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00247"/>00247 <emphasis role="preprocessor">#define&#32;RCC_PLLSAIDIVR_2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00248"/>00248 <emphasis role="preprocessor">#define&#32;RCC_PLLSAIDIVR_4&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00010000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00249"/>00249 <emphasis role="preprocessor">#define&#32;RCC_PLLSAIDIVR_8&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00020000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00250"/>00250 <emphasis role="preprocessor">#define&#32;RCC_PLLSAIDIVR_16&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00030000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00251"/>00251 <emphasis role="preprocessor">#define&#32;IS_RCC_PLLSAI_DIVR_VALUE(VALUE)&#32;(((VALUE)&#32;==&#32;RCC_PLLSAIDIVR_2)&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00252"/>00252 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((VALUE)&#32;==&#32;RCC_PLLSAIDIVR_4)&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00253"/>00253 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((VALUE)&#32;==&#32;RCC_PLLSAIDIVR_8)&#32;&#32;||\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00254"/>00254 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((VALUE)&#32;==&#32;RCC_PLLSAIDIVR_16))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00255"/>00255 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00263"/>00263 <emphasis role="preprocessor">#define&#32;RCC_SAIACLKSOURCE_PLLSAI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00264"/>00264 <emphasis role="preprocessor">#define&#32;RCC_SAIACLKSOURCE_PLLI2S&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00100000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00265"/>00265 <emphasis role="preprocessor">#define&#32;RCC_SAIACLKSOURCE_EXT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00200000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00273"/>00273 <emphasis role="preprocessor">#define&#32;RCC_SAIBCLKSOURCE_PLLSAI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00000000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00274"/>00274 <emphasis role="preprocessor">#define&#32;RCC_SAIBCLKSOURCE_PLLI2S&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00400000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00275"/>00275 <emphasis role="preprocessor">#define&#32;RCC_SAIBCLKSOURCE_EXT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)0x00800000)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00283"/>00283 <emphasis role="preprocessor">#define&#32;RCC_TIMPRES_DESACTIVATED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00284"/>00284 <emphasis role="preprocessor">#define&#32;RCC_TIMPRES_ACTIVATED&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00288"/>00288 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00297"/>00297 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00298"/>00298 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00305"/>00305 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00306"/>00306 <emphasis role="preprocessor">#define&#32;__GPIOI_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_GPIOIEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00307"/>00307 <emphasis role="preprocessor">#define&#32;__GPIOF_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_GPIOFEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00308"/>00308 <emphasis role="preprocessor">#define&#32;__GPIOG_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_GPIOGEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00309"/>00309 <emphasis role="preprocessor">#define&#32;__ETHMAC_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_ETHMACEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00310"/>00310 <emphasis role="preprocessor">#define&#32;__ETHMACTX_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_ETHMACTXEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00311"/>00311 <emphasis role="preprocessor">#define&#32;__ETHMACRX_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_ETHMACRXEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00312"/>00312 <emphasis role="preprocessor">#define&#32;__ETHMACPTP_CLK_ENABLE()&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_ETHMACPTPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00313"/>00313 <emphasis role="preprocessor">#define&#32;__USB_OTG_HS_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_OTGHSEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00314"/>00314 <emphasis role="preprocessor">#define&#32;__USB_OTG_HS_ULPI_CLK_ENABLE()&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_OTGHSULPIEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00315"/>00315 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00316"/>00316 <emphasis role="preprocessor">#define&#32;__GPIOF_CLK_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_GPIOFEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00317"/>00317 <emphasis role="preprocessor">#define&#32;__GPIOG_CLK_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_GPIOGEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00318"/>00318 <emphasis role="preprocessor">#define&#32;__GPIOI_CLK_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_GPIOIEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00319"/>00319 <emphasis role="preprocessor">#define&#32;__ETHMAC_CLK_DISABLE()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_ETHMACEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00320"/>00320 <emphasis role="preprocessor">#define&#32;__ETHMACTX_CLK_DISABLE()&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_ETHMACTXEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00321"/>00321 <emphasis role="preprocessor">#define&#32;__ETHMACRX_CLK_DISABLE()&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_ETHMACRXEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00322"/>00322 <emphasis role="preprocessor">#define&#32;__ETHMACPTP_CLK_DISABLE()&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_ETHMACPTPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00323"/>00323 <emphasis role="preprocessor">#define&#32;__USB_OTG_HS_CLK_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_OTGHSEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00324"/>00324 <emphasis role="preprocessor">#define&#32;__USB_OTG_HS_ULPI_CLK_DISABLE()&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_OTGHSULPIEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00325"/>00325 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!(STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00326"/>00326 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00327"/>00327 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00328"/>00328 <emphasis role="preprocessor">#define&#32;__GPIOJ_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_GPIOJEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00329"/>00329 <emphasis role="preprocessor">#define&#32;__GPIOK_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_GPIOKEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00330"/>00330 <emphasis role="preprocessor">#define&#32;__DMA2D_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;|=&#32;(RCC_AHB1ENR_DMA2DEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00331"/>00331 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00332"/>00332 <emphasis role="preprocessor">#define&#32;__GPIOJ_CLK_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_GPIOJEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00333"/>00333 <emphasis role="preprocessor">#define&#32;__GPIOK_CLK_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_GPIOKEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00334"/>00334 <emphasis role="preprocessor">#define&#32;__DMA2D_CLK_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1ENR&#32;&amp;=&#32;~(RCC_AHB1ENR_DMA2DEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00335"/>00335 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00336"/>00336 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00337"/>00337 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00341"/>00341 <emphasis role="preprocessor">#define&#32;__ETH_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;&#32;do&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00342"/>00342 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ETHMAC_CLK_ENABLE();&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00343"/>00343 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ETHMACTX_CLK_ENABLE();&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00344"/>00344 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ETHMACRX_CLK_ENABLE();&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00345"/>00345 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;while(0)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00346"/>00346 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00350"/>00350 <emphasis role="preprocessor">#define&#32;__ETH_CLK_DISABLE()&#32;&#32;&#32;&#32;&#32;&#32;&#32;do&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00351"/>00351 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ETHMACTX_CLK_DISABLE();&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00352"/>00352 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ETHMACRX_CLK_DISABLE();&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00353"/>00353 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ETHMAC_CLK_DISABLE();&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00354"/>00354 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;while(0)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00355"/>00355 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!(STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00356"/>00356 &#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00362"/>00362 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00363"/>00363 <emphasis role="preprocessor">#define&#32;__DCMI_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;AHB2ENR&#32;|=&#32;(RCC_AHB2ENR_DCMIEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00364"/>00364 <emphasis role="preprocessor">#define&#32;__DCMI_CLK_DISABLE()&#32;&#32;(RCC-&gt;AHB2ENR&#32;&amp;=&#32;~(RCC_AHB2ENR_DCMIEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00365"/>00365 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!(STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00366"/>00366 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00367"/>00367 <emphasis role="preprocessor">#if&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F437xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00368"/>00368 <emphasis role="preprocessor">#define&#32;__CRYP_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;AHB2ENR&#32;|=&#32;(RCC_AHB2ENR_CRYPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00369"/>00369 <emphasis role="preprocessor">#define&#32;__HASH_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;AHB2ENR&#32;|=&#32;(RCC_AHB2ENR_HASHEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00370"/>00370 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00371"/>00371 <emphasis role="preprocessor">#define&#32;__CRYP_CLK_DISABLE()&#32;&#32;(RCC-&gt;AHB2ENR&#32;&amp;=&#32;~(RCC_AHB2ENR_CRYPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00372"/>00372 <emphasis role="preprocessor">#define&#32;__HASH_CLK_DISABLE()&#32;&#32;(RCC-&gt;AHB2ENR&#32;&amp;=&#32;~(RCC_AHB2ENR_HASHEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00373"/>00373 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00374"/>00374 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F415xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00375"/>00375 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00381"/>00381 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)||&#32;defined(STM32F417xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00382"/>00382 <emphasis role="preprocessor">#define&#32;__FSMC_CLK_ENABLE()&#32;&#32;(RCC-&gt;AHB3ENR&#32;|=&#32;(RCC_AHB3ENR_FSMCEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00383"/>00383 <emphasis role="preprocessor">#define&#32;__FSMC_CLK_DISABLE()&#32;(RCC-&gt;AHB3ENR&#32;&amp;=&#32;~(RCC_AHB3ENR_FSMCEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00384"/>00384 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00385"/>00385 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00386"/>00386 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00387"/>00387 <emphasis role="preprocessor">#define&#32;__FMC_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;AHB3ENR&#32;|=&#32;(RCC_AHB3ENR_FMCEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00388"/>00388 <emphasis role="preprocessor">#define&#32;__FMC_CLK_DISABLE()&#32;&#32;(RCC-&gt;AHB3ENR&#32;&amp;=&#32;~(RCC_AHB3ENR_FMCEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00389"/>00389 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F415xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00390"/>00390 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00391"/>00391 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00397"/>00397 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00398"/>00398 <emphasis role="preprocessor">#define&#32;__TIM6_CLK_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_TIM6EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00399"/>00399 <emphasis role="preprocessor">#define&#32;__TIM7_CLK_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_TIM7EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00400"/>00400 <emphasis role="preprocessor">#define&#32;__TIM12_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_TIM12EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00401"/>00401 <emphasis role="preprocessor">#define&#32;__TIM13_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_TIM13EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00402"/>00402 <emphasis role="preprocessor">#define&#32;__TIM14_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_TIM14EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00403"/>00403 <emphasis role="preprocessor">#define&#32;__WWDG_CLK_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_WWDGEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00404"/>00404 <emphasis role="preprocessor">#define&#32;__USART3_CLK_ENABLE()&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_USART3EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00405"/>00405 <emphasis role="preprocessor">#define&#32;__UART4_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_UART4EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00406"/>00406 <emphasis role="preprocessor">#define&#32;__UART5_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_UART5EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00407"/>00407 <emphasis role="preprocessor">#define&#32;__CAN1_CLK_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_CAN1EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00408"/>00408 <emphasis role="preprocessor">#define&#32;__CAN2_CLK_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_CAN2EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00409"/>00409 <emphasis role="preprocessor">#define&#32;__DAC_CLK_ENABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_DACEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00410"/>00410 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00411"/>00411 <emphasis role="preprocessor">#define&#32;__TIM6_CLK_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_TIM6EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00412"/>00412 <emphasis role="preprocessor">#define&#32;__TIM7_CLK_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_TIM7EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00413"/>00413 <emphasis role="preprocessor">#define&#32;__TIM12_CLK_DISABLE()&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_TIM12EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00414"/>00414 <emphasis role="preprocessor">#define&#32;__TIM13_CLK_DISABLE()&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_TIM13EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00415"/>00415 <emphasis role="preprocessor">#define&#32;__TIM14_CLK_DISABLE()&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_TIM14EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00416"/>00416 <emphasis role="preprocessor">#define&#32;__WWDG_CLK_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_WWDGEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00417"/>00417 <emphasis role="preprocessor">#define&#32;__USART3_CLK_DISABLE()&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_USART3EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00418"/>00418 <emphasis role="preprocessor">#define&#32;__UART4_CLK_DISABLE()&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_UART4EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00419"/>00419 <emphasis role="preprocessor">#define&#32;__UART5_CLK_DISABLE()&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_UART5EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00420"/>00420 <emphasis role="preprocessor">#define&#32;__CAN1_CLK_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_CAN1EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00421"/>00421 <emphasis role="preprocessor">#define&#32;__CAN2_CLK_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_CAN2EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00422"/>00422 <emphasis role="preprocessor">#define&#32;__DAC_CLK_DISABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_DACEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00423"/>00423 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!(STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00424"/>00424 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00425"/>00425 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00426"/>00426 <emphasis role="preprocessor">#define&#32;__UART7_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_UART7EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00427"/>00427 <emphasis role="preprocessor">#define&#32;__UART8_CLK_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1ENR&#32;|=&#32;(RCC_APB1ENR_UART8EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00428"/>00428 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00429"/>00429 <emphasis role="preprocessor">#define&#32;__UART7_CLK_DISABLE()&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_UART7EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00430"/>00430 <emphasis role="preprocessor">#define&#32;__UART8_CLK_DISABLE()&#32;&#32;(RCC-&gt;APB1ENR&#32;&amp;=&#32;~(RCC_APB1ENR_UART8EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00431"/>00431 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F415xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00432"/>00432 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00438"/>00438 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00439"/>00439 <emphasis role="preprocessor">#define&#32;__TIM8_CLK_ENABLE()&#32;&#32;(RCC-&gt;APB2ENR&#32;|=&#32;(RCC_APB2ENR_TIM8EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00440"/>00440 <emphasis role="preprocessor">#define&#32;__ADC2_CLK_ENABLE()&#32;&#32;(RCC-&gt;APB2ENR&#32;|=&#32;(RCC_APB2ENR_ADC2EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00441"/>00441 <emphasis role="preprocessor">#define&#32;__ADC3_CLK_ENABLE()&#32;&#32;(RCC-&gt;APB2ENR&#32;|=&#32;(RCC_APB2ENR_ADC3EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00442"/>00442 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00443"/>00443 <emphasis role="preprocessor">#define&#32;__TIM8_CLK_DISABLE()&#32;(RCC-&gt;APB2ENR&#32;&amp;=&#32;~(RCC_APB2ENR_TIM8EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00444"/>00444 <emphasis role="preprocessor">#define&#32;__ADC2_CLK_DISABLE()&#32;(RCC-&gt;APB2ENR&#32;&amp;=&#32;~(RCC_APB2ENR_ADC2EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00445"/>00445 <emphasis role="preprocessor">#define&#32;__ADC3_CLK_DISABLE()&#32;(RCC-&gt;APB2ENR&#32;&amp;=&#32;~(RCC_APB2ENR_ADC3EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00446"/>00446 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!(STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00447"/>00447 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00448"/>00448 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00449"/>00449 <emphasis role="preprocessor">#define&#32;__SPI5_CLK_ENABLE()&#32;&#32;(RCC-&gt;APB2ENR&#32;|=&#32;(RCC_APB2ENR_SPI5EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00450"/>00450 <emphasis role="preprocessor">#define&#32;__SPI6_CLK_ENABLE()&#32;&#32;(RCC-&gt;APB2ENR&#32;|=&#32;(RCC_APB2ENR_SPI6EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00451"/>00451 <emphasis role="preprocessor">#define&#32;__SAI1_CLK_ENABLE()&#32;&#32;(RCC-&gt;APB2ENR&#32;|=&#32;(RCC_APB2ENR_SAI1EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00452"/>00452 <emphasis role="preprocessor">#define&#32;__LTDC_CLK_ENABLE()&#32;&#32;(RCC-&gt;APB2ENR&#32;|=&#32;(RCC_APB2ENR_LTDCEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00453"/>00453 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00454"/>00454 <emphasis role="preprocessor">#define&#32;__SPI5_CLK_DISABLE()&#32;(RCC-&gt;APB2ENR&#32;&amp;=&#32;~(RCC_APB2ENR_SPI5EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00455"/>00455 <emphasis role="preprocessor">#define&#32;__SPI6_CLK_DISABLE()&#32;(RCC-&gt;APB2ENR&#32;&amp;=&#32;~(RCC_APB2ENR_SPI6EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00456"/>00456 <emphasis role="preprocessor">#define&#32;__SAI1_CLK_DISABLE()&#32;(RCC-&gt;APB2ENR&#32;&amp;=&#32;~(RCC_APB2ENR_SAI1EN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00457"/>00457 <emphasis role="preprocessor">#define&#32;__LTDC_CLK_DISABLE()&#32;(RCC-&gt;APB2ENR&#32;&amp;=&#32;~(RCC_APB2ENR_LTDCEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00458"/>00458 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00459"/>00459 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00462"/>00462 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00463"/>00463 <emphasis role="preprocessor">#define&#32;__GPIOF_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1RSTR&#32;|=&#32;(RCC_AHB1RSTR_GPIOFRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00464"/>00464 <emphasis role="preprocessor">#define&#32;__GPIOG_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1RSTR&#32;|=&#32;(RCC_AHB1RSTR_GPIOGRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00465"/>00465 <emphasis role="preprocessor">#define&#32;__GPIOI_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1RSTR&#32;|=&#32;(RCC_AHB1RSTR_GPIOIRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00466"/>00466 <emphasis role="preprocessor">#define&#32;__ETHMAC_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;AHB1RSTR&#32;|=&#32;(RCC_AHB1RSTR_ETHMACRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00467"/>00467 <emphasis role="preprocessor">#define&#32;__OTGHS_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1RSTR&#32;|=&#32;(RCC_AHB1RSTR_OTGHRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00468"/>00468 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00469"/>00469 <emphasis role="preprocessor">#define&#32;__GPIOF_RELEASE_RESET()&#32;&#32;(RCC-&gt;AHB1RSTR&#32;&amp;=&#32;~(RCC_AHB1RSTR_GPIOFRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00470"/>00470 <emphasis role="preprocessor">#define&#32;__GPIOG_RELEASE_RESET()&#32;&#32;(RCC-&gt;AHB1RSTR&#32;&amp;=&#32;~(RCC_AHB1RSTR_GPIOGRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00471"/>00471 <emphasis role="preprocessor">#define&#32;__GPIOI_RELEASE_RESET()&#32;&#32;(RCC-&gt;AHB1RSTR&#32;&amp;=&#32;~(RCC_AHB1RSTR_GPIOIRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00472"/>00472 <emphasis role="preprocessor">#define&#32;__ETHMAC_RELEASE_RESET()&#32;(RCC-&gt;AHB1RSTR&#32;&amp;=&#32;~(RCC_AHB1RSTR_ETHMACRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00473"/>00473 <emphasis role="preprocessor">#define&#32;__OTGHS_RELEASE_RESET()&#32;&#32;(RCC-&gt;AHB1RSTR&#32;&amp;=&#32;~(RCC_AHB1RSTR_OTGHRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00474"/>00474 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00475"/>00475 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00476"/>00476 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00477"/>00477 <emphasis role="preprocessor">#define&#32;__GPIOJ_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1RSTR&#32;|=&#32;(RCC_AHB1RSTR_GPIOJRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00478"/>00478 <emphasis role="preprocessor">#define&#32;__GPIOK_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1RSTR&#32;|=&#32;(RCC_AHB1RSTR_GPIOKRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00479"/>00479 <emphasis role="preprocessor">#define&#32;__DMA2D_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1RSTR&#32;|=&#32;(RCC_AHB1RSTR_DMA2DRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00480"/>00480 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00481"/>00481 <emphasis role="preprocessor">#define&#32;__GPIOJ_RELEASE_RESET()&#32;&#32;(RCC-&gt;AHB1RSTR&#32;&amp;=&#32;~(RCC_AHB1RSTR_GPIOJRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00482"/>00482 <emphasis role="preprocessor">#define&#32;__GPIOK_RELEASE_RESET()&#32;&#32;(RCC-&gt;AHB1RSTR&#32;&amp;=&#32;~(RCC_AHB1RSTR_GPIOKRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00483"/>00483 <emphasis role="preprocessor">#define&#32;__DMA2D_RELEASE_RESET()&#32;&#32;(RCC-&gt;AHB1RSTR&#32;&amp;=&#32;~(RCC_AHB1RSTR_DMA2DRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00484"/>00484 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00485"/>00485 &#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00488"/>00488 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00489"/>00489 <emphasis role="preprocessor">#define&#32;__DCMI_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;AHB2RSTR&#32;|=&#32;(RCC_AHB2RSTR_DCMIRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00490"/>00490 <emphasis role="preprocessor">#define&#32;__DCMI_RELEASE_RESET()&#32;(RCC-&gt;AHB2RSTR&#32;&amp;=&#32;~(RCC_AHB2RSTR_DCMIRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00491"/>00491 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00492"/>00492 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00493"/>00493 <emphasis role="preprocessor">#if&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F437xx)||&#32;defined(STM32F439xx)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00494"/>00494 <emphasis role="preprocessor">#define&#32;__CRYP_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;AHB2RSTR&#32;|=&#32;(RCC_AHB2RSTR_CRYPRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00495"/>00495 <emphasis role="preprocessor">#define&#32;__HASH_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;AHB2RSTR&#32;|=&#32;(RCC_AHB2RSTR_HASHRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00496"/>00496 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00497"/>00497 <emphasis role="preprocessor">#define&#32;__CRYP_RELEASE_RESET()&#32;(RCC-&gt;AHB2RSTR&#32;&amp;=&#32;~(RCC_AHB2RSTR_CRYPRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00498"/>00498 <emphasis role="preprocessor">#define&#32;__HASH_RELEASE_RESET()&#32;(RCC-&gt;AHB2RSTR&#32;&amp;=&#32;~(RCC_AHB2RSTR_HASHRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00499"/>00499 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00500"/>00500 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F415xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00501"/>00501 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00504"/>00504 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)||&#32;defined(STM32F417xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00505"/>00505 <emphasis role="preprocessor">#define&#32;__FSMC_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;AHB3RSTR&#32;|=&#32;(RCC_AHB3RSTR_FSMCRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00506"/>00506 <emphasis role="preprocessor">#define&#32;__FSMC_RELEASE_RESET()&#32;(RCC-&gt;AHB3RSTR&#32;&amp;=&#32;~(RCC_AHB3RSTR_FSMCRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00507"/>00507 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00508"/>00508 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00509"/>00509 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00510"/>00510 <emphasis role="preprocessor">#define&#32;__FMC_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;AHB3RSTR&#32;|=&#32;(RCC_AHB3RSTR_FMCRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00511"/>00511 <emphasis role="preprocessor">#define&#32;__FMC_RELEASE_RESET()&#32;&#32;(RCC-&gt;AHB3RSTR&#32;&amp;=&#32;~(RCC_AHB3RSTR_FMCRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00512"/>00512 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00513"/>00513 &#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00516"/>00516 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00517"/>00517 <emphasis role="preprocessor">#define&#32;__TIM6_FORCE_RESET()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_TIM6RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00518"/>00518 <emphasis role="preprocessor">#define&#32;__TIM7_FORCE_RESET()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_TIM7RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00519"/>00519 <emphasis role="preprocessor">#define&#32;__TIM12_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_TIM12RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00520"/>00520 <emphasis role="preprocessor">#define&#32;__TIM13_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_TIM13RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00521"/>00521 <emphasis role="preprocessor">#define&#32;__TIM14_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_TIM14RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00522"/>00522 <emphasis role="preprocessor">#define&#32;__USART3_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_USART3RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00523"/>00523 <emphasis role="preprocessor">#define&#32;__UART4_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_UART4RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00524"/>00524 <emphasis role="preprocessor">#define&#32;__UART5_FORCE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_UART5RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00525"/>00525 <emphasis role="preprocessor">#define&#32;__CAN1_FORCE_RESET()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_CAN1RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00526"/>00526 <emphasis role="preprocessor">#define&#32;__CAN2_FORCE_RESET()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_CAN2RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00527"/>00527 <emphasis role="preprocessor">#define&#32;__DAC_FORCE_RESET()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_DACRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00528"/>00528 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00529"/>00529 <emphasis role="preprocessor">#define&#32;__TIM6_RELEASE_RESET()&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_TIM6RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00530"/>00530 <emphasis role="preprocessor">#define&#32;__TIM7_RELEASE_RESET()&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_TIM7RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00531"/>00531 <emphasis role="preprocessor">#define&#32;__TIM12_RELEASE_RESET()&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_TIM12RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00532"/>00532 <emphasis role="preprocessor">#define&#32;__TIM13_RELEASE_RESET()&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_TIM13RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00533"/>00533 <emphasis role="preprocessor">#define&#32;__TIM14_RELEASE_RESET()&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_TIM14RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00534"/>00534 <emphasis role="preprocessor">#define&#32;__USART3_RELEASE_RESET()&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_USART3RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00535"/>00535 <emphasis role="preprocessor">#define&#32;__UART4_RELEASE_RESET()&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_UART4RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00536"/>00536 <emphasis role="preprocessor">#define&#32;__UART5_RELEASE_RESET()&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_UART5RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00537"/>00537 <emphasis role="preprocessor">#define&#32;__CAN1_RELEASE_RESET()&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_CAN1RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00538"/>00538 <emphasis role="preprocessor">#define&#32;__CAN2_RELEASE_RESET()&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_CAN2RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00539"/>00539 <emphasis role="preprocessor">#define&#32;__DAC_RELEASE_RESET()&#32;&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_DACRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00540"/>00540 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00541"/>00541 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00542"/>00542 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00543"/>00543 <emphasis role="preprocessor">#define&#32;__UART7_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_UART7RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00544"/>00544 <emphasis role="preprocessor">#define&#32;__UART8_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;APB1RSTR&#32;|=&#32;(RCC_APB1RSTR_UART8RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00545"/>00545 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00546"/>00546 <emphasis role="preprocessor">#define&#32;__UART7_RELEASE_RESET()&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_UART7RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00547"/>00547 <emphasis role="preprocessor">#define&#32;__UART8_RELEASE_RESET()&#32;(RCC-&gt;APB1RSTR&#32;&amp;=&#32;~(RCC_APB1RSTR_UART8RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00548"/>00548 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00549"/>00549 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00552"/>00552 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00553"/>00553 <emphasis role="preprocessor">#define&#32;__TIM8_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;APB2RSTR&#32;|=&#32;(RCC_APB2RSTR_TIM8RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00554"/>00554 <emphasis role="preprocessor">#define&#32;__TIM8_RELEASE_RESET()&#32;(RCC-&gt;APB2RSTR&#32;&amp;=&#32;~(RCC_APB2RSTR_TIM8RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00555"/>00555 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00556"/>00556 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00557"/>00557 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00558"/>00558 <emphasis role="preprocessor">#define&#32;__SPI5_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;APB2RSTR&#32;|=&#32;(RCC_APB2RSTR_SPI5RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00559"/>00559 <emphasis role="preprocessor">#define&#32;__SPI6_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;APB2RSTR&#32;|=&#32;(RCC_APB2RSTR_SPI6RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00560"/>00560 <emphasis role="preprocessor">#define&#32;__SAI1_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;APB2RSTR&#32;|=&#32;(RCC_APB2RSTR_SAI1RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00561"/>00561 <emphasis role="preprocessor">#define&#32;__LTDC_FORCE_RESET()&#32;&#32;&#32;(RCC-&gt;APB2RSTR&#32;|=&#32;(RCC_APB2RSTR_LTDCRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00562"/>00562 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00563"/>00563 <emphasis role="preprocessor">#define&#32;__SPI5_RELEASE_RESET()&#32;(RCC-&gt;APB2RSTR&#32;&amp;=&#32;~(RCC_APB2RSTR_SPI5RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00564"/>00564 <emphasis role="preprocessor">#define&#32;__SPI6_RELEASE_RESET()&#32;(RCC-&gt;APB2RSTR&#32;&amp;=&#32;~(RCC_APB2RSTR_SPI6RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00565"/>00565 <emphasis role="preprocessor">#define&#32;__SAI1_RELEASE_RESET()&#32;(RCC-&gt;APB2RSTR&#32;&amp;=&#32;~(RCC_APB2RSTR_SAI1RST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00566"/>00566 <emphasis role="preprocessor">#define&#32;__LTDC_RELEASE_RESET()&#32;(RCC-&gt;APB2RSTR&#32;&amp;=&#32;~(RCC_APB2RSTR_LTDCRST))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00567"/>00567 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00568"/>00568 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00569"/>00569 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00576"/>00576 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00577"/>00577 <emphasis role="preprocessor">#define&#32;__GPIOF_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_GPIOFLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00578"/>00578 <emphasis role="preprocessor">#define&#32;__GPIOG_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_GPIOGLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00579"/>00579 <emphasis role="preprocessor">#define&#32;__GPIOI_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_GPIOILPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00580"/>00580 <emphasis role="preprocessor">#define&#32;__SRAM2_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_SRAM2LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00581"/>00581 <emphasis role="preprocessor">#define&#32;__ETHMAC_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_ETHMACLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00582"/>00582 <emphasis role="preprocessor">#define&#32;__ETHMACTX_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_ETHMACTXLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00583"/>00583 <emphasis role="preprocessor">#define&#32;__ETHMACRX_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_ETHMACRXLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00584"/>00584 <emphasis role="preprocessor">#define&#32;__ETHMACPTP_CLK_SLEEP_ENABLE()&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_ETHMACPTPLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00585"/>00585 <emphasis role="preprocessor">#define&#32;__OTGHS_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_OTGHSLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00586"/>00586 <emphasis role="preprocessor">#define&#32;__OTGHSULPI_CLK_SLEEP_ENABLE()&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_OTGHSULPILPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00587"/>00587 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00588"/>00588 <emphasis role="preprocessor">#define&#32;__GPIOF_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_GPIOFLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00589"/>00589 <emphasis role="preprocessor">#define&#32;__GPIOG_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_GPIOGLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00590"/>00590 <emphasis role="preprocessor">#define&#32;__GPIOI_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_GPIOILPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00591"/>00591 <emphasis role="preprocessor">#define&#32;__SRAM2_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_SRAM2LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00592"/>00592 <emphasis role="preprocessor">#define&#32;__ETHMAC_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_ETHMACLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00593"/>00593 <emphasis role="preprocessor">#define&#32;__ETHMACTX_CLK_SLEEP_DISABLE()&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_ETHMACTXLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00594"/>00594 <emphasis role="preprocessor">#define&#32;__ETHMACRX_CLK_SLEEP_DISABLE()&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_ETHMACRXLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00595"/>00595 <emphasis role="preprocessor">#define&#32;__ETHMACPTP_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_ETHMACPTPLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00596"/>00596 <emphasis role="preprocessor">#define&#32;__OTGHS_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_OTGHSLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00597"/>00597 <emphasis role="preprocessor">#define&#32;__OTGHSULPI_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_OTGHSULPILPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00598"/>00598 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00599"/>00599 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00600"/>00600 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00601"/>00601 <emphasis role="preprocessor">#define&#32;__GPIOJ_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_GPIOJLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00602"/>00602 <emphasis role="preprocessor">#define&#32;__GPIOK_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_GPIOKLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00603"/>00603 <emphasis role="preprocessor">#define&#32;__SRAM3_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_SRAM3LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00604"/>00604 <emphasis role="preprocessor">#define&#32;__DMA2D_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;|=&#32;(RCC_AHB1LPENR_DMA2DLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00605"/>00605 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00606"/>00606 <emphasis role="preprocessor">#define&#32;__GPIOJ_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_GPIOJLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00607"/>00607 <emphasis role="preprocessor">#define&#32;__GPIOK_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_GPIOKLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00608"/>00608 <emphasis role="preprocessor">#define&#32;__DMA2D_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;AHB1LPENR&#32;&amp;=&#32;~(RCC_AHB1LPENR_DMA2DLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00609"/>00609 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00610"/>00610 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00617"/>00617 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00618"/>00618 <emphasis role="preprocessor">#define&#32;__DCMI_CLK_SLEEP_ENABLE()&#32;&#32;(RCC-&gt;AHB2LPENR&#32;|=&#32;(RCC_AHB2LPENR_DCMILPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00619"/>00619 <emphasis role="preprocessor">#define&#32;__DCMI_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;AHB2LPENR&#32;&amp;=&#32;~(RCC_AHB2LPENR_DCMILPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00620"/>00620 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00621"/>00621 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00622"/>00622 <emphasis role="preprocessor">#if&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F437xx)||&#32;defined(STM32F439xx)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00623"/>00623 <emphasis role="preprocessor">#define&#32;__CRYP_CLK_SLEEP_ENABLE()&#32;&#32;(RCC-&gt;AHB2LPENR&#32;|=&#32;(RCC_AHB2LPENR_CRYPLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00624"/>00624 <emphasis role="preprocessor">#define&#32;__HASH_CLK_SLEEP_ENABLE()&#32;&#32;(RCC-&gt;AHB2LPENR&#32;|=&#32;(RCC_AHB2LPENR_HASHLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00625"/>00625 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00626"/>00626 <emphasis role="preprocessor">#define&#32;__CRYP_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;AHB2LPENR&#32;&amp;=&#32;~(RCC_AHB2LPENR_CRYPLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00627"/>00627 <emphasis role="preprocessor">#define&#32;__HASH_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;AHB2LPENR&#32;&amp;=&#32;~(RCC_AHB2LPENR_HASHLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00628"/>00628 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00629"/>00629 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F415xx&#32;||&#32;STM32F417xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00630"/>00630 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00637"/>00637 <emphasis role="preprocessor">#if&#32;defined(STM32F405xx)&#32;||&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F407xx)||&#32;defined(STM32F417xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00638"/>00638 <emphasis role="preprocessor">#define&#32;__FSMC_CLK_SLEEP_ENABLE()&#32;&#32;(RCC-&gt;AHB3LPENR&#32;|=&#32;(RCC_AHB3LPENR_FSMCLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00639"/>00639 <emphasis role="preprocessor">#define&#32;__FSMC_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;AHB3LPENR&#32;&amp;=&#32;~(RCC_AHB3LPENR_FSMCLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00640"/>00640 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F405xx&#32;||&#32;STM32F415xx&#32;||&#32;STM32F407xx&#32;||&#32;STM32F417xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00641"/>00641 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00642"/>00642 <emphasis role="preprocessor">#if&#32;defined(STM32F415xx)&#32;||&#32;defined(STM32F417xx)&#32;||&#32;defined(STM32F437xx)||&#32;defined(STM32F439xx)&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00643"/>00643 <emphasis role="preprocessor">#define&#32;__FMC_CLK_SLEEP_ENABLE()&#32;&#32;(RCC-&gt;AHB3LPENR&#32;|=&#32;(RCC_AHB3LPENR_FMCLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00644"/>00644 <emphasis role="preprocessor">#define&#32;__FMC_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;AHB3LPENR&#32;&amp;=&#32;~(RCC_AHB3LPENR_FMCLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00645"/>00645 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00646"/>00646 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00653"/>00653 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00654"/>00654 <emphasis role="preprocessor">#define&#32;__TIM6_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_TIM6LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00655"/>00655 <emphasis role="preprocessor">#define&#32;__TIM7_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_TIM7LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00656"/>00656 <emphasis role="preprocessor">#define&#32;__TIM12_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_TIM12LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00657"/>00657 <emphasis role="preprocessor">#define&#32;__TIM13_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_TIM13LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00658"/>00658 <emphasis role="preprocessor">#define&#32;__TIM14_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_TIM14LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00659"/>00659 <emphasis role="preprocessor">#define&#32;__USART3_CLK_SLEEP_ENABLE()&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_USART3LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00660"/>00660 <emphasis role="preprocessor">#define&#32;__UART4_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_UART4LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00661"/>00661 <emphasis role="preprocessor">#define&#32;__UART5_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_UART5LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00662"/>00662 <emphasis role="preprocessor">#define&#32;__CAN1_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_CAN1LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00663"/>00663 <emphasis role="preprocessor">#define&#32;__CAN2_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_CAN2LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00664"/>00664 <emphasis role="preprocessor">#define&#32;__DAC_CLK_SLEEP_ENABLE()&#32;&#32;&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_DACLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00665"/>00665 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00666"/>00666 <emphasis role="preprocessor">#define&#32;__TIM6_CLK_SLEEP_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_TIM6LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00667"/>00667 <emphasis role="preprocessor">#define&#32;__TIM7_CLK_SLEEP_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_TIM7LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00668"/>00668 <emphasis role="preprocessor">#define&#32;__TIM12_CLK_SLEEP_DISABLE()&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_TIM12LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00669"/>00669 <emphasis role="preprocessor">#define&#32;__TIM13_CLK_SLEEP_DISABLE()&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_TIM13LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00670"/>00670 <emphasis role="preprocessor">#define&#32;__TIM14_CLK_SLEEP_DISABLE()&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_TIM14LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00671"/>00671 <emphasis role="preprocessor">#define&#32;__USART3_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_USART3LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00672"/>00672 <emphasis role="preprocessor">#define&#32;__UART4_CLK_SLEEP_DISABLE()&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_UART4LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00673"/>00673 <emphasis role="preprocessor">#define&#32;__UART5_CLK_SLEEP_DISABLE()&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_UART5LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00674"/>00674 <emphasis role="preprocessor">#define&#32;__CAN1_CLK_SLEEP_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_CAN1LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00675"/>00675 <emphasis role="preprocessor">#define&#32;__CAN2_CLK_SLEEP_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_CAN2LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00676"/>00676 <emphasis role="preprocessor">#define&#32;__DAC_CLK_SLEEP_DISABLE()&#32;&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_DACLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00677"/>00677 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00678"/>00678 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00679"/>00679 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00680"/>00680 <emphasis role="preprocessor">#define&#32;__UART7_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_UART7LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00681"/>00681 <emphasis role="preprocessor">#define&#32;__UART8_CLK_SLEEP_ENABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;|=&#32;(RCC_APB1LPENR_UART8LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00682"/>00682 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00683"/>00683 <emphasis role="preprocessor">#define&#32;__UART7_CLK_SLEEP_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_UART7LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00684"/>00684 <emphasis role="preprocessor">#define&#32;__UART8_CLK_SLEEP_DISABLE()&#32;&#32;&#32;(RCC-&gt;APB1LPENR&#32;&amp;=&#32;~(RCC_APB1LPENR_UART8LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00685"/>00685 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00686"/>00686 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00693"/>00693 <emphasis role="preprocessor">#if&#32;!defined(STM32F401xC)&#32;&amp;&amp;&#32;!defined(STM32F401xE)&#32;&#32;</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00694"/>00694 <emphasis role="preprocessor">#define&#32;__TIM8_CLK_SLEEP_ENABLE()&#32;(RCC-&gt;APB2LPENR&#32;|=&#32;(RCC_APB2LPENR_TIM8LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00695"/>00695 <emphasis role="preprocessor">#define&#32;__ADC2_CLK_SLEEP_ENABLE()&#32;(RCC-&gt;APB2LPENR&#32;|=&#32;(RCC_APB2LPENR_ADC2LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00696"/>00696 <emphasis role="preprocessor">#define&#32;__ADC3_CLK_SLEEP_ENABLE()&#32;(RCC-&gt;APB2LPENR&#32;|=&#32;(RCC_APB2LPENR_ADC3LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00697"/>00697 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00698"/>00698 <emphasis role="preprocessor">#define&#32;__TIM8_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;APB2LPENR&#32;&amp;=&#32;~(RCC_APB2LPENR_TIM8LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00699"/>00699 <emphasis role="preprocessor">#define&#32;__ADC2_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;APB2LPENR&#32;&amp;=&#32;~(RCC_APB2LPENR_ADC2LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00700"/>00700 <emphasis role="preprocessor">#define&#32;__ADC3_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;APB2LPENR&#32;&amp;=&#32;~(RCC_APB2LPENR_ADC3LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00701"/>00701 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;!STM32F401xC&#32;&amp;&amp;&#32;STM32F401xE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00702"/>00702 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00703"/>00703 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00704"/>00704 <emphasis role="preprocessor">#define&#32;__SPI5_CLK_SLEEP_ENABLE()&#32;(RCC-&gt;APB2LPENR&#32;|=&#32;(RCC_APB2LPENR_SPI5LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00705"/>00705 <emphasis role="preprocessor">#define&#32;__SPI6_CLK_SLEEP_ENABLE()&#32;(RCC-&gt;APB2LPENR&#32;|=&#32;(RCC_APB2LPENR_SPI6LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00706"/>00706 <emphasis role="preprocessor">#define&#32;__SAI1_CLK_SLEEP_ENABLE()&#32;(RCC-&gt;APB2LPENR&#32;|=&#32;(RCC_APB2LPENR_SAI1LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00707"/>00707 <emphasis role="preprocessor">#define&#32;__LTDC_CLK_SLEEP_ENABLE()&#32;(RCC-&gt;APB2LPENR&#32;|=&#32;(RCC_APB2LPENR_LTDCLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00708"/>00708 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00709"/>00709 <emphasis role="preprocessor">#define&#32;__SPI5_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;APB2LPENR&#32;&amp;=&#32;~(RCC_APB2LPENR_SPI5LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00710"/>00710 <emphasis role="preprocessor">#define&#32;__SPI6_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;APB2LPENR&#32;&amp;=&#32;~(RCC_APB2LPENR_SPI6LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00711"/>00711 <emphasis role="preprocessor">#define&#32;__SAI1_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;APB2LPENR&#32;&amp;=&#32;~(RCC_APB2LPENR_SAI1LPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00712"/>00712 <emphasis role="preprocessor">#define&#32;__LTDC_CLK_SLEEP_DISABLE()&#32;(RCC-&gt;APB2LPENR&#32;&amp;=&#32;~(RCC_APB2LPENR_LTDCLPEN))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00713"/>00713 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00714"/>00714 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00715"/>00715 <emphasis role="preprocessor">#if&#32;defined(STM32F427xx)&#32;||&#32;defined(STM32F437xx)&#32;||&#32;defined(STM32F429xx)||&#32;defined(STM32F439xx)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00716"/>00716 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00730"/>00730 <emphasis role="preprocessor">#define&#32;__HAL_RCC_TIMCLKPRESCALER(__PRESC__)&#32;(*(__IO&#32;uint32_t&#32;*)&#32;DCKCFGR_TIMPRE_BB&#32;=&#32;(__PRESC__))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00731"/>00731 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00736"/>00736 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_ENABLE()&#32;(*(__IO&#32;uint32_t&#32;*)&#32;CR_PLLSAION_BB&#32;=&#32;ENABLE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00737"/>00737 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_DISABLE()&#32;(*(__IO&#32;uint32_t&#32;*)&#32;CR_PLLSAION_BB&#32;=&#32;DISABLE)</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00738"/>00738 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00753"/>00753 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_CONFIG(__PLLSAIN__,&#32;__PLLSAIQ__,&#32;__PLLSAIR__)&#32;(RCC-&gt;PLLSAICFGR&#32;=&#32;((__PLLSAIN__)&#32;&lt;&lt;&#32;6)&#32;|&#32;((__PLLSAIQ__)&#32;&lt;&lt;&#32;24)&#32;|&#32;((__PLLSAIR__)&#32;&lt;&lt;&#32;28))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00754"/>00754 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00772"/>00772 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLI2S_SAICLK_CONFIG(__PLLI2SN__,&#32;__PLLI2SQ__,&#32;__PLLI2SR__)&#32;(RCC-&gt;PLLI2SCFGR&#32;=&#32;((__PLLI2SN__)&#32;&lt;&lt;&#32;6)&#32;|&#32;((__PLLI2SQ__)&#32;&lt;&lt;&#32;24)&#32;|&#32;((__PLLI2SR__)&#32;&lt;&lt;&#32;28))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00773"/>00773 &#32;&#32;&#32;&#32;
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00781"/>00781 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLI2S_PLLSAICLKDIVQ_CONFIG(__PLLI2SDivQ__)&#32;(MODIFY_REG(RCC-&gt;DCKCFGR,&#32;RCC_DCKCFGR_PLLI2SDIVQ,&#32;(__PLLI2SDivQ__)-1))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00782"/>00782 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00790"/>00790 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_PLLSAICLKDIVQ_CONFIG(__PLLSAIDivQ__)&#32;(MODIFY_REG(RCC-&gt;DCKCFGR,&#32;RCC_DCKCFGR_PLLSAIDIVQ,&#32;((__PLLSAIDivQ__)-1)&lt;&lt;8))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00791"/>00791 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00800"/>00800 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_PLLSAICLKDIVR_CONFIG(__PLLSAIDivR__)&#32;(MODIFY_REG(RCC-&gt;DCKCFGR,&#32;RCC_DCKCFGR_PLLSAIDIVR,&#32;(__PLLSAIDivR__)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00801"/>00801 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00815"/>00815 <emphasis role="preprocessor">#define&#32;__HAL_RCC_SAI_BLOCKACLKSOURCE_CONFIG(__SOURCE__)&#32;(MODIFY_REG(RCC-&gt;DCKCFGR,&#32;RCC_DCKCFGR_SAI1ASRC,&#32;(__SOURCE__)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00816"/>00816 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00830"/>00830 <emphasis role="preprocessor">#define&#32;__HAL_RCC_SAI_BLOCKBCLKSOURCE_CONFIG(__SOURCE__)&#32;(MODIFY_REG(RCC-&gt;DCKCFGR,&#32;RCC_DCKCFGR_SAI1BSRC,&#32;(__SOURCE__)))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00831"/>00831 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00834"/>00834 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_ENABLE_IT()&#32;(RCC-&gt;CIR&#32;|=&#32;(RCC_CIR_PLLSAIRDYIE))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00835"/>00835 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00838"/>00838 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_DISABLE_IT()&#32;(RCC-&gt;CIR&#32;&amp;=&#32;~(RCC_CIR_PLLSAIRDYIE))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00839"/>00839 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00842"/>00842 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_CLEAR_IT()&#32;(RCC-&gt;CIR&#32;|=&#32;(RCC_CIR_PLLSAIRDYF))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00843"/>00843 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00847"/>00847 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_GET_IT()&#32;((RCC-&gt;CIR&#32;&amp;&#32;(RCC_CIR_PLLSAIRDYIE))&#32;==&#32;(RCC_CIR_PLLSAIRDYIE))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00848"/>00848 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00852"/>00852 <emphasis role="preprocessor">#define&#32;__HAL_RCC_PLLSAI_GET_FLAG()&#32;((RCC-&gt;CR&#32;&amp;&#32;(RCC_CR_PLLSAIRDY))&#32;==&#32;(RCC_CR_PLLSAIRDY))</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00853"/>00853 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00854"/>00854 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;STM32F427xx&#32;||&#32;STM32F437xx&#32;||&#32;STM32F429xx&#32;||&#32;STM32F439xx&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00855"/>00855 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00856"/>00856 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00857"/><link linkend="_group___r_c_c_ex_1ga0c0f61a1e2f47cc81bc43d83ba3e0d95">00857</link> <link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link>&#32;<link linkend="_group___r_c_c_ex_1ga0c0f61a1e2f47cc81bc43d83ba3e0d95">HAL_RCCEx_PeriphCLKConfig</link>(<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link>&#32;&#32;*PeriphClkInit);
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00858"/><link linkend="_group___r_c_c_ex_1ga754fc5136c63ad52b7c459aafc8a3927">00858</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___r_c_c_ex_1ga754fc5136c63ad52b7c459aafc8a3927">HAL_RCCEx_GetPeriphCLKConfig</link>(<link linkend="_struct_r_c_c___periph_c_l_k_init_type_def">RCC_PeriphCLKInitTypeDef</link>&#32;&#32;*PeriphClkInit);
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00859"/>00859 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00868"/>00868 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00869"/>00869 }
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00870"/>00870 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00871"/>00871 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00872"/>00872 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_RCC_EX_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00873"/>00873 
+<anchor xml:id="_stm32f4xx__hal__rcc__ex_8h_source_1l00874"/>00874 <emphasis role="comment">/************************&#32;(C)&#32;COPYRIGHT&#32;STMicroelectronics&#32;*****END&#32;OF&#32;FILE****/</emphasis>
+</programlisting></section>

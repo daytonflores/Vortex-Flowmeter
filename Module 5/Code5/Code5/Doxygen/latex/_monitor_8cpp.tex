@@ -1,0 +1,252 @@
+\hypertarget{_monitor_8cpp}{}\doxysection{src/\+Monitor.cpp File Reference}
+\label{_monitor_8cpp}\index{src/Monitor.cpp@{src/Monitor.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}shared.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pindef.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}DS1631.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_ad66a61ad6998d596fd4c027c9872299b}\label{_monitor_8cpp_ad66a61ad6998d596fd4c027c9872299b}} 
+\#define {\bfseries TEMP\+\_\+\+ADDR}~0x90
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_abc520c0241adbdad9d72ffef0551dee1}\label{_monitor_8cpp_abc520c0241adbdad9d72ffef0551dee1}} 
+DS1631 {\bfseries temp\+\_\+sensor} (I2\+C\+\_\+\+SDA, I2\+C\+\_\+\+SCL, TEMP\+\_\+\+ADDR)
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_ab2f2608605c79f3a730646dd1b89f0d7}\label{_monitor_8cpp_ab2f2608605c79f3a730646dd1b89f0d7}} 
+Serial {\bfseries pc} (UART\+\_\+\+TX, UART\+\_\+\+RX)
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_acd5157b5f415f4ca9be9b2a23943440c}\label{_monitor_8cpp_acd5157b5f415f4ca9be9b2a23943440c}} 
+void {\bfseries set\+\_\+display\+\_\+mode} (void)
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a29be7c30b6929c50ebb985b228fc1be2}\label{_monitor_8cpp_a29be7c30b6929c50ebb985b228fc1be2}} 
+void {\bfseries chk\+\_\+\+UART\+\_\+msg} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item fills a message buffer until return is encountered, then calls message processing 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}{UART\+\_\+msg\+\_\+process}} (void)
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_addd830ea9946a624fae48c1aa78d2430}\label{_monitor_8cpp_addd830ea9946a624fae48c1aa78d2430}} 
+uchar8\+\_\+t {\bfseries is\+\_\+hex} (uchar8\+\_\+t c)
+\item 
+void \mbox{\hyperlink{_monitor_8cpp_a59a4a0c8721f73a8c9d9db5a4cdc6e88}{monitor}} (void)
+\item 
+double \mbox{\hyperlink{_monitor_8cpp_ac0e14d5137523221ce65514297cb5a5e}{get\+\_\+\+Freq}} (uint16\+\_\+t $\ast$samples)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates frequency from 1000 samples using peak detection ~\newline
+ the difference between 2 samples is evaluated for +/-\/ positive = moving down the curve, i.\+e. sample1 is \texorpdfstring{$>$}{>} sample2 negative = moving up the curve, i.\+e. sample1 is \texorpdfstring{$<$}{<} sample2 when a difference in dir is found, we have crossed a peak / trough when the peak is found, the index (sample \#) is stored difference between the two peaks sample \# is the taken as the period divide period by sample rate to get signal frequency 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_monitor_8cpp_a127940820f4887ddd4da97ecb4f5c8e5}{get\+\_\+\+Density}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates density using measured temperature 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_monitor_8cpp_a3fd3bc9f3ba20676d4939abe936331ef}{get\+\_\+\+Viscosity}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates viscosity using measured temperature 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_monitor_8cpp_abaab0a2582de5d052885e743b4b2965a}{get\+\_\+\+Re}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates Re number using the calulated Density and Viscosity 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_monitor_8cpp_a3ded8268380fe641ee3db1ad5082ca1e}{get\+\_\+\+St}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates St number using the calulated Reynolds Number ~\newline
+ 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_monitor_8cpp_af7e6a3e6a5f7088d173f6c1e473ecd9f}{get\+\_\+\+Vel}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates velocity from calculated frequency and St number equation is iterative requires $\sim$3 runs for velocity to converge 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_monitor_8cpp_a225f5c2bf3825c4445e26bf0967790ef}{get\+\_\+\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item calculates flow using calculated velocity 
+\end{DoxyItemize}\end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_monitor_8cpp_a765ac62eecfcdb1ab1f32bbb88c35fec}\label{_monitor_8cpp_a765ac62eecfcdb1ab1f32bbb88c35fec}} 
+void {\bfseries get\+\_\+temp} (void)
+\begin{DoxyCompactList}\small\item\em 
+\begin{DoxyItemize}
+\item reads temp from I2C sensor, sets global temp variable 
+\end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a62a5f65b5c3506444b4e8de3f874a93a}\label{_monitor_8cpp_a62a5f65b5c3506444b4e8de3f874a93a}} 
+const int {\bfseries NUM\+\_\+\+OF\+\_\+\+REG} = 16
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}\label{_monitor_8cpp_a9fb78358ae4b0a049a0d1b37dc4cffec}} 
+double {\bfseries temp}
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a26aea75a25190af8d4bebf654888935d}\label{_monitor_8cpp_a26aea75a25190af8d4bebf654888935d}} 
+double {\bfseries freq}
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_accacf4e9263030d70ed79f8516c0eac5}\label{_monitor_8cpp_accacf4e9263030d70ed79f8516c0eac5}} 
+double {\bfseries velocity} = 1
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_afd9eccb31edd19248dfa14f93fc38a61}\label{_monitor_8cpp_afd9eccb31edd19248dfa14f93fc38a61}} 
+double {\bfseries flow}
+\item 
+\mbox{\Hypertarget{_monitor_8cpp_a8479d5f9cbd9236b222afc0946d80c44}\label{_monitor_8cpp_a8479d5f9cbd9236b222afc0946d80c44}} 
+int {\bfseries vel\+\_\+cnt} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+
+
+\DoxyHorRuler{0}
+ -- ECEN 5803 Mastering Embedded System Architecture -- -- Project 1 Module 5 -- -- Microcontroller Firmware -- -- \mbox{\hyperlink{_monitor_8cpp}{Monitor.\+cpp}} -- \hypertarget{_monitor_8cpp_autotoc_md6}{}\doxysubsubsection{–                                                                           –}\label{_monitor_8cpp_autotoc_md6}
+-- \hypertarget{_monitor_8cpp_autotoc_md7}{}\doxysubsubsection{–  Designed for\+:  University of Colorado at Boulder}\label{_monitor_8cpp_autotoc_md7}
+-- ~\newline
+ -- Designed by\+: Tim Scherr \hypertarget{_monitor_8cpp_autotoc_md8}{}\doxysubsubsection{–  Revised by\+:  Mark Sherman}\label{_monitor_8cpp_autotoc_md8}
+-- Version\+: 2.\+0 -- Date of current revision\+: 2022-\/07-\/09 ~\newline
+ -- Target Microcontroller\+: ST STM32\+F401\+RE -- Tools used\+: ARM mbed compiler -- ARM mbed SDK \hypertarget{_monitor_8cpp_autotoc_md9}{}\doxysubsubsection{–              ST Nucleo STM32\+F401\+RE Board}\label{_monitor_8cpp_autotoc_md9}
+-- \hypertarget{_monitor_8cpp_autotoc_md10}{}\doxysubsubsection{Functional Description\+: See below}\label{_monitor_8cpp_autotoc_md10}
+\hypertarget{_monitor_8cpp_autotoc_md11}{}\doxysubsubsection{–      Copyright (c) 2015, 2022 Tim Scherr All rights reserved.}\label{_monitor_8cpp_autotoc_md11}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_monitor_8cpp_a127940820f4887ddd4da97ecb4f5c8e5}\label{_monitor_8cpp_a127940820f4887ddd4da97ecb4f5c8e5}} 
+\index{Monitor.cpp@{Monitor.cpp}!get\_Density@{get\_Density}}
+\index{get\_Density@{get\_Density}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_Density()}{get\_Density()}}
+{\footnotesize\ttfamily double get\+\_\+\+Density (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates density using measured temperature 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, density, in kg/(m$^\wedge$3) ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monitor_8cpp_a225f5c2bf3825c4445e26bf0967790ef}\label{_monitor_8cpp_a225f5c2bf3825c4445e26bf0967790ef}} 
+\index{Monitor.cpp@{Monitor.cpp}!get\_Flow@{get\_Flow}}
+\index{get\_Flow@{get\_Flow}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_Flow()}{get\_Flow()}}
+{\footnotesize\ttfamily double get\+\_\+\+Flow (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates flow using calculated velocity 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, flow rate in gallons/min 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monitor_8cpp_ac0e14d5137523221ce65514297cb5a5e}\label{_monitor_8cpp_ac0e14d5137523221ce65514297cb5a5e}} 
+\index{Monitor.cpp@{Monitor.cpp}!get\_Freq@{get\_Freq}}
+\index{get\_Freq@{get\_Freq}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_Freq()}{get\_Freq()}}
+{\footnotesize\ttfamily double get\+\_\+\+Freq (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{samples }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates frequency from 1000 samples using peak detection ~\newline
+ the difference between 2 samples is evaluated for +/-\/ positive = moving down the curve, i.\+e. sample1 is \texorpdfstring{$>$}{>} sample2 negative = moving up the curve, i.\+e. sample1 is \texorpdfstring{$<$}{<} sample2 when a difference in dir is found, we have crossed a peak / trough when the peak is found, the index (sample \#) is stored difference between the two peaks sample \# is the taken as the period divide period by sample rate to get signal frequency 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint16\+\_\+t$\ast$} & samples -\/ pointer to array of samples \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ double, calculated frequency in Hz 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monitor_8cpp_abaab0a2582de5d052885e743b4b2965a}\label{_monitor_8cpp_abaab0a2582de5d052885e743b4b2965a}} 
+\index{Monitor.cpp@{Monitor.cpp}!get\_Re@{get\_Re}}
+\index{get\_Re@{get\_Re}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_Re()}{get\_Re()}}
+{\footnotesize\ttfamily double get\+\_\+\+Re (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates Re number using the calulated Density and Viscosity 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, Reynolds number, unitless 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monitor_8cpp_a3ded8268380fe641ee3db1ad5082ca1e}\label{_monitor_8cpp_a3ded8268380fe641ee3db1ad5082ca1e}} 
+\index{Monitor.cpp@{Monitor.cpp}!get\_St@{get\_St}}
+\index{get\_St@{get\_St}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_St()}{get\_St()}}
+{\footnotesize\ttfamily double get\+\_\+\+St (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates St number using the calulated Reynolds Number ~\newline
+ 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, St number, unitless 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monitor_8cpp_af7e6a3e6a5f7088d173f6c1e473ecd9f}\label{_monitor_8cpp_af7e6a3e6a5f7088d173f6c1e473ecd9f}} 
+\index{Monitor.cpp@{Monitor.cpp}!get\_Vel@{get\_Vel}}
+\index{get\_Vel@{get\_Vel}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_Vel()}{get\_Vel()}}
+{\footnotesize\ttfamily double get\+\_\+\+Vel (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates velocity from calculated frequency and St number equation is iterative requires $\sim$3 runs for velocity to converge 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+-\/ double, velocity in in/s 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monitor_8cpp_a3fd3bc9f3ba20676d4939abe936331ef}\label{_monitor_8cpp_a3fd3bc9f3ba20676d4939abe936331ef}} 
+\index{Monitor.cpp@{Monitor.cpp}!get\_Viscosity@{get\_Viscosity}}
+\index{get\_Viscosity@{get\_Viscosity}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_Viscosity()}{get\_Viscosity()}}
+{\footnotesize\ttfamily double get\+\_\+\+Viscosity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+
+\begin{DoxyItemize}
+\item calculates viscosity using measured temperature 
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+double -\/ viscosity in kg/(m$^\wedge$3) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_monitor_8cpp_a59a4a0c8721f73a8c9d9db5a4cdc6e88}\label{_monitor_8cpp_a59a4a0c8721f73a8c9d9db5a4cdc6e88}} 
+\index{Monitor.cpp@{Monitor.cpp}!monitor@{monitor}}
+\index{monitor@{monitor}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{monitor()}{monitor()}}
+{\footnotesize\ttfamily void monitor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+/ ARM Register View / Reads value from Registers 0-\/15 and outputs the 2 LSB via pc.\+printf;\mbox{\Hypertarget{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}\label{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}} 
+\index{Monitor.cpp@{Monitor.cpp}!UART\_msg\_process@{UART\_msg\_process}}
+\index{UART\_msg\_process@{UART\_msg\_process}!Monitor.cpp@{Monitor.cpp}}
+\doxysubsubsection{\texorpdfstring{UART\_msg\_process()}{UART\_msg\_process()}}
+{\footnotesize\ttfamily void UART\+\_\+msg\+\_\+process (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+UART Input Message Processing 

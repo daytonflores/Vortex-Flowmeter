@@ -1,0 +1,138 @@
+\hypertarget{namespacembed}{}\doxysection{mbed Namespace Reference}
+\label{namespacembed}\index{mbed@{mbed}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_bus_in}{Bus\+In}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_bus_in_out}{Bus\+In\+Out}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_bus_out}{Bus\+Out}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_call_chain}{Call\+Chain}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_digital_in}{Digital\+In}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_digital_in_out}{Digital\+In\+Out}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_digital_out}{Digital\+Out}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_dir_handle}{Dir\+Handle}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_file_base}{File\+Base}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_file_handle}{File\+Handle}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_file_like}{File\+Like}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_file_path}{File\+Path}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_file_system_like}{File\+System\+Like}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_interrupt_manager}{Interrupt\+Manager}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_stream}{Stream}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_ticker}{Ticker}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_timeout}{Timeout}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_timer}{Timer}}
+\item 
+class \mbox{\hyperlink{classmbed_1_1_timer_event}{Timer\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}} $\ast$ \mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}{pvoidf\+\_\+t}}) (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3}{Path\+Type}} \{ \mbox{\hyperlink{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3ac72ec0315dfe0bc41a4e41f003f1670d}{File\+Path\+Type}}
+, \mbox{\hyperlink{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3af359b3ca7c5542cce8a207e27b2a923e}{File\+System\+Path\+Type}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}\label{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}} 
+\index{mbed@{mbed}!pFunctionPointer\_t@{pFunctionPointer\_t}}
+\index{pFunctionPointer\_t@{pFunctionPointer\_t}!mbed@{mbed}}
+\doxysubsubsection{\texorpdfstring{pFunctionPointer\_t}{pFunctionPointer\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}}$\ast$ \mbox{\hyperlink{namespacembed_a73eeab55d4f68e1d4d56aafc3ad1b505}{p\+Function\+Pointer\+\_\+t}}}
+
+Group one or more functions in an instance of a \mbox{\hyperlink{classmbed_1_1_call_chain}{Call\+Chain}}, then call them in sequence using \mbox{\hyperlink{classmbed_1_1_call_chain_aba7af6b502e464074d3c31ff9236a22c}{Call\+Chain\+::call()}}. Used mostly by the interrupt chaining code, but can be used for other purposes.
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mbed_8h}{mbed.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classmbed_1_1_call_chain}{CallChain}} chain;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} first(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}'first' function.\(\backslash\)n"{}});}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} second(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}'second' function.\(\backslash\)n"{}});}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }Test \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} f(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}A::f (class member).\(\backslash\)n"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}() \{}
+\DoxyCodeLine{    Test test;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    chain.\mbox{\hyperlink{classmbed_1_1_call_chain_a472ea4d4bff102206dabec6d29df9c6a}{add}}(second);}
+\DoxyCodeLine{    chain.\mbox{\hyperlink{classmbed_1_1_call_chain_a5e0dd730be3640cee8e482663d9025d7}{add\_front}}(first);}
+\DoxyCodeLine{    chain.\mbox{\hyperlink{classmbed_1_1_call_chain_a472ea4d4bff102206dabec6d29df9c6a}{add}}(\&test, \&Test::f);}
+\DoxyCodeLine{    chain.\mbox{\hyperlink{classmbed_1_1_call_chain_aba7af6b502e464074d3c31ff9236a22c}{call}}();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{_call_chain_8h_source_l00060}{60}} of file \mbox{\hyperlink{_call_chain_8h_source}{Call\+Chain.\+h}}.
+
+\mbox{\Hypertarget{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}\label{namespacembed_ac5088ada4e4cb0210a2560087fd7387a}} 
+\index{mbed@{mbed}!pvoidf\_t@{pvoidf\_t}}
+\index{pvoidf\_t@{pvoidf\_t}!mbed@{mbed}}
+\doxysubsubsection{\texorpdfstring{pvoidf\_t}{pvoidf\_t}}
+{\footnotesize\ttfamily typedef void($\ast$ pvoidf\+\_\+t) (void)}
+
+
+
+Definition at line \mbox{\hyperlink{_function_pointer_8h_source_l00023}{23}} of file \mbox{\hyperlink{_function_pointer_8h_source}{Function\+Pointer.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3}\label{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3}} 
+\index{mbed@{mbed}!PathType@{PathType}}
+\index{PathType@{PathType}!mbed@{mbed}}
+\doxysubsubsection{\texorpdfstring{PathType}{PathType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3}{Path\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FilePathType@{FilePathType}!mbed@{mbed}}\index{mbed@{mbed}!FilePathType@{FilePathType}}}\mbox{\Hypertarget{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3ac72ec0315dfe0bc41a4e41f003f1670d}\label{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3ac72ec0315dfe0bc41a4e41f003f1670d}} 
+File\+Path\+Type&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FileSystemPathType@{FileSystemPathType}!mbed@{mbed}}\index{mbed@{mbed}!FileSystemPathType@{FileSystemPathType}}}\mbox{\Hypertarget{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3af359b3ca7c5542cce8a207e27b2a923e}\label{namespacembed_ae093c9a96eda0463cdd2501ba83f10c3af359b3ca7c5542cce8a207e27b2a923e}} 
+File\+System\+Path\+Type&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_file_base_8h_source_l00047}{47}} of file \mbox{\hyperlink{_file_base_8h_source}{File\+Base.\+h}}.
+

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_s_d_i_o___cmd_init_type_def" xml:lang="en-US">
+<title>SDIO_CmdInitTypeDef Struct Reference</title>
+<indexterm><primary>SDIO_CmdInitTypeDef</primary></indexterm>
+<para>
+
+<para>SDIO Command Control structure. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;stm32f4xx_ll_sdmmc.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_struct_s_d_i_o___cmd_init_type_def_1afa6635c2ff94756b33097676d91356a4">Argument</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_d_i_o___cmd_init_type_def_1ab84004187fbb4eea106067813227c0f4">CmdIndex</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_d_i_o___cmd_init_type_def_1a06a91c388ef5069ed2f3e32f7c053074">Response</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_d_i_o___cmd_init_type_def_1ac37d56d54ca6d7fefeaafb8e545252df">WaitForInterrupt</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_s_d_i_o___cmd_init_type_def_1a5ad3eeff3271020673d95019e57089ca">CPSM</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>SDIO Command Control structure. </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00090">90</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_s_d_i_o___cmd_init_type_def_1afa6635c2ff94756b33097676d91356a4"/><section>
+    <title>Argument</title>
+<indexterm><primary>Argument</primary><secondary>SDIO_CmdInitTypeDef</secondary></indexterm>
+<indexterm><primary>SDIO_CmdInitTypeDef</primary><secondary>Argument</secondary></indexterm>
+<para><computeroutput>uint32_t Argument</computeroutput></para>
+<para>Specifies the SDIO command argument which is sent to a card as part of a command message. If a command contains an argument, it must be loaded into this register before writing the command to the command register. 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00092">92</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_d_i_o___cmd_init_type_def_1ab84004187fbb4eea106067813227c0f4"/><section>
+    <title>CmdIndex</title>
+<indexterm><primary>CmdIndex</primary><secondary>SDIO_CmdInitTypeDef</secondary></indexterm>
+<indexterm><primary>SDIO_CmdInitTypeDef</primary><secondary>CmdIndex</secondary></indexterm>
+<para><computeroutput>uint32_t CmdIndex</computeroutput></para>
+<para>Specifies the SDIO command index. It must be Min_Data = 0 and Max_Data = 64 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00097">97</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_d_i_o___cmd_init_type_def_1a5ad3eeff3271020673d95019e57089ca"/><section>
+    <title>CPSM</title>
+<indexterm><primary>CPSM</primary><secondary>SDIO_CmdInitTypeDef</secondary></indexterm>
+<indexterm><primary>SDIO_CmdInitTypeDef</primary><secondary>CPSM</secondary></indexterm>
+<para><computeroutput>uint32_t CPSM</computeroutput></para>
+<para>Specifies whether SDIO Command path state machine (CPSM) is enabled or disabled. This parameter can be a value of <link linkend="_group___s_d_i_o___c_p_s_m___state">SDIO_CPSM_State</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00107">107</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_d_i_o___cmd_init_type_def_1a06a91c388ef5069ed2f3e32f7c053074"/><section>
+    <title>Response</title>
+<indexterm><primary>Response</primary><secondary>SDIO_CmdInitTypeDef</secondary></indexterm>
+<indexterm><primary>SDIO_CmdInitTypeDef</primary><secondary>Response</secondary></indexterm>
+<para><computeroutput>uint32_t Response</computeroutput></para>
+<para>Specifies the SDIO response type. This parameter can be a value of <link linkend="_group___s_d_i_o___response___type">SDIO_Response_Type</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00100">100</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_struct_s_d_i_o___cmd_init_type_def_1ac37d56d54ca6d7fefeaafb8e545252df"/><section>
+    <title>WaitForInterrupt</title>
+<indexterm><primary>WaitForInterrupt</primary><secondary>SDIO_CmdInitTypeDef</secondary></indexterm>
+<indexterm><primary>SDIO_CmdInitTypeDef</primary><secondary>WaitForInterrupt</secondary></indexterm>
+<para><computeroutput>uint32_t WaitForInterrupt</computeroutput></para>
+<para>Specifies whether SDIO wait for interrupt request is enabled or disabled. This parameter can be a value of <link linkend="_group___s_d_i_o___wait___interrupt___state">SDIO_Wait_Interrupt_State</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00103">103</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/<link linkend="_stm32f4xx__ll__sdmmc_8h">stm32f4xx_ll_sdmmc.h</link></section>
+</section>

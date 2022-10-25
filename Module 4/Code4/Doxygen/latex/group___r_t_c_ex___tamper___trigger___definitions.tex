@@ -1,0 +1,39 @@
+\hypertarget{group___r_t_c_ex___tamper___trigger___definitions}{}\doxysection{RTCEx\+\_\+\+Tamper\+\_\+\+Trigger\+\_\+\+Definitions}
+\label{group___r_t_c_ex___tamper___trigger___definitions}\index{RTCEx\_Tamper\_Trigger\_Definitions@{RTCEx\_Tamper\_Trigger\_Definitions}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___tamper___trigger___definitions_ga7956947a7b9350248051fc077a525474}\label{group___r_t_c_ex___tamper___trigger___definitions_ga7956947a7b9350248051fc077a525474}} 
+\#define {\bfseries RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+RISINGEDGE}~((uint32\+\_\+t)0x00000000)
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___tamper___trigger___definitions_gafdc500829e8f36346f1cbca1a52eb083}\label{group___r_t_c_ex___tamper___trigger___definitions_gafdc500829e8f36346f1cbca1a52eb083}} 
+\#define {\bfseries RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+FALLINGEDGE}~((uint32\+\_\+t)0x00000002)
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___tamper___trigger___definitions_ga20c580db49e266f2295aeed5a6915b4e}\label{group___r_t_c_ex___tamper___trigger___definitions_ga20c580db49e266f2295aeed5a6915b4e}} 
+\#define {\bfseries RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+LOWLEVEL}~RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+RISINGEDGE
+\item 
+\mbox{\Hypertarget{group___r_t_c_ex___tamper___trigger___definitions_gae3a6644686f404fa94d23ccab6f5165b}\label{group___r_t_c_ex___tamper___trigger___definitions_gae3a6644686f404fa94d23ccab6f5165b}} 
+\#define {\bfseries RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+HIGHLEVEL}~RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+FALLINGEDGE
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___trigger___definitions_gac45c56f66a8cd99035b267a82a910c87}{IS\+\_\+\+TAMPER\+\_\+\+TRIGGER}}(TRIGGER)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_t_c_ex___tamper___trigger___definitions_gac45c56f66a8cd99035b267a82a910c87}\label{group___r_t_c_ex___tamper___trigger___definitions_gac45c56f66a8cd99035b267a82a910c87}} 
+\index{RTCEx\_Tamper\_Trigger\_Definitions@{RTCEx\_Tamper\_Trigger\_Definitions}!IS\_TAMPER\_TRIGGER@{IS\_TAMPER\_TRIGGER}}
+\index{IS\_TAMPER\_TRIGGER@{IS\_TAMPER\_TRIGGER}!RTCEx\_Tamper\_Trigger\_Definitions@{RTCEx\_Tamper\_Trigger\_Definitions}}
+\doxysubsubsection{\texorpdfstring{IS\_TAMPER\_TRIGGER}{IS\_TAMPER\_TRIGGER}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TAMPER\+\_\+\+TRIGGER(\begin{DoxyParamCaption}\item[{}]{TRIGGER }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                        (((TRIGGER) == RTC\_TAMPERTRIGGER\_RISINGEDGE) || \(\backslash\)}
+\DoxyCodeLine{                                        ((TRIGGER) == RTC\_TAMPERTRIGGER\_FALLINGEDGE) || \(\backslash\)}
+\DoxyCodeLine{                                        ((TRIGGER) == RTC\_TAMPERTRIGGER\_LOWLEVEL) || \(\backslash\)}
+\DoxyCodeLine{                                        ((TRIGGER) == RTC\_TAMPERTRIGGER\_HIGHLEVEL))}
+
+\end{DoxyCode}

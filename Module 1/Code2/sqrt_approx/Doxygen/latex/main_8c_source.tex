@@ -1,0 +1,101 @@
+\hypertarget{main_8c_source}{}\doxysection{main.\+c}
+\label{main_8c_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/main.c@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/main.c}}
+\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002 \textcolor{comment}{LAB EXERCISE 5.2 -\/ SQUARE ROOT APPROXIMATION}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00003}00003 \textcolor{comment}{ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00004}00004 \textcolor{comment}{Write an assembly code subroutine to approximate the square root of an }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00005}00005 \textcolor{comment}{argument using the bisection method. All math is done with integers, so the }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00006}00006 \textcolor{comment}{resulting square root will also be an integer}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00007}00007 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008 \textcolor{comment}{GOOD LUCK!}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009 \textcolor{comment}{ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}\mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{00028}} \_\_asm \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(\textcolor{keywordtype}{int} x)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029     ;\textcolor{comment}{// set initial old c + new c midpoints in Bisection Method to 0}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030     MOV     r4, \#0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031     MOV     r5, \#0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033     ;\textcolor{comment}{// if input is 0, then square root is 0 so branch to done}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034     CMP     r0, \#0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035     BEQ     done}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037     ;\textcolor{comment}{// for dividing by 2 when finding midpoint c}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038     MOV     r1, \#2}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040     ;\textcolor{comment}{// set lower interval bound a to sqrt of min 32-\/bit value}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041     ;\textcolor{comment}{// set upper interval bound b to sqrt of max 32-\/bit value}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042     MOV     r2, \#0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043     MOV     r3, \#256}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045 loop}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046     ;\textcolor{comment}{// backup midpoint c to old c}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047     MOV     r5, r4}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049     ;\textcolor{comment}{// calculate new c = (a + b)/2 }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050     ADDS    r4, r2, r3}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051     UDIV    r4, r4, r1}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053     ;\textcolor{comment}{// if new c\string^2 equals input x, we found}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054     ;\textcolor{comment}{// the exact integer square root so branch to done}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055     MUL     r6, r4, r4}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056     CMP     r6, r0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057     BEQ     done}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059     ;\textcolor{comment}{// else if new c\string^2 less than input x, set}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060     ;\textcolor{comment}{// the lower bound a to new c and loop again}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061     BLT     setLowerBound}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063     ;\textcolor{comment}{// else if new c\string^2 greater than input x, set}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064     ;\textcolor{comment}{// the upper bound b to new c and loop again}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065     BGT     setUpperBound}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00067}00067 setLowerBound}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00068}00068     MOV     r2, r4}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00069}00069     B           checkOldCAndNewC}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00071}00071 setUpperBound}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00072}00072     MOV     r3, r4}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00074}00074     ;\textcolor{comment}{// if old c == new c, we cannot get a closer}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00075}00075     ;\textcolor{comment}{// approximation so branch to done}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00076}00076     ;\textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00077}00077     ;\textcolor{comment}{// else, try again with new bounds a and b}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00078}00078 checkOldCAndNewC}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00079}00079     CMP     r4, r5}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00080}00080     BEQ     done}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00081}00081     B           loop}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00083}00083     ;\textcolor{comment}{// found integer approximation of square root}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00084}00084     ;\textcolor{comment}{// so store value in return register r0}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00085}00085     ;\textcolor{comment}{// and branch with exchange to link register}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00086}00086 done}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00087}00087     MOV     r0, r4}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00088}00088     BX      lr}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00091}00091 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00092}00092 \textcolor{comment}{ MAIN function}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00093}00093 \textcolor{comment}{ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00094}\mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{00094}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00095}00095     \textcolor{keyword}{volatile} \textcolor{keywordtype}{int} r, j=0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00096}00096     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00097}00097   r = \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(0);        \textcolor{comment}{// should be 0}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00098}00098   r = \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(25);       \textcolor{comment}{// should be 5}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00099}00099   r = \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(133);      \textcolor{comment}{// should be 11}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00100}00100   r = \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(2);        \textcolor{comment}{// should be 1 (0x00000001)}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00101}00101   r = \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(4);        \textcolor{comment}{// should be 2 (0x00000002)}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00102}00102   r = \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(22);       \textcolor{comment}{// should be 4 (0x00000004)}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00103}00103   r = \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(121);      \textcolor{comment}{// should be 11 (0x0000000B)}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00104}00104   \textcolor{keywordflow}{for} (i=0; i<10000; i++)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00105}00105         r = \mbox{\hyperlink{main_8c_ab530b5c5abd6ec3f886f2b48e3905ee1}{my\_sqrt}}(i);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00106}00106     j+=r;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00107}00107   \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00108}00108     \textcolor{keywordflow}{while}(1)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00109}00109         ;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00110}00110 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00112}00112 \textcolor{comment}{// *******************************ARM University Program Copyright (c) ARM Ltd 2014*************************************}}
+
+\end{DoxyCode}

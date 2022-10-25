@@ -1,0 +1,66 @@
+\hypertarget{group___u_a_r_t___parity}{}\doxysection{UART\+\_\+\+Parity}
+\label{group___u_a_r_t___parity}\index{UART\_Parity@{UART\_Parity}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___parity_ga270dea6e1a92dd83fe58802450bdd60c}{UART\+\_\+\+PARITY\+\_\+\+NONE}}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___parity_ga063b14ac42ef9e8f4246c17a586b14eb}{UART\+\_\+\+PARITY\+\_\+\+EVEN}}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}})
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___parity_ga229615e64964f68f7a856ea6ffea359e}{UART\+\_\+\+PARITY\+\_\+\+ODD}}~((uint32\+\_\+t)(\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}} $\vert$ \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2e159d36ab2c93a2c1942df60e9eebbe}{USART\+\_\+\+CR1\+\_\+\+PS}}))
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t___parity_gaf2f542d273738ee3cb4a93d169827744}{IS\+\_\+\+UART\+\_\+\+PARITY}}(PARITY)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_a_r_t___parity_gaf2f542d273738ee3cb4a93d169827744}\label{group___u_a_r_t___parity_gaf2f542d273738ee3cb4a93d169827744}} 
+\index{UART\_Parity@{UART\_Parity}!IS\_UART\_PARITY@{IS\_UART\_PARITY}}
+\index{IS\_UART\_PARITY@{IS\_UART\_PARITY}!UART\_Parity@{UART\_Parity}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_PARITY}{IS\_UART\_PARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+PARITY(\begin{DoxyParamCaption}\item[{}]{PARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((PARITY) == \mbox{\hyperlink{group___u_a_r_t___parity_ga270dea6e1a92dd83fe58802450bdd60c}{UART\_PARITY\_NONE}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PARITY) == \mbox{\hyperlink{group___u_a_r_t___parity_ga063b14ac42ef9e8f4246c17a586b14eb}{UART\_PARITY\_EVEN}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PARITY) == \mbox{\hyperlink{group___u_a_r_t___parity_ga229615e64964f68f7a856ea6ffea359e}{UART\_PARITY\_ODD}}))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__uart_8h_source_l00188}{188}} of file \mbox{\hyperlink{stm32f4xx__hal__uart_8h_source}{stm32f4xx\+\_\+hal\+\_\+uart.\+h}}.
+
+\mbox{\Hypertarget{group___u_a_r_t___parity_ga063b14ac42ef9e8f4246c17a586b14eb}\label{group___u_a_r_t___parity_ga063b14ac42ef9e8f4246c17a586b14eb}} 
+\index{UART\_Parity@{UART\_Parity}!UART\_PARITY\_EVEN@{UART\_PARITY\_EVEN}}
+\index{UART\_PARITY\_EVEN@{UART\_PARITY\_EVEN}!UART\_Parity@{UART\_Parity}}
+\doxysubsubsection{\texorpdfstring{UART\_PARITY\_EVEN}{UART\_PARITY\_EVEN}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+PARITY\+\_\+\+EVEN~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__uart_8h_source_l00186}{186}} of file \mbox{\hyperlink{stm32f4xx__hal__uart_8h_source}{stm32f4xx\+\_\+hal\+\_\+uart.\+h}}.
+
+\mbox{\Hypertarget{group___u_a_r_t___parity_ga270dea6e1a92dd83fe58802450bdd60c}\label{group___u_a_r_t___parity_ga270dea6e1a92dd83fe58802450bdd60c}} 
+\index{UART\_Parity@{UART\_Parity}!UART\_PARITY\_NONE@{UART\_PARITY\_NONE}}
+\index{UART\_PARITY\_NONE@{UART\_PARITY\_NONE}!UART\_Parity@{UART\_Parity}}
+\doxysubsubsection{\texorpdfstring{UART\_PARITY\_NONE}{UART\_PARITY\_NONE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+PARITY\+\_\+\+NONE~((uint32\+\_\+t)0x00000000)}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__uart_8h_source_l00185}{185}} of file \mbox{\hyperlink{stm32f4xx__hal__uart_8h_source}{stm32f4xx\+\_\+hal\+\_\+uart.\+h}}.
+
+\mbox{\Hypertarget{group___u_a_r_t___parity_ga229615e64964f68f7a856ea6ffea359e}\label{group___u_a_r_t___parity_ga229615e64964f68f7a856ea6ffea359e}} 
+\index{UART\_Parity@{UART\_Parity}!UART\_PARITY\_ODD@{UART\_PARITY\_ODD}}
+\index{UART\_PARITY\_ODD@{UART\_PARITY\_ODD}!UART\_Parity@{UART\_Parity}}
+\doxysubsubsection{\texorpdfstring{UART\_PARITY\_ODD}{UART\_PARITY\_ODD}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+PARITY\+\_\+\+ODD~((uint32\+\_\+t)(\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga60f8fcf084f9a8514efafb617c70b074}{USART\+\_\+\+CR1\+\_\+\+PCE}} $\vert$ \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2e159d36ab2c93a2c1942df60e9eebbe}{USART\+\_\+\+CR1\+\_\+\+PS}}))}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__uart_8h_source_l00187}{187}} of file \mbox{\hyperlink{stm32f4xx__hal__uart_8h_source}{stm32f4xx\+\_\+hal\+\_\+uart.\+h}}.
+

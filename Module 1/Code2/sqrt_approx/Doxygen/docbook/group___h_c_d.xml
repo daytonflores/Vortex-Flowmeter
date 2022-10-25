@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___h_c_d" xml:lang="en-US">
+<title>HCD</title>
+<indexterm><primary>HCD</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___h_c_d___exported___constants">HCD_Exported_Constants</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___h_c_d___interrupt___clock">HCD_Interrupt_Clock</link></para>
+
+<para>macros to handle interrupts and specific clock configurations </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link></para>
+
+<para>HCD Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___global_type_def">USB_OTG_GlobalTypeDef</link> <link linkend="_group___h_c_d_1gaaec59ef8fc3a41cdd7273ba04c96c7e7">HCD_TypeDef</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___cfg_type_def">USB_OTG_CfgTypeDef</link> <link linkend="_group___h_c_d_1ga2efbc940fee7983aa6be61a59fea1c17">HCD_InitTypeDef</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___h_c_type_def">USB_OTG_HCTypeDef</link> <link linkend="_group___h_c_d_1gab59585410331db8a3af5e7ae61cb3e57">HCD_HCTypeDef</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">USB_OTG_URBStateTypeDef</link> <link linkend="_group___h_c_d_1gaa0c5f0cd192863615fe22c2c5c933f03">HCD_URBStateTypeDef</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_group___u_s_b___core_1ga8fa88c2e8e5fe41147028ba11af65294">USB_OTG_HCStateTypeDef</link> <link linkend="_group___h_c_d_1gaddc71ebd6c2bdf5d1ee527525611647a">HCD_HCStateTypeDef</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___h_c_d_1ga0e764aeccc0cc959f3385794d42f6a75">HCD_StateTypeDef</link> { <link linkend="_group___h_c_d_1gga0e764aeccc0cc959f3385794d42f6a75a40ccdca0c9143ee65ed72d1ebe1f29a3">HCD_READY</link> = 0x00
+, <link linkend="_group___h_c_d_1gga0e764aeccc0cc959f3385794d42f6a75a9b430ed215df260a25e0faf0a378cbfb">HCD_ERROR</link> = 0x01
+, <link linkend="_group___h_c_d_1gga0e764aeccc0cc959f3385794d42f6a75af648083a2e58892cc8127fb63b0325e0">HCD_BUSY</link> = 0x02
+, <link linkend="_group___h_c_d_1gga0e764aeccc0cc959f3385794d42f6a75abde7fbbdf9c60dfd79c6fea15e9669f1">HCD_TIMEOUT</link> = 0x03
+ }</para>
+
+<para>HCD Status structures structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_c_d_1gadec73166fd88ee54c404ed024b8f4e50">HAL_HCD_Init</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_c_d_1gacf8b69f077f676198c3a09593b635327">HAL_HCD_DeInit</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_c_d_1gacce9dba79edecc8c3f12254d5d0faf90">HAL_HCD_HC_Init</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd, uint8_t ch_num, uint8_t epnum, uint8_t dev_address, uint8_t speed, uint8_t ep_type, uint16_t mps)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_c_d_1ga7167252777c15a2d723d65802088fb5d">HAL_HCD_HC_Halt</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd, uint8_t ch_num)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_c_d_1gae0bbb4527b7b68699a7c17d30500842d">HAL_HCD_MspInit</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_c_d_1gaecb264553245a0de4e234d51f4a0d207">HAL_HCD_MspDeInit</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_c_d_1ga90a533f4facf2b2502808fb555078023">HAL_HCD_HC_SubmitRequest</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd, uint8_t pipe, uint8_t direction, uint8_t ep_type, uint8_t token, uint8_t *pbuff, uint16_t length, uint8_t do_ping)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_c_d_1gae18bf9327c37d11bf981a7c2b30ee973">HAL_HCD_IRQHandler</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_c_d_1ga4db2ea557e081600238759cb55353628">HAL_HCD_SOF_Callback</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_c_d_1ga95cbb5d1910e3cbf9bd462e057b3df33">HAL_HCD_Connect_Callback</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_c_d_1gad59d0d3fdd9ef512faa0b0e56d83bfdc">HAL_HCD_Disconnect_Callback</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___h_c_d_1ga668704f16414d9ec2fa8023506b28e76">HAL_HCD_HC_NotifyURBChange_Callback</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd, uint8_t chnum, <link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">HCD_URBStateTypeDef</link> urb_state)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_c_d_1ga8cef0fe9a69fa43a73d22010027b832e">HAL_HCD_ResetPort</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_c_d_1gaeca62d02971ad8fd6f71b3bde9e7e0ac">HAL_HCD_Start</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___h_c_d_1ga4172d9c4c0d05c951dae4aa5151406fc">HAL_HCD_Stop</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___h_c_d_1ga0e764aeccc0cc959f3385794d42f6a75">HCD_StateTypeDef</link> <link linkend="_group___h_c_d_1gaaa383694f6303347de1b2a216e214e0a">HAL_HCD_GetState</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">HCD_URBStateTypeDef</link> <link linkend="_group___h_c_d_1ga79e6f19f7b9876c2adefde77864e818e">HAL_HCD_HC_GetURBState</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd, uint8_t chnum)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___h_c_d_1ga770cc82abd6a9bcca1e4841c277aafa9">HAL_HCD_HC_GetXferCount</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd, uint8_t chnum)</para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b___core_1ga8fa88c2e8e5fe41147028ba11af65294">HCD_HCStateTypeDef</link> <link linkend="_group___h_c_d_1ga39ed5c784ad69c394b09fdfcacd13c03">HAL_HCD_HC_GetState</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd, uint8_t chnum)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___h_c_d_1ga61a086092e452f7c706d890e266d482c">HAL_HCD_GetCurrentFrame</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___h_c_d_1ga6622593856d3d6adbce6362d23537448">HAL_HCD_GetCurrentSpeed</link> (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> *hhcd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_group___h_c_d_1gaddc71ebd6c2bdf5d1ee527525611647a"/><section>
+    <title>HCD_HCStateTypeDef</title>
+<indexterm><primary>HCD_HCStateTypeDef</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_HCStateTypeDef</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_group___u_s_b___core_1ga8fa88c2e8e5fe41147028ba11af65294">USB_OTG_HCStateTypeDef</link> <link linkend="_group___u_s_b___core_1ga8fa88c2e8e5fe41147028ba11af65294">HCD_HCStateTypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00074">74</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d_1gab59585410331db8a3af5e7ae61cb3e57"/><section>
+    <title>HCD_HCTypeDef</title>
+<indexterm><primary>HCD_HCTypeDef</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_HCTypeDef</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_struct_u_s_b___o_t_g___h_c_type_def">USB_OTG_HCTypeDef</link> <link linkend="_group___h_c_d_1gab59585410331db8a3af5e7ae61cb3e57">HCD_HCTypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00072">72</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d_1ga2efbc940fee7983aa6be61a59fea1c17"/><section>
+    <title>HCD_InitTypeDef</title>
+<indexterm><primary>HCD_InitTypeDef</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_InitTypeDef</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_struct_u_s_b___o_t_g___cfg_type_def">USB_OTG_CfgTypeDef</link> <link linkend="_group___h_c_d_1ga2efbc940fee7983aa6be61a59fea1c17">HCD_InitTypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00071">71</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d_1gaaec59ef8fc3a41cdd7273ba04c96c7e7"/><section>
+    <title>HCD_TypeDef</title>
+<indexterm><primary>HCD_TypeDef</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_TypeDef</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_struct_u_s_b___o_t_g___global_type_def">USB_OTG_GlobalTypeDef</link> <link linkend="_group___h_c_d_1gaaec59ef8fc3a41cdd7273ba04c96c7e7">HCD_TypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00070">70</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+<anchor xml:id="_group___h_c_d_1gaa0c5f0cd192863615fe22c2c5c933f03"/><section>
+    <title>HCD_URBStateTypeDef</title>
+<indexterm><primary>HCD_URBStateTypeDef</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_URBStateTypeDef</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">USB_OTG_URBStateTypeDef</link> <link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">HCD_URBStateTypeDef</link></computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00073">73</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group___h_c_d_1ga0e764aeccc0cc959f3385794d42f6a75"/><section>
+    <title>HCD_StateTypeDef</title>
+<indexterm><primary>HCD_StateTypeDef</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_StateTypeDef</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group___h_c_d_1ga0e764aeccc0cc959f3385794d42f6a75">HCD_StateTypeDef</link></computeroutput></para><para>
+
+<para>HCD Status structures structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>HCD_READY</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_READY</secondary></indexterm>
+<anchor xml:id="_group___h_c_d_1gga0e764aeccc0cc959f3385794d42f6a75a40ccdca0c9143ee65ed72d1ebe1f29a3"/>HCD_READY</entry><entry></entry></row><row><entry><indexterm><primary>HCD_ERROR</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_ERROR</secondary></indexterm>
+<anchor xml:id="_group___h_c_d_1gga0e764aeccc0cc959f3385794d42f6a75a9b430ed215df260a25e0faf0a378cbfb"/>HCD_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>HCD_BUSY</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_BUSY</secondary></indexterm>
+<anchor xml:id="_group___h_c_d_1gga0e764aeccc0cc959f3385794d42f6a75af648083a2e58892cc8127fb63b0325e0"/>HCD_BUSY</entry><entry></entry></row><row><entry><indexterm><primary>HCD_TIMEOUT</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HCD_TIMEOUT</secondary></indexterm>
+<anchor xml:id="_group___h_c_d_1gga0e764aeccc0cc959f3385794d42f6a75abde7fbbdf9c60dfd79c6fea15e9669f1"/>HCD_TIMEOUT</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__hcd_8h_source_1l00062">62</link> of file <link linkend="_stm32f4xx__hal__hcd_8h_source">stm32f4xx_hal_hcd.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___h_c_d_1ga95cbb5d1910e3cbf9bd462e057b3df33"/><section>
+    <title>HAL_HCD_Connect_Callback()</title>
+<indexterm><primary>HAL_HCD_Connect_Callback</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_Connect_Callback</secondary></indexterm>
+<para><computeroutput>void HAL_HCD_Connect_Callback (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gacf8b69f077f676198c3a09593b635327"/><section>
+    <title>HAL_HCD_DeInit()</title>
+<indexterm><primary>HAL_HCD_DeInit</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_DeInit</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_HCD_DeInit (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gad59d0d3fdd9ef512faa0b0e56d83bfdc"/><section>
+    <title>HAL_HCD_Disconnect_Callback()</title>
+<indexterm><primary>HAL_HCD_Disconnect_Callback</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_Disconnect_Callback</secondary></indexterm>
+<para><computeroutput>void HAL_HCD_Disconnect_Callback (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga61a086092e452f7c706d890e266d482c"/><section>
+    <title>HAL_HCD_GetCurrentFrame()</title>
+<indexterm><primary>HAL_HCD_GetCurrentFrame</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_GetCurrentFrame</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_HCD_GetCurrentFrame (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga6622593856d3d6adbce6362d23537448"/><section>
+    <title>HAL_HCD_GetCurrentSpeed()</title>
+<indexterm><primary>HAL_HCD_GetCurrentSpeed</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_GetCurrentSpeed</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_HCD_GetCurrentSpeed (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gaaa383694f6303347de1b2a216e214e0a"/><section>
+    <title>HAL_HCD_GetState()</title>
+<indexterm><primary>HAL_HCD_GetState</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___h_c_d_1ga0e764aeccc0cc959f3385794d42f6a75">HCD_StateTypeDef</link> HAL_HCD_GetState (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga39ed5c784ad69c394b09fdfcacd13c03"/><section>
+    <title>HAL_HCD_HC_GetState()</title>
+<indexterm><primary>HAL_HCD_HC_GetState</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_HC_GetState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___u_s_b___core_1ga8fa88c2e8e5fe41147028ba11af65294">HCD_HCStateTypeDef</link> HAL_HCD_HC_GetState (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd, uint8_t chnum)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga79e6f19f7b9876c2adefde77864e818e"/><section>
+    <title>HAL_HCD_HC_GetURBState()</title>
+<indexterm><primary>HAL_HCD_HC_GetURBState</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_HC_GetURBState</secondary></indexterm>
+<para><computeroutput><link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">HCD_URBStateTypeDef</link> HAL_HCD_HC_GetURBState (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd, uint8_t chnum)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga770cc82abd6a9bcca1e4841c277aafa9"/><section>
+    <title>HAL_HCD_HC_GetXferCount()</title>
+<indexterm><primary>HAL_HCD_HC_GetXferCount</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_HC_GetXferCount</secondary></indexterm>
+<para><computeroutput>uint32_t HAL_HCD_HC_GetXferCount (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd, uint8_t chnum)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga7167252777c15a2d723d65802088fb5d"/><section>
+    <title>HAL_HCD_HC_Halt()</title>
+<indexterm><primary>HAL_HCD_HC_Halt</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_HC_Halt</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_HCD_HC_Halt (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd, uint8_t ch_num)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gacce9dba79edecc8c3f12254d5d0faf90"/><section>
+    <title>HAL_HCD_HC_Init()</title>
+<indexterm><primary>HAL_HCD_HC_Init</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_HC_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_HCD_HC_Init (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd, uint8_t ch_num, uint8_t epnum, uint8_t dev_address, uint8_t speed, uint8_t ep_type, uint16_t mps)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga668704f16414d9ec2fa8023506b28e76"/><section>
+    <title>HAL_HCD_HC_NotifyURBChange_Callback()</title>
+<indexterm><primary>HAL_HCD_HC_NotifyURBChange_Callback</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_HC_NotifyURBChange_Callback</secondary></indexterm>
+<para><computeroutput>void HAL_HCD_HC_NotifyURBChange_Callback (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd, uint8_t chnum, <link linkend="_group___u_s_b___core_1ga04b2bca306495588fec3a5245daa5221">HCD_URBStateTypeDef</link> urb_state)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga90a533f4facf2b2502808fb555078023"/><section>
+    <title>HAL_HCD_HC_SubmitRequest()</title>
+<indexterm><primary>HAL_HCD_HC_SubmitRequest</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_HC_SubmitRequest</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_HCD_HC_SubmitRequest (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd, uint8_t pipe, uint8_t direction, uint8_t ep_type, uint8_t token, uint8_t * pbuff, uint16_t length, uint8_t do_ping)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gadec73166fd88ee54c404ed024b8f4e50"/><section>
+    <title>HAL_HCD_Init()</title>
+<indexterm><primary>HAL_HCD_Init</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_HCD_Init (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gae18bf9327c37d11bf981a7c2b30ee973"/><section>
+    <title>HAL_HCD_IRQHandler()</title>
+<indexterm><primary>HAL_HCD_IRQHandler</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_IRQHandler</secondary></indexterm>
+<para><computeroutput>void HAL_HCD_IRQHandler (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gaecb264553245a0de4e234d51f4a0d207"/><section>
+    <title>HAL_HCD_MspDeInit()</title>
+<indexterm><primary>HAL_HCD_MspDeInit</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_HCD_MspDeInit (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gae0bbb4527b7b68699a7c17d30500842d"/><section>
+    <title>HAL_HCD_MspInit()</title>
+<indexterm><primary>HAL_HCD_MspInit</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_HCD_MspInit (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga8cef0fe9a69fa43a73d22010027b832e"/><section>
+    <title>HAL_HCD_ResetPort()</title>
+<indexterm><primary>HAL_HCD_ResetPort</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_ResetPort</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_HCD_ResetPort (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga4db2ea557e081600238759cb55353628"/><section>
+    <title>HAL_HCD_SOF_Callback()</title>
+<indexterm><primary>HAL_HCD_SOF_Callback</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_SOF_Callback</secondary></indexterm>
+<para><computeroutput>void HAL_HCD_SOF_Callback (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1gaeca62d02971ad8fd6f71b3bde9e7e0ac"/><section>
+    <title>HAL_HCD_Start()</title>
+<indexterm><primary>HAL_HCD_Start</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_Start</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_HCD_Start (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+<anchor xml:id="_group___h_c_d_1ga4172d9c4c0d05c951dae4aa5151406fc"/><section>
+    <title>HAL_HCD_Stop()</title>
+<indexterm><primary>HAL_HCD_Stop</primary><secondary>HCD</secondary></indexterm>
+<indexterm><primary>HCD</primary><secondary>HAL_HCD_Stop</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> HAL_HCD_Stop (<link linkend="_struct_h_c_d___handle_type_def">HCD_HandleTypeDef</link> * hhcd)</computeroutput></para></section>
+</section>
+</section>

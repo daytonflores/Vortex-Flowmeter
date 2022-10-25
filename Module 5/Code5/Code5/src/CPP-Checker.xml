@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.8"/>
+    <errors>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398" file0="Monitor.cpp">
+            <location file="Monitor.cpp" line="387"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;j&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;j&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="Monitor.cpp">
+            <location file="Monitor.cpp" line="93"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;dir_old&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;dir_old&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="Monitor.cpp">
+            <location file="Monitor.cpp" line="426"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &amp;#039;samples&amp;#039; can be declared with const" verbose="Parameter &amp;#039;samples&amp;#039; can be declared with const" cwe="398" file0="Monitor.cpp">
+            <location file="Monitor.cpp" line="422"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;dir_old&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;dir_old&amp;#039; is assigned a value that is never used." cwe="563" file0="Monitor.cpp">
+            <location file="Monitor.cpp" line="426"/>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &amp;#039;hi_n&amp;#039; to itself." verbose="Redundant assignment of &amp;#039;hi_n&amp;#039; to itself." cwe="398" file0="NHD_0216HZ.cpp">
+            <location file="NHD_0216HZ.cpp" line="49"/>
+        </error>
+        <error id="va_end_missing" severity="error" msg="va_list &amp;#039;v&amp;#039; was opened but not closed by va_end()." verbose="va_list &amp;#039;v&amp;#039; was opened but not closed by va_end()." cwe="664" file0="NHD_0216HZ.cpp">
+            <location file="NHD_0216HZ.cpp" line="79"/>
+        </error>
+    </errors>
+</results>

@@ -1,0 +1,163 @@
+\hypertarget{shared_8h_source}{}\doxysection{shared.\+h}
+\label{shared_8h_source}\index{src/shared.h@{src/shared.h}}
+\mbox{\hyperlink{shared_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{ \#include "{}mbed.h"{}} }
+\DoxyCodeLine{32  }
+\DoxyCodeLine{33 \textcolor{comment}{ /*****************************************************************************}}
+\DoxyCodeLine{34 \textcolor{comment}{* \#defines available to all modules included here}}
+\DoxyCodeLine{35 \textcolor{comment}{******************************************************************************/} }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define OFF 0                       }\textcolor{comment}{/* used for readability */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define ON 1                        }\textcolor{comment}{/* used for readability */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define NO 0                        }\textcolor{comment}{/* used for readability */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define YES 1                       }\textcolor{comment}{/* used for readability */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define TEN 10}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define TIMER0 TMR0}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define SEC 10000           }\textcolor{comment}{/* 10000 timer0 interrupts per second (100 usec.) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{44                    }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define T100MS 0.1*SEC}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define T2S    2*SEC}}
+\DoxyCodeLine{47                               }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define LED\_FLASH\_PERIOD .5   }\textcolor{comment}{/* in seconds */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define SMP\_CNT             1000}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define PID\_IN              2.9}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define BLUFF\_BODY\_IN 0.5}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define CLOCK\_FREQUENCY\_MHZ 8}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define CODE\_VERSION "{}2.1 07/08/22"{}}   \textcolor{comment}{/*   YYYY/MM/DD  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define COPYRIGHT "{}Copyright (c) University of Colorado"{}} }
+\DoxyCodeLine{57      }
+\DoxyCodeLine{58  \textcolor{keyword}{enum} \textcolor{keywordtype}{boolean} \{ FALSE, TRUE \};           }
+\DoxyCodeLine{59  \textcolor{keyword}{enum} dmode \{QUIET, NORMAL, DEBUG, VERSION, REG\_VIEW, MEM\_VIEW\};       }
+\DoxyCodeLine{60  }
+\DoxyCodeLine{61  \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} uchar8\_t;       }
+\DoxyCodeLine{62  \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} bit;}
+\DoxyCodeLine{63  \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} uint32\_t;}
+\DoxyCodeLine{64  \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} uint16\_t;}
+\DoxyCodeLine{65  }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#ifdef \_\_cplusplus }}
+\DoxyCodeLine{67 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{69  }
+\DoxyCodeLine{70 \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{71 \textcolor{comment}{/*             Global Variable declarations                             */}}
+\DoxyCodeLine{72 \textcolor{comment}{/************************************************************************/}}
+\DoxyCodeLine{73  }
+\DoxyCodeLine{74  \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Error\_status;          \textcolor{comment}{// Variable for debugging use}}
+\DoxyCodeLine{75  \textcolor{keyword}{extern} uchar8\_t  display\_timer;  \textcolor{comment}{// \(\backslash\)var 1 second software timer for display   }}
+\DoxyCodeLine{76  \textcolor{keyword}{extern} uchar8\_t  display\_flag;   \textcolor{comment}{// flag between timer interrupt and monitor.c, }}
+\DoxyCodeLine{77                         \textcolor{comment}{// like a binary semaphore}}
+\DoxyCodeLine{78  \textcolor{keyword}{extern} uchar8\_t tx\_in\_progress;                        }
+\DoxyCodeLine{79  \textcolor{keyword}{extern} uchar8\_t *rx\_in\_ptr; \textcolor{comment}{/* pointer to the receive in data */}}
+\DoxyCodeLine{80  \textcolor{keyword}{extern} uchar8\_t *rx\_out\_ptr; \textcolor{comment}{/* pointer to the receive out data*/}}
+\DoxyCodeLine{81  \textcolor{keyword}{extern} uchar8\_t *tx\_in\_ptr; \textcolor{comment}{/* pointer to the transmit in data*/}}
+\DoxyCodeLine{82  \textcolor{keyword}{extern} uchar8\_t *tx\_out\_ptr; \textcolor{comment}{/*pointer to the transmit out */}        }
+\DoxyCodeLine{83     }
+\DoxyCodeLine{84  \textcolor{comment}{//extern int samples[SMP\_CNT];}}
+\DoxyCodeLine{85     }
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define RX\_BUF\_SIZE 10            }\textcolor{comment}{/* size of receive buffer in bytes */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define TX\_BUF\_SIZE 40           }\textcolor{comment}{/* size of transmit buffer in bytes */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{88                                                                     }
+\DoxyCodeLine{89 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{90 \textcolor{comment}{* Some variable definitions are done in the module main.c and are externed in }}
+\DoxyCodeLine{91 \textcolor{comment}{* all other modules.  The following section is visible to main.c only.}}
+\DoxyCodeLine{92 \textcolor{comment}{******************************************************************************/}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#ifdef MAIN}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95  \textcolor{keyword}{enum} dmode display\_mode = QUIET;}
+\DoxyCodeLine{96  }
+\DoxyCodeLine{97  uchar8\_t serial\_flag = 0;}
+\DoxyCodeLine{98  }
+\DoxyCodeLine{99  uchar8\_t tx\_in\_progress; }
+\DoxyCodeLine{100  uchar8\_t *rx\_in\_ptr; \textcolor{comment}{/* pointer to the receive in data */}}
+\DoxyCodeLine{101  uchar8\_t *rx\_out\_ptr; \textcolor{comment}{/* pointer to the receive out data*/}}
+\DoxyCodeLine{102  uchar8\_t *tx\_in\_ptr; \textcolor{comment}{/* pointer to the transmit in data*/}}
+\DoxyCodeLine{103  uchar8\_t *tx\_out\_ptr; \textcolor{comment}{/*pointer to the transmit out */}        }
+\DoxyCodeLine{104     }
+\DoxyCodeLine{105  uchar8\_t  rx\_buf[RX\_BUF\_SIZE];      \textcolor{comment}{/* define the storage */}}
+\DoxyCodeLine{106  uchar8\_t  tx\_buf[TX\_BUF\_SIZE];      \textcolor{comment}{/* define the storage */}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define MSG\_BUF\_SIZE 10}}
+\DoxyCodeLine{109  uchar8\_t msg\_buf[MSG\_BUF\_SIZE]; \textcolor{comment}{// define the storage for UART received messages}}
+\DoxyCodeLine{110  uchar8\_t msg\_buf\_idx = 0;    \textcolor{comment}{// index into the received message buffer       }}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{113 \textcolor{comment}{* Some variable definitions are done in the module main.c and are externed in }}
+\DoxyCodeLine{114 \textcolor{comment}{* all other modules.  The following section is visible to all modules EXCEPT }}
+\DoxyCodeLine{115 \textcolor{comment}{* main.c.}}
+\DoxyCodeLine{116 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{comment}{/**********************/}   }
+\DoxyCodeLine{120 \textcolor{comment}{/*   Declarations     */}}
+\DoxyCodeLine{121 \textcolor{comment}{/**********************/}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123    \textcolor{keyword}{extern} \textcolor{keyword}{volatile}     uchar8\_t swtimer0;}
+\DoxyCodeLine{124    \textcolor{keyword}{extern} \textcolor{keyword}{volatile}     uchar8\_t swtimer1;}
+\DoxyCodeLine{125    \textcolor{keyword}{extern} \textcolor{keyword}{volatile}     uchar8\_t swtimer2;}
+\DoxyCodeLine{126    \textcolor{keyword}{extern} \textcolor{keyword}{volatile}     uchar8\_t swtimer3; }
+\DoxyCodeLine{127    \textcolor{keyword}{extern} \textcolor{keyword}{volatile}     uchar8\_t swtimer4;    }
+\DoxyCodeLine{128    \textcolor{keyword}{extern} \textcolor{keyword}{volatile}     uchar8\_t swtimer5;    }
+\DoxyCodeLine{129    \textcolor{keyword}{extern} \textcolor{keyword}{volatile}     uchar8\_t swtimer6;    }
+\DoxyCodeLine{130    \textcolor{keyword}{extern} \textcolor{keyword}{volatile}     uchar8\_t swtimer7;    }
+\DoxyCodeLine{131  }
+\DoxyCodeLine{132   \textcolor{keyword}{extern} uchar8\_t serial\_flag;}
+\DoxyCodeLine{133     }
+\DoxyCodeLine{134   \textcolor{keyword}{extern} \textcolor{keyword}{enum} dmode display\_mode;}
+\DoxyCodeLine{135   }
+\DoxyCodeLine{136   }
+\DoxyCodeLine{137   \textcolor{keyword}{extern} uchar8\_t  rx\_buf[];      \textcolor{comment}{/* declare the storage */}}
+\DoxyCodeLine{138   \textcolor{keyword}{extern} uchar8\_t  tx\_buf[];      \textcolor{comment}{/* declare the storage */}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define MSG\_BUF\_SIZE 10    }}
+\DoxyCodeLine{141   \textcolor{keyword}{extern}  uchar8\_t msg\_buf[MSG\_BUF\_SIZE]; \textcolor{comment}{// declare the storage for UART received messages}}
+\DoxyCodeLine{142   \textcolor{keyword}{extern}  uchar8\_t msg\_buf\_idx;         \textcolor{comment}{// index into the received message buffer}}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{147 \textcolor{comment}{* All function prototypes are externed in all the modules.}}
+\DoxyCodeLine{148 \textcolor{comment}{*******************************************************************************/}}
+\DoxyCodeLine{149 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{shared_8h_a59a4a0c8721f73a8c9d9db5a4cdc6e88}{monitor}}(\textcolor{keywordtype}{void});  \textcolor{comment}{/* located in module monitor.c */}}
+\DoxyCodeLine{150 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} timer0(\textcolor{keywordtype}{void});   \textcolor{comment}{/* located in module timer0.c */}}
+\DoxyCodeLine{151 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{shared_8h_a44becc30285e88213a624428b2b46cdf}{serial}}(\textcolor{keywordtype}{void});   \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} UART\_put(uchar8\_t);                 \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{154 \textcolor{keyword}{extern} uchar8\_t UART\_get(\textcolor{keywordtype}{void});                 \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{155 \textcolor{keyword}{extern} uchar8\_t UART\_input(\textcolor{keywordtype}{void});               \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{156 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} UART\_direct\_msg\_put(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *);}
+\DoxyCodeLine{157                                              \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{158 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} UART\_msg\_put(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *); }
+\DoxyCodeLine{159                                              \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{160 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} UART\_direct\_hex\_put(uchar8\_t);      \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{161 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} UART\_direct\_put(uchar8\_t);          \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{162 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} UART\_hex\_put(uchar8\_t);             \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{163 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} UART\_low\_nibble\_put(uchar8\_t);      \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{164 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} UART\_high\_nibble\_put(uchar8\_t);     \textcolor{comment}{/* located in module UART\_poll.c */}}
+\DoxyCodeLine{165 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{shared_8h_a29be7c30b6929c50ebb985b228fc1be2}{chk\_UART\_msg}}(\textcolor{keywordtype}{void});              \textcolor{comment}{/* located in module monitor.c */}}
+\DoxyCodeLine{166 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{shared_8h_a826db354ae1d910792a0330f8d4eb91a}{UART\_msg\_process}}(\textcolor{keywordtype}{void});          \textcolor{comment}{/* located in module monitors.c */}}
+\DoxyCodeLine{167 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} status\_report(\textcolor{keywordtype}{void});             \textcolor{comment}{/* located in module monitor.c */}  }
+\DoxyCodeLine{168 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} set\_display\_mode(\textcolor{keywordtype}{void});          \textcolor{comment}{/* located in module monitor.c */}}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{shared_8h_a851c58009a8609df2b051c3513dd99f2}{blinkLED}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \mbox{\hyperlink{shared_8h_ac0e14d5137523221ce65514297cb5a5e}{get\_Freq}}(uint16\_t* samples);}
+\DoxyCodeLine{174 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \mbox{\hyperlink{shared_8h_a4c94a90ff5bbc8e169cab9939e54bc4d}{get\_Viscosity}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{175 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \mbox{\hyperlink{shared_8h_a8f62d23aded5d8f18560d378add4ac5d}{get\_Density}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{176 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \mbox{\hyperlink{shared_8h_a4874ec56ef3166eaf28463652d9d6f5c}{get\_St}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{177 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \mbox{\hyperlink{shared_8h_a7d6334bf3e43dc14a0d3bbabafe74f61}{get\_Re}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{178 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{shared_8h_a264f65447b0f8fe9fb490b42eff03f67}{get\_Vel}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{179 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} \mbox{\hyperlink{shared_8h_a765ac62eecfcdb1ab1f32bbb88c35fec}{get\_temp}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{180 \textcolor{keyword}{extern} \textcolor{keywordtype}{double} \mbox{\hyperlink{shared_8h_a7fede77d874d832638fcdfb4692b49d8}{get\_Flow}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{184 \}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{186 }
+
+\end{DoxyCode}

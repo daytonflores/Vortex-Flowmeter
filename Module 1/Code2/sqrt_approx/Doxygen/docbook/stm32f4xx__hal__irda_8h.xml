@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__irda_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_irda.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_irda.h</primary></indexterm>
+<para>
+
+<para>Header file of IRDA HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal_def.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_i_r_d_a___init_type_def">IRDA_InitTypeDef</link></para>
+
+<para>IRDA Init Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link></para>
+
+<para>IRDA handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___word___length_1ga53b28028ae932349fcc40190dd8d7c9a">IRDA_WORDLENGTH_8B</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___word___length_1gad005e4d28476758d4e5b56a3d98f7cd4">IRDA_WORDLENGTH_9B</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga95f0288b9c6aaeca7cb6550a2e6833e2">USART_CR1_M</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___word___length_1gac5f8051e9bbc581a294dfbca6d805542">IS_IRDA_WORD_LENGTH</link>(LENGTH)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___parity_1ga930d90dc494068f6e8fd34c2008af6c3">IRDA_PARITY_NONE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___parity_1ga1fa76c44ce474adc0d277d849217cc95">IRDA_PARITY_EVEN</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___parity_1ga64282fa5873f188bb26429bbc88bf040">IRDA_PARITY_ODD</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2e159d36ab2c93a2c1942df60e9eebbe">USART_CR1_PS</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___parity_1ga34e19b19860989a491f71503e2da6345">IS_IRDA_PARITY</link>(PARITY)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___mode_1ga510410f9b2126127f5f1a7e86b49427a">IRDA_MODE_RX</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gada0d5d407a22264de847bc1b40a17aeb">USART_CR1_RE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___mode_1ga9f26f67fa86746fab0039fe60a1ccefd">IRDA_MODE_TX</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1gade7f090b04fd78b755b43357ecaa9622">USART_CR1_TE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___mode_1gada775794a25b76b7ecafc9bea3fc1f8a">IRDA_MODE_TX_RX</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1gade7f090b04fd78b755b43357ecaa9622">USART_CR1_TE</link> |<link linkend="_group___peripheral___registers___bits___definition_1gada0d5d407a22264de847bc1b40a17aeb">USART_CR1_RE</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___mode_1ga0374a7ffe9d35087bc02ccdac0953a1d">IS_IRDA_MODE</link>(MODE)   ((((MODE) &amp; (uint32_t)0x0000FFF3) == 0x00) &amp;&amp; ((MODE) != (uint32_t)0x000000))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___ir_d_a___low___power_1ga261eafd053023b5935b50767058c804b">IRDA_POWERMODE_LOWPOWER</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga22af8d399f1adda62e31186f0309af80">USART_CR3_IRLP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___ir_d_a___low___power_1ga28e06e6f6e185f066d492e2d3cdb7e89">IRDA_POWERMODE_NORMAL</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___ir_d_a___low___power_1gaf4f91e06bf94c98a099156b035c4f6b0">IS_IRDA_POWERMODE</link>(MODE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___flags_1ga88d22267566352225a9ec253d3976b0f">IRDA_FLAG_TXE</link>   ((uint32_t)0x00000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___flags_1gaea9a2c5c33c5fb8e0109801ba005712a">IRDA_FLAG_TC</link>   ((uint32_t)0x00000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___flags_1ga044e8008f094da17c9c7371832079a73">IRDA_FLAG_RXNE</link>   ((uint32_t)0x00000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___flags_1gac15abbde5b08303ceb59b77538e3fbfa">IRDA_FLAG_IDLE</link>   ((uint32_t)0x00000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___flags_1gadd2f51365f80ae4ce344ba9eb6ab7b81">IRDA_FLAG_ORE</link>   ((uint32_t)0x00000008)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___flags_1ga01d432c277dde71d06e3452881affadd">IRDA_FLAG_NE</link>   ((uint32_t)0x00000004)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___flags_1ga9cfd704788e477a3af6a5df18c957962">IRDA_FLAG_FE</link>   ((uint32_t)0x00000002)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___flags_1ga54e075e6ed11a2b9bd7776ebd049211b">IRDA_FLAG_PE</link>   ((uint32_t)0x00000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___interrupt__definition_1ga1d2b4b601ece8f1ab0b2542412bb2533">IRDA_IT_PE</link>   ((uint32_t)0x10000100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___interrupt__definition_1ga5e81e9fd3d52bafcf21281c10d2ca257">IRDA_IT_TXE</link>   ((uint32_t)0x10000080)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___interrupt__definition_1gadd3e4b796b67db171ca04c5297d4e667">IRDA_IT_TC</link>   ((uint32_t)0x10000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___interrupt__definition_1ga8f2de9c6c3cccfb2de0277ce10f23b13">IRDA_IT_RXNE</link>   ((uint32_t)0x10000020)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___interrupt__definition_1ga32dfb69029c5576d82feb59129d11000">IRDA_IT_IDLE</link>   ((uint32_t)0x10000010)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___interrupt__definition_1ga2d08dacfa9795cec98fa67f91a29ba53">IRDA_IT_LBD</link>   ((uint32_t)0x20000040)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___interrupt__definition_1gaf74d3cd0cf4b22c53718a267ae9a1174">IRDA_IT_CTS</link>   ((uint32_t)0x30000400)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a___interrupt__definition_1ga5649210cc5343a80483178849a11ac66">IRDA_IT_ERR</link>   ((uint32_t)0x30000001)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga3cdb66f911dce4c8544139adbb314faa">__HAL_IRDA_RESET_HANDLE_STATE</link>(__HANDLE__)   ((__HANDLE__)-&gt;State = <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaa004e82e1ca1d36b3dc84cf9441954dd">HAL_IRDA_STATE_RESET</link>)</para>
+
+<para>Reset IRDA handle state. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga0c097de13209ede853a30d511cf5a00e">__HAL_IRDA_FLUSH_DRREGISTER</link>(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;DR)</para>
+
+<para>Flushs the IRDA DR register. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga032a53fbbc65bfd0fff2b4a26c52e790">__HAL_IRDA_GET_FLAG</link>(__HANDLE__,  __FLAG__)   (((__HANDLE__)-&gt;Instance-&gt;SR &amp; (__FLAG__)) == (__FLAG__))</para>
+
+<para>Checks whether the specified IRDA flag is set or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga4ebf474ecfd858f9320bef9bc67c0bce">__HAL_IRDA_CLEAR_FLAG</link>(__HANDLE__,  __FLAG__)   ((__HANDLE__)-&gt;Instance-&gt;SR &amp;= ~(__FLAG__))</para>
+
+<para>Clears the specified IRDA pending flag. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga38eeb904e4117f70c18bf3767c7ba4a6">IRDA_IT_MASK</link>   ((uint32_t)0x0000FFFF)</para>
+
+<para>Enables or disables the specified IRDA interrupt. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1gae9ccdc86c1bcb8ed3857474d8c3823fa">__HAL_IRDA_ENABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga8c3dd373ded6fa0790e65f54ac1f548d">__HAL_IRDA_DISABLE_IT</link>(__HANDLE__,  __INTERRUPT__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga1c50dd0407d6e4159f90c9bc74545925">__HAL_IRDA_GET_IT_SOURCE</link>(__HANDLE__,  __IT__)</para>
+
+<para>Checks whether the specified IRDA interrupt has occurred or not. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga5807a6868cde535b5d088925d43e6012">__IRDA_ENABLE</link>(__HANDLE__)   ( (__HANDLE__)-&gt;Instance-&gt;CR1 |=  <link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga3bf368a8e0643c1b9186700ab47ceec5">__IRDA_DISABLE</link>(__HANDLE__)   ( (__HANDLE__)-&gt;Instance-&gt;CR1 &amp;=  ~<link linkend="_group___peripheral___registers___bits___definition_1ga2bb650676aaae4a5203f372d497d5947">USART_CR1_UE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>(_PCLK_,  _BAUD_)   (((_PCLK_)*25)/(4*(_BAUD_)))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>(_PCLK_,  _BAUD_)   (<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_))/100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>(_PCLK_,  _BAUD_)   (((<link linkend="_group___u_s_a_r_t_1gafbb1fab320969bc5f2f726523765efd9">__DIV</link>((_PCLK_), (_BAUD_)) - (<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) * 100)) * 16 + 50) / 100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1gaa8c15c5873d5665cbafe6d4191a72c4d">__IRDA_BRR</link>(_PCLK_,  _BAUD_)   ((<link linkend="_group___u_s_a_r_t_1gab53df89950c58100a4f14842b43877f0">__DIVMANT</link>((_PCLK_), (_BAUD_)) &lt;&lt; 4)|(<link linkend="_group___u_s_a_r_t_1ga093009531672e6074b05430492830c24">__DIVFRAQ</link>((_PCLK_), (_BAUD_)) &amp; 0x0F))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___i_r_d_a_1ga5816332e344ead2dcd06a1f0ed59ae27">IS_IRDA_BAUDRATE</link>(BAUDRATE)   ((BAUDRATE) &lt; 115201)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___i_r_d_a_1gab3e65b75c9d4ae39bc50a31222509e1e">HAL_IRDA_StateTypeDef</link> { 
+<link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaa004e82e1ca1d36b3dc84cf9441954dd">HAL_IRDA_STATE_RESET</link> = 0x00
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea9bf218291b1a5ffe624b5a8f891f6244">HAL_IRDA_STATE_READY</link> = 0x01
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea637e8c6b87e1a3a02616c02a68d781f1">HAL_IRDA_STATE_BUSY</link> = 0x02
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea3d8ec588510a501071df3e3d332f9536">HAL_IRDA_STATE_BUSY_TX</link> = 0x12
+, 
+<link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea1df28c166fea4a3a0cab0f1b9fc4dfbc">HAL_IRDA_STATE_BUSY_RX</link> = 0x22
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eaad510b2da75a1fa39f5ed1d33472a634">HAL_IRDA_STATE_BUSY_TX_RX</link> = 0x32
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1ea91524b40055b5b8d642867e4034cfa2f">HAL_IRDA_STATE_TIMEOUT</link> = 0x03
+, <link linkend="_group___i_r_d_a_1ggab3e65b75c9d4ae39bc50a31222509e1eae2e4e8686446bed256ead393fdb34d67">HAL_IRDA_STATE_ERROR</link> = 0x04
+ }</para>
+
+<para>HAL State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group___i_r_d_a_1ga52e4f73e14681655efa6d421e74811dd">HAL_IRDA_ErrorTypeDef</link> { 
+<link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddad49559d0016f21f91e3521d8be2be340">HAL_IRDA_ERROR_NONE</link> = 0x00
+, <link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda53fa93b38ed5d3783d62e98353b4f3a4">HAL_IRDA_ERROR_PE</link> = 0x01
+, <link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda1eac21823ef37759e52497f63343b658">HAL_IRDA_ERROR_NE</link> = 0x02
+, <link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddaabd88543e045746413469b98f0df0841">HAL_IRDA_ERROR_FE</link> = 0x04
+, 
+<link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811ddac62bd262d8dd1697e418b918c76dcc18">HAL_IRDA_ERROR_ORE</link> = 0x08
+, <link linkend="_group___i_r_d_a_1gga52e4f73e14681655efa6d421e74811dda920280b5d10a48abf1614aa590201452">HAL_IRDA_ERROR_DMA</link> = 0x10
+ }</para>
+
+<para>HAL IRDA Error Code structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga4a41c32a70503a33c238511e3a402aa6">HAL_IRDA_Init</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga2fc5f408dc349561f0a685144813ea77">HAL_IRDA_DeInit</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1ga76075c1def7959ef153a0cdeb564ee0d">HAL_IRDA_MspInit</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1ga1f75d9b05cc84c2ca82a5f453942ab7f">HAL_IRDA_MspDeInit</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga8581077ae166780a2bd0c8d9b38c1ab2">HAL_IRDA_Transmit</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga4148e8cd07056a07a827c537f2f7823c">HAL_IRDA_Receive</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size, uint32_t Timeout)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1gac6ea111f9cf4b8a89059708e2e8f1b81">HAL_IRDA_Transmit_IT</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga0ea98454afb5ec16a39ba1b5b8142005">HAL_IRDA_Receive_IT</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1ga18d0f0c044c27c41223b2f0361fe3ae3">HAL_IRDA_Transmit_DMA</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___i_r_d_a_1gac62331245b03bde69283075bcfd8533c">HAL_IRDA_Receive_DMA</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda, uint8_t *pData, uint16_t Size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1ga816a681851f93d038e7bda5193b9d933">HAL_IRDA_IRQHandler</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1gaafb45ea63d8cd87e6856c320135b78dd">HAL_IRDA_TxCpltCallback</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1gafbebae7dda1e7b54dc664c95802127c6">HAL_IRDA_RxCpltCallback</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___i_r_d_a_1ga85ffb4337deb42820d49f3882a728f7f">HAL_IRDA_ErrorCallback</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para><link linkend="_group___i_r_d_a_1gab3e65b75c9d4ae39bc50a31222509e1e">HAL_IRDA_StateTypeDef</link> <link linkend="_group___i_r_d_a_1ga66ac92837c0eb309ae8c9513b83f5fe0">HAL_IRDA_GetState</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___i_r_d_a_1ga5401e767569d4996aa48c0a81b645b44">HAL_IRDA_GetError</link> (<link linkend="_struct_i_r_d_a___handle_type_def">IRDA_HandleTypeDef</link> *hirda)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of IRDA HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__irda_8h_source">stm32f4xx_hal_irda.h</link>.</para>
+</section>
+</section>

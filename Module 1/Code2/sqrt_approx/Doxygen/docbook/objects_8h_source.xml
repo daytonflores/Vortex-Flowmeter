@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_objects_8h_source" xml:lang="en-US">
+<title>objects.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE/objects.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_objects_8h_source_1l00001"/>00001 <emphasis role="comment">/*&#32;mbed&#32;Microcontroller&#32;Library</emphasis>
+<anchor xml:id="_objects_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;*******************************************************************************</emphasis>
+<anchor xml:id="_objects_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;*&#32;Copyright&#32;(c)&#32;2014,&#32;STMicroelectronics</emphasis>
+<anchor xml:id="_objects_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;*&#32;All&#32;rights&#32;reserved.</emphasis>
+<anchor xml:id="_objects_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_objects_8h_source_1l00006"/>00006 <emphasis role="comment">&#32;*&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+<anchor xml:id="_objects_8h_source_1l00007"/>00007 <emphasis role="comment">&#32;*&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions&#32;are&#32;met:</emphasis>
+<anchor xml:id="_objects_8h_source_1l00008"/>00008 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_objects_8h_source_1l00009"/>00009 <emphasis role="comment">&#32;*&#32;1.&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright&#32;notice,</emphasis>
+<anchor xml:id="_objects_8h_source_1l00010"/>00010 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+<anchor xml:id="_objects_8h_source_1l00011"/>00011 <emphasis role="comment">&#32;*&#32;2.&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above&#32;copyright&#32;notice,</emphasis>
+<anchor xml:id="_objects_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer&#32;in&#32;the&#32;documentation</emphasis>
+<anchor xml:id="_objects_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;and/or&#32;other&#32;materials&#32;provided&#32;with&#32;the&#32;distribution.</emphasis>
+<anchor xml:id="_objects_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;*&#32;3.&#32;Neither&#32;the&#32;name&#32;of&#32;STMicroelectronics&#32;nor&#32;the&#32;names&#32;of&#32;its&#32;contributors</emphasis>
+<anchor xml:id="_objects_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;may&#32;be&#32;used&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived&#32;from&#32;this&#32;software</emphasis>
+<anchor xml:id="_objects_8h_source_1l00016"/>00016 <emphasis role="comment">&#32;*&#32;&#32;&#32;&#32;without&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+<anchor xml:id="_objects_8h_source_1l00017"/>00017 <emphasis role="comment">&#32;*</emphasis>
+<anchor xml:id="_objects_8h_source_1l00018"/>00018 <emphasis role="comment">&#32;*&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS&#32;&quot;AS&#32;IS&quot;</emphasis>
+<anchor xml:id="_objects_8h_source_1l00019"/>00019 <emphasis role="comment">&#32;*&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;THE</emphasis>
+<anchor xml:id="_objects_8h_source_1l00020"/>00020 <emphasis role="comment">&#32;*&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE&#32;ARE</emphasis>
+<anchor xml:id="_objects_8h_source_1l00021"/>00021 <emphasis role="comment">&#32;*&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;THE&#32;COPYRIGHT&#32;HOLDER&#32;OR&#32;CONTRIBUTORS&#32;BE&#32;LIABLE</emphasis>
+<anchor xml:id="_objects_8h_source_1l00022"/>00022 <emphasis role="comment">&#32;*&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR&#32;CONSEQUENTIAL</emphasis>
+<anchor xml:id="_objects_8h_source_1l00023"/>00023 <emphasis role="comment">&#32;*&#32;DAMAGES&#32;(INCLUDING,&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF&#32;SUBSTITUTE&#32;GOODS&#32;OR</emphasis>
+<anchor xml:id="_objects_8h_source_1l00024"/>00024 <emphasis role="comment">&#32;*&#32;SERVICES;&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS&#32;INTERRUPTION)&#32;HOWEVER</emphasis>
+<anchor xml:id="_objects_8h_source_1l00025"/>00025 <emphasis role="comment">&#32;*&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN&#32;CONTRACT,&#32;STRICT&#32;LIABILITY,</emphasis>
+<anchor xml:id="_objects_8h_source_1l00026"/>00026 <emphasis role="comment">&#32;*&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)&#32;ARISING&#32;IN&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE</emphasis>
+<anchor xml:id="_objects_8h_source_1l00027"/>00027 <emphasis role="comment">&#32;*&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+<anchor xml:id="_objects_8h_source_1l00028"/>00028 <emphasis role="comment">&#32;*******************************************************************************</emphasis>
+<anchor xml:id="_objects_8h_source_1l00029"/>00029 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_objects_8h_source_1l00030"/>00030 <emphasis role="preprocessor">#ifndef&#32;MBED_OBJECTS_H</emphasis>
+<anchor xml:id="_objects_8h_source_1l00031"/>00031 <emphasis role="preprocessor">#define&#32;MBED_OBJECTS_H</emphasis>
+<anchor xml:id="_objects_8h_source_1l00032"/>00032 
+<anchor xml:id="_objects_8h_source_1l00033"/>00033 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cmsis_8h">cmsis.h</link>&quot;</emphasis>
+<anchor xml:id="_objects_8h_source_1l00034"/>00034 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__port_names_8h">PortNames.h</link>&quot;</emphasis>
+<anchor xml:id="_objects_8h_source_1l00035"/>00035 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__peripheral_names_8h">PeripheralNames.h</link>&quot;</emphasis>
+<anchor xml:id="_objects_8h_source_1l00036"/>00036 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__pin_names_8h">PinNames.h</link>&quot;</emphasis>
+<anchor xml:id="_objects_8h_source_1l00037"/>00037 
+<anchor xml:id="_objects_8h_source_1l00038"/>00038 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_objects_8h_source_1l00039"/>00039 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+<anchor xml:id="_objects_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_objects_8h_source_1l00041"/>00041 
+<anchor xml:id="_objects_8h_source_1l00042"/><link linkend="_structgpio__irq__s">00042</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structgpio__irq__s">gpio_irq_s</link>&#32;{
+<anchor xml:id="_objects_8h_source_1l00043"/><link linkend="_structgpio__irq__s_1a05711b67574708db528a279abc67f80a">00043</link> &#32;&#32;&#32;&#32;<link linkend="_group___peripheral__interrupt__number__definition_1ga7e1129cd8a196f4284d41db3e82ad5c8">IRQn_Type</link>&#32;<link linkend="_structgpio__irq__s_1a05711b67574708db528a279abc67f80a">irq_n</link>;
+<anchor xml:id="_objects_8h_source_1l00044"/><link linkend="_structgpio__irq__s_1a3df2870f4b6ad8f90ff184a9e37bdab8">00044</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structgpio__irq__s_1a3df2870f4b6ad8f90ff184a9e37bdab8">irq_index</link>;
+<anchor xml:id="_objects_8h_source_1l00045"/><link linkend="_structgpio__irq__s_1af7c0c7abdee8faa6f35a8fb850dadbb3">00045</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structgpio__irq__s_1af7c0c7abdee8faa6f35a8fb850dadbb3">event</link>;
+<anchor xml:id="_objects_8h_source_1l00046"/><link linkend="_structgpio__irq__s_1a1f46a3d0fd63bcb5591dc1db407300aa">00046</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structgpio__irq__s_1a1f46a3d0fd63bcb5591dc1db407300aa">pin</link>;
+<anchor xml:id="_objects_8h_source_1l00047"/>00047 };
+<anchor xml:id="_objects_8h_source_1l00048"/>00048 
+<anchor xml:id="_objects_8h_source_1l00049"/><link linkend="_structport__s">00049</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structport__s">port_s</link>&#32;{
+<anchor xml:id="_objects_8h_source_1l00050"/><link linkend="_structport__s_1aee39efc434a1663ab3a030d3e1214c32">00050</link> &#32;&#32;&#32;&#32;<link linkend="__port_names_8h_1a59d6d8d6337e04ac7ad3dc96eb920416">PortName</link>&#32;<link linkend="_structport__s_1aee39efc434a1663ab3a030d3e1214c32">port</link>;
+<anchor xml:id="_objects_8h_source_1l00051"/><link linkend="_structport__s_1ad3bee21df6875eeccd25d3c577e0600a">00051</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structport__s_1ad3bee21df6875eeccd25d3c577e0600a">mask</link>;
+<anchor xml:id="_objects_8h_source_1l00052"/><link linkend="_structport__s_1a924ab95925fc83b38cba3ac2d8d7e9aa">00052</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a8ff912d511000d542e6ad34966166f38">PinDirection</link>&#32;<link linkend="_structport__s_1a924ab95925fc83b38cba3ac2d8d7e9aa">direction</link>;
+<anchor xml:id="_objects_8h_source_1l00053"/><link linkend="_structport__s_1afec2bad3c83f4575253f573be7e7434a">00053</link> &#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;*<link linkend="_structport__s_1afec2bad3c83f4575253f573be7e7434a">reg_in</link>;
+<anchor xml:id="_objects_8h_source_1l00054"/><link linkend="_structport__s_1a6fb0279fd02d93d6f62aff070eb9a93c">00054</link> &#32;&#32;&#32;&#32;<link linkend="_core__cm0_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link>&#32;uint32_t&#32;*<link linkend="_structport__s_1a6fb0279fd02d93d6f62aff070eb9a93c">reg_out</link>;
+<anchor xml:id="_objects_8h_source_1l00055"/>00055 };
+<anchor xml:id="_objects_8h_source_1l00056"/>00056 
+<anchor xml:id="_objects_8h_source_1l00057"/><link linkend="_structanalogin__s">00057</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structanalogin__s">analogin_s</link>&#32;{
+<anchor xml:id="_objects_8h_source_1l00058"/><link linkend="_structanalogin__s_1a6731f0d10bdcf87546f86583398256c2">00058</link> &#32;&#32;&#32;&#32;<link linkend="__peripheral_names_8h_1ad006a1e84e1ac337633cb06868e31c17">ADCName</link>&#32;<link linkend="_structanalogin__s_1a6731f0d10bdcf87546f86583398256c2">adc</link>;
+<anchor xml:id="_objects_8h_source_1l00059"/><link linkend="_structanalogin__s_1a1f46a3d0fd63bcb5591dc1db407300aa">00059</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structanalogin__s_1a1f46a3d0fd63bcb5591dc1db407300aa">pin</link>;
+<anchor xml:id="_objects_8h_source_1l00060"/>00060 };
+<anchor xml:id="_objects_8h_source_1l00061"/>00061 
+<anchor xml:id="_objects_8h_source_1l00062"/><link linkend="_structserial__s">00062</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structserial__s">serial_s</link>&#32;{
+<anchor xml:id="_objects_8h_source_1l00063"/><link linkend="_structserial__s_1ae0f00c2ad0d833ebd0e62c00e4cf3b04">00063</link> &#32;&#32;&#32;&#32;<link linkend="__peripheral_names_8h_1a5eef3fdc1a1c7363ef67d4c8b94eef23">UARTName</link>&#32;<link linkend="_structserial__s_1ae0f00c2ad0d833ebd0e62c00e4cf3b04">uart</link>;
+<anchor xml:id="_objects_8h_source_1l00064"/><link linkend="_structserial__s_1a750b5d744c39a06bfb13e6eb010e35d0">00064</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_structserial__s_1a750b5d744c39a06bfb13e6eb010e35d0">index</link>;&#32;<emphasis role="comment">//&#32;Used&#32;by&#32;irq</emphasis>
+<anchor xml:id="_objects_8h_source_1l00065"/><link linkend="_structserial__s_1ac4f06ea26ed6bd7ae83b92d64ac10b78">00065</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structserial__s_1ac4f06ea26ed6bd7ae83b92d64ac10b78">baudrate</link>;
+<anchor xml:id="_objects_8h_source_1l00066"/><link linkend="_structserial__s_1ac4e73d32cb273fd68e683d74a422a84a">00066</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structserial__s_1ac4e73d32cb273fd68e683d74a422a84a">databits</link>;
+<anchor xml:id="_objects_8h_source_1l00067"/><link linkend="_structserial__s_1ab01ec5011e5801122f0ac112fb0bac25">00067</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structserial__s_1ab01ec5011e5801122f0ac112fb0bac25">stopbits</link>;
+<anchor xml:id="_objects_8h_source_1l00068"/><link linkend="_structserial__s_1a6d43f360b3d22d80ec7f4521b1da5998">00068</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structserial__s_1a6d43f360b3d22d80ec7f4521b1da5998">parity</link>;
+<anchor xml:id="_objects_8h_source_1l00069"/><link linkend="_structserial__s_1a4090ec27a3d5a498bede52d6fc60a1d1">00069</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structserial__s_1a4090ec27a3d5a498bede52d6fc60a1d1">pin_tx</link>;
+<anchor xml:id="_objects_8h_source_1l00070"/><link linkend="_structserial__s_1a13e2f2abc46d7e450eda42eebf20314d">00070</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structserial__s_1a13e2f2abc46d7e450eda42eebf20314d">pin_rx</link>;
+<anchor xml:id="_objects_8h_source_1l00071"/>00071 };
+<anchor xml:id="_objects_8h_source_1l00072"/>00072 
+<anchor xml:id="_objects_8h_source_1l00073"/><link linkend="_structspi__s">00073</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structspi__s">spi_s</link>&#32;{
+<anchor xml:id="_objects_8h_source_1l00074"/><link linkend="_structspi__s_1a9d6f4e46810c7347094bdf78d0f0cd09">00074</link> &#32;&#32;&#32;&#32;<link linkend="__peripheral_names_8h_1a5c1a3bc20ef2aa223f65ce7a99b678dc">SPIName</link>&#32;<link linkend="_structspi__s_1a9d6f4e46810c7347094bdf78d0f0cd09">spi</link>;
+<anchor xml:id="_objects_8h_source_1l00075"/><link linkend="_structspi__s_1afeda3c90a255fe7e4b1e99b4308cce2c">00075</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structspi__s_1afeda3c90a255fe7e4b1e99b4308cce2c">bits</link>;
+<anchor xml:id="_objects_8h_source_1l00076"/><link linkend="_structspi__s_1a0247600e50fd88ebd71e99f6df045f96">00076</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structspi__s_1a0247600e50fd88ebd71e99f6df045f96">cpol</link>;
+<anchor xml:id="_objects_8h_source_1l00077"/><link linkend="_structspi__s_1aef633789b78444081686206b26e045c5">00077</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structspi__s_1aef633789b78444081686206b26e045c5">cpha</link>;
+<anchor xml:id="_objects_8h_source_1l00078"/><link linkend="_structspi__s_1a6b29e4f37f4482274af785ad5ffe96a7">00078</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structspi__s_1a6b29e4f37f4482274af785ad5ffe96a7">mode</link>;
+<anchor xml:id="_objects_8h_source_1l00079"/><link linkend="_structspi__s_1a3b65e4498650ba52607edeaba2f2fbde">00079</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structspi__s_1a3b65e4498650ba52607edeaba2f2fbde">nss</link>;
+<anchor xml:id="_objects_8h_source_1l00080"/><link linkend="_structspi__s_1aa3cb4f500952c1d319dc6716cf540f5a">00080</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structspi__s_1aa3cb4f500952c1d319dc6716cf540f5a">br_presc</link>;
+<anchor xml:id="_objects_8h_source_1l00081"/><link linkend="_structspi__s_1adccc894e838555fb2a24d75d54862d59">00081</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structspi__s_1adccc894e838555fb2a24d75d54862d59">pin_miso</link>;
+<anchor xml:id="_objects_8h_source_1l00082"/><link linkend="_structspi__s_1ae787e6d0fc7990f56004f12a52b727d9">00082</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structspi__s_1ae787e6d0fc7990f56004f12a52b727d9">pin_mosi</link>;
+<anchor xml:id="_objects_8h_source_1l00083"/><link linkend="_structspi__s_1aad959e32c2883368f867a55c3b46cb2c">00083</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structspi__s_1aad959e32c2883368f867a55c3b46cb2c">pin_sclk</link>;
+<anchor xml:id="_objects_8h_source_1l00084"/><link linkend="_structspi__s_1aa6d8e9578d8c4a950de7b264aa9b5dd4">00084</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structspi__s_1aa6d8e9578d8c4a950de7b264aa9b5dd4">pin_ssel</link>;
+<anchor xml:id="_objects_8h_source_1l00085"/>00085 };
+<anchor xml:id="_objects_8h_source_1l00086"/>00086 
+<anchor xml:id="_objects_8h_source_1l00087"/><link linkend="_structi2c__s">00087</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structi2c__s">i2c_s</link>&#32;{
+<anchor xml:id="_objects_8h_source_1l00088"/><link linkend="_structi2c__s_1a7507792682ed519b71de7cf37156f39b">00088</link> &#32;&#32;&#32;&#32;<link linkend="__peripheral_names_8h_1a862d0f364c14e50ed5ec6013efd7bc37">I2CName</link>&#32;&#32;<link linkend="_structi2c__s_1a7507792682ed519b71de7cf37156f39b">i2c</link>;
+<anchor xml:id="_objects_8h_source_1l00089"/><link linkend="_structi2c__s_1a3ecf27a911a4f544415a4fefbe5f9103">00089</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structi2c__s_1a3ecf27a911a4f544415a4fefbe5f9103">slave</link>;
+<anchor xml:id="_objects_8h_source_1l00090"/>00090 };
+<anchor xml:id="_objects_8h_source_1l00091"/>00091 
+<anchor xml:id="_objects_8h_source_1l00092"/><link linkend="_structpwmout__s">00092</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_structpwmout__s">pwmout_s</link>&#32;{
+<anchor xml:id="_objects_8h_source_1l00093"/><link linkend="_structpwmout__s_1abc57d71df1be863eb4c3dde0aed40792">00093</link> &#32;&#32;&#32;&#32;<link linkend="__peripheral_names_8h_1a82d9c7d9104cac5a0dbed541471ea395">PWMName</link>&#32;<link linkend="_structpwmout__s_1abc57d71df1be863eb4c3dde0aed40792">pwm</link>;
+<anchor xml:id="_objects_8h_source_1l00094"/><link linkend="_structpwmout__s_1a1f46a3d0fd63bcb5591dc1db407300aa">00094</link> &#32;&#32;&#32;&#32;<link linkend="__pin_names_8h_1a5ceb873075d76667eb54dc6a7d2734d1">PinName</link>&#32;<link linkend="_structpwmout__s_1a1f46a3d0fd63bcb5591dc1db407300aa">pin</link>;
+<anchor xml:id="_objects_8h_source_1l00095"/><link linkend="_structpwmout__s_1a81b43df06332b4fef558297592bb7ff1">00095</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structpwmout__s_1a81b43df06332b4fef558297592bb7ff1">period</link>;
+<anchor xml:id="_objects_8h_source_1l00096"/><link linkend="_structpwmout__s_1a8c3654387c1e970a4c60b809d74e344d">00096</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_structpwmout__s_1a8c3654387c1e970a4c60b809d74e344d">pulse</link>;
+<anchor xml:id="_objects_8h_source_1l00097"/>00097 };
+<anchor xml:id="_objects_8h_source_1l00098"/>00098 
+<anchor xml:id="_objects_8h_source_1l00099"/>00099 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gpio__object_8h">gpio_object.h</link>&quot;</emphasis>
+<anchor xml:id="_objects_8h_source_1l00100"/>00100 
+<anchor xml:id="_objects_8h_source_1l00101"/>00101 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+<anchor xml:id="_objects_8h_source_1l00102"/>00102 }
+<anchor xml:id="_objects_8h_source_1l00103"/>00103 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_objects_8h_source_1l00104"/>00104 
+<anchor xml:id="_objects_8h_source_1l00105"/>00105 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

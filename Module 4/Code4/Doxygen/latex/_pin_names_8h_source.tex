@@ -1,0 +1,187 @@
+\hypertarget{_pin_names_8h_source}{}\doxysection{Pin\+Names.\+h}
+\label{_pin_names_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/TARGET\_STM/TARGET\_NUCLEO\_F401RE/PinNames.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/TARGET\_STM/TARGET\_NUCLEO\_F401RE/PinNames.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ *******************************************************************************}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Copyright (c) 2014, STMicroelectronics}}
+\DoxyCodeLine{4 \textcolor{comment}{ * All rights reserved.}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ * Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{7 \textcolor{comment}{ * modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{8 \textcolor{comment}{ *}}
+\DoxyCodeLine{9 \textcolor{comment}{ * 1. Redistributions of source code must retain the above copyright notice,}}
+\DoxyCodeLine{10 \textcolor{comment}{ *    this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{11 \textcolor{comment}{ * 2. Redistributions in binary form must reproduce the above copyright notice,}}
+\DoxyCodeLine{12 \textcolor{comment}{ *    this list of conditions and the following disclaimer in the documentation}}
+\DoxyCodeLine{13 \textcolor{comment}{ *    and/or other materials provided with the distribution.}}
+\DoxyCodeLine{14 \textcolor{comment}{ * 3. Neither the name of STMicroelectronics nor the names of its contributors}}
+\DoxyCodeLine{15 \textcolor{comment}{ *    may be used to endorse or promote products derived from this software}}
+\DoxyCodeLine{16 \textcolor{comment}{ *    without specific prior written permission.}}
+\DoxyCodeLine{17 \textcolor{comment}{ *}}
+\DoxyCodeLine{18 \textcolor{comment}{ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{19 \textcolor{comment}{ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{20 \textcolor{comment}{ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE}}
+\DoxyCodeLine{21 \textcolor{comment}{ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE}}
+\DoxyCodeLine{22 \textcolor{comment}{ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL}}
+\DoxyCodeLine{23 \textcolor{comment}{ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR}}
+\DoxyCodeLine{24 \textcolor{comment}{ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER}}
+\DoxyCodeLine{25 \textcolor{comment}{ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,}}
+\DoxyCodeLine{26 \textcolor{comment}{ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}}
+\DoxyCodeLine{27 \textcolor{comment}{ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{28 \textcolor{comment}{ *******************************************************************************}}
+\DoxyCodeLine{29 \textcolor{comment}{ */}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#ifndef MBED\_PINNAMES\_H}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define MBED\_PINNAMES\_H}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include "{}cmsis.h"{}}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{36 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{// See stm32f4xx\_hal\_gpio.h and stm32f4xx\_hal\_gpio\_ex.h for values of MODE, PUPD and AFNUM}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define STM\_PIN\_DATA(MODE, PUPD, AFNUM)  ((int)(((AFNUM) << 7) | ((PUPD) << 4) | ((MODE) << 0)))}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define STM\_PIN\_MODE(X)   (((X) >> 0) \& 0x0F)}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define STM\_PIN\_PUPD(X)   (((X) >> 4) \& 0x07)}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define STM\_PIN\_AFNUM(X)  (((X) >> 7) \& 0x0F)}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define STM\_MODE\_INPUT              (0)}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define STM\_MODE\_OUTPUT\_PP          (1)}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define STM\_MODE\_OUTPUT\_OD          (2)}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define STM\_MODE\_AF\_PP              (3)}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define STM\_MODE\_AF\_OD              (4)}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define STM\_MODE\_ANALOG             (5)}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define STM\_MODE\_IT\_RISING          (6)}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define STM\_MODE\_IT\_FALLING         (7)}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define STM\_MODE\_IT\_RISING\_FALLING  (8)}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define STM\_MODE\_EVT\_RISING         (9)}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define STM\_MODE\_EVT\_FALLING        (10)}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define STM\_MODE\_EVT\_RISING\_FALLING (11)}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{comment}{// High nibble = port number (0=A, 1=B, 2=C, 3=D, 4=E, 5=F, 6=G, 7=H)}}
+\DoxyCodeLine{58 \textcolor{comment}{// Low nibble  = pin number}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define STM\_PORT(X) (((uint32\_t)(X) >> 4) \& 0xF)}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define STM\_PIN(X)  ((uint32\_t)(X) \& 0xF)}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{63     PIN\_INPUT,}
+\DoxyCodeLine{64     PIN\_OUTPUT}
+\DoxyCodeLine{65 \} PinDirection;}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{68     PA\_0  = 0x00,}
+\DoxyCodeLine{69     PA\_1  = 0x01,}
+\DoxyCodeLine{70     PA\_2  = 0x02,}
+\DoxyCodeLine{71     PA\_3  = 0x03,}
+\DoxyCodeLine{72     PA\_4  = 0x04,}
+\DoxyCodeLine{73     PA\_5  = 0x05,}
+\DoxyCodeLine{74     PA\_6  = 0x06,}
+\DoxyCodeLine{75     PA\_7  = 0x07,}
+\DoxyCodeLine{76     PA\_8  = 0x08,}
+\DoxyCodeLine{77     PA\_9  = 0x09,}
+\DoxyCodeLine{78     PA\_10 = 0x0A,}
+\DoxyCodeLine{79     PA\_11 = 0x0B,}
+\DoxyCodeLine{80     PA\_12 = 0x0C,}
+\DoxyCodeLine{81     PA\_13 = 0x0D,}
+\DoxyCodeLine{82     PA\_14 = 0x0E,}
+\DoxyCodeLine{83     PA\_15 = 0x0F,}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     PB\_0  = 0x10,}
+\DoxyCodeLine{86     PB\_1  = 0x11,}
+\DoxyCodeLine{87     PB\_2  = 0x12,}
+\DoxyCodeLine{88     PB\_3  = 0x13,}
+\DoxyCodeLine{89     PB\_4  = 0x14,}
+\DoxyCodeLine{90     PB\_5  = 0x15,}
+\DoxyCodeLine{91     PB\_6  = 0x16,}
+\DoxyCodeLine{92     PB\_7  = 0x17,}
+\DoxyCodeLine{93     PB\_8  = 0x18,}
+\DoxyCodeLine{94     PB\_9  = 0x19,}
+\DoxyCodeLine{95     PB\_10 = 0x1A,}
+\DoxyCodeLine{96     PB\_12 = 0x1C,}
+\DoxyCodeLine{97     PB\_13 = 0x1D,}
+\DoxyCodeLine{98     PB\_14 = 0x1E,}
+\DoxyCodeLine{99     PB\_15 = 0x1F,}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     PC\_0  = 0x20,}
+\DoxyCodeLine{102     PC\_1  = 0x21,}
+\DoxyCodeLine{103     PC\_2  = 0x22,}
+\DoxyCodeLine{104     PC\_3  = 0x23,}
+\DoxyCodeLine{105     PC\_4  = 0x24,}
+\DoxyCodeLine{106     PC\_5  = 0x25,}
+\DoxyCodeLine{107     PC\_6  = 0x26,}
+\DoxyCodeLine{108     PC\_7  = 0x27,}
+\DoxyCodeLine{109     PC\_8  = 0x28,}
+\DoxyCodeLine{110     PC\_9  = 0x29,}
+\DoxyCodeLine{111     PC\_10 = 0x2A,}
+\DoxyCodeLine{112     PC\_11 = 0x2B,}
+\DoxyCodeLine{113     PC\_12 = 0x2C,}
+\DoxyCodeLine{114     PC\_13 = 0x2D,}
+\DoxyCodeLine{115     PC\_14 = 0x2E,}
+\DoxyCodeLine{116     PC\_15 = 0x2F,}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     PD\_2  = 0x32,}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120     PH\_0  = 0x70,}
+\DoxyCodeLine{121     PH\_1  = 0x71,}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     \textcolor{comment}{// Arduino connector namings}}
+\DoxyCodeLine{124     A0          = PA\_0,}
+\DoxyCodeLine{125     A1          = PA\_1,}
+\DoxyCodeLine{126     A2          = PA\_4,}
+\DoxyCodeLine{127     A3          = PB\_0,}
+\DoxyCodeLine{128     A4          = PC\_1,}
+\DoxyCodeLine{129     A5          = PC\_0,}
+\DoxyCodeLine{130     D0          = PA\_3,}
+\DoxyCodeLine{131     D1          = PA\_2,}
+\DoxyCodeLine{132     D2          = PA\_10,}
+\DoxyCodeLine{133     D3          = PB\_3,}
+\DoxyCodeLine{134     D4          = PB\_5,}
+\DoxyCodeLine{135     D5          = PB\_4,}
+\DoxyCodeLine{136     D6          = PB\_10,}
+\DoxyCodeLine{137     D7          = PA\_8,}
+\DoxyCodeLine{138     D8          = PA\_9,}
+\DoxyCodeLine{139     D9          = PC\_7,}
+\DoxyCodeLine{140     D10         = PB\_6,}
+\DoxyCodeLine{141     D11         = PA\_7,}
+\DoxyCodeLine{142     D12         = PA\_6,}
+\DoxyCodeLine{143     D13         = PA\_5,}
+\DoxyCodeLine{144     D14         = PB\_9,}
+\DoxyCodeLine{145     D15         = PB\_8,}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{comment}{// Generic signals namings}}
+\DoxyCodeLine{148     LED1        = PA\_5,}
+\DoxyCodeLine{149     LED2        = PA\_5,}
+\DoxyCodeLine{150     LED3        = PA\_5,}
+\DoxyCodeLine{151     LED4        = PA\_5,}
+\DoxyCodeLine{152     USER\_BUTTON = PC\_13,}
+\DoxyCodeLine{153     SERIAL\_TX   = PA\_2,}
+\DoxyCodeLine{154     SERIAL\_RX   = PA\_3,}
+\DoxyCodeLine{155     USBTX       = PA\_2,}
+\DoxyCodeLine{156     USBRX       = PA\_3,}
+\DoxyCodeLine{157     I2C\_SCL     = PB\_8,}
+\DoxyCodeLine{158     I2C\_SDA     = PB\_9,}
+\DoxyCodeLine{159     SPI\_MOSI    = PA\_7,}
+\DoxyCodeLine{160     SPI\_MISO    = PA\_6,}
+\DoxyCodeLine{161     SPI\_SCK     = PA\_5,}
+\DoxyCodeLine{162     SPI\_CS      = PB\_6,}
+\DoxyCodeLine{163     PWM\_OUT     = PB\_3,}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165     \textcolor{comment}{// Not connected}}
+\DoxyCodeLine{166     NC = (int)0xFFFFFFFF}
+\DoxyCodeLine{167 \} PinName;}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{170     PullNone  = 0,}
+\DoxyCodeLine{171     PullUp    = 1,}
+\DoxyCodeLine{172     PullDown  = 2,}
+\DoxyCodeLine{173     OpenDrain = 3,}
+\DoxyCodeLine{174     PullDefault = PullNone}
+\DoxyCodeLine{175 \} PinMode;}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{178 \}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,663 @@
+\hypertarget{core__cm4__simd_8h_source}{}\doxysection{core\+\_\+cm4\+\_\+simd.\+h}
+\label{core__cm4__simd_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/core\_cm4\_simd.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/core\_cm4\_simd.h}}
+\mbox{\hyperlink{core__cm4__simd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{10 \textcolor{comment}{/* Copyright (c) 2009 -\/ 2013 ARM LIMITED}}
+\DoxyCodeLine{11 \textcolor{comment}{}}
+\DoxyCodeLine{12 \textcolor{comment}{   All rights reserved.}}
+\DoxyCodeLine{13 \textcolor{comment}{   Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{14 \textcolor{comment}{   modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{15 \textcolor{comment}{   -\/ Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{16 \textcolor{comment}{     notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{17 \textcolor{comment}{   -\/ Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{18 \textcolor{comment}{     notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{19 \textcolor{comment}{     documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{20 \textcolor{comment}{   -\/ Neither the name of ARM nor the names of its contributors may be used}}
+\DoxyCodeLine{21 \textcolor{comment}{     to endorse or promote products derived from this software without}}
+\DoxyCodeLine{22 \textcolor{comment}{     specific prior written permission.}}
+\DoxyCodeLine{23 \textcolor{comment}{   *}}
+\DoxyCodeLine{24 \textcolor{comment}{   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{25 \textcolor{comment}{   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{26 \textcolor{comment}{   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE}}
+\DoxyCodeLine{27 \textcolor{comment}{   ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE}}
+\DoxyCodeLine{28 \textcolor{comment}{   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR}}
+\DoxyCodeLine{29 \textcolor{comment}{   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF}}
+\DoxyCodeLine{30 \textcolor{comment}{   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{31 \textcolor{comment}{   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN}}
+\DoxyCodeLine{32 \textcolor{comment}{   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)}}
+\DoxyCodeLine{33 \textcolor{comment}{   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{34 \textcolor{comment}{   POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{35 \textcolor{comment}{   -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{39  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CM4\_SIMD\_H}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define \_\_CORE\_CM4\_SIMD\_H}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{47 \textcolor{comment}{ *                Hardware Abstraction Layer}}
+\DoxyCodeLine{48 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  Compiler specific Intrinsics  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#if   defined ( \_\_CC\_ARM ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/RealView Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{58 \textcolor{comment}{/* ARM armcc specific functions */}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/ CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define \_\_SADD8                           \_\_sadd8}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define \_\_QADD8                           \_\_qadd8}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define \_\_SHADD8                          \_\_shadd8}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define \_\_UADD8                           \_\_uadd8}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define \_\_UQADD8                          \_\_uqadd8}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define \_\_UHADD8                          \_\_uhadd8}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define \_\_SSUB8                           \_\_ssub8}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define \_\_QSUB8                           \_\_qsub8}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define \_\_SHSUB8                          \_\_shsub8}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define \_\_USUB8                           \_\_usub8}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define \_\_UQSUB8                          \_\_uqsub8}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define \_\_UHSUB8                          \_\_uhsub8}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define \_\_SADD16                          \_\_sadd16}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define \_\_QADD16                          \_\_qadd16}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define \_\_SHADD16                         \_\_shadd16}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define \_\_UADD16                          \_\_uadd16}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define \_\_UQADD16                         \_\_uqadd16}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define \_\_UHADD16                         \_\_uhadd16}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define \_\_SSUB16                          \_\_ssub16}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define \_\_QSUB16                          \_\_qsub16}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define \_\_SHSUB16                         \_\_shsub16}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define \_\_USUB16                          \_\_usub16}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define \_\_UQSUB16                         \_\_uqsub16}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define \_\_UHSUB16                         \_\_uhsub16}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define \_\_SASX                            \_\_sasx}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define \_\_QASX                            \_\_qasx}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define \_\_SHASX                           \_\_shasx}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define \_\_UASX                            \_\_uasx}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define \_\_UQASX                           \_\_uqasx}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define \_\_UHASX                           \_\_uhasx}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define \_\_SSAX                            \_\_ssax}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define \_\_QSAX                            \_\_qsax}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define \_\_SHSAX                           \_\_shsax}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define \_\_USAX                            \_\_usax}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define \_\_UQSAX                           \_\_uqsax}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define \_\_UHSAX                           \_\_uhsax}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define \_\_USAD8                           \_\_usad8}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define \_\_USADA8                          \_\_usada8}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define \_\_SSAT16                          \_\_ssat16}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define \_\_USAT16                          \_\_usat16}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define \_\_UXTB16                          \_\_uxtb16}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define \_\_UXTAB16                         \_\_uxtab16}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define \_\_SXTB16                          \_\_sxtb16}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define \_\_SXTAB16                         \_\_sxtab16}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define \_\_SMUAD                           \_\_smuad}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define \_\_SMUADX                          \_\_smuadx}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define \_\_SMLAD                           \_\_smlad}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define \_\_SMLADX                          \_\_smladx}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define \_\_SMLALD                          \_\_smlald}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define \_\_SMLALDX                         \_\_smlaldx}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define \_\_SMUSD                           \_\_smusd}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define \_\_SMUSDX                          \_\_smusdx}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define \_\_SMLSD                           \_\_smlsd}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define \_\_SMLSDX                          \_\_smlsdx}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define \_\_SMLSLD                          \_\_smlsld}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define \_\_SMLSLDX                         \_\_smlsldx}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define \_\_SEL                             \_\_sel}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define \_\_QADD                            \_\_qadd}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define \_\_QSUB                            \_\_qsub}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define \_\_PKHBT(ARG1,ARG2,ARG3)          ( ((((uint32\_t)(ARG1))          ) \& 0x0000FFFFUL) |  \(\backslash\)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{                                           ((((uint32\_t)(ARG2)) << (ARG3)) \& 0xFFFF0000UL)  )}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define \_\_PKHTB(ARG1,ARG2,ARG3)          ( ((((uint32\_t)(ARG1))          ) \& 0xFFFF0000UL) |  \(\backslash\)}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{                                           ((((uint32\_t)(ARG2)) >> (ARG3)) \& 0x0000FFFFUL)  )}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define \_\_SMMLA(ARG1,ARG2,ARG3)          ( (int32\_t)((((int64\_t)(ARG1) * (ARG2)) + \(\backslash\)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{                                                      ((int64\_t)(ARG3) << 32)      ) >> 32))}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{comment}{/*-\/-\/ End CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#elif defined ( \_\_ICCARM\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ ICC Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{135 \textcolor{comment}{/* IAR iccarm specific functions */}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/ CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#include <cmsis\_iar.h>}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{comment}{/*-\/-\/ End CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#elif defined ( \_\_TMS470\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ TI CCS Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{145 \textcolor{comment}{/* TI CCS specific functions */}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/ CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#include <cmsis\_ccs.h>}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{comment}{/*-\/-\/ End CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#elif defined ( \_\_GNUC\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ GNU Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{155 \textcolor{comment}{/* GNU gcc specific functions */}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/ CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{158 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SADD8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{159 \{}
+\DoxyCodeLine{160   uint32\_t result;}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}sadd8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{163   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{164 \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_QADD8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{167 \{}
+\DoxyCodeLine{168   uint32\_t result;}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}qadd8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{171   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{172 \}}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SHADD8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{175 \{}
+\DoxyCodeLine{176   uint32\_t result;}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}shadd8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{179   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{180 \}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UADD8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{183 \{}
+\DoxyCodeLine{184   uint32\_t result;}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uadd8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{187   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{188 \}}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UQADD8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{191 \{}
+\DoxyCodeLine{192   uint32\_t result;}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uqadd8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{195   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{196 \}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UHADD8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{199 \{}
+\DoxyCodeLine{200   uint32\_t result;}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uhadd8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{203   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{204 \}}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SSUB8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{208 \{}
+\DoxyCodeLine{209   uint32\_t result;}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}ssub8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{212   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{213 \}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_QSUB8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{216 \{}
+\DoxyCodeLine{217   uint32\_t result;}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}qsub8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{220   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{221 \}}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SHSUB8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{224 \{}
+\DoxyCodeLine{225   uint32\_t result;}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}shsub8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{228   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{229 \}}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_USUB8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{232 \{}
+\DoxyCodeLine{233   uint32\_t result;}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}usub8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{236   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{237 \}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UQSUB8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{240 \{}
+\DoxyCodeLine{241   uint32\_t result;}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uqsub8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{244   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{245 \}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UHSUB8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{248 \{}
+\DoxyCodeLine{249   uint32\_t result;}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uhsub8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{252   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{253 \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SADD16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{257 \{}
+\DoxyCodeLine{258   uint32\_t result;}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}sadd16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{261   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{262 \}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_QADD16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{265 \{}
+\DoxyCodeLine{266   uint32\_t result;}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}qadd16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{269   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{270 \}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SHADD16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{273 \{}
+\DoxyCodeLine{274   uint32\_t result;}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{276   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}shadd16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{277   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{278 \}}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UADD16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{281 \{}
+\DoxyCodeLine{282   uint32\_t result;}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uadd16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{285   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{286 \}}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UQADD16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{289 \{}
+\DoxyCodeLine{290   uint32\_t result;}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uqadd16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{293   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{294 \}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UHADD16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{297 \{}
+\DoxyCodeLine{298   uint32\_t result;}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uhadd16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{301   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{302 \}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SSUB16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{305 \{}
+\DoxyCodeLine{306   uint32\_t result;}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}ssub16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{309   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{310 \}}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_QSUB16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{313 \{}
+\DoxyCodeLine{314   uint32\_t result;}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}qsub16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{317   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{318 \}}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SHSUB16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{321 \{}
+\DoxyCodeLine{322   uint32\_t result;}
+\DoxyCodeLine{323 }
+\DoxyCodeLine{324   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}shsub16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{325   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{326 \}}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_USUB16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{329 \{}
+\DoxyCodeLine{330   uint32\_t result;}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{332   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}usub16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{333   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{334 \}}
+\DoxyCodeLine{335 }
+\DoxyCodeLine{336 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UQSUB16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{337 \{}
+\DoxyCodeLine{338   uint32\_t result;}
+\DoxyCodeLine{339 }
+\DoxyCodeLine{340   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uqsub16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{341   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{342 \}}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UHSUB16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{345 \{}
+\DoxyCodeLine{346   uint32\_t result;}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uhsub16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{349   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{350 \}}
+\DoxyCodeLine{351 }
+\DoxyCodeLine{352 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SASX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{353 \{}
+\DoxyCodeLine{354   uint32\_t result;}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}sasx \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{357   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{358 \}}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_QASX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{361 \{}
+\DoxyCodeLine{362   uint32\_t result;}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{364   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}qasx \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{365   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{366 \}}
+\DoxyCodeLine{367 }
+\DoxyCodeLine{368 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SHASX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{369 \{}
+\DoxyCodeLine{370   uint32\_t result;}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}shasx \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{373   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{374 \}}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{376 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UASX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{377 \{}
+\DoxyCodeLine{378   uint32\_t result;}
+\DoxyCodeLine{379 }
+\DoxyCodeLine{380   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uasx \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{381   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{382 \}}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UQASX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{385 \{}
+\DoxyCodeLine{386   uint32\_t result;}
+\DoxyCodeLine{387 }
+\DoxyCodeLine{388   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uqasx \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{389   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{390 \}}
+\DoxyCodeLine{391 }
+\DoxyCodeLine{392 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UHASX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{393 \{}
+\DoxyCodeLine{394   uint32\_t result;}
+\DoxyCodeLine{395 }
+\DoxyCodeLine{396   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uhasx \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{397   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{398 \}}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{400 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SSAX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{401 \{}
+\DoxyCodeLine{402   uint32\_t result;}
+\DoxyCodeLine{403 }
+\DoxyCodeLine{404   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}ssax \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{405   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{406 \}}
+\DoxyCodeLine{407 }
+\DoxyCodeLine{408 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_QSAX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{409 \{}
+\DoxyCodeLine{410   uint32\_t result;}
+\DoxyCodeLine{411 }
+\DoxyCodeLine{412   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}qsax \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{413   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{414 \}}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SHSAX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{417 \{}
+\DoxyCodeLine{418   uint32\_t result;}
+\DoxyCodeLine{419 }
+\DoxyCodeLine{420   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}shsax \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{421   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{422 \}}
+\DoxyCodeLine{423 }
+\DoxyCodeLine{424 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_USAX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{425 \{}
+\DoxyCodeLine{426   uint32\_t result;}
+\DoxyCodeLine{427 }
+\DoxyCodeLine{428   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}usax \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{429   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{430 \}}
+\DoxyCodeLine{431 }
+\DoxyCodeLine{432 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UQSAX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{433 \{}
+\DoxyCodeLine{434   uint32\_t result;}
+\DoxyCodeLine{435 }
+\DoxyCodeLine{436   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uqsax \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{437   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{438 \}}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{440 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UHSAX(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{441 \{}
+\DoxyCodeLine{442   uint32\_t result;}
+\DoxyCodeLine{443 }
+\DoxyCodeLine{444   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uhsax \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{445   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{446 \}}
+\DoxyCodeLine{447 }
+\DoxyCodeLine{448 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_USAD8(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{449 \{}
+\DoxyCodeLine{450   uint32\_t result;}
+\DoxyCodeLine{451 }
+\DoxyCodeLine{452   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}usad8 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{453   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{454 \}}
+\DoxyCodeLine{455 }
+\DoxyCodeLine{456 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_USADA8(uint32\_t op1, uint32\_t op2, uint32\_t op3)}
+\DoxyCodeLine{457 \{}
+\DoxyCodeLine{458   uint32\_t result;}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}usada8 \%0, \%1, \%2, \%3"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2), \textcolor{stringliteral}{"{}r"{}} (op3) );}
+\DoxyCodeLine{461   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{462 \}}
+\DoxyCodeLine{463 }
+\DoxyCodeLine{464 \textcolor{preprocessor}{\#define \_\_SSAT16(ARG1,ARG2) \(\backslash\)}}
+\DoxyCodeLine{465 \textcolor{preprocessor}{(\{                          \(\backslash\)}}
+\DoxyCodeLine{466 \textcolor{preprocessor}{  uint32\_t \_\_RES, \_\_ARG1 = (ARG1); \(\backslash\)}}
+\DoxyCodeLine{467 \textcolor{preprocessor}{  \_\_ASM ("{}ssat16 \%0, \%1, \%2"{}} : "{}=r"{} (\_\_RES) :  "{}I"{} (ARG2), "{}r"{} (\_\_ARG1) ); \(\backslash\)}
+\DoxyCodeLine{468   \_\_RES; \(\backslash\)}
+\DoxyCodeLine{469  \})}
+\DoxyCodeLine{470 }
+\DoxyCodeLine{471 \textcolor{preprocessor}{\#define \_\_USAT16(ARG1,ARG2) \(\backslash\)}}
+\DoxyCodeLine{472 \textcolor{preprocessor}{(\{                          \(\backslash\)}}
+\DoxyCodeLine{473 \textcolor{preprocessor}{  uint32\_t \_\_RES, \_\_ARG1 = (ARG1); \(\backslash\)}}
+\DoxyCodeLine{474 \textcolor{preprocessor}{  \_\_ASM ("{}usat16 \%0, \%1, \%2"{}} : "{}=r"{} (\_\_RES) :  "{}I"{} (ARG2), "{}r"{} (\_\_ARG1) ); \(\backslash\)}
+\DoxyCodeLine{475   \_\_RES; \(\backslash\)}
+\DoxyCodeLine{476  \})}
+\DoxyCodeLine{477 }
+\DoxyCodeLine{478 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UXTB16(uint32\_t op1)}
+\DoxyCodeLine{479 \{}
+\DoxyCodeLine{480   uint32\_t result;}
+\DoxyCodeLine{481 }
+\DoxyCodeLine{482   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uxtb16 \%0, \%1"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1));}
+\DoxyCodeLine{483   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{484 \}}
+\DoxyCodeLine{485 }
+\DoxyCodeLine{486 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_UXTAB16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{487 \{}
+\DoxyCodeLine{488   uint32\_t result;}
+\DoxyCodeLine{489 }
+\DoxyCodeLine{490   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}uxtab16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{491   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{492 \}}
+\DoxyCodeLine{493 }
+\DoxyCodeLine{494 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SXTB16(uint32\_t op1)}
+\DoxyCodeLine{495 \{}
+\DoxyCodeLine{496   uint32\_t result;}
+\DoxyCodeLine{497 }
+\DoxyCodeLine{498   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}sxtb16 \%0, \%1"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1));}
+\DoxyCodeLine{499   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{500 \}}
+\DoxyCodeLine{501 }
+\DoxyCodeLine{502 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SXTAB16(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{503 \{}
+\DoxyCodeLine{504   uint32\_t result;}
+\DoxyCodeLine{505 }
+\DoxyCodeLine{506   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}sxtab16 \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{507   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{508 \}}
+\DoxyCodeLine{509 }
+\DoxyCodeLine{510 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMUAD  (uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{511 \{}
+\DoxyCodeLine{512   uint32\_t result;}
+\DoxyCodeLine{513 }
+\DoxyCodeLine{514   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smuad \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{515   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{516 \}}
+\DoxyCodeLine{517 }
+\DoxyCodeLine{518 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMUADX (uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{519 \{}
+\DoxyCodeLine{520   uint32\_t result;}
+\DoxyCodeLine{521 }
+\DoxyCodeLine{522   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smuadx \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{523   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{524 \}}
+\DoxyCodeLine{525 }
+\DoxyCodeLine{526 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMLAD (uint32\_t op1, uint32\_t op2, uint32\_t op3)}
+\DoxyCodeLine{527 \{}
+\DoxyCodeLine{528   uint32\_t result;}
+\DoxyCodeLine{529 }
+\DoxyCodeLine{530   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smlad \%0, \%1, \%2, \%3"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2), \textcolor{stringliteral}{"{}r"{}} (op3) );}
+\DoxyCodeLine{531   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{532 \}}
+\DoxyCodeLine{533 }
+\DoxyCodeLine{534 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMLADX (uint32\_t op1, uint32\_t op2, uint32\_t op3)}
+\DoxyCodeLine{535 \{}
+\DoxyCodeLine{536   uint32\_t result;}
+\DoxyCodeLine{537 }
+\DoxyCodeLine{538   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smladx \%0, \%1, \%2, \%3"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2), \textcolor{stringliteral}{"{}r"{}} (op3) );}
+\DoxyCodeLine{539   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{540 \}}
+\DoxyCodeLine{541 }
+\DoxyCodeLine{542 \textcolor{preprocessor}{\#define \_\_SMLALD(ARG1,ARG2,ARG3) \(\backslash\)}}
+\DoxyCodeLine{543 \textcolor{preprocessor}{(\{ \(\backslash\)}}
+\DoxyCodeLine{544 \textcolor{preprocessor}{  uint32\_t \_\_ARG1 = (ARG1), \_\_ARG2 = (ARG2), \_\_ARG3\_H = (uint32\_t)((uint64\_t)(ARG3) >> 32), \_\_ARG3\_L = (uint32\_t)((uint64\_t)(ARG3) \& 0xFFFFFFFFUL); \(\backslash\)}}
+\DoxyCodeLine{545 \textcolor{preprocessor}{  \_\_ASM volatile ("{}smlald \%0, \%1, \%2, \%3"{}} : "{}=r"{} (\_\_ARG3\_L), "{}=r"{} (\_\_ARG3\_H) : "{}r"{} (\_\_ARG1), "{}r"{} (\_\_ARG2), "{}0"{} (\_\_ARG3\_L), "{}1"{} (\_\_ARG3\_H) ); \(\backslash\)}
+\DoxyCodeLine{546   (uint64\_t)(((uint64\_t)\_\_ARG3\_H << 32) | \_\_ARG3\_L); \(\backslash\)}
+\DoxyCodeLine{547  \})}
+\DoxyCodeLine{548 }
+\DoxyCodeLine{549 \textcolor{preprocessor}{\#define \_\_SMLALDX(ARG1,ARG2,ARG3) \(\backslash\)}}
+\DoxyCodeLine{550 \textcolor{preprocessor}{(\{ \(\backslash\)}}
+\DoxyCodeLine{551 \textcolor{preprocessor}{  uint32\_t \_\_ARG1 = (ARG1), \_\_ARG2 = (ARG2), \_\_ARG3\_H = (uint32\_t)((uint64\_t)(ARG3) >> 32), \_\_ARG3\_L = (uint32\_t)((uint64\_t)(ARG3) \& 0xFFFFFFFFUL); \(\backslash\)}}
+\DoxyCodeLine{552 \textcolor{preprocessor}{  \_\_ASM volatile ("{}smlaldx \%0, \%1, \%2, \%3"{}} : "{}=r"{} (\_\_ARG3\_L), "{}=r"{} (\_\_ARG3\_H) : "{}r"{} (\_\_ARG1), "{}r"{} (\_\_ARG2), "{}0"{} (\_\_ARG3\_L), "{}1"{} (\_\_ARG3\_H) ); \(\backslash\)}
+\DoxyCodeLine{553   (uint64\_t)(((uint64\_t)\_\_ARG3\_H << 32) | \_\_ARG3\_L); \(\backslash\)}
+\DoxyCodeLine{554  \})}
+\DoxyCodeLine{555 }
+\DoxyCodeLine{556 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMUSD  (uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{557 \{}
+\DoxyCodeLine{558   uint32\_t result;}
+\DoxyCodeLine{559 }
+\DoxyCodeLine{560   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smusd \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{561   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{562 \}}
+\DoxyCodeLine{563 }
+\DoxyCodeLine{564 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMUSDX (uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{565 \{}
+\DoxyCodeLine{566   uint32\_t result;}
+\DoxyCodeLine{567 }
+\DoxyCodeLine{568   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smusdx \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{569   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{570 \}}
+\DoxyCodeLine{571 }
+\DoxyCodeLine{572 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMLSD (uint32\_t op1, uint32\_t op2, uint32\_t op3)}
+\DoxyCodeLine{573 \{}
+\DoxyCodeLine{574   uint32\_t result;}
+\DoxyCodeLine{575 }
+\DoxyCodeLine{576   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smlsd \%0, \%1, \%2, \%3"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2), \textcolor{stringliteral}{"{}r"{}} (op3) );}
+\DoxyCodeLine{577   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{578 \}}
+\DoxyCodeLine{579 }
+\DoxyCodeLine{580 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMLSDX (uint32\_t op1, uint32\_t op2, uint32\_t op3)}
+\DoxyCodeLine{581 \{}
+\DoxyCodeLine{582   uint32\_t result;}
+\DoxyCodeLine{583 }
+\DoxyCodeLine{584   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smlsdx \%0, \%1, \%2, \%3"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2), \textcolor{stringliteral}{"{}r"{}} (op3) );}
+\DoxyCodeLine{585   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{586 \}}
+\DoxyCodeLine{587 }
+\DoxyCodeLine{588 \textcolor{preprocessor}{\#define \_\_SMLSLD(ARG1,ARG2,ARG3) \(\backslash\)}}
+\DoxyCodeLine{589 \textcolor{preprocessor}{(\{ \(\backslash\)}}
+\DoxyCodeLine{590 \textcolor{preprocessor}{  uint32\_t \_\_ARG1 = (ARG1), \_\_ARG2 = (ARG2), \_\_ARG3\_H = (uint32\_t)((ARG3) >> 32), \_\_ARG3\_L = (uint32\_t)((ARG3) \& 0xFFFFFFFFUL); \(\backslash\)}}
+\DoxyCodeLine{591 \textcolor{preprocessor}{  \_\_ASM volatile ("{}smlsld \%0, \%1, \%2, \%3"{}} : "{}=r"{} (\_\_ARG3\_L), "{}=r"{} (\_\_ARG3\_H) : "{}r"{} (\_\_ARG1), "{}r"{} (\_\_ARG2), "{}0"{} (\_\_ARG3\_L), "{}1"{} (\_\_ARG3\_H) ); \(\backslash\)}
+\DoxyCodeLine{592   (uint64\_t)(((uint64\_t)\_\_ARG3\_H << 32) | \_\_ARG3\_L); \(\backslash\)}
+\DoxyCodeLine{593  \})}
+\DoxyCodeLine{594 }
+\DoxyCodeLine{595 \textcolor{preprocessor}{\#define \_\_SMLSLDX(ARG1,ARG2,ARG3) \(\backslash\)}}
+\DoxyCodeLine{596 \textcolor{preprocessor}{(\{ \(\backslash\)}}
+\DoxyCodeLine{597 \textcolor{preprocessor}{  uint32\_t \_\_ARG1 = (ARG1), \_\_ARG2 = (ARG2), \_\_ARG3\_H = (uint32\_t)((ARG3) >> 32), \_\_ARG3\_L = (uint32\_t)((ARG3) \& 0xFFFFFFFFUL); \(\backslash\)}}
+\DoxyCodeLine{598 \textcolor{preprocessor}{  \_\_ASM volatile ("{}smlsldx \%0, \%1, \%2, \%3"{}} : "{}=r"{} (\_\_ARG3\_L), "{}=r"{} (\_\_ARG3\_H) : "{}r"{} (\_\_ARG1), "{}r"{} (\_\_ARG2), "{}0"{} (\_\_ARG3\_L), "{}1"{} (\_\_ARG3\_H) ); \(\backslash\)}
+\DoxyCodeLine{599   (uint64\_t)(((uint64\_t)\_\_ARG3\_H << 32) | \_\_ARG3\_L); \(\backslash\)}
+\DoxyCodeLine{600  \})}
+\DoxyCodeLine{601 }
+\DoxyCodeLine{602 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SEL  (uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{603 \{}
+\DoxyCodeLine{604   uint32\_t result;}
+\DoxyCodeLine{605 }
+\DoxyCodeLine{606   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}sel \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{607   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{608 \}}
+\DoxyCodeLine{609 }
+\DoxyCodeLine{610 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_QADD(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{611 \{}
+\DoxyCodeLine{612   uint32\_t result;}
+\DoxyCodeLine{613 }
+\DoxyCodeLine{614   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}qadd \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{615   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{616 \}}
+\DoxyCodeLine{617 }
+\DoxyCodeLine{618 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_QSUB(uint32\_t op1, uint32\_t op2)}
+\DoxyCodeLine{619 \{}
+\DoxyCodeLine{620   uint32\_t result;}
+\DoxyCodeLine{621 }
+\DoxyCodeLine{622   \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}qsub \%0, \%1, \%2"{}} : \textcolor{stringliteral}{"{}=r"{}} (result) : \textcolor{stringliteral}{"{}r"{}} (op1), \textcolor{stringliteral}{"{}r"{}} (op2) );}
+\DoxyCodeLine{623   \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{624 \}}
+\DoxyCodeLine{625 }
+\DoxyCodeLine{626 \textcolor{preprocessor}{\#define \_\_PKHBT(ARG1,ARG2,ARG3) \(\backslash\)}}
+\DoxyCodeLine{627 \textcolor{preprocessor}{(\{                          \(\backslash\)}}
+\DoxyCodeLine{628 \textcolor{preprocessor}{  uint32\_t \_\_RES, \_\_ARG1 = (ARG1), \_\_ARG2 = (ARG2); \(\backslash\)}}
+\DoxyCodeLine{629 \textcolor{preprocessor}{  \_\_ASM ("{}pkhbt \%0, \%1, \%2, lsl \%3"{}} : "{}=r"{} (\_\_RES) :  "{}r"{} (\_\_ARG1), "{}r"{} (\_\_ARG2), "{}I"{} (ARG3)  ); \(\backslash\)}
+\DoxyCodeLine{630   \_\_RES; \(\backslash\)}
+\DoxyCodeLine{631  \})}
+\DoxyCodeLine{632 }
+\DoxyCodeLine{633 \textcolor{preprocessor}{\#define \_\_PKHTB(ARG1,ARG2,ARG3) \(\backslash\)}}
+\DoxyCodeLine{634 \textcolor{preprocessor}{(\{                          \(\backslash\)}}
+\DoxyCodeLine{635 \textcolor{preprocessor}{  uint32\_t \_\_RES, \_\_ARG1 = (ARG1), \_\_ARG2 = (ARG2); \(\backslash\)}}
+\DoxyCodeLine{636 \textcolor{preprocessor}{  if (ARG3 == 0) \(\backslash\)}}
+\DoxyCodeLine{637 \textcolor{preprocessor}{    \_\_ASM ("{}pkhtb \%0, \%1, \%2"{}} : "{}=r"{} (\_\_RES) :  "{}r"{} (\_\_ARG1), "{}r"{} (\_\_ARG2)  ); \(\backslash\)}
+\DoxyCodeLine{638   else \(\backslash\)}
+\DoxyCodeLine{639     \_\_ASM ("{}pkhtb \%0, \%1, \%2, asr \%3"{} : "{}=r"{} (\_\_RES) :  "{}r"{} (\_\_ARG1), "{}r"{} (\_\_ARG2), "{}I"{} (ARG3)  ); \(\backslash\)}
+\DoxyCodeLine{640   \_\_RES; \(\backslash\)}
+\DoxyCodeLine{641  \})}
+\DoxyCodeLine{642 }
+\DoxyCodeLine{643 \_\_attribute\_\_( ( always\_inline ) ) \_\_STATIC\_INLINE uint32\_t \_\_SMMLA (int32\_t op1, int32\_t op2, int32\_t op3)}
+\DoxyCodeLine{644 \{}
+\DoxyCodeLine{645  int32\_t result;}
+\DoxyCodeLine{646 }
+\DoxyCodeLine{647  \_\_ASM \textcolor{keyword}{volatile} (\textcolor{stringliteral}{"{}smmla \%0, \%1, \%2, \%3"{}} : \textcolor{stringliteral}{"{}=r"{}} (result): \textcolor{stringliteral}{"{}r"{}}  (op1), \textcolor{stringliteral}{"{}r"{}} (op2), \textcolor{stringliteral}{"{}r"{}} (op3) );}
+\DoxyCodeLine{648  \textcolor{keywordflow}{return}(result);}
+\DoxyCodeLine{649 \}}
+\DoxyCodeLine{650 }
+\DoxyCodeLine{651 \textcolor{comment}{/*-\/-\/ End CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{652 }
+\DoxyCodeLine{653 }
+\DoxyCodeLine{654 }
+\DoxyCodeLine{655 \textcolor{preprocessor}{\#elif defined ( \_\_TASKING\_\_ ) }\textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ TASKING Compiler -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{656 \textcolor{comment}{/* TASKING carm specific functions */}}
+\DoxyCodeLine{657 }
+\DoxyCodeLine{658 }
+\DoxyCodeLine{659 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/ CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{660 \textcolor{comment}{/* not yet supported */}}
+\DoxyCodeLine{661 \textcolor{comment}{/*-\/-\/ End CM4 SIMD Intrinsics -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{662 }
+\DoxyCodeLine{663 }
+\DoxyCodeLine{664 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{665 }
+\DoxyCodeLine{669 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CM4\_SIMD\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{670 }
+\DoxyCodeLine{671 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{672 \}}
+\DoxyCodeLine{673 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

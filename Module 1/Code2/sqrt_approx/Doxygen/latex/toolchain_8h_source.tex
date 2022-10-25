@@ -1,0 +1,41 @@
+\hypertarget{toolchain_8h_source}{}\doxysection{toolchain.\+h}
+\label{toolchain_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/toolchain.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt\_approx/mbed/toolchain.h}}
+\mbox{\hyperlink{toolchain_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00001}00001 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00003}00003 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00004}00004 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00005}00005 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00006}00006 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00008}00008 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00009}00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00010}00010 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00011}00011 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00012}00012 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00013}00013 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00014}00014 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00015}00015 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00016}00016 \textcolor{preprocessor}{\#ifndef MBED\_TOOLCHAIN\_H}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00017}00017 \textcolor{preprocessor}{\#define MBED\_TOOLCHAIN\_H}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00019}00019 \textcolor{preprocessor}{\#if defined(TOOLCHAIN\_ARM)}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <rt\_sys.h>}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00021}00021 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00023}00023 \textcolor{preprocessor}{\#ifndef FILEHANDLE}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00024}\mbox{\hyperlink{toolchain_8h_ae3c686f9cfb2c0113bc42a8c3f7f26b6}{00024}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{toolchain_8h_ae3c686f9cfb2c0113bc42a8c3f7f26b6}{FILEHANDLE}};}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00025}00025 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00027}00027 \textcolor{preprocessor}{\#if defined (\_\_ICCARM\_\_)}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00028}00028 \textcolor{preprocessor}{\#   define WEAK     \_\_weak}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00029}00029 \textcolor{preprocessor}{\#   define PACKED   \_\_packed}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00030}00030 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00031}\mbox{\hyperlink{toolchain_8h_ad1480e9557edcc543498ca259cee6c7d}{00031}} \textcolor{preprocessor}{\#   define WEAK     \_\_attribute\_\_((weak))}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00032}\mbox{\hyperlink{toolchain_8h_a36d525cf4d116b2fe4ecc00222b256f1}{00032}} \textcolor{preprocessor}{\#   define PACKED   \_\_attribute\_\_((packed))}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00033}00033 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{toolchain_8h_source_l00035}00035 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_a_r_t___parity" xml:lang="en-US">
+<title>UART_Parity</title>
+<indexterm><primary>UART_Parity</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___parity_1ga270dea6e1a92dd83fe58802450bdd60c">UART_PARITY_NONE</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___parity_1ga063b14ac42ef9e8f4246c17a586b14eb">UART_PARITY_EVEN</link>   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___parity_1ga229615e64964f68f7a856ea6ffea359e">UART_PARITY_ODD</link>   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2e159d36ab2c93a2c1942df60e9eebbe">USART_CR1_PS</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_a_r_t___parity_1gaf2f542d273738ee3cb4a93d169827744">IS_UART_PARITY</link>(PARITY)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___u_a_r_t___parity_1gaf2f542d273738ee3cb4a93d169827744"/><section>
+    <title>IS_UART_PARITY</title>
+<indexterm><primary>IS_UART_PARITY</primary><secondary>UART_Parity</secondary></indexterm>
+<indexterm><primary>UART_Parity</primary><secondary>IS_UART_PARITY</secondary></indexterm>
+<para><computeroutput>#define IS_UART_PARITY( PARITY)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((PARITY)&#32;==&#32;<link linkend="_group___u_a_r_t___parity_1ga270dea6e1a92dd83fe58802450bdd60c">UART_PARITY_NONE</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((PARITY)&#32;==&#32;<link linkend="_group___u_a_r_t___parity_1ga063b14ac42ef9e8f4246c17a586b14eb">UART_PARITY_EVEN</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((PARITY)&#32;==&#32;<link linkend="_group___u_a_r_t___parity_1ga229615e64964f68f7a856ea6ffea359e">UART_PARITY_ODD</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00188">188</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_a_r_t___parity_1ga063b14ac42ef9e8f4246c17a586b14eb"/><section>
+    <title>UART_PARITY_EVEN</title>
+<indexterm><primary>UART_PARITY_EVEN</primary><secondary>UART_Parity</secondary></indexterm>
+<indexterm><primary>UART_Parity</primary><secondary>UART_PARITY_EVEN</secondary></indexterm>
+<para><computeroutput>#define UART_PARITY_EVEN   ((uint32_t)<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00186">186</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_a_r_t___parity_1ga270dea6e1a92dd83fe58802450bdd60c"/><section>
+    <title>UART_PARITY_NONE</title>
+<indexterm><primary>UART_PARITY_NONE</primary><secondary>UART_Parity</secondary></indexterm>
+<indexterm><primary>UART_Parity</primary><secondary>UART_PARITY_NONE</secondary></indexterm>
+<para><computeroutput>#define UART_PARITY_NONE   ((uint32_t)0x00000000)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00185">185</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+<anchor xml:id="_group___u_a_r_t___parity_1ga229615e64964f68f7a856ea6ffea359e"/><section>
+    <title>UART_PARITY_ODD</title>
+<indexterm><primary>UART_PARITY_ODD</primary><secondary>UART_Parity</secondary></indexterm>
+<indexterm><primary>UART_Parity</primary><secondary>UART_PARITY_ODD</secondary></indexterm>
+<para><computeroutput>#define UART_PARITY_ODD   ((uint32_t)(<link linkend="_group___peripheral___registers___bits___definition_1ga60f8fcf084f9a8514efafb617c70b074">USART_CR1_PCE</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga2e159d36ab2c93a2c1942df60e9eebbe">USART_CR1_PS</link>))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__uart_8h_source_1l00187">187</link> of file <link linkend="_stm32f4xx__hal__uart_8h_source">stm32f4xx_hal_uart.h</link>.</para>
+</section>
+</section>
+</section>

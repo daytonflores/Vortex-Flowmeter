@@ -1,0 +1,63 @@
+\hypertarget{_bus_in_8h_source}{}\doxysection{Bus\+In.\+h}
+\label{_bus_in_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/BusIn.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/BusIn.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* mbed Microcontroller Library}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Copyright (c) 2006-\/2013 ARM Limited}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the "{}License"{});}}
+\DoxyCodeLine{5 \textcolor{comment}{ * you may not use this file except in compliance with the License.}}
+\DoxyCodeLine{6 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ *     http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{11 \textcolor{comment}{ * distributed under the License is distributed on an "{}AS IS"{} BASIS,}}
+\DoxyCodeLine{12 \textcolor{comment}{ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{13 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{14 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{15 \textcolor{comment}{ */}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef MBED\_BUSIN\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define MBED\_BUSIN\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}platform.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}DigitalIn.h"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{namespace }mbed \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{classmbed_1_1_bus_in}{BusIn}} \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \textcolor{comment}{/* Group: Configuration Methods */}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{39     \mbox{\hyperlink{classmbed_1_1_bus_in_a60e8a1d93b93bb565d7f6fafacdf6a4b}{BusIn}}(PinName p0, PinName p1 = NC, PinName p2 = NC, PinName p3 = NC,}
+\DoxyCodeLine{40           PinName p4 = NC, PinName p5 = NC, PinName p6 = NC, PinName p7 = NC,}
+\DoxyCodeLine{41           PinName p8 = NC, PinName p9 = NC, PinName p10 = NC, PinName p11 = NC,}
+\DoxyCodeLine{42           PinName p12 = NC, PinName p13 = NC, PinName p14 = NC, PinName p15 = NC);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \mbox{\hyperlink{classmbed_1_1_bus_in_a60e8a1d93b93bb565d7f6fafacdf6a4b}{BusIn}}(PinName pins[16]);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \mbox{\hyperlink{classmbed_1_1_bus_in}{\string~BusIn}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} \mbox{\hyperlink{classmbed_1_1_bus_in_aad43475895a43bca659aef8a81dc4478}{read}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{classmbed_1_1_bus_in_a93eed47467fec29854399cb7606a123b}{mode}}(PinMode pull);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#ifdef MBED\_OPERATORS}}
+\DoxyCodeLine{64     \textcolor{keyword}{operator} int();}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{68     \mbox{\hyperlink{classmbed_1_1_digital_in}{DigitalIn}}* \_pin[16];}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{comment}{/* disallow copy constructor and assignment operators */}}
+\DoxyCodeLine{71 \textcolor{keyword}{private}:}
+\DoxyCodeLine{72     \mbox{\hyperlink{classmbed_1_1_bus_in_a60e8a1d93b93bb565d7f6fafacdf6a4b}{BusIn}}(\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_bus_in}{BusIn}}\&);}
+\DoxyCodeLine{73     \mbox{\hyperlink{classmbed_1_1_bus_in}{BusIn}} \& operator = (\textcolor{keyword}{const} \mbox{\hyperlink{classmbed_1_1_bus_in}{BusIn}}\&);}
+\DoxyCodeLine{74 \};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \} \textcolor{comment}{// namespace mbed}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

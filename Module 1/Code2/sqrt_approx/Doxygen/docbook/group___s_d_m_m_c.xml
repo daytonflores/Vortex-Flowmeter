@@ -1,0 +1,461 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___s_d_m_m_c" xml:lang="en-US">
+<title>SDMMC</title>
+<indexterm><primary>SDMMC</primary></indexterm>
+<simplesect>
+    <title>Modules    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___s_d_i_o___exported___constants">SDIO_Exported_Constants</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___command___index">SDIO_Command_Index</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___response___type">SDIO_Response_Type</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___wait___interrupt___state">SDIO_Wait_Interrupt_State</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___c_p_s_m___state">SDIO_CPSM_State</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___response___registers">SDIO_Response_Registers</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___data___length">SDIO_Data_Length</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___data___block___size">SDIO_Data_Block_Size</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___transfer___direction">SDIO_Transfer_Direction</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___transfer___type">SDIO_Transfer_Type</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___d_p_s_m___state">SDIO_DPSM_State</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___read___wait___mode">SDIO_Read_Wait_Mode</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___interrupt__sources">SDIO_Interrupt_sources</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___flags">SDIO_Flags</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___instance__definition">SDIO_Instance_definition</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_d_i_o___interrupt___clock">SDIO_Interrupt_Clock</link></para>
+
+<para>macros to handle interrupts and specific clock configurations </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_s_d_i_o___init_type_def">SDIO_InitTypeDef</link></para>
+
+<para>SDMMC Configuration Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_d_i_o___cmd_init_type_def">SDIO_CmdInitTypeDef</link></para>
+
+<para>SDIO Command Control structure. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_s_d_i_o___data_init_type_def">SDIO_DataInitTypeDef</link></para>
+
+<para>SDIO Data Control structure. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link>   (<link linkend="_group___peripheral__registers__structures_1ga95dd0abbc6767893b4b02935fa846f52">SDIO_BASE</link> - <link linkend="_group___peripheral__registers__structures_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gac5d642be874338519fdec175204ca8ed">CLKCR_OFFSET</link>   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x04)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga6ad1da47f9d84c54eb620b9231ebec86">CLKEN_BitNumber</link>   0x08</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gabfb5772b9b734972b576309f7ca8bf92">CLKCR_CLKEN_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gac5d642be874338519fdec175204ca8ed">CLKCR_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga6ad1da47f9d84c54eb620b9231ebec86">CLKEN_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link>   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x0C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gaf88f03a42d76974b55dfb8bda65ade97">SDIOSUSPEND_BitNumber</link>   0x0B</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga931e48aa282e2a937308f57f807e0781">CMD_SDIOSUSPEND_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gaf88f03a42d76974b55dfb8bda65ade97">SDIOSUSPEND_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga1d1112c7b804791a0fffd8b317085aeb">ENCMDCOMPL_BitNumber</link>   0x0C</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gade06098d1616639ce5f1b70675280b7c">CMD_ENCMDCOMPL_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga1d1112c7b804791a0fffd8b317085aeb">ENCMDCOMPL_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gab6d83a7ccd4a0d9ea9a09fec263fb25f">NIEN_BitNumber</link>   0x0D</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga08623f1d053677de8b20a6f5f5090edd">CMD_NIEN_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gab6d83a7ccd4a0d9ea9a09fec263fb25f">NIEN_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gabd4fd3bb700b879f843ccc867db1832e">ATACMD_BitNumber</link>   0x0E</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gabb7e537f931b6fdd3b49e826f2e19d7c">CMD_ATACMD_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gabd4fd3bb700b879f843ccc867db1832e">ATACMD_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link>   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x2C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gab2af311e327213503f0dbf3d013b7944">DMAEN_BitNumber</link>   0x03</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga43f7336d4f955c6cf1f676ccbc043fe9">DCTRL_DMAEN_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gab2af311e327213503f0dbf3d013b7944">DMAEN_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga773045c51d3e8daee0c181517c44a2df">RWSTART_BitNumber</link>   0x08</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gac776c39dfac0e1ed007217133e1145c3">DCTRL_RWSTART_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga773045c51d3e8daee0c181517c44a2df">RWSTART_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gae8c0654ad5cba23281bcfa77ef19b9cf">RWSTOP_BitNumber</link>   0x09</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga678da1db835676b0fb1976cf3408e2d1">DCTRL_RWSTOP_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gae8c0654ad5cba23281bcfa77ef19b9cf">RWSTOP_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gad7b722671f65e79d1be2899b643278ad">RWMOD_BitNumber</link>   0x0A</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gad34bfe8650534ce24320ae83886c91e3">DCTRL_RWMOD_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gad7b722671f65e79d1be2899b643278ad">RWMOD_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga37f3e1612e0dae8160be978ebfa54301">SDIOEN_BitNumber</link>   0x0B</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga894f7da62b89ddd9f4b79d066056a3c7">DCTRL_SDIOEN_BB</link>   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga37f3e1612e0dae8160be978ebfa54301">SDIOEN_BitNumber</link> * 4))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gac8d10dd1e49ca9e8a6954146654e9a01">CLKCR_CLEAR_MASK</link>   ((uint32_t)0xFFFF8100)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga7e6ec7be68d0fbb8fb4e3725cca9a05c">PWR_PWRCTRL_MASK</link>   ((uint32_t)0xFFFFFFFC)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga9e9fc7810b95805aeeb760bbdd87fa9b">DCTRL_CLEAR_MASK</link>   ((uint32_t)0xFFFFFF08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga2325d77090e44221b07f8fba5bc9217e">CMD_CLEAR_MASK</link>   ((uint32_t)0xFFFFF800)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga4285ce49b005e3d03ddf9fdc491c4d70">SDIO_RESP_ADDR</link>   ((uint32_t)(<link linkend="_group___peripheral__registers__structures_1ga95dd0abbc6767893b4b02935fa846f52">SDIO_BASE</link> + 0x14))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga50b379bbcb59f027be37e9e787d3aa94">SDIO_FIFO_ADDRESS</link>   ((uint32_t)0x40012C80)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1ga3afd2159b8f378c90ccd48a4afab3691">SDIO_INIT_CLK_DIV</link>   ((uint8_t)0x76)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_d_m_m_c_1gad37fe2cf88496122b5fdf14ae7f529b5">SDIO_TRANSFER_CLK_DIV</link>   ((uint8_t)0x0)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga19c1f35bc992e008b4a4bd812561b757">SDIO_Init</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx, <link linkend="_struct_s_d_i_o___init_type_def">SDIO_InitTypeDef</link> Init)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1ga47b3aea3560c00fccb5b6967eb8fdf9f">SDIO_ReadFIFO</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga86ea7c549d5034f14b4ba4b52f707a57">SDIO_WriteFIFO</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx, uint32_t *pWriteData)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga6245d444d06f38176437446f7b4ad047">SDIO_PowerState_ON</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga162f9bf71abaaa3d0be637c9718f0beb">SDIO_PowerState_OFF</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1ga2079f67b0c5b7bc5f745828f6e83ee29">SDIO_GetPowerState</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga5b0b3b1cf9fe9c2201b7fc6f69c62377">SDIO_SendCommand</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx, <link linkend="_struct_s_d_i_o___cmd_init_type_def">SDIO_CmdInitTypeDef</link> *SDIO_CmdInitStruct)</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_group___s_d_m_m_c_1ga6cd11d4e0eb89568585ddc3224f27f40">SDIO_GetCommandResponse</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1ga5c1e859511840e8cca6a9a768bce220b">SDIO_GetResponse</link> (uint32_t SDIO_RESP)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga4be023f80f0a1700e0a5886d24bf3293">SDIO_DataConfig</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx, <link linkend="_struct_s_d_i_o___data_init_type_def">SDIO_DataInitTypeDef</link> *SDIO_DataInitStruct)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1gad9ecd1a1192eeda227481ce0d06da031">SDIO_GetDataCounter</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_group___s_d_m_m_c_1gad13ed8c07a08d91f90eb0ec5bece72a4">SDIO_GetFIFOCount</link> (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> *SDIOx)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___s_d_m_m_c_1ga2bc047e7958ae43455a40ce629665b63">SDIO_SetSDIOReadWaitMode</link> (uint32_t SDIO_ReadWaitMode)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___s_d_m_m_c_1gabd4fd3bb700b879f843ccc867db1832e"/><section>
+    <title>ATACMD_BitNumber</title>
+<indexterm><primary>ATACMD_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>ATACMD_BitNumber</secondary></indexterm>
+<para><computeroutput>#define ATACMD_BitNumber   0x0E</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00529">529</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gac8d10dd1e49ca9e8a6954146654e9a01"/><section>
+    <title>CLKCR_CLEAR_MASK</title>
+<indexterm><primary>CLKCR_CLEAR_MASK</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CLKCR_CLEAR_MASK</secondary></indexterm>
+<para><computeroutput>#define CLKCR_CLEAR_MASK   ((uint32_t)0xFFFF8100)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00557">557</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gabfb5772b9b734972b576309f7ca8bf92"/><section>
+    <title>CLKCR_CLKEN_BB</title>
+<indexterm><primary>CLKCR_CLKEN_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CLKCR_CLKEN_BB</secondary></indexterm>
+<para><computeroutput>#define CLKCR_CLKEN_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gac5d642be874338519fdec175204ca8ed">CLKCR_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga6ad1da47f9d84c54eb620b9231ebec86">CLKEN_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00512">512</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gac5d642be874338519fdec175204ca8ed"/><section>
+    <title>CLKCR_OFFSET</title>
+<indexterm><primary>CLKCR_OFFSET</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CLKCR_OFFSET</secondary></indexterm>
+<para><computeroutput>#define CLKCR_OFFSET   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x04)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00510">510</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga6ad1da47f9d84c54eb620b9231ebec86"/><section>
+    <title>CLKEN_BitNumber</title>
+<indexterm><primary>CLKEN_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CLKEN_BitNumber</secondary></indexterm>
+<para><computeroutput>#define CLKEN_BitNumber   0x08</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00511">511</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gabb7e537f931b6fdd3b49e826f2e19d7c"/><section>
+    <title>CMD_ATACMD_BB</title>
+<indexterm><primary>CMD_ATACMD_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CMD_ATACMD_BB</secondary></indexterm>
+<para><computeroutput>#define CMD_ATACMD_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gabd4fd3bb700b879f843ccc867db1832e">ATACMD_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00530">530</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga2325d77090e44221b07f8fba5bc9217e"/><section>
+    <title>CMD_CLEAR_MASK</title>
+<indexterm><primary>CMD_CLEAR_MASK</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CMD_CLEAR_MASK</secondary></indexterm>
+<para><computeroutput>#define CMD_CLEAR_MASK   ((uint32_t)0xFFFFF800)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00569">569</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gade06098d1616639ce5f1b70675280b7c"/><section>
+    <title>CMD_ENCMDCOMPL_BB</title>
+<indexterm><primary>CMD_ENCMDCOMPL_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CMD_ENCMDCOMPL_BB</secondary></indexterm>
+<para><computeroutput>#define CMD_ENCMDCOMPL_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga1d1112c7b804791a0fffd8b317085aeb">ENCMDCOMPL_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00522">522</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga08623f1d053677de8b20a6f5f5090edd"/><section>
+    <title>CMD_NIEN_BB</title>
+<indexterm><primary>CMD_NIEN_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CMD_NIEN_BB</secondary></indexterm>
+<para><computeroutput>#define CMD_NIEN_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gab6d83a7ccd4a0d9ea9a09fec263fb25f">NIEN_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00526">526</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e"/><section>
+    <title>CMD_OFFSET</title>
+<indexterm><primary>CMD_OFFSET</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CMD_OFFSET</secondary></indexterm>
+<para><computeroutput>#define CMD_OFFSET   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x0C)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00516">516</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga931e48aa282e2a937308f57f807e0781"/><section>
+    <title>CMD_SDIOSUSPEND_BB</title>
+<indexterm><primary>CMD_SDIOSUSPEND_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>CMD_SDIOSUSPEND_BB</secondary></indexterm>
+<para><computeroutput>#define CMD_SDIOSUSPEND_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1gaf12d26702ce7a88d2a3dae87f000b75e">CMD_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gaf88f03a42d76974b55dfb8bda65ade97">SDIOSUSPEND_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00518">518</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga9e9fc7810b95805aeeb760bbdd87fa9b"/><section>
+    <title>DCTRL_CLEAR_MASK</title>
+<indexterm><primary>DCTRL_CLEAR_MASK</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>DCTRL_CLEAR_MASK</secondary></indexterm>
+<para><computeroutput>#define DCTRL_CLEAR_MASK   ((uint32_t)0xFFFFFF08)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00565">565</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga43f7336d4f955c6cf1f676ccbc043fe9"/><section>
+    <title>DCTRL_DMAEN_BB</title>
+<indexterm><primary>DCTRL_DMAEN_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>DCTRL_DMAEN_BB</secondary></indexterm>
+<para><computeroutput>#define DCTRL_DMAEN_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gab2af311e327213503f0dbf3d013b7944">DMAEN_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00536">536</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240"/><section>
+    <title>DCTRL_OFFSET</title>
+<indexterm><primary>DCTRL_OFFSET</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>DCTRL_OFFSET</secondary></indexterm>
+<para><computeroutput>#define DCTRL_OFFSET   (<link linkend="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3">SDIO_OFFSET</link> + 0x2C)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00534">534</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gad34bfe8650534ce24320ae83886c91e3"/><section>
+    <title>DCTRL_RWMOD_BB</title>
+<indexterm><primary>DCTRL_RWMOD_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>DCTRL_RWMOD_BB</secondary></indexterm>
+<para><computeroutput>#define DCTRL_RWMOD_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gad7b722671f65e79d1be2899b643278ad">RWMOD_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00548">548</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gac776c39dfac0e1ed007217133e1145c3"/><section>
+    <title>DCTRL_RWSTART_BB</title>
+<indexterm><primary>DCTRL_RWSTART_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>DCTRL_RWSTART_BB</secondary></indexterm>
+<para><computeroutput>#define DCTRL_RWSTART_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga773045c51d3e8daee0c181517c44a2df">RWSTART_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00540">540</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga678da1db835676b0fb1976cf3408e2d1"/><section>
+    <title>DCTRL_RWSTOP_BB</title>
+<indexterm><primary>DCTRL_RWSTOP_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>DCTRL_RWSTOP_BB</secondary></indexterm>
+<para><computeroutput>#define DCTRL_RWSTOP_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1gae8c0654ad5cba23281bcfa77ef19b9cf">RWSTOP_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00544">544</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga894f7da62b89ddd9f4b79d066056a3c7"/><section>
+    <title>DCTRL_SDIOEN_BB</title>
+<indexterm><primary>DCTRL_SDIOEN_BB</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>DCTRL_SDIOEN_BB</secondary></indexterm>
+<para><computeroutput>#define DCTRL_SDIOEN_BB   (<link linkend="_group___peripheral__registers__structures_1gaed7efc100877000845c236ccdc9e144a">PERIPH_BB_BASE</link> + (<link linkend="_group___s_d_m_m_c_1ga948c1382c4cfd3af3e406c4d0cdd4240">DCTRL_OFFSET</link> * 32) + (<link linkend="_group___s_d_m_m_c_1ga37f3e1612e0dae8160be978ebfa54301">SDIOEN_BitNumber</link> * 4))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00552">552</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gab2af311e327213503f0dbf3d013b7944"/><section>
+    <title>DMAEN_BitNumber</title>
+<indexterm><primary>DMAEN_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>DMAEN_BitNumber</secondary></indexterm>
+<para><computeroutput>#define DMAEN_BitNumber   0x03</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00535">535</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga1d1112c7b804791a0fffd8b317085aeb"/><section>
+    <title>ENCMDCOMPL_BitNumber</title>
+<indexterm><primary>ENCMDCOMPL_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>ENCMDCOMPL_BitNumber</secondary></indexterm>
+<para><computeroutput>#define ENCMDCOMPL_BitNumber   0x0C</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00521">521</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gab6d83a7ccd4a0d9ea9a09fec263fb25f"/><section>
+    <title>NIEN_BitNumber</title>
+<indexterm><primary>NIEN_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>NIEN_BitNumber</secondary></indexterm>
+<para><computeroutput>#define NIEN_BitNumber   0x0D</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00525">525</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga7e6ec7be68d0fbb8fb4e3725cca9a05c"/><section>
+    <title>PWR_PWRCTRL_MASK</title>
+<indexterm><primary>PWR_PWRCTRL_MASK</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>PWR_PWRCTRL_MASK</secondary></indexterm>
+<para><computeroutput>#define PWR_PWRCTRL_MASK   ((uint32_t)0xFFFFFFFC)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00561">561</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gad7b722671f65e79d1be2899b643278ad"/><section>
+    <title>RWMOD_BitNumber</title>
+<indexterm><primary>RWMOD_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>RWMOD_BitNumber</secondary></indexterm>
+<para><computeroutput>#define RWMOD_BitNumber   0x0A</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00547">547</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga773045c51d3e8daee0c181517c44a2df"/><section>
+    <title>RWSTART_BitNumber</title>
+<indexterm><primary>RWSTART_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>RWSTART_BitNumber</secondary></indexterm>
+<para><computeroutput>#define RWSTART_BitNumber   0x08</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00539">539</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gae8c0654ad5cba23281bcfa77ef19b9cf"/><section>
+    <title>RWSTOP_BitNumber</title>
+<indexterm><primary>RWSTOP_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>RWSTOP_BitNumber</secondary></indexterm>
+<para><computeroutput>#define RWSTOP_BitNumber   0x09</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00543">543</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga50b379bbcb59f027be37e9e787d3aa94"/><section>
+    <title>SDIO_FIFO_ADDRESS</title>
+<indexterm><primary>SDIO_FIFO_ADDRESS</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_FIFO_ADDRESS</secondary></indexterm>
+<para><computeroutput>#define SDIO_FIFO_ADDRESS   ((uint32_t)0x40012C80)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00575">575</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga3afd2159b8f378c90ccd48a4afab3691"/><section>
+    <title>SDIO_INIT_CLK_DIV</title>
+<indexterm><primary>SDIO_INIT_CLK_DIV</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_INIT_CLK_DIV</secondary></indexterm>
+<para><computeroutput>#define SDIO_INIT_CLK_DIV   ((uint8_t)0x76)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00578">578</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gabf07aced03df5f46d57cea1d4f56d1e3"/><section>
+    <title>SDIO_OFFSET</title>
+<indexterm><primary>SDIO_OFFSET</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_OFFSET</secondary></indexterm>
+<para><computeroutput>#define SDIO_OFFSET   (<link linkend="_group___peripheral__registers__structures_1ga95dd0abbc6767893b4b02935fa846f52">SDIO_BASE</link> - <link linkend="_group___peripheral__registers__structures_1ga9171f49478fa86d932f89e78e73b88b0">PERIPH_BASE</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00506">506</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga4285ce49b005e3d03ddf9fdc491c4d70"/><section>
+    <title>SDIO_RESP_ADDR</title>
+<indexterm><primary>SDIO_RESP_ADDR</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_RESP_ADDR</secondary></indexterm>
+<para><computeroutput>#define SDIO_RESP_ADDR   ((uint32_t)(<link linkend="_group___peripheral__registers__structures_1ga95dd0abbc6767893b4b02935fa846f52">SDIO_BASE</link> + 0x14))</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00572">572</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gad37fe2cf88496122b5fdf14ae7f529b5"/><section>
+    <title>SDIO_TRANSFER_CLK_DIV</title>
+<indexterm><primary>SDIO_TRANSFER_CLK_DIV</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_TRANSFER_CLK_DIV</secondary></indexterm>
+<para><computeroutput>#define SDIO_TRANSFER_CLK_DIV   ((uint8_t)0x0)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00581">581</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1ga37f3e1612e0dae8160be978ebfa54301"/><section>
+    <title>SDIOEN_BitNumber</title>
+<indexterm><primary>SDIOEN_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIOEN_BitNumber</secondary></indexterm>
+<para><computeroutput>#define SDIOEN_BitNumber   0x0B</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00551">551</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+<anchor xml:id="_group___s_d_m_m_c_1gaf88f03a42d76974b55dfb8bda65ade97"/><section>
+    <title>SDIOSUSPEND_BitNumber</title>
+<indexterm><primary>SDIOSUSPEND_BitNumber</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIOSUSPEND_BitNumber</secondary></indexterm>
+<para><computeroutput>#define SDIOSUSPEND_BitNumber   0x0B</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__ll__sdmmc_8h_source_1l00517">517</link> of file <link linkend="_stm32f4xx__ll__sdmmc_8h_source">stm32f4xx_ll_sdmmc.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group___s_d_m_m_c_1ga4be023f80f0a1700e0a5886d24bf3293"/><section>
+    <title>SDIO_DataConfig()</title>
+<indexterm><primary>SDIO_DataConfig</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_DataConfig</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> SDIO_DataConfig (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx, <link linkend="_struct_s_d_i_o___data_init_type_def">SDIO_DataInitTypeDef</link> * SDIO_DataInitStruct)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga6cd11d4e0eb89568585ddc3224f27f40"/><section>
+    <title>SDIO_GetCommandResponse()</title>
+<indexterm><primary>SDIO_GetCommandResponse</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_GetCommandResponse</secondary></indexterm>
+<para><computeroutput>uint8_t SDIO_GetCommandResponse (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1gad9ecd1a1192eeda227481ce0d06da031"/><section>
+    <title>SDIO_GetDataCounter()</title>
+<indexterm><primary>SDIO_GetDataCounter</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_GetDataCounter</secondary></indexterm>
+<para><computeroutput>uint32_t SDIO_GetDataCounter (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1gad13ed8c07a08d91f90eb0ec5bece72a4"/><section>
+    <title>SDIO_GetFIFOCount()</title>
+<indexterm><primary>SDIO_GetFIFOCount</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_GetFIFOCount</secondary></indexterm>
+<para><computeroutput>uint32_t SDIO_GetFIFOCount (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga2079f67b0c5b7bc5f745828f6e83ee29"/><section>
+    <title>SDIO_GetPowerState()</title>
+<indexterm><primary>SDIO_GetPowerState</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_GetPowerState</secondary></indexterm>
+<para><computeroutput>uint32_t SDIO_GetPowerState (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga5c1e859511840e8cca6a9a768bce220b"/><section>
+    <title>SDIO_GetResponse()</title>
+<indexterm><primary>SDIO_GetResponse</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_GetResponse</secondary></indexterm>
+<para><computeroutput>uint32_t SDIO_GetResponse (uint32_t SDIO_RESP)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga19c1f35bc992e008b4a4bd812561b757"/><section>
+    <title>SDIO_Init()</title>
+<indexterm><primary>SDIO_Init</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_Init</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> SDIO_Init (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx, <link linkend="_struct_s_d_i_o___init_type_def">SDIO_InitTypeDef</link> Init)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga162f9bf71abaaa3d0be637c9718f0beb"/><section>
+    <title>SDIO_PowerState_OFF()</title>
+<indexterm><primary>SDIO_PowerState_OFF</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_PowerState_OFF</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> SDIO_PowerState_OFF (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga6245d444d06f38176437446f7b4ad047"/><section>
+    <title>SDIO_PowerState_ON()</title>
+<indexterm><primary>SDIO_PowerState_ON</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_PowerState_ON</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> SDIO_PowerState_ON (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga47b3aea3560c00fccb5b6967eb8fdf9f"/><section>
+    <title>SDIO_ReadFIFO()</title>
+<indexterm><primary>SDIO_ReadFIFO</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_ReadFIFO</secondary></indexterm>
+<para><computeroutput>uint32_t SDIO_ReadFIFO (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga5b0b3b1cf9fe9c2201b7fc6f69c62377"/><section>
+    <title>SDIO_SendCommand()</title>
+<indexterm><primary>SDIO_SendCommand</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_SendCommand</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> SDIO_SendCommand (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx, <link linkend="_struct_s_d_i_o___cmd_init_type_def">SDIO_CmdInitTypeDef</link> * SDIO_CmdInitStruct)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga2bc047e7958ae43455a40ce629665b63"/><section>
+    <title>SDIO_SetSDIOReadWaitMode()</title>
+<indexterm><primary>SDIO_SetSDIOReadWaitMode</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_SetSDIOReadWaitMode</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> SDIO_SetSDIOReadWaitMode (uint32_t SDIO_ReadWaitMode)</computeroutput></para></section>
+<anchor xml:id="_group___s_d_m_m_c_1ga86ea7c549d5034f14b4ba4b52f707a57"/><section>
+    <title>SDIO_WriteFIFO()</title>
+<indexterm><primary>SDIO_WriteFIFO</primary><secondary>SDMMC</secondary></indexterm>
+<indexterm><primary>SDMMC</primary><secondary>SDIO_WriteFIFO</secondary></indexterm>
+<para><computeroutput><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> SDIO_WriteFIFO (<link linkend="_struct_s_d_i_o___type_def">SDIO_TypeDef</link> * SDIOx, uint32_t * pWriteData)</computeroutput></para></section>
+</section>
+</section>

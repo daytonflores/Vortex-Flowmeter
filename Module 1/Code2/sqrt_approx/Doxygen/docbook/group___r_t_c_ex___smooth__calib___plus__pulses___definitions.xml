@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions" xml:lang="en-US">
+<title>RTCEx_Smooth_calib_Plus_pulses_Definitions</title>
+<indexterm><primary>RTCEx_Smooth_calib_Plus_pulses_Definitions</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions_1ga53eabbf840a8631b955636bbfaf9bc83">RTC_SMOOTHCALIB_PLUSPULSES_SET</link>   ((uint32_t)0x00008000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions_1gaed8a5d1a5400612bde6fe30b32f350e7">RTC_SMOOTHCALIB_PLUSPULSES_RESET</link>   ((uint32_t)0x00000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions_1gad0081b479cf6d71ac588a483d09d7b75">IS_RTC_SMOOTH_CALIB_PLUS</link>(PLUS)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions_1gad0081b479cf6d71ac588a483d09d7b75"/><section>
+    <title>IS_RTC_SMOOTH_CALIB_PLUS</title>
+<indexterm><primary>IS_RTC_SMOOTH_CALIB_PLUS</primary><secondary>RTCEx_Smooth_calib_Plus_pulses_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Smooth_calib_Plus_pulses_Definitions</primary><secondary>IS_RTC_SMOOTH_CALIB_PLUS</secondary></indexterm>
+<para><computeroutput>#define IS_RTC_SMOOTH_CALIB_PLUS( PLUS)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((PLUS)&#32;==&#32;<link linkend="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions_1ga53eabbf840a8631b955636bbfaf9bc83">RTC_SMOOTHCALIB_PLUSPULSES_SET</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((PLUS)&#32;==&#32;<link linkend="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions_1gaed8a5d1a5400612bde6fe30b32f350e7">RTC_SMOOTHCALIB_PLUSPULSES_RESET</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00364">364</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions_1gaed8a5d1a5400612bde6fe30b32f350e7"/><section>
+    <title>RTC_SMOOTHCALIB_PLUSPULSES_RESET</title>
+<indexterm><primary>RTC_SMOOTHCALIB_PLUSPULSES_RESET</primary><secondary>RTCEx_Smooth_calib_Plus_pulses_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Smooth_calib_Plus_pulses_Definitions</primary><secondary>RTC_SMOOTHCALIB_PLUSPULSES_RESET</secondary></indexterm>
+<para><computeroutput>#define RTC_SMOOTHCALIB_PLUSPULSES_RESET   ((uint32_t)0x00000000)</computeroutput></para>
+<para>The number of RTCCLK pulses subbstited during a 32-second window = CALM[8:0] </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00362">362</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+<anchor xml:id="_group___r_t_c_ex___smooth__calib___plus__pulses___definitions_1ga53eabbf840a8631b955636bbfaf9bc83"/><section>
+    <title>RTC_SMOOTHCALIB_PLUSPULSES_SET</title>
+<indexterm><primary>RTC_SMOOTHCALIB_PLUSPULSES_SET</primary><secondary>RTCEx_Smooth_calib_Plus_pulses_Definitions</secondary></indexterm>
+<indexterm><primary>RTCEx_Smooth_calib_Plus_pulses_Definitions</primary><secondary>RTC_SMOOTHCALIB_PLUSPULSES_SET</secondary></indexterm>
+<para><computeroutput>#define RTC_SMOOTHCALIB_PLUSPULSES_SET   ((uint32_t)0x00008000)</computeroutput></para>
+<para>The number of RTCCLK pulses added 
+<literallayout>&#160;&#xa;</literallayout>
+ during a X -second window = Y - CALM[8:0] with Y = 512, 256, 128 when X = 32, 16, 8 </para>
+<para>
+Definition at line <link linkend="_stm32f4xx__hal__rtc__ex_8h_source_1l00360">360</link> of file <link linkend="_stm32f4xx__hal__rtc__ex_8h_source">stm32f4xx_hal_rtc_ex.h</link>.</para>
+</section>
+</section>
+</section>

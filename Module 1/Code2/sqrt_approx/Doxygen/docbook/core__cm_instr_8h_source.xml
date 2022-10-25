@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_core__cm_instr_8h_source" xml:lang="en-US">
+<title>core_cmInstr.h</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/core_cmInstr.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_core__cm_instr_8h_source_1l00001"/>00001 <emphasis role="comment">/**************************************************************************/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00010"/>00010 <emphasis role="comment">/*&#32;Copyright&#32;(c)&#32;2009&#32;-&#32;2013&#32;ARM&#32;LIMITED</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00011"/>00011 <emphasis role="comment"></emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;&#32;&#32;All&#32;rights&#32;reserved.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;&#32;&#32;Redistribution&#32;and&#32;use&#32;in&#32;source&#32;and&#32;binary&#32;forms,&#32;with&#32;or&#32;without</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;&#32;&#32;modification,&#32;are&#32;permitted&#32;provided&#32;that&#32;the&#32;following&#32;conditions&#32;are&#32;met:</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;&#32;&#32;-&#32;Redistributions&#32;of&#32;source&#32;code&#32;must&#32;retain&#32;the&#32;above&#32;copyright</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00016"/>00016 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00017"/>00017 <emphasis role="comment">&#32;&#32;&#32;-&#32;Redistributions&#32;in&#32;binary&#32;form&#32;must&#32;reproduce&#32;the&#32;above&#32;copyright</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00018"/>00018 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;notice,&#32;this&#32;list&#32;of&#32;conditions&#32;and&#32;the&#32;following&#32;disclaimer&#32;in&#32;the</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00019"/>00019 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;documentation&#32;and/or&#32;other&#32;materials&#32;provided&#32;with&#32;the&#32;distribution.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00020"/>00020 <emphasis role="comment">&#32;&#32;&#32;-&#32;Neither&#32;the&#32;name&#32;of&#32;ARM&#32;nor&#32;the&#32;names&#32;of&#32;its&#32;contributors&#32;may&#32;be&#32;used</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00021"/>00021 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;to&#32;endorse&#32;or&#32;promote&#32;products&#32;derived&#32;from&#32;this&#32;software&#32;without</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00022"/>00022 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;specific&#32;prior&#32;written&#32;permission.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00023"/>00023 <emphasis role="comment">&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00024"/>00024 <emphasis role="comment">&#32;&#32;&#32;THIS&#32;SOFTWARE&#32;IS&#32;PROVIDED&#32;BY&#32;THE&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS&#32;&quot;AS&#32;IS&quot;</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00025"/>00025 <emphasis role="comment">&#32;&#32;&#32;AND&#32;ANY&#32;EXPRESS&#32;OR&#32;IMPLIED&#32;WARRANTIES,&#32;INCLUDING,&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;THE</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00026"/>00026 <emphasis role="comment">&#32;&#32;&#32;IMPLIED&#32;WARRANTIES&#32;OF&#32;MERCHANTABILITY&#32;AND&#32;FITNESS&#32;FOR&#32;A&#32;PARTICULAR&#32;PURPOSE</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00027"/>00027 <emphasis role="comment">&#32;&#32;&#32;ARE&#32;DISCLAIMED.&#32;IN&#32;NO&#32;EVENT&#32;SHALL&#32;COPYRIGHT&#32;HOLDERS&#32;AND&#32;CONTRIBUTORS&#32;BE</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00028"/>00028 <emphasis role="comment">&#32;&#32;&#32;LIABLE&#32;FOR&#32;ANY&#32;DIRECT,&#32;INDIRECT,&#32;INCIDENTAL,&#32;SPECIAL,&#32;EXEMPLARY,&#32;OR</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00029"/>00029 <emphasis role="comment">&#32;&#32;&#32;CONSEQUENTIAL&#32;DAMAGES&#32;(INCLUDING,&#32;BUT&#32;NOT&#32;LIMITED&#32;TO,&#32;PROCUREMENT&#32;OF</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00030"/>00030 <emphasis role="comment">&#32;&#32;&#32;SUBSTITUTE&#32;GOODS&#32;OR&#32;SERVICES;&#32;LOSS&#32;OF&#32;USE,&#32;DATA,&#32;OR&#32;PROFITS;&#32;OR&#32;BUSINESS</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00031"/>00031 <emphasis role="comment">&#32;&#32;&#32;INTERRUPTION)&#32;HOWEVER&#32;CAUSED&#32;AND&#32;ON&#32;ANY&#32;THEORY&#32;OF&#32;LIABILITY,&#32;WHETHER&#32;IN</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00032"/>00032 <emphasis role="comment">&#32;&#32;&#32;CONTRACT,&#32;STRICT&#32;LIABILITY,&#32;OR&#32;TORT&#32;(INCLUDING&#32;NEGLIGENCE&#32;OR&#32;OTHERWISE)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00033"/>00033 <emphasis role="comment">&#32;&#32;&#32;ARISING&#32;IN&#32;ANY&#32;WAY&#32;OUT&#32;OF&#32;THE&#32;USE&#32;OF&#32;THIS&#32;SOFTWARE,&#32;EVEN&#32;IF&#32;ADVISED&#32;OF&#32;THE</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00034"/>00034 <emphasis role="comment">&#32;&#32;&#32;POSSIBILITY&#32;OF&#32;SUCH&#32;DAMAGE.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00035"/>00035 <emphasis role="comment">&#32;&#32;&#32;---------------------------------------------------------------------------*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00036"/>00036 
+<anchor xml:id="_core__cm_instr_8h_source_1l00037"/>00037 
+<anchor xml:id="_core__cm_instr_8h_source_1l00038"/>00038 <emphasis role="preprocessor">#ifndef&#32;__CORE_CMINSTR_H</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#define&#32;__CORE_CMINSTR_H</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00040"/>00040 
+<anchor xml:id="_core__cm_instr_8h_source_1l00041"/>00041 
+<anchor xml:id="_core__cm_instr_8h_source_1l00042"/>00042 <emphasis role="comment">/*&#32;##########################&#32;&#32;Core&#32;Instruction&#32;Access&#32;&#32;#########################&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00048"/>00048 <emphasis role="preprocessor">#if&#32;&#32;&#32;defined&#32;(&#32;__CC_ARM&#32;)&#32;</emphasis><emphasis role="comment">/*------------------RealView&#32;Compiler&#32;-----------------*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00049"/>00049 <emphasis role="comment">/*&#32;ARM&#32;armcc&#32;specific&#32;functions&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00050"/>00050 
+<anchor xml:id="_core__cm_instr_8h_source_1l00051"/>00051 <emphasis role="preprocessor">#if&#32;(__ARMCC_VERSION&#32;&lt;&#32;400677)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00052"/>00052 <emphasis role="preprocessor">&#32;&#32;#error&#32;&quot;Please&#32;use&#32;ARM&#32;Compiler&#32;Toolchain&#32;V4.0.677&#32;or&#32;later!&quot;</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00053"/>00053 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00054"/>00054 
+<anchor xml:id="_core__cm_instr_8h_source_1l00055"/>00055 
+<anchor xml:id="_core__cm_instr_8h_source_1l00060"/>00060 <emphasis role="preprocessor">#define&#32;__NOP&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__nop</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00061"/>00061 
+<anchor xml:id="_core__cm_instr_8h_source_1l00062"/>00062 
+<anchor xml:id="_core__cm_instr_8h_source_1l00068"/>00068 <emphasis role="preprocessor">#define&#32;__WFI&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__wfi</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00069"/>00069 
+<anchor xml:id="_core__cm_instr_8h_source_1l00070"/>00070 
+<anchor xml:id="_core__cm_instr_8h_source_1l00076"/>00076 <emphasis role="preprocessor">#define&#32;__WFE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__wfe</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00077"/>00077 
+<anchor xml:id="_core__cm_instr_8h_source_1l00078"/>00078 
+<anchor xml:id="_core__cm_instr_8h_source_1l00083"/>00083 <emphasis role="preprocessor">#define&#32;__SEV&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__sev</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00084"/>00084 
+<anchor xml:id="_core__cm_instr_8h_source_1l00085"/>00085 
+<anchor xml:id="_core__cm_instr_8h_source_1l00092"/>00092 <emphasis role="preprocessor">#define&#32;__ISB()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__isb(0xF)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00093"/>00093 
+<anchor xml:id="_core__cm_instr_8h_source_1l00094"/>00094 
+<anchor xml:id="_core__cm_instr_8h_source_1l00100"/>00100 <emphasis role="preprocessor">#define&#32;__DSB()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__dsb(0xF)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00101"/>00101 
+<anchor xml:id="_core__cm_instr_8h_source_1l00102"/>00102 
+<anchor xml:id="_core__cm_instr_8h_source_1l00108"/>00108 <emphasis role="preprocessor">#define&#32;__DMB()&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__dmb(0xF)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00109"/>00109 
+<anchor xml:id="_core__cm_instr_8h_source_1l00110"/>00110 
+<anchor xml:id="_core__cm_instr_8h_source_1l00118"/>00118 <emphasis role="preprocessor">#define&#32;__REV&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__rev</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00119"/>00119 
+<anchor xml:id="_core__cm_instr_8h_source_1l00120"/>00120 
+<anchor xml:id="_core__cm_instr_8h_source_1l00128"/>00128 <emphasis role="preprocessor">#ifndef&#32;__NO_EMBEDDED_ASM</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00129"/>00129 __attribute__((section(<emphasis role="stringliteral">&quot;.rev16_text&quot;</emphasis>)))&#32;__STATIC_INLINE&#32;__ASM&#32;uint32_t&#32;__REV16(uint32_t&#32;value)
+<anchor xml:id="_core__cm_instr_8h_source_1l00130"/>00130 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00131"/>00131 &#32;&#32;rev16&#32;r0,&#32;r0
+<anchor xml:id="_core__cm_instr_8h_source_1l00132"/>00132 &#32;&#32;bx&#32;lr
+<anchor xml:id="_core__cm_instr_8h_source_1l00133"/>00133 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00134"/>00134 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00135"/>00135 
+<anchor xml:id="_core__cm_instr_8h_source_1l00143"/>00143 <emphasis role="preprocessor">#ifndef&#32;__NO_EMBEDDED_ASM</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00144"/>00144 __attribute__((section(<emphasis role="stringliteral">&quot;.revsh_text&quot;</emphasis>)))&#32;__STATIC_INLINE&#32;__ASM&#32;int32_t&#32;__REVSH(int32_t&#32;value)
+<anchor xml:id="_core__cm_instr_8h_source_1l00145"/>00145 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00146"/>00146 &#32;&#32;revsh&#32;r0,&#32;r0
+<anchor xml:id="_core__cm_instr_8h_source_1l00147"/>00147 &#32;&#32;bx&#32;lr
+<anchor xml:id="_core__cm_instr_8h_source_1l00148"/>00148 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00149"/>00149 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00150"/>00150 
+<anchor xml:id="_core__cm_instr_8h_source_1l00151"/>00151 
+<anchor xml:id="_core__cm_instr_8h_source_1l00160"/>00160 <emphasis role="preprocessor">#define&#32;__ROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ror</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00161"/>00161 
+<anchor xml:id="_core__cm_instr_8h_source_1l00162"/>00162 
+<anchor xml:id="_core__cm_instr_8h_source_1l00171"/>00171 <emphasis role="preprocessor">#define&#32;__BKPT(value)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__breakpoint(value)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00172"/>00172 
+<anchor xml:id="_core__cm_instr_8h_source_1l00173"/>00173 
+<anchor xml:id="_core__cm_instr_8h_source_1l00174"/>00174 <emphasis role="preprocessor">#if&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__CORTEX_M&#32;&gt;=&#32;0x03)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00175"/>00175 
+<anchor xml:id="_core__cm_instr_8h_source_1l00183"/>00183 <emphasis role="preprocessor">#define&#32;__RBIT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__rbit</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00184"/>00184 
+<anchor xml:id="_core__cm_instr_8h_source_1l00185"/>00185 
+<anchor xml:id="_core__cm_instr_8h_source_1l00193"/>00193 <emphasis role="preprocessor">#define&#32;__LDREXB(ptr)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t&#32;)&#32;__ldrex(ptr))</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00194"/>00194 
+<anchor xml:id="_core__cm_instr_8h_source_1l00195"/>00195 
+<anchor xml:id="_core__cm_instr_8h_source_1l00203"/>00203 <emphasis role="preprocessor">#define&#32;__LDREXH(ptr)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)&#32;__ldrex(ptr))</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00204"/>00204 
+<anchor xml:id="_core__cm_instr_8h_source_1l00205"/>00205 
+<anchor xml:id="_core__cm_instr_8h_source_1l00213"/>00213 <emphasis role="preprocessor">#define&#32;__LDREXW(ptr)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t&#32;)&#32;__ldrex(ptr))</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00214"/>00214 
+<anchor xml:id="_core__cm_instr_8h_source_1l00215"/>00215 
+<anchor xml:id="_core__cm_instr_8h_source_1l00225"/>00225 <emphasis role="preprocessor">#define&#32;__STREXB(value,&#32;ptr)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__strex(value,&#32;ptr)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00226"/>00226 
+<anchor xml:id="_core__cm_instr_8h_source_1l00227"/>00227 
+<anchor xml:id="_core__cm_instr_8h_source_1l00237"/>00237 <emphasis role="preprocessor">#define&#32;__STREXH(value,&#32;ptr)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__strex(value,&#32;ptr)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00238"/>00238 
+<anchor xml:id="_core__cm_instr_8h_source_1l00239"/>00239 
+<anchor xml:id="_core__cm_instr_8h_source_1l00249"/>00249 <emphasis role="preprocessor">#define&#32;__STREXW(value,&#32;ptr)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__strex(value,&#32;ptr)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00250"/>00250 
+<anchor xml:id="_core__cm_instr_8h_source_1l00251"/>00251 
+<anchor xml:id="_core__cm_instr_8h_source_1l00257"/>00257 <emphasis role="preprocessor">#define&#32;__CLREX&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__clrex</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00258"/>00258 
+<anchor xml:id="_core__cm_instr_8h_source_1l00259"/>00259 
+<anchor xml:id="_core__cm_instr_8h_source_1l00268"/>00268 <emphasis role="preprocessor">#define&#32;__SSAT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ssat</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00269"/>00269 
+<anchor xml:id="_core__cm_instr_8h_source_1l00270"/>00270 
+<anchor xml:id="_core__cm_instr_8h_source_1l00279"/>00279 <emphasis role="preprocessor">#define&#32;__USAT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__usat</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00280"/>00280 
+<anchor xml:id="_core__cm_instr_8h_source_1l00281"/>00281 
+<anchor xml:id="_core__cm_instr_8h_source_1l00289"/>00289 <emphasis role="preprocessor">#define&#32;__CLZ&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__clz</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00290"/>00290 
+<anchor xml:id="_core__cm_instr_8h_source_1l00291"/>00291 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;(__CORTEX_M&#32;&gt;=&#32;0x03)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00292"/>00292 
+<anchor xml:id="_core__cm_instr_8h_source_1l00293"/>00293 
+<anchor xml:id="_core__cm_instr_8h_source_1l00294"/>00294 
+<anchor xml:id="_core__cm_instr_8h_source_1l00295"/>00295 <emphasis role="preprocessor">#elif&#32;defined&#32;(&#32;__ICCARM__&#32;)&#32;</emphasis><emphasis role="comment">/*------------------&#32;ICC&#32;Compiler&#32;-------------------*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00296"/>00296 <emphasis role="comment">/*&#32;IAR&#32;iccarm&#32;specific&#32;functions&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00297"/>00297 
+<anchor xml:id="_core__cm_instr_8h_source_1l00298"/>00298 <emphasis role="preprocessor">#include&#32;&lt;cmsis_iar.h&gt;</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00299"/>00299 
+<anchor xml:id="_core__cm_instr_8h_source_1l00300"/>00300 
+<anchor xml:id="_core__cm_instr_8h_source_1l00301"/>00301 <emphasis role="preprocessor">#elif&#32;defined&#32;(&#32;__TMS470__&#32;)&#32;</emphasis><emphasis role="comment">/*----------------&#32;TI&#32;CCS&#32;Compiler&#32;------------------*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00302"/>00302 <emphasis role="comment">/*&#32;TI&#32;CCS&#32;specific&#32;functions&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00303"/>00303 
+<anchor xml:id="_core__cm_instr_8h_source_1l00304"/>00304 <emphasis role="preprocessor">#include&#32;&lt;cmsis_ccs.h&gt;</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00305"/>00305 
+<anchor xml:id="_core__cm_instr_8h_source_1l00306"/>00306 
+<anchor xml:id="_core__cm_instr_8h_source_1l00307"/>00307 <emphasis role="preprocessor">#elif&#32;defined&#32;(&#32;__GNUC__&#32;)&#32;</emphasis><emphasis role="comment">/*------------------&#32;GNU&#32;Compiler&#32;---------------------*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00308"/>00308 <emphasis role="comment">/*&#32;GNU&#32;gcc&#32;specific&#32;functions&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00309"/>00309 
+<anchor xml:id="_core__cm_instr_8h_source_1l00310"/>00310 <emphasis role="comment">/*&#32;Define&#32;macros&#32;for&#32;porting&#32;to&#32;both&#32;thumb1&#32;and&#32;thumb2.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00311"/>00311 <emphasis role="comment">&#32;*&#32;For&#32;thumb1,&#32;use&#32;low&#32;register&#32;(r0-r7),&#32;specified&#32;by&#32;constrant&#32;&quot;l&quot;</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00312"/>00312 <emphasis role="comment">&#32;*&#32;Otherwise,&#32;use&#32;general&#32;registers,&#32;specified&#32;by&#32;constrant&#32;&quot;r&quot;&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00313"/>00313 <emphasis role="preprocessor">#if&#32;defined&#32;(__thumb__)&#32;&amp;&amp;&#32;!defined&#32;(__thumb2__)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00314"/>00314 <emphasis role="preprocessor">#define&#32;__CMSIS_GCC_OUT_REG(r)&#32;&quot;=l&quot;</emphasis>&#32;(r)
+<anchor xml:id="_core__cm_instr_8h_source_1l00315"/>00315 <emphasis role="preprocessor">#define&#32;__CMSIS_GCC_USE_REG(r)&#32;&quot;l&quot;</emphasis>&#32;(r)
+<anchor xml:id="_core__cm_instr_8h_source_1l00316"/>00316 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00317"/>00317 <emphasis role="preprocessor">#define&#32;__CMSIS_GCC_OUT_REG(r)&#32;&quot;=r&quot;</emphasis>&#32;(r)
+<anchor xml:id="_core__cm_instr_8h_source_1l00318"/>00318 <emphasis role="preprocessor">#define&#32;__CMSIS_GCC_USE_REG(r)&#32;&quot;r&quot;</emphasis>&#32;(r)
+<anchor xml:id="_core__cm_instr_8h_source_1l00319"/>00319 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00320"/>00320 
+<anchor xml:id="_core__cm_instr_8h_source_1l00325"/>00325 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;<emphasis role="keywordtype">void</emphasis>&#32;__NOP(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_core__cm_instr_8h_source_1l00326"/>00326 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00327"/>00327 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;nop&quot;</emphasis>);
+<anchor xml:id="_core__cm_instr_8h_source_1l00328"/>00328 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00329"/>00329 
+<anchor xml:id="_core__cm_instr_8h_source_1l00330"/>00330 
+<anchor xml:id="_core__cm_instr_8h_source_1l00336"/>00336 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;<emphasis role="keywordtype">void</emphasis>&#32;__WFI(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_core__cm_instr_8h_source_1l00337"/>00337 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00338"/>00338 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;wfi&quot;</emphasis>);
+<anchor xml:id="_core__cm_instr_8h_source_1l00339"/>00339 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00340"/>00340 
+<anchor xml:id="_core__cm_instr_8h_source_1l00341"/>00341 
+<anchor xml:id="_core__cm_instr_8h_source_1l00347"/>00347 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;<emphasis role="keywordtype">void</emphasis>&#32;__WFE(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_core__cm_instr_8h_source_1l00348"/>00348 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00349"/>00349 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;wfe&quot;</emphasis>);
+<anchor xml:id="_core__cm_instr_8h_source_1l00350"/>00350 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00351"/>00351 
+<anchor xml:id="_core__cm_instr_8h_source_1l00352"/>00352 
+<anchor xml:id="_core__cm_instr_8h_source_1l00357"/>00357 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;<emphasis role="keywordtype">void</emphasis>&#32;__SEV(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_core__cm_instr_8h_source_1l00358"/>00358 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00359"/>00359 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;sev&quot;</emphasis>);
+<anchor xml:id="_core__cm_instr_8h_source_1l00360"/>00360 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00361"/>00361 
+<anchor xml:id="_core__cm_instr_8h_source_1l00362"/>00362 
+<anchor xml:id="_core__cm_instr_8h_source_1l00369"/>00369 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;<emphasis role="keywordtype">void</emphasis>&#32;__ISB(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_core__cm_instr_8h_source_1l00370"/>00370 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00371"/>00371 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;isb&quot;</emphasis>);
+<anchor xml:id="_core__cm_instr_8h_source_1l00372"/>00372 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00373"/>00373 
+<anchor xml:id="_core__cm_instr_8h_source_1l00374"/>00374 
+<anchor xml:id="_core__cm_instr_8h_source_1l00380"/>00380 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;<emphasis role="keywordtype">void</emphasis>&#32;__DSB(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_core__cm_instr_8h_source_1l00381"/>00381 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00382"/>00382 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;dsb&quot;</emphasis>);
+<anchor xml:id="_core__cm_instr_8h_source_1l00383"/>00383 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00384"/>00384 
+<anchor xml:id="_core__cm_instr_8h_source_1l00385"/>00385 
+<anchor xml:id="_core__cm_instr_8h_source_1l00391"/>00391 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;<emphasis role="keywordtype">void</emphasis>&#32;__DMB(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_core__cm_instr_8h_source_1l00392"/>00392 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00393"/>00393 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;dmb&quot;</emphasis>);
+<anchor xml:id="_core__cm_instr_8h_source_1l00394"/>00394 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00395"/>00395 
+<anchor xml:id="_core__cm_instr_8h_source_1l00396"/>00396 
+<anchor xml:id="_core__cm_instr_8h_source_1l00404"/>00404 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint32_t&#32;__REV(uint32_t&#32;value)
+<anchor xml:id="_core__cm_instr_8h_source_1l00405"/>00405 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00406"/>00406 <emphasis role="preprocessor">#if&#32;(__GNUC__&#32;&gt;&#32;4)&#32;||&#32;(__GNUC__&#32;==&#32;4&#32;&amp;&amp;&#32;__GNUC_MINOR__&#32;&gt;=&#32;5)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00407"/>00407 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;__builtin_bswap32(value);
+<anchor xml:id="_core__cm_instr_8h_source_1l00408"/>00408 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00409"/>00409 &#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00410"/>00410 
+<anchor xml:id="_core__cm_instr_8h_source_1l00411"/>00411 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;rev&#32;%0,&#32;%1&quot;</emphasis>&#32;:&#32;__CMSIS_GCC_OUT_REG&#32;(result)&#32;:&#32;__CMSIS_GCC_USE_REG&#32;(value)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00412"/>00412 &#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00413"/>00413 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00414"/>00414 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00415"/>00415 
+<anchor xml:id="_core__cm_instr_8h_source_1l00416"/>00416 
+<anchor xml:id="_core__cm_instr_8h_source_1l00424"/>00424 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint32_t&#32;__REV16(uint32_t&#32;value)
+<anchor xml:id="_core__cm_instr_8h_source_1l00425"/>00425 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00426"/>00426 &#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00427"/>00427 
+<anchor xml:id="_core__cm_instr_8h_source_1l00428"/>00428 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;rev16&#32;%0,&#32;%1&quot;</emphasis>&#32;:&#32;__CMSIS_GCC_OUT_REG&#32;(result)&#32;:&#32;__CMSIS_GCC_USE_REG&#32;(value)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00429"/>00429 &#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00430"/>00430 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00431"/>00431 
+<anchor xml:id="_core__cm_instr_8h_source_1l00432"/>00432 
+<anchor xml:id="_core__cm_instr_8h_source_1l00440"/>00440 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;int32_t&#32;__REVSH(int32_t&#32;value)
+<anchor xml:id="_core__cm_instr_8h_source_1l00441"/>00441 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00442"/>00442 <emphasis role="preprocessor">#if&#32;(__GNUC__&#32;&gt;&#32;4)&#32;||&#32;(__GNUC__&#32;==&#32;4&#32;&amp;&amp;&#32;__GNUC_MINOR__&#32;&gt;=&#32;8)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00443"/>00443 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keywordtype">short</emphasis>)__builtin_bswap16(value);
+<anchor xml:id="_core__cm_instr_8h_source_1l00444"/>00444 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00445"/>00445 &#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00446"/>00446 
+<anchor xml:id="_core__cm_instr_8h_source_1l00447"/>00447 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;revsh&#32;%0,&#32;%1&quot;</emphasis>&#32;:&#32;__CMSIS_GCC_OUT_REG&#32;(result)&#32;:&#32;__CMSIS_GCC_USE_REG&#32;(value)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00448"/>00448 &#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00449"/>00449 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00450"/>00450 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00451"/>00451 
+<anchor xml:id="_core__cm_instr_8h_source_1l00452"/>00452 
+<anchor xml:id="_core__cm_instr_8h_source_1l00461"/>00461 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint32_t&#32;__ROR(uint32_t&#32;op1,&#32;uint32_t&#32;op2)
+<anchor xml:id="_core__cm_instr_8h_source_1l00462"/>00462 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00463"/>00463 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(op1&#32;&gt;&gt;&#32;op2)&#32;|&#32;(op1&#32;&lt;&lt;&#32;(32&#32;-&#32;op2));&#32;
+<anchor xml:id="_core__cm_instr_8h_source_1l00464"/>00464 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00465"/>00465 
+<anchor xml:id="_core__cm_instr_8h_source_1l00466"/>00466 
+<anchor xml:id="_core__cm_instr_8h_source_1l00475"/>00475 <emphasis role="preprocessor">#define&#32;__BKPT(value)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;__ASM&#32;volatile&#32;(&quot;bkpt&#32;&quot;</emphasis>#value)
+<anchor xml:id="_core__cm_instr_8h_source_1l00476"/>00476 
+<anchor xml:id="_core__cm_instr_8h_source_1l00477"/>00477 
+<anchor xml:id="_core__cm_instr_8h_source_1l00478"/>00478 <emphasis role="preprocessor">#if&#32;&#32;&#32;&#32;&#32;&#32;&#32;(__CORTEX_M&#32;&gt;=&#32;0x03)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00479"/>00479 
+<anchor xml:id="_core__cm_instr_8h_source_1l00487"/>00487 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint32_t&#32;__RBIT(uint32_t&#32;value)
+<anchor xml:id="_core__cm_instr_8h_source_1l00488"/>00488 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00489"/>00489 &#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00490"/>00490 
+<anchor xml:id="_core__cm_instr_8h_source_1l00491"/>00491 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;rbit&#32;%0,&#32;%1&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=r&quot;</emphasis>&#32;(result)&#32;:&#32;<emphasis role="stringliteral">&quot;r&quot;</emphasis>&#32;(value)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00492"/>00492 &#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00493"/>00493 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00494"/>00494 
+<anchor xml:id="_core__cm_instr_8h_source_1l00495"/>00495 
+<anchor xml:id="_core__cm_instr_8h_source_1l00503"/>00503 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint8_t&#32;__LDREXB(<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;*addr)
+<anchor xml:id="_core__cm_instr_8h_source_1l00504"/>00504 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00505"/>00505 &#32;&#32;&#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00506"/>00506 
+<anchor xml:id="_core__cm_instr_8h_source_1l00507"/>00507 <emphasis role="preprocessor">#if&#32;(__GNUC__&#32;&gt;&#32;4)&#32;||&#32;(__GNUC__&#32;==&#32;4&#32;&amp;&amp;&#32;__GNUC_MINOR__&#32;&gt;=&#32;8)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00508"/>00508 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;ldrexb&#32;%0,&#32;%1&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=r&quot;</emphasis>&#32;(result)&#32;:&#32;<emphasis role="stringliteral">&quot;Q&quot;</emphasis>&#32;(*addr)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00509"/>00509 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00510"/>00510 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Prior&#32;to&#32;GCC&#32;4.8,&#32;&quot;Q&quot;&#32;will&#32;be&#32;expanded&#32;to&#32;[rx,&#32;#0]&#32;which&#32;is&#32;not</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00511"/>00511 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;accepted&#32;by&#32;assembler.&#32;So&#32;has&#32;to&#32;use&#32;following&#32;less&#32;efficient&#32;pattern.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00512"/>00512 <emphasis role="comment">&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00513"/>00513 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;ldrexb&#32;%0,&#32;[%1]&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=r&quot;</emphasis>&#32;(result)&#32;:&#32;<emphasis role="stringliteral">&quot;r&quot;</emphasis>&#32;(addr)&#32;:&#32;<emphasis role="stringliteral">&quot;memory&quot;</emphasis>&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00514"/>00514 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00515"/>00515 &#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00516"/>00516 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00517"/>00517 
+<anchor xml:id="_core__cm_instr_8h_source_1l00518"/>00518 
+<anchor xml:id="_core__cm_instr_8h_source_1l00526"/>00526 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint16_t&#32;__LDREXH(<emphasis role="keyword">volatile</emphasis>&#32;uint16_t&#32;*addr)
+<anchor xml:id="_core__cm_instr_8h_source_1l00527"/>00527 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00528"/>00528 &#32;&#32;&#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00529"/>00529 
+<anchor xml:id="_core__cm_instr_8h_source_1l00530"/>00530 <emphasis role="preprocessor">#if&#32;(__GNUC__&#32;&gt;&#32;4)&#32;||&#32;(__GNUC__&#32;==&#32;4&#32;&amp;&amp;&#32;__GNUC_MINOR__&#32;&gt;=&#32;8)</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00531"/>00531 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;ldrexh&#32;%0,&#32;%1&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=r&quot;</emphasis>&#32;(result)&#32;:&#32;<emphasis role="stringliteral">&quot;Q&quot;</emphasis>&#32;(*addr)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00532"/>00532 <emphasis role="preprocessor">#else</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00533"/>00533 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Prior&#32;to&#32;GCC&#32;4.8,&#32;&quot;Q&quot;&#32;will&#32;be&#32;expanded&#32;to&#32;[rx,&#32;#0]&#32;which&#32;is&#32;not</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00534"/>00534 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;accepted&#32;by&#32;assembler.&#32;So&#32;has&#32;to&#32;use&#32;following&#32;less&#32;efficient&#32;pattern.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00535"/>00535 <emphasis role="comment">&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00536"/>00536 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;ldrexh&#32;%0,&#32;[%1]&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=r&quot;</emphasis>&#32;(result)&#32;:&#32;<emphasis role="stringliteral">&quot;r&quot;</emphasis>&#32;(addr)&#32;:&#32;<emphasis role="stringliteral">&quot;memory&quot;</emphasis>&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00537"/>00537 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00538"/>00538 &#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00539"/>00539 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00540"/>00540 
+<anchor xml:id="_core__cm_instr_8h_source_1l00541"/>00541 
+<anchor xml:id="_core__cm_instr_8h_source_1l00549"/>00549 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint32_t&#32;__LDREXW(<emphasis role="keyword">volatile</emphasis>&#32;uint32_t&#32;*addr)
+<anchor xml:id="_core__cm_instr_8h_source_1l00550"/>00550 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00551"/>00551 &#32;&#32;&#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00552"/>00552 
+<anchor xml:id="_core__cm_instr_8h_source_1l00553"/>00553 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;ldrex&#32;%0,&#32;%1&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=r&quot;</emphasis>&#32;(result)&#32;:&#32;<emphasis role="stringliteral">&quot;Q&quot;</emphasis>&#32;(*addr)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00554"/>00554 &#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00555"/>00555 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00556"/>00556 
+<anchor xml:id="_core__cm_instr_8h_source_1l00557"/>00557 
+<anchor xml:id="_core__cm_instr_8h_source_1l00567"/>00567 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint32_t&#32;__STREXB(uint8_t&#32;value,&#32;<emphasis role="keyword">volatile</emphasis>&#32;uint8_t&#32;*addr)
+<anchor xml:id="_core__cm_instr_8h_source_1l00568"/>00568 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00569"/>00569 &#32;&#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00570"/>00570 
+<anchor xml:id="_core__cm_instr_8h_source_1l00571"/>00571 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;strexb&#32;%0,&#32;%2,&#32;%1&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=&amp;r&quot;</emphasis>&#32;(result),&#32;<emphasis role="stringliteral">&quot;=Q&quot;</emphasis>&#32;(*addr)&#32;:&#32;<emphasis role="stringliteral">&quot;r&quot;</emphasis>&#32;(value)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00572"/>00572 &#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00573"/>00573 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00574"/>00574 
+<anchor xml:id="_core__cm_instr_8h_source_1l00575"/>00575 
+<anchor xml:id="_core__cm_instr_8h_source_1l00585"/>00585 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint32_t&#32;__STREXH(uint16_t&#32;value,&#32;<emphasis role="keyword">volatile</emphasis>&#32;uint16_t&#32;*addr)
+<anchor xml:id="_core__cm_instr_8h_source_1l00586"/>00586 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00587"/>00587 &#32;&#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00588"/>00588 
+<anchor xml:id="_core__cm_instr_8h_source_1l00589"/>00589 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;strexh&#32;%0,&#32;%2,&#32;%1&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=&amp;r&quot;</emphasis>&#32;(result),&#32;<emphasis role="stringliteral">&quot;=Q&quot;</emphasis>&#32;(*addr)&#32;:&#32;<emphasis role="stringliteral">&quot;r&quot;</emphasis>&#32;(value)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00590"/>00590 &#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00591"/>00591 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00592"/>00592 
+<anchor xml:id="_core__cm_instr_8h_source_1l00593"/>00593 
+<anchor xml:id="_core__cm_instr_8h_source_1l00603"/>00603 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint32_t&#32;__STREXW(uint32_t&#32;value,&#32;<emphasis role="keyword">volatile</emphasis>&#32;uint32_t&#32;*addr)
+<anchor xml:id="_core__cm_instr_8h_source_1l00604"/>00604 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00605"/>00605 &#32;&#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00606"/>00606 
+<anchor xml:id="_core__cm_instr_8h_source_1l00607"/>00607 &#32;&#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;strex&#32;%0,&#32;%2,&#32;%1&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=&amp;r&quot;</emphasis>&#32;(result),&#32;<emphasis role="stringliteral">&quot;=Q&quot;</emphasis>&#32;(*addr)&#32;:&#32;<emphasis role="stringliteral">&quot;r&quot;</emphasis>&#32;(value)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00608"/>00608 &#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00609"/>00609 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00610"/>00610 
+<anchor xml:id="_core__cm_instr_8h_source_1l00611"/>00611 
+<anchor xml:id="_core__cm_instr_8h_source_1l00617"/>00617 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;<emphasis role="keywordtype">void</emphasis>&#32;__CLREX(<emphasis role="keywordtype">void</emphasis>)
+<anchor xml:id="_core__cm_instr_8h_source_1l00618"/>00618 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00619"/>00619 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;clrex&quot;</emphasis>&#32;:::&#32;<emphasis role="stringliteral">&quot;memory&quot;</emphasis>);
+<anchor xml:id="_core__cm_instr_8h_source_1l00620"/>00620 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00621"/>00621 
+<anchor xml:id="_core__cm_instr_8h_source_1l00622"/>00622 
+<anchor xml:id="_core__cm_instr_8h_source_1l00631"/>00631 <emphasis role="preprocessor">#define&#32;__SSAT(ARG1,ARG2)&#32;\</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00632"/>00632 <emphasis role="preprocessor">({&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00633"/>00633 <emphasis role="preprocessor">&#32;&#32;uint32_t&#32;__RES,&#32;__ARG1&#32;=&#32;(ARG1);&#32;\</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00634"/>00634 <emphasis role="preprocessor">&#32;&#32;__ASM&#32;(&quot;ssat&#32;%0,&#32;%1,&#32;%2&quot;</emphasis>&#32;:&#32;&quot;=r&quot;&#32;(__RES)&#32;:&#32;&#32;&quot;I&quot;&#32;(ARG2),&#32;&quot;r&quot;&#32;(__ARG1)&#32;);&#32;\
+<anchor xml:id="_core__cm_instr_8h_source_1l00635"/>00635 &#32;&#32;__RES;&#32;\
+<anchor xml:id="_core__cm_instr_8h_source_1l00636"/>00636 &#32;})
+<anchor xml:id="_core__cm_instr_8h_source_1l00637"/>00637 
+<anchor xml:id="_core__cm_instr_8h_source_1l00638"/>00638 
+<anchor xml:id="_core__cm_instr_8h_source_1l00647"/>00647 <emphasis role="preprocessor">#define&#32;__USAT(ARG1,ARG2)&#32;\</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00648"/>00648 <emphasis role="preprocessor">({&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00649"/>00649 <emphasis role="preprocessor">&#32;&#32;uint32_t&#32;__RES,&#32;__ARG1&#32;=&#32;(ARG1);&#32;\</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00650"/>00650 <emphasis role="preprocessor">&#32;&#32;__ASM&#32;(&quot;usat&#32;%0,&#32;%1,&#32;%2&quot;</emphasis>&#32;:&#32;&quot;=r&quot;&#32;(__RES)&#32;:&#32;&#32;&quot;I&quot;&#32;(ARG2),&#32;&quot;r&quot;&#32;(__ARG1)&#32;);&#32;\
+<anchor xml:id="_core__cm_instr_8h_source_1l00651"/>00651 &#32;&#32;__RES;&#32;\
+<anchor xml:id="_core__cm_instr_8h_source_1l00652"/>00652 &#32;})
+<anchor xml:id="_core__cm_instr_8h_source_1l00653"/>00653 
+<anchor xml:id="_core__cm_instr_8h_source_1l00654"/>00654 
+<anchor xml:id="_core__cm_instr_8h_source_1l00662"/>00662 __attribute__(&#32;(&#32;always_inline&#32;)&#32;)&#32;__STATIC_INLINE&#32;uint8_t&#32;__CLZ(uint32_t&#32;value)
+<anchor xml:id="_core__cm_instr_8h_source_1l00663"/>00663 {
+<anchor xml:id="_core__cm_instr_8h_source_1l00664"/>00664 &#32;&#32;&#32;uint32_t&#32;result;
+<anchor xml:id="_core__cm_instr_8h_source_1l00665"/>00665 
+<anchor xml:id="_core__cm_instr_8h_source_1l00666"/>00666 &#32;&#32;__ASM&#32;<emphasis role="keyword">volatile</emphasis>&#32;(<emphasis role="stringliteral">&quot;clz&#32;%0,&#32;%1&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;=r&quot;</emphasis>&#32;(result)&#32;:&#32;<emphasis role="stringliteral">&quot;r&quot;</emphasis>&#32;(value)&#32;);
+<anchor xml:id="_core__cm_instr_8h_source_1l00667"/>00667 &#32;&#32;<emphasis role="keywordflow">return</emphasis>(result);
+<anchor xml:id="_core__cm_instr_8h_source_1l00668"/>00668 }
+<anchor xml:id="_core__cm_instr_8h_source_1l00669"/>00669 
+<anchor xml:id="_core__cm_instr_8h_source_1l00670"/>00670 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;(__CORTEX_M&#32;&gt;=&#32;0x03)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00671"/>00671 
+<anchor xml:id="_core__cm_instr_8h_source_1l00672"/>00672 
+<anchor xml:id="_core__cm_instr_8h_source_1l00673"/>00673 
+<anchor xml:id="_core__cm_instr_8h_source_1l00674"/>00674 
+<anchor xml:id="_core__cm_instr_8h_source_1l00675"/>00675 <emphasis role="preprocessor">#elif&#32;defined&#32;(&#32;__TASKING__&#32;)&#32;</emphasis><emphasis role="comment">/*------------------&#32;TASKING&#32;Compiler&#32;--------------*/</emphasis><emphasis role="preprocessor"></emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00676"/>00676 <emphasis role="comment">/*&#32;TASKING&#32;carm&#32;specific&#32;functions&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00677"/>00677 
+<anchor xml:id="_core__cm_instr_8h_source_1l00678"/>00678 <emphasis role="comment">/*</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00679"/>00679 <emphasis role="comment">&#32;*&#32;The&#32;CMSIS&#32;functions&#32;have&#32;been&#32;implemented&#32;as&#32;intrinsics&#32;in&#32;the&#32;compiler.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00680"/>00680 <emphasis role="comment">&#32;*&#32;Please&#32;use&#32;&quot;carm&#32;-?i&quot;&#32;to&#32;get&#32;an&#32;up&#32;to&#32;date&#32;list&#32;of&#32;all&#32;intrinsics,</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00681"/>00681 <emphasis role="comment">&#32;*&#32;Including&#32;the&#32;CMSIS&#32;ones.</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00682"/>00682 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00683"/>00683 
+<anchor xml:id="_core__cm_instr_8h_source_1l00684"/>00684 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00685"/>00685 &#32;<emphasis role="comment">/*&#32;end&#32;of&#32;group&#32;CMSIS_Core_InstructionInterface&#32;*/</emphasis>
+<anchor xml:id="_core__cm_instr_8h_source_1l00687"/>00687 
+<anchor xml:id="_core__cm_instr_8h_source_1l00688"/>00688 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__CORE_CMINSTR_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

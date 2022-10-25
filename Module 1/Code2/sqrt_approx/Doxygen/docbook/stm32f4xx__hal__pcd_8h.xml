@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__pcd_8h" xml:lang="en-US">
+<title>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd.h File Reference</title>
+<indexterm><primary>C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 1/Code2/sqrt_approx/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd.h</primary></indexterm>
+<para>
+
+<para>Header file of PCD HAL module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_ll_usb.h&quot;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link></para>
+
+<para>PCD Handle Structure definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___p_c_d___speed_1ga120aa751960e740978b64a0b83567f9f">PCD_SPEED_HIGH</link>   0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___speed_1ga308bc4cc1ce7ebcc13c8a099c2e0b98c">PCD_SPEED_HIGH_IN_FULL</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___speed_1gac705382b159290e7fa729dcd263b9208">PCD_SPEED_FULL</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___p_h_y___module_1ga058f464b9f47023066ff4980e0ceb381">PCD_PHY_ULPI</link>   1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___p_h_y___module_1ga5f70ac5ee52f3aa9db5eaa925f40f7f9">PCD_PHY_EMBEDDED</link>   2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___instance__definition_1gadaf663c55446f04fa69ee912b8890b32">IS_PCD_ALL_INSTANCE</link>(INSTANCE)   (((INSTANCE) == <link linkend="_group___peripheral__declaration_1ga9ebb053ee138fb47cdfede0e3371123d">USB_OTG_FS</link>))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gaaa11c016ef66a8888c6c174bd05e3aa7">__HAL_PCD_ENABLE</link>(__HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1gaa8938bc57ec4994b1d2a04dceb12c67a">USB_EnableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga71786c2c6765e270f25c21a85ac3fa77">__HAL_PCD_DISABLE</link>(__HANDLE__)   <link linkend="_group___p_c_d___exported___constants_1ga81380ef9f6be2f72b70284d2108b4aed">USB_DisableGlobalInt</link> ((__HANDLE__)-&gt;Instance)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga7f3604641a19c15a294c542a24ffc55f">__HAL_GET_FLAG</link>(__HANDLE__,  __INTERRUPT__)   ((<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) &amp; (__INTERRUPT__)) == (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga8459525389520201c570fd1b61b830ec">__HAL_CLEAR_FLAG</link>(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)-&gt;Instance-&gt;GINTSTS) |= (__INTERRUPT__))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga4fe23b08c61f807591978300b6a378c6">__HAL_IS_INVALID_INTERRUPT</link>(__HANDLE__)   (<link linkend="_group___p_c_d___exported___constants_1ga11d36625a0724ef12a0021226ceeefd8">USB_ReadInterrupts</link>((__HANDLE__)-&gt;Instance) == 0)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga047a62834d348f1c64542411a584718b">__HAL_PCD_UNGATE_PHYCLOCK</link>(__HANDLE__)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gac1d803708856b8fcefc92dce3e7d4d53">__HAL_PCD_GATE_PHYCLOCK</link>(__HANDLE__)   *(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)((uint32_t)((__HANDLE__)-&gt;Instance) + <link linkend="_group___peripheral__registers__structures_1gaa9766975aca084c257730879568bc7cf">USB_OTG_PCGCCTL_BASE</link>) |= <link linkend="_group___peripheral___registers___bits___definition_1ga77cb2d7ab53783663a7a6dd457d3ba25">USB_OTG_PCGCCTL_STOPCLK</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gae430a9fb7b8bb0f57be94a446b7e3d89">__HAL_PCD_IS_PHY_SUSPENDED</link>(__HANDLE__)   ((*(<link linkend="_core__cm4_8h_1aec43007d9998a0a0e01faede4133d6be">__IO</link> uint32_t *)((uint32_t)((__HANDLE__)-&gt;Instance) + <link linkend="_group___peripheral__registers__structures_1gaa9766975aca084c257730879568bc7cf">USB_OTG_PCGCCTL_BASE</link>))&amp;0x10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga4635bede79c31eb76839b0682657e31e">USB_FS_EXTI_TRIGGER_RISING_EDGE</link>   ((uint32_t)0x08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga61994671a8124f126378447f96f87843">USB_FS_EXTI_TRIGGER_FALLING_EDGE</link>   ((uint32_t)0x0C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga10b3c6190659b38d5e6d3155e30e3b5a">USB_FS_EXTI_TRIGGER_BOTH_EDGE</link>   ((uint32_t)0x10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gabae8c431934cc5189524c41c4a413e5d">USB_HS_EXTI_TRIGGER_RISING_EDGE</link>   ((uint32_t)0x08)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gacf7c7cd4c0acdaef836d1381884eafdc">USB_HS_EXTI_TRIGGER_FALLING_EDGE</link>   ((uint32_t)0x0C)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga88242c33988234109ab398a9195f6c11">USB_HS_EXTI_TRIGGER_BOTH_EDGE</link>   ((uint32_t)0x10)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>   ((uint32_t)0x00100000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>   ((uint32_t)0x00040000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga87317f6c787c6896a8158f0c721a0059">__HAL_USB_HS_EXTI_ENABLE_IT</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga528473fda2a12b6c19506cc9b3806d54">__HAL_USB_HS_EXTI_DISABLE_IT</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gabaec74cd1b3ed759121fe6c6c156c5d9">__HAL_USB_HS_EXTI_GET_FLAG</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gabac9d7c6658baf369cf15b62ad31b927">__HAL_USB_HS_EXTI_CLEAR_FLAG</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = (<link linkend="_group___p_c_d___interrupt___clock_1ga76b8cf072166993b9e3094bb8c983265">USB_HS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga339c3114eb6623ec941cc21749d80a63">__HAL_USB_HS_EXTI_SET_RISING_EGDE_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga4c4cd1d025d300ef7d5f3699c1cb49a9">__HAL_USB_HS_EXTI_SET_FALLING_EGDE_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga586006e6d558a29fbc44c0fd969f0096">__HAL_USB_HS_EXTI_SET_FALLINGRISING_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gae113b8efe910324f5cf22be175a3c24a">__HAL_USB_FS_EXTI_ENABLE_IT</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR |= <link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga85cb6f6fd06419e0b152512a0e4a51d5">__HAL_USB_FS_EXTI_DISABLE_IT</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;IMR &amp;= ~(<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga7ec01deaa7c0ca7833fb374b3858e27d">__HAL_USB_FS_EXTI_GET_FLAG</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR &amp; (<link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gaccb126374d3cc612038112ad1790c682">__HAL_USB_FS_EXTI_CLEAR_FLAG</link>()   <link linkend="_group___peripheral__declaration_1ga9189e770cd9b63dadd36683eb9843cac">EXTI</link>-&gt;PR = <link linkend="_group___p_c_d___interrupt___clock_1ga9990232132734bde77e11c4f8d2e4163">USB_FS_EXTI_LINE_WAKEUP</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga085b51c65324c07245ef178fbc896607">__HAL_USB_FS_EXTI_SET_RISING_EGDE_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1ga74e87932df67f732aedf8a6f17f626ba">__HAL_USB_FS_EXTI_SET_FALLING_EGDE_TRIGGER</link>()</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___p_c_d___interrupt___clock_1gad6a19214a37b7c7fd2c4367d3ec4e98f">__HAL_USB_FS_EXTI_SET_FALLINGRISING_TRIGGER</link>()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___global_type_def">USB_OTG_GlobalTypeDef</link> <link linkend="_group___p_c_d_1gaf09cbbcafa2647859e3e2b2cb7f10a81">PCD_TypeDef</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___cfg_type_def">USB_OTG_CfgTypeDef</link> <link linkend="_group___p_c_d_1gac44a4798a1e04e4ffb147abacc3dfc6b">PCD_InitTypeDef</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_struct_u_s_b___o_t_g___e_p_type_def">USB_OTG_EPTypeDef</link> <link linkend="_group___p_c_d_1ga99220a9a8b825cb34d5359d0bf609290">PCD_EPTypeDef</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group___p_c_d_1ga78b8f0aa4eea3865fb695a732b26be96">PCD_StateTypeDef</link> { <link linkend="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96aea219cd5e02a6c02e4cfe36541f34334">PCD_READY</link> = 0x00
+, <link linkend="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96a10b1128a23c105eea9874cbf61b2a912">PCD_ERROR</link> = 0x01
+, <link linkend="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96ad929b72edb829b32ee9a169f1dc18c39">PCD_BUSY</link> = 0x02
+, <link linkend="_group___p_c_d_1gga78b8f0aa4eea3865fb695a732b26be96a6def1c151295a644475ec4981807c161">PCD_TIMEOUT</link> = 0x03
+ }</para>
+
+<para>PCD State structures definition 
+<literallayout>&#160;&#xa;</literallayout>
+ </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gae9ae02615c7a4badf2357e392ec66cd9">HAL_PCD_Init</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaf16d6b4eab71321e49998f13d00e38f0">HAL_PCD_DeInit</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga73af972b44ba2890202363cd8b197dad">HAL_PCD_MspInit</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga8194c593b1db635b225c4b6294f31e47">HAL_PCD_MspDeInit</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaed7a0a21ca81a2fcdd4db87606dee381">HAL_PCD_Start</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gad2e6055aea6458c0aec7df9c8ab7abab">HAL_PCD_Stop</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga502da86920d2beb8284c4c2d3dbac0c6">HAL_PCD_IRQHandler</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga2f1ac834d9677dcae7d8973828f81149">HAL_PCD_DataOutStageCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t epnum)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga1679f5c50539a3dfca1391557e7a757b">HAL_PCD_DataInStageCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t epnum)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga9d72aa4d3d984b164047b081d4566f6d">HAL_PCD_SetupStageCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga85c99eeb4aa17d8ff5298efff92ac28e">HAL_PCD_SOFCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1gaf4fbef977092aa525c6b1668ffbec77b">HAL_PCD_ResetCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga0e14acd4564979743bc0a89aa5f15428">HAL_PCD_SuspendCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga0386a36b921cd51dd6e50103c3cd33b1">HAL_PCD_ResumeCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga4274f129d782f0a3c9a10b5bbe022cd4">HAL_PCD_ISOOUTIncompleteCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t epnum)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga8f4041d553ef2fb326c6e483797f99a8">HAL_PCD_ISOINIncompleteCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t epnum)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga0c449541523759cf62be9c9d47540c5d">HAL_PCD_ConnectCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group___p_c_d_1ga25f930b5fe696224f8e71dacf5f324b4">HAL_PCD_DisconnectCallback</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga89ca79760ba1c490c2d526e2590d9c8a">HAL_PCD_DevConnect</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaa7cb70cf9891c6e22cad3930ba2d5f99">HAL_PCD_DevDisconnect</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga66397fbae1dd4b6f4b5225b23345ea30">HAL_PCD_SetAddress</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t address)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gab377a41f91fb7c12c12886d94bd765f2">HAL_PCD_EP_Open</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr, uint16_t ep_mps, uint8_t ep_type)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga439d45b17aa238f68e43b60783836849">HAL_PCD_EP_Close</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga0029fe7a8d3db91b13637e2507fba60c">HAL_PCD_EP_Receive</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr, uint8_t *pBuf, uint32_t len)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga116ada543442c8f7a1003c4d4c211618">HAL_PCD_EP_Transmit</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr, uint8_t *pBuf, uint32_t len)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_group___p_c_d_1gaee30320d48c739cce717a7c0f4b717cc">HAL_PCD_EP_GetRxCount</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaecee197a59aacc015742c62b74881b6f">HAL_PCD_EP_SetStall</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga56466fbd2aa05a80c924b18ddc2ac3ca">HAL_PCD_EP_ClrStall</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gaf245d7a10c697f4591c144596cb2df0f">HAL_PCD_EP_Flush</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t ep_addr)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga082c4b929ab79cf77f035a987f7cd77b">HAL_PCD_SetTxFiFo</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint8_t fifo, uint16_t size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga1cd5f7987b929260fcf5e3f7843881b3">HAL_PCD_SetRxFiFo</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd, uint16_t size)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1gafcec8440d73356162313a70233531779">HAL_PCD_ActiveRemoteWakeup</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_stm32f4xx__hal__def_8h_1a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</link> <link linkend="_group___p_c_d_1ga5885d295a1ff56cc9b6e95a1f716653f">HAL_PCD_DeActiveRemoteWakeup</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+            <listitem><para><link linkend="_group___p_c_d_1ga78b8f0aa4eea3865fb695a732b26be96">PCD_StateTypeDef</link> <link linkend="_group___p_c_d_1ga63732e60894249f910c31a5bb336b698">HAL_PCD_GetState</link> (<link linkend="_struct_p_c_d___handle_type_def">PCD_HandleTypeDef</link> *hpcd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Header file of PCD HAL module. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>MCD Application Team </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.1.0RC2 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>14-May-2014</para>
+</formalpara>
+<caution><title>Attention</title>
+
+<para></para>
+</caution>
+<formalpara><title><informaltable frame='none'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>&#169; COPYRIGHT(c) 2014 STMicroelectronics</entry></row></tbody></tgroup></informaltable></title></formalpara>
+</para>
+
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:<orderedlist>
+<listitem>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+</listitem><listitem>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+</listitem><listitem>
+<para>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+</listitem></orderedlist>
+</para>
+
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </para>
+<para>
+Definition in file <link linkend="_stm32f4xx__hal__pcd_8h_source">stm32f4xx_hal_pcd.h</link>.</para>
+</section>
+</section>

@@ -1,0 +1,359 @@
+\hypertarget{stm32f4xx__hal__can_8h_source}{}\doxysection{stm32f4xx\+\_\+hal\+\_\+can.\+h}
+\label{stm32f4xx__hal__can_8h_source}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_can.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_can.h}}
+\mbox{\hyperlink{stm32f4xx__hal__can_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#ifndef \_\_STM32F4xx\_HAL\_CAN\_H}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define \_\_STM32F4xx\_HAL\_CAN\_H}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{43  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#if defined(STM32F405xx) || defined(STM32F415xx) || defined(STM32F407xx) || defined(STM32F417xx) || defined(STM32F427xx) || defined(STM32F437xx) || defined(STM32F429xx) || defined(STM32F439xx)}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32f4xx__hal__def_8h}{stm32f4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{58 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{64 \{}
+\DoxyCodeLine{65   HAL\_CAN\_STATE\_RESET             = 0x00,  }
+\DoxyCodeLine{66   HAL\_CAN\_STATE\_READY             = 0x01,  }
+\DoxyCodeLine{67   HAL\_CAN\_STATE\_BUSY              = 0x02,  }
+\DoxyCodeLine{68   HAL\_CAN\_STATE\_BUSY\_TX           = 0x12,  }
+\DoxyCodeLine{69   HAL\_CAN\_STATE\_BUSY\_RX           = 0x22,  }
+\DoxyCodeLine{70   HAL\_CAN\_STATE\_BUSY\_TX\_RX        = 0x32,  }
+\DoxyCodeLine{71   HAL\_CAN\_STATE\_TIMEOUT           = 0x03,  }
+\DoxyCodeLine{72   HAL\_CAN\_STATE\_ERROR             = 0x04   }
+\DoxyCodeLine{74 \}HAL\_CAN\_StateTypeDef;}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81   uint32\_t Prescaler;  }
+\DoxyCodeLine{84   uint32\_t Mode;       }
+\DoxyCodeLine{87   uint32\_t SJW;        }
+\DoxyCodeLine{92   uint32\_t BS1;        }
+\DoxyCodeLine{95   uint32\_t BS2;        }
+\DoxyCodeLine{98   uint32\_t TTCM;       }
+\DoxyCodeLine{101   uint32\_t ABOM;       }
+\DoxyCodeLine{104   uint32\_t AWUM;       }
+\DoxyCodeLine{107   uint32\_t NART;       }
+\DoxyCodeLine{110   uint32\_t RFLM;       }
+\DoxyCodeLine{113   uint32\_t TXFP;       }
+\DoxyCodeLine{115 \}CAN\_InitTypeDef;}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{120 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{121 \{}
+\DoxyCodeLine{122   uint32\_t FilterIdHigh;          }
+\DoxyCodeLine{126   uint32\_t FilterIdLow;           }
+\DoxyCodeLine{130   uint32\_t FilterMaskIdHigh;      }
+\DoxyCodeLine{135   uint32\_t FilterMaskIdLow;       }
+\DoxyCodeLine{140   uint32\_t FilterFIFOAssignment;  }
+\DoxyCodeLine{143   uint32\_t FilterNumber;          }
+\DoxyCodeLine{146   uint32\_t FilterMode;            }
+\DoxyCodeLine{149   uint32\_t FilterScale;           }
+\DoxyCodeLine{152   uint32\_t FilterActivation;      }
+\DoxyCodeLine{155   uint32\_t BankNumber;            }
+\DoxyCodeLine{158 \}CAN\_FilterConfTypeDef;}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{163 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{164 \{}
+\DoxyCodeLine{165   uint32\_t StdId;    }
+\DoxyCodeLine{168   uint32\_t ExtId;    }
+\DoxyCodeLine{171   uint32\_t IDE;      }
+\DoxyCodeLine{174   uint32\_t RTR;      }
+\DoxyCodeLine{177   uint32\_t DLC;      }
+\DoxyCodeLine{180   uint32\_t Data[8];  }
+\DoxyCodeLine{183 \}CanTxMsgTypeDef;}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{188 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{189 \{}
+\DoxyCodeLine{190   uint32\_t StdId;       }
+\DoxyCodeLine{193   uint32\_t ExtId;       }
+\DoxyCodeLine{196   uint32\_t IDE;         }
+\DoxyCodeLine{199   uint32\_t RTR;         }
+\DoxyCodeLine{202   uint32\_t DLC;         }
+\DoxyCodeLine{205   uint32\_t Data[8];     }
+\DoxyCodeLine{208   uint32\_t FMI;         }
+\DoxyCodeLine{211   uint32\_t FIFONumber;  }
+\DoxyCodeLine{214 \}CanRxMsgTypeDef;}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{219 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{220 \{}
+\DoxyCodeLine{221   CAN\_TypeDef                 *Instance;  }
+\DoxyCodeLine{223   CAN\_InitTypeDef             Init;       }
+\DoxyCodeLine{225   CanTxMsgTypeDef*            pTxMsg;     }
+\DoxyCodeLine{227   CanRxMsgTypeDef*            pRxMsg;     }
+\DoxyCodeLine{229   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} HAL\_CAN\_StateTypeDef   State;      }
+\DoxyCodeLine{231   \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             Lock;       }
+\DoxyCodeLine{233   \mbox{\hyperlink{core__cm0_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               ErrorCode;  }
+\DoxyCodeLine{235 \}CAN\_HandleTypeDef;}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_NONE      0x00    }}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_EWG       0x01    }}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_EPV       0x02    }}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_BOF       0x04    }}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_STF       0x08    }}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_FOR       0x10    }}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_ACK       0x20    }}
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_BR        0x40    }}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_BD        0x80    }}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define   HAL\_CAN\_ERROR\_CRC       0x100   }}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define CAN\_INITSTATUS\_FAILED       ((uint8\_t)0x00)  }}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define CAN\_INITSTATUS\_SUCCESS      ((uint8\_t)0x01)  }}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#define CAN\_MODE\_NORMAL             ((uint32\_t)0x00000000)                     }}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define CAN\_MODE\_LOOPBACK           ((uint32\_t)CAN\_BTR\_LBKM)                   }}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define CAN\_MODE\_SILENT             ((uint32\_t)CAN\_BTR\_SILM)                   }}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define CAN\_MODE\_SILENT\_LOOPBACK    ((uint32\_t)(CAN\_BTR\_LBKM | CAN\_BTR\_SILM))  }}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define IS\_CAN\_MODE(MODE) (((MODE) == CAN\_MODE\_NORMAL) || \(\backslash\)}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{                           ((MODE) == CAN\_MODE\_LOOPBACK)|| \(\backslash\)}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{                           ((MODE) == CAN\_MODE\_SILENT) || \(\backslash\)}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{                           ((MODE) == CAN\_MODE\_SILENT\_LOOPBACK))}}
+\DoxyCodeLine{290 \textcolor{preprocessor}{\#define CAN\_SJW\_1TQ                 ((uint32\_t)0x00000000)     }}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#define CAN\_SJW\_2TQ                 ((uint32\_t)CAN\_BTR\_SJW\_0)  }}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#define CAN\_SJW\_3TQ                 ((uint32\_t)CAN\_BTR\_SJW\_1)  }}
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#define CAN\_SJW\_4TQ                 ((uint32\_t)CAN\_BTR\_SJW)    }}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define IS\_CAN\_SJW(SJW) (((SJW) == CAN\_SJW\_1TQ) || ((SJW) == CAN\_SJW\_2TQ)|| \(\backslash\)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{                         ((SJW) == CAN\_SJW\_3TQ) || ((SJW) == CAN\_SJW\_4TQ))}}
+\DoxyCodeLine{304 \textcolor{preprocessor}{\#define CAN\_BS1\_1TQ                 ((uint32\_t)0x00000000)                                       }}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#define CAN\_BS1\_2TQ                 ((uint32\_t)CAN\_BTR\_TS1\_0)                                    }}
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#define CAN\_BS1\_3TQ                 ((uint32\_t)CAN\_BTR\_TS1\_1)                                    }}
+\DoxyCodeLine{307 \textcolor{preprocessor}{\#define CAN\_BS1\_4TQ                 ((uint32\_t)(CAN\_BTR\_TS1\_1 | CAN\_BTR\_TS1\_0))                  }}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#define CAN\_BS1\_5TQ                 ((uint32\_t)CAN\_BTR\_TS1\_2)                                    }}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define CAN\_BS1\_6TQ                 ((uint32\_t)(CAN\_BTR\_TS1\_2 | CAN\_BTR\_TS1\_0))                  }}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#define CAN\_BS1\_7TQ                 ((uint32\_t)(CAN\_BTR\_TS1\_2 | CAN\_BTR\_TS1\_1))                  }}
+\DoxyCodeLine{311 \textcolor{preprocessor}{\#define CAN\_BS1\_8TQ                 ((uint32\_t)(CAN\_BTR\_TS1\_2 | CAN\_BTR\_TS1\_1 | CAN\_BTR\_TS1\_0))  }}
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#define CAN\_BS1\_9TQ                 ((uint32\_t)CAN\_BTR\_TS1\_3)                                    }}
+\DoxyCodeLine{313 \textcolor{preprocessor}{\#define CAN\_BS1\_10TQ                ((uint32\_t)(CAN\_BTR\_TS1\_3 | CAN\_BTR\_TS1\_0))                  }}
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#define CAN\_BS1\_11TQ                ((uint32\_t)(CAN\_BTR\_TS1\_3 | CAN\_BTR\_TS1\_1))                  }}
+\DoxyCodeLine{315 \textcolor{preprocessor}{\#define CAN\_BS1\_12TQ                ((uint32\_t)(CAN\_BTR\_TS1\_3 | CAN\_BTR\_TS1\_1 | CAN\_BTR\_TS1\_0))  }}
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#define CAN\_BS1\_13TQ                ((uint32\_t)(CAN\_BTR\_TS1\_3 | CAN\_BTR\_TS1\_2))                  }}
+\DoxyCodeLine{317 \textcolor{preprocessor}{\#define CAN\_BS1\_14TQ                ((uint32\_t)(CAN\_BTR\_TS1\_3 | CAN\_BTR\_TS1\_2 | CAN\_BTR\_TS1\_0))  }}
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#define CAN\_BS1\_15TQ                ((uint32\_t)(CAN\_BTR\_TS1\_3 | CAN\_BTR\_TS1\_2 | CAN\_BTR\_TS1\_1))  }}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#define CAN\_BS1\_16TQ                ((uint32\_t)CAN\_BTR\_TS1) }}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define IS\_CAN\_BS1(BS1) ((BS1) <= CAN\_BS1\_16TQ)}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#define CAN\_BS2\_1TQ                 ((uint32\_t)0x00000000)                       }}
+\DoxyCodeLine{330 \textcolor{preprocessor}{\#define CAN\_BS2\_2TQ                 ((uint32\_t)CAN\_BTR\_TS2\_0)                    }}
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#define CAN\_BS2\_3TQ                 ((uint32\_t)CAN\_BTR\_TS2\_1)                    }}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define CAN\_BS2\_4TQ                 ((uint32\_t)(CAN\_BTR\_TS2\_1 | CAN\_BTR\_TS2\_0))  }}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#define CAN\_BS2\_5TQ                 ((uint32\_t)CAN\_BTR\_TS2\_2)                    }}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define CAN\_BS2\_6TQ                 ((uint32\_t)(CAN\_BTR\_TS2\_2 | CAN\_BTR\_TS2\_0))  }}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define CAN\_BS2\_7TQ                 ((uint32\_t)(CAN\_BTR\_TS2\_2 | CAN\_BTR\_TS2\_1))  }}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define CAN\_BS2\_8TQ                 ((uint32\_t)CAN\_BTR\_TS2)                      }}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define IS\_CAN\_BS2(BS2) ((BS2) <= CAN\_BS2\_8TQ)}}
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#define IS\_CAN\_PRESCALER(PRESCALER) (((PRESCALER) >= 1) \&\& ((PRESCALER) <= 1024))}}
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#define IS\_CAN\_FILTER\_NUMBER(NUMBER) ((NUMBER) <= 27)}}
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#define CAN\_FILTERMODE\_IDMASK       ((uint8\_t)0x00)  }}
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#define CAN\_FILTERMODE\_IDLIST       ((uint8\_t)0x01)  }}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#define IS\_CAN\_FILTER\_MODE(MODE) (((MODE) == CAN\_FILTERMODE\_IDMASK) || \(\backslash\)}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{                                  ((MODE) == CAN\_FILTERMODE\_IDLIST))}}
+\DoxyCodeLine{374 \textcolor{preprocessor}{\#define CAN\_FILTERSCALE\_16BIT       ((uint8\_t)0x00)  }}
+\DoxyCodeLine{375 \textcolor{preprocessor}{\#define CAN\_FILTERSCALE\_32BIT       ((uint8\_t)0x01)  }}
+\DoxyCodeLine{377 \textcolor{preprocessor}{\#define IS\_CAN\_FILTER\_SCALE(SCALE) (((SCALE) == CAN\_FILTERSCALE\_16BIT) || \(\backslash\)}}
+\DoxyCodeLine{378 \textcolor{preprocessor}{                                    ((SCALE) == CAN\_FILTERSCALE\_32BIT))}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#define CAN\_FILTER\_FIFO0             ((uint8\_t)0x00)  }}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#define CAN\_FILTER\_FIFO1             ((uint8\_t)0x01)  }}
+\DoxyCodeLine{389 \textcolor{preprocessor}{\#define IS\_CAN\_FILTER\_FIFO(FIFO) (((FIFO) == CAN\_FILTER\_FIFO0) || \(\backslash\)}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{                                  ((FIFO) == CAN\_FILTER\_FIFO1))}}
+\DoxyCodeLine{391 }
+\DoxyCodeLine{392 \textcolor{comment}{/* Legacy defines */}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{\#define CAN\_FilterFIFO0  CAN\_FILTER\_FIFO0}}
+\DoxyCodeLine{394 \textcolor{preprocessor}{\#define CAN\_FilterFIFO1  CAN\_FILTER\_FIFO1}}
+\DoxyCodeLine{402 \textcolor{preprocessor}{\#define IS\_CAN\_BANKNUMBER(BANKNUMBER) ((BANKNUMBER) <= 28)}}
+\DoxyCodeLine{410 \textcolor{preprocessor}{\#define IS\_CAN\_TRANSMITMAILBOX(TRANSMITMAILBOX) ((TRANSMITMAILBOX) <= ((uint8\_t)0x02))}}
+\DoxyCodeLine{411 \textcolor{preprocessor}{\#define IS\_CAN\_STDID(STDID)   ((STDID) <= ((uint32\_t)0x7FF))}}
+\DoxyCodeLine{412 \textcolor{preprocessor}{\#define IS\_CAN\_EXTID(EXTID)   ((EXTID) <= ((uint32\_t)0x1FFFFFFF))}}
+\DoxyCodeLine{413 \textcolor{preprocessor}{\#define IS\_CAN\_DLC(DLC)       ((DLC) <= ((uint8\_t)0x08))}}
+\DoxyCodeLine{421 \textcolor{preprocessor}{\#define CAN\_ID\_STD             ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{422 \textcolor{preprocessor}{\#define CAN\_ID\_EXT             ((uint32\_t)0x00000004)  }}
+\DoxyCodeLine{423 \textcolor{preprocessor}{\#define IS\_CAN\_IDTYPE(IDTYPE)  (((IDTYPE) == CAN\_ID\_STD) || \(\backslash\)}}
+\DoxyCodeLine{424 \textcolor{preprocessor}{                                ((IDTYPE) == CAN\_ID\_EXT))}}
+\DoxyCodeLine{432 \textcolor{preprocessor}{\#define CAN\_RTR\_DATA                ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{433 \textcolor{preprocessor}{\#define CAN\_RTR\_REMOTE              ((uint32\_t)0x00000002)  }}
+\DoxyCodeLine{434 \textcolor{preprocessor}{\#define IS\_CAN\_RTR(RTR) (((RTR) == CAN\_RTR\_DATA) || ((RTR) == CAN\_RTR\_REMOTE))}}
+\DoxyCodeLine{435 }
+\DoxyCodeLine{443 \textcolor{preprocessor}{\#define CAN\_TXSTATUS\_FAILED         ((uint8\_t)0x00)  }}
+\DoxyCodeLine{444 \textcolor{preprocessor}{\#define CAN\_TXSTATUS\_OK             ((uint8\_t)0x01)  }}
+\DoxyCodeLine{445 \textcolor{preprocessor}{\#define CAN\_TXSTATUS\_PENDING        ((uint8\_t)0x02)  }}
+\DoxyCodeLine{446 \textcolor{preprocessor}{\#define CAN\_TXSTATUS\_NOMAILBOX      ((uint8\_t)0x04)  }}
+\DoxyCodeLine{455 \textcolor{preprocessor}{\#define CAN\_FIFO0                   ((uint8\_t)0x00)  }}
+\DoxyCodeLine{456 \textcolor{preprocessor}{\#define CAN\_FIFO1                   ((uint8\_t)0x01)  }}
+\DoxyCodeLine{458 \textcolor{preprocessor}{\#define IS\_CAN\_FIFO(FIFO) (((FIFO) == CAN\_FIFO0) || ((FIFO) == CAN\_FIFO1))}}
+\DoxyCodeLine{466 \textcolor{comment}{/* If the flag is 0x3XXXXXXX, it means that it can be used with CAN\_GetFlagStatus()}}
+\DoxyCodeLine{467 \textcolor{comment}{   and CAN\_ClearFlag() functions. */}}
+\DoxyCodeLine{468 \textcolor{comment}{/* If the flag is 0x1XXXXXXX, it means that it can only be used with }}
+\DoxyCodeLine{469 \textcolor{comment}{   CAN\_GetFlagStatus() function.  */}}
+\DoxyCodeLine{470 }
+\DoxyCodeLine{471 \textcolor{comment}{/* Transmit Flags */}}
+\DoxyCodeLine{472 \textcolor{preprocessor}{\#define CAN\_FLAG\_RQCP0             ((uint32\_t)0x00000500)  }}
+\DoxyCodeLine{473 \textcolor{preprocessor}{\#define CAN\_FLAG\_RQCP1             ((uint32\_t)0x00000508)  }}
+\DoxyCodeLine{474 \textcolor{preprocessor}{\#define CAN\_FLAG\_RQCP2             ((uint32\_t)0x00000510)  }}
+\DoxyCodeLine{475 \textcolor{preprocessor}{\#define CAN\_FLAG\_TXOK0             ((uint32\_t)0x00000501)  }}
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#define CAN\_FLAG\_TXOK1             ((uint32\_t)0x00000509)  }}
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#define CAN\_FLAG\_TXOK2             ((uint32\_t)0x00000511)  }}
+\DoxyCodeLine{478 \textcolor{preprocessor}{\#define CAN\_FLAG\_TME0              ((uint32\_t)0x0000051A)  }}
+\DoxyCodeLine{479 \textcolor{preprocessor}{\#define CAN\_FLAG\_TME1              ((uint32\_t)0x0000051B)  }}
+\DoxyCodeLine{480 \textcolor{preprocessor}{\#define CAN\_FLAG\_TME2              ((uint32\_t)0x0000051C)  }}
+\DoxyCodeLine{482 \textcolor{comment}{/* Receive Flags */}}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#define CAN\_FLAG\_FF0               ((uint32\_t)0x00000203)  }}
+\DoxyCodeLine{484 \textcolor{preprocessor}{\#define CAN\_FLAG\_FOV0              ((uint32\_t)0x00000204)  }}
+\DoxyCodeLine{486 \textcolor{preprocessor}{\#define CAN\_FLAG\_FF1               ((uint32\_t)0x00000403)  }}
+\DoxyCodeLine{487 \textcolor{preprocessor}{\#define CAN\_FLAG\_FOV1              ((uint32\_t)0x00000404)  }}
+\DoxyCodeLine{489 \textcolor{comment}{/* Operating Mode Flags */}}
+\DoxyCodeLine{490 \textcolor{preprocessor}{\#define CAN\_FLAG\_WKU               ((uint32\_t)0x00000103)  }}
+\DoxyCodeLine{491 \textcolor{preprocessor}{\#define CAN\_FLAG\_SLAK              ((uint32\_t)0x00000101)  }}
+\DoxyCodeLine{492 \textcolor{preprocessor}{\#define CAN\_FLAG\_SLAKI             ((uint32\_t)0x00000104)  }}
+\DoxyCodeLine{493 \textcolor{comment}{/* @note When SLAK interrupt is disabled (SLKIE=0), no polling on SLAKI is possible. }}
+\DoxyCodeLine{494 \textcolor{comment}{         In this case the SLAK bit can be polled.*/}}
+\DoxyCodeLine{495 }
+\DoxyCodeLine{496 \textcolor{comment}{/* Error Flags */}}
+\DoxyCodeLine{497 \textcolor{preprocessor}{\#define CAN\_FLAG\_EWG               ((uint32\_t)0x00000300)  }}
+\DoxyCodeLine{498 \textcolor{preprocessor}{\#define CAN\_FLAG\_EPV               ((uint32\_t)0x00000301)  }}
+\DoxyCodeLine{499 \textcolor{preprocessor}{\#define CAN\_FLAG\_BOF               ((uint32\_t)0x00000302)  }}
+\DoxyCodeLine{501 \textcolor{preprocessor}{\#define IS\_CAN\_GET\_FLAG(FLAG) (((FLAG) == CAN\_FLAG\_RQCP2) || ((FLAG) == CAN\_FLAG\_BOF)   || \(\backslash\)}}
+\DoxyCodeLine{502 \textcolor{preprocessor}{                               ((FLAG) == CAN\_FLAG\_EPV)   || ((FLAG) == CAN\_FLAG\_EWG)   || \(\backslash\)}}
+\DoxyCodeLine{503 \textcolor{preprocessor}{                               ((FLAG) == CAN\_FLAG\_WKU)   || ((FLAG) == CAN\_FLAG\_FOV0)  || \(\backslash\)}}
+\DoxyCodeLine{504 \textcolor{preprocessor}{                               ((FLAG) == CAN\_FLAG\_FF0)   || ((FLAG) == CAN\_FLAG\_SLAK)  || \(\backslash\)}}
+\DoxyCodeLine{505 \textcolor{preprocessor}{                               ((FLAG) == CAN\_FLAG\_FOV1)  || ((FLAG) == CAN\_FLAG\_FF1)   || \(\backslash\)}}
+\DoxyCodeLine{506 \textcolor{preprocessor}{                               ((FLAG) == CAN\_FLAG\_RQCP1) || ((FLAG) == CAN\_FLAG\_RQCP0))}}
+\DoxyCodeLine{507                                }
+\DoxyCodeLine{508 }
+\DoxyCodeLine{509 \textcolor{preprocessor}{\#define IS\_CAN\_CLEAR\_FLAG(FLAG)(((FLAG) == CAN\_FLAG\_SLAK)  || ((FLAG) == CAN\_FLAG\_RQCP2) || \(\backslash\)}}
+\DoxyCodeLine{510 \textcolor{preprocessor}{                                ((FLAG) == CAN\_FLAG\_RQCP1) || ((FLAG) == CAN\_FLAG\_RQCP0) || \(\backslash\)}}
+\DoxyCodeLine{511 \textcolor{preprocessor}{                                ((FLAG) == CAN\_FLAG\_FF0)   || ((FLAG) == CAN\_FLAG\_FOV0)  || \(\backslash\)}}
+\DoxyCodeLine{512 \textcolor{preprocessor}{                                ((FLAG) == CAN\_FLAG\_FF1)   || ((FLAG) == CAN\_FLAG\_FOV1)  || \(\backslash\)}}
+\DoxyCodeLine{513 \textcolor{preprocessor}{                                ((FLAG) == CAN\_FLAG\_WKU))}}
+\DoxyCodeLine{522 \textcolor{preprocessor}{\#define CAN\_IT\_TME                  ((uint32\_t)CAN\_IER\_TMEIE)   }}
+\DoxyCodeLine{524 \textcolor{comment}{/* Receive Interrupts */}}
+\DoxyCodeLine{525 \textcolor{preprocessor}{\#define CAN\_IT\_FMP0                 ((uint32\_t)CAN\_IER\_FMPIE0)  }}
+\DoxyCodeLine{526 \textcolor{preprocessor}{\#define CAN\_IT\_FF0                  ((uint32\_t)CAN\_IER\_FFIE0)   }}
+\DoxyCodeLine{527 \textcolor{preprocessor}{\#define CAN\_IT\_FOV0                 ((uint32\_t)CAN\_IER\_FOVIE0)  }}
+\DoxyCodeLine{528 \textcolor{preprocessor}{\#define CAN\_IT\_FMP1                 ((uint32\_t)CAN\_IER\_FMPIE1)  }}
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#define CAN\_IT\_FF1                  ((uint32\_t)CAN\_IER\_FFIE1)   }}
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#define CAN\_IT\_FOV1                 ((uint32\_t)CAN\_IER\_FOVIE1)  }}
+\DoxyCodeLine{532 \textcolor{comment}{/* Operating Mode Interrupts */}}
+\DoxyCodeLine{533 \textcolor{preprocessor}{\#define CAN\_IT\_WKU                  ((uint32\_t)CAN\_IER\_WKUIE)  }}
+\DoxyCodeLine{534 \textcolor{preprocessor}{\#define CAN\_IT\_SLK                  ((uint32\_t)CAN\_IER\_SLKIE)  }}
+\DoxyCodeLine{536 \textcolor{comment}{/* Error Interrupts */}}
+\DoxyCodeLine{537 \textcolor{preprocessor}{\#define CAN\_IT\_EWG                  ((uint32\_t)CAN\_IER\_EWGIE) }}
+\DoxyCodeLine{538 \textcolor{preprocessor}{\#define CAN\_IT\_EPV                  ((uint32\_t)CAN\_IER\_EPVIE) }}
+\DoxyCodeLine{539 \textcolor{preprocessor}{\#define CAN\_IT\_BOF                  ((uint32\_t)CAN\_IER\_BOFIE) }}
+\DoxyCodeLine{540 \textcolor{preprocessor}{\#define CAN\_IT\_LEC                  ((uint32\_t)CAN\_IER\_LECIE) }}
+\DoxyCodeLine{541 \textcolor{preprocessor}{\#define CAN\_IT\_ERR                  ((uint32\_t)CAN\_IER\_ERRIE) }}
+\DoxyCodeLine{543 \textcolor{comment}{/* Flags named as Interrupts : kept only for FW compatibility */}}
+\DoxyCodeLine{544 \textcolor{preprocessor}{\#define CAN\_IT\_RQCP0   CAN\_IT\_TME}}
+\DoxyCodeLine{545 \textcolor{preprocessor}{\#define CAN\_IT\_RQCP1   CAN\_IT\_TME}}
+\DoxyCodeLine{546 \textcolor{preprocessor}{\#define CAN\_IT\_RQCP2   CAN\_IT\_TME}}
+\DoxyCodeLine{547 }
+\DoxyCodeLine{548 \textcolor{preprocessor}{\#define IS\_CAN\_IT(IT)        (((IT) == CAN\_IT\_TME) || ((IT) == CAN\_IT\_FMP0)  ||\(\backslash\)}}
+\DoxyCodeLine{549 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_FF0)  || ((IT) == CAN\_IT\_FOV0)  ||\(\backslash\)}}
+\DoxyCodeLine{550 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_FMP1) || ((IT) == CAN\_IT\_FF1)   ||\(\backslash\)}}
+\DoxyCodeLine{551 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_FOV1) || ((IT) == CAN\_IT\_EWG)   ||\(\backslash\)}}
+\DoxyCodeLine{552 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_EPV)  || ((IT) == CAN\_IT\_BOF)   ||\(\backslash\)}}
+\DoxyCodeLine{553 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_LEC)  || ((IT) == CAN\_IT\_ERR)   ||\(\backslash\)}}
+\DoxyCodeLine{554 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_WKU)  || ((IT) == CAN\_IT\_SLK))}}
+\DoxyCodeLine{555 }
+\DoxyCodeLine{556 \textcolor{preprocessor}{\#define IS\_CAN\_CLEAR\_IT(IT) (((IT) == CAN\_IT\_TME) || ((IT) == CAN\_IT\_FF0)    ||\(\backslash\)}}
+\DoxyCodeLine{557 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_FOV0)|| ((IT) == CAN\_IT\_FF1)    ||\(\backslash\)}}
+\DoxyCodeLine{558 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_FOV1)|| ((IT) == CAN\_IT\_EWG)    ||\(\backslash\)}}
+\DoxyCodeLine{559 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_EPV) || ((IT) == CAN\_IT\_BOF)    ||\(\backslash\)}}
+\DoxyCodeLine{560 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_LEC) || ((IT) == CAN\_IT\_ERR)    ||\(\backslash\)}}
+\DoxyCodeLine{561 \textcolor{preprocessor}{                             ((IT) == CAN\_IT\_WKU) || ((IT) == CAN\_IT\_SLK))}}
+\DoxyCodeLine{566 \textcolor{comment}{/* Time out for INAK bit */}}
+\DoxyCodeLine{567 \textcolor{preprocessor}{\#define INAK\_TIMEOUT      ((uint32\_t)0x0000FFFF)}}
+\DoxyCodeLine{568 \textcolor{comment}{/* Time out for SLAK bit */}}
+\DoxyCodeLine{569 \textcolor{preprocessor}{\#define SLAK\_TIMEOUT      ((uint32\_t)0x0000FFFF)}}
+\DoxyCodeLine{570 }
+\DoxyCodeLine{571 \textcolor{comment}{/* Mailboxes definition */}}
+\DoxyCodeLine{572 \textcolor{preprocessor}{\#define CAN\_TXMAILBOX\_0   ((uint8\_t)0x00)}}
+\DoxyCodeLine{573 \textcolor{preprocessor}{\#define CAN\_TXMAILBOX\_1   ((uint8\_t)0x01)}}
+\DoxyCodeLine{574 \textcolor{preprocessor}{\#define CAN\_TXMAILBOX\_2   ((uint8\_t)0x02)}}
+\DoxyCodeLine{575 }
+\DoxyCodeLine{580 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{581 }
+\DoxyCodeLine{586 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) ((\_\_HANDLE\_\_)-\/>State = HAL\_CAN\_STATE\_RESET)}}
+\DoxyCodeLine{587 }
+\DoxyCodeLine{594 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>IER) |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{595 }
+\DoxyCodeLine{602 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) (((\_\_HANDLE\_\_)-\/>Instance-\/>IER) \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{603 }
+\DoxyCodeLine{610 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_MSG\_PENDING(\_\_HANDLE\_\_, \_\_FIFONUMBER\_\_) (((\_\_FIFONUMBER\_\_) == CAN\_FIFO0)? \(\backslash\)}}
+\DoxyCodeLine{611 \textcolor{preprocessor}{((uint8\_t)((\_\_HANDLE\_\_)-\/>Instance-\/>RF0R\&(uint32\_t)0x03)) : ((uint8\_t)((\_\_HANDLE\_\_)-\/>Instance-\/>RF1R\&(uint32\_t)0x03)))}}
+\DoxyCodeLine{612 }
+\DoxyCodeLine{640 \textcolor{preprocessor}{\#define CAN\_FLAG\_MASK  ((uint32\_t)0x000000FF)}}
+\DoxyCodeLine{641 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) \(\backslash\)}}
+\DoxyCodeLine{642 \textcolor{preprocessor}{((((\_\_FLAG\_\_) >> 8) == 5)? ((((\_\_HANDLE\_\_)-\/>Instance-\/>TSR) \& (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))) == (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))): \(\backslash\)}}
+\DoxyCodeLine{643 \textcolor{preprocessor}{ (((\_\_FLAG\_\_) >> 8) == 2)? ((((\_\_HANDLE\_\_)-\/>Instance-\/>RF0R) \& (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))) == (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))): \(\backslash\)}}
+\DoxyCodeLine{644 \textcolor{preprocessor}{ (((\_\_FLAG\_\_) >> 8) == 4)? ((((\_\_HANDLE\_\_)-\/>Instance-\/>RF1R) \& (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))) == (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))): \(\backslash\)}}
+\DoxyCodeLine{645 \textcolor{preprocessor}{ (((\_\_FLAG\_\_) >> 8) == 1)? ((((\_\_HANDLE\_\_)-\/>Instance-\/>MSR) \& (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))) == (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))): \(\backslash\)}}
+\DoxyCodeLine{646 \textcolor{preprocessor}{ ((((\_\_HANDLE\_\_)-\/>Instance-\/>ESR) \& (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))) == (1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))))}}
+\DoxyCodeLine{647 }
+\DoxyCodeLine{675 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_) \(\backslash\)}}
+\DoxyCodeLine{676 \textcolor{preprocessor}{((((\_\_FLAG\_\_) >> 8) == 5)? (((\_\_HANDLE\_\_)-\/>Instance-\/>TSR) \&= \string~((uint32\_t)1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))): \(\backslash\)}}
+\DoxyCodeLine{677 \textcolor{preprocessor}{ (((\_\_FLAG\_\_) >> 8) == 2)? (((\_\_HANDLE\_\_)-\/>Instance-\/>RF0R) \&= \string~((uint32\_t)1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))): \(\backslash\)}}
+\DoxyCodeLine{678 \textcolor{preprocessor}{ (((\_\_FLAG\_\_) >> 8) == 4)? (((\_\_HANDLE\_\_)-\/>Instance-\/>RF1R) \&= \string~((uint32\_t)1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))): \(\backslash\)}}
+\DoxyCodeLine{679 \textcolor{preprocessor}{ (((\_\_FLAG\_\_) >> 8) == 1)? (((\_\_HANDLE\_\_)-\/>Instance-\/>MSR) \&= \string~((uint32\_t)1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))): \(\backslash\)}}
+\DoxyCodeLine{680 \textcolor{preprocessor}{ (((\_\_HANDLE\_\_)-\/>Instance-\/>ESR) \&= \string~((uint32\_t)1 << ((\_\_FLAG\_\_) \& CAN\_FLAG\_MASK))))}}
+\DoxyCodeLine{681 }
+\DoxyCodeLine{691 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((((\_\_HANDLE\_\_)-\/>Instance-\/>IER \& (\_\_INTERRUPT\_\_)) == (\_\_INTERRUPT\_\_)) ? SET : RESET)}}
+\DoxyCodeLine{692 }
+\DoxyCodeLine{699 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_TRANSMIT\_STATUS(\_\_HANDLE\_\_, \_\_TRANSMITMAILBOX\_\_)\(\backslash\)}}
+\DoxyCodeLine{700 \textcolor{preprocessor}{(((\_\_TRANSMITMAILBOX\_\_) == CAN\_TXMAILBOX\_0)? ((((\_\_HANDLE\_\_)-\/>Instance-\/>TSR) \& (CAN\_TSR\_RQCP0 | CAN\_TSR\_TXOK0 | CAN\_TSR\_TME0)) == (CAN\_TSR\_RQCP0 | CAN\_TSR\_TXOK0 | CAN\_TSR\_TME0)) :\(\backslash\)}}
+\DoxyCodeLine{701 \textcolor{preprocessor}{ ((\_\_TRANSMITMAILBOX\_\_) == CAN\_TXMAILBOX\_1)? ((((\_\_HANDLE\_\_)-\/>Instance-\/>TSR) \& (CAN\_TSR\_RQCP1 | CAN\_TSR\_TXOK1 | CAN\_TSR\_TME1)) == (CAN\_TSR\_RQCP1 | CAN\_TSR\_TXOK1 | CAN\_TSR\_TME1)) :\(\backslash\)}}
+\DoxyCodeLine{702 \textcolor{preprocessor}{ ((((\_\_HANDLE\_\_)-\/>Instance-\/>TSR) \& (CAN\_TSR\_RQCP2 | CAN\_TSR\_TXOK2 | CAN\_TSR\_TME2)) == (CAN\_TSR\_RQCP2 | CAN\_TSR\_TXOK2 | CAN\_TSR\_TME2)))}}
+\DoxyCodeLine{703 }
+\DoxyCodeLine{704 }
+\DoxyCodeLine{705 }
+\DoxyCodeLine{712 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_FIFO\_RELEASE(\_\_HANDLE\_\_, \_\_FIFONUMBER\_\_) (((\_\_FIFONUMBER\_\_) == CAN\_FIFO0)? \(\backslash\)}}
+\DoxyCodeLine{713 \textcolor{preprocessor}{((\_\_HANDLE\_\_)-\/>Instance-\/>RF0R |= CAN\_RF0R\_RFOM0) : ((\_\_HANDLE\_\_)-\/>Instance-\/>RF1R |= CAN\_RF1R\_RFOM1)) }}
+\DoxyCodeLine{714 }
+\DoxyCodeLine{721 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_CANCEL\_TRANSMIT(\_\_HANDLE\_\_, \_\_TRANSMITMAILBOX\_\_)\(\backslash\)}}
+\DoxyCodeLine{722 \textcolor{preprocessor}{(((\_\_TRANSMITMAILBOX\_\_) == CAN\_TXMAILBOX\_0)? ((\_\_HANDLE\_\_)-\/>Instance-\/>TSR |= CAN\_TSR\_ABRQ0) :\(\backslash\)}}
+\DoxyCodeLine{723 \textcolor{preprocessor}{ ((\_\_TRANSMITMAILBOX\_\_) == CAN\_TXMAILBOX\_1)? ((\_\_HANDLE\_\_)-\/>Instance-\/>TSR |= CAN\_TSR\_ABRQ1) :\(\backslash\)}}
+\DoxyCodeLine{724 \textcolor{preprocessor}{ ((\_\_HANDLE\_\_)-\/>Instance-\/>TSR |= CAN\_TSR\_ABRQ2))}}
+\DoxyCodeLine{725 }
+\DoxyCodeLine{735 \textcolor{preprocessor}{\#define \_\_HAL\_CAN\_DBG\_FREEZE(\_\_HANDLE\_\_, \_\_NEWSTATE\_\_) (((\_\_NEWSTATE\_\_) == ENABLE)? \(\backslash\)}}
+\DoxyCodeLine{736 \textcolor{preprocessor}{((\_\_HANDLE\_\_)-\/>Instance-\/>MCR |= CAN\_MCR\_DBF) : ((\_\_HANDLE\_\_)-\/>Instance-\/>MCR \&= \string~CAN\_MCR\_DBF)) }}
+\DoxyCodeLine{737    }
+\DoxyCodeLine{738 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}  }
+\DoxyCodeLine{739 }
+\DoxyCodeLine{740 \textcolor{comment}{/* Initialization/de-\/initialization functions ***********************************/} }
+\DoxyCodeLine{741 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_Init(CAN\_HandleTypeDef* hcan);}
+\DoxyCodeLine{742 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_ConfigFilter(CAN\_HandleTypeDef* hcan, CAN\_FilterConfTypeDef* sFilterConfig);}
+\DoxyCodeLine{743 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_DeInit(CAN\_HandleTypeDef* hcan);}
+\DoxyCodeLine{744 \textcolor{keywordtype}{void} HAL\_CAN\_MspInit(CAN\_HandleTypeDef* hcan);}
+\DoxyCodeLine{745 \textcolor{keywordtype}{void} HAL\_CAN\_MspDeInit(CAN\_HandleTypeDef* hcan);}
+\DoxyCodeLine{746 }
+\DoxyCodeLine{747 \textcolor{comment}{/* I/O operation functions ******************************************************/}}
+\DoxyCodeLine{748 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_Transmit(CAN\_HandleTypeDef *hcan, uint32\_t Timeout);}
+\DoxyCodeLine{749 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_Transmit\_IT(CAN\_HandleTypeDef *hcan);}
+\DoxyCodeLine{750 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_Receive(CAN\_HandleTypeDef *hcan, uint8\_t FIFONumber, uint32\_t Timeout);}
+\DoxyCodeLine{751 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_Receive\_IT(CAN\_HandleTypeDef *hcan, uint8\_t FIFONumber);}
+\DoxyCodeLine{752 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_Sleep(CAN\_HandleTypeDef *hcan);}
+\DoxyCodeLine{753 \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_CAN\_WakeUp(CAN\_HandleTypeDef *hcan);}
+\DoxyCodeLine{754 }
+\DoxyCodeLine{755 \textcolor{comment}{/* Peripheral State functions ***************************************************/}}
+\DoxyCodeLine{756 \textcolor{keywordtype}{void} HAL\_CAN\_IRQHandler(CAN\_HandleTypeDef* hcan);}
+\DoxyCodeLine{757 uint32\_t HAL\_CAN\_GetError(CAN\_HandleTypeDef *hcan);}
+\DoxyCodeLine{758 HAL\_CAN\_StateTypeDef HAL\_CAN\_GetState(CAN\_HandleTypeDef* hcan);}
+\DoxyCodeLine{759 }
+\DoxyCodeLine{760 \textcolor{keywordtype}{void} HAL\_CAN\_TxCpltCallback(CAN\_HandleTypeDef* hcan);}
+\DoxyCodeLine{761 \textcolor{keywordtype}{void} HAL\_CAN\_RxCpltCallback(CAN\_HandleTypeDef* hcan);}
+\DoxyCodeLine{762 \textcolor{keywordtype}{void} HAL\_CAN\_ErrorCallback(CAN\_HandleTypeDef *hcan);}
+\DoxyCodeLine{763 }
+\DoxyCodeLine{764 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{765 }
+\DoxyCodeLine{774 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{775 \}}
+\DoxyCodeLine{776 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{777 }
+\DoxyCodeLine{778 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32F4xx\_CAN\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{779 }
+\DoxyCodeLine{780 }
+\DoxyCodeLine{781 \textcolor{comment}{/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/}}
+
+\end{DoxyCode}

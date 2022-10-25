@@ -1,0 +1,217 @@
+\hypertarget{classmbed_1_1_ticker}{}\doxysection{Ticker Class Reference}
+\label{classmbed_1_1_ticker}\index{Ticker@{Ticker}}
+
+
+{\ttfamily \#include $<$Ticker.\+h$>$}
+
+Inheritance diagram for Ticker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classmbed_1_1_ticker}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmbed_1_1_ticker_a2fce5ed90836ae8136f8c14df8fd09db}{attach}} (void($\ast$fptr)(void), float t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmbed_1_1_ticker_af45345399cbfc84791370ae79d2275e3}{attach}} (T $\ast$tptr, void(T\+::$\ast$mptr)(void), float t)
+\item 
+void \mbox{\hyperlink{classmbed_1_1_ticker_a09702756876480fbf436505db8fe70f0}{attach\+\_\+us}} (void($\ast$fptr)(void), unsigned int t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmbed_1_1_ticker_a2e9e4b2d3e8adf447fb89af5cc14135c}{attach\+\_\+us}} (T $\ast$tptr, void(T\+::$\ast$mptr)(void), unsigned int t)
+\item 
+void \mbox{\hyperlink{classmbed_1_1_ticker_ac295bade8aee589f6718dfa79edc2a34}{detach}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmbed_1_1_ticker_a50808a3fbc1f22a6d4a98036d001f087}{setup}} (unsigned int t)
+\item 
+virtual void \mbox{\hyperlink{classmbed_1_1_ticker_a10a5ab629c238472e20543206af37ce3}{handler}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classmbed_1_1_ticker_a68b93a57027743d01e29a8e08779316a}{\+\_\+delay}}
+\item 
+\mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}} \mbox{\hyperlink{classmbed_1_1_ticker_a03ea04d108129fd57399a00c9b9ce8d2}{\+\_\+function}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classmbed_1_1_ticker}{Ticker}} is used to call a function at a recurring interval
+
+You can use as many seperate \mbox{\hyperlink{classmbed_1_1_ticker}{Ticker}} objects as you require.
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Toggle the blinking led after 5 seconds}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mbed_8h}{mbed.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Ticker timer;}
+\DoxyCodeLine{DigitalOut led1(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1adac6477842247cab1a8c02c65f431b44}{LED1}});}
+\DoxyCodeLine{DigitalOut led2(\mbox{\hyperlink{_pin_names_8h_a5ceb873075d76667eb54dc6a7d2734d1a8379bbaa96d151e6adac488b2a147b7a}{LED2}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} flip = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} attime() \{}
+\DoxyCodeLine{    flip = !flip;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}() \{}
+\DoxyCodeLine{    timer.attach(\&attime, 5);}
+\DoxyCodeLine{    \textcolor{keywordflow}{while}(1) \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if}(flip == 0) \{}
+\DoxyCodeLine{            led1 = !led1;}
+\DoxyCodeLine{        \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{            led2 = !led2;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        wait(0.2);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{_ticker_8h_source_l00057}{57}} of file \mbox{\hyperlink{_ticker_8h_source}{Ticker.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmbed_1_1_ticker_af45345399cbfc84791370ae79d2275e3}\label{classmbed_1_1_ticker_af45345399cbfc84791370ae79d2275e3}} 
+\index{Ticker@{Ticker}!attach@{attach}}
+\index{attach@{attach}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void attach (\begin{DoxyParamCaption}\item[{T $\ast$}]{tptr,  }\item[{void(T\+::$\ast$)(void)}]{mptr,  }\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Attach a member function to be called by the \mbox{\hyperlink{classmbed_1_1_ticker}{Ticker}}, specifiying the interval in seconds
+
+
+\begin{DoxyParams}{Parameters}
+{\em tptr} & pointer to the object to call the member function on \\
+\hline
+{\em mptr} & pointer to the member function to be called \\
+\hline
+{\em t} & the time between calls in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ticker_8h_source_l00077}{77}} of file \mbox{\hyperlink{_ticker_8h_source}{Ticker.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_ticker_a2fce5ed90836ae8136f8c14df8fd09db}\label{classmbed_1_1_ticker_a2fce5ed90836ae8136f8c14df8fd09db}} 
+\index{Ticker@{Ticker}!attach@{attach}}
+\index{attach@{attach}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void attach (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{fptr,  }\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Attach a function to be called by the \mbox{\hyperlink{classmbed_1_1_ticker}{Ticker}}, specifiying the interval in seconds
+
+
+\begin{DoxyParams}{Parameters}
+{\em fptr} & pointer to the function to be called \\
+\hline
+{\em t} & the time between calls in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ticker_8h_source_l00066}{66}} of file \mbox{\hyperlink{_ticker_8h_source}{Ticker.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_ticker_a2e9e4b2d3e8adf447fb89af5cc14135c}\label{classmbed_1_1_ticker_a2e9e4b2d3e8adf447fb89af5cc14135c}} 
+\index{Ticker@{Ticker}!attach\_us@{attach\_us}}
+\index{attach\_us@{attach\_us}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{attach\_us()}{attach\_us()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void attach\+\_\+us (\begin{DoxyParamCaption}\item[{T $\ast$}]{tptr,  }\item[{void(T\+::$\ast$)(void)}]{mptr,  }\item[{unsigned int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Attach a member function to be called by the \mbox{\hyperlink{classmbed_1_1_ticker}{Ticker}}, specifiying the interval in micro-\/seconds
+
+
+\begin{DoxyParams}{Parameters}
+{\em tptr} & pointer to the object to call the member function on \\
+\hline
+{\em mptr} & pointer to the member function to be called \\
+\hline
+{\em t} & the time between calls in micro-\/seconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ticker_8h_source_l00098}{98}} of file \mbox{\hyperlink{_ticker_8h_source}{Ticker.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_ticker_a09702756876480fbf436505db8fe70f0}\label{classmbed_1_1_ticker_a09702756876480fbf436505db8fe70f0}} 
+\index{Ticker@{Ticker}!attach\_us@{attach\_us}}
+\index{attach\_us@{attach\_us}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{attach\_us()}{attach\_us()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void attach\+\_\+us (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{fptr,  }\item[{unsigned int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Attach a function to be called by the \mbox{\hyperlink{classmbed_1_1_ticker}{Ticker}}, specifiying the interval in micro-\/seconds
+
+
+\begin{DoxyParams}{Parameters}
+{\em fptr} & pointer to the function to be called \\
+\hline
+{\em t} & the time between calls in micro-\/seconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ticker_8h_source_l00086}{86}} of file \mbox{\hyperlink{_ticker_8h_source}{Ticker.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_ticker_ac295bade8aee589f6718dfa79edc2a34}\label{classmbed_1_1_ticker_ac295bade8aee589f6718dfa79edc2a34}} 
+\index{Ticker@{Ticker}!detach@{detach}}
+\index{detach@{detach}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void detach (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Detach the function \mbox{\Hypertarget{classmbed_1_1_ticker_a10a5ab629c238472e20543206af37ce3}\label{classmbed_1_1_ticker_a10a5ab629c238472e20543206af37ce3}} 
+\index{Ticker@{Ticker}!handler@{handler}}
+\index{handler@{handler}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{handler()}{handler()}}
+{\footnotesize\ttfamily virtual void handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmbed_1_1_timer_event_a5cb82440540ffc0e041f54dbb66e3f98}{Timer\+Event}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classmbed_1_1_timeout_a10a5ab629c238472e20543206af37ce3}{Timeout}}.
+
+\mbox{\Hypertarget{classmbed_1_1_ticker_a50808a3fbc1f22a6d4a98036d001f087}\label{classmbed_1_1_ticker_a50808a3fbc1f22a6d4a98036d001f087}} 
+\index{Ticker@{Ticker}!setup@{setup}}
+\index{setup@{setup}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}\item[{unsigned int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classmbed_1_1_ticker_a68b93a57027743d01e29a8e08779316a}\label{classmbed_1_1_ticker_a68b93a57027743d01e29a8e08779316a}} 
+\index{Ticker@{Ticker}!\_delay@{\_delay}}
+\index{\_delay@{\_delay}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{\_delay}{\_delay}}
+{\footnotesize\ttfamily unsigned int \+\_\+delay\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_ticker_8h_source_l00111}{111}} of file \mbox{\hyperlink{_ticker_8h_source}{Ticker.\+h}}.
+
+\mbox{\Hypertarget{classmbed_1_1_ticker_a03ea04d108129fd57399a00c9b9ce8d2}\label{classmbed_1_1_ticker_a03ea04d108129fd57399a00c9b9ce8d2}} 
+\index{Ticker@{Ticker}!\_function@{\_function}}
+\index{\_function@{\_function}!Ticker@{Ticker}}
+\doxysubsubsection{\texorpdfstring{\_function}{\_function}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmbed_1_1_function_pointer}{Function\+Pointer}} \+\_\+function\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_ticker_8h_source_l00112}{112}} of file \mbox{\hyperlink{_ticker_8h_source}{Ticker.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/dayton.\+flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 1/\+Code2/sqrt\+\_\+approx/mbed/\mbox{\hyperlink{_ticker_8h}{Ticker.\+h}}\end{DoxyCompactItemize}

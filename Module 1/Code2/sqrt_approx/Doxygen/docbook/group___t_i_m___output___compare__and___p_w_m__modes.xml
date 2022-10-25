@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___t_i_m___output___compare__and___p_w_m__modes" xml:lang="en-US">
+<title>TIM_Output_Compare_and_PWM_modes</title>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1gafae6b98b4b854fbfffd9a5ebc59c8f61">TIM_OCMODE_TIMING</link>   ((uint32_t)0x0000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga111d1023e3ac6ef5544775c3863b4b12">TIM_OCMODE_ACTIVE</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga410a4752a98081bad8ab3f72b28e7c5f">TIM_CCMR1_OC1M_0</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga890fbb44fd16f2bce962983352d23f53">TIM_OCMODE_INACTIVE</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga8b5f6ec25063483641d6dc065d96d2b5">TIM_CCMR1_OC1M_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga368f80fad76018e2bf76084522e47536">TIM_OCMODE_TOGGLE</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga410a4752a98081bad8ab3f72b28e7c5f">TIM_CCMR1_OC1M_0</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8b5f6ec25063483641d6dc065d96d2b5">TIM_CCMR1_OC1M_1</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga766271da571888dfecd9130c3887e9c6">TIM_OCMODE_PWM1</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga8b5f6ec25063483641d6dc065d96d2b5">TIM_CCMR1_OC1M_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gac024f6b9972b940925ab5786ee38701b">TIM_CCMR1_OC1M_2</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga88ce4251743c2c07e19fdd5a0a310580">TIM_OCMODE_PWM2</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga6ddb3dc889733e71d812baa3873cb13b">TIM_CCMR1_OC1M</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga0a78cecaf884a89963e2a8e6af7e6128">TIM_OCMODE_FORCED_ACTIVE</link>   (<link linkend="_group___peripheral___registers___bits___definition_1ga410a4752a98081bad8ab3f72b28e7c5f">TIM_CCMR1_OC1M_0</link> | <link linkend="_group___peripheral___registers___bits___definition_1gac024f6b9972b940925ab5786ee38701b">TIM_CCMR1_OC1M_2</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga4572f724ce30ce45557f1dc5141afb3e">TIM_OCMODE_FORCED_INACTIVE</link>   (<link linkend="_group___peripheral___registers___bits___definition_1gac024f6b9972b940925ab5786ee38701b">TIM_CCMR1_OC1M_2</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga7910bed799169bcc9dacbd5725769dbd">IS_TIM_PWM_MODE</link>(MODE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga93d898976e236c135bfd02a0c213c8ec">IS_TIM_OC_MODE</link>(MODE)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga93d898976e236c135bfd02a0c213c8ec"/><section>
+    <title>IS_TIM_OC_MODE</title>
+<indexterm><primary>IS_TIM_OC_MODE</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>IS_TIM_OC_MODE</secondary></indexterm>
+<para><computeroutput>#define IS_TIM_OC_MODE( MODE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((MODE)&#32;==&#32;<link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1gafae6b98b4b854fbfffd9a5ebc59c8f61">TIM_OCMODE_TIMING</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga111d1023e3ac6ef5544775c3863b4b12">TIM_OCMODE_ACTIVE</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga890fbb44fd16f2bce962983352d23f53">TIM_OCMODE_INACTIVE</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga368f80fad76018e2bf76084522e47536">TIM_OCMODE_TOGGLE</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga0a78cecaf884a89963e2a8e6af7e6128">TIM_OCMODE_FORCED_ACTIVE</link>)&#32;&#32;&#32;&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga4572f724ce30ce45557f1dc5141afb3e">TIM_OCMODE_FORCED_INACTIVE</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00379">379</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga7910bed799169bcc9dacbd5725769dbd"/><section>
+    <title>IS_TIM_PWM_MODE</title>
+<indexterm><primary>IS_TIM_PWM_MODE</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>IS_TIM_PWM_MODE</secondary></indexterm>
+<para><computeroutput>#define IS_TIM_PWM_MODE( MODE)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting linenumbering="unnumbered">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(((MODE)&#32;==&#32;<link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga766271da571888dfecd9130c3887e9c6">TIM_OCMODE_PWM1</link>)&#32;||&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((MODE)&#32;==&#32;<link linkend="_group___t_i_m___output___compare__and___p_w_m__modes_1ga88ce4251743c2c07e19fdd5a0a310580">TIM_OCMODE_PWM2</link>))
+</programlisting><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00376">376</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga111d1023e3ac6ef5544775c3863b4b12"/><section>
+    <title>TIM_OCMODE_ACTIVE</title>
+<indexterm><primary>TIM_OCMODE_ACTIVE</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>TIM_OCMODE_ACTIVE</secondary></indexterm>
+<para><computeroutput>#define TIM_OCMODE_ACTIVE   (<link linkend="_group___peripheral___registers___bits___definition_1ga410a4752a98081bad8ab3f72b28e7c5f">TIM_CCMR1_OC1M_0</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00368">368</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga0a78cecaf884a89963e2a8e6af7e6128"/><section>
+    <title>TIM_OCMODE_FORCED_ACTIVE</title>
+<indexterm><primary>TIM_OCMODE_FORCED_ACTIVE</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>TIM_OCMODE_FORCED_ACTIVE</secondary></indexterm>
+<para><computeroutput>#define TIM_OCMODE_FORCED_ACTIVE   (<link linkend="_group___peripheral___registers___bits___definition_1ga410a4752a98081bad8ab3f72b28e7c5f">TIM_CCMR1_OC1M_0</link> | <link linkend="_group___peripheral___registers___bits___definition_1gac024f6b9972b940925ab5786ee38701b">TIM_CCMR1_OC1M_2</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00373">373</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga4572f724ce30ce45557f1dc5141afb3e"/><section>
+    <title>TIM_OCMODE_FORCED_INACTIVE</title>
+<indexterm><primary>TIM_OCMODE_FORCED_INACTIVE</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>TIM_OCMODE_FORCED_INACTIVE</secondary></indexterm>
+<para><computeroutput>#define TIM_OCMODE_FORCED_INACTIVE   (<link linkend="_group___peripheral___registers___bits___definition_1gac024f6b9972b940925ab5786ee38701b">TIM_CCMR1_OC1M_2</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00374">374</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga890fbb44fd16f2bce962983352d23f53"/><section>
+    <title>TIM_OCMODE_INACTIVE</title>
+<indexterm><primary>TIM_OCMODE_INACTIVE</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>TIM_OCMODE_INACTIVE</secondary></indexterm>
+<para><computeroutput>#define TIM_OCMODE_INACTIVE   (<link linkend="_group___peripheral___registers___bits___definition_1ga8b5f6ec25063483641d6dc065d96d2b5">TIM_CCMR1_OC1M_1</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00369">369</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga766271da571888dfecd9130c3887e9c6"/><section>
+    <title>TIM_OCMODE_PWM1</title>
+<indexterm><primary>TIM_OCMODE_PWM1</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>TIM_OCMODE_PWM1</secondary></indexterm>
+<para><computeroutput>#define TIM_OCMODE_PWM1   (<link linkend="_group___peripheral___registers___bits___definition_1ga8b5f6ec25063483641d6dc065d96d2b5">TIM_CCMR1_OC1M_1</link> | <link linkend="_group___peripheral___registers___bits___definition_1gac024f6b9972b940925ab5786ee38701b">TIM_CCMR1_OC1M_2</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00371">371</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga88ce4251743c2c07e19fdd5a0a310580"/><section>
+    <title>TIM_OCMODE_PWM2</title>
+<indexterm><primary>TIM_OCMODE_PWM2</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>TIM_OCMODE_PWM2</secondary></indexterm>
+<para><computeroutput>#define TIM_OCMODE_PWM2   (<link linkend="_group___peripheral___registers___bits___definition_1ga6ddb3dc889733e71d812baa3873cb13b">TIM_CCMR1_OC1M</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00372">372</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1gafae6b98b4b854fbfffd9a5ebc59c8f61"/><section>
+    <title>TIM_OCMODE_TIMING</title>
+<indexterm><primary>TIM_OCMODE_TIMING</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>TIM_OCMODE_TIMING</secondary></indexterm>
+<para><computeroutput>#define TIM_OCMODE_TIMING   ((uint32_t)0x0000)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00367">367</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+<anchor xml:id="_group___t_i_m___output___compare__and___p_w_m__modes_1ga368f80fad76018e2bf76084522e47536"/><section>
+    <title>TIM_OCMODE_TOGGLE</title>
+<indexterm><primary>TIM_OCMODE_TOGGLE</primary><secondary>TIM_Output_Compare_and_PWM_modes</secondary></indexterm>
+<indexterm><primary>TIM_Output_Compare_and_PWM_modes</primary><secondary>TIM_OCMODE_TOGGLE</secondary></indexterm>
+<para><computeroutput>#define TIM_OCMODE_TOGGLE   (<link linkend="_group___peripheral___registers___bits___definition_1ga410a4752a98081bad8ab3f72b28e7c5f">TIM_CCMR1_OC1M_0</link> | <link linkend="_group___peripheral___registers___bits___definition_1ga8b5f6ec25063483641d6dc065d96d2b5">TIM_CCMR1_OC1M_1</link>)</computeroutput></para><para>
+Definition at line <link linkend="_stm32f4xx__hal__tim_8h_source_1l00370">370</link> of file <link linkend="_stm32f4xx__hal__tim_8h_source">stm32f4xx_hal_tim.h</link>.</para>
+</section>
+</section>
+</section>

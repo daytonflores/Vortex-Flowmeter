@@ -1,0 +1,345 @@
+\hypertarget{stm32f4xx__hal__rtc__ex_8h}{}\doxysection{C\+:/\+Users/dayton.flores/\+One\+Drive/\+Documents/\+School/\+CU/\+ECEN 5803/\+Project 1/\+Module 4/\+Code4/mbed/\+TARGET\+\_\+\+NUCLEO\+\_\+\+F401\+RE/stm32f4xx\+\_\+hal\+\_\+rtc\+\_\+ex.h File Reference}
+\label{stm32f4xx__hal__rtc__ex_8h}\index{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_rtc\_ex.h@{C:/Users/dayton.flores/OneDrive/Documents/School/CU/ECEN 5803/Project 1/Module 4/Code4/mbed/TARGET\_NUCLEO\_F401RE/stm32f4xx\_hal\_rtc\_ex.h}}
+
+
+Header file of RTC HAL Extension module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_r_t_c___tamper_type_def}{RTC\+\_\+\+Tamper\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em RTC Tamper structure definition ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR0}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR1}~((uint32\+\_\+t)0x00000001)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR2}~((uint32\+\_\+t)0x00000002)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR3}~((uint32\+\_\+t)0x00000003)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR4}~((uint32\+\_\+t)0x00000004)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR5}~((uint32\+\_\+t)0x00000005)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR6}~((uint32\+\_\+t)0x00000006)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR7}~((uint32\+\_\+t)0x00000007)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR8}~((uint32\+\_\+t)0x00000008)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR9}~((uint32\+\_\+t)0x00000009)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR10}~((uint32\+\_\+t)0x0000000A)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR11}~((uint32\+\_\+t)0x0000000B)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR12}~((uint32\+\_\+t)0x0000000C)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR13}~((uint32\+\_\+t)0x0000000D)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR14}~((uint32\+\_\+t)0x0000000E)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR15}~((uint32\+\_\+t)0x0000000F)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR16}~((uint32\+\_\+t)0x00000010)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR17}~((uint32\+\_\+t)0x00000011)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR18}~((uint32\+\_\+t)0x00000012)
+\item 
+\#define {\bfseries RTC\+\_\+\+BKP\+\_\+\+DR19}~((uint32\+\_\+t)0x00000013)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___backup___registers___definitions_ga7dfcd70f7d46d2a71155b4e4e12d0a60}{IS\+\_\+\+RTC\+\_\+\+BKP}}(BKP)
+\item 
+\#define {\bfseries RTC\+\_\+\+TIMESTAMPEDGE\+\_\+\+RISING}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+TIMESTAMPEDGE\+\_\+\+FALLING}~((uint32\+\_\+t)0x00000008)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___time___stamp___edges__definitions_ga4fe0db6ab44713a1674702d867482f9a}{IS\+\_\+\+TIMESTAMP\+\_\+\+EDGE}}(EDGE)
+\item 
+\#define {\bfseries RTC\+\_\+\+TAMPER\+\_\+1}~RTC\+\_\+\+TAFCR\+\_\+\+TAMP1E
+\item 
+\#define {\bfseries RTC\+\_\+\+TAMPER\+\_\+2}~RTC\+\_\+\+TAFCR\+\_\+\+TAMP2E
+\item 
+\#define {\bfseries IS\+\_\+\+TAMPER}(TAMPER)~((((TAMPER) \& (uint32\+\_\+t)0x\+FFFFFFF6) == 0x00) \&\& ((TAMPER) != (uint32\+\_\+t)RESET))
+\item 
+\#define {\bfseries RTC\+\_\+\+TAMPERPIN\+\_\+\+PC13}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+TAMPERPIN\+\_\+\+PI8}~((uint32\+\_\+t)0x00010000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pins___selection_gafee4c4fb7be2053b14b061e5725561ee}{IS\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+PIN}}(PIN)
+\item 
+\#define {\bfseries RTC\+\_\+\+TIMESTAMPPIN\+\_\+\+PC13}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+TIMESTAMPPIN\+\_\+\+PI8}~((uint32\+\_\+t)0x00020000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___time_stamp___pin___selection_ga5558a9d932619b51a5a60fa4746dd852}{IS\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+PIN}}(PIN)
+\item 
+\#define {\bfseries RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+RISINGEDGE}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+FALLINGEDGE}~((uint32\+\_\+t)0x00000002)
+\item 
+\#define {\bfseries RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+LOWLEVEL}~RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+RISINGEDGE
+\item 
+\#define {\bfseries RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+HIGHLEVEL}~RTC\+\_\+\+TAMPERTRIGGER\+\_\+\+FALLINGEDGE
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___trigger___definitions_gac45c56f66a8cd99035b267a82a910c87}{IS\+\_\+\+TAMPER\+\_\+\+TRIGGER}}(TRIGGER)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___filter___definitions_ga0809aebfef5642f8f2a8d04b0aed4d98}{RTC\+\_\+\+TAMPERFILTER\+\_\+\+DISABLE}}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___filter___definitions_ga4338b957d061fa9d1d51d403275fe391}{RTC\+\_\+\+TAMPERFILTER\+\_\+2\+SAMPLE}}~((uint32\+\_\+t)0x00000800)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___filter___definitions_gabd9f9f1c669c073d58bd71257faa079e}{RTC\+\_\+\+TAMPERFILTER\+\_\+4\+SAMPLE}}~((uint32\+\_\+t)0x00001000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___filter___definitions_ga3689ed6d70107f0acc92aae8b13600bd}{RTC\+\_\+\+TAMPERFILTER\+\_\+8\+SAMPLE}}~((uint32\+\_\+t)0x00001800)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___filter___definitions_gaddc34325eaac5a09f1c958e3daa3b64e}{IS\+\_\+\+TAMPER\+\_\+\+FILTER}}(FILTER)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_ga1d12bab8de77c51edc1b6a7a2e242991}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV32768}}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_gab45c084cd1f2f36ecb19d7eb4e7c12b2}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV16384}}~((uint32\+\_\+t)0x00000100)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_ga48899e13c9b392c02278cd4166b49f4d}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV8192}}~((uint32\+\_\+t)0x00000200)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_gaa8257b2329aa2d170b66b7368c11943a}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV4096}}~((uint32\+\_\+t)0x00000300)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_ga681034d8247a44679e3ae277db187cb5}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV2048}}~((uint32\+\_\+t)0x00000400)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_gaad315c353bdd84397cb1d7db46c71cd3}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV1024}}~((uint32\+\_\+t)0x00000500)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_ga3748ae21496570bdc54354c7d9a8c91d}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV512}}~((uint32\+\_\+t)0x00000600)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_ga05ce782cafcbf04e6854739041052a9e}{RTC\+\_\+\+TAMPERSAMPLINGFREQ\+\_\+\+RTCCLK\+\_\+\+DIV256}}~((uint32\+\_\+t)0x00000700)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___sampling___frequencies___definitions_gaf2c173c2f8db123e88d01758cd5062fd}{IS\+\_\+\+TAMPER\+\_\+\+SAMPLING\+\_\+\+FREQ}}(FREQ)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pin___precharge___duration___definitions_gac2a79623b1690b2e5893e6b53dad3480}{RTC\+\_\+\+TAMPERPRECHARGEDURATION\+\_\+1\+RTCCLK}}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pin___precharge___duration___definitions_ga270be6ced6bafda4a94e5624a0bc3eab}{RTC\+\_\+\+TAMPERPRECHARGEDURATION\+\_\+2\+RTCCLK}}~((uint32\+\_\+t)0x00002000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pin___precharge___duration___definitions_ga12497acabf044c2d1de7d735efdb2efc}{RTC\+\_\+\+TAMPERPRECHARGEDURATION\+\_\+4\+RTCCLK}}~((uint32\+\_\+t)0x00004000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pin___precharge___duration___definitions_ga353fca64c5b0e927ab024ed13a526e09}{RTC\+\_\+\+TAMPERPRECHARGEDURATION\+\_\+8\+RTCCLK}}~((uint32\+\_\+t)0x00006000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pin___precharge___duration___definitions_ga6a9cbf1802b6f51daca4c1b2763165da}{IS\+\_\+\+TAMPER\+\_\+\+PRECHARGE\+\_\+\+DURATION}}(DURATION)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___time_stamp_on_tamper_detection___definitions_ga5954385741ff0e2b250438c493bc0e36}{RTC\+\_\+\+TIMESTAMPONTAMPERDETECTION\+\_\+\+ENABLE}}~((uint32\+\_\+t)RTC\+\_\+\+TAFCR\+\_\+\+TAMPTS)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___time_stamp_on_tamper_detection___definitions_ga11e98cb1fff680cf391398c40925f891}{RTC\+\_\+\+TIMESTAMPONTAMPERDETECTION\+\_\+\+DISABLE}}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___time_stamp_on_tamper_detection___definitions_gad670c2d57c805741afe21411293950b6}{IS\+\_\+\+TAMPER\+\_\+\+TIMESTAMPONTAMPER\+\_\+\+DETECTION}}(DETECTION)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pull___u_p___definitions_gacf26dd43efe81fa45121580187705369}{RTC\+\_\+\+TAMPER\+\_\+\+PULLUP\+\_\+\+ENABLE}}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pull___u_p___definitions_ga60baa301b46be499bc7f827664df0300}{RTC\+\_\+\+TAMPER\+\_\+\+PULLUP\+\_\+\+DISABLE}}~((uint32\+\_\+t)RTC\+\_\+\+TAFCR\+\_\+\+TAMPPUDIS)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___tamper___pull___u_p___definitions_gaa01c741c967de9b86fea04ec25b7b8b4}{IS\+\_\+\+TAMPER\+\_\+\+PULLUP\+\_\+\+STATE}}(STATE)
+\item 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV16}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV8}~((uint32\+\_\+t)0x00000001)
+\item 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV4}~((uint32\+\_\+t)0x00000002)
+\item 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+RTCCLK\+\_\+\+DIV2}~((uint32\+\_\+t)0x00000003)
+\item 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+CK\+\_\+\+SPRE\+\_\+16\+BITS}~((uint32\+\_\+t)0x00000004)
+\item 
+\#define {\bfseries RTC\+\_\+\+WAKEUPCLOCK\+\_\+\+CK\+\_\+\+SPRE\+\_\+17\+BITS}~((uint32\+\_\+t)0x00000006)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___wakeup___timer___definitions_gab8e7db6943d4d03c850ef9dc20389bb3}{IS\+\_\+\+WAKEUP\+\_\+\+CLOCK}}(CLOCK)
+\item 
+\#define {\bfseries IS\+\_\+\+WAKEUP\+\_\+\+COUNTER}(COUNTER)~((COUNTER) $<$= 0x\+FFFF)
+\item 
+\#define {\bfseries RTC\+\_\+\+CALIBSIGN\+\_\+\+POSITIVE}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+CALIBSIGN\+\_\+\+NEGATIVE}~((uint32\+\_\+t)0x00000080)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___digital___calibration___definitions_ga8e9688a85c6708500b5f56ddc056beb1}{IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+SIGN}}(SIGN)
+\item 
+\#define {\bfseries IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+VALUE}(VALUE)~((VALUE) $<$ 0x20)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___smooth__calib__period___definitions_gaab8a844313898595cd72f86570198e5a}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PERIOD\+\_\+32\+SEC}}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___smooth__calib__period___definitions_ga0c192bdebd2496f60b8a4aa7db499262}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PERIOD\+\_\+16\+SEC}}~((uint32\+\_\+t)0x00002000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___smooth__calib__period___definitions_ga0993db27ee5b25c8db41c8e58b478ffe}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PERIOD\+\_\+8\+SEC}}~((uint32\+\_\+t)0x00004000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___smooth__calib__period___definitions_ga65c64189fd22cb803ffe35cce640071a}{IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+PERIOD}}(PERIOD)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___smooth__calib___plus__pulses___definitions_ga53eabbf840a8631b955636bbfaf9bc83}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PLUSPULSES\+\_\+\+SET}}~((uint32\+\_\+t)0x00008000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___smooth__calib___plus__pulses___definitions_gaed8a5d1a5400612bde6fe30b32f350e7}{RTC\+\_\+\+SMOOTHCALIB\+\_\+\+PLUSPULSES\+\_\+\+RESET}}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___smooth__calib___plus__pulses___definitions_gad0081b479cf6d71ac588a483d09d7b75}{IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+PLUS}}(PLUS)
+\item 
+\#define {\bfseries IS\+\_\+\+RTC\+\_\+\+SMOOTH\+\_\+\+CALIB\+\_\+\+MINUS}(VALUE)~((VALUE) $<$= 0x000001\+FF)
+\item 
+\#define {\bfseries RTC\+\_\+\+SHIFTADD1\+S\+\_\+\+RESET}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+SHIFTADD1\+S\+\_\+\+SET}~((uint32\+\_\+t)0x80000000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___add__1___second___parameter___definitions_ga26df4ba48afac04a9798cb24bb0a5823}{IS\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+ADD1S}}(SEL)
+\item 
+\#define {\bfseries IS\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+SUBFS}(FS)~((FS) $<$= 0x00007\+FFF)
+\item 
+\#define {\bfseries RTC\+\_\+\+CALIBOUTPUT\+\_\+512\+HZ}~((uint32\+\_\+t)0x00000000)
+\item 
+\#define {\bfseries RTC\+\_\+\+CALIBOUTPUT\+\_\+1\+HZ}~((uint32\+\_\+t)0x00080000)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex___calib___output__selection___definitions_gae8326e278569669e6880388c85cd890a}{IS\+\_\+\+RTC\+\_\+\+CALIB\+\_\+\+OUTPUT}}(OUTPUT)
+\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga9b3ce87851ab95b1ab508b524a1055c8}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (RTC\+\_\+\+CR\+\_\+\+WUTE))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Wake\+Up Timer peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gad8400feb7b3dae2c552f2f4a7556bc6d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (RTC\+\_\+\+CR\+\_\+\+TSE))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga18822c018d0b07be72ca315220bb02df}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(RTC\+\_\+\+CR\+\_\+\+WUTE))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Wake\+Up Timer peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga7281d85b199bee5eb74cc135208051fa}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(RTC\+\_\+\+CR\+\_\+\+TSE))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp peripheral. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gab252ef767ddb79ab1d5c394074c308d5}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+COARSE\+\_\+\+CALIB\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (RTC\+\_\+\+CR\+\_\+\+DCE))
+\begin{DoxyCompactList}\small\item\em Enable the Coarse calibration process. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga98f6fa00897ae97bfec781e7f37290ae}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+COARSE\+\_\+\+CALIB\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(RTC\+\_\+\+CR\+\_\+\+DCE))
+\begin{DoxyCompactList}\small\item\em Disable the Coarse calibration process. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga28ea614bae2c8b94cd3407535644e7a6}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CALIBRATION\+\_\+\+OUTPUT\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (RTC\+\_\+\+CR\+\_\+\+COE))
+\begin{DoxyCompactList}\small\item\em Enable the RTC calibration output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gab5c03b27e1117cf17be5df483b1211b8}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CALIBRATION\+\_\+\+OUTPUT\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(RTC\+\_\+\+CR\+\_\+\+COE))
+\begin{DoxyCompactList}\small\item\em Disable the calibration output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga3fcacefb24751dcb772582e59e50de5e}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLOCKREF\+\_\+\+DETECTION\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (RTC\+\_\+\+CR\+\_\+\+REFCKON))
+\begin{DoxyCompactList}\small\item\em Enable the clock reference detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga8e989c42c1f4139cc1e021c42638d86b}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+CLOCKREF\+\_\+\+DETECTION\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(RTC\+\_\+\+CR\+\_\+\+REFCKON))
+\begin{DoxyCompactList}\small\item\em Disable the clock reference detection. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga054429581f55a80d922bb5c1e982c06f}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Time\+Stamp interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gab02dbd4cbdcd1c544a5e45b37fad276b}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the RTC Wake\+Up\+Timer interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gab455d21f8afb5b3d49f2c25e34ce90c2}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Time\+Stamp interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga702b63d21958eab45856264c19ee6004}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the RTC Wake\+Up\+Timer interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga4eb0c0b3f367b2ee81854f91ba89435e}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& ((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)$>$$>$ 4)) != RESET)? SET \+: RESET)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Tamper interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gaad236b2444806e88eecbfec918adbeb4}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& ((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)$>$$>$ 4)) != RESET)? SET \+: RESET)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Wake\+Up\+Timer interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga8fd5dcdd9876039bda9dcdbee87c967d}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& ((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)$>$$>$ 4)) != RESET)? SET \+: RESET)
+\begin{DoxyCompactList}\small\item\em Check whether the specified RTC Time\+Stamp interrupt has occurred or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga72799940c34e70df0d33eca772794813}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != RESET)? SET \+: RESET)
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Time\+Stamp\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga217666f5b1e27e24441e2e9a3b51f28e}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != RESET)? SET \+: RESET)
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Wake\+Up\+Timer\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gafc2d73770375bd10cf6e4faa11adc7b1}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != RESET)? SET \+: RESET)
+\begin{DoxyCompactList}\small\item\em Get the selected RTC Tamper\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_ga5e1482310c213248d8416b24a5e6b3f3}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+SHIFT\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) != RESET)? SET \+: RESET)
+\begin{DoxyCompactList}\small\item\em Get the selected RTC shift operation\textquotesingle{}s flag status. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gac9d386e61a572b0c9d0e58a04e1819ef}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TIMESTAMP\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$(((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ RTC\+\_\+\+ISR\+\_\+\+INIT)\& 0x0000\+FFFF)$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& RTC\+\_\+\+ISR\+\_\+\+INIT))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Time Stamp\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gade364b4cf1214d66463c9fa4ce667095}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+TAMPER\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$(((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ RTC\+\_\+\+ISR\+\_\+\+INIT)\& 0x0000\+FFFF)$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& RTC\+\_\+\+ISR\+\_\+\+INIT))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Tamper\textquotesingle{}s pending flags. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_t_c_ex_gabb56cd29b62b414c5da34e2fc1cabf16}{\+\_\+\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+WAKEUPTIMER\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = ($\sim$(((\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+) $\vert$ RTC\+\_\+\+ISR\+\_\+\+INIT)\& 0x0000\+FFFF)$\vert$((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR \& RTC\+\_\+\+ISR\+\_\+\+INIT))
+\begin{DoxyCompactList}\small\item\em Clear the RTC Wake Up timer\textquotesingle{}s pending flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Time\+Stamp} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Time\+Stamp\+Edge, uint32\+\_\+t RTC\+\_\+\+Time\+Stamp\+Pin)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Time\+Stamp\+\_\+\+IT} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Time\+Stamp\+Edge, uint32\+\_\+t RTC\+\_\+\+Time\+Stamp\+Pin)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Time\+Stamp} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Get\+Time\+Stamp} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, \mbox{\hyperlink{struct_r_t_c___time_type_def}{RTC\+\_\+\+Time\+Type\+Def}} $\ast$s\+Time\+Stamp, \mbox{\hyperlink{struct_r_t_c___date_type_def}{RTC\+\_\+\+Date\+Type\+Def}} $\ast$s\+Time\+Stamp\+Date, uint32\+\_\+t Format)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Tamper} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, \mbox{\hyperlink{struct_r_t_c___tamper_type_def}{RTC\+\_\+\+Tamper\+Type\+Def}} $\ast$s\+Tamper)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Tamper\+\_\+\+IT} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, \mbox{\hyperlink{struct_r_t_c___tamper_type_def}{RTC\+\_\+\+Tamper\+Type\+Def}} $\ast$s\+Tamper)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Tamper} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Tamper)
+\item 
+void {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Tamper\+Time\+Stamp\+IRQHandler} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+void {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Tamper1\+Event\+Callback} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+void {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Tamper2\+Event\+Callback} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+void {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Time\+Stamp\+Event\+Callback} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Time\+Stamp\+Event} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Tamper1\+Event} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Tamper2\+Event} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Timeout)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Wake\+Up\+Timer} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Wake\+Up\+Counter, uint32\+\_\+t Wake\+Up\+Clock)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Wake\+Up\+Timer\+\_\+\+IT} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Wake\+Up\+Counter, uint32\+\_\+t Wake\+Up\+Clock)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Wake\+Up\+Timer} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Get\+Wake\+Up\+Timer} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+void {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+IRQHandler} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+void {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Wake\+Up\+Timer\+Event\+Callback} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Wake\+Up\+Timer\+Event} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Timeout)
+\item 
+void {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+BKUPWrite} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Backup\+Register, uint32\+\_\+t Data)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+BKUPRead} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Backup\+Register)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Coarse\+Calib} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Calib\+Sign, uint32\+\_\+t Value)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Coarse\+Calib} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Smooth\+Calib} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Smooth\+Calib\+Period, uint32\+\_\+t Smooth\+Calib\+Plus\+Pulses, uint32\+\_\+t Smouth\+Calib\+Minus\+Pulses\+Value)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Synchro\+Shift} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Shift\+Add1S, uint32\+\_\+t Shift\+Sub\+FS)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Calibration\+Out\+Put} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Calib\+Output)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Calibration\+Out\+Put} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Set\+Ref\+Clock} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Deactivate\+Ref\+Clock} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Enable\+Bypass\+Shadow} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Disable\+Bypass\+Shadow} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+void {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Alarm\+BEvent\+Callback} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+RTCEx\+\_\+\+Poll\+For\+Alarm\+BEvent} (\mbox{\hyperlink{struct_r_t_c___handle_type_def}{RTC\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc, uint32\+\_\+t Timeout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of RTC HAL Extension module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0\+RC2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14-\/May-\/2014
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} COPYRIGHT(c) 2014 STMicroelectronics\end{center} }
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\item Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+\end{DoxyEnumerate}
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
